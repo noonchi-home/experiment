@@ -1,0 +1,69 @@
+{
+  "initial_state": "in_bed",
+  "states": [
+    {
+      "id": "in_bed",
+      "description": "The person is resting in bed before starting their morning routine.",
+      "rules": [],
+      "next": [
+        {
+          "to": "morning_started",
+          "on": "The person visibly wakes and starts getting out of bed for the morning."
+        }
+      ]
+    },
+    {
+      "id": "morning_started",
+      "description": "The person is getting out of bed and beginning the morning; they habitually drink milk with breakfast even when the other foods vary.",
+      "rules": [
+        {
+          "trigger": "The person is visibly awake and getting out of bed to start the morning, a routine followed by drinking milk with breakfast regardless of the other foods; the milk remains available in its usual storage area rather than already beside the person, and the person is not holding or touching it.",
+          "action": "Pick up the milk and place it next to the person."
+        }
+      ],
+      "next": [
+        {
+          "to": "breakfast",
+          "on": "The person starts eating or drinking at the breakfast table."
+        }
+      ]
+    },
+    {
+      "id": "breakfast",
+      "description": "The person is actively eating or drinking breakfast, so the cup and plate are still in use.",
+      "rules": [],
+      "next": [
+        {
+          "to": "meal_finished",
+          "on": "The person visibly finishes breakfast and begins clearing meal items from the table."
+        }
+      ]
+    },
+    {
+      "id": "meal_finished",
+      "description": "Breakfast has ended and the person has cleared some items, while a used cup or plate may still remain on the table.",
+      "rules": [],
+      "next": [
+        {
+          "to": "left_home",
+          "on": "After finishing breakfast and clearing some meal items, the person is visibly observed leaving home through the exit."
+        }
+      ]
+    },
+    {
+      "id": "left_home",
+      "description": "The person has visibly left home after finishing breakfast and partially clearing the table; absence from the camera view alone does not establish departure or forgetfulness.",
+      "rules": [
+        {
+          "trigger": "Breakfast has visibly ended, the person has cleared some meal items and has been observed leaving home through the exit, and a used cup remains on the breakfast table rather than in the sink; the cup is not held or touched and is no longer being used.",
+          "action": "Pick up the cup and place it in the sink."
+        },
+        {
+          "trigger": "Breakfast has visibly ended, the person has cleared some meal items and has been observed leaving home through the exit, and a used plate remains on the breakfast table rather than in the sink; the plate is not held or touched and is no longer being used.",
+          "action": "Pick up the plate and place it in the sink."
+        }
+      ],
+      "next": []
+    }
+  ]
+}

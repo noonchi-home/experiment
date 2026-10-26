@@ -1,0 +1,102 @@
+{
+  "purpose": "Actual saved API results for two synthetic seated scenes; not new inference when viewed.",
+  "created_at": "2026-10-25T04:42:40.137181+00:00",
+  "scenario_origin": "manual_seed",
+  "reflection_run": false,
+  "model": "qwen/qwen3.5-27b",
+  "provider": "Alibaba",
+  "temperature": 0.3,
+  "thinking": false,
+  "source_report_sha256": "fafee81f160a6a5cd8ae8ad26f7896c1aa1eb8db428a7286bf3024b8cf60079d",
+  "cases": [
+    {
+      "case": "seated_without_milk",
+      "expected_task_index": 0,
+      "actual_task_index": 0,
+      "passed": true,
+      "response_id": "gen-1792903362-ynpr0EiS5CPAbRpzOe9K",
+      "cost_usd": 0.000638235,
+      "frames": [
+        {
+          "timestamp": "2026-10-25T07:02:00+09:00",
+          "combined_png_sha256": "0c2a75e75678a1f51519bcfd187770631f7a6161b323d7c817826b086911382d",
+          "left_sha256": "40da9506478cd07b4a0c3f2953505a122cf89e2282bf5e8265e265d3c0162a44",
+          "right_sha256": "e87273a353612a3e727ca48c4c3c47633690767fb3b13247c5743bd3e283628f"
+        },
+        {
+          "timestamp": "2026-10-25T07:02:02+09:00",
+          "combined_png_sha256": "8067788994e78f5f26ea8dffd7410c313d8cd0dc89a1e95a2e646a0fb3ff0de6",
+          "left_sha256": "f33bd61b052adccb7ed3bb8847b43a1ab9a7303b6c1ed2664dc572eeae121656",
+          "right_sha256": "cb0867dcb55a4f225b177fb3233d563f5d8fb2e84d123bf59f91adf91f9c30c3"
+        },
+        {
+          "timestamp": "2026-10-25T07:02:04+09:00",
+          "combined_png_sha256": "741eb9d3077c830b8d7d3966889d62cdb182385c61bba22e10f779aaead3fb5e",
+          "left_sha256": "78ffd5f4206ebeb413721d54239160146b9f702618831248037c9ae4d2ee3b96",
+          "right_sha256": "2dbf69abef05943c4253a9dbd77577b1287f80dd5954acbaace0d555d234e9ab"
+        },
+        {
+          "timestamp": "2026-10-25T07:02:06+09:00",
+          "combined_png_sha256": "0e168061cf6dc03591b32695d851a96298b220990fd291316573a306b83108c8",
+          "left_sha256": "2cfce866f012802ccb6d58ebd6306c06f6c5dc7cb130ecaf00e1869680349d4c",
+          "right_sha256": "bf94bdba7728eb8d273f12f978b9a59d077e2229775b632916f6bf36a0abf8d6"
+        },
+        {
+          "timestamp": "2026-10-25T07:02:08+09:00",
+          "combined_png_sha256": "e69a63b987bd9a9986379258b34900b76aed084f7c63754ff3af0468cb7a5757",
+          "left_sha256": "010551e7194681d67b771c1d512860635f9f8b26dabf39a7c9f91b2097d3946b",
+          "right_sha256": "3935560ee1f6e5ef96bb20acb2df1d3b6052331ecb5517fc4356ed16f833ebc2"
+        }
+      ],
+      "result_sha256": "31d23a75eb5da349a8a3359b43f131352e0f95783212631b3353eceb994d9f20",
+      "raw_response_sha256": "31a65b8c46306922e9d4a481fa9702871702c36713cddf3f60ac9cfdc1d56d03"
+    },
+    {
+      "case": "seated_with_milk",
+      "expected_task_index": -1,
+      "actual_task_index": 0,
+      "passed": false,
+      "response_id": "gen-1792903366-ZZTXLZ1AM9QjZfl8w1YF",
+      "cost_usd": 0.000633555,
+      "frames": [
+        {
+          "timestamp": "2026-10-25T07:02:00+09:00",
+          "combined_png_sha256": "8b8aeec4884db6c4144ffb3504b46bcf2db10ffbdf1c2e860009a7dbe454ae31",
+          "left_sha256": "598370cc8ab3afcfb1e6947881ee845736835617c90a8e6e7499b8f373010f1a",
+          "right_sha256": "3109538376a27f89516a7a7c929f3e824db459f4e7ce077eceb076d523d13a7c"
+        },
+        {
+          "timestamp": "2026-10-25T07:02:02+09:00",
+          "combined_png_sha256": "451b69e208ee03f51e6391a9e497bd4290039cbdc7129309cae62a8432e43b0e",
+          "left_sha256": "6f23e5ba05b1aa733e04d9e91b896d1603c9850b06803ddf15a75acb13a5ba4f",
+          "right_sha256": "07a2c7dc88f34572b157f8f65517b6b73f072ffb928c8cabf942ec8a9c91af61"
+        },
+        {
+          "timestamp": "2026-10-25T07:02:04+09:00",
+          "combined_png_sha256": "944befc40b896aaf8c330833c5a436a5fb5b276b27212f2ea9f2ae564ef88006",
+          "left_sha256": "0db60635a484b571c6999f5411dc558a41df93f80231440956d2b6427913e24e",
+          "right_sha256": "b5037c78e219e96419e00930c984c65ed201ac1913b23bdf895757aeb9213146"
+        },
+        {
+          "timestamp": "2026-10-25T07:02:06+09:00",
+          "combined_png_sha256": "09f8947275f02b53ab605284e3392fb3accf732958be3ccf3b081529649ca647",
+          "left_sha256": "59aa2e0b212d57eaa27e91ba18108c9fc899ed0eef2d18b1ad392486ef536808",
+          "right_sha256": "588e4fc590cea7aedfd48e58e8c68cf5c2293a7bdf5b20ecbbf8401c44ac929e"
+        },
+        {
+          "timestamp": "2026-10-25T07:02:08+09:00",
+          "combined_png_sha256": "fd298ea1d94ad99ec43af957b3cf59a16e6a86c9e2a5c193bd6d693fe50efd1e",
+          "left_sha256": "92922c2de69f3c924e71e23e62405e93b1857b6ded19e4a4504e5c0e4889cbd4",
+          "right_sha256": "5fda5287ce01faabc531f6d1eacfbad4b32ee55334402621445e11e9f08a7170"
+        }
+      ],
+      "result_sha256": "842ba4c53690dff566d4de21bfd8f75bbf1225c9be002b1dcb9eb80c335a3694",
+      "raw_response_sha256": "ade062592daef4d2c4c08b8bf8d44dc33dcf3fc56ddb3aeb550868e2eea6f0ff"
+    }
+  ],
+  "limitations": [
+    "One run per condition in a single synthetic environment.",
+    "Milk-present case failed.",
+    "No robot execution, five-day learning, or new reflection claimed."
+  ]
+}

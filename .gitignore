@@ -1,0 +1,21 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+.ai-collab/
+tmp/
+artifacts/
+publish/
+# Local source archives, full datasets, private-path logs and generated decks.
+# Share only the reviewed portable sample under examples/.
+/papers/
+/reference/
+/data/
+/presentation/
+/records/

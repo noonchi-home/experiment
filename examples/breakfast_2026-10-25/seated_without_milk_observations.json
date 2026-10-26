@@ -1,0 +1,29 @@
+{
+  "observations": [
+    {
+      "timestamp": "2026-10-25T07:02:00+09:00",
+      "left_image": "seated_without_milk/frames/000_left.png",
+      "right_image": "seated_without_milk/frames/000_right.png"
+    },
+    {
+      "timestamp": "2026-10-25T07:02:02+09:00",
+      "left_image": "seated_without_milk/frames/001_left.png",
+      "right_image": "seated_without_milk/frames/001_right.png"
+    },
+    {
+      "timestamp": "2026-10-25T07:02:04+09:00",
+      "left_image": "seated_without_milk/frames/002_left.png",
+      "right_image": "seated_without_milk/frames/002_right.png"
+    },
+    {
+      "timestamp": "2026-10-25T07:02:06+09:00",
+      "left_image": "seated_without_milk/frames/003_left.png",
+      "right_image": "seated_without_milk/frames/003_right.png"
+    },
+    {
+      "timestamp": "2026-10-25T07:02:08+09:00",
+      "left_image": "seated_without_milk/frames/004_left.png",
+      "right_image": "seated_without_milk/frames/004_right.png"
+    }
+  ]
+}

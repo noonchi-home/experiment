@@ -1,0 +1,51 @@
+{
+  "scenario_id": "morning",
+  "paper": {
+    "path": "papers/2610.21211v1.pdf",
+    "sha256": "1fe0e4954d4fefaffb1e9d1619a2e52e1918b2872ca789485ec437e95f82a364",
+    "prompt_source_map": "prompts/source_map.json",
+    "predictor_sections": ["E.1", "E.2", "E.3"],
+    "reflector_sections": ["F.1", "F.2", "F.3", "F.4"]
+  },
+  "initial_memory": {
+    "origin": "manual_seed_from_user_assumed_habit",
+    "learned_from_recorded_days": false,
+    "model_generated": false,
+    "prior_day_count": null,
+    "notes_ko": [
+      "사용자가 이미 며칠간의 습관을 알고 있다고 가정하도록 요청했다. 정확히 5일을 관찰하거나 학습했다는 주장은 하지 않는다.",
+      "아침 음식이 바뀌어도 우유를 마신다는 사용자 조건과, 식사 종료 후 일부만 치우고 외출했을 때 남은 컵·접시를 싱크대에 옮기려는 사용자 조건을 초기 기억으로 작성했다.",
+      "상태 이름·상태 구분·자연어 규칙은 이 상황을 논문 부록 F의 형식에 맞게 표현한 재구성이다. 특정 사진의 정답이나 모델 실행 결과가 아니다.",
+      "이미 제공된 우유를 다시 옮기지 않도록 우유가 보관 위치에 남아 있다는 조건을 두었으며, 잡거나 만지는 물체를 옮기지 않는 논문 조건을 유지했다.",
+      "화면에서 사라진 사실만으로 외출이나 망각을 단정하지 않는다. 실제 외출과 식사 종료를 뒷받침하는 관찰을 조건에 포함했다."
+    ]
+  },
+  "task_mapping": {
+    "milk_destination": "next to the person",
+    "used_dish_destination": "in the sink",
+    "one_object_per_selected_task": true,
+    "cup_plate_priority": null,
+    "notes_ko": [
+      "우유를 가져다준다는 요청과 원문 목적지를 함께 지키기 위해 사용자 곁으로 정했다. 특정 식탁·침대 옆 배치 위치를 새로 고정하지 않는다.",
+      "컵과 접시가 모두 정리 가능한 경우 둘 중 어느 한 행동도 적절할 수 있다. 순번이 우선순위를 뜻하지 않는다.",
+      "행동 문장을 표시하는 것은 행동을 실제 수행했다는 뜻이 아니다. 물체가 옮겨졌다고 가정한 후속 관찰은 자동 생성하지 않는다."
+    ]
+  },
+  "preserved_mechanism": {
+    "paper_prompt_files_modified": false,
+    "strict_fsm_interpreter_added": false,
+    "handwritten_action_selector_added": false,
+    "memory_build_and_update_retained": true,
+    "prompt_replacements_file": "scenarios/morning/scenario.json",
+    "notes_ko": [
+      "상태·규칙·전이는 모델이 함께 참고하는 자연어 기억이다. 코드가 현재 상태를 고정하거나 규칙을 맞춰 행동을 대신 선택하지 않는다.",
+      "초기 기억 생성은 이번 시작 조건에서 생략하지만, 논문처럼 관찰에서 기억을 생성하거나 하루 말에 갱신하는 기능은 유지한다.",
+      "목록형 기억과 상태별 기억은 같은 세 규칙을 사용한다. 상태별 기억에는 생활 단계와 전이 설명이 추가된다."
+    ]
+  },
+  "remaining_reconstruction_notes_ko": [
+    "합성 사진의 세부 장면·시각·배치와 외출을 보이는 카메라 구성은 논문 원문이 제공하지 않는 우리 상황의 입력 설계다.",
+    "허용 목적지에 싱크대를 추가했지만 실제 로봇의 이동·충돌·집기 가능성은 실행하거나 검증하지 않는다. 출력은 선택한 행동의 글이다.",
+    "원문의 시리얼·그릇 예시는 동일 물체를 이미 집는 행동을 트리거로 삼지 말라는 일반 설명이므로 유지한다. 현재 판단기의 실행 가능 행동은 tasks.json의 세 문장으로 제한된다."
+  ]
+}

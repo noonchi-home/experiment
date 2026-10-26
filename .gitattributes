@@ -1,0 +1,8 @@
+# Preserve hashed evidence bytes on all platforms. -text disables EOL conversion,
+# not ordinary textual diffs. The transcribed paper prompts are explicitly LF.
+* -text
+prompts/paper/*.txt text eol=lf
+*.png binary
+*.jpg binary
+*.pdf binary
+*.blend binary

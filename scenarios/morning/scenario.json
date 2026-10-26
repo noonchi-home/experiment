@@ -1,0 +1,46 @@
+{
+  "id": "morning",
+  "description": "아침 기상 후 우유 제공과 식사 종료·외출 뒤 남은 컵·접시 정리를 판단하는 PAM 상황. 기존 습관은 수동 초기 기억으로 가정한다.",
+  "tasks_file": "tasks.json",
+  "memory_files": {
+    "fsm": "initial_fsm.json",
+    "list": "initial_list.json"
+  },
+  "action_labels_ko": [
+    "우유를 사용자 곁에 가져다놓기",
+    "컵을 싱크대에 가져다놓기",
+    "접시를 싱크대에 가져다놓기"
+  ],
+  "prompt_replacements": [
+    {
+      "old": "- The setting is a personal desk where a single person performs everyday activities.",
+      "new": "- The setting is a home with a bedroom, a breakfast table, a kitchen sink, and a visible exit, where a single person follows their morning routine.",
+      "reason": "사용자가 지정한 침대 기상·아침 식사·외출 상황에 맞게 공간만 바꾼다."
+    },
+    {
+      "old": "- The designated storage area: the corner of the desk, where items such as cereal,\nbowls, milk, drinks, and water are normally kept.",
+      "new": "- The designated storage area: a kitchen storage surface where the milk is normally kept. A cup and a plate are used at the breakfast table; the sink is the destination for used dishes.",
+      "reason": "책상 모서리의 물품 보관을 주방의 우유 보관 위치로 바꾸고 컵·접시·싱크대의 역할을 명시한다. 우유 제공 목적지는 원문처럼 사용자 곁이다."
+    },
+    {
+      "old": "action on that object until the person sets it down on the desk.",
+      "new": "action on that object until the person sets it down on a stable surface.",
+      "reason": "사람이 잡거나 만지는 물체를 옮기지 않는 원문 조건을 유지하면서 놓는 표면을 책상 외의 생활 공간에도 적용한다."
+    },
+    {
+      "old": "down at the desk, placing an item they have just finished using, finishing or",
+      "new": "down at the breakfast table, placing an item they have just finished using, finishing or",
+      "reason": "로봇이 도와도 사람이 직접 만드는 관찰 신호의 예시에서 책상만 식탁으로 바꾼다."
+    },
+    {
+      "old": "values are exactly one of: `next to the person`, `in the designated storage area`, `\nin the trash can`.",
+      "new": "values are exactly one of: `next to the person`, `in the designated storage area`, `in the trash can`, `in the sink`.",
+      "reason": "기억 생성·갱신의 원문 행동 문장 형식을 유지하면서 사용자 상황에 필요한 싱크대 목적지를 추가한다."
+    },
+    {
+      "old": "- A procedural MEMORY built by reflecting on the user's past activities.",
+      "new": "- A procedural MEMORY describing the user's established morning routine.",
+      "reason": "이번 초기 기억을 실제 관찰로 학습한 것처럼 주장하지 않는다. 생성 방법을 단정하지 않아 이후 Reflector가 갱신한 기억에도 사용할 수 있으며, 수동 초기 기억의 출처는 provenance.json에 별도 기록한다."
+    }
+  ]
+}

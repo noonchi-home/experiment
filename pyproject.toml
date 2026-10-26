@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pam-paper-reproduction"
+version = "0.1.0"
+description = "Paper-grounded PAM inputs and OpenRouter inference"
+requires-python = ">=3.11"
+dependencies = ["Pillow==12.2.0"]
+
+[project.optional-dependencies]
+dev = ["PyMuPDF==1.28.0"]
+
+[tool.setuptools]
+packages = ["pam"]

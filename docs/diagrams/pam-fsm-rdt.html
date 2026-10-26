@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PAM 최종 기억 — 모든 도움을 화살표에 표시한 상태 그림</title>
+<style>
+:root { color-scheme:light; --paper:#fff; --ink:#111; --accent:#15117f; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--paper); color:var(--ink); font-family:"Malgun Gothic","Apple SD Gothic Neo",Arial,sans-serif; }
+main { max-width:2000px; min-width:0; margin:0 auto; }
+.diagram-container { width:100%; overflow-x:auto; }
+svg { display:block; width:100%; min-width:1600px; height:auto; }
+.state { fill:var(--paper); stroke:var(--ink); stroke-width:2.4; }
+.arrow { fill:none; stroke:var(--ink); stroke-width:2.3; stroke-linecap:round; marker-end:url(#pam-fsm-rdt-arrow); }
+.heading { font-family:"Segoe Print","Malgun Gothic",sans-serif; font-size:38px; font-weight:600; fill:var(--accent); }
+.node-name { font-size:29px; text-anchor:middle; }
+.node-english { font-family:Arial,sans-serif; font-size:19px; text-anchor:middle; }
+.condition { font-size:26px; text-anchor:middle; }
+.action { font-size:29px; font-weight:700; text-anchor:middle; }
+.detail { font-size:22px; text-anchor:middle; }
+.lambda { font-family:Georgia,serif; font-size:29px; text-anchor:middle; }
+.small { font-size:21px; }
+.legend { font-size:23px; }
+.source { font-size:20px; fill:#444; }
+.divider { stroke:var(--ink); stroke-width:2; }
+@media print { .diagram-container { overflow-x:visible; } svg { min-width:0; } }
+</style></head><body><main><div class="diagram-container">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 1960" role="img" aria-labelledby="pam-fsm-rdt-title pam-fsm-rdt-desc">
+<title id="pam-fsm-rdt-title">PAM 최종 기억의 다섯 상태, 다섯 전이와 여섯 도움 규칙</title>
+<desc id="pam-fsm-rdt-desc">식사 준비에는 시리얼 가져오기, 우유 가져오기, 시리얼 봉지 치우기, 우유병 치우기의 네 고리가 있다. 식사 중에는 빈 그릇 치우기, 손 닦기에는 사용한 물티슈 버리기 고리가 있다. 각 고리의 가로선 위는 관찰 조건, 아래는 로봇의 도움이다. 타이핑하면 작업 중으로 이동한다. 작업 중과 자리 떠남에는 등록된 도움 규칙이 없다.</desc>
+<defs><marker id="pam-fsm-rdt-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 Z" fill="#111"/></marker></defs>
+<rect x="0" y="0" width="2000" height="1960" fill="#fff"/>
+
+<text x="45" y="62" class="heading" >PAM: 최종 기억의 활동 상태와 도움 규칙</text>
+<path d="M 45 78 Q 480 74 935 78" fill="none" stroke="#15117f" stroke-width="2.5"/>
+<text x="45" y="115" class="source" >원: 사람의 활동  ·  가로선 위: 관찰 조건  /  아래: 로봇의 도움</text>
+<g class="transition-edge">
+<path class="arrow" d="M 640 520 C 830 490 1170 490 1360 520" data-kind="transition" data-from="meal_preparation" data-to="eating" data-condition="Person picks up a spoon"/>
+<text x="1030" y="410" class="condition" >숟가락을 집음</text>
+<line class="divider" x1="875.0" y1="428" x2="1185.0" y2="428"/>
+<text x="1030" y="468" class="lambda" >Λ</text>
+</g>
+<g class="transition-edge">
+<path class="arrow" d="M 1516 581 C 1590 800 1590 1100 1516 1239" data-kind="transition" data-from="eating" data-to="working" data-condition="Person starts typing"/>
+<text x="1800" y="885" class="condition" >타이핑을 시작함</text>
+<line class="divider" x1="1635.0" y1="903" x2="1965.0" y2="903"/>
+<text x="1800" y="943" class="lambda" >Λ</text>
+</g>
+<g class="transition-edge">
+<path class="arrow" d="M 1372 1255 C 1170 1160 810 1160 628 1255" data-kind="transition" data-from="working" data-to="cleaning_break" data-condition="Person reaches for wet wipes"/>
+<text x="1000" y="1100" class="condition" >물티슈로 손을 뻗음</text>
+<line class="divider" x1="815.0" y1="1118" x2="1185.0" y2="1118"/>
+<text x="1000" y="1158" class="lambda" >Λ</text>
+</g>
+<g class="transition-edge">
+<path class="arrow" d="M 628 1345 C 810 1440 1170 1440 1372 1345" data-kind="transition" data-from="cleaning_break" data-to="working" data-condition="Person types on the laptop"/>
+<text x="1000" y="1480" class="condition" >노트북을 타이핑함</text>
+<line class="divider" x1="810.0" y1="1498" x2="1190.0" y2="1498"/>
+<text x="1000" y="1538" class="lambda" >Λ</text>
+</g>
+<g class="transition-edge">
+<path class="arrow" d="M 1521 1355 C 1670 1380 1790 1420 1750 1494" data-kind="transition" data-from="working" data-to="leaving" data-condition="Person closes laptop"/>
+<text x="1810" y="1270" class="condition" >노트북을 닫음</text>
+<line class="divider" x1="1660.0" y1="1288" x2="1960.0" y2="1288"/>
+<text x="1810" y="1328" class="lambda" >Λ</text>
+</g>
+<g class="assistance-edge" data-rule-state="meal_preparation" data-rule-trigger="Person places a bowl on the desk or Person sits down at the desk" data-rule-action="Pick up the cereal bag and place it next to the person.">
+<path class="arrow" d="M 478 466 C 280 440 380 250 511 439" data-kind="assistance-rule" data-state="meal_preparation" data-trigger="Person places a bowl on the desk or Person sits down at the desk" data-action="Pick up the cereal bag and place it next to the person."/>
+<text x="270" y="205" class="condition" >그릇을 책상에 놓음</text>
+<text x="270" y="240" class="condition" >또는 책상에 앉음</text>
+<line class="divider" x1="75.0" y1="258" x2="465.0" y2="258"/>
+<text x="270" y="298" class="action" >시리얼 가져오기</text>
+<text x="270" y="329" class="detail" >시리얼 봉지를 사용자 옆에 놓기</text>
+</g>
+<g class="assistance-edge" data-rule-state="meal_preparation" data-rule-trigger="Person pours cereal into the bowl or Person places the cereal bag on the desk" data-rule-action="Pick up the milk bottle and place it next to the person.">
+<path class="arrow" d="M 589 439 C 720 250 820 440 622 466" data-kind="assistance-rule" data-state="meal_preparation" data-trigger="Person pours cereal into the bowl or Person places the cereal bag on the desk" data-action="Pick up the milk bottle and place it next to the person."/>
+<text x="900" y="205" class="condition" >시리얼을 그릇에 부음</text>
+<text x="900" y="240" class="condition" >또는 시리얼 봉지를 책상에 놓음</text>
+<line class="divider" x1="680.0" y1="258" x2="1120.0" y2="258"/>
+<text x="900" y="298" class="action" >우유 가져오기</text>
+<text x="900" y="329" class="detail" >우유병을 사용자 옆에 놓기</text>
+</g>
+<g class="assistance-edge" data-rule-state="meal_preparation" data-rule-trigger="Person reaches for the milk bottle or Person finishes pouring cereal or Person places the cereal bag on the desk" data-rule-action="Pick up the cereal bag and place it in the designated storage area.">
+<path class="arrow" d="M 478 574 C 280 600 380 790 511 601" data-kind="assistance-rule" data-state="meal_preparation" data-trigger="Person reaches for the milk bottle or Person finishes pouring cereal or Person places the cereal bag on the desk" data-action="Pick up the cereal bag and place it in the designated storage area."/>
+<text x="280" y="745" class="condition" >우유병으로 손을 뻗음</text>
+<text x="280" y="780" class="condition" >또는 시리얼 붓기를 마침</text>
+<text x="280" y="815" class="condition" >또는 시리얼 봉지를 책상에 놓음</text>
+<line class="divider" x1="55.0" y1="833" x2="505.0" y2="833"/>
+<text x="280" y="873" class="action" >시리얼 봉지 치우기</text>
+<text x="280" y="904" class="detail" >지정된 보관 장소에 놓기</text>
+</g>
+<g class="assistance-edge" data-rule-state="meal_preparation" data-rule-trigger="Person picks up a spoon or Person finishes pouring milk or Person places the milk bottle on the desk" data-rule-action="Pick up the milk bottle and place it in the designated storage area.">
+<path class="arrow" d="M 589 601 C 720 790 820 600 622 574" data-kind="assistance-rule" data-state="meal_preparation" data-trigger="Person picks up a spoon or Person finishes pouring milk or Person places the milk bottle on the desk" data-action="Pick up the milk bottle and place it in the designated storage area."/>
+<text x="900" y="745" class="condition" >숟가락을 집음</text>
+<text x="900" y="780" class="condition" >또는 우유 붓기를 마침</text>
+<text x="900" y="815" class="condition" >또는 우유병을 책상에 놓음</text>
+<line class="divider" x1="685.0" y1="833" x2="1115.0" y2="833"/>
+<text x="900" y="873" class="action" >우유병 치우기</text>
+<text x="900" y="904" class="detail" >지정된 보관 장소에 놓기</text>
+</g>
+<g class="assistance-edge" data-rule-state="eating" data-rule-trigger="Person opens laptop or Person puts down the spoon or Person places the empty bowl on the desk" data-rule-action="Pick up the empty bowl and place it in the designated storage area.">
+<path class="arrow" d="M 1395 448 C 1240 325 1660 325 1505 448" data-kind="assistance-rule" data-state="eating" data-trigger="Person opens laptop or Person puts down the spoon or Person places the empty bowl on the desk" data-action="Pick up the empty bowl and place it in the designated storage area."/>
+<text x="1460" y="165" class="condition" >노트북을 엶</text>
+<text x="1460" y="200" class="condition" >또는 숟가락을 내려놓음</text>
+<text x="1460" y="235" class="condition" >또는 빈 그릇을 책상에 놓음</text>
+<line class="divider" x1="1245.0" y1="253" x2="1675.0" y2="253"/>
+<text x="1460" y="293" class="action" >빈 그릇 치우기</text>
+<text x="1460" y="324" class="detail" >지정된 보관 장소에 놓기</text>
+</g>
+<g class="assistance-edge" data-rule-state="cleaning_break" data-rule-trigger="Person starts typing or Person finishes wiping or Person places the used wet wipe on the desk" data-rule-action="Pick up the used wet wipe and place it in the trash can.">
+<path class="arrow" d="M 505 1378 C 350 1600 750 1600 595 1378" data-kind="assistance-rule" data-state="cleaning_break" data-trigger="Person starts typing or Person finishes wiping or Person places the used wet wipe on the desk" data-action="Pick up the used wet wipe and place it in the trash can."/>
+<text x="550" y="1595" class="condition" >타이핑을 시작함</text>
+<text x="550" y="1630" class="condition" >또는 닦기를 마침</text>
+<text x="550" y="1665" class="condition" >또는 사용한 물티슈를 책상에 놓음</text>
+<line class="divider" x1="305.0" y1="1683" x2="795.0" y2="1683"/>
+<text x="550" y="1723" class="action" >사용한 물티슈 버리기</text>
+<text x="550" y="1754" class="detail" >집어서 쓰레기통에 버리기</text>
+</g>
+<path class="arrow" style="stroke-dasharray:8 7" d="M 550 325 L 550 430" data-kind="initial" data-to="meal_preparation"/>
+<text x="570" y="355" class="small" >시작</text>
+<g data-state="meal_preparation"><circle class="state" cx="550" cy="520" r="90"/>
+<text x="550" y="510" class="node-name" >식사 준비</text>
+<text x="550" y="540" class="node-english" >Meal preparation</text>
+</g>
+<g data-state="eating"><circle class="state" cx="1450" cy="520" r="90"/>
+<text x="1450" y="510" class="node-name" >식사 중</text>
+<text x="1450" y="540" class="node-english" >Eating</text>
+</g>
+<g data-state="working"><circle class="state" cx="1450" cy="1300" r="90"/>
+<text x="1450" y="1290" class="node-name" >작업 중</text>
+<text x="1450" y="1320" class="node-english" >Working</text>
+<text x="1450" y="1349" class="detail" style="font-size:17px">도움 규칙 없음</text>
+</g>
+<g data-state="cleaning_break"><circle class="state" cx="550" cy="1300" r="90"/>
+<text x="550" y="1290" class="node-name" >손 닦기</text>
+<text x="550" y="1320" class="node-english" >Cleaning break</text>
+</g>
+<g data-state="leaving"><circle class="state" cx="1750" cy="1584" r="90"/>
+<text x="1750" y="1574" class="node-name" >자리 떠남</text>
+<text x="1750" y="1604" class="node-english" >Leaving</text>
+<text x="1750" y="1633" class="detail" style="font-size:17px">도움 규칙 없음</text>
+</g>
+<path class="arrow" d="M 1750 1674 L 1750 1730" data-kind="final" data-from="leaving"/>
+<circle cx="1750" cy="1748" r="16" fill="#fff" stroke="#111" stroke-width="2"/><circle cx="1750" cy="1748" r="10" fill="#111"/>
+<text x="1778" y="1756" class="small" >종료</text>
+<line x1="45" y1="1810" x2="1955" y2="1810" stroke="#999" stroke-width="1"/>
+<text x="45" y="1850" class="legend" >다른 원으로 가는 화살표: 상태 전이  ·  같은 원으로 돌아오는 고리: 그 상태의 도움 규칙 (총 여섯 개)</text>
+<text x="45" y="1890" class="source" >Λ: 해당 전이에 별도 로봇 행동을 적지 않았다는 표시. 도움 규칙을 고리로 옮겨 그렸으며, 행동의 자동 반복을 뜻하지 않습니다.</text>
+<text x="45" y="1925" class="source" >출처: PAM 논문 그림 14(25쪽), 그림 18(27–28쪽)의 최종 기억. 조건·행동을 한국어로 옮겼습니다.</text>
+</svg></div></main></body></html>
