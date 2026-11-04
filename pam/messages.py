@@ -112,12 +112,39 @@ def _frame_content(frames: list[dict], count: int, stride: int | None = None) ->
     return parts
 
 
+PAPER_PREDICTOR_WINDOW = {"max_frames": 5, "stride_seconds": 2}
+
+
+def predictor_image_count(bundle: dict) -> int:
+    """Return the declared predictor image count; anything but 5 needs an explicit override."""
+    count = bundle.get("frame_count", 5)
+    window = bundle.get("predictor_window")
+    if count == 5 and (window is None or window.get("source") == "paper"):
+        return 5
+    if (not isinstance(window, dict) or window.get("source") != "explicit_user_override"
+            or type(count) is not int or type(window.get("max_frames")) is not int
+            or not 1 <= count <= window["max_frames"] or window.get("supplied_frames") != count):
+        raise ContractError("A non-paper predictor image count requires an explicit user override declaration.")
+    return count
+
+
 def build_predictor_messages(
     frames: list[dict], tasks: list[str], *, memory_kind: str = "none",
     memory: dict | None = None, project_dir: Path = PROJECT_ROOT, scenario: dict | None = None,
+    window_frames: int = 5, stride_seconds: int = 2,
 ) -> dict:
-    """Prepare E.1/E.2/E.3 without inferring a state or selecting an action."""
+    """Prepare E.1/E.2/E.3 without inferring a state or selecting an action.
+
+    The paper window is five frames two seconds apart. Any other window is an
+    explicit user override: up to ``window_frames`` frames ``stride_seconds``
+    apart, where fewer frames are allowed only before the window has filled.
+    The override is recorded so it cannot be mistaken for the paper input.
+    """
     tasks = validate_tasks(tasks)
+    paper_window = (window_frames, stride_seconds) == (5, 2)
+    if not paper_window and (type(window_frames) is not int or not 2 <= window_frames <= 16
+                             or type(stride_seconds) is not int or stride_seconds not in (1, 2)):
+        raise ContractError("Predictor window override must be 2-16 frames, 1 or 2 seconds apart.")
     if memory_kind not in {"none", "list", "fsm"}:
         raise ContractError("memory_kind must be none, list, or fsm.")
     if memory_kind == "none":
@@ -128,7 +155,16 @@ def build_predictor_messages(
     else:
         validate_memory(memory, memory_kind)
     config = load_paper_config(project_dir)
-    image_parts = _frame_content(frames, 5, stride=2)
+    if paper_window:
+        image_parts = _frame_content(frames, 5, stride=2)
+    else:
+        if not 1 <= len(frames) <= window_frames:
+            raise ContractError(f"Expected 1 to {window_frames} predictor frames, received {len(frames)}.")
+        image_parts = _frame_content(frames, len(frames), stride=stride_seconds)
+    predictor_window = {"max_frames": window_frames, "stride_seconds": stride_seconds,
+                        "supplied_frames": len(frames),
+                        "source": "paper" if paper_window else "explicit_user_override",
+                        "paper": dict(PAPER_PREDICTOR_WINDOW)}
     prompt_id = "predictor_no_memory" if memory_kind == "none" else f"predictor_{memory_kind}"
     template, source = load_prompt(prompt_id, project_dir)
     adaptation = None
@@ -136,7 +172,7 @@ def build_predictor_messages(
         from .scenarios import adapt_prompt
         template, adaptation = adapt_prompt(template, scenario)
     values = {
-        "window": "5", "n_tasks_minus_one": str(len(tasks) - 1),
+        "window": str(window_frames), "n_tasks_minus_one": str(len(tasks) - 1),
         "tasks_block": "\n".join(f"{index}: {task}" for index, task in enumerate(tasks)),
     }
     if memory_kind != "none":
@@ -145,6 +181,7 @@ def build_predictor_messages(
     system = _render(template, values)
     return {
         "role": "predictor", "memory_kind": memory_kind, "tasks": tasks,
+        "frame_count": len(frames), "predictor_window": predictor_window,
         "prompt_source": source, "model": config["model"], "scenario": adaptation,
         "generation": {key: config["predictor"][key] for key in ("temperature", "enable_thinking")},
         "messages": [
