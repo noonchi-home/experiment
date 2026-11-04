@@ -1,0 +1,647 @@
+{
+  "run": "artifacts/routine_vllm_nomem_2026-11-04 (로컬 보관, 공유 안 함)",
+  "mode": "vllm",
+  "labels": "docs/research/routine_2026-11-04/정답/4일_정답_초안.json",
+  "rounds": {
+    "A2": {
+      "frames": 215,
+      "invalid_outputs": 0,
+      "accuracy": 0.5348837209302325,
+      "per_class": {
+        "-1": {
+          "support": 122,
+          "predicted": 189,
+          "tp": 113,
+          "fp": 76,
+          "fn": 9,
+          "precision": 0.5978835978835979,
+          "recall": 0.9262295081967213,
+          "f1": 0.7266881028938907
+        },
+        "0": {
+          "support": 43,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 43,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "1": {
+          "support": 0,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "2": {
+          "support": 8,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 8,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "3": {
+          "support": 10,
+          "predicted": 9,
+          "tp": 0,
+          "fp": 9,
+          "fn": 10,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "4": {
+          "support": 12,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 12,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "5": {
+          "support": 8,
+          "predicted": 6,
+          "tp": 0,
+          "fp": 6,
+          "fn": 8,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "6": {
+          "support": 0,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "7": {
+          "support": 8,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 8,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "8": {
+          "support": 4,
+          "predicted": 11,
+          "tp": 2,
+          "fp": 9,
+          "fn": 2,
+          "precision": 0.18181818181818182,
+          "recall": 0.5,
+          "f1": 0.26666666666666666
+        },
+        "9": {
+          "support": 0,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "task_macro": {
+        "precision": 0.025974025974025976,
+        "recall": 0.07142857142857142,
+        "f1": 0.03809523809523809
+      },
+      "no_act": {
+        "support": 122,
+        "predicted": 189,
+        "tp": 113,
+        "fp": 76,
+        "fn": 9,
+        "precision": 0.5978835978835979,
+        "recall": 0.9262295081967213,
+        "f1": 0.7266881028938907
+      },
+      "distractor_predictions": {},
+      "mean_first_fire_delay_seconds": 13.0,
+      "delivery_outcomes": {
+        "missed": 3
+      },
+      "segments": [
+        {
+          "frame_start": 16,
+          "frame_end": 27,
+          "labels": [
+            4
+          ],
+          "kind": "deliver",
+          "first_fire_frame": null,
+          "first_fire_delay_seconds": 12,
+          "fired": false,
+          "outcome": "missed"
+        },
+        {
+          "frame_start": 28,
+          "frame_end": 70,
+          "labels": [
+            0
+          ],
+          "kind": "deliver",
+          "first_fire_frame": null,
+          "first_fire_delay_seconds": 43,
+          "fired": false,
+          "outcome": "missed"
+        },
+        {
+          "frame_start": 106,
+          "frame_end": 113,
+          "labels": [
+            5,
+            1
+          ],
+          "kind": "clear",
+          "first_fire_frame": null,
+          "first_fire_delay_seconds": 8,
+          "fired": false
+        },
+        {
+          "frame_start": 114,
+          "frame_end": 121,
+          "labels": [
+            2
+          ],
+          "kind": "deliver",
+          "first_fire_frame": null,
+          "first_fire_delay_seconds": 8,
+          "fired": false,
+          "outcome": "missed"
+        },
+        {
+          "frame_start": 160,
+          "frame_end": 169,
+          "labels": [
+            3
+          ],
+          "kind": "clear",
+          "first_fire_frame": null,
+          "first_fire_delay_seconds": 10,
+          "fired": false
+        },
+        {
+          "frame_start": 170,
+          "frame_end": 177,
+          "labels": [
+            7
+          ],
+          "kind": "switch",
+          "first_fire_frame": null,
+          "first_fire_delay_seconds": 8,
+          "fired": false
+        },
+        {
+          "frame_start": 206,
+          "frame_end": 209,
+          "labels": [
+            8
+          ],
+          "kind": "switch",
+          "first_fire_frame": 208,
+          "first_fire_delay_seconds": 2,
+          "fired": true
+        }
+      ]
+    },
+    "B1": {
+      "frames": 169,
+      "invalid_outputs": 0,
+      "accuracy": 0.47337278106508873,
+      "per_class": {
+        "-1": {
+          "support": 93,
+          "predicted": 141,
+          "tp": 80,
+          "fp": 61,
+          "fn": 13,
+          "precision": 0.5673758865248227,
+          "recall": 0.8602150537634409,
+          "f1": 0.6837606837606838
+        },
+        "0": {
+          "support": 53,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 53,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "1": {
+          "support": 5,
+          "predicted": 4,
+          "tp": 0,
+          "fp": 4,
+          "fn": 5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "2": {
+          "support": 0,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "3": {
+          "support": 0,
+          "predicted": 8,
+          "tp": 0,
+          "fp": 8,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "4": {
+          "support": 0,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "5": {
+          "support": 0,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "6": {
+          "support": 7,
+          "predicted": 7,
+          "tp": 0,
+          "fp": 7,
+          "fn": 7,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "7": {
+          "support": 5,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "8": {
+          "support": 6,
+          "predicted": 9,
+          "tp": 0,
+          "fp": 9,
+          "fn": 6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "9": {
+          "support": 0,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "task_macro": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "no_act": {
+        "support": 93,
+        "predicted": 141,
+        "tp": 80,
+        "fp": 61,
+        "fn": 13,
+        "precision": 0.5673758865248227,
+        "recall": 0.8602150537634409,
+        "f1": 0.6837606837606838
+      },
+      "distractor_predictions": {
+        "3": 8
+      },
+      "mean_first_fire_delay_seconds": 12.666666666666666,
+      "delivery_outcomes": {
+        "missed": 2
+      },
+      "segments": [
+        {
+          "frame_start": 15,
+          "frame_end": 26,
+          "labels": [
+            0
+          ],
+          "kind": "deliver",
+          "first_fire_frame": null,
+          "first_fire_delay_seconds": 12,
+          "fired": false,
+          "outcome": "missed"
+        },
+        {
+          "frame_start": 46,
+          "frame_end": 50,
+          "labels": [
+            1
+          ],
+          "kind": "clear",
+          "first_fire_frame": null,
+          "first_fire_delay_seconds": 5,
+          "fired": false
+        },
+        {
+          "frame_start": 58,
+          "frame_end": 98,
+          "labels": [
+            0
+          ],
+          "kind": "deliver",
+          "first_fire_frame": null,
+          "first_fire_delay_seconds": 41,
+          "fired": false,
+          "outcome": "missed"
+        },
+        {
+          "frame_start": 121,
+          "frame_end": 127,
+          "labels": [
+            6,
+            1
+          ],
+          "kind": "clear",
+          "first_fire_frame": null,
+          "first_fire_delay_seconds": 7,
+          "fired": false
+        },
+        {
+          "frame_start": 128,
+          "frame_end": 132,
+          "labels": [
+            7
+          ],
+          "kind": "switch",
+          "first_fire_frame": null,
+          "first_fire_delay_seconds": 5,
+          "fired": false
+        },
+        {
+          "frame_start": 159,
+          "frame_end": 164,
+          "labels": [
+            8
+          ],
+          "kind": "switch",
+          "first_fire_frame": null,
+          "first_fire_delay_seconds": 6,
+          "fired": false
+        }
+      ]
+    },
+    "B2": {
+      "frames": 182,
+      "invalid_outputs": 0,
+      "accuracy": 0.46703296703296704,
+      "per_class": {
+        "-1": {
+          "support": 94,
+          "predicted": 148,
+          "tp": 82,
+          "fp": 66,
+          "fn": 12,
+          "precision": 0.5540540540540541,
+          "recall": 0.8723404255319149,
+          "f1": 0.6776859504132232
+        },
+        "0": {
+          "support": 62,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 62,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "1": {
+          "support": 10,
+          "predicted": 1,
+          "tp": 1,
+          "fp": 0,
+          "fn": 9,
+          "precision": 1.0,
+          "recall": 0.1,
+          "f1": 0.18181818181818182
+        },
+        "2": {
+          "support": 0,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "3": {
+          "support": 0,
+          "predicted": 8,
+          "tp": 0,
+          "fp": 8,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "4": {
+          "support": 0,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "5": {
+          "support": 0,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "6": {
+          "support": 6,
+          "predicted": 10,
+          "tp": 0,
+          "fp": 10,
+          "fn": 6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "7": {
+          "support": 5,
+          "predicted": 2,
+          "tp": 0,
+          "fp": 2,
+          "fn": 5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "8": {
+          "support": 5,
+          "predicted": 13,
+          "tp": 2,
+          "fp": 11,
+          "fn": 3,
+          "precision": 0.15384615384615385,
+          "recall": 0.4,
+          "f1": 0.2222222222222222
+        },
+        "9": {
+          "support": 0,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "task_macro": {
+        "precision": 0.23076923076923075,
+        "recall": 0.1,
+        "f1": 0.0808080808080808
+      },
+      "no_act": {
+        "support": 94,
+        "predicted": 148,
+        "tp": 82,
+        "fp": 66,
+        "fn": 12,
+        "precision": 0.5540540540540541,
+        "recall": 0.8723404255319149,
+        "f1": 0.6776859504132232
+      },
+      "distractor_predictions": {
+        "3": 8
+      },
+      "mean_first_fire_delay_seconds": 12.5,
+      "delivery_outcomes": {
+        "missed": 2
+      },
+      "segments": [
+        {
+          "frame_start": 17,
+          "frame_end": 31,
+          "labels": [
+            0
+          ],
+          "kind": "deliver",
+          "first_fire_frame": null,
+          "first_fire_delay_seconds": 15,
+          "fired": false,
+          "outcome": "missed"
+        },
+        {
+          "frame_start": 51,
+          "frame_end": 60,
+          "labels": [
+            1
+          ],
+          "kind": "clear",
+          "first_fire_frame": 53,
+          "first_fire_delay_seconds": 2,
+          "fired": true
+        },
+        {
+          "frame_start": 70,
+          "frame_end": 116,
+          "labels": [
+            0
+          ],
+          "kind": "deliver",
+          "first_fire_frame": null,
+          "first_fire_delay_seconds": 47,
+          "fired": false,
+          "outcome": "missed"
+        },
+        {
+          "frame_start": 135,
+          "frame_end": 140,
+          "labels": [
+            6,
+            1
+          ],
+          "kind": "clear",
+          "first_fire_frame": null,
+          "first_fire_delay_seconds": 6,
+          "fired": false
+        },
+        {
+          "frame_start": 141,
+          "frame_end": 145,
+          "labels": [
+            7
+          ],
+          "kind": "switch",
+          "first_fire_frame": null,
+          "first_fire_delay_seconds": 5,
+          "fired": false
+        },
+        {
+          "frame_start": 172,
+          "frame_end": 176,
+          "labels": [
+            8
+          ],
+          "kind": "switch",
+          "first_fire_frame": 172,
+          "first_fire_delay_seconds": 0,
+          "fired": true
+        }
+      ]
+    }
+  }
+}

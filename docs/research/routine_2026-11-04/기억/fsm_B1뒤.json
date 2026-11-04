@@ -1,0 +1,83 @@
+{
+  "initial_state": "desk_idle",
+  "states": [
+    {
+      "id": "desk_idle",
+      "description": "Person is sitting at the desk, initially looking at phone or preparing to eat.",
+      "rules": [
+        {
+          "trigger": "Person sits at the desk.",
+          "action": "Pick up the cup and place it next to the person."
+        },
+        {
+          "trigger": "Person sits at the desk.",
+          "action": "Pick up the bowl and place it next to the person."
+        }
+      ],
+      "next": [
+        {
+          "to": "desk_eating",
+          "on": "Person places a bowl on the desk."
+        }
+      ]
+    },
+    {
+      "id": "desk_eating",
+      "description": "Person is eating at the desk.",
+      "rules": [
+        {
+          "trigger": "Person finishes eating.",
+          "action": "Pick up the bowl and place it in the dishwasher."
+        },
+        {
+          "trigger": "Person finishes eating.",
+          "action": "Pick up the cup and place it in the dishwasher."
+        }
+      ],
+      "next": [
+        {
+          "to": "leaving_room",
+          "on": "Person leaves the desk."
+        }
+      ]
+    },
+    {
+      "id": "leaving_room",
+      "description": "Person is leaving the desk area to turn off lights.",
+      "rules": [
+        {
+          "trigger": "Person walks to the light switch.",
+          "action": "Turn off the room light."
+        }
+      ],
+      "next": [
+        {
+          "to": "bed_relaxing",
+          "on": "Person walks to the bed."
+        }
+      ]
+    },
+    {
+      "id": "bed_relaxing",
+      "description": "Person is in bed, looking at phone.",
+      "rules": [
+        {
+          "trigger": "Person puts the phone on the bed.",
+          "action": "Turn off the bedside lamp."
+        }
+      ],
+      "next": [
+        {
+          "to": "bed_sleeping",
+          "on": "Person turns off the bedside lamp."
+        }
+      ]
+    },
+    {
+      "id": "bed_sleeping",
+      "description": "Person is in bed, lights are off.",
+      "rules": [],
+      "next": []
+    }
+  ]
+}
