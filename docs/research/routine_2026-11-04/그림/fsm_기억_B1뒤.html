@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FSM 기억 B1 뒤</title>
+<style>
+:root { color-scheme:light; --paper:#fff; --ink:#111; --accent:#15117f; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--paper); color:var(--ink); font-family:"Malgun Gothic","Apple SD Gothic Neo",Arial,sans-serif; }
+main { max-width:2000px; min-width:0; margin:0 auto; }
+.diagram-container { width:100%; overflow-x:auto; }
+svg { display:block; width:100%; min-width:1600px; height:auto; }
+.state { fill:var(--paper); stroke:var(--ink); stroke-width:2.4; }
+.arrow { fill:none; stroke:var(--ink); stroke-width:2.3; stroke-linecap:round; marker-end:url(#arrow); }
+.heading { font-family:"Segoe Print","Malgun Gothic",sans-serif; font-size:38px; font-weight:600; fill:var(--accent); }
+.node-name { font-size:29px; text-anchor:middle; }
+.node-english { font-family:Arial,sans-serif; font-size:19px; text-anchor:middle; }
+.condition { font-size:26px; text-anchor:middle; }
+.action { font-size:29px; font-weight:700; text-anchor:middle; }
+.detail { font-size:22px; text-anchor:middle; }
+.note { font-size:21px; text-anchor:middle; fill:#9a3412; }
+.lambda { font-family:Georgia,serif; font-size:29px; text-anchor:middle; }
+.small { font-size:21px; }
+.legend { font-size:23px; }
+.source { font-size:20px; fill:#444; }
+.gone { font-size:24px; text-anchor:middle; fill:#666; }
+.divider { stroke:var(--ink); stroke-width:2; }
+@media print { .diagram-container { overflow-x:visible; } svg { min-width:0; } }
+</style></head><body><main><div class="diagram-container">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 1960" role="img" aria-label="FSM 기억 B1 뒤">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 Z" fill="#111"/></marker></defs>
+<rect x="0" y="0" width="2000" height="1960" fill="#fff"/>
+<text x="45" y="62" class="heading">FSM 기억 ②  B1 뒤: B 일과 첫날을 보고 고친 기억</text>
+<path d="M 45 78 Q 520 74 1000 78" fill="none" stroke="#15117f" stroke-width="2.5"/>
+<text x="45" y="115" class="source">원: 사람의 활동 단계  ·  가로선 위: 관찰 조건  /  아래: 로봇의 도움</text>
+<path class="arrow" d="M 390 545 C 563 500 737 500 910 545"/>
+<text x="650" y="430" class="condition">그릇을 책상에 놓음</text>
+<line class="divider" x1="506" y1="448" x2="794" y2="448"/>
+<text x="650" y="488" class="lambda">Λ</text>
+<path class="arrow" d="M 1088 585 C 1450 640 1700 950 1700 1258"/>
+<text x="1790" y="790" class="condition">책상을 떠남</text>
+<line class="divider" x1="1696" y1="808" x2="1884" y2="808"/>
+<text x="1790" y="848" class="lambda">Λ</text>
+<path class="arrow" d="M 1610 1335 C 1437 1290 1263 1290 1090 1335"/>
+<text x="1350" y="1222" class="condition">침대로 걸어감</text>
+<line class="divider" x1="1244" y1="1240" x2="1456" y2="1240"/>
+<text x="1350" y="1280" class="lambda">Λ</text>
+<path class="arrow" d="M 910 1335 C 737 1290 563 1290 390 1335"/>
+<text x="650" y="1222" class="condition">스탠드를 끔</text>
+<line class="divider" x1="556" y1="1240" x2="744" y2="1240"/>
+<text x="650" y="1280" class="lambda">Λ</text>
+<path class="arrow" d="M 278 473 C 150 300 450 300 322 473"/>
+<text x="300" y="175" class="condition">책상에 앉음</text>
+<line class="divider" x1="155" y1="193" x2="445" y2="193"/>
+<text x="300" y="233" class="action">컵 가져오기</text>
+<text x="300" y="264" class="detail">컵을 사용자 옆에 놓기</text>
+<path class="arrow" d="M 322 647 C 450 820 150 820 278 647"/>
+<text x="300" y="805" class="condition">책상에 앉음</text>
+<line class="divider" x1="144" y1="823" x2="456" y2="823"/>
+<text x="300" y="863" class="action">그릇 가져오기</text>
+<text x="300" y="894" class="detail">그릇을 사용자 옆에 놓기</text>
+<text x="300" y="925" class="note">행동 목록에 없음</text>
+<path class="arrow" d="M 978 473 C 850 300 1150 300 1022 473"/>
+<text x="1000" y="175" class="condition">다 먹음</text>
+<line class="divider" x1="886" y1="193" x2="1114" y2="193"/>
+<text x="1000" y="233" class="action">그릇 치우기</text>
+<text x="1000" y="264" class="detail">식기세척기에 넣기</text>
+<path class="arrow" d="M 1022 647 C 1150 820 850 820 978 647"/>
+<text x="1000" y="805" class="condition">다 먹음</text>
+<line class="divider" x1="886" y1="823" x2="1114" y2="823"/>
+<text x="1000" y="863" class="action">컵 치우기</text>
+<text x="1000" y="894" class="detail">식기세척기에 넣기</text>
+<path class="arrow" d="M 1722 1437 C 1850 1610 1550 1610 1678 1437"/>
+<text x="1700" y="1615" class="condition">스위치로 걸어감</text>
+<line class="divider" x1="1581" y1="1633" x2="1819" y2="1633"/>
+<text x="1700" y="1673" class="action">방 불 끄기</text>
+<path class="arrow" d="M 1022 1437 C 1150 1610 850 1610 978 1437"/>
+<text x="1000" y="1615" class="condition">침대에 폰을 내려놓음</text>
+<line class="divider" x1="844" y1="1633" x2="1156" y2="1633"/>
+<text x="1000" y="1673" class="action">스탠드 끄기</text>
+<text x="1640" y="330" class="gone">A2 뒤 기억에 있던 «독서»·«노트북 작업» 단계와</text>
+<text x="1640" y="366" class="gone">그 안의 규칙 5개가 이 기억에는 없음</text>
+<circle class="state" cx="300" cy="560" r="90"/>
+<text x="300" y="550" class="node-name">책상 대기</text>
+<text x="300" y="580" class="node-english">Desk idle</text>
+<circle class="state" cx="1000" cy="560" r="90"/>
+<text x="1000" y="550" class="node-name">식사 중</text>
+<text x="1000" y="580" class="node-english">Eating</text>
+<circle class="state" cx="1700" cy="1350" r="90"/>
+<text x="1700" y="1340" class="node-name">나감</text>
+<text x="1700" y="1370" class="node-english">Leaving room</text>
+<circle class="state" cx="1000" cy="1350" r="90"/>
+<text x="1000" y="1340" class="node-name">침대에서 폰</text>
+<text x="1000" y="1370" class="node-english">In bed, phone</text>
+<circle class="state" cx="300" cy="1350" r="90"/>
+<text x="300" y="1340" class="node-name">잠</text>
+<text x="300" y="1370" class="node-english">Sleeping</text>
+<text x="300" y="1399" class="detail" style="font-size:17px">도움 규칙 없음</text>
+<path class="arrow" style="stroke-dasharray:8 7" d="M 95 560 L 205 560"/>
+<text x="100" y="540" class="small">시작</text>
+<path class="arrow" d="M 300 1440 L 300 1496"/>
+<circle cx="300" cy="1514" r="16" fill="#fff" stroke="#111" stroke-width="2"/><circle cx="300" cy="1514" r="10" fill="#111"/>
+<text x="328" y="1522" class="small">종료</text>
+<line x1="45" y1="1800" x2="1955" y2="1800" stroke="#999" stroke-width="1"/>
+<text x="45" y="1840" class="legend">다른 원으로 가는 화살표: 단계 전이  ·  같은 원으로 돌아오는 고리: 그 단계의 도움 규칙 (총 6개)</text>
+<text x="45" y="1880" class="source">Λ: 그 전이에 로봇 행동이 따로 없다는 표시. 주황 글씨: 로봇이 고를 수 있는 행동 10가지에 없는 행동·장소(모델이 스스로 적음).</text>
+<text x="45" y="1915" class="source">출처: 4일 실험(2026-11-04) FSM 기억 원문 ai/artifacts/routine_vllm_fsm_2026-11-04/B1/memory_after.json. 조건·행동을 한국어로 옮겼습니다.</text>
+</svg></div></main></body></html>

@@ -22,6 +22,24 @@
 - [11월 1일 개인별 선호 모델 제안 자료](docs/presentations/PAM_개인별선호모델_발표자료.md): 이전 논의를 정리한 자료이며 현재 촬영의 결과 보고서가 아닙니다.
 - [팀의 검토 티켓](https://github.com/2026-SWE/docs/blob/main/03_Sprints/Sprint-01/Tickets/S01-PSJ-01_선제적-도움의-간섭도와-개인화-방식-검토.md) · [일일 진행 기록](https://github.com/2026-SWE/docs/blob/main/03_Sprints/Sprint-01/Daily/PSJ.md)
 
+## 4일 일과 영상 실험 — 2026-11-04 (기본 논문 방식, 역계획 없음)
+
+직접 찍은 4일 영상(A 일과 2일 → B 일과 2일)으로 1초마다 행동 고르기와 하루 끝 자기반성을 실제로 돌리고, **FSM 기억 · 목록 기억 · 기억 없음** 세 조건을 비교했습니다. 모델은 Qwen3.5-27B를 직접 올린 vLLM 서버(RunPod H100)에서 실행했습니다. 조건마다 한 번씩만 돌린 결과입니다.
+
+| 날 | FSM 기억 | 목록 기억 | 기억 없음 |
+|---|---|---|---|
+| A2 | 0.41 | 0.34 | 0.04 |
+| B1 | 0.27 | 0.30 | 0.00 |
+| B2 | 0.25 | 0.30 | 0.08 |
+
+(행동 F1, 1이 만점. 같은 입력을 두 번 돌린 A1이 0.04와 0.15로 달라, FSM과 목록의 작은 차이는 우연일 수 있습니다.)
+
+- [결과 문서](docs/research/4일실험_결과_2026-11-04.md): 점수, 구간별 결과, 규칙 변화, 논문과 다른 점
+- [점수·기억 원문·그림·정답 초안](docs/research/routine_2026-11-04/): 영상과 1초 사진은 공유하지 않습니다
+- 시나리오 설정: [scenarios/routine/](scenarios/routine/README.md)
+- 다시 돌리기 (유료 GPU 서버 필요): `python -m pam.routine_experiment --videos <영상 폴더> --output artifacts/<새 폴더> --vllm-url <서버 주소> --workers 4 --reflector-max-tokens 24000` (목록 기억은 `--memory-kind list`, 기억 없음은 `--no-memory`, 끊긴 실행을 이어 가려면 `--resume`). 서버 접속 비밀번호는 환경 변수 `VLLM_API_KEY`로만 줍니다. `--vllm-url` 없이 돌리면 모델 호출 없이 흐름만 확인합니다.
+- 채점: `python -m pam.routine_scoring --run artifacts/<폴더> --labels docs/research/routine_2026-11-04/정답/4일_정답_초안.json`
+
 ## 1. 논문이 해결하려는 문제
 
 **논문의 예시는 책상 위에 놓인 빈 그릇입니다.**

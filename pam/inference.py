@@ -11,7 +11,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from .contracts import ContractError, parse_prediction, validate_memory
-from .messages import read_json
+from .messages import predictor_image_count, read_json
 from .openrouter import MODEL, OpenRouterError, build_request, load_openrouter_config, send_request
 
 
@@ -36,7 +36,7 @@ def _request_record(payload: dict) -> dict:
 def _verify_prepared_images(bundle: dict) -> None:
     if bundle.get("status") != "prepared" or bundle.get("execution_mode") != "offline_preparation":
         raise ContractError("Inference requires a successfully prepared input bundle.")
-    expected_count = 5
+    expected_count = predictor_image_count(bundle) if bundle.get("role") == "predictor" else None
     if bundle.get("role") == "reflector":
         expected_count = bundle.get("frame_count", 200)
         if type(expected_count) is not int or expected_count not in (50, 100, 150, 200):
@@ -144,7 +144,8 @@ def infer_bundle(bundle_path: Path, config_path: Path, output: Path, *, run_stat
         raise OpenRouterError("OPENROUTER_API_KEY is not set; no API call was made.")
     try:
         state["api_request_attempted"] = True
-        transport = send_request(payload, config)
+        predictor_images = predictor_image_count(bundle) if bundle["role"] == "predictor" else 5
+        transport = send_request(payload, config, predictor_images=predictor_images)
     except OpenRouterError as exc:
         state["api_request_attempted"] = exc.elapsed_seconds is not None
         error = {"status": "api_error", "api_request_attempted": state["api_request_attempted"],

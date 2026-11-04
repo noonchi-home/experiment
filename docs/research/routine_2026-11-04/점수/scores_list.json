@@ -1,0 +1,869 @@
+{
+  "run": "artifacts/routine_vllm_list_2026-11-04 (로컬 보관, 공유 안 함)",
+  "mode": "vllm",
+  "labels": "docs/research/routine_2026-11-04/정답/4일_정답_초안.json",
+  "rounds": {
+    "A1": {
+      "frames": 202,
+      "invalid_outputs": 0,
+      "accuracy": 0.5495049504950495,
+      "per_class": {
+        "-1": {
+          "support": 112,
+          "predicted": 166,
+          "tp": 103,
+          "fp": 63,
+          "fn": 9,
+          "precision": 0.6204819277108434,
+          "recall": 0.9196428571428571,
+          "f1": 0.7410071942446043
+        },
+        "0": {
+          "support": 29,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 29,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "1": {
+          "support": 0,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "2": {
+          "support": 11,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 11,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "3": {
+          "support": 10,
+          "predicted": 16,
+          "tp": 1,
+          "fp": 15,
+          "fn": 9,
+          "precision": 0.0625,
+          "recall": 0.1,
+          "f1": 0.07692307692307693
+        },
+        "4": {
+          "support": 23,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 23,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "5": {
+          "support": 5,
+          "predicted": 5,
+          "tp": 1,
+          "fp": 4,
+          "fn": 4,
+          "precision": 0.2,
+          "recall": 0.2,
+          "f1": 0.20000000000000004
+        },
+        "6": {
+          "support": 0,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "7": {
+          "support": 6,
+          "predicted": 1,
+          "tp": 1,
+          "fp": 0,
+          "fn": 5,
+          "precision": 1.0,
+          "recall": 0.16666666666666666,
+          "f1": 0.2857142857142857
+        },
+        "8": {
+          "support": 6,
+          "predicted": 14,
+          "tp": 5,
+          "fp": 9,
+          "fn": 1,
+          "precision": 0.35714285714285715,
+          "recall": 0.8333333333333334,
+          "f1": 0.5
+        },
+        "9": {
+          "support": 0,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "task_macro": {
+        "precision": 0.23137755102040816,
+        "recall": 0.18571428571428572,
+        "f1": 0.15180533751962325
+      },
+      "no_act": {
+        "support": 112,
+        "predicted": 166,
+        "tp": 103,
+        "fp": 63,
+        "fn": 9,
+        "precision": 0.6204819277108434,
+        "recall": 0.9196428571428571,
+        "f1": 0.7410071942446043
+      },
+      "distractor_predictions": {},
+      "mean_first_fire_delay_seconds": 10.0,
+      "delivery_outcomes": {
+        "missed": 3
+      },
+      "segments": [
+        {
+          "frame_start": 21,
+          "frame_end": 43,
+          "labels": [
+            4
+          ],
+          "kind": "deliver",
+          "first_fire_frame": null,
+          "first_fire_delay_seconds": 23,
+          "fired": false,
+          "outcome": "missed"
+        },
+        {
+          "frame_start": 44,
+          "frame_end": 72,
+          "labels": [
+            0
+          ],
+          "kind": "deliver",
+          "first_fire_frame": null,
+          "first_fire_delay_seconds": 29,
+          "fired": false,
+          "outcome": "missed"
+        },
+        {
+          "frame_start": 98,
+          "frame_end": 102,
+          "labels": [
+            5,
+            1
+          ],
+          "kind": "clear",
+          "first_fire_frame": 102,
+          "first_fire_delay_seconds": 4,
+          "fired": true
+        },
+        {
+          "frame_start": 103,
+          "frame_end": 113,
+          "labels": [
+            2
+          ],
+          "kind": "deliver",
+          "first_fire_frame": null,
+          "first_fire_delay_seconds": 11,
+          "fired": false,
+          "outcome": "missed"
+        },
+        {
+          "frame_start": 149,
+          "frame_end": 158,
+          "labels": [
+            3
+          ],
+          "kind": "clear",
+          "first_fire_frame": 149,
+          "first_fire_delay_seconds": 0,
+          "fired": true
+        },
+        {
+          "frame_start": 159,
+          "frame_end": 164,
+          "labels": [
+            7
+          ],
+          "kind": "switch",
+          "first_fire_frame": 161,
+          "first_fire_delay_seconds": 2,
+          "fired": true
+        },
+        {
+          "frame_start": 192,
+          "frame_end": 197,
+          "labels": [
+            8
+          ],
+          "kind": "switch",
+          "first_fire_frame": 193,
+          "first_fire_delay_seconds": 1,
+          "fired": true
+        }
+      ]
+    },
+    "A2": {
+      "frames": 215,
+      "invalid_outputs": 0,
+      "accuracy": 0.6139534883720931,
+      "per_class": {
+        "-1": {
+          "support": 122,
+          "predicted": 192,
+          "tp": 117,
+          "fp": 75,
+          "fn": 5,
+          "precision": 0.609375,
+          "recall": 0.9590163934426229,
+          "f1": 0.7452229299363057
+        },
+        "0": {
+          "support": 43,
+          "predicted": 5,
+          "tp": 5,
+          "fp": 0,
+          "fn": 38,
+          "precision": 1.0,
+          "recall": 0.11627906976744186,
+          "f1": 0.20833333333333334
+        },
+        "1": {
+          "support": 1,
+          "predicted": 1,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "2": {
+          "support": 8,
+          "predicted": 1,
+          "tp": 0,
+          "fp": 1,
+          "fn": 8,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "3": {
+          "support": 10,
+          "predicted": 2,
+          "tp": 1,
+          "fp": 1,
+          "fn": 9,
+          "precision": 0.5,
+          "recall": 0.1,
+          "f1": 0.16666666666666669
+        },
+        "4": {
+          "support": 12,
+          "predicted": 1,
+          "tp": 1,
+          "fp": 0,
+          "fn": 11,
+          "precision": 1.0,
+          "recall": 0.08333333333333333,
+          "f1": 0.15384615384615385
+        },
+        "5": {
+          "support": 7,
+          "predicted": 2,
+          "tp": 0,
+          "fp": 2,
+          "fn": 7,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "6": {
+          "support": 0,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "7": {
+          "support": 8,
+          "predicted": 5,
+          "tp": 4,
+          "fp": 1,
+          "fn": 4,
+          "precision": 0.8,
+          "recall": 0.5,
+          "f1": 0.6153846153846154
+        },
+        "8": {
+          "support": 4,
+          "predicted": 6,
+          "tp": 3,
+          "fp": 3,
+          "fn": 1,
+          "precision": 0.5,
+          "recall": 0.75,
+          "f1": 0.6
+        },
+        "9": {
+          "support": 0,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "task_macro": {
+        "precision": 0.6,
+        "recall": 0.3187015503875969,
+        "f1": 0.34302884615384616
+      },
+      "no_act": {
+        "support": 122,
+        "predicted": 192,
+        "tp": 117,
+        "fp": 75,
+        "fn": 5,
+        "precision": 0.609375,
+        "recall": 0.9590163934426229,
+        "f1": 0.7452229299363057
+      },
+      "distractor_predictions": {},
+      "mean_first_fire_delay_seconds": 3.2857142857142856,
+      "delivery_outcomes": {
+        "late": 1,
+        "on_time": 1,
+        "missed": 1
+      },
+      "segments": [
+        {
+          "frame_start": 16,
+          "frame_end": 27,
+          "labels": [
+            4
+          ],
+          "kind": "deliver",
+          "first_fire_frame": 17,
+          "first_fire_delay_seconds": 1,
+          "fired": true,
+          "outcome": "late"
+        },
+        {
+          "frame_start": 28,
+          "frame_end": 70,
+          "labels": [
+            0
+          ],
+          "kind": "deliver",
+          "first_fire_frame": 32,
+          "first_fire_delay_seconds": 4,
+          "fired": true,
+          "outcome": "on_time"
+        },
+        {
+          "frame_start": 106,
+          "frame_end": 113,
+          "labels": [
+            5,
+            1
+          ],
+          "kind": "clear",
+          "first_fire_frame": 109,
+          "first_fire_delay_seconds": 3,
+          "fired": true
+        },
+        {
+          "frame_start": 114,
+          "frame_end": 121,
+          "labels": [
+            2
+          ],
+          "kind": "deliver",
+          "first_fire_frame": null,
+          "first_fire_delay_seconds": 8,
+          "fired": false,
+          "outcome": "missed"
+        },
+        {
+          "frame_start": 160,
+          "frame_end": 169,
+          "labels": [
+            3
+          ],
+          "kind": "clear",
+          "first_fire_frame": 162,
+          "first_fire_delay_seconds": 2,
+          "fired": true
+        },
+        {
+          "frame_start": 170,
+          "frame_end": 177,
+          "labels": [
+            7
+          ],
+          "kind": "switch",
+          "first_fire_frame": 174,
+          "first_fire_delay_seconds": 4,
+          "fired": true
+        },
+        {
+          "frame_start": 206,
+          "frame_end": 209,
+          "labels": [
+            8
+          ],
+          "kind": "switch",
+          "first_fire_frame": 207,
+          "first_fire_delay_seconds": 1,
+          "fired": true
+        }
+      ]
+    },
+    "B1": {
+      "frames": 169,
+      "invalid_outputs": 0,
+      "accuracy": 0.5325443786982249,
+      "per_class": {
+        "-1": {
+          "support": 93,
+          "predicted": 131,
+          "tp": 80,
+          "fp": 51,
+          "fn": 13,
+          "precision": 0.6106870229007634,
+          "recall": 0.8602150537634409,
+          "f1": 0.7142857142857143
+        },
+        "0": {
+          "support": 53,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 53,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "1": {
+          "support": 5,
+          "predicted": 5,
+          "tp": 0,
+          "fp": 5,
+          "fn": 5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "2": {
+          "support": 0,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "3": {
+          "support": 0,
+          "predicted": 8,
+          "tp": 0,
+          "fp": 8,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "4": {
+          "support": 0,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "5": {
+          "support": 0,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "6": {
+          "support": 7,
+          "predicted": 8,
+          "tp": 1,
+          "fp": 7,
+          "fn": 6,
+          "precision": 0.125,
+          "recall": 0.14285714285714285,
+          "f1": 0.13333333333333333
+        },
+        "7": {
+          "support": 5,
+          "predicted": 3,
+          "tp": 3,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.6,
+          "f1": 0.7499999999999999
+        },
+        "8": {
+          "support": 6,
+          "predicted": 14,
+          "tp": 6,
+          "fp": 8,
+          "fn": 0,
+          "precision": 0.42857142857142855,
+          "recall": 1.0,
+          "f1": 0.6
+        },
+        "9": {
+          "support": 0,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "task_macro": {
+        "precision": 0.3107142857142857,
+        "recall": 0.3485714285714286,
+        "f1": 0.29666666666666663
+      },
+      "no_act": {
+        "support": 93,
+        "predicted": 131,
+        "tp": 80,
+        "fp": 51,
+        "fn": 13,
+        "precision": 0.6106870229007634,
+        "recall": 0.8602150537634409,
+        "f1": 0.7142857142857143
+      },
+      "distractor_predictions": {
+        "3": 8
+      },
+      "mean_first_fire_delay_seconds": 10.833333333333334,
+      "delivery_outcomes": {
+        "missed": 2
+      },
+      "segments": [
+        {
+          "frame_start": 15,
+          "frame_end": 26,
+          "labels": [
+            0
+          ],
+          "kind": "deliver",
+          "first_fire_frame": null,
+          "first_fire_delay_seconds": 12,
+          "fired": false,
+          "outcome": "missed"
+        },
+        {
+          "frame_start": 46,
+          "frame_end": 50,
+          "labels": [
+            1
+          ],
+          "kind": "clear",
+          "first_fire_frame": null,
+          "first_fire_delay_seconds": 5,
+          "fired": false
+        },
+        {
+          "frame_start": 58,
+          "frame_end": 98,
+          "labels": [
+            0
+          ],
+          "kind": "deliver",
+          "first_fire_frame": null,
+          "first_fire_delay_seconds": 41,
+          "fired": false,
+          "outcome": "missed"
+        },
+        {
+          "frame_start": 121,
+          "frame_end": 127,
+          "labels": [
+            6,
+            1
+          ],
+          "kind": "clear",
+          "first_fire_frame": 126,
+          "first_fire_delay_seconds": 5,
+          "fired": true
+        },
+        {
+          "frame_start": 128,
+          "frame_end": 132,
+          "labels": [
+            7
+          ],
+          "kind": "switch",
+          "first_fire_frame": 130,
+          "first_fire_delay_seconds": 2,
+          "fired": true
+        },
+        {
+          "frame_start": 159,
+          "frame_end": 164,
+          "labels": [
+            8
+          ],
+          "kind": "switch",
+          "first_fire_frame": 159,
+          "first_fire_delay_seconds": 0,
+          "fired": true
+        }
+      ]
+    },
+    "B2": {
+      "frames": 182,
+      "invalid_outputs": 0,
+      "accuracy": 0.5164835164835165,
+      "per_class": {
+        "-1": {
+          "support": 94,
+          "predicted": 149,
+          "tp": 86,
+          "fp": 63,
+          "fn": 8,
+          "precision": 0.5771812080536913,
+          "recall": 0.9148936170212766,
+          "f1": 0.7078189300411523
+        },
+        "0": {
+          "support": 62,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 62,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "1": {
+          "support": 10,
+          "predicted": 2,
+          "tp": 2,
+          "fp": 0,
+          "fn": 8,
+          "precision": 1.0,
+          "recall": 0.2,
+          "f1": 0.33333333333333337
+        },
+        "2": {
+          "support": 0,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "3": {
+          "support": 0,
+          "predicted": 9,
+          "tp": 0,
+          "fp": 9,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "4": {
+          "support": 0,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "5": {
+          "support": 0,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "6": {
+          "support": 6,
+          "predicted": 9,
+          "tp": 0,
+          "fp": 9,
+          "fn": 6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "7": {
+          "support": 5,
+          "predicted": 3,
+          "tp": 3,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.6,
+          "f1": 0.7499999999999999
+        },
+        "8": {
+          "support": 5,
+          "predicted": 10,
+          "tp": 3,
+          "fp": 7,
+          "fn": 2,
+          "precision": 0.3,
+          "recall": 0.6,
+          "f1": 0.4
+        },
+        "9": {
+          "support": 0,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "task_macro": {
+        "precision": 0.45999999999999996,
+        "recall": 0.27999999999999997,
+        "f1": 0.2966666666666667
+      },
+      "no_act": {
+        "support": 94,
+        "predicted": 149,
+        "tp": 86,
+        "fp": 63,
+        "fn": 8,
+        "precision": 0.5771812080536913,
+        "recall": 0.9148936170212766,
+        "f1": 0.7078189300411523
+      },
+      "distractor_predictions": {
+        "3": 9
+      },
+      "mean_first_fire_delay_seconds": 12.0,
+      "delivery_outcomes": {
+        "missed": 2
+      },
+      "segments": [
+        {
+          "frame_start": 17,
+          "frame_end": 31,
+          "labels": [
+            0
+          ],
+          "kind": "deliver",
+          "first_fire_frame": null,
+          "first_fire_delay_seconds": 15,
+          "fired": false,
+          "outcome": "missed"
+        },
+        {
+          "frame_start": 51,
+          "frame_end": 60,
+          "labels": [
+            1
+          ],
+          "kind": "clear",
+          "first_fire_frame": 53,
+          "first_fire_delay_seconds": 2,
+          "fired": true
+        },
+        {
+          "frame_start": 70,
+          "frame_end": 116,
+          "labels": [
+            0
+          ],
+          "kind": "deliver",
+          "first_fire_frame": null,
+          "first_fire_delay_seconds": 47,
+          "fired": false,
+          "outcome": "missed"
+        },
+        {
+          "frame_start": 135,
+          "frame_end": 140,
+          "labels": [
+            6,
+            1
+          ],
+          "kind": "clear",
+          "first_fire_frame": null,
+          "first_fire_delay_seconds": 6,
+          "fired": false
+        },
+        {
+          "frame_start": 141,
+          "frame_end": 145,
+          "labels": [
+            7
+          ],
+          "kind": "switch",
+          "first_fire_frame": 143,
+          "first_fire_delay_seconds": 2,
+          "fired": true
+        },
+        {
+          "frame_start": 172,
+          "frame_end": 176,
+          "labels": [
+            8
+          ],
+          "kind": "switch",
+          "first_fire_frame": 172,
+          "first_fire_delay_seconds": 0,
+          "fired": true
+        }
+      ]
+    }
+  }
+}
