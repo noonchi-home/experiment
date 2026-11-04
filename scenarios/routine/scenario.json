@@ -1,0 +1,65 @@
+{
+  "id": "routine_4day",
+  "description": "공부 일과(A)와 밤 일과(B)를 실제로 찍은 4일 영상(A1→A2→B1→B2). 첫날은 기억 없이 시작해 하루 끝 자기반성으로 규칙을 만든다.",
+  "tasks_file": "tasks.json",
+  "memory_files": {},
+  "action_labels_ko": [
+    "컵 → 사람 옆",
+    "컵 → 식기세척기",
+    "캔 → 사람 옆",
+    "캔 → 보관 자리",
+    "책 → 사람 옆",
+    "책 → 보관 자리",
+    "그릇 → 식기세척기",
+    "불 끄기",
+    "스탠드 끄기",
+    "스탠드 치우기"
+  ],
+  "prompt_replacements": [
+    {
+      "old": "- The setting is a personal desk where a single person performs everyday activities.",
+      "new": "- The setting is a small room with a low desk, a bed with a bedside lamp, and a room light switch, where a single person performs everyday activities.",
+      "reason": "촬영한 방(낮은 책상, 침대와 스탠드, 방 불 스위치)에 맞게 공간만 바꾼다."
+    },
+    {
+      "old": "- The designated storage area: the corner of the desk, where items such as cereal,\nbowls, milk, drinks, and water are normally kept.",
+      "new": "- The designated storage area: a place outside the camera view, where items such as books, cups, cans, and bowls are normally kept. Used cups and bowls go to the dishwasher.",
+      "reason": "4일 영상에서 사용자는 물건을 화면 밖에서 들고 오고 다 쓰면 화면 밖으로 들고 나간다. 행동 목록의 식기세척기 목적지를 명시한다."
+    },
+    {
+      "old": " frame. Each frame is the horizontal concatenation of two back-facing cameras (\nleft_back on the left, right_back on the right).",
+      "new": " frame. Each frame is a single camera view; the camera viewpoint may change between the desk, the light switch, and the bed.",
+      "reason": "논문은 뒤쪽 카메라 두 대를 좌우로 붙였고, 우리는 휴대폰 한 대로 책상·스위치·침대를 따로 찍어 이어 붙였다."
+    },
+    {
+      "old": "- The training video: the person's daily routine recorded from two back-facing\ncameras concatenated side by side (left_back (*@\\textbar@*) right_back). This is the",
+      "new": "- The training video: the person's daily routine recorded from a single camera whose viewpoint may change between the desk, the light switch, and the bed. This is the",
+      "reason": "카메라 한 대, 장소별로 따로 찍어 이어 붙임(위와 같은 이유)."
+    },
+    {
+      "old": "- Today's video: the person's activities recorded from two back-facing cameras\nconcatenated side by side (left_back (*@\\textbar@*) right_back)",
+      "new": "- Today's video: the person's activities recorded from a single camera whose viewpoint may change between the desk, the light switch, and the bed",
+      "reason": "카메라 한 대, 장소별로 따로 찍어 이어 붙임(위와 같은 이유)."
+    },
+    {
+      "old": "- etc. –- any helpful pick-and-place action that is grounded in observed behavior.",
+      "new": "- turning off a light the person no longer needs.\n- etc. –- any helpful pick-and-place or switch-off action that is grounded in observed behavior.",
+      "reason": "행동 목록에 «방 불 끄기»·«스탠드 끄기»가 있다. 도움 목표에 불 끄기를 더하고 «집어 옮기기» 뒤에 «끄기»를 붙인다."
+    },
+    {
+      "old": "- First, explicitly RE-STATE the pick-and-place actions that the human performed in",
+      "new": "- First, explicitly RE-STATE the pick-and-place and switch-off actions that the human performed in",
+      "reason": "사람이 직접 불·스탠드를 끄는 행동도 규칙으로 옮길 수 있게 한다."
+    },
+    {
+      "old": "- Default to ADDING a new rule whenever the summary mentions a human pick-and-place\naction",
+      "new": "- Default to ADDING a new rule whenever the summary mentions a human pick-and-place or switch-off\naction",
+      "reason": "위와 같은 이유(끄기 행동)."
+    },
+    {
+      "old": "the canonical form `Pick up <object> and place it <location>.` Valid `<location>`\nvalues are exactly one of: `next to the person`, `in the designated storage area`, `\nin the trash can`.",
+      "new": "the canonical form `Pick up <object> and place it <location>.` or `Turn off the <object>.` Valid `<location>`\nvalues are exactly one of: `next to the person`, `in the designated storage area`, `in the trash can`, `in the dishwasher`.",
+      "reason": "행동 문장 꼴은 원문을 유지하고, 식기세척기 목적지와 «Turn off the <물건>.» 꼴을 더한다(사용자 결정 2026-11-04)."
+    }
+  ]
+}

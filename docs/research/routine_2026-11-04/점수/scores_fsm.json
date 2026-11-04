@@ -1,0 +1,869 @@
+{
+  "run": "artifacts/routine_vllm_fsm_2026-11-04 (로컬 보관, 공유 안 함)",
+  "mode": "vllm",
+  "labels": "docs/research/routine_2026-11-04/정답/4일_정답_초안.json",
+  "rounds": {
+    "A1": {
+      "frames": 202,
+      "invalid_outputs": 0,
+      "accuracy": 0.5099009900990099,
+      "per_class": {
+        "-1": {
+          "support": 112,
+          "predicted": 166,
+          "tp": 100,
+          "fp": 66,
+          "fn": 12,
+          "precision": 0.6024096385542169,
+          "recall": 0.8928571428571429,
+          "f1": 0.7194244604316548
+        },
+        "0": {
+          "support": 29,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 29,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "1": {
+          "support": 0,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "2": {
+          "support": 11,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 11,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "3": {
+          "support": 10,
+          "predicted": 13,
+          "tp": 0,
+          "fp": 13,
+          "fn": 10,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "4": {
+          "support": 23,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 23,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "5": {
+          "support": 5,
+          "predicted": 9,
+          "tp": 0,
+          "fp": 9,
+          "fn": 5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "6": {
+          "support": 0,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "7": {
+          "support": 6,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "8": {
+          "support": 6,
+          "predicted": 14,
+          "tp": 3,
+          "fp": 11,
+          "fn": 3,
+          "precision": 0.21428571428571427,
+          "recall": 0.5,
+          "f1": 0.3
+        },
+        "9": {
+          "support": 0,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "task_macro": {
+        "precision": 0.030612244897959183,
+        "recall": 0.07142857142857142,
+        "f1": 0.04285714285714286
+      },
+      "no_act": {
+        "support": 112,
+        "predicted": 166,
+        "tp": 100,
+        "fp": 66,
+        "fn": 12,
+        "precision": 0.6024096385542169,
+        "recall": 0.8928571428571429,
+        "f1": 0.7194244604316548
+      },
+      "distractor_predictions": {},
+      "mean_first_fire_delay_seconds": 12.428571428571429,
+      "delivery_outcomes": {
+        "missed": 3
+      },
+      "segments": [
+        {
+          "frame_start": 21,
+          "frame_end": 43,
+          "labels": [
+            4
+          ],
+          "kind": "deliver",
+          "first_fire_frame": null,
+          "first_fire_delay_seconds": 23,
+          "fired": false,
+          "outcome": "missed"
+        },
+        {
+          "frame_start": 44,
+          "frame_end": 72,
+          "labels": [
+            0
+          ],
+          "kind": "deliver",
+          "first_fire_frame": null,
+          "first_fire_delay_seconds": 29,
+          "fired": false,
+          "outcome": "missed"
+        },
+        {
+          "frame_start": 98,
+          "frame_end": 102,
+          "labels": [
+            5,
+            1
+          ],
+          "kind": "clear",
+          "first_fire_frame": null,
+          "first_fire_delay_seconds": 5,
+          "fired": false
+        },
+        {
+          "frame_start": 103,
+          "frame_end": 113,
+          "labels": [
+            2
+          ],
+          "kind": "deliver",
+          "first_fire_frame": null,
+          "first_fire_delay_seconds": 11,
+          "fired": false,
+          "outcome": "missed"
+        },
+        {
+          "frame_start": 149,
+          "frame_end": 158,
+          "labels": [
+            3
+          ],
+          "kind": "clear",
+          "first_fire_frame": null,
+          "first_fire_delay_seconds": 10,
+          "fired": false
+        },
+        {
+          "frame_start": 159,
+          "frame_end": 164,
+          "labels": [
+            7
+          ],
+          "kind": "switch",
+          "first_fire_frame": null,
+          "first_fire_delay_seconds": 6,
+          "fired": false
+        },
+        {
+          "frame_start": 192,
+          "frame_end": 197,
+          "labels": [
+            8
+          ],
+          "kind": "switch",
+          "first_fire_frame": 195,
+          "first_fire_delay_seconds": 3,
+          "fired": true
+        }
+      ]
+    },
+    "A2": {
+      "frames": 215,
+      "invalid_outputs": 0,
+      "accuracy": 0.6325581395348837,
+      "per_class": {
+        "-1": {
+          "support": 122,
+          "predicted": 182,
+          "tp": 113,
+          "fp": 69,
+          "fn": 9,
+          "precision": 0.6208791208791209,
+          "recall": 0.9262295081967213,
+          "f1": 0.743421052631579
+        },
+        "0": {
+          "support": 43,
+          "predicted": 6,
+          "tp": 6,
+          "fp": 0,
+          "fn": 37,
+          "precision": 1.0,
+          "recall": 0.13953488372093023,
+          "f1": 0.24489795918367346
+        },
+        "1": {
+          "support": 5,
+          "predicted": 5,
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "2": {
+          "support": 8,
+          "predicted": 7,
+          "tp": 0,
+          "fp": 7,
+          "fn": 8,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "3": {
+          "support": 10,
+          "predicted": 3,
+          "tp": 3,
+          "fp": 0,
+          "fn": 7,
+          "precision": 1.0,
+          "recall": 0.3,
+          "f1": 0.4615384615384615
+        },
+        "4": {
+          "support": 12,
+          "predicted": 2,
+          "tp": 0,
+          "fp": 2,
+          "fn": 12,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "5": {
+          "support": 3,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "6": {
+          "support": 0,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "7": {
+          "support": 8,
+          "predicted": 6,
+          "tp": 6,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.75,
+          "f1": 0.8571428571428571
+        },
+        "8": {
+          "support": 4,
+          "predicted": 4,
+          "tp": 3,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1": 0.75
+        },
+        "9": {
+          "support": 0,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "task_macro": {
+        "precision": 0.59375,
+        "recall": 0.3674418604651163,
+        "f1": 0.414197409733124
+      },
+      "no_act": {
+        "support": 122,
+        "predicted": 182,
+        "tp": 113,
+        "fp": 69,
+        "fn": 9,
+        "precision": 0.6208791208791209,
+        "recall": 0.9262295081967213,
+        "f1": 0.743421052631579
+      },
+      "distractor_predictions": {},
+      "mean_first_fire_delay_seconds": 3.857142857142857,
+      "delivery_outcomes": {
+        "missed": 2,
+        "on_time": 1
+      },
+      "segments": [
+        {
+          "frame_start": 16,
+          "frame_end": 27,
+          "labels": [
+            4
+          ],
+          "kind": "deliver",
+          "first_fire_frame": null,
+          "first_fire_delay_seconds": 12,
+          "fired": false,
+          "outcome": "missed"
+        },
+        {
+          "frame_start": 28,
+          "frame_end": 70,
+          "labels": [
+            0
+          ],
+          "kind": "deliver",
+          "first_fire_frame": 32,
+          "first_fire_delay_seconds": 4,
+          "fired": true,
+          "outcome": "on_time"
+        },
+        {
+          "frame_start": 106,
+          "frame_end": 113,
+          "labels": [
+            5,
+            1
+          ],
+          "kind": "clear",
+          "first_fire_frame": 106,
+          "first_fire_delay_seconds": 0,
+          "fired": true
+        },
+        {
+          "frame_start": 114,
+          "frame_end": 121,
+          "labels": [
+            2
+          ],
+          "kind": "deliver",
+          "first_fire_frame": null,
+          "first_fire_delay_seconds": 8,
+          "fired": false,
+          "outcome": "missed"
+        },
+        {
+          "frame_start": 160,
+          "frame_end": 169,
+          "labels": [
+            3
+          ],
+          "kind": "clear",
+          "first_fire_frame": 161,
+          "first_fire_delay_seconds": 1,
+          "fired": true
+        },
+        {
+          "frame_start": 170,
+          "frame_end": 177,
+          "labels": [
+            7
+          ],
+          "kind": "switch",
+          "first_fire_frame": 171,
+          "first_fire_delay_seconds": 1,
+          "fired": true
+        },
+        {
+          "frame_start": 206,
+          "frame_end": 209,
+          "labels": [
+            8
+          ],
+          "kind": "switch",
+          "first_fire_frame": 207,
+          "first_fire_delay_seconds": 1,
+          "fired": true
+        }
+      ]
+    },
+    "B1": {
+      "frames": 169,
+      "invalid_outputs": 0,
+      "accuracy": 0.5502958579881657,
+      "per_class": {
+        "-1": {
+          "support": 93,
+          "predicted": 144,
+          "tp": 85,
+          "fp": 59,
+          "fn": 8,
+          "precision": 0.5902777777777778,
+          "recall": 0.9139784946236559,
+          "f1": 0.7172995780590717
+        },
+        "0": {
+          "support": 53,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 53,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "1": {
+          "support": 5,
+          "predicted": 2,
+          "tp": 0,
+          "fp": 2,
+          "fn": 5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "2": {
+          "support": 0,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "3": {
+          "support": 0,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "4": {
+          "support": 0,
+          "predicted": 2,
+          "tp": 0,
+          "fp": 2,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "5": {
+          "support": 0,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "6": {
+          "support": 7,
+          "predicted": 8,
+          "tp": 0,
+          "fp": 8,
+          "fn": 7,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "7": {
+          "support": 5,
+          "predicted": 4,
+          "tp": 3,
+          "fp": 1,
+          "fn": 2,
+          "precision": 0.75,
+          "recall": 0.6,
+          "f1": 0.6666666666666665
+        },
+        "8": {
+          "support": 6,
+          "predicted": 9,
+          "tp": 5,
+          "fp": 4,
+          "fn": 1,
+          "precision": 0.5555555555555556,
+          "recall": 0.8333333333333334,
+          "f1": 0.6666666666666667
+        },
+        "9": {
+          "support": 0,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "task_macro": {
+        "precision": 0.2611111111111111,
+        "recall": 0.2866666666666667,
+        "f1": 0.26666666666666666
+      },
+      "no_act": {
+        "support": 93,
+        "predicted": 144,
+        "tp": 85,
+        "fp": 59,
+        "fn": 8,
+        "precision": 0.5902777777777778,
+        "recall": 0.9139784946236559,
+        "f1": 0.7172995780590717
+      },
+      "distractor_predictions": {
+        "4": 2
+      },
+      "mean_first_fire_delay_seconds": 11.166666666666666,
+      "delivery_outcomes": {
+        "missed": 2
+      },
+      "segments": [
+        {
+          "frame_start": 15,
+          "frame_end": 26,
+          "labels": [
+            0
+          ],
+          "kind": "deliver",
+          "first_fire_frame": null,
+          "first_fire_delay_seconds": 12,
+          "fired": false,
+          "outcome": "missed"
+        },
+        {
+          "frame_start": 46,
+          "frame_end": 50,
+          "labels": [
+            1
+          ],
+          "kind": "clear",
+          "first_fire_frame": null,
+          "first_fire_delay_seconds": 5,
+          "fired": false
+        },
+        {
+          "frame_start": 58,
+          "frame_end": 98,
+          "labels": [
+            0
+          ],
+          "kind": "deliver",
+          "first_fire_frame": null,
+          "first_fire_delay_seconds": 41,
+          "fired": false,
+          "outcome": "missed"
+        },
+        {
+          "frame_start": 121,
+          "frame_end": 127,
+          "labels": [
+            6,
+            1
+          ],
+          "kind": "clear",
+          "first_fire_frame": null,
+          "first_fire_delay_seconds": 7,
+          "fired": false
+        },
+        {
+          "frame_start": 128,
+          "frame_end": 132,
+          "labels": [
+            7
+          ],
+          "kind": "switch",
+          "first_fire_frame": 130,
+          "first_fire_delay_seconds": 2,
+          "fired": true
+        },
+        {
+          "frame_start": 159,
+          "frame_end": 164,
+          "labels": [
+            8
+          ],
+          "kind": "switch",
+          "first_fire_frame": 159,
+          "first_fire_delay_seconds": 0,
+          "fired": true
+        }
+      ]
+    },
+    "B2": {
+      "frames": 182,
+      "invalid_outputs": 0,
+      "accuracy": 0.5439560439560439,
+      "per_class": {
+        "-1": {
+          "support": 94,
+          "predicted": 166,
+          "tp": 90,
+          "fp": 76,
+          "fn": 4,
+          "precision": 0.5421686746987951,
+          "recall": 0.9574468085106383,
+          "f1": 0.6923076923076923
+        },
+        "0": {
+          "support": 62,
+          "predicted": 4,
+          "tp": 4,
+          "fp": 0,
+          "fn": 58,
+          "precision": 1.0,
+          "recall": 0.06451612903225806,
+          "f1": 0.12121212121212122
+        },
+        "1": {
+          "support": 10,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 10,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "2": {
+          "support": 0,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "3": {
+          "support": 0,
+          "predicted": 4,
+          "tp": 0,
+          "fp": 4,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "4": {
+          "support": 0,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "5": {
+          "support": 0,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "6": {
+          "support": 6,
+          "predicted": 1,
+          "tp": 0,
+          "fp": 1,
+          "fn": 6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "7": {
+          "support": 5,
+          "predicted": 4,
+          "tp": 4,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.8,
+          "f1": 0.888888888888889
+        },
+        "8": {
+          "support": 5,
+          "predicted": 3,
+          "tp": 1,
+          "fp": 2,
+          "fn": 4,
+          "precision": 0.3333333333333333,
+          "recall": 0.2,
+          "f1": 0.25
+        },
+        "9": {
+          "support": 0,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "task_macro": {
+        "precision": 0.4666666666666667,
+        "recall": 0.2129032258064516,
+        "f1": 0.25202020202020203
+      },
+      "no_act": {
+        "support": 94,
+        "predicted": 166,
+        "tp": 90,
+        "fp": 76,
+        "fn": 4,
+        "precision": 0.5421686746987951,
+        "recall": 0.9574468085106383,
+        "f1": 0.6923076923076923
+      },
+      "distractor_predictions": {
+        "3": 4
+      },
+      "mean_first_fire_delay_seconds": 5.5,
+      "delivery_outcomes": {
+        "missed": 1,
+        "on_time": 1
+      },
+      "segments": [
+        {
+          "frame_start": 17,
+          "frame_end": 31,
+          "labels": [
+            0
+          ],
+          "kind": "deliver",
+          "first_fire_frame": null,
+          "first_fire_delay_seconds": 15,
+          "fired": false,
+          "outcome": "missed"
+        },
+        {
+          "frame_start": 51,
+          "frame_end": 60,
+          "labels": [
+            1
+          ],
+          "kind": "clear",
+          "first_fire_frame": null,
+          "first_fire_delay_seconds": 10,
+          "fired": false
+        },
+        {
+          "frame_start": 70,
+          "frame_end": 116,
+          "labels": [
+            0
+          ],
+          "kind": "deliver",
+          "first_fire_frame": 71,
+          "first_fire_delay_seconds": 1,
+          "fired": true,
+          "outcome": "on_time"
+        },
+        {
+          "frame_start": 135,
+          "frame_end": 140,
+          "labels": [
+            6,
+            1
+          ],
+          "kind": "clear",
+          "first_fire_frame": null,
+          "first_fire_delay_seconds": 6,
+          "fired": false
+        },
+        {
+          "frame_start": 141,
+          "frame_end": 145,
+          "labels": [
+            7
+          ],
+          "kind": "switch",
+          "first_fire_frame": 142,
+          "first_fire_delay_seconds": 1,
+          "fired": true
+        },
+        {
+          "frame_start": 172,
+          "frame_end": 176,
+          "labels": [
+            8
+          ],
+          "kind": "switch",
+          "first_fire_frame": 172,
+          "first_fire_delay_seconds": 0,
+          "fired": true
+        }
+      ]
+    }
+  }
+}

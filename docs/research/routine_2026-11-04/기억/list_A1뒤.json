@@ -1,0 +1,36 @@
+{
+  "rules": [
+    {
+      "trigger": "Person puts the phone on the desk",
+      "action": "Pick up the book and place it next to the person."
+    },
+    {
+      "trigger": "Person opens the book",
+      "action": "Pick up the mug and place it next to the person."
+    },
+    {
+      "trigger": "Person closes the book",
+      "action": "Pick up the mug and place it in the dishwasher."
+    },
+    {
+      "trigger": "Person closes the book",
+      "action": "Pick up the laptop and place it next to the person."
+    },
+    {
+      "trigger": "Person closes the book",
+      "action": "Pick up the can and place it next to the person."
+    },
+    {
+      "trigger": "Person closes the laptop",
+      "action": "Pick up the can and place it in the trash can."
+    },
+    {
+      "trigger": "Person walks towards the light switch",
+      "action": "Turn off the room light."
+    },
+    {
+      "trigger": "Person puts the phone on the bed",
+      "action": "Turn off the bedside lamp."
+    }
+  ]
+}

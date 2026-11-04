@@ -20,7 +20,7 @@ from urllib.error import HTTPError, URLError
 from urllib.request import HTTPRedirectHandler, Request, build_opener
 
 from .contracts import ContractError
-from .messages import read_json
+from .messages import predictor_image_count, read_json
 
 
 MODEL = "qwen/qwen3.5-27b"
@@ -152,7 +152,11 @@ def build_request(bundle: dict, config: dict) -> dict:
     role = bundle.get("role")
     if role not in {"predictor", "reflector"}:
         raise OpenRouterError("Input bundle role must be predictor or reflector.")
-    expected_count = 5
+    if role == "predictor":
+        try:
+            expected_count = predictor_image_count(bundle)
+        except ContractError as exc:
+            raise OpenRouterError(str(exc)) from None
     if role == "reflector":
         expected_count = config.get("reflector_frame_count", 200)
         declared_count = bundle.get("frame_count", 200)
@@ -220,7 +224,7 @@ class _RejectRedirects(HTTPRedirectHandler):
         return None
 
 
-def _validate_payload(payload: dict, config: dict) -> None:
+def _validate_payload(payload: dict, config: dict, predictor_images: int = 5) -> None:
     fields = {"model", "messages", "temperature", "reasoning", "max_tokens", "provider", "stream", "plugins"}
     if not isinstance(payload, dict) or set(payload) != fields:
         raise OpenRouterError("Send only the payload produced by build_request.")
@@ -258,19 +262,21 @@ def _validate_payload(payload: dict, config: dict) -> None:
         if role in details and part["image_url"]["detail"] != details[role]:
             raise OpenRouterError("Image detail no longer matches the configured role setting.")
         count += 1
-    if count != (config.get("reflector_frame_count", 200) if role == "reflector" else 5):
+    if count != (config.get("reflector_frame_count", 200) if role == "reflector" else predictor_images):
         raise OpenRouterError("Request image count no longer matches its paper role.")
 
 
-def send_request(payload: dict, config: dict, *, api_key: str | None = None) -> dict:
+def send_request(payload: dict, config: dict, *, api_key: str | None = None,
+                 predictor_images: int = 5) -> dict:
     """Make one POST; return full JSON/raw text even when output is truncated.
 
     The optional key is an in-memory injection seam for tests/callers. Production
     callers omit it and use the environment. Exception messages stay static;
     diagnostics contain only bounded, redacted fields from provider errors.
+    ``predictor_images`` is the bundle's declared predictor count (paper: 5).
     """
     _validate_config(config)
-    _validate_payload(payload, config)
+    _validate_payload(payload, config, predictor_images)
     key = os.environ.get(config["api_key_env"]) if api_key is None else api_key
     if not isinstance(key, str) or not key or any(not 33 <= ord(char) <= 126 for char in key):
         raise OpenRouterError("OPENROUTER_API_KEY is missing or is not a valid header value.")

@@ -1,0 +1,103 @@
+{
+  "initial_state": "desk_idle",
+  "states": [
+    {
+      "id": "desk_idle",
+      "description": "Person is sitting at the desk, initially looking at phone.",
+      "rules": [
+        {
+          "trigger": "Person sits at the desk.",
+          "action": "Pick up the book and place it next to the person."
+        }
+      ],
+      "next": [
+        {
+          "to": "desk_reading",
+          "on": "Person opens the book."
+        }
+      ]
+    },
+    {
+      "id": "desk_reading",
+      "description": "Person is reading a book at the desk.",
+      "rules": [
+        {
+          "trigger": "Person looks at the book.",
+          "action": "Pick up the mug and place it next to the person."
+        },
+        {
+          "trigger": "Person closes the book.",
+          "action": "Pick up the mug and place it in the dishwasher."
+        },
+        {
+          "trigger": "Person leaves the desk with the book.",
+          "action": "Pick up the laptop and place it next to the person."
+        }
+      ],
+      "next": [
+        {
+          "to": "desk_working",
+          "on": "Person opens the laptop."
+        }
+      ]
+    },
+    {
+      "id": "desk_working",
+      "description": "Person is working on a laptop at the desk.",
+      "rules": [
+        {
+          "trigger": "Person types on the laptop.",
+          "action": "Pick up the can and place it next to the person."
+        },
+        {
+          "trigger": "Person closes the laptop.",
+          "action": "Pick up the can and place it in the trash can."
+        }
+      ],
+      "next": [
+        {
+          "to": "leaving_room",
+          "on": "Person leaves the desk."
+        }
+      ]
+    },
+    {
+      "id": "leaving_room",
+      "description": "Person is leaving the desk area to turn off lights.",
+      "rules": [
+        {
+          "trigger": "Person walks to the light switch.",
+          "action": "Turn off the room light."
+        }
+      ],
+      "next": [
+        {
+          "to": "bed_relaxing",
+          "on": "Person walks to the bed."
+        }
+      ]
+    },
+    {
+      "id": "bed_relaxing",
+      "description": "Person is in bed, looking at phone.",
+      "rules": [
+        {
+          "trigger": "Person puts the phone on the bed.",
+          "action": "Turn off the bedside lamp."
+        }
+      ],
+      "next": [
+        {
+          "to": "bed_sleeping",
+          "on": "Person puts the phone on the bed."
+        }
+      ]
+    },
+    {
+      "id": "bed_sleeping",
+      "description": "Person is in bed, lights are off.",
+      "rules": [],
+      "next": []
+    }
+  ]
+}
