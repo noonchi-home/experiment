@@ -7,7 +7,7 @@ import shutil
 
 ROOT = Path(__file__).resolve().parents[1]
 TOP_FILES = ("README.md", "THIRD_PARTY.md", ".gitignore", ".gitattributes", "pyproject.toml")
-DIRECTORIES = ("pam", "tests", "config", "scenarios", "prompts", "tools", "experiments", "examples")
+DIRECTORIES = ("pam", "tests", "config", "scenarios", "prompts", "tools", "experiments")
 DOCS = (
     "docs/논문충실도_검증보고서.md",
     "docs/GitHub_공개안내.md",
