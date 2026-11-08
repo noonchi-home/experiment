@@ -1,0 +1,218 @@
+[
+ {
+  "item": "1 drink_now + drinks",
+  "expected": "high",
+  "runs": [
+   {
+    "said": 85,
+    "ev": 84.58815435740732,
+    "answer": "85",
+    "in": 116,
+    "out": 4
+   },
+   {
+    "said": 85,
+    "ev": 83.79260487297883,
+    "answer": "85",
+    "in": 116,
+    "out": 4
+   },
+   {
+    "said": 85,
+    "ev": 83.79260487297883,
+    "answer": "85",
+    "in": 116,
+    "out": 4
+   }
+  ]
+ },
+ {
+  "item": "2 no_drink + drinks",
+  "expected": "low",
+  "runs": [
+   {
+    "said": 15,
+    "ev": 10.045680900499967,
+    "answer": "15",
+    "in": 115,
+    "out": 4
+   },
+   {
+    "said": 10,
+    "ev": 10.452774032587598,
+    "answer": "10",
+    "in": 115,
+    "out": 4
+   },
+   {
+    "said": 10,
+    "ev": 10.452774032587598,
+    "answer": "10",
+    "in": 115,
+    "out": 4
+   }
+  ]
+ },
+ {
+  "item": "3 focus + shakes head",
+  "expected": "high",
+  "runs": [
+   {
+    "said": 65,
+    "ev": 66.89484669876784,
+    "answer": "65",
+    "in": 112,
+    "out": 4
+   },
+   {
+    "said": 65,
+    "ev": 60.49967138628795,
+    "answer": "65",
+    "in": 112,
+    "out": 4
+   },
+   {
+    "said": 65,
+    "ev": 66.07020352002328,
+    "answer": "65",
+    "in": 112,
+    "out": 4
+   }
+  ]
+ },
+ {
+  "item": "4 drink_now + shakes head",
+  "expected": "low",
+  "runs": [
+   {
+    "said": 35,
+    "ev": 31.463854430292336,
+    "answer": "35",
+    "in": 110,
+    "out": 4
+   },
+   {
+    "said": 35,
+    "ev": 31.423589147535562,
+    "answer": "35",
+    "in": 110,
+    "out": 4
+   },
+   {
+    "said": 30,
+    "ev": 32.89141512196071,
+    "answer": "30",
+    "in": 110,
+    "out": 4
+   }
+  ]
+ },
+ {
+  "item": "5 focus_later + moves aside",
+  "expected": "high",
+  "runs": [
+   {
+    "said": 85,
+    "ev": 81.15889246214158,
+    "answer": "85",
+    "in": 120,
+    "out": 4
+   },
+   {
+    "said": 85,
+    "ev": 81.31966609062508,
+    "answer": "85",
+    "in": 120,
+    "out": 4
+   },
+   {
+    "said": 85,
+    "ev": 81.31966609062508,
+    "answer": "85",
+    "in": 120,
+    "out": 4
+   }
+  ]
+ },
+ {
+  "item": "6 no_drink + returns can",
+  "expected": "high",
+  "runs": [
+   {
+    "said": 65,
+    "ev": 67.36627206770616,
+    "answer": "65",
+    "in": 116,
+    "out": 4
+   },
+   {
+    "said": 80,
+    "ev": 73.62989806553983,
+    "answer": "80",
+    "in": 116,
+    "out": 4
+   },
+   {
+    "said": 75,
+    "ev": 73.62989806553983,
+    "answer": "75",
+    "in": 116,
+    "out": 4
+   }
+  ]
+ },
+ {
+  "item": "7 no_drink + moves aside",
+  "expected": "high",
+  "runs": [
+   {
+    "said": 75,
+    "ev": 74.70455797845936,
+    "answer": "75",
+    "in": 113,
+    "out": 4
+   },
+   {
+    "said": 75,
+    "ev": 74.70455797845936,
+    "answer": "75",
+    "in": 113,
+    "out": 4
+   },
+   {
+    "said": 75,
+    "ev": 74.56503818402524,
+    "answer": "75",
+    "in": 113,
+    "out": 4
+   }
+  ]
+ },
+ {
+  "item": "8 drink_now + moves aside",
+  "expected": "low",
+  "runs": [
+   {
+    "said": 35,
+    "ev": 33.63941679381567,
+    "answer": "35",
+    "in": 114,
+    "out": 4
+   },
+   {
+    "said": 30,
+    "ev": 33.81834887347355,
+    "answer": "30",
+    "in": 114,
+    "out": 4
+   },
+   {
+    "said": 35,
+    "ev": 33.63941679381567,
+    "answer": "35",
+    "in": 114,
+    "out": 4
+   }
+  ]
+ }
+]

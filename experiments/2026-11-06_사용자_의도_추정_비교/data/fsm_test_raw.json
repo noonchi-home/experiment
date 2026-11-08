@@ -1,0 +1,1177 @@
+{
+ "convert_prompt": "Below is an observation record from a home where a robot helps a user.\n\n[Observation record]\n{record}\n\n[Task]\nRewrite this record as a finite-state machine (FSM) of the user's activity.\n- A state is what the user is doing during a time span.\n- A transition is an observed event that moved the user from one state to another (a robot action, a user action, or something someone said).\n- Observed actions or speech that did not change the state go in that state's \"observed\" list.\n- Use only what is in the record. Do not add feelings, intentions, or reasons.\n- Every line of the record must appear somewhere in the FSM.\n- Output only JSON in this form and nothing else:\n{{\"states\": [{{\"id\": \"S0\", \"time\": \"...\", \"user_activity\": \"...\", \"observed\": [\"...\"]}}], \"transitions\": [{{\"from\": \"S0\", \"to\": \"S1\", \"time\": \"...\", \"trigger\": \"...\"}}]}}",
+ "ask_prompt": "You are a robot that helps people at home. Below is the record observed so far, written as a finite-state machine (FSM) of the user's activity.\n\n[Observation record as an FSM]\n{fsm}\n\n[Task]\nWhat state of mind did this user have at the moment the robot acted?\n- A state of mind means what the user wants, or why they would act a certain way.\n- Answer in one sentence.",
+ "results": [
+  {
+   "id": 1,
+   "title": "참으려다 마심",
+   "hidden": "마시고 싶지만 탄산을 줄이려고 참으려 했다",
+   "fsm": {
+    "states": [
+     {
+      "id": "S0",
+      "time": "0–4s",
+      "user_activity": "Sitting on the sofa",
+      "observed": [
+       "0s: User sits on the sofa and turns on the TV"
+      ]
+     },
+     {
+      "id": "S1",
+      "time": "4–45s",
+      "user_activity": "Watching TV",
+      "observed": [
+       "12s: Robot places a canned drink on the side table next to the sofa",
+       "13s: User says, \"Ah, it's okay... I'm cutting out soda these days.\"",
+       "14s: User waves a hand dismissively",
+       "15–40s: User watches TV",
+       "40s: Robot leaves the room"
+      ]
+     },
+     {
+      "id": "S2",
+      "time": "45s",
+      "user_activity": "Opening the can and drinking",
+      "observed": []
+     },
+     {
+      "id": "S3",
+      "time": "46–60s",
+      "user_activity": "Watching TV while holding the can",
+      "observed": [
+       "60s: Video ends"
+      ]
+     }
+    ],
+    "transitions": [
+     {
+      "from": "S0",
+      "to": "S1",
+      "time": "4s",
+      "trigger": "User watches TV"
+     },
+     {
+      "from": "S1",
+      "to": "S2",
+      "time": "45s",
+      "trigger": "User opens the can and drinks"
+     },
+     {
+      "from": "S2",
+      "to": "S3",
+      "time": "46s",
+      "trigger": "User watches TV holding the can"
+     }
+    ]
+   },
+   "answer": "The user likely did not want the canned drink because they were trying to cut out soda.",
+   "error": null
+  },
+  {
+   "id": 2,
+   "title": "못 봤을 뿐",
+   "hidden": "물을 원했지만 놓인 것을 몰랐다",
+   "fsm": {
+    "states": [
+     {
+      "id": "S0",
+      "time": "0-72s",
+      "user_activity": "Playing a game on the laptop",
+      "observed": [
+       "0s: User wears headphones.",
+       "5s: User presses keys rapidly while looking at the screen.",
+       "10s: Robot places a cup of water on the desk corner behind the user's left side.",
+       "11-70s: User keeps playing, looking only at the screen, and does not look toward the cup."
+      ]
+     },
+     {
+      "id": "S1",
+      "time": "72-75s",
+      "user_activity": "Hands off the keyboard and feeling around the desk",
+      "observed": [
+       "73s: User feels around the right side of the desk with a hand."
+      ]
+     },
+     {
+      "id": "S2",
+      "time": "75-78s",
+      "user_activity": "Picking up the cup and drinking",
+      "observed": [
+       "75s: User turns around and looks behind to the left."
+      ]
+     },
+     {
+      "id": "S3",
+      "time": "78-90s",
+      "user_activity": "Playing the game",
+      "observed": [
+       "78-90s: User puts the cup on the right side and resumes playing.",
+       "90s: Video ends."
+      ]
+     }
+    ],
+    "transitions": [
+     {
+      "from": "S0",
+      "to": "S1",
+      "time": "72s",
+      "trigger": "User takes hands off the keyboard."
+     },
+     {
+      "from": "S1",
+      "to": "S2",
+      "time": "75s",
+      "trigger": "User turns around, looks behind to the left, picks up the cup and drinks."
+     },
+     {
+      "from": "S2",
+      "to": "S3",
+      "time": "78-90s",
+      "trigger": "User puts the cup on the right side and resumes playing."
+     }
+    ]
+   },
+   "answer": "The user likely wanted to stay focused on the game and may not have noticed the robot placing the water behind them.",
+   "error": null
+  },
+  {
+   "id": 3,
+   "title": "자리가 문제",
+   "hidden": "커피는 원하지만 노트북 옆에 두면 쏟을까 봐 싫다",
+   "fsm": {
+    "states": [
+     {
+      "id": "S0",
+      "time": "0–3s",
+      "user_activity": "Sits at the desk and turns on the laptop",
+      "observed": []
+     },
+     {
+      "id": "S1",
+      "time": "3–8s",
+      "user_activity": "Reads email",
+      "observed": [
+       "7s: Robot places an uncovered cup of coffee right next to the keyboard, on the right"
+      ]
+     },
+     {
+      "id": "S2",
+      "time": "8–9s",
+      "user_activity": "Pushes the laptop slightly to the left",
+      "observed": []
+     },
+     {
+      "id": "S3",
+      "time": "9–10s",
+      "user_activity": "Moves the coffee cup onto a coaster at the far right edge of the desk",
+      "observed": []
+     },
+     {
+      "id": "S4",
+      "time": "10–12s",
+      "user_activity": "Takes a sip of coffee",
+      "observed": []
+     },
+     {
+      "id": "S5",
+      "time": "12–30s",
+      "user_activity": "Reads email",
+      "observed": [
+       "30s: Video ends"
+      ]
+     }
+    ],
+    "transitions": [
+     {
+      "from": "S0",
+      "to": "S1",
+      "time": "3s",
+      "trigger": "User reads email"
+     },
+     {
+      "from": "S1",
+      "to": "S2",
+      "time": "8s",
+      "trigger": "User pushes the laptop slightly to the left"
+     },
+     {
+      "from": "S2",
+      "to": "S3",
+      "time": "9s",
+      "trigger": "User moves the coffee cup onto a coaster at the far right edge of the desk"
+     },
+     {
+      "from": "S3",
+      "to": "S4",
+      "time": "10s",
+      "trigger": "User takes a sip of coffee"
+     },
+     {
+      "from": "S4",
+      "to": "S5",
+      "time": "12s",
+      "trigger": "User reads email"
+     }
+    ]
+   },
+   "answer": "The user appeared focused on reading email and may have wanted the coffee placed farther from the laptop.",
+   "error": null
+  },
+  {
+   "id": 4,
+   "title": "짜증의 대상",
+   "hidden": "음료는 반가웠고, 짜증은 문자 때문이었다",
+   "fsm": {
+    "states": [
+     {
+      "id": "S0",
+      "time": "0–4s",
+      "user_activity": "Sitting at the desk looking at the phone",
+      "observed": []
+     },
+     {
+      "id": "S1",
+      "time": "4–8s",
+      "user_activity": "Reading a text message",
+      "observed": [
+       "4s: Frowns",
+       "6s: Robot places a can of soda next to the user",
+       "7s: Sighs",
+       "7s: Says, \"Ugh, seriously... why now...\""
+      ]
+     },
+     {
+      "id": "S2",
+      "time": "8–19s",
+      "user_activity": "Quickly typing a reply on the phone",
+      "observed": []
+     },
+     {
+      "id": "S3",
+      "time": "20s",
+      "user_activity": "Opening the can and drinking",
+      "observed": []
+     },
+     {
+      "id": "S4",
+      "time": "21–30s",
+      "user_activity": "Leaning back in the chair holding the can",
+      "observed": [
+       "30s: End of video"
+      ]
+     }
+    ],
+    "transitions": [
+     {
+      "from": "S0",
+      "to": "S1",
+      "time": "4s",
+      "trigger": "The phone buzzes; the user reads a text message"
+     },
+     {
+      "from": "S1",
+      "to": "S2",
+      "time": "8s",
+      "trigger": "The user starts quickly typing a reply on the phone"
+     },
+     {
+      "from": "S2",
+      "to": "S3",
+      "time": "20s",
+      "trigger": "The user puts the phone down, opens the can and drinks"
+     },
+     {
+      "from": "S3",
+      "to": "S4",
+      "time": "21s",
+      "trigger": "The user leans back in the chair holding the can"
+     }
+    ]
+   },
+   "answer": "The user likely felt frustrated by the text message and wanted to respond to it, though their specific concern is unknown.",
+   "error": null
+  },
+  {
+   "id": 5,
+   "title": "반만 맞음",
+   "hidden": "큰 불은 꺼도 되지만, 아직 자지 않고 책을 읽으려 한다",
+   "fsm": {
+    "states": [
+     {
+      "id": "S0",
+      "time": "0–10s",
+      "user_activity": "Works on the laptop at the desk",
+      "observed": []
+     },
+     {
+      "id": "S1",
+      "time": "10–12s",
+      "user_activity": "At the desk with the laptop closed",
+      "observed": []
+     },
+     {
+      "id": "S2",
+      "time": "12–15s",
+      "user_activity": "Takes a book from the bookshelf and walks to the bed",
+      "observed": [
+       "14s: Robot turns off the ceiling light"
+      ]
+     },
+     {
+      "id": "S3",
+      "time": "15–18s",
+      "user_activity": "Pauses briefly in front of the bed",
+      "observed": [
+       "16s: User turns on the bedside lamp"
+      ]
+     },
+     {
+      "id": "S4",
+      "time": "18–40s",
+      "user_activity": "Reads the book leaning against the headboard",
+      "observed": [
+       "User does not turn the ceiling light back on through the end of the video"
+      ]
+     }
+    ],
+    "transitions": [
+     {
+      "from": "S0",
+      "to": "S1",
+      "time": "10s",
+      "trigger": "User closes the laptop"
+     },
+     {
+      "from": "S1",
+      "to": "S2",
+      "time": "12s",
+      "trigger": "User takes a book from the bookshelf and walks to the bed"
+     },
+     {
+      "from": "S2",
+      "to": "S3",
+      "time": "15s",
+      "trigger": "User pauses briefly in front of the bed"
+     },
+     {
+      "from": "S3",
+      "to": "S4",
+      "time": "18s",
+      "trigger": "User reads the book leaning against the headboard"
+     }
+    ]
+   },
+   "answer": "The user likely intended to settle into bed and read, though the record does not establish whether they wanted the ceiling light turned off.",
+   "error": null
+  },
+  {
+   "id": 6,
+   "title": "너무 일찍 치움",
+   "hidden": "치우는 건 좋지만, 잠깐 자리를 비운 것이지 다 먹은 게 아니었다",
+   "fsm": {
+    "states": [
+     {
+      "id": "S0",
+      "time": "0–20s",
+      "user_activity": "Eating snacks from a bowl at the dining table",
+      "observed": []
+     },
+     {
+      "id": "S1",
+      "time": "20–60s",
+      "user_activity": "Away from the dining table in the bathroom",
+      "observed": [
+       "25s: Robot puts the bowl, with snacks still in it, into the dishwasher."
+      ]
+     },
+     {
+      "id": "S2",
+      "time": "60–63s",
+      "user_activity": "Looking around the table",
+      "observed": []
+     },
+     {
+      "id": "S3",
+      "time": "63–66s",
+      "user_activity": "Taking the bowl out of the dishwasher",
+      "observed": [
+       "64s: User says, \"Oh, I was still eating that.\""
+      ]
+     },
+     {
+      "id": "S4",
+      "time": "66–90s",
+      "user_activity": "Sitting at the dining table and eating the remaining snacks",
+      "observed": [
+       "90s: Video ends."
+      ]
+     }
+    ],
+    "transitions": [
+     {
+      "from": "S0",
+      "to": "S1",
+      "time": "20s",
+      "trigger": "User leaves the bowl with snacks still in it and goes to the bathroom."
+     },
+     {
+      "from": "S1",
+      "to": "S2",
+      "time": "60s",
+      "trigger": "User comes back and looks around the table."
+     },
+     {
+      "from": "S2",
+      "to": "S3",
+      "time": "63s",
+      "trigger": "User opens the dishwasher and takes out the bowl."
+     },
+     {
+      "from": "S3",
+      "to": "S4",
+      "time": "66s",
+      "trigger": "User sits back down and eats the remaining snacks."
+     }
+    ]
+   },
+   "answer": "The user likely intended to return and finish eating the snacks after using the bathroom.",
+   "error": null
+  },
+  {
+   "id": 7,
+   "title": "친구에게 밀어 줌",
+   "hidden": "자기는 물이 있어서 괜찮고, 기침하는 친구가 마시길 바랐다",
+   "fsm": {
+    "states": [
+     {
+      "id": "S0",
+      "time": "0–8s",
+      "user_activity": "Sitting beside a friend and working on a laptop.",
+      "observed": [
+       "0s: The friend is working on a laptop, and a water bottle is in front of the user.",
+       "5s: The friend touches their throat and coughs.",
+       "8s: The robot places a canned drink next to the user."
+      ]
+     },
+     {
+      "id": "S1",
+      "time": "9–11s",
+      "user_activity": "Sliding the can toward the friend.",
+      "observed": [
+       "9s: The user says, \"You drink it.\"",
+       "11s: The friend opens the can and drinks."
+      ]
+     },
+     {
+      "id": "S2",
+      "time": "12s",
+      "user_activity": "Drinking water from the user's own bottle.",
+      "observed": []
+     },
+     {
+      "id": "S3",
+      "time": "13–30s",
+      "user_activity": "Working on the laptop.",
+      "observed": [
+       "30s: The video ends."
+      ]
+     }
+    ],
+    "transitions": [
+     {
+      "from": "S0",
+      "to": "S1",
+      "time": "9s",
+      "trigger": "The user slides the can toward the friend."
+     },
+     {
+      "from": "S1",
+      "to": "S2",
+      "time": "12s",
+      "trigger": "The user drinks water from their own bottle."
+     },
+     {
+      "from": "S2",
+      "to": "S3",
+      "time": "13s",
+      "trigger": "The user works on the laptop."
+     }
+    ]
+   },
+   "answer": "The user likely wanted to help their coughing friend by giving them the drink.",
+   "error": null
+  },
+  {
+   "id": 8,
+   "title": "커튼이 10분 이름",
+   "hidden": "커튼 여는 건 좋지만 10분쯤 일렀다",
+   "fsm": {
+    "states": [
+     {
+      "id": "S0",
+      "time": "0–29s",
+      "user_activity": "Lying in bed under the blanket",
+      "observed": [
+       "0s: User lies in bed under the blanket"
+      ]
+     },
+     {
+      "id": "S1",
+      "time": "30–32s",
+      "user_activity": "Tossing and turning",
+      "observed": [
+       "32s: Robot opens the curtains"
+      ]
+     },
+     {
+      "id": "S2",
+      "time": "33–599s",
+      "user_activity": "Lying under the blanket",
+      "observed": [
+       "34s: User says, \"Ugh... five more minutes.\"",
+       "35–599s: User lies under the blanket"
+      ]
+     },
+     {
+      "id": "S3",
+      "time": "600–604s",
+      "user_activity": "Sitting up",
+      "observed": []
+     },
+     {
+      "id": "S4",
+      "time": "605s",
+      "user_activity": "Looking out the window and stretching",
+      "observed": []
+     },
+     {
+      "id": "S5",
+      "time": "606–630s",
+      "user_activity": "Making the bed",
+      "observed": [
+       "Curtains are left open",
+       "630s: End of video"
+      ]
+     }
+    ],
+    "transitions": [
+     {
+      "from": "S0",
+      "to": "S1",
+      "time": "30s",
+      "trigger": "User tosses and turns"
+     },
+     {
+      "from": "S1",
+      "to": "S2",
+      "time": "33s",
+      "trigger": "User pulls the blanket over their head"
+     },
+     {
+      "from": "S2",
+      "to": "S3",
+      "time": "600s",
+      "trigger": "User throws off the blanket and sits up"
+     },
+     {
+      "from": "S3",
+      "to": "S4",
+      "time": "605s",
+      "trigger": "User looks out the window and stretches"
+     },
+     {
+      "from": "S4",
+      "to": "S5",
+      "time": "606s",
+      "trigger": "User begins making the bed"
+     }
+    ]
+   },
+   "answer": "The user likely wanted to keep sleeping rather than wake up when the robot opened the curtains.",
+   "error": null
+  },
+  {
+   "id": 9,
+   "title": "고맙지만 더움",
+   "hidden": "챙겨 준 마음은 고맙지만, 더워서 담요는 필요 없다",
+   "fsm": {
+    "states": [
+     {
+      "id": "S0",
+      "time": "0–20s",
+      "user_activity": "Watching TV on the sofa",
+      "observed": [
+       "0s: Wearing a short-sleeved shirt"
+      ]
+     },
+     {
+      "id": "S1",
+      "time": "20–40s",
+      "user_activity": "Sitting with eyes closed",
+      "observed": [
+       "30s: Head drooping, not moving",
+       "35s: Robot covers the user with a blanket"
+      ]
+     },
+     {
+      "id": "S2",
+      "time": "40–43s",
+      "user_activity": "Eyes open",
+      "observed": [
+       "41s: User says, \"Oh... thanks.\""
+      ]
+     },
+     {
+      "id": "S3",
+      "time": "43–45s",
+      "user_activity": "Taking off the blanket, folding it, and putting it aside",
+      "observed": []
+     },
+     {
+      "id": "S4",
+      "time": "45–50s",
+      "user_activity": "Fanning face with a hand",
+      "observed": []
+     },
+     {
+      "id": "S5",
+      "time": "50–52s",
+      "user_activity": "Getting up and opening the window",
+      "observed": []
+     },
+     {
+      "id": "S6",
+      "time": "52–70s",
+      "user_activity": "Watching TV on the sofa",
+      "observed": [
+       "70s: End of video"
+      ]
+     }
+    ],
+    "transitions": [
+     {
+      "from": "S0",
+      "to": "S1",
+      "time": "20s",
+      "trigger": "User closes their eyes"
+     },
+     {
+      "from": "S1",
+      "to": "S2",
+      "time": "40s",
+      "trigger": "User opens their eyes"
+     },
+     {
+      "from": "S2",
+      "to": "S3",
+      "time": "43s",
+      "trigger": "User takes off the blanket"
+     },
+     {
+      "from": "S3",
+      "to": "S4",
+      "time": "45s",
+      "trigger": "User fans their face with a hand"
+     },
+     {
+      "from": "S4",
+      "to": "S5",
+      "time": "50s",
+      "trigger": "User gets up and opens the window"
+     },
+     {
+      "from": "S5",
+      "to": "S6",
+      "time": "52s",
+      "trigger": "User returns to the sofa and watches TV"
+     }
+    ]
+   },
+   "answer": "The user may have wanted to rest while watching TV, but their later actions suggest they likely felt too warm for a blanket.",
+   "error": null
+  },
+  {
+   "id": 10,
+   "title": "약 먹을 물",
+   "hidden": "목이 말라서가 아니라 약을 먹으려고 물이 필요했다",
+   "fsm": {
+    "states": [
+     {
+      "id": "S0",
+      "time": "0–5s",
+      "user_activity": "Sitting at the desk looking at the phone",
+      "observed": []
+     },
+     {
+      "id": "S1",
+      "time": "5–8s",
+      "user_activity": "Phone put down",
+      "observed": [
+       "7s: Robot places a cup of water next to the user"
+      ]
+     },
+     {
+      "id": "S2",
+      "time": "8–10s",
+      "user_activity": "Opening a drawer and taking out a pill bottle",
+      "observed": []
+     },
+     {
+      "id": "S3",
+      "time": "10–11s",
+      "user_activity": "Taking out one pill and putting it in the mouth",
+      "observed": []
+     },
+     {
+      "id": "S4",
+      "time": "11–13s",
+      "user_activity": "Taking a sip of water and swallowing",
+      "observed": []
+     },
+     {
+      "id": "S5",
+      "time": "13–40s",
+      "user_activity": "Looking at the phone again",
+      "observed": [
+       "Does not drink any more water through the end of the video"
+      ]
+     }
+    ],
+    "transitions": [
+     {
+      "from": "S0",
+      "to": "S1",
+      "time": "5s",
+      "trigger": "User puts the phone down"
+     },
+     {
+      "from": "S1",
+      "to": "S2",
+      "time": "8s",
+      "trigger": "User opens a drawer and takes out a pill bottle"
+     },
+     {
+      "from": "S2",
+      "to": "S3",
+      "time": "10s",
+      "trigger": "User takes out one pill and puts it in their mouth"
+     },
+     {
+      "from": "S3",
+      "to": "S4",
+      "time": "11s",
+      "trigger": "User takes a sip of water and swallows"
+     },
+     {
+      "from": "S4",
+      "to": "S5",
+      "time": "13s",
+      "trigger": "User sets the cup aside and looks at the phone again"
+     }
+    ]
+   },
+   "answer": "The user may have wanted water to help swallow a pill, though their intention was not yet clear when the robot placed the cup.",
+   "error": null
+  },
+  {
+   "id": 11,
+   "title": "스탠드가 눈부심",
+   "hidden": "켜 준 건 좋지만, 너무 밝고 빛이 눈에 바로 왔다",
+   "fsm": {
+    "states": [
+     {
+      "id": "S0",
+      "time": "0–4s",
+      "user_activity": "Sitting at the desk with an open book",
+      "observed": [
+       "0s: User sits at the desk and opens a book",
+       "3s: Robot turns on the desk lamp"
+      ]
+     },
+     {
+      "id": "S1",
+      "time": "4–5s",
+      "user_activity": "Squinting and covering eyes with a hand",
+      "observed": []
+     },
+     {
+      "id": "S2",
+      "time": "5–6s",
+      "user_activity": "Turning the lamp head toward the wall",
+      "observed": []
+     },
+     {
+      "id": "S3",
+      "time": "6–8s",
+      "user_activity": "Turning down the lamp's brightness knob",
+      "observed": []
+     },
+     {
+      "id": "S4",
+      "time": "8–40s",
+      "user_activity": "Reading the book",
+      "observed": [
+       "8–40s: User leaves the lamp on"
+      ]
+     }
+    ],
+    "transitions": [
+     {
+      "from": "S0",
+      "to": "S1",
+      "time": "4s",
+      "trigger": "User squints and covers their eyes with a hand"
+     },
+     {
+      "from": "S1",
+      "to": "S2",
+      "time": "5s",
+      "trigger": "User turns the lamp head toward the wall"
+     },
+     {
+      "from": "S2",
+      "to": "S3",
+      "time": "6s",
+      "trigger": "User turns down the lamp's brightness knob"
+     },
+     {
+      "from": "S3",
+      "to": "S4",
+      "time": "8s",
+      "trigger": "User reads the book"
+     }
+    ]
+   },
+   "answer": "The user likely wanted comfortable lighting for reading, rather than a bright lamp shining toward their eyes.",
+   "error": null
+  },
+  {
+   "id": 12,
+   "title": "이미 물이 있음",
+   "hidden": "물은 원하지만, 마시던 물병이 이미 있었다",
+   "fsm": {
+    "states": [
+     {
+      "id": "S0",
+      "time": "0–3s",
+      "user_activity": "Sitting at the desk and opening a notebook",
+      "observed": [
+       "A half-empty water bottle is on the desk."
+      ]
+     },
+     {
+      "id": "S1",
+      "time": "3–7s",
+      "user_activity": "Writing notes in the notebook",
+      "observed": [
+       "At 6s, the robot places a new water bottle next to the user."
+      ]
+     },
+     {
+      "id": "S2",
+      "time": "7–12s",
+      "user_activity": "Taking the new bottle to the fridge",
+      "observed": [
+       "The user puts the new bottle in the fridge."
+      ]
+     },
+     {
+      "id": "S3",
+      "time": "12–13s",
+      "user_activity": "Sitting at the desk",
+      "observed": []
+     },
+     {
+      "id": "S4",
+      "time": "13–15s",
+      "user_activity": "Drinking from the half-empty bottle",
+      "observed": []
+     },
+     {
+      "id": "S5",
+      "time": "15–40s",
+      "user_activity": "Writing notes",
+      "observed": [
+       "The video ends at 40s."
+      ]
+     }
+    ],
+    "transitions": [
+     {
+      "from": "S0",
+      "to": "S1",
+      "time": "3s",
+      "trigger": "The user starts writing notes in the notebook."
+     },
+     {
+      "from": "S1",
+      "to": "S2",
+      "time": "7s",
+      "trigger": "The user picks up the new bottle and gets up."
+     },
+     {
+      "from": "S2",
+      "to": "S3",
+      "time": "12s",
+      "trigger": "The user comes back and sits down."
+     },
+     {
+      "from": "S3",
+      "to": "S4",
+      "time": "13s",
+      "trigger": "The user drinks from the half-empty bottle."
+     },
+     {
+      "from": "S4",
+      "to": "S5",
+      "time": "15s",
+      "trigger": "The user writes notes."
+     }
+    ]
+   },
+   "answer": "The user appeared focused on writing notes and may not have wanted another water bottle immediately, though their exact preference is uncertain.",
+   "error": null
+  },
+  {
+   "id": 13,
+   "title": "휴지에 웃음",
+   "hidden": "갑작스러워서 웃겼지만, 고맙고 도움이 됐다",
+   "fsm": {
+    "states": [
+     {
+      "id": "S0",
+      "time": "0–40s",
+      "user_activity": "Watches a movie on the sofa",
+      "observed": []
+     },
+     {
+      "id": "S1",
+      "time": "40–44s",
+      "user_activity": "Tears up and wipes their eyes with the back of a hand",
+      "observed": [
+       "43s: Robot places a box of tissues next to the user"
+      ]
+     },
+     {
+      "id": "S2",
+      "time": "44–45s",
+      "user_activity": "Looks at the tissue box and bursts out laughing",
+      "observed": [
+       "44s: User says, \"Haha, what is this?\""
+      ]
+     },
+     {
+      "id": "S3",
+      "time": "45–47s",
+      "user_activity": "Pulls out a tissue and wipes their tears",
+      "observed": []
+     },
+     {
+      "id": "S4",
+      "time": "47–80s",
+      "user_activity": "Keeps the tissue box on their lap and watches the movie",
+      "observed": [
+       "80s: End of video"
+      ]
+     }
+    ],
+    "transitions": [
+     {
+      "from": "S0",
+      "to": "S1",
+      "time": "40s",
+      "trigger": "User tears up and wipes their eyes with the back of a hand"
+     },
+     {
+      "from": "S1",
+      "to": "S2",
+      "time": "44s",
+      "trigger": "User looks at the tissue box and bursts out laughing"
+     },
+     {
+      "from": "S2",
+      "to": "S3",
+      "time": "45s",
+      "trigger": "User pulls out a tissue and wipes their tears"
+     },
+     {
+      "from": "S3",
+      "to": "S4",
+      "time": "47s",
+      "trigger": "User keeps the tissue box on their lap and watches the movie"
+     }
+    ]
+   },
+   "answer": "The user appeared moved by the movie and likely wanted to wipe away their tears.",
+   "error": null
+  },
+  {
+   "id": 14,
+   "title": "룸메이트가 자는 중",
+   "hidden": "평소엔 불 켜기가 좋지만, 지금은 룸메이트가 자고 있다",
+   "fsm": {
+    "states": [
+     {
+      "id": "S0",
+      "time": "0–5s",
+      "user_activity": "Not shown",
+      "observed": [
+       "At 0s, the roommate lies under a blanket in one of two beds in a dark room."
+      ]
+     },
+     {
+      "id": "S1",
+      "time": "5–6s",
+      "user_activity": "Entering the room",
+      "observed": []
+     },
+     {
+      "id": "S2",
+      "time": "6–7s",
+      "user_activity": "Looking at the roommate",
+      "observed": []
+     },
+     {
+      "id": "S3",
+      "time": "7–9s",
+      "user_activity": "Turning off the ceiling light",
+      "observed": [
+       "At 8s, the user quietly says, \"Shh...\""
+      ]
+     },
+     {
+      "id": "S4",
+      "time": "9–10s",
+      "user_activity": "Turning on the phone's flashlight",
+      "observed": []
+     },
+     {
+      "id": "S5",
+      "time": "10–25s",
+      "user_activity": "Walking quietly to their own bed using the flashlight and lying down",
+      "observed": []
+     }
+    ],
+    "transitions": [
+     {
+      "from": "S0",
+      "to": "S1",
+      "time": "5s",
+      "trigger": "The user opens the door and enters the room."
+     },
+     {
+      "from": "S1",
+      "to": "S2",
+      "time": "6s",
+      "trigger": "The robot turns on the ceiling light, and the user quickly turns to look at the roommate."
+     },
+     {
+      "from": "S2",
+      "to": "S3",
+      "time": "7s",
+      "trigger": "The user presses the switch and turns off the ceiling light."
+     },
+     {
+      "from": "S3",
+      "to": "S4",
+      "time": "9s",
+      "trigger": "The user turns on the phone's flashlight."
+     },
+     {
+      "from": "S4",
+      "to": "S5",
+      "time": "10s",
+      "trigger": "The user walks quietly to their own bed using the flashlight."
+     }
+    ]
+   },
+   "answer": "The user likely wanted to get to bed without waking or disturbing their roommate.",
+   "error": null
+  },
+  {
+   "id": 15,
+   "title": "커피가 씀",
+   "hidden": "커피는 원하지만 설탕이 필요했다",
+   "fsm": {
+    "states": [
+     {
+      "id": "S0",
+      "time": "0–4s",
+      "user_activity": "Sitting at the desk and turning on the laptop",
+      "observed": [
+       "At 4s, the robot places a cup of black coffee next to the user."
+      ]
+     },
+     {
+      "id": "S1",
+      "time": "5–7s",
+      "user_activity": "Drinking coffee",
+      "observed": [
+       "At 5s, the user grimaces."
+      ]
+     },
+     {
+      "id": "S2",
+      "time": "7–15s",
+      "user_activity": "Getting up and bringing sugar from the kitchen",
+      "observed": []
+     },
+     {
+      "id": "S3",
+      "time": "15–17s",
+      "user_activity": "Adding sugar to the coffee and stirring",
+      "observed": []
+     },
+     {
+      "id": "S4",
+      "time": "17–18s",
+      "user_activity": "Drinking coffee",
+      "observed": []
+     },
+     {
+      "id": "S5",
+      "time": "18–40s",
+      "user_activity": "Working on the laptop while drinking coffee",
+      "observed": [
+       "At 40s, the video ends."
+      ]
+     }
+    ],
+    "transitions": [
+     {
+      "from": "S0",
+      "to": "S1",
+      "time": "5s",
+      "trigger": "The user takes a sip of coffee."
+     },
+     {
+      "from": "S1",
+      "to": "S2",
+      "time": "7s",
+      "trigger": "The user gets up and brings sugar from the kitchen."
+     },
+     {
+      "from": "S2",
+      "to": "S3",
+      "time": "15s",
+      "trigger": "The user adds sugar to the coffee and stirs."
+     },
+     {
+      "from": "S3",
+      "to": "S4",
+      "time": "17s",
+      "trigger": "The user drinks the coffee again."
+     },
+     {
+      "from": "S4",
+      "to": "S5",
+      "time": "18s",
+      "trigger": "The user works on the laptop while drinking the coffee."
+     }
+    ]
+   },
+   "answer": "The user likely wanted coffee sweetened with sugar while working at the laptop.",
+   "error": null
+  }
+ ]
+}

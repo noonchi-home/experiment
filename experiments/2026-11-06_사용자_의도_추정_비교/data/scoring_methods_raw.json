@@ -1,0 +1,438 @@
+{
+ "ga": [
+  {
+   "item": "1 drink_now + drinks",
+   "expected": "high",
+   "runs": [
+    {
+     "said": 95,
+     "ev": 94.74136365780528,
+     "answer": "95",
+     "in": 103,
+     "out": 4
+    },
+    {
+     "said": 95,
+     "ev": 94.54104558155689,
+     "answer": "95",
+     "in": 103,
+     "out": 4
+    },
+    {
+     "said": 95,
+     "ev": 94.26042053181479,
+     "answer": "95",
+     "in": 103,
+     "out": 4
+    }
+   ]
+  },
+  {
+   "item": "2 no_drink + drinks",
+   "expected": "low",
+   "runs": [
+    {
+     "said": 10,
+     "ev": 6.0478822794897695,
+     "answer": "10",
+     "in": 102,
+     "out": 4
+    },
+    {
+     "said": 5,
+     "ev": 6.0478822794897695,
+     "answer": "5",
+     "in": 102,
+     "out": 4
+    },
+    {
+     "said": 5,
+     "ev": 5.123658208101448,
+     "answer": "5",
+     "in": 102,
+     "out": 4
+    }
+   ]
+  },
+  {
+   "item": "3 focus + shakes head",
+   "expected": "high",
+   "runs": [
+    {
+     "said": 85,
+     "ev": 81.42604540054356,
+     "answer": "85",
+     "in": 99,
+     "out": 4
+    },
+    {
+     "said": 80,
+     "ev": 82.11262383858667,
+     "answer": "80",
+     "in": 99,
+     "out": 4
+    },
+    {
+     "said": 85,
+     "ev": 82.11262383858667,
+     "answer": "85",
+     "in": 99,
+     "out": 4
+    }
+   ]
+  },
+  {
+   "item": "4 drink_now + shakes head",
+   "expected": "low",
+   "runs": [
+    {
+     "said": 20,
+     "ev": 22.46892949027318,
+     "answer": "20",
+     "in": 97,
+     "out": 4
+    },
+    {
+     "said": 25,
+     "ev": 23.179696242876098,
+     "answer": "25",
+     "in": 97,
+     "out": 4
+    },
+    {
+     "said": 25,
+     "ev": 23.179696242876098,
+     "answer": "25",
+     "in": 97,
+     "out": 4
+    }
+   ]
+  },
+  {
+   "item": "5 focus_later + moves aside",
+   "expected": "high",
+   "runs": [
+    {
+     "said": 90,
+     "ev": 90.613444993044,
+     "answer": "90",
+     "in": 107,
+     "out": 4
+    },
+    {
+     "said": 90,
+     "ev": 90.613444993044,
+     "answer": "90",
+     "in": 107,
+     "out": 4
+    },
+    {
+     "said": 90,
+     "ev": 90.7360286737713,
+     "answer": "90",
+     "in": 107,
+     "out": 4
+    }
+   ]
+  },
+  {
+   "item": "6 no_drink + returns can",
+   "expected": "high",
+   "runs": [
+    {
+     "said": 90,
+     "ev": 89.81333607995342,
+     "answer": "90",
+     "in": 103,
+     "out": 4
+    },
+    {
+     "said": 90,
+     "ev": 89.86001672835054,
+     "answer": "90",
+     "in": 103,
+     "out": 4
+    },
+    {
+     "said": 90,
+     "ev": 89.9061627501829,
+     "answer": "90",
+     "in": 103,
+     "out": 4
+    }
+   ]
+  },
+  {
+   "item": "7 no_drink + moves aside",
+   "expected": "high",
+   "runs": [
+    {
+     "said": 85,
+     "ev": 86.8423391541287,
+     "answer": "85",
+     "in": 100,
+     "out": 4
+    },
+    {
+     "said": 90,
+     "ev": 86.8423391541287,
+     "answer": "90",
+     "in": 100,
+     "out": 4
+    },
+    {
+     "said": 90,
+     "ev": 86.92746516114984,
+     "answer": "90",
+     "in": 100,
+     "out": 4
+    }
+   ]
+  },
+  {
+   "item": "8 drink_now + moves aside",
+   "expected": "low",
+   "runs": [
+    {
+     "said": 25,
+     "ev": 24.058814132005228,
+     "answer": "25",
+     "in": 101,
+     "out": 4
+    },
+    {
+     "said": 25,
+     "ev": 24.058814132005228,
+     "answer": "25",
+     "in": 101,
+     "out": 4
+    },
+    {
+     "said": 25,
+     "ev": 24.058814132005228,
+     "answer": "25",
+     "in": 101,
+     "out": 4
+    }
+   ]
+  }
+ ],
+ "da": [
+  {
+   "item": "1 drink_now + drinks",
+   "expected": "high",
+   "runs": [
+    {
+     "said": 70,
+     "ev": 69.68067946854195,
+     "answer": "1. **Would happen because:** If the person wants a drink, a soda placed within reach gives them an immediate opportunity to satisfy that desire.\n\n2. **Would not happen because:** They might not want soda specifically, might prefer to finish typing first, or might avoid a drink they did not request.\n\n3. The action is consistent with the hypothesis, but wanting a drink does not make it certain.\n\nAnswer: 70",
+     "in": 170,
+     "out": 88
+    },
+    {
+     "said": 70,
+     "ev": 70.20589103259167,
+     "answer": "1. **Would happen because:** If the person wants a drink now, a soda placed within reach gives them an immediate opportunity to satisfy that desire.\n\n2. **Would not happen because:** Wanting a drink does not necessarily mean wanting that soda. They might dislike it, avoid it for health reasons, or wait until they finish typing.\n\nThe action is consistent with the hypothesis, but not guaranteed.\n\nAnswer: 70",
+     "in": 170,
+     "out": 87
+    },
+    {
+     "said": 70,
+     "ev": 70.36335532351727,
+     "answer": "1. **Would happen because:** If the person wants a drink now, a soda placed within reach gives them an immediate way to satisfy that desire.\n\n2. **Would not happen because:** They might prefer a different drink, not want soda, or be too focused on typing to drink immediately.\n\nThe action is consistent with the hypothesis, but it is not certain.\n\nAnswer: 70",
+     "in": 170,
+     "out": 80
+    }
+   ]
+  },
+  {
+   "item": "2 no_drink + drinks",
+   "expected": "low",
+   "runs": [
+    {
+     "said": 25,
+     "ev": 22.28649300593251,
+     "answer": "**(1) Would happen because:** The person might drink out of politeness, habit, curiosity, or because they changed their mind.\n\n**(2) Would not happen because:** If they do not want any drink, immediately picking up and drinking the soda is less expected.\n\nThe action is possible under the hypothesis, but not especially likely.\n\nAnswer: 25",
+     "in": 169,
+     "out": 76
+    },
+    {
+     "said": 20,
+     "ev": 18.751206177361265,
+     "answer": "1. **Would happen because:** The person might drink out of politeness, habit, or curiosity, even without wanting a drink.\n\n2. **Would not happen because:** Immediately picking up and drinking the soda suggests the person wanted it, contrary to the hypothesis.\n\n3. The action is possible under the hypothesis, but relatively unlikely.\n\nAnswer: 20",
+     "in": 169,
+     "out": 74
+    },
+    {
+     "said": 15,
+     "ev": 19.444299142481594,
+     "answer": "1. **Would happen because:** Even if the person does not want a drink, they might take a sip out of politeness, curiosity, or habit.\n\n2. **Would not happen because:** Picking up the soda and drinking immediately is more consistent with wanting a drink than with not wanting one.\n\n3. The action is possible under the hypothesis, but relatively unlikely.\n\nAnswer: 15",
+     "in": 169,
+     "out": 81
+    }
+   ]
+  },
+  {
+   "item": "3 focus + shakes head",
+   "expected": "high",
+   "runs": [
+    {
+     "said": 60,
+     "ev": 56.074650628325514,
+     "answer": "1. **Would happen because:** The person might shake their head to decline the soda and continue working without interruption.\n\n2. **Would not happen because:** Wanting to focus does not necessarily mean rejecting a drink; they might accept it or ignore it instead.\n\nAnswer: 60",
+     "in": 166,
+     "out": 59
+    },
+    {
+     "said": 60,
+     "ev": 57.76541919553672,
+     "answer": "1. **Would happen because:** Shaking their head could signal that they don’t want the soda or don’t want to be interrupted while working.\n\n2. **Would not happen because:** The soda may not interfere with their work, so they might simply ignore it or accept it. A head shake could also have an unrelated meaning.\n\n3. The action is plausible under the hypothesis, but far from certain.\n\nAnswer: 60",
+     "in": 166,
+     "out": 89
+    },
+    {
+     "said": 55,
+     "ev": 57.0013287845293,
+     "answer": "1. **Would happen because:** The person might shake their head to decline the soda and avoid interrupting their work.\n\n2. **Would not happen because:** Wanting to focus does not necessarily mean rejecting a drink. The head shake could also have another cause, or they might simply continue typing.\n\nThe action is plausible under the hypothesis, but far from certain.\n\nAnswer: 55",
+     "in": 166,
+     "out": 80
+    }
+   ]
+  },
+  {
+   "item": "4 drink_now + shakes head",
+   "expected": "low",
+   "runs": [
+    {
+     "said": 40,
+     "ev": 39.48179045995268,
+     "answer": "1. **Would happen because:** The person might want a drink but not soda, or might be responding to something unrelated.\n\n2. **Would not happen because:** If they want a drink right now, they might be expected to accept the soda rather than shake their head.\n\nThe head shake is somewhat less likely under the hypothesis, but its meaning is uncertain.\n\nAnswer: 40",
+     "in": 164,
+     "out": 79
+    },
+    {
+     "said": 45,
+     "ev": 42.52388881450559,
+     "answer": "1. **Would happen because:** The person might want a drink but not want soda, or might be signaling that they cannot pause to drink yet.\n\n2. **Would not happen because:** Shaking their head could mean they are declining the offered drink, which is less expected if they want something to drink right now.\n\nThe action is plausible under the hypothesis, but its meaning is ambiguous.\n\nAnswer: 45",
+     "in": 164,
+     "out": 85
+    },
+    {
+     "said": 35,
+     "ev": 38.92688052180503,
+     "answer": "1. **Would happen because:** The person might want a drink but not soda, or might be shaking their head about something unrelated.\n\n2. **Would not happen because:** If the person wants a drink, they might welcome the soda rather than shake their head in apparent refusal.\n\nThe gesture is ambiguous, so the hypothesis does not make it either impossible or highly predictable.\n\nAnswer: 35",
+     "in": 164,
+     "out": 81
+    }
+   ]
+  },
+  {
+   "item": "5 focus_later + moves aside",
+   "expected": "high",
+   "runs": [
+    {
+     "said": 75,
+     "ev": 74.79170627028476,
+     "answer": "**Would happen because:** Moving the can aside keeps it from distracting or obstructing the person, while continuing to type fits their desire to focus on work.\n\n**Would not happen because:** They might leave the can where it is, thank the assistant, or take a sip before returning to work.\n\nThe action is consistent with the hypothesis, but it is not the only plausible response.\n\nAnswer: 75",
+     "in": 174,
+     "out": 83
+    },
+    {
+     "said": 75,
+     "ev": 74.44727676080116,
+     "answer": "1. **Would happen because:** Moving the can aside and continuing to type fits with wanting to focus on work and possibly drink later.\n\n2. **Would not happen because:** The person might instead leave the can where it is, take a sip, or thank the assistant before returning to work.\n\nThe action is consistent with the hypothesis, but it is not the only plausible response.\n\nAnswer: 75",
+     "in": 174,
+     "out": 83
+    },
+    {
+     "said": 75,
+     "ev": 74.69071416706417,
+     "answer": "1. **Would happen:** Moving the can aside and continuing to type fits someone who wants to focus on work and might drink later.\n\n2. **Would not happen:** They could also keep typing without moving the can, take a quick sip, or pause briefly to acknowledge the assistant.\n\nThe action is consistent with the hypothesis, though it is not the only plausible response.\n\nAnswer: 75",
+     "in": 174,
+     "out": 81
+    }
+   ]
+  },
+  {
+   "item": "6 no_drink + returns can",
+   "expected": "high",
+   "runs": [
+    {
+     "said": 65,
+     "ev": 67.08944684578428,
+     "answer": "1. **Would happen because:** If the person does not want a drink, they may return the soda to clear their workspace or put it away.\n\n2. **Would not happen because:** Not wanting a drink does not necessarily mean they would move the can; they might simply ignore it or leave it for later. They might also be returning it for a reason unrelated to their own preference.\n\nThe action is consistent with the hypothesis, but not inevitable.\n\nAnswer: 65",
+     "in": 170,
+     "out": 97
+    },
+    {
+     "said": 70,
+     "ev": 67.14731041615839,
+     "answer": "1. **Would happen because:** If the person does not want a drink, returning the unwanted soda to its original place is a plausible response.\n\n2. **Would not happen because:** They might instead leave it on the desk, set it aside, or thank the assistant without moving it. Not wanting a drink does not necessarily mean they would return the can.\n\nThe action is consistent with the hypothesis, but far from certain.\n\nAnswer: 70",
+     "in": 170,
+     "out": 92
+    },
+    {
+     "said": 65,
+     "ev": 65.14582542360573,
+     "answer": "(1) **Would happen because:** If the person does not want a drink, they might return the soda to avoid having it on their desk.\n\n(2) **Would not happen because:** They could instead leave the can untouched, move it aside, or ask the assistant to take it back.\n\n(3) Returning the can is consistent with the hypothesis, but it is only one of several plausible responses.\n\nAnswer: 65",
+     "in": 170,
+     "out": 89
+    }
+   ]
+  },
+  {
+   "item": "7 no_drink + moves aside",
+   "expected": "high",
+   "runs": [
+    {
+     "said": 70,
+     "ev": 69.73861901576417,
+     "answer": "1. **Would happen because:** If the person does not want a drink, moving the can aside and continuing to type is a natural response.\n\n2. **Would not happen because:** They might instead leave the can untouched, reject it verbally, or move it without implying anything about whether they want a drink.\n\nThe action is consistent with the hypothesis, but it is not inevitable.\n\nAnswer: 70",
+     "in": 167,
+     "out": 83
+    },
+    {
+     "said": 65,
+     "ev": 68.59906179094837,
+     "answer": "(1) **Would happen because:** If the person does not want a drink, moving the can aside and continuing to type is a natural response.\n\n(2) **Would not happen because:** They might instead leave the can where it is, thank the assistant, or explicitly decline it. Moving it aside could also be about clearing space, regardless of whether they want a drink.\n\n(3) The action is consistent with the hypothesis, but it is not inevitable.\n\nAnswer: 65",
+     "in": 167,
+     "out": 100
+    },
+    {
+     "said": 65,
+     "ev": 65.17987319658403,
+     "answer": "(1) **Would happen because:** If the person does not want a drink, they may move the can out of the way and continue working.\n\n(2) **Would not happen because:** Not wanting a drink does not necessarily mean the can is in their way. They might leave it untouched or ask the assistant to take it away.\n\n(3) The action is consistent with the hypothesis, but several other reactions are plausible.\n\nAnswer: 65",
+     "in": 167,
+     "out": 93
+    }
+   ]
+  },
+  {
+   "item": "8 drink_now + moves aside",
+   "expected": "low",
+   "runs": [
+    {
+     "said": 35,
+     "ev": 39.32868614973038,
+     "answer": "1. **Would happen because:** The person might want a drink but choose to finish typing first, or move the can to make room.\n\n2. **Would not happen because:** If they want to drink right now, they might be more likely to open the can and drink it rather than move it aside.\n\nThe action is possible under the hypothesis, though it provides some evidence against an immediate desire to drink.\n\nAnswer: 35",
+     "in": 168,
+     "out": 89
+    },
+    {
+     "said": 35,
+     "ev": 37.29035139319275,
+     "answer": "1. **Would happen because:** The person might want a drink but prefer to finish typing first, or might not want soda specifically.\n\n2. **Would not happen because:** If they want to drink right now, moving the can aside and continuing to type is less expected than drinking it.\n\n3. The action is possible under the hypothesis, but it is not especially expected.\n\nAnswer: 35",
+     "in": 168,
+     "out": 82
+    },
+    {
+     "said": 40,
+     "ev": 39.78560819123037,
+     "answer": "1. **Would happen because:** The person might want a drink but be focused on finishing their typing first, or might not want that particular soda.\n\n2. **Would not happen because:** If they want to drink something right now, they might be expected to open or drink the soda rather than move it aside.\n\nThe action is compatible with the hypothesis, but it is not especially expected under it.\n\nAnswer: 40",
+     "in": 168,
+     "out": 87
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,110 @@
+{
+ "prompt": "You are a robot that helps people at home. Below is the record observed so far.\n\n[Observation record]\n{record}\n\n[Task]\nWhat state of mind did this user have at the moment the robot acted?\n- A state of mind means what the user wants, or why they would act a certain way.\n- Answer in one sentence.",
+ "results": [
+  {
+   "id": 1,
+   "title": "참으려다 마심",
+   "hidden": "마시고 싶지만 탄산을 줄이려고 참으려 했다",
+   "answer": "The user likely did not want the canned drink because they were trying to cut out soda, even though they later drank it.",
+   "error": null
+  },
+  {
+   "id": 2,
+   "title": "못 봤을 뿐",
+   "hidden": "물을 원했지만 놓인 것을 몰랐다",
+   "answer": "The user was focused on playing the game and likely wanted to continue without interruption.",
+   "error": null
+  },
+  {
+   "id": 3,
+   "title": "자리가 문제",
+   "hidden": "커피는 원하지만 노트북 옆에 두면 쏟을까 봐 싫다",
+   "answer": "The user likely wanted to read their email without a cup of coffee crowding the space next to the keyboard.",
+   "error": null
+  },
+  {
+   "id": 4,
+   "title": "짜증의 대상",
+   "hidden": "음료는 반가웠고, 짜증은 문자 때문이었다",
+   "answer": "The user was likely upset by the text message and wanted to deal with it, rather than receive a soda.",
+   "error": null
+  },
+  {
+   "id": 5,
+   "title": "반만 맞음",
+   "hidden": "큰 불은 꺼도 되지만, 아직 자지 않고 책을 읽으려 한다",
+   "answer": "The user likely wanted to relax and read in bed with softer lighting.",
+   "error": null
+  },
+  {
+   "id": 6,
+   "title": "너무 일찍 치움",
+   "hidden": "치우는 건 좋지만, 잠깐 자리를 비운 것이지 다 먹은 게 아니었다",
+   "answer": "The user intended to return and finish the snacks after using the bathroom.",
+   "error": null
+  },
+  {
+   "id": 7,
+   "title": "친구에게 밀어 줌",
+   "hidden": "자기는 물이 있어서 괜찮고, 기침하는 친구가 마시길 바랐다",
+   "answer": "The user likely wanted their coughing friend to have a drink, while they used their own water bottle.",
+   "error": null
+  },
+  {
+   "id": 8,
+   "title": "커튼이 10분 이름",
+   "hidden": "커튼 여는 건 좋지만 10분쯤 일렀다",
+   "answer": "The user likely wanted to keep sleeping and was reluctant to wake up.",
+   "error": null
+  },
+  {
+   "id": 9,
+   "title": "고맙지만 더움",
+   "hidden": "챙겨 준 마음은 고맙지만, 더워서 담요는 필요 없다",
+   "answer": "The user likely wanted to rest or doze off, but was feeling warm rather than needing a blanket.",
+   "error": null
+  },
+  {
+   "id": 10,
+   "title": "약 먹을 물",
+   "hidden": "목이 말라서가 아니라 약을 먹으려고 물이 필요했다",
+   "answer": "The user likely wanted water to help swallow a pill.",
+   "error": null
+  },
+  {
+   "id": 11,
+   "title": "스탠드가 눈부심",
+   "hidden": "켜 준 건 좋지만, 너무 밝고 빛이 눈에 바로 왔다",
+   "answer": "The user likely wanted enough light to read comfortably, but not the bright light shining directly into their eyes.",
+   "error": null
+  },
+  {
+   "id": 12,
+   "title": "이미 물이 있음",
+   "hidden": "물은 원하지만, 마시던 물병이 이미 있었다",
+   "answer": "The user likely wanted to continue taking notes and was not ready for a new water bottle, since they still had water in the one on the desk.",
+   "error": null
+  },
+  {
+   "id": 13,
+   "title": "휴지에 웃음",
+   "hidden": "갑작스러워서 웃겼지만, 고맙고 도움이 됐다",
+   "answer": "The user was emotionally moved by the movie and likely wanted to wipe away their tears.",
+   "error": null
+  },
+  {
+   "id": 14,
+   "title": "룸메이트가 자는 중",
+   "hidden": "평소엔 불 켜기가 좋지만, 지금은 룸메이트가 자고 있다",
+   "answer": "The user wanted to get into bed quietly without disturbing their roommate.",
+   "error": null
+  },
+  {
+   "id": 15,
+   "title": "커피가 씀",
+   "hidden": "커피는 원하지만 설탕이 필요했다",
+   "answer": "The user likely wanted coffee to drink while working, preferably sweetened.",
+   "error": null
+  }
+ ]
+}
