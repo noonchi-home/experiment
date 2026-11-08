@@ -1,0 +1,184 @@
+
+TOTAL calls=1107 errors=0 in=231430 out=5905 cost=$0.261 time=324s
+
+[1] 참으려다 마심 | hidden: 마시고 싶지만 탄산을 줄이려고 참으려 했다
+  (ga) cands=8 regens=0 score_errors=0
+     ev#1  23.8%  The user wants to enjoy the program without interruptions.
+     ev#2  17.9%  The user may feel uncomfortable with the robot making assumptions about their preferences.
+     ev#3  17.0%  The user may prefer a different beverage or no drink at all.
+     said#1  23.5%  The user wants to enjoy the program without interruptions.
+  (ga_warn) cands=8 regens=0 score_errors=0
+     ev#1  20.2%  The user may prefer a different beverage or no drink at all.
+     ev#2  19.2%  The user wants to enjoy the program without interruptions.
+     ev#3  15.1%  The user wants to relax while watching TV.
+     said#1  22.8%  The user wants to enjoy the program without interruptions.
+
+[2] 못 봤을 뿐 | hidden: 물을 원했지만 놓인 것을 몰랐다
+  (ga) cands=7 regens=0 score_errors=0
+     ev#1  22.3%  The user may be seeking entertainment or relaxation.
+     ev#2  19.8%  The user may want to stay focused without interruption.
+     ev#3  19.4%  The user may want water available in case they become thirsty.
+     said#1  23.4%  The user may want to stay focused without interruption.
+  (ga_warn) cands=7 regens=0 score_errors=0
+     ev#1  18.8%  The user may want to win or make progress in the game.
+     ev#2  16.3%  The user may be seeking entertainment or relaxation.
+     ev#3  16.0%  The user may want water available in case they become thirsty.
+     said#1  21.3%  The user may be seeking entertainment or relaxation.
+
+[3] 자리가 문제 | hidden: 커피는 원하지만 노트북 옆에 두면 쏟을까 봐 싫다
+  (ga) cands=9 regens=0 score_errors=0
+     ev#1  19.1%  The user may be concerned about coffee spilling onto the keyboard.
+     ev#2  17.1%  The user may prefer the coffee to be placed farther from the laptop.
+     ev#3  16.2%  The user may want coffee while working.
+     said#1  18.5%  The user may be concerned about coffee spilling onto the keyboard.
+  (ga_warn) cands=9 regens=0 score_errors=0
+     ev#1  16.2%  The user may be concerned about coffee spilling onto the keyboard.
+     ev#2  16.1%  The user may prefer the coffee to be placed farther from the laptop.
+     ev#3  13.3%  The user may appreciate the robot anticipating their routine.
+     said#1  15.2%  The user may prefer the coffee to be placed farther from the laptop.
+
+[4] 짜증의 대상 | hidden: 음료는 반가웠고, 짜증은 문자 때문이었다
+  (ga) cands=8 regens=0 score_errors=0
+     ev#1  18.6%  The user may feel worried about the person who sent the message.
+     ev#2  15.6%  The user may feel annoyed by the interruption.
+     ev#3  15.3%  The user may want some time alone to process upsetting news.
+     said#1  19.5%  The user may feel worried about the person who sent the message.
+  (ga_warn) cands=8 regens=0 score_errors=0
+     ev#1  17.1%  The user may feel worried about the person who sent the message.
+     ev#2  15.7%  The user may want some time alone to process upsetting news.
+     ev#3  15.7%  The user may want to resolve a problem raised in the message.
+     said#1  20.8%  The user may want to resolve a problem raised in the message.
+
+[5] 반만 맞음 | hidden: 큰 불은 꺼도 되지만, 아직 자지 않고 책을 읽으려 한다
+  (ga) cands=7 regens=0 score_errors=0
+     ev#1  17.7%  The user may want to read in bed with enough light.
+     ev#2  16.0%  The user may want a change of activity without ending their day.
+     ev#3  15.9%  The user may want to relax after working.
+     said#1  18.0%  The user may want to relax after working.
+  (ga_warn) cands=7 regens=0 score_errors=0
+     ev#1  18.9%  The user may want to read in bed with enough light.
+     ev#2  17.3%  The user may want a change of activity without ending their day.
+     ev#3  16.2%  The user may want to relax after working.
+     said#1  19.8%  The user may want to read in bed with enough light.
+
+[6] 너무 일찍 치움 | hidden: 치우는 건 좋지만, 잠깐 자리를 비운 것이지 다 먹은 게 아니었다
+  (ga) cands=9 regens=0 score_errors=0
+     ev#1  24.6%  The user may intend to return and finish the snacks.
+     ev#2  23.2%  The user may be taking only a brief bathroom break and expect the bowl to stay where it is.
+     ev#3  23.1%  The user may want the remaining snacks saved for later.
+     said#1  25.1%  The user may intend to return and finish the snacks.
+  (ga_warn) cands=9 regens=0 score_errors=0
+     ev#1  21.2%  The user may intend to return and finish the snacks.
+     ev#2  19.6%  The user may be taking only a brief bathroom break and expect the bowl to stay where it is.
+     ev#3  19.5%  The user may want the remaining snacks saved for later.
+     said#1  24.4%  The user may intend to return and finish the snacks.
+
+[7] 친구에게 밀어 줌 | hidden: 자기는 물이 있어서 괜찮고, 기침하는 친구가 마시길 바랐다
+  (ga) cands=8 regens=0 score_errors=0
+     ev#1  17.9%  The user may wish the robot had offered the drink to their friend instead.
+     ev#2  16.4%  The user may be concerned that their friend is unwell or needs water.
+     ev#3  15.6%  The user may prefer to use the water bottle already in front of them.
+     said#1  19.0%  The user may wish the robot had offered the drink to their friend instead.
+  (ga_warn) cands=8 regens=0 score_errors=0
+     ev#1  19.5%  The user may wish the robot had offered the drink to their friend instead.
+     ev#2  15.5%  The user may be concerned that their friend is unwell or needs water.
+     ev#3  15.2%  The user may prefer to use the water bottle already in front of them.
+     said#1  19.8%  The user may wish the robot had offered the drink to their friend instead.
+
+[8] 커튼이 10분 이름 | hidden: 커튼 여는 건 좋지만 10분쯤 일렀다
+  (ga) cands=8 regens=0 score_errors=0
+     ev#1  26.8%  The user may be reluctant to get out of bed because they feel tired.
+     ev#2  25.1%  The user may want to continue sleeping.
+     ev#3  19.6%  The user may be uncomfortable and seeking relief.
+     said#1  27.9%  The user may be reluctant to get out of bed because they feel tired.
+  (ga_warn) cands=8 regens=0 score_errors=0
+     ev#1  25.2%  The user may be reluctant to get out of bed because they feel tired.
+     ev#2  23.2%  The user may want to continue sleeping.
+     ev#3  14.6%  The user may be uncomfortable and seeking relief.
+     said#1  24.1%  The user may be reluctant to get out of bed because they feel tired.
+
+[9] 고맙지만 더움 | hidden: 챙겨 준 마음은 고맙지만, 더워서 담요는 필요 없다
+  (ga) cands=6 regens=0 score_errors=0
+     ev#1  34.4%  The user may be tired but intend to continue watching TV later.
+     ev#2  25.7%  The user may welcome help with staying comfortable.
+     ev#3  22.3%  The user may prefer not to be covered or touched.
+     said#1  35.0%  The user may be tired but intend to continue watching TV later.
+  (ga_warn) cands=6 regens=0 score_errors=0
+     ev#1  25.3%  The user may be tired but intend to continue watching TV later.
+     ev#2  24.1%  The user may welcome help with staying comfortable.
+     ev#3  18.7%  The user may prefer not to be covered or touched.
+     said#1  27.1%  The user may be tired but intend to continue watching TV later.
+
+[10] 약 먹을 물 | hidden: 목이 말라서가 아니라 약을 먹으려고 물이 필요했다
+  (ga) cands=8 regens=0 score_errors=0
+     ev#1  17.5%  The user may want a drink of water.
+     ev#2  15.8%  The user may want to continue working at the desk without interruption.
+     ev#3  14.2%  The user may feel curious about why the robot brought water.
+     said#1  17.9%  The user may want a drink of water.
+  (ga_warn) cands=8 regens=0 score_errors=0
+     ev#1  15.7%  The user may want a drink of water.
+     ev#2  15.4%  The user may appreciate being cared for.
+     ev#3  14.9%  The user may want to continue working at the desk without interruption.
+     said#1  17.8%  The user may want a drink of water.
+
+[11] 스탠드가 눈부심 | hidden: 켜 준 건 좋지만, 너무 밝고 빛이 눈에 바로 왔다
+  (ga) cands=7 regens=0 score_errors=0
+     ev#1  21.4%  The user may want to relax by looking through the book.
+     ev#2  19.6%  The user may want to study or learn something.
+     ev#3  18.9%  The user may want to read the book.
+     said#1  21.0%  The user may want to read the book.
+  (ga_warn) cands=7 regens=0 score_errors=0
+     ev#1  18.3%  The user may want to read the book.
+     ev#2  17.9%  The user may want to relax by looking through the book.
+     ev#3  16.4%  The user may want to study or learn something.
+     said#1  18.6%  The user may want to read the book.
+
+[12] 이미 물이 있음 | hidden: 물은 원하지만, 마시던 물병이 이미 있었다
+  (ga) cands=8 regens=0 score_errors=0
+     ev#1  15.6%  The user may prefer to finish the water already on the desk before opening another bottle.
+     ev#2  14.2%  The user may want to keep the desk clear of unnecessary items.
+     ev#3  14.1%  The user may be concerned about wasting water or creating extra plastic waste.
+     said#1  16.8%  The user may prefer to finish the water already on the desk before opening another bottle.
+  (ga_warn) cands=8 regens=0 score_errors=0
+     ev#1  16.7%  The user may prefer to finish the water already on the desk before opening another bottle.
+     ev#2  15.0%  The user may be concerned about wasting water or creating extra plastic waste.
+     ev#3  14.0%  The user may wonder why the robot brought another bottle when one is already available.
+     said#1  15.5%  The user may prefer to finish the water already on the desk before opening another bottle.
+
+[13] 휴지에 웃음 | hidden: 갑작스러워서 웃겼지만, 고맙고 도움이 됐다
+  (ga) cands=10 regens=0 score_errors=0
+     ev#1  15.5%  The user may feel that the robot has mistaken watery eyes for sadness.
+     ev#2  14.8%  The user may appreciate the robot noticing and helping.
+     ev#3  12.8%  The user may want to experience the emotional scene fully.
+     said#1  16.8%  The user may appreciate the robot noticing and helping.
+  (ga_warn) cands=10 regens=0 score_errors=0
+     ev#1  16.7%  The user may feel that the robot has mistaken watery eyes for sadness.
+     ev#2  13.6%  The user may want to experience the emotional scene fully.
+     ev#3  12.6%  The user may appreciate the robot noticing and helping.
+     said#1  17.3%  The user may feel that the robot has mistaken watery eyes for sadness.
+
+[14] 룸메이트가 자는 중 | hidden: 평소엔 불 켜기가 좋지만, 지금은 룸메이트가 자고 있다
+  (ga) cands=10 regens=0 score_errors=0
+     ev#1  16.2%  The user may want to avoid waking or disturbing their roommate.
+     ev#2  15.6%  The user may want the room to remain dark so their roommate can sleep.
+     ev#3  14.8%  The user may feel annoyed that the robot did not account for the roommate.
+     said#1  15.7%  The user may want the room to remain dark so their roommate can sleep.
+  (ga_warn) cands=10 regens=0 score_errors=0
+     ev#1  17.1%  The user may want the room to remain dark so their roommate can sleep.
+     ev#2  15.9%  The user may want to avoid waking or disturbing their roommate.
+     ev#3  13.5%  The user may feel annoyed that the robot did not account for the roommate.
+     said#1  17.7%  The user may want to avoid waking or disturbing their roommate.
+
+[15] 커피가 씀 | hidden: 커피는 원하지만 설탕이 필요했다
+  (ga) cands=8 regens=0 score_errors=0
+     ev#1  24.5%  The user dislikes black coffee or avoids caffeine.
+     ev#2  24.1%  The user wants coffee to help them wake up and focus.
+     ev#3  22.1%  The user prefers to decide for themselves when to ask for assistance.
+     said#1  25.9%  The user wants coffee to help them wake up and focus.
+  (ga_warn) cands=8 regens=0 score_errors=0
+     ev#1  29.8%  The user dislikes black coffee or avoids caffeine.
+     ev#2  18.0%  The user appreciates the robot anticipating their needs.
+     ev#3  15.9%  The user wants coffee to help them wake up and focus.
+     said#1  31.0%  The user dislikes black coffee or avoids caffeine.
+
+raw saved: ip_run_raw.json

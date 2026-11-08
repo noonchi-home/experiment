@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>역계획 시험 글 검사본</title>
+<style>
+  :root { --bg:#ffffff; --fg:#1d1d1f; --muted:#5f6368; --box:#f3f4f6; --line:#d9dce1; --accent:#1a5fb4; --warn:#9a3412; --new:#166534; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#16181c; --fg:#e8eaed; --muted:#a0a4ab; --box:#22252b; --line:#3a3e45; --accent:#7fb0ff; --warn:#fdba74; --new:#86efac; }
+  }
+  body { background:var(--bg); color:var(--fg); font-family:"Malgun Gothic","Apple SD Gothic Neo",sans-serif; line-height:1.65; margin:0; padding:24px 16px 80px; }
+  main { max-width:860px; margin:0 auto; }
+  h1 { font-size:1.6rem; margin:0 0 8px; }
+  h2 { font-size:1.25rem; margin:40px 0 10px; padding-top:12px; border-top:2px solid var(--line); }
+  h3 { font-size:1.05rem; margin:28px 0 6px; color:var(--accent); }
+  p, li { margin:4px 0; }
+  .lead { font-size:1.05rem; }
+  pre { background:var(--box); border:1px solid var(--line); border-radius:8px; padding:12px 14px; white-space:pre-wrap; word-break:break-word; font-family:"Consolas","D2Coding","Malgun Gothic",monospace; font-size:0.92rem; margin:6px 0 10px; }
+  details { margin:0 0 10px; }
+  details summary { cursor:pointer; color:var(--muted); font-size:0.92rem; }
+  details pre { background:transparent; border-style:dashed; }
+  table { border-collapse:collapse; width:100%; margin:8px 0 12px; font-size:0.95rem; }
+  th, td { border:1px solid var(--line); padding:6px 8px; text-align:left; vertical-align:top; }
+  th { background:var(--box); }
+  .hidden { border-left:4px solid var(--warn); padding:6px 10px; margin:6px 0 4px; background:var(--box); border-radius:0 6px 6px 0; }
+  .hidden b { color:var(--warn); }
+  .changed { color:var(--new); font-weight:bold; }
+  .note { color:var(--muted); font-size:0.92rem; }
+</style>
+</head>
+<body>
+<main>
+
+<h1>역계획 시험 글 검사본 (2판)</h1>
+<p class="note">2026-11-06 · 장면 시험은 아직 돌리지 않았음</p>
+
+<p class="lead"><b>회색 상자 안의 영어 글이 AI(OpenAI gpt-6.1-terra)에게 그대로 갑니다.</b> <code>{…}</code> 자리에만 장면 내용이 들어갑니다. 상자 아래 «한국어로 보기»는 확인용 번역이고 AI에게 보내지 않습니다. 주황색 줄의 «숨긴 정답»도 AI에게 보내지 않습니다.</p>
+
+<p><span class="changed">1판에서 바뀐 것</span></p>
+<ul>
+  <li>AI에게 보내는 글을 모두 영어로 바꿨습니다.</li>
+  <li>점수 방식 두 가지(가, 가 + 경고)를 같은 장면에 둘 다 돌려 비교합니다.</li>
+  <li>다시 만들기 기준: 가는 30점, 가 + 경고는 40점.</li>
+</ul>
+
+<p>검사해 주실 것은 셋입니다.</p>
+<ol>
+  <li>지시문에 답을 흘리는 말이 섞이지 않았는가</li>
+  <li>장면 기록에 속마음을 드러내는 말이 섞이지 않았는가. 기록에는 눈에 보이는 것과 들리는 말만 있어야 합니다</li>
+  <li>숨긴 정답을 기록만 보고 사람이 추측할 수 있는가</li>
+</ol>
+
+<h2>1. 설정</h2>
+<table>
+  <tr><th>항목</th><th>값</th></tr>
+  <tr><td>시험하는 조건</td><td>다섯 조건 중 «기록 + 맥락 가 + 역계획» 하나만. 맥락 가 = 로봇이 한 일과 그 이유가 된 규칙 한 줄</td></tr>
+  <tr><td>모델</td><td>OpenAI gpt-6.1-terra, 생각 끔. 후보 만들기와 점수 매기기 모두 같은 모델</td></tr>
+  <tr><td>언어</td><td>AI에게 보내는 글은 모두 영어</td></tr>
+  <tr><td>점수 방식 (둘 다 돌림)</td><td><b>가:</b> 0~100 숫자 하나로 답하게 하고, 숫자들의 토큰 확률로 가중 평균<br><b>가 + 경고:</b> 가와 같고, 점수 지시문 맨 앞에 경고 한 줄을 넣음<br>두 방식 모두 AI가 말한 숫자도 함께 저장</td></tr>
+  <tr><td>점수를 매기는 줄</td><td>로봇이 한 일 뒤의 <b>«User» 줄만</b>. «Robot», «Friend», «Roommate» 줄은 기록으로 보여 주기만 하고 점수는 매기지 않음</td></tr>
+  <tr><td>후보 만들기</td><td>장면마다 1번 만들고, 두 방식이 같은 후보로 시작</td></tr>
+  <tr><td>후보 다시 만들기</td><td>어떤 줄에서 가장 높은 후보 점수가 기준(가 30점, 가 + 경고 40점) 미만이면, 그 줄까지 보여 주고 새 후보를 최대 10개 <b>더함</b>(기존 후보는 남김). 최대 3번. 새 후보는 로봇이 한 일 바로 뒤 첫 줄부터 채점. 방식마다 따로 함</td></tr>
+  <tr><td>최종 답</td><td>후보마다 줄 점수(÷100)를 모두 곱하고, 후보 전체 합이 100%가 되게 나눔. 상위 3개를 보고</td></tr>
+  <tr><td>처음 가능성</td><td>모든 후보 같음 (그래서 계산에서 사실상 빠짐)</td></tr>
+  <tr><td>반복</td><td>장면마다 1번</td></tr>
+  <tr><td>예상 호출·비용</td><td>사용자 줄 68개 × 후보 10개 × 방식 2개 = 점수 호출 약 1,360번 + 후보 만들기 15번 (+다시 만들기). 보통 1달러 안팎, 최악 4달러 아래 (돌린 뒤 실제 값 확인)</td></tr>
+</table>
+
+<h2>2. AI에게 보내는 지시문</h2>
+
+<h3>지시문 1 — 후보 만들기 (로봇이 일하기 직전까지의 기록만 보여 줌)</h3>
+<pre>You are a robot that helps people at home. Below is the record observed so far.
+
+[Observation record]
+{lines before the robot's action}
+
+[What the robot is about to do, and why]
+{robot line}
+Rule behind this action: {rule}
+
+[Task]
+List candidate states of mind this user might have at the moment the robot does this.
+- A state of mind means what the user wants, or why they would act a certain way. Write states of mind, not actions.
+- Give up to 10 candidates that do not overlap in meaning.
+- Write each candidate as one sentence.
+- Output only a single JSON array and nothing else. Example: ["…", "…"]</pre>
+<details><summary>한국어로 보기 (AI에게 안 감)</summary>
+<pre>너는 집에서 사람을 돕는 로봇이다. 아래는 지금까지 관찰한 기록이다.
+
+[관찰 기록]
+{로봇이 일하기 전의 줄들}
+
+[로봇이 할 일과 그 이유]
+{로봇 줄}
+이유가 된 규칙: {규칙}
+
+[할 일]
+로봇이 이 일을 했을 때, 이 사용자가 그 순간 가지고 있을 수 있는 마음의 후보를 만들어라.
+- 마음이란 사용자가 무엇을 바라는지, 왜 그렇게 하는지를 말한다. 행동을 적지 말고 마음을 적는다.
+- 서로 뜻이 겹치지 않게 최대 10개를 만든다.
+- 후보 하나는 한 문장으로 쓴다.
+- 다른 말 없이 JSON 배열 하나만 출력한다.</pre></details>
+
+<h3>지시문 2 — 점수 받기 (후보 하나 × 사용자 줄 하나마다 1번, 방식마다 따로)</h3>
+<p><b>가:</b></p>
+<pre>You are a robot that helps people at home. Below is the record observed so far.
+
+[Observation record]
+{lines before the robot's action}
+{robot line}
+{lines after the robot's action, up to just before the current line}
+
+[Why the robot did this]
+Rule behind this action: {rule}
+
+[Assume this is the user's state of mind]
+{one candidate}
+
+[Next observation]
+{current line}
+
+Assuming this state of mind, how likely is the next observation?
+0 means it would never happen, and 100 means it would certainly happen.
+Output only a single integer from 0 to 100.</pre>
+<p><b>가 + 경고:</b> 위 글과 똑같고, 맨 앞에 아래 한 줄만 더 붙습니다.</p>
+<pre>IMPORTANT: You have been consistently overconfident in past estimates.</pre>
+<details><summary>한국어로 보기 (AI에게 안 감)</summary>
+<pre>(가 + 경고만) 중요: 너는 지금까지 가능성을 매길 때 계속 지나치게 자신만만했다.
+
+너는 집에서 사람을 돕는 로봇이다. 아래는 지금까지 관찰한 기록이다.
+
+[관찰 기록]
+{로봇이 일하기 전의 줄들}
+{로봇 줄}
+{로봇이 일한 뒤, 지금 줄 바로 앞까지의 줄들}
+
+[로봇이 한 일의 이유]
+이유가 된 규칙: {규칙}
+
+[사용자의 마음이라고 가정한다]
+{후보 하나}
+
+[다음에 관찰된 것]
+{지금 줄}
+
+이 마음이라고 가정할 때, 다음에 관찰된 것이 나올 가능성은 얼마인가?
+0은 절대 나오지 않음, 100은 반드시 나옴을 뜻한다.
+0부터 100 사이의 정수 하나만 출력한다.</pre></details>
+
+<h3>지시문 3 — 후보 다시 만들기 (가장 높은 점수가 기준 미만일 때)</h3>
+<pre>You are a robot that helps people at home. Below is the record observed so far.
+
+[Observation record]
+{lines before the robot's action}
+{robot line}
+{lines after the robot's action, up to and including the current line}
+
+[Why the robot did this]
+Rule behind this action: {rule}
+
+[Candidate states of mind already considered]
+{1. candidate
+2. candidate
+…}
+
+[Task]
+The candidates already considered do not explain the last line well.
+Propose new candidate states of mind that can explain the entire record so far.
+- Give up to 10 new candidates that do not overlap in meaning with the ones already considered.
+- A state of mind means what the user wants, or why they would act a certain way. Write states of mind, not actions.
+- Write each candidate as one sentence.
+- Output only a single JSON array and nothing else.</pre>
+<details><summary>한국어로 보기 (AI에게 안 감)</summary>
+<pre>너는 집에서 사람을 돕는 로봇이다. 아래는 지금까지 관찰한 기록이다.
+
+[관찰 기록]
+{로봇이 일하기 전의 줄들}
+{로봇 줄}
+{로봇이 일한 뒤, 지금 줄까지의 줄들}
+
+[로봇이 한 일의 이유]
+이유가 된 규칙: {규칙}
+
+[이미 생각한 마음 후보]
+{1. 후보 / 2. 후보 / …}
+
+[할 일]
+이미 생각한 후보로는 마지막 줄을 잘 설명하지 못했다.
+지금까지의 기록 전체를 설명할 수 있는 새 마음 후보를 만들어라.
+- 이미 생각한 후보와 뜻이 겹치지 않게 최대 10개를 만든다.
+- 마음이란 사용자가 무엇을 바라는지, 왜 그렇게 하는지를 말한다. 행동을 적지 말고 마음을 적는다.
+- 후보 하나는 한 문장으로 쓴다.
+- 다른 말 없이 JSON 배열 하나만 출력한다.</pre></details>
+
+<h3>예시 — 장면 1, 두 번째 사용자 줄을 «가 + 경고»로 채점할 때</h3>
+<pre>IMPORTANT: You have been consistently overconfident in past estimates.
+You are a robot that helps people at home. Below is the record observed so far.
+
+[Observation record]
+0s User: Sits on the sofa and turns on the TV
+4s User: Watches TV
+12s Robot: Places a canned drink on the side table next to the sofa
+13s User says: "Ah, it's okay... I'm cutting out soda these days."
+
+[Why the robot did this]
+Rule behind this action: When the user watches TV, bring a canned drink.
+
+[Assume this is the user's state of mind]
+{one candidate made by the AI}
+
+[Next observation]
+14s User: Waves a hand dismissively
+
+Assuming this state of mind, how likely is the next observation?
+0 means it would never happen, and 100 means it would certainly happen.
+Output only a single integer from 0 to 100.</pre>
+
+<h2>3. 장면 15개</h2>
+<p class="note">«User says»는 사용자가 소리 내어 한 말입니다. «(end of video)»는 기록이 거기서 끝난다는 표시입니다.</p>
+
+<h3>장면 1. 참으려다 마심</h3>
+<pre>Rule: When the user watches TV, bring a canned drink.
+
+0s User: Sits on the sofa and turns on the TV
+4s User: Watches TV
+12s Robot: Places a canned drink on the side table next to the sofa
+13s User says: "Ah, it's okay... I'm cutting out soda these days."
+14s User: Waves a hand dismissively
+15-40s User: Watches TV
+40s Robot: Leaves the room
+45s User: Opens the can and drinks
+46-60s User: Watches TV holding the can (end of video)</pre>
+<details><summary>한국어로 보기</summary><pre>규칙: TV를 보면 캔 음료를 가져다준다
+0초 사용자: 소파에 앉아 TV를 켬 / 4초 TV를 봄 / 12초 로봇: 소파 옆 탁자에 캔 음료를 놓음 / 13초 사용자 말: «아 괜찮아… 나 요즘 탄산 끊는 중이야» / 14초 손사래를 침 / 15~40초 TV를 봄 / 40초 로봇: 방을 나감 / 45초 캔을 따서 마심 / 46~60초 캔을 든 채 TV를 봄 (영상 끝)</pre></details>
+<div class="hidden"><b>숨긴 정답:</b> 마시고 싶지만 탄산을 줄이려고 참으려 했다 · <b>함정:</b> 말은 거절인데 결국 마심</div>
+
+<h3>장면 2. 못 봤을 뿐</h3>
+<pre>Rule: When the user plays games on the laptop, bring water.
+
+0s User: Wears headphones and plays a game on the laptop
+5s User: Presses keys rapidly while looking at the screen
+10s Robot: Places a cup of water on the desk corner behind the user's left side
+11-70s User: Keeps playing, looking only at the screen. Does not look toward the cup
+72s User: Takes hands off the keyboard
+73s User: Feels around the right side of the desk with a hand
+75s User: Turns around, looks behind to the left, picks up the cup and drinks
+78-90s User: Puts the cup on the right side and resumes playing (end of video)</pre>
+<details><summary>한국어로 보기</summary><pre>규칙: 노트북으로 게임을 하면 물을 가져다준다
+0초 헤드폰을 끼고 노트북으로 게임을 함 / 5초 화면을 보며 키보드를 빠르게 누름 / 10초 로봇: 사용자 왼쪽 뒤편 책상 모서리에 물컵을 놓음 / 11~70초 화면만 보며 게임. 물컵 쪽을 보지 않음 / 72초 키보드에서 손을 뗌 / 73초 오른쪽 책상 위를 손으로 더듬음 / 75초 몸을 돌려 왼쪽 뒤편을 보고 물컵을 집어 마심 / 78~90초 물컵을 오른쪽에 두고 다시 게임 (영상 끝)</pre></details>
+<div class="hidden"><b>숨긴 정답:</b> 물을 원했지만 놓인 것을 몰랐다 · <b>함정:</b> 1분 동안 반응이 없어 거절처럼 보임</div>
+
+<h3>장면 3. 자리가 문제</h3>
+<pre>Rule: In the morning, when the user turns on the laptop, bring coffee.
+
+0s User: Sits at the desk and turns on the laptop
+3s User: Reads email
+7s Robot: Places an uncovered cup of coffee right next to the keyboard, on the right
+8s User: Pushes the laptop slightly to the left
+9s User: Moves the coffee cup onto a coaster at the far right edge of the desk
+10s User: Takes a sip of coffee
+12-30s User: Reads email (end of video)</pre>
+<details><summary>한국어로 보기</summary><pre>규칙: 아침에 노트북을 켜면 커피를 가져다준다
+0초 책상에 앉아 노트북을 켬 / 3초 메일을 읽음 / 7초 로봇: 키보드 바로 오른쪽에 뚜껑 없는 커피잔을 놓음 / 8초 노트북을 왼쪽으로 조금 밀어냄 / 9초 커피잔을 책상 오른쪽 끝 컵받침 위로 옮김 / 10초 한 모금 마심 / 12~30초 메일을 읽음 (영상 끝)</pre></details>
+<div class="hidden"><b>숨긴 정답:</b> 커피는 원하지만 노트북 옆에 두면 쏟을까 봐 싫다 · <b>함정:</b> 바로 옮겨서 거절처럼 보임</div>
+
+<h3>장면 4. 짜증의 대상</h3>
+<pre>Rule: In the evening, when the user sits at the desk, bring a soda.
+
+0s User: Sits at the desk looking at the phone
+4s User: The phone buzzes; reads a text message and frowns
+6s Robot: Places a can of soda next to the user
+7s User: Sighs
+7s User says: "Ugh, seriously... why now..."
+8-19s User: Quickly types a reply on the phone
+20s User: Puts the phone down, opens the can and drinks
+21-30s User: Leans back in the chair holding the can (end of video)</pre>
+<details><summary>한국어로 보기</summary><pre>규칙: 저녁에 책상에 앉으면 탄산음료를 가져다준다
+0초 책상에 앉아 휴대폰을 봄 / 4초 휴대폰이 울리자 문자를 읽고 얼굴을 찡그림 / 6초 로봇: 사용자 옆에 캔 음료를 놓음 / 7초 한숨을 쉼 / 7초 사용자 말: «아 진짜… 왜 지금…» / 8~19초 휴대폰으로 답장을 빠르게 씀 / 20초 휴대폰을 내려놓고 캔을 따서 마심 / 21~30초 캔을 든 채 의자에 기대 앉음 (영상 끝)</pre></details>
+<div class="hidden"><b>숨긴 정답:</b> 음료는 반가웠고, 짜증은 문자 때문이었다 · <b>함정:</b> «왜 지금…»이 로봇에게 한 말처럼 들림</div>
+
+<h3>장면 5. 반만 맞음</h3>
+<pre>Rule: At night, when the user closes the laptop, turn off the ceiling light.
+
+0s User: Works on the laptop at the desk
+10s User: Closes the laptop
+12s User: Takes a book from the bookshelf and walks to the bed
+14s Robot: Turns off the ceiling light
+15s User: Pauses briefly in front of the bed
+16s User: Turns on the bedside lamp
+18-40s User: Reads the book leaning against the headboard. Does not turn the ceiling light back on (end of video)</pre>
+<details><summary>한국어로 보기</summary><pre>규칙: 밤에 노트북을 닫으면 방 천장 불을 끈다
+0초 책상에서 노트북으로 작업 / 10초 노트북을 닫음 / 12초 책장에서 책을 꺼내 침대로 감 / 14초 로봇: 천장 불을 끔 / 15초 침대 앞에서 잠깐 멈춤 / 16초 침대 옆 스탠드를 켬 / 18~40초 침대에 기대 책을 읽음. 천장 불은 다시 켜지 않음 (영상 끝)</pre></details>
+<div class="hidden"><b>숨긴 정답:</b> 큰 불은 꺼도 되지만, 아직 자지 않고 책을 읽으려 한다 · <b>함정:</b> 스탠드를 켠 것이 싫다는 뜻인지 괜찮다는 뜻인지 애매함</div>
+
+<h3>장면 6. 너무 일찍 치움</h3>
+<pre>Rule: When the user leaves the table, put the bowl in the dishwasher.
+
+0s User: Eats snacks from a bowl at the dining table
+20s User: Leaves the bowl with snacks still in it and goes to the bathroom
+25s Robot: Puts the bowl, with snacks still in it, into the dishwasher
+60s User: Comes back and looks around the table
+63s User: Opens the dishwasher and takes out the bowl
+64s User says: "Oh, I was still eating that."
+66-90s User: Sits back down and eats the remaining snacks (end of video)</pre>
+<details><summary>한국어로 보기</summary><pre>규칙: 식탁을 떠나면 그릇을 식기세척기에 넣는다
+0초 식탁에서 그릇의 과자를 먹음 / 20초 과자가 남은 그릇을 두고 화장실로 감 / 25초 로봇: 과자가 남은 그릇을 식기세척기에 넣음 / 60초 돌아와 식탁 위를 두리번거림 / 63초 식기세척기를 열어 그릇을 꺼냄 / 64초 사용자 말: «아 나 아직 먹고 있었는데» / 66~90초 다시 앉아 남은 과자를 먹음 (영상 끝)</pre></details>
+<div class="hidden"><b>숨긴 정답:</b> 치우는 건 좋지만, 잠깐 자리를 비운 것이지 다 먹은 게 아니었다 · <b>함정:</b> 치우기 자체가 싫다는 말처럼 들림</div>
+
+<h3>장면 7. 친구에게 밀어 줌</h3>
+<pre>Rule: When the user works on the laptop, bring a canned drink.
+
+0s User: Sits side by side with a friend, each working on a laptop. There is a water bottle in front of the user
+5s Friend: Touches their throat and coughs
+8s Robot: Places a canned drink next to the user
+9s User: Slides the can toward the friend
+9s User says: "You drink it."
+11s Friend: Opens the can and drinks
+12s User: Drinks water from their own bottle
+13-30s User: Works on the laptop (end of video)</pre>
+<details><summary>한국어로 보기</summary><pre>규칙: 노트북 작업을 하면 캔 음료를 가져다준다
+0초 친구와 나란히 앉아 각자 노트북 작업. 사용자 앞에 물병이 있음 / 5초 친구: 목을 만지며 기침 / 8초 로봇: 사용자 옆에 캔 음료를 놓음 / 9초 캔을 친구 쪽으로 밀어 줌 / 9초 사용자 말: «너 마셔» / 11초 친구: 캔을 따서 마심 / 12초 자기 물병의 물을 마심 / 13~30초 노트북 작업 (영상 끝)</pre></details>
+<div class="hidden"><b>숨긴 정답:</b> 자기는 물이 있어서 괜찮고, 기침하는 친구가 마시길 바랐다 · <b>함정:</b> 밀어낸 것이 거절처럼 보임</div>
+
+<h3>장면 8. 커튼이 10분 이름</h3>
+<pre>Rule: In the morning, when the user tosses and turns in bed, open the curtains.
+
+0s User: Lies in bed under the blanket
+30s User: Tosses and turns
+32s Robot: Opens the curtains
+33s User: Pulls the blanket over their head
+34s User says: "Ugh... five more minutes."
+35-599s User: Lies under the blanket
+600s User: Throws off the blanket and sits up
+605s User: Looks out the window and stretches
+606-630s User: Makes the bed, leaving the curtains open (end of video)</pre>
+<details><summary>한국어로 보기</summary><pre>규칙: 아침에 침대에서 뒤척이면 커튼을 연다
+0초 침대에서 이불을 덮고 누워 있음 / 30초 몸을 뒤척임 / 32초 로봇: 커튼을 엶 / 33초 이불을 머리끝까지 덮음 / 34초 사용자 말: «으… 5분만» / 35~599초 이불을 덮은 채 누워 있음 / 600초 이불을 걷고 일어나 앉음 / 605초 창밖을 보며 기지개 / 606~630초 커튼을 연 채로 침대 정리 (영상 끝)</pre></details>
+<div class="hidden"><b>숨긴 정답:</b> 커튼 여는 건 좋지만 10분쯤 일렀다 · <b>함정:</b> 이불을 뒤집어써서 싫어하는 것처럼 보임</div>
+
+<h3>장면 9. 고맙지만 더움</h3>
+<pre>Rule: When the user falls asleep on the sofa, cover them with a blanket.
+
+0s User: Wearing a short-sleeved shirt, watches TV on the sofa
+20s User: Closes their eyes
+30s User: Head drooping, not moving
+35s Robot: Covers the user with a blanket
+40s User: Opens their eyes
+41s User says: "Oh... thanks."
+43s User: Takes off the blanket, folds it, and puts it aside
+45s User: Fans their face with a hand
+50s User: Gets up and opens the window
+52-70s User: Returns to the sofa and watches TV (end of video)</pre>
+<details><summary>한국어로 보기</summary><pre>규칙: 소파에서 잠들면 담요를 덮어 준다
+0초 반팔 차림으로 소파에서 TV를 봄 / 20초 눈을 감음 / 30초 고개를 떨군 채 움직이지 않음 / 35초 로봇: 담요를 덮어 줌 / 40초 눈을 뜸 / 41초 사용자 말: «오… 고마워» / 43초 담요를 걷어 개서 옆에 둠 / 45초 손으로 얼굴에 부채질 / 50초 일어나 창문을 엶 / 52~70초 소파로 돌아와 TV를 봄 (영상 끝)</pre></details>
+<div class="hidden"><b>숨긴 정답:</b> 챙겨 준 마음은 고맙지만, 더워서 담요는 필요 없다 · <b>함정:</b> «고마워»만 보면 성공처럼 보임</div>
+
+<h3>장면 10. 약 먹을 물</h3>
+<pre>Rule: At night, when the user sits at the desk, bring water.
+
+0s User: Sits at the desk looking at the phone
+5s User: Puts the phone down
+7s Robot: Places a cup of water next to the user
+8s User: Opens a drawer and takes out a pill bottle
+10s User: Takes out one pill and puts it in their mouth
+11s User: Takes a sip of water and swallows
+13-40s User: Sets the cup aside and looks at the phone again. Does not drink any more water (end of video)</pre>
+<details><summary>한국어로 보기</summary><pre>규칙: 밤에 책상에 앉으면 물을 가져다준다
+0초 책상에 앉아 휴대폰을 봄 / 5초 휴대폰을 내려놓음 / 7초 로봇: 사용자 옆에 물컵을 놓음 / 8초 서랍을 열어 약통을 꺼냄 / 10초 알약 하나를 꺼내 입에 넣음 / 11초 물을 한 모금 마셔 삼킴 / 13~40초 물컵을 옆에 두고 다시 휴대폰. 물은 더 마시지 않음 (영상 끝)</pre></details>
+<div class="hidden"><b>숨긴 정답:</b> 목이 말라서가 아니라 약을 먹으려고 물이 필요했다 · <b>함정:</b> 맞혔으니 «목마를 때 물»로 잘못 배울 수 있음</div>
+
+<h3>장면 11. 스탠드가 눈부심</h3>
+<pre>Rule: When the user opens a book, turn on the desk lamp.
+
+0s User: Sits at the desk and opens a book
+3s Robot: Turns on the desk lamp
+4s User: Squints and covers their eyes with a hand
+5s User: Turns the lamp head toward the wall
+6s User: Turns down the lamp's brightness knob
+8-40s User: Reads the book, leaving the lamp on (end of video)</pre>
+<details><summary>한국어로 보기</summary><pre>규칙: 책을 펴면 스탠드를 켠다
+0초 책상에 앉아 책을 폄 / 3초 로봇: 스탠드를 켬 / 4초 눈을 찡그리고 손으로 눈을 가림 / 5초 스탠드 머리를 벽 쪽으로 돌림 / 6초 밝기 손잡이를 낮춤 / 8~40초 책을 읽음. 스탠드는 켜 둠 (영상 끝)</pre></details>
+<div class="hidden"><b>숨긴 정답:</b> 켜 준 건 좋지만, 너무 밝고 빛이 눈에 바로 왔다 · <b>함정:</b> 바로 손을 대서 싫어하는 것처럼 보임</div>
+
+<h3>장면 12. 이미 물이 있음</h3>
+<pre>Rule: When the user starts studying, bring a bottle of water.
+
+0s User: Sits at the desk and opens a notebook. A half-empty water bottle is on the desk
+3s User: Writes notes in the notebook
+6s Robot: Places a new water bottle next to the user
+7s User: Picks up the new bottle, gets up, and puts it in the fridge
+12s User: Comes back and sits down
+13s User: Drinks from the half-empty bottle
+15-40s User: Writes notes (end of video)</pre>
+<details><summary>한국어로 보기</summary><pre>규칙: 공부를 시작하면 물병을 가져다준다
+0초 책상에 앉아 공책을 폄. 책상 위에 반쯤 마신 물병이 있음 / 3초 필기 / 6초 로봇: 사용자 옆에 새 물병을 놓음 / 7초 새 물병을 들고 일어나 냉장고에 넣음 / 12초 돌아와 앉음 / 13초 반쯤 마신 물병으로 물을 마심 / 15~40초 필기 (영상 끝)</pre></details>
+<div class="hidden"><b>숨긴 정답:</b> 물은 원하지만, 마시던 물병이 이미 있었다 · <b>함정:</b> 냉장고에 넣어서 거절처럼 보임</div>
+
+<h3>장면 13. 휴지에 웃음</h3>
+<pre>Rule: When the user cries while watching a movie, bring tissues.
+
+0s User: Watches a movie on the sofa
+40s User: Tears up and wipes their eyes with the back of a hand
+43s Robot: Places a box of tissues next to the user
+44s User: Looks at the tissue box and bursts out laughing
+44s User says: "Haha, what is this?"
+45s User: Pulls out a tissue and wipes their tears
+47-80s User: Keeps the tissue box on their lap and watches the movie (end of video)</pre>
+<details><summary>한국어로 보기</summary><pre>규칙: 영화를 보다 울면 휴지를 가져다준다
+0초 소파에서 영화를 봄 / 40초 눈물을 흘리며 손등으로 눈을 닦음 / 43초 로봇: 사용자 옆에 휴지 상자를 놓음 / 44초 휴지 상자를 보고 웃음을 터뜨림 / 44초 사용자 말: «아 뭐야ㅋㅋ» / 45초 휴지를 뽑아 눈물을 닦음 / 47~80초 휴지 상자를 무릎 위에 두고 영화를 봄 (영상 끝)</pre></details>
+<div class="hidden"><b>숨긴 정답:</b> 갑작스러워서 웃겼지만, 고맙고 도움이 됐다 · <b>함정:</b> «아 뭐야»가 불만처럼 들림</div>
+
+<h3>장면 14. 룸메이트가 자는 중</h3>
+<pre>Rule: At night, when the user enters the room, turn on the ceiling light.
+
+0s Roommate: Lies under a blanket in one of two beds in a dark room
+5s User: Opens the door and enters the room
+6s Robot: Turns on the ceiling light
+6s User: Quickly turns to look at the roommate
+7s User: Presses the switch and turns off the ceiling light
+8s User says (quietly): "Shh..."
+9s User: Turns on the phone's flashlight
+10-25s User: Walks quietly to their own bed using the flashlight and lies down (end of video)</pre>
+<details><summary>한국어로 보기</summary><pre>규칙: 밤에 방에 들어오면 천장 불을 켠다
+0초 룸메이트: 어두운 방, 침대 두 개 중 하나에 이불을 덮고 누워 있음 / 5초 문을 열고 들어옴 / 6초 로봇: 천장 불을 켬 / 6초 룸메이트 쪽을 급히 돌아봄 / 7초 스위치를 눌러 천장 불을 끔 / 8초 사용자 말(작게): «쉿…» / 9초 휴대폰 손전등을 켬 / 10~25초 손전등을 비추며 조용히 자기 침대로 가서 누움 (영상 끝)</pre></details>
+<div class="hidden"><b>숨긴 정답:</b> 평소엔 불 켜기가 좋지만, 지금은 룸메이트가 자고 있다 · <b>함정:</b> 바로 꺼서 불 켜기가 싫은 것처럼 보임</div>
+
+<h3>장면 15. 커피가 씀</h3>
+<pre>Rule: In the morning, when the user sits at the desk, bring coffee.
+
+0s User: Sits at the desk and turns on the laptop
+4s Robot: Places a cup of black coffee next to the user
+5s User: Takes a sip of coffee and grimaces
+7s User: Gets up and brings sugar from the kitchen
+15s User: Adds sugar to the coffee and stirs
+17s User: Drinks the coffee again
+18-40s User: Works on the laptop while drinking the coffee (end of video)</pre>
+<details><summary>한국어로 보기</summary><pre>규칙: 아침에 책상에 앉으면 커피를 가져다준다
+0초 책상에 앉아 노트북을 켬 / 4초 로봇: 사용자 옆에 블랙커피를 놓음 / 5초 한 모금 마시고 얼굴을 찡그림 / 7초 일어나 부엌에서 설탕을 가져옴 / 15초 설탕을 넣고 저음 / 17초 다시 마심 / 18~40초 커피를 마시며 노트북 작업 (영상 끝)</pre></details>
+<div class="hidden"><b>숨긴 정답:</b> 커피는 원하지만 설탕이 필요했다 · <b>함정:</b> 마셔서 성공처럼, 찡그려서 실패처럼도 보임</div>
+
+</main>
+</body>
+</html>

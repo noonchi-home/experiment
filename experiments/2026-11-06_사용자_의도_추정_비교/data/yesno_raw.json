@@ -1,0 +1,742 @@
+{
+ "gpt-6.1-terra": [
+  {
+   "item": "1 drink_now + drinks",
+   "expected": "high",
+   "runs": {
+    "Yes-first": [
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 84,
+      "out": 4
+     },
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 84,
+      "out": 4
+     },
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 84,
+      "out": 4
+     }
+    ],
+    "No-first": [
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 84,
+      "out": 4
+     },
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 84,
+      "out": 4
+     },
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 84,
+      "out": 4
+     }
+    ]
+   }
+  },
+  {
+   "item": "2 no_drink + drinks",
+   "expected": "low",
+   "runs": {
+    "Yes-first": [
+     {
+      "p_yes": 0.0,
+      "answer": "No",
+      "in": 83,
+      "out": 4
+     },
+     {
+      "p_yes": 0.0,
+      "answer": "No",
+      "in": 83,
+      "out": 4
+     },
+     {
+      "p_yes": 0.0,
+      "answer": "No",
+      "in": 83,
+      "out": 4
+     }
+    ],
+    "No-first": [
+     {
+      "p_yes": 0.0,
+      "answer": "No",
+      "in": 83,
+      "out": 4
+     },
+     {
+      "p_yes": 0.0,
+      "answer": "No",
+      "in": 83,
+      "out": 4
+     },
+     {
+      "p_yes": 0.0,
+      "answer": "No",
+      "in": 83,
+      "out": 4
+     }
+    ]
+   }
+  },
+  {
+   "item": "3 focus + shakes head",
+   "expected": "high",
+   "runs": {
+    "Yes-first": [
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 80,
+      "out": 4
+     },
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 80,
+      "out": 4
+     },
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 80,
+      "out": 4
+     }
+    ],
+    "No-first": [
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 80,
+      "out": 4
+     },
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 80,
+      "out": 4
+     },
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 80,
+      "out": 4
+     }
+    ]
+   }
+  },
+  {
+   "item": "4 drink_now + shakes head",
+   "expected": "low",
+   "runs": {
+    "Yes-first": [
+     {
+      "p_yes": 0.0,
+      "answer": "No",
+      "in": 78,
+      "out": 4
+     },
+     {
+      "p_yes": 0.0,
+      "answer": "No",
+      "in": 78,
+      "out": 4
+     },
+     {
+      "p_yes": 0.0,
+      "answer": "No",
+      "in": 78,
+      "out": 4
+     }
+    ],
+    "No-first": [
+     {
+      "p_yes": 0.0,
+      "answer": "No",
+      "in": 78,
+      "out": 4
+     },
+     {
+      "p_yes": 0.0,
+      "answer": "No",
+      "in": 78,
+      "out": 4
+     },
+     {
+      "p_yes": 0.0,
+      "answer": "No",
+      "in": 78,
+      "out": 4
+     }
+    ]
+   }
+  },
+  {
+   "item": "5 focus_later + moves aside",
+   "expected": "high",
+   "runs": {
+    "Yes-first": [
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 88,
+      "out": 4
+     },
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 88,
+      "out": 4
+     },
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 88,
+      "out": 4
+     }
+    ],
+    "No-first": [
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 88,
+      "out": 4
+     },
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 88,
+      "out": 4
+     },
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 88,
+      "out": 4
+     }
+    ]
+   }
+  },
+  {
+   "item": "6 no_drink + returns can",
+   "expected": "high",
+   "runs": {
+    "Yes-first": [
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 84,
+      "out": 4
+     },
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 84,
+      "out": 4
+     },
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 84,
+      "out": 4
+     }
+    ],
+    "No-first": [
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 84,
+      "out": 4
+     },
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 84,
+      "out": 4
+     },
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 84,
+      "out": 4
+     }
+    ]
+   }
+  },
+  {
+   "item": "7 no_drink + moves aside",
+   "expected": "high",
+   "runs": {
+    "Yes-first": [
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 81,
+      "out": 4
+     },
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 81,
+      "out": 4
+     },
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 81,
+      "out": 4
+     }
+    ],
+    "No-first": [
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 81,
+      "out": 4
+     },
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 81,
+      "out": 4
+     },
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 81,
+      "out": 4
+     }
+    ]
+   }
+  },
+  {
+   "item": "8 drink_now + moves aside",
+   "expected": "low",
+   "runs": {
+    "Yes-first": [
+     {
+      "p_yes": 0.0,
+      "answer": "No",
+      "in": 82,
+      "out": 4
+     },
+     {
+      "p_yes": 0.0,
+      "answer": "No",
+      "in": 82,
+      "out": 4
+     },
+     {
+      "p_yes": 0.0,
+      "answer": "No",
+      "in": 82,
+      "out": 4
+     }
+    ],
+    "No-first": [
+     {
+      "p_yes": 0.0,
+      "answer": "No",
+      "in": 82,
+      "out": 4
+     },
+     {
+      "p_yes": 0.0,
+      "answer": "No",
+      "in": 82,
+      "out": 4
+     },
+     {
+      "p_yes": 0.0,
+      "answer": "No",
+      "in": 82,
+      "out": 4
+     }
+    ]
+   }
+  }
+ ],
+ "gpt-6-luna": [
+  {
+   "item": "1 drink_now + drinks",
+   "expected": "high",
+   "runs": {
+    "Yes-first": [
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 84,
+      "out": 4
+     },
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 84,
+      "out": 4
+     },
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 84,
+      "out": 4
+     }
+    ],
+    "No-first": [
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 84,
+      "out": 4
+     },
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 84,
+      "out": 4
+     },
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 84,
+      "out": 4
+     }
+    ]
+   }
+  },
+  {
+   "item": "2 no_drink + drinks",
+   "expected": "low",
+   "runs": {
+    "Yes-first": [
+     {
+      "p_yes": 0.0,
+      "answer": "No",
+      "in": 83,
+      "out": 4
+     },
+     {
+      "p_yes": 0.0,
+      "answer": "No",
+      "in": 83,
+      "out": 4
+     },
+     {
+      "p_yes": 0.0,
+      "answer": "No",
+      "in": 83,
+      "out": 4
+     }
+    ],
+    "No-first": [
+     {
+      "p_yes": 0.0,
+      "answer": "No",
+      "in": 83,
+      "out": 4
+     },
+     {
+      "p_yes": 0.0,
+      "answer": "No",
+      "in": 83,
+      "out": 4
+     },
+     {
+      "p_yes": 0.0,
+      "answer": "No",
+      "in": 83,
+      "out": 4
+     }
+    ]
+   }
+  },
+  {
+   "item": "3 focus + shakes head",
+   "expected": "high",
+   "runs": {
+    "Yes-first": [
+     {
+      "p_yes": 0.8204048165437008,
+      "answer": "No",
+      "in": 80,
+      "out": 4
+     },
+     {
+      "p_yes": 0.8204048165437008,
+      "answer": "No",
+      "in": 80,
+      "out": 4
+     },
+     {
+      "p_yes": 0.8204048165437008,
+      "answer": "Yes",
+      "in": 80,
+      "out": 4
+     }
+    ],
+    "No-first": [
+     {
+      "p_yes": 0.734452780733403,
+      "answer": "No",
+      "in": 80,
+      "out": 4
+     },
+     {
+      "p_yes": 0.8635878857554558,
+      "answer": "Yes",
+      "in": 80,
+      "out": 4
+     },
+     {
+      "p_yes": 0.8543560594826606,
+      "answer": "Yes",
+      "in": 80,
+      "out": 4
+     }
+    ]
+   }
+  },
+  {
+   "item": "4 drink_now + shakes head",
+   "expected": "low",
+   "runs": {
+    "Yes-first": [
+     {
+      "p_yes": 0.0,
+      "answer": "No",
+      "in": 78,
+      "out": 4
+     },
+     {
+      "p_yes": 0.0,
+      "answer": "No",
+      "in": 78,
+      "out": 4
+     },
+     {
+      "p_yes": 0.0,
+      "answer": "No",
+      "in": 78,
+      "out": 4
+     }
+    ],
+    "No-first": [
+     {
+      "p_yes": 0.0,
+      "answer": "No",
+      "in": 78,
+      "out": 4
+     },
+     {
+      "p_yes": 0.03239170523258801,
+      "answer": "No",
+      "in": 78,
+      "out": 4
+     },
+     {
+      "p_yes": 0.0,
+      "answer": "No",
+      "in": 78,
+      "out": 4
+     }
+    ]
+   }
+  },
+  {
+   "item": "5 focus_later + moves aside",
+   "expected": "high",
+   "runs": {
+    "Yes-first": [
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 88,
+      "out": 4
+     },
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 88,
+      "out": 4
+     },
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 88,
+      "out": 4
+     }
+    ],
+    "No-first": [
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 88,
+      "out": 4
+     },
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 88,
+      "out": 4
+     },
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 88,
+      "out": 4
+     }
+    ]
+   }
+  },
+  {
+   "item": "6 no_drink + returns can",
+   "expected": "high",
+   "runs": {
+    "Yes-first": [
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 84,
+      "out": 4
+     },
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 84,
+      "out": 4
+     },
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 84,
+      "out": 4
+     }
+    ],
+    "No-first": [
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 84,
+      "out": 4
+     },
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 84,
+      "out": 4
+     },
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 84,
+      "out": 4
+     }
+    ]
+   }
+  },
+  {
+   "item": "7 no_drink + moves aside",
+   "expected": "high",
+   "runs": {
+    "Yes-first": [
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 81,
+      "out": 4
+     },
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 81,
+      "out": 4
+     },
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 81,
+      "out": 4
+     }
+    ],
+    "No-first": [
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 81,
+      "out": 4
+     },
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 81,
+      "out": 4
+     },
+     {
+      "p_yes": 1.0,
+      "answer": "Yes",
+      "in": 81,
+      "out": 4
+     }
+    ]
+   }
+  },
+  {
+   "item": "8 drink_now + moves aside",
+   "expected": "low",
+   "runs": {
+    "Yes-first": [
+     {
+      "p_yes": 0.0,
+      "answer": "No",
+      "in": 82,
+      "out": 4
+     },
+     {
+      "p_yes": 0.0,
+      "answer": "No",
+      "in": 82,
+      "out": 4
+     },
+     {
+      "p_yes": 0.0,
+      "answer": "No",
+      "in": 82,
+      "out": 4
+     }
+    ],
+    "No-first": [
+     {
+      "p_yes": 0.0,
+      "answer": "No",
+      "in": 82,
+      "out": 4
+     },
+     {
+      "p_yes": 0.0,
+      "answer": "No",
+      "in": 82,
+      "out": 4
+     },
+     {
+      "p_yes": 0.0,
+      "answer": "No",
+      "in": 82,
+      "out": 4
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,841 @@
+{
+ "gpt-6.1-sol-probe": {
+  "error": "HTTP 400: {\n  \"error\": {\n    \"message\": \"Unsupported parameter: 'logprobs' is not supported with this model.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": \"logprobs\",\n    \"code\": \"unsupported_parameter\"\n  }\n}"
+ },
+ "gpt-6-luna": [
+  {
+   "item": "1 drink_now + drinks",
+   "expected": "high",
+   "runs": {
+    "A=Likely": [
+     {
+      "p_likely": 1.0,
+      "mass": 1.0,
+      "answer": "A",
+      "in": 90,
+      "out": 4
+     },
+     {
+      "p_likely": 1.0,
+      "mass": 1.0,
+      "answer": "A",
+      "in": 90,
+      "out": 4
+     },
+     {
+      "p_likely": 1.0,
+      "mass": 1.0,
+      "answer": "A",
+      "in": 90,
+      "out": 4
+     }
+    ],
+    "A=Unlikely": [
+     {
+      "p_likely": 1.0,
+      "mass": 1.0,
+      "answer": "B",
+      "in": 90,
+      "out": 4
+     },
+     {
+      "p_likely": 1.0,
+      "mass": 1.0,
+      "answer": "B",
+      "in": 90,
+      "out": 4
+     },
+     {
+      "p_likely": 1.0,
+      "mass": 1.0,
+      "answer": "B",
+      "in": 90,
+      "out": 4
+     }
+    ]
+   }
+  },
+  {
+   "item": "2 no_drink + drinks",
+   "expected": "low",
+   "runs": {
+    "A=Likely": [
+     {
+      "p_likely": 0.0,
+      "mass": 0.9999980926531862,
+      "answer": "B",
+      "in": 89,
+      "out": 4
+     },
+     {
+      "p_likely": 0.0,
+      "mass": 0.9999990463261383,
+      "answer": "B",
+      "in": 89,
+      "out": 4
+     },
+     {
+      "p_likely": 0.0,
+      "mass": 0.9999971389811435,
+      "answer": "B",
+      "in": 89,
+      "out": 4
+     }
+    ],
+    "A=Unlikely": [
+     {
+      "p_likely": 0.0,
+      "mass": 0.9999876023107387,
+      "answer": "A",
+      "in": 89,
+      "out": 4
+     },
+     {
+      "p_likely": 0.0,
+      "mass": 0.9999923706345725,
+      "answer": "A",
+      "in": 89,
+      "out": 4
+     },
+     {
+      "p_likely": 0.0,
+      "mass": 0.9999609001174476,
+      "answer": "A",
+      "in": 89,
+      "out": 4
+     }
+    ]
+   }
+  },
+  {
+   "item": "3 focus + shakes head",
+   "expected": "high",
+   "runs": {
+    "A=Likely": [
+     {
+      "p_likely": 0.6647046318993423,
+      "mass": 0.9999995662035542,
+      "answer": "A",
+      "in": 86,
+      "out": 4
+     },
+     {
+      "p_likely": 0.673064933467342,
+      "mass": 1.0000003463004914,
+      "answer": "A",
+      "in": 86,
+      "out": 4
+     },
+     {
+      "p_likely": 0.673064933467342,
+      "mass": 1.0000003463004914,
+      "answer": "A",
+      "in": 86,
+      "out": 4
+     }
+    ],
+    "A=Unlikely": [
+     {
+      "p_likely": 0.2077083382233121,
+      "mass": 0.9999994622296537,
+      "answer": "A",
+      "in": 86,
+      "out": 4
+     },
+     {
+      "p_likely": 0.33302028341211487,
+      "mass": 0.9999997251682318,
+      "answer": "A",
+      "in": 86,
+      "out": 4
+     },
+     {
+      "p_likely": 0.3960090854478765,
+      "mass": 0.9999999563005153,
+      "answer": "B",
+      "in": 86,
+      "out": 4
+     }
+    ]
+   }
+  },
+  {
+   "item": "4 drink_now + shakes head",
+   "expected": "low",
+   "runs": {
+    "A=Likely": [
+     {
+      "p_likely": 0.0,
+      "mass": 0.9996214629596175,
+      "answer": "B",
+      "in": 84,
+      "out": 4
+     },
+     {
+      "p_likely": 0.0,
+      "mass": 0.9999656683139552,
+      "answer": "B",
+      "in": 84,
+      "out": 4
+     },
+     {
+      "p_likely": 0.0,
+      "mass": 0.9998655409618136,
+      "answer": "B",
+      "in": 84,
+      "out": 4
+     }
+    ],
+    "A=Unlikely": [
+     {
+      "p_likely": 0.0,
+      "mass": 0.9977252169817444,
+      "answer": "A",
+      "in": 84,
+      "out": 4
+     },
+     {
+      "p_likely": 0.0,
+      "mass": 0.9977252169817444,
+      "answer": "A",
+      "in": 84,
+      "out": 4
+     },
+     {
+      "p_likely": 0.0,
+      "mass": 0.9922576816722738,
+      "answer": "A",
+      "in": 84,
+      "out": 4
+     }
+    ]
+   }
+  },
+  {
+   "item": "5 focus_later + moves aside",
+   "expected": "high",
+   "runs": {
+    "A=Likely": [
+     {
+      "p_likely": 1.0,
+      "mass": 0.9994308184783994,
+      "answer": "A",
+      "in": 94,
+      "out": 4
+     },
+     {
+      "p_likely": 1.0,
+      "mass": 0.9994308184783994,
+      "answer": "A",
+      "in": 94,
+      "out": 4
+     },
+     {
+      "p_likely": 1.0,
+      "mass": 0.9994308184783994,
+      "answer": "A",
+      "in": 94,
+      "out": 4
+     }
+    ],
+    "A=Unlikely": [
+     {
+      "p_likely": 1.0,
+      "mass": 0.9994746634892312,
+      "answer": "B",
+      "in": 94,
+      "out": 4
+     },
+     {
+      "p_likely": 1.0,
+      "mass": 0.9997692374452049,
+      "answer": "B",
+      "in": 94,
+      "out": 4
+     },
+     {
+      "p_likely": 1.0,
+      "mass": 0.9979945292131635,
+      "answer": "B",
+      "in": 94,
+      "out": 4
+     }
+    ]
+   }
+  },
+  {
+   "item": "6 no_drink + returns can",
+   "expected": "high",
+   "runs": {
+    "A=Likely": [
+     {
+      "p_likely": 0.9756957854287593,
+      "mass": 0.9999996390503103,
+      "answer": "A",
+      "in": 90,
+      "out": 4
+     },
+     {
+      "p_likely": 1.0,
+      "mass": 0.9902941812331446,
+      "answer": "A",
+      "in": 90,
+      "out": 4
+     },
+     {
+      "p_likely": 0.9049744829411457,
+      "mass": 0.9999988303978081,
+      "answer": "B",
+      "in": 90,
+      "out": 4
+     }
+    ],
+    "A=Unlikely": [
+     {
+      "p_likely": 0.7341963980374635,
+      "mass": 0.9999996794767922,
+      "answer": "B",
+      "in": 90,
+      "out": 4
+     },
+     {
+      "p_likely": 0.953161450715041,
+      "mass": 0.9999992510808752,
+      "answer": "B",
+      "in": 90,
+      "out": 4
+     },
+     {
+      "p_likely": 0.6161254986307679,
+      "mass": 0.9999992228810151,
+      "answer": "B",
+      "in": 90,
+      "out": 4
+     }
+    ]
+   }
+  },
+  {
+   "item": "7 no_drink + moves aside",
+   "expected": "high",
+   "runs": {
+    "A=Likely": [
+     {
+      "p_likely": 0.6502638529420308,
+      "mass": 1.0000000643248907,
+      "answer": "A",
+      "in": 87,
+      "out": 4
+     },
+     {
+      "p_likely": 0.6502638529420308,
+      "mass": 1.0000000643248907,
+      "answer": "A",
+      "in": 87,
+      "out": 4
+     },
+     {
+      "p_likely": 0.6502638529420308,
+      "mass": 1.0000000643248907,
+      "answer": "A",
+      "in": 87,
+      "out": 4
+     }
+    ],
+    "A=Unlikely": [
+     {
+      "p_likely": 0.35738199026907486,
+      "mass": 0.9999993772686215,
+      "answer": "B",
+      "in": 87,
+      "out": 4
+     },
+     {
+      "p_likely": 0.35738199026907486,
+      "mass": 0.9999993772686215,
+      "answer": "A",
+      "in": 87,
+      "out": 4
+     },
+     {
+      "p_likely": 0.21055381013613605,
+      "mass": 1.0000001124114803,
+      "answer": "A",
+      "in": 87,
+      "out": 4
+     }
+    ]
+   }
+  },
+  {
+   "item": "8 drink_now + moves aside",
+   "expected": "low",
+   "runs": {
+    "A=Likely": [
+     {
+      "p_likely": 0.0,
+      "mass": 1.0,
+      "answer": "B",
+      "in": 88,
+      "out": 4
+     },
+     {
+      "p_likely": 0.0,
+      "mass": 1.0,
+      "answer": "B",
+      "in": 88,
+      "out": 4
+     },
+     {
+      "p_likely": 0.0,
+      "mass": 0.9999933243020678,
+      "answer": "B",
+      "in": 88,
+      "out": 4
+     }
+    ],
+    "A=Unlikely": [
+     {
+      "p_likely": 0.0,
+      "mass": 0.9994327247432226,
+      "answer": "A",
+      "in": 88,
+      "out": 4
+     },
+     {
+      "p_likely": 0.0,
+      "mass": 0.9999294305907238,
+      "answer": "A",
+      "in": 88,
+      "out": 4
+     },
+     {
+      "p_likely": 0.0,
+      "mass": 0.9994632254748825,
+      "answer": "A",
+      "in": 88,
+      "out": 4
+     }
+    ]
+   }
+  }
+ ],
+ "deepseek-v4-pro": [
+  {
+   "item": "1 drink_now + drinks",
+   "expected": "high",
+   "runs": {
+    "A=Likely": [
+     {
+      "p_likely": 0.9997944111489995,
+      "mass": 0.9999962525118724,
+      "answer": "A",
+      "in": 90,
+      "out": 1
+     },
+     {
+      "p_likely": 0.9996831182416545,
+      "mass": 0.9999978557364089,
+      "answer": "A",
+      "in": 90,
+      "out": 1
+     },
+     {
+      "p_likely": 0.9997944111489995,
+      "mass": 0.9999962525118724,
+      "answer": "A",
+      "in": 90,
+      "out": 1
+     }
+    ],
+    "A=Unlikely": [
+     {
+      "p_likely": 1.0,
+      "mass": 0.9999883829454664,
+      "answer": "B",
+      "in": 90,
+      "out": 1
+     },
+     {
+      "p_likely": 1.0,
+      "mass": 0.9999963448122542,
+      "answer": "B",
+      "in": 90,
+      "out": 1
+     },
+     {
+      "p_likely": 1.0,
+      "mass": 0.9999883829454664,
+      "answer": "B",
+      "in": 90,
+      "out": 1
+     }
+    ]
+   }
+  },
+  {
+   "item": "2 no_drink + drinks",
+   "expected": "low",
+   "runs": {
+    "A=Likely": [
+     {
+      "p_likely": 0.0,
+      "mass": 0.9999959111320191,
+      "answer": "B",
+      "in": 89,
+      "out": 1
+     },
+     {
+      "p_likely": 0.0,
+      "mass": 0.9999947760842578,
+      "answer": "B) Unlikely",
+      "in": 89,
+      "out": 4
+     },
+     {
+      "p_likely": 0.0,
+      "mass": 0.9999959111320191,
+      "answer": "B",
+      "in": 89,
+      "out": 1
+     }
+    ],
+    "A=Unlikely": [
+     {
+      "p_likely": 0.06315498407065892,
+      "mass": 0.9999548100034563,
+      "answer": "A) Unlikely",
+      "in": 89,
+      "out": 4
+     },
+     {
+      "p_likely": 0.06315498407065892,
+      "mass": 0.9999548100034563,
+      "answer": "A",
+      "in": 89,
+      "out": 1
+     },
+     {
+      "p_likely": 0.5496755569056452,
+      "mass": 0.9998564416537117,
+      "answer": "A",
+      "in": 89,
+      "out": 1
+     }
+    ]
+   }
+  },
+  {
+   "item": "3 focus + shakes head",
+   "expected": "high",
+   "runs": {
+    "A=Likely": [
+     {
+      "p_likely": 3.427300177872103e-06,
+      "mass": 0.9999047314203905,
+      "answer": "B",
+      "in": 86,
+      "out": 1
+     },
+     {
+      "p_likely": 3.427300177872103e-06,
+      "mass": 0.9999047314203905,
+      "answer": "B) Unlikely",
+      "in": 86,
+      "out": 4
+     },
+     {
+      "p_likely": 7.742703339501366e-06,
+      "mass": 0.9998116804076753,
+      "answer": "B",
+      "in": 86,
+      "out": 1
+     }
+    ],
+    "A=Unlikely": [
+     {
+      "p_likely": 0.969053883320392,
+      "mass": 0.9980459701026538,
+      "answer": "B) Likely",
+      "in": 86,
+      "out": 4
+     },
+     {
+      "p_likely": 0.9846314252700503,
+      "mass": 0.9998718645888152,
+      "answer": "B) Likely",
+      "in": 86,
+      "out": 4
+     },
+     {
+      "p_likely": 0.8250766452175959,
+      "mass": 0.999852884491192,
+      "answer": "B",
+      "in": 86,
+      "out": 1
+     }
+    ]
+   }
+  },
+  {
+   "item": "4 drink_now + shakes head",
+   "expected": "low",
+   "runs": {
+    "A=Likely": [
+     {
+      "p_likely": 0.0,
+      "mass": 0.9997519813123311,
+      "answer": "B) Unlikely",
+      "in": 84,
+      "out": 4
+     },
+     {
+      "p_likely": 0.0,
+      "mass": 0.9997519813123311,
+      "answer": "B) Unlikely",
+      "in": 84,
+      "out": 4
+     },
+     {
+      "p_likely": 0.0,
+      "mass": 0.9999522631005392,
+      "answer": "B) Unlikely",
+      "in": 84,
+      "out": 4
+     }
+    ],
+    "A=Unlikely": [
+     {
+      "p_likely": 0.9346698640171858,
+      "mass": 0.9999495499284883,
+      "answer": "B",
+      "in": 84,
+      "out": 1
+     },
+     {
+      "p_likely": 0.9346698640171858,
+      "mass": 0.9999495499284883,
+      "answer": "B) Likely",
+      "in": 84,
+      "out": 4
+     },
+     {
+      "p_likely": 0.9182271140582149,
+      "mass": 0.9999161615399768,
+      "answer": "A",
+      "in": 84,
+      "out": 1
+     }
+    ]
+   }
+  },
+  {
+   "item": "5 focus_later + moves aside",
+   "expected": "high",
+   "runs": {
+    "A=Likely": [
+     {
+      "p_likely": 0.03953014526108757,
+      "mass": 0.9999814271477994,
+      "answer": "B) Unlikely",
+      "in": 94,
+      "out": 4
+     },
+     {
+      "p_likely": 0.04000174202167565,
+      "mass": 0.999973775618472,
+      "answer": "B) Unlikely",
+      "in": 94,
+      "out": 4
+     },
+     {
+      "p_likely": 0.041487587749104195,
+      "mass": 0.9999836869980232,
+      "answer": "B",
+      "in": 94,
+      "out": 1
+     }
+    ],
+    "A=Unlikely": [
+     {
+      "p_likely": 0.9994061544298564,
+      "mass": 0.999975755620162,
+      "answer": "B",
+      "in": 94,
+      "out": 1
+     },
+     {
+      "p_likely": 0.9998755244883742,
+      "mass": 0.9999675557020121,
+      "answer": "B) Likely",
+      "in": 94,
+      "out": 4
+     },
+     {
+      "p_likely": 0.999900633198892,
+      "mass": 0.9999834931030886,
+      "answer": "B) Likely",
+      "in": 94,
+      "out": 4
+     }
+    ]
+   }
+  },
+  {
+   "item": "6 no_drink + returns can",
+   "expected": "high",
+   "runs": {
+    "A=Likely": [
+     {
+      "p_likely": 0.0,
+      "mass": 0.9999918266233417,
+      "answer": "B) Unlikely",
+      "in": 90,
+      "out": 4
+     },
+     {
+      "p_likely": 0.0,
+      "mass": 0.9999867443081659,
+      "answer": "B) Unlikely",
+      "in": 90,
+      "out": 4
+     },
+     {
+      "p_likely": 0.0,
+      "mass": 0.9999843683989751,
+      "answer": "B",
+      "in": 90,
+      "out": 1
+     }
+    ],
+    "A=Unlikely": [
+     {
+      "p_likely": 0.5930165050318783,
+      "mass": 0.9998590571990811,
+      "answer": "B",
+      "in": 90,
+      "out": 1
+     },
+     {
+      "p_likely": 0.5930165050318783,
+      "mass": 0.9998590571990811,
+      "answer": "A",
+      "in": 90,
+      "out": 1
+     },
+     {
+      "p_likely": 0.5930165050318783,
+      "mass": 0.9998590571990811,
+      "answer": "B) Likely",
+      "in": 90,
+      "out": 4
+     }
+    ]
+   }
+  },
+  {
+   "item": "7 no_drink + moves aside",
+   "expected": "high",
+   "runs": {
+    "A=Likely": [
+     {
+      "p_likely": 1.0399970988423114e-06,
+      "mass": 0.9999766346625584,
+      "answer": "B",
+      "in": 87,
+      "out": 1
+     },
+     {
+      "p_likely": 0.0,
+      "mass": 0.9999825296064019,
+      "answer": "B",
+      "in": 87,
+      "out": 1
+     },
+     {
+      "p_likely": 0.0,
+      "mass": 0.9999772981688213,
+      "answer": "B",
+      "in": 87,
+      "out": 1
+     }
+    ],
+    "A=Unlikely": [
+     {
+      "p_likely": 0.9540255297071448,
+      "mass": 0.9997823538809522,
+      "answer": "B) Likely",
+      "in": 87,
+      "out": 4
+     },
+     {
+      "p_likely": 0.985882081420154,
+      "mass": 0.9999074714232475,
+      "answer": "B) Likely",
+      "in": 87,
+      "out": 4
+     },
+     {
+      "p_likely": 0.985882081420154,
+      "mass": 0.9999074714232475,
+      "answer": "B) Likely",
+      "in": 87,
+      "out": 4
+     }
+    ]
+   }
+  },
+  {
+   "item": "8 drink_now + moves aside",
+   "expected": "low",
+   "runs": {
+    "A=Likely": [
+     {
+      "p_likely": 0.0,
+      "mass": 0.9999333387498248,
+      "answer": "B) Unlikely",
+      "in": 88,
+      "out": 4
+     },
+     {
+      "p_likely": 0.0,
+      "mass": 0.9999616069289013,
+      "answer": "B) Unlikely",
+      "in": 88,
+      "out": 4
+     },
+     {
+      "p_likely": 0.0,
+      "mass": 0.9999073235715933,
+      "answer": "B) Unlikely",
+      "in": 88,
+      "out": 4
+     }
+    ],
+    "A=Unlikely": [
+     {
+      "p_likely": 0.0677138662518038,
+      "mass": 0.9997573304042061,
+      "answer": "A",
+      "in": 88,
+      "out": 1
+     },
+     {
+      "p_likely": 0.0677138662518038,
+      "mass": 0.9997573304042061,
+      "answer": "A",
+      "in": 88,
+      "out": 1
+     },
+     {
+      "p_likely": 0.0677138662518038,
+      "mass": 0.9997573304042061,
+      "answer": "A) Unlikely",
+      "in": 88,
+      "out": 4
+     }
+    ]
+   }
+  }
+ ]
+}

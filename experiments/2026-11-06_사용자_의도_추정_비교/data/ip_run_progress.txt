@@ -1,0 +1,15 @@
+scene 1 done | calls 81 errors 0 | cost so far $0.019 | 23s
+scene 2 done | calls 152 errors 0 | cost so far $0.037 | 44s
+scene 3 done | calls 225 errors 0 | cost so far $0.054 | 63s
+scene 4 done | calls 306 errors 0 | cost so far $0.074 | 90s
+scene 5 done | calls 349 errors 0 | cost so far $0.084 | 106s
+scene 6 done | calls 422 errors 0 | cost so far $0.101 | 128s
+scene 7 done | calls 487 errors 0 | cost so far $0.117 | 149s
+scene 8 done | calls 584 errors 0 | cost so far $0.140 | 175s
+scene 9 done | calls 657 errors 0 | cost so far $0.157 | 194s
+scene 10 done | calls 722 errors 0 | cost so far $0.172 | 212s
+scene 11 done | calls 779 errors 0 | cost so far $0.184 | 229s
+scene 12 done | calls 844 errors 0 | cost so far $0.200 | 248s
+scene 13 done | calls 925 errors 0 | cost so far $0.219 | 272s
+scene 14 done | calls 1026 errors 0 | cost so far $0.243 | 300s
+scene 15 done | calls 1107 errors 0 | cost so far $0.261 | 324s

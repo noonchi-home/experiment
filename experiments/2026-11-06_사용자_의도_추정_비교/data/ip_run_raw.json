@@ -1,0 +1,6674 @@
+[
+ {
+  "id": 1,
+  "title": "참으려다 마심",
+  "hidden": "마시고 싶지만 탄산을 줄이려고 참으려 했다",
+  "initial_candidates": [
+   "The user wants to relax while watching TV.",
+   "The user wants to enjoy the program without interruptions.",
+   "The user may be thirsty and welcome a drink.",
+   "The user may prefer a different beverage or no drink at all.",
+   "The user may appreciate the robot anticipating their needs.",
+   "The user may feel uncomfortable with the robot making assumptions about their preferences.",
+   "The user may want to keep the side table clear.",
+   "The user may be concerned about the drink spilling or leaving a ring on the table."
+  ],
+  "methods": {
+   "ga": {
+    "candidates": [
+     "The user wants to relax while watching TV.",
+     "The user wants to enjoy the program without interruptions.",
+     "The user may be thirsty and welcome a drink.",
+     "The user may prefer a different beverage or no drink at all.",
+     "The user may appreciate the robot anticipating their needs.",
+     "The user may feel uncomfortable with the robot making assumptions about their preferences.",
+     "The user may want to keep the side table clear.",
+     "The user may be concerned about the drink spilling or leaving a ring on the table."
+    ],
+    "regens": [],
+    "per_cand": [
+     {
+      "cand": "The user wants to relax while watching TV.",
+      "ev": [
+       84.37555069969719,
+       84.94406067912189,
+       95.0,
+       20.68642292282095,
+       92.68294994209498
+      ],
+      "said": [
+       90,
+       85,
+       95,
+       20,
+       90
+      ]
+     },
+     {
+      "cand": "The user wants to enjoy the program without interruptions.",
+      "ev": [
+       69.1007258168557,
+       85.75275247441681,
+       95.0,
+       39.52306208748396,
+       92.71206543948615
+      ],
+      "said": [
+       75,
+       85,
+       95,
+       35,
+       95
+      ]
+     },
+     {
+      "cand": "The user may be thirsty and welcome a drink.",
+      "ev": [
+       39.99409553555471,
+       63.03169429731283,
+       86.66924972885074,
+       20.26698633670661,
+       92.00793653174563
+      ],
+      "said": [
+       40,
+       70,
+       90,
+       20,
+       90
+      ]
+     },
+     {
+      "cand": "The user may prefer a different beverage or no drink at all.",
+      "ev": [
+       91.84792171646922,
+       84.94102752352093,
+       93.64541113023604,
+       30.00379062665321,
+       67.09778362784392
+      ],
+      "said": [
+       95,
+       85,
+       95,
+       25,
+       60
+      ]
+     },
+     {
+      "cand": "The user may appreciate the robot anticipating their needs.",
+      "ev": [
+       73.36195042260228,
+       73.54373941938914,
+       89.60302604292893,
+       26.913110271793485,
+       81.07567233252213
+      ],
+      "said": [
+       70,
+       70,
+       85,
+       25,
+       85
+      ]
+     },
+     {
+      "cand": "The user may feel uncomfortable with the robot making assumptions about their preferences.",
+      "ev": [
+       86.99698380520202,
+       83.98082794492947,
+       85.26533984948124,
+       34.02030806246103,
+       73.26188095048799
+      ],
+      "said": [
+       90,
+       85,
+       85,
+       35,
+       80
+      ]
+     },
+     {
+      "cand": "The user may want to keep the side table clear.",
+      "ev": [
+       30.3826604377394,
+       80.79143633687843,
+       85.57171107602046,
+       36.31582270710976,
+       70.88110218036562
+      ],
+      "said": [
+       35,
+       80,
+       75,
+       40,
+       70
+      ]
+     },
+     {
+      "cand": "The user may be concerned about the drink spilling or leaving a ring on the table.",
+      "ev": [
+       15.54282257339061,
+       64.86593508540354,
+       61.2913674201943,
+       52.45804807744064,
+       79.13827787552202
+      ],
+      "said": [
+       15,
+       70,
+       60,
+       70,
+       80
+      ]
+     }
+    ],
+    "rank_ev": [
+     {
+      "cand": "The user wants to enjoy the program without interruptions.",
+      "p": 0.2384342266675049
+     },
+     {
+      "cand": "The user may feel uncomfortable with the robot making assumptions about their preferences.",
+      "p": 0.17947363338124267
+     },
+     {
+      "cand": "The user may prefer a different beverage or no drink at all.",
+      "p": 0.1700141697650387
+     },
+     {
+      "cand": "The user wants to relax while watching TV.",
+      "p": 0.15089886204829156
+     },
+     {
+      "cand": "The user may appreciate the robot anticipating their needs.",
+      "p": 0.1219329769485327
+     },
+     {
+      "cand": "The user may want to keep the side table clear.",
+      "p": 0.06249930210183768
+     },
+     {
+      "cand": "The user may be thirsty and welcome a drink.",
+      "p": 0.04709359414046094
+     },
+     {
+      "cand": "The user may be concerned about the drink spilling or leaving a ring on the table.",
+      "p": 0.029653234947090847
+     }
+    ],
+    "rank_said": [
+     {
+      "cand": "The user wants to enjoy the program without interruptions.",
+      "p": 0.23489710254022117
+     },
+     {
+      "cand": "The user may feel uncomfortable with the robot making assumptions about their preferences.",
+      "p": 0.212383419028056
+     },
+     {
+      "cand": "The user wants to relax while watching TV.",
+      "p": 0.1525948094697377
+     },
+     {
+      "cand": "The user may prefer a different beverage or no drink at all.",
+      "p": 0.13422691573726925
+     },
+     {
+      "cand": "The user may appreciate the robot anticipating their needs.",
+      "p": 0.10324193980530497
+     },
+     {
+      "cand": "The user may want to keep the side table clear.",
+      "p": 0.06858980083951059
+     },
+     {
+      "cand": "The user may be thirsty and welcome a drink.",
+      "p": 0.05291213207619389
+     },
+     {
+      "cand": "The user may be concerned about the drink spilling or leaving a ring on the table.",
+      "p": 0.04115388050370636
+     }
+    ],
+    "score_errors": 0
+   },
+   "ga_warn": {
+    "candidates": [
+     "The user wants to relax while watching TV.",
+     "The user wants to enjoy the program without interruptions.",
+     "The user may be thirsty and welcome a drink.",
+     "The user may prefer a different beverage or no drink at all.",
+     "The user may appreciate the robot anticipating their needs.",
+     "The user may feel uncomfortable with the robot making assumptions about their preferences.",
+     "The user may want to keep the side table clear.",
+     "The user may be concerned about the drink spilling or leaving a ring on the table."
+    ],
+    "regens": [],
+    "per_cand": [
+     {
+      "cand": "The user wants to relax while watching TV.",
+      "ev": [
+       71.57723665455148,
+       65.83331899284977,
+       86.42330883464817,
+       25.713708456757356,
+       85.84138521763262
+      ],
+      "said": [
+       70,
+       60,
+       90,
+       25,
+       90
+      ]
+     },
+     {
+      "cand": "The user wants to enjoy the program without interruptions.",
+      "ev": [
+       64.45764770889492,
+       70.65493337287528,
+       84.65660424889036,
+       36.42983600382479,
+       81.50664104044465
+      ],
+      "said": [
+       65,
+       75,
+       85,
+       40,
+       85
+      ]
+     },
+     {
+      "cand": "The user may be thirsty and welcome a drink.",
+      "ev": [
+       44.13604079997828,
+       30.823519480138618,
+       77.334687931397,
+       45.22788161236601,
+       80.51100261388947
+      ],
+      "said": [
+       55,
+       20,
+       75,
+       45,
+       85
+      ]
+     },
+     {
+      "cand": "The user may prefer a different beverage or no drink at all.",
+      "ev": [
+       75.12379591455762,
+       75.86492682337779,
+       78.05991334627817,
+       31.472220435987303,
+       85.74683895774841
+      ],
+      "said": [
+       78,
+       78,
+       75,
+       30,
+       90
+      ]
+     },
+     {
+      "cand": "The user may appreciate the robot anticipating their needs.",
+      "ev": [
+       63.99708997450102,
+       60.891030751098405,
+       78.06513530608976,
+       30.901657404910292,
+       74.11147437306265
+      ],
+      "said": [
+       60,
+       65,
+       75,
+       35,
+       85
+      ]
+     },
+     {
+      "cand": "The user may feel uncomfortable with the robot making assumptions about their preferences.",
+      "ev": [
+       70.61841185279086,
+       66.43919850010346,
+       76.06604393955114,
+       30.154056538639317,
+       79.25532157866371
+      ],
+      "said": [
+       70,
+       70,
+       75,
+       25,
+       75
+      ]
+     },
+     {
+      "cand": "The user may want to keep the side table clear.",
+      "ev": [
+       35.01728723102416,
+       63.48783656661773,
+       75.35319687631443,
+       43.323803236659636,
+       66.08831947569962
+      ],
+      "said": [
+       45,
+       55,
+       75,
+       45,
+       65
+      ]
+     },
+     {
+      "cand": "The user may be concerned about the drink spilling or leaving a ring on the table.",
+      "ev": [
+       31.05146382416574,
+       35.61745284745337,
+       68.69880462808021,
+       58.631383366168535,
+       67.61502495106568
+      ],
+      "said": [
+       25,
+       40,
+       65,
+       65,
+       65
+      ]
+     }
+    ],
+    "rank_ev": [
+     {
+      "cand": "The user may prefer a different beverage or no drink at all.",
+      "p": 0.20151286783673425
+     },
+     {
+      "cand": "The user wants to enjoy the program without interruptions.",
+      "p": 0.19214922978079627
+     },
+     {
+      "cand": "The user wants to relax while watching TV.",
+      "p": 0.1508772116215962
+     },
+     {
+      "cand": "The user may feel uncomfortable with the robot making assumptions about their preferences.",
+      "p": 0.14315877927122095
+     },
+     {
+      "cand": "The user may appreciate the robot anticipating their needs.",
+      "p": 0.11693608343784415
+     },
+     {
+      "cand": "The user may want to keep the side table clear.",
+      "p": 0.08050755552808965
+     },
+     {
+      "cand": "The user may be thirsty and welcome a drink.",
+      "p": 0.06430164232220607
+     },
+     {
+      "cand": "The user may be concerned about the drink spilling or leaving a ring on the table.",
+      "p": 0.05055663020151252
+     }
+    ],
+    "rank_said": [
+     {
+      "cand": "The user wants to enjoy the program without interruptions.",
+      "p": 0.2278341074187988
+     },
+     {
+      "cand": "The user may prefer a different beverage or no drink at all.",
+      "p": 0.19923264922795447
+     },
+     {
+      "cand": "The user may appreciate the robot anticipating their needs.",
+      "p": 0.1407210663469051
+     },
+     {
+      "cand": "The user wants to relax while watching TV.",
+      "p": 0.13753733181416972
+     },
+     {
+      "cand": "The user may feel uncomfortable with the robot making assumptions about their preferences.",
+      "p": 0.11143070864573937
+     },
+     {
+      "cand": "The user may want to keep the side table clear.",
+      "p": 0.08780285022065303
+     },
+     {
+      "cand": "The user may be thirsty and welcome a drink.",
+      "p": 0.05103071636755901
+     },
+     {
+      "cand": "The user may be concerned about the drink spilling or leaving a ring on the table.",
+      "p": 0.04441056995822033
+     }
+    ],
+    "score_errors": 0
+   }
+  }
+ },
+ {
+  "id": 2,
+  "title": "못 봤을 뿐",
+  "hidden": "물을 원했지만 놓인 것을 몰랐다",
+  "initial_candidates": [
+   "The user may want to win or make progress in the game.",
+   "The user may be seeking entertainment or relaxation.",
+   "The user may want to stay focused without interruption.",
+   "The user may want to hear the game's audio clearly.",
+   "The user may want water available in case they become thirsty.",
+   "The user may be unaware that the robot has brought water.",
+   "The user may prefer that nothing be placed on the desk without permission."
+  ],
+  "methods": {
+   "ga": {
+    "candidates": [
+     "The user may want to win or make progress in the game.",
+     "The user may be seeking entertainment or relaxation.",
+     "The user may want to stay focused without interruption.",
+     "The user may want to hear the game's audio clearly.",
+     "The user may want water available in case they become thirsty.",
+     "The user may be unaware that the robot has brought water.",
+     "The user may prefer that nothing be placed on the desk without permission."
+    ],
+    "regens": [],
+    "per_cand": [
+     {
+      "cand": "The user may want to win or make progress in the game.",
+      "ev": [
+       91.81742238172075,
+       51.272365206425825,
+       56.144340235433916,
+       59.99826867859934,
+       91.82967696011578
+      ],
+      "said": [
+       90,
+       60,
+       70,
+       60,
+       90
+      ]
+     },
+     {
+      "cand": "The user may be seeking entertainment or relaxation.",
+      "ev": [
+       91.91420309202438,
+       73.94142493672847,
+       53.861764787988605,
+       84.15581275110343,
+       90.85728754900421
+      ],
+      "said": [
+       90,
+       65,
+       50,
+       85,
+       95
+      ]
+     },
+     {
+      "cand": "The user may want to stay focused without interruption.",
+      "ev": [
+       92.33045891788937,
+       57.03733004789725,
+       70.8042146789036,
+       74.3180481481238,
+       89.72622231575073
+      ],
+      "said": [
+       90,
+       70,
+       70,
+       75,
+       90
+      ]
+     },
+     {
+      "cand": "The user may want to hear the game's audio clearly.",
+      "ev": [
+       92.74082614588231,
+       49.32717109110253,
+       52.92020940225005,
+       74.22020723190016,
+       83.98120979673085
+      ],
+      "said": [
+       90,
+       50,
+       50,
+       80,
+       85
+      ]
+     },
+     {
+      "cand": "The user may want water available in case they become thirsty.",
+      "ev": [
+       90.83168487316644,
+       50.407528525685095,
+       71.45703469878002,
+       82.32218607464212,
+       90.32937957215454
+      ],
+      "said": [
+       90,
+       50,
+       70,
+       85,
+       90
+      ]
+     },
+     {
+      "cand": "The user may be unaware that the robot has brought water.",
+      "ev": [
+       94.48150156386366,
+       50.19752056260276,
+       67.92080166002796,
+       38.06013239074513,
+       88.69261447863829
+      ],
+      "said": [
+       95,
+       50,
+       70,
+       20,
+       85
+      ]
+     },
+     {
+      "cand": "The user may prefer that nothing be placed on the desk without permission.",
+      "ev": [
+       90.85991599753123,
+       50.0,
+       49.27325094620136,
+       49.83193096562119,
+       69.50568695153034
+      ],
+      "said": [
+       90,
+       50,
+       50,
+       50,
+       75
+      ]
+     }
+    ],
+    "rank_ev": [
+     {
+      "cand": "The user may be seeking entertainment or relaxation.",
+      "p": 0.2230907905385685
+     },
+     {
+      "cand": "The user may want to stay focused without interruption.",
+      "p": 0.1981817715058254
+     },
+     {
+      "cand": "The user may want water available in case they become thirsty.",
+      "p": 0.19391456144846977
+     },
+     {
+      "cand": "The user may want to hear the game's audio clearly.",
+      "p": 0.12027344444335022
+     },
+     {
+      "cand": "The user may want to win or make progress in the game.",
+      "p": 0.11607079043468854
+     },
+     {
+      "cand": "The user may be unaware that the robot has brought water.",
+      "p": 0.08667150617329569
+     },
+     {
+      "cand": "The user may prefer that nothing be placed on the desk without permission.",
+      "p": 0.061797135455801865
+     }
+    ],
+    "rank_said": [
+     {
+      "cand": "The user may want to stay focused without interruption.",
+      "p": 0.23386242243130892
+     },
+     {
+      "cand": "The user may want water available in case they become thirsty.",
+      "p": 0.1893171991110596
+     },
+     {
+      "cand": "The user may be seeking entertainment or relaxation.",
+      "p": 0.1855609054779037
+     },
+     {
+      "cand": "The user may want to win or make progress in the game.",
+      "p": 0.1603628039528975
+     },
+     {
+      "cand": "The user may want to hear the game's audio clearly.",
+      "p": 0.12020139626099027
+     },
+     {
+      "cand": "The user may prefer that nothing be placed on the desk without permission.",
+      "p": 0.06628753470275199
+     },
+     {
+      "cand": "The user may be unaware that the robot has brought water.",
+      "p": 0.04440773806308805
+     }
+    ],
+    "score_errors": 0
+   },
+   "ga_warn": {
+    "candidates": [
+     "The user may want to win or make progress in the game.",
+     "The user may be seeking entertainment or relaxation.",
+     "The user may want to stay focused without interruption.",
+     "The user may want to hear the game's audio clearly.",
+     "The user may want water available in case they become thirsty.",
+     "The user may be unaware that the robot has brought water.",
+     "The user may prefer that nothing be placed on the desk without permission."
+    ],
+    "regens": [],
+    "per_cand": [
+     {
+      "cand": "The user may want to win or make progress in the game.",
+      "ev": [
+       80.26647399489538,
+       49.476134162841674,
+       50.27788146452453,
+       56.09971571682522,
+       78.18005449169439
+      ],
+      "said": [
+       85,
+       50,
+       50,
+       40,
+       80
+      ]
+     },
+     {
+      "cand": "The user may be seeking entertainment or relaxation.",
+      "ev": [
+       78.78181647772554,
+       62.62509979034674,
+       45.032733961426274,
+       43.999861924508174,
+       77.62264559793603
+      ],
+      "said": [
+       75,
+       65,
+       45,
+       55,
+       75
+      ]
+     },
+     {
+      "cand": "The user may want to stay focused without interruption.",
+      "ev": [
+       79.50745945699104,
+       51.109413026795636,
+       40.39282985877888,
+       35.917826083958644,
+       77.40678431571128
+      ],
+      "said": [
+       80,
+       50,
+       45,
+       40,
+       80
+      ]
+     },
+     {
+      "cand": "The user may want to hear the game's audio clearly.",
+      "ev": [
+       80.3590654223395,
+       49.42078942187923,
+       44.24489912013655,
+       54.46566695274706,
+       66.08368092104485
+      ],
+      "said": [
+       75,
+       50,
+       45,
+       55,
+       65
+      ]
+     },
+     {
+      "cand": "The user may want water available in case they become thirsty.",
+      "ev": [
+       81.42927202927125,
+       51.53358018494873,
+       52.258148812517966,
+       45.643227676918904,
+       74.5951723544189
+      ],
+      "said": [
+       75,
+       50,
+       45,
+       55,
+       75
+      ]
+     },
+     {
+      "cand": "The user may be unaware that the robot has brought water.",
+      "ev": [
+       82.85121487163516,
+       43.397657575517734,
+       55.64875132936978,
+       41.46789053562322,
+       77.41471383190598
+      ],
+      "said": [
+       80,
+       40,
+       50,
+       35,
+       80
+      ]
+     },
+     {
+      "cand": "The user may prefer that nothing be placed on the desk without permission.",
+      "ev": [
+       84.73214748416622,
+       50.224251704564985,
+       46.22285200543482,
+       43.03222324076797,
+       64.67482436787782
+      ],
+      "said": [
+       85,
+       50,
+       40,
+       30,
+       65
+      ]
+     }
+    ],
+    "rank_ev": [
+     {
+      "cand": "The user may want to win or make progress in the game.",
+      "p": 0.18793139274744047
+     },
+     {
+      "cand": "The user may be seeking entertainment or relaxation.",
+      "p": 0.16284644369265278
+     },
+     {
+      "cand": "The user may want water available in case they become thirsty.",
+      "p": 0.16023144450873728
+     },
+     {
+      "cand": "The user may be unaware that the robot has brought water.",
+      "p": 0.13784526072633102
+     },
+     {
+      "cand": "The user may want to hear the game's audio clearly.",
+      "p": 0.13572523611677673
+     },
+     {
+      "cand": "The user may prefer that nothing be placed on the desk without permission.",
+      "p": 0.11748522649779432
+     },
+     {
+      "cand": "The user may want to stay focused without interruption.",
+      "p": 0.09793499571026765
+     }
+    ],
+    "rank_said": [
+     {
+      "cand": "The user may be seeking entertainment or relaxation.",
+      "p": 0.21343519552454984
+     },
+     {
+      "cand": "The user may want water available in case they become thirsty.",
+      "p": 0.16418091963426906
+     },
+     {
+      "cand": "The user may want to win or make progress in the game.",
+      "p": 0.16038504203105247
+     },
+     {
+      "cand": "The user may want to hear the game's audio clearly.",
+      "p": 0.14229013034969987
+     },
+     {
+      "cand": "The user may want to stay focused without interruption.",
+      "p": 0.1358555650145386
+     },
+     {
+      "cand": "The user may be unaware that the robot has brought water.",
+      "p": 0.10566543945575219
+     },
+     {
+      "cand": "The user may prefer that nothing be placed on the desk without permission.",
+      "p": 0.07818770799013806
+     }
+    ],
+    "score_errors": 0
+   }
+  }
+ },
+ {
+  "id": 3,
+  "title": "자리가 문제",
+  "hidden": "커피는 원하지만 노트북 옆에 두면 쏟을까 봐 싫다",
+  "initial_candidates": [
+   "The user may want coffee while working.",
+   "The user may not want coffee at that moment.",
+   "The user may want to focus on reading email without interruption.",
+   "The user may want the robot to ask before bringing a drink.",
+   "The user may be concerned about coffee spilling onto the keyboard.",
+   "The user may prefer the coffee to be placed farther from the laptop.",
+   "The user may prefer the coffee on the left side.",
+   "The user may appreciate the robot anticipating their routine.",
+   "The user may want the coffee covered to keep it warm or prevent spills."
+  ],
+  "methods": {
+   "ga": {
+    "candidates": [
+     "The user may want coffee while working.",
+     "The user may not want coffee at that moment.",
+     "The user may want to focus on reading email without interruption.",
+     "The user may want the robot to ask before bringing a drink.",
+     "The user may be concerned about coffee spilling onto the keyboard.",
+     "The user may prefer the coffee to be placed farther from the laptop.",
+     "The user may prefer the coffee on the left side.",
+     "The user may appreciate the robot anticipating their routine.",
+     "The user may want the coffee covered to keep it warm or prevent spills."
+    ],
+    "regens": [],
+    "per_cand": [
+     {
+      "cand": "The user may want coffee while working.",
+      "ev": [
+       71.08012118905282,
+       84.50216862903231,
+       86.82612027692359,
+       93.37404260278525
+      ],
+      "said": [
+       70,
+       85,
+       85,
+       95
+      ]
+     },
+     {
+      "cand": "The user may not want coffee at that moment.",
+      "ev": [
+       54.94523844014504,
+       74.7765883841297,
+       35.765641839580454,
+       83.93351823649101
+      ],
+      "said": [
+       50,
+       75,
+       45,
+       80
+      ]
+     },
+     {
+      "cand": "The user may want to focus on reading email without interruption.",
+      "ev": [
+       71.05399249637618,
+       75.47900597012294,
+       79.46924795524876,
+       95.0
+      ],
+      "said": [
+       75,
+       80,
+       80,
+       95
+      ]
+     },
+     {
+      "cand": "The user may want the robot to ask before bringing a drink.",
+      "ev": [
+       59.97723966526881,
+       67.04455741175607,
+       71.78329799279159,
+       87.39297776627706
+      ],
+      "said": [
+       60,
+       70,
+       70,
+       90
+      ]
+     },
+     {
+      "cand": "The user may be concerned about coffee spilling onto the keyboard.",
+      "ev": [
+       84.92055812601885,
+       86.00810784841522,
+       85.06579797675883,
+       92.3885036532504
+      ],
+      "said": [
+       85,
+       85,
+       85,
+       95
+      ]
+     },
+     {
+      "cand": "The user may prefer the coffee to be placed farther from the laptop.",
+      "ev": [
+       71.4506526675548,
+       90.44883214545925,
+       86.87355792436834,
+       91.65338672431386
+      ],
+      "said": [
+       75,
+       90,
+       85,
+       95
+      ]
+     },
+     {
+      "cand": "The user may prefer the coffee on the left side.",
+      "ev": [
+       41.36922614753046,
+       21.472395915253955,
+       75.30501477061549,
+       86.32458800723651
+      ],
+      "said": [
+       30,
+       25,
+       70,
+       85
+      ]
+     },
+     {
+      "cand": "The user may appreciate the robot anticipating their routine.",
+      "ev": [
+       66.48725462889523,
+       75.21700581997565,
+       85.76160574855477,
+       93.65149067697432
+      ],
+      "said": [
+       70,
+       80,
+       85,
+       95
+      ]
+     },
+     {
+      "cand": "The user may want the coffee covered to keep it warm or prevent spills.",
+      "ev": [
+       58.24717507652548,
+       52.843386147826415,
+       76.32760037255485,
+       82.29255806209696
+      ],
+      "said": [
+       55,
+       60,
+       80,
+       75
+      ]
+     }
+    ],
+    "rank_ev": [
+     {
+      "cand": "The user may be concerned about coffee spilling onto the keyboard.",
+      "p": 0.19078087353519874
+     },
+     {
+      "cand": "The user may prefer the coffee to be placed farther from the laptop.",
+      "p": 0.17102317942769132
+     },
+     {
+      "cand": "The user may want coffee while working.",
+      "p": 0.16184610711251024
+     },
+     {
+      "cand": "The user may want to focus on reading email without interruption.",
+      "p": 0.13456962817192125
+     },
+     {
+      "cand": "The user may appreciate the robot anticipating their routine.",
+      "p": 0.13349706773817874
+     },
+     {
+      "cand": "The user may want the robot to ask before bringing a drink.",
+      "p": 0.08384161467743717
+     },
+     {
+      "cand": "The user may want the coffee covered to keep it warm or prevent spills.",
+      "p": 0.06425654407733454
+     },
+     {
+      "cand": "The user may not want coffee at that moment.",
+      "p": 0.04099273041479571
+     },
+     {
+      "cand": "The user may prefer the coffee on the left side.",
+      "p": 0.01919225484493218
+     }
+    ],
+    "rank_said": [
+     {
+      "cand": "The user may be concerned about coffee spilling onto the keyboard.",
+      "p": 0.18466307549569833
+     },
+     {
+      "cand": "The user may prefer the coffee to be placed farther from the laptop.",
+      "p": 0.17252259648387042
+     },
+     {
+      "cand": "The user may want coffee while working.",
+      "p": 0.15207547393763393
+     },
+     {
+      "cand": "The user may want to focus on reading email without interruption.",
+      "p": 0.14433262973813998
+     },
+     {
+      "cand": "The user may appreciate the robot anticipating their routine.",
+      "p": 0.14312985782365548
+     },
+     {
+      "cand": "The user may want the robot to ask before bringing a drink.",
+      "p": 0.08375090751910488
+     },
+     {
+      "cand": "The user may want the coffee covered to keep it warm or prevent spills.",
+      "p": 0.06267074712313975
+     },
+     {
+      "cand": "The user may not want coffee at that moment.",
+      "p": 0.04273005485668618
+     },
+     {
+      "cand": "The user may prefer the coffee on the left side.",
+      "p": 0.014124657022071259
+     }
+    ],
+    "score_errors": 0
+   },
+   "ga_warn": {
+    "candidates": [
+     "The user may want coffee while working.",
+     "The user may not want coffee at that moment.",
+     "The user may want to focus on reading email without interruption.",
+     "The user may want the robot to ask before bringing a drink.",
+     "The user may be concerned about coffee spilling onto the keyboard.",
+     "The user may prefer the coffee to be placed farther from the laptop.",
+     "The user may prefer the coffee on the left side.",
+     "The user may appreciate the robot anticipating their routine.",
+     "The user may want the coffee covered to keep it warm or prevent spills."
+    ],
+    "regens": [],
+    "per_cand": [
+     {
+      "cand": "The user may want coffee while working.",
+      "ev": [
+       53.49501876722714,
+       68.0501240645503,
+       75.7363086278361,
+       76.86580313194327
+      ],
+      "said": [
+       55,
+       65,
+       80,
+       85
+      ]
+     },
+     {
+      "cand": "The user may not want coffee at that moment.",
+      "ev": [
+       54.18240093472671,
+       54.721008582142275,
+       38.41354022258869,
+       79.70985475191536
+      ],
+      "said": [
+       55,
+       60,
+       40,
+       85
+      ]
+     },
+     {
+      "cand": "The user may want to focus on reading email without interruption.",
+      "ev": [
+       57.78244412050455,
+       68.22881321566969,
+       65.07883152036331,
+       86.63900473178153
+      ],
+      "said": [
+       55,
+       65,
+       65,
+       90
+      ]
+     },
+     {
+      "cand": "The user may want the robot to ask before bringing a drink.",
+      "ev": [
+       52.101707864049864,
+       56.41390292572379,
+       65.62811808864662,
+       82.51426909202715
+      ],
+      "said": [
+       55,
+       60,
+       65,
+       85
+      ]
+     },
+     {
+      "cand": "The user may be concerned about coffee spilling onto the keyboard.",
+      "ev": [
+       65.69935809241585,
+       73.09571517290368,
+       72.31320199188494,
+       81.26633822581307
+      ],
+      "said": [
+       65,
+       70,
+       75,
+       80
+      ]
+     },
+     {
+      "cand": "The user may prefer the coffee to be placed farther from the laptop.",
+      "ev": [
+       60.19622285922215,
+       78.46655322503405,
+       71.78979375352507,
+       83.06504527378327
+      ],
+      "said": [
+       65,
+       75,
+       75,
+       75
+      ]
+     },
+     {
+      "cand": "The user may prefer the coffee on the left side.",
+      "ev": [
+       48.228728920649324,
+       33.43083802990658,
+       70.52284920128805,
+       81.17720155689128
+      ],
+      "said": [
+       55,
+       35,
+       70,
+       80
+      ]
+     },
+     {
+      "cand": "The user may appreciate the robot anticipating their routine.",
+      "ev": [
+       57.901166914185815,
+       68.3760020848083,
+       71.47908259034737,
+       82.22960785719997
+      ],
+      "said": [
+       55,
+       70,
+       70,
+       85
+      ]
+     },
+     {
+      "cand": "The user may want the coffee covered to keep it warm or prevent spills.",
+      "ev": [
+       57.84441331185896,
+       57.02693121803378,
+       68.43614230731436,
+       76.72251267179945
+      ],
+      "said": [
+       60,
+       55,
+       65,
+       80
+      ]
+     }
+    ],
+    "rank_ev": [
+     {
+      "cand": "The user may be concerned about coffee spilling onto the keyboard.",
+      "p": 0.16161233837136946
+     },
+     {
+      "cand": "The user may prefer the coffee to be placed farther from the laptop.",
+      "p": 0.16129764015417336
+     },
+     {
+      "cand": "The user may appreciate the robot anticipating their routine.",
+      "p": 0.13325741799582314
+     },
+     {
+      "cand": "The user may want to focus on reading email without interruption.",
+      "p": 0.12729463817071335
+     },
+     {
+      "cand": "The user may want coffee while working.",
+      "p": 0.12135921348346226
+     },
+     {
+      "cand": "The user may want the coffee covered to keep it warm or prevent spills.",
+      "p": 0.09918430282599017
+     },
+     {
+      "cand": "The user may want the robot to ask before bringing a drink.",
+      "p": 0.09114866218557513
+     },
+     {
+      "cand": "The user may prefer the coffee on the left side.",
+      "p": 0.05285793465584027
+     },
+     {
+      "cand": "The user may not want coffee at that moment.",
+      "p": 0.051987852157052906
+     }
+    ],
+    "rank_said": [
+     {
+      "cand": "The user may prefer the coffee to be placed farther from the laptop.",
+      "p": 0.15213614754865756
+     },
+     {
+      "cand": "The user may be concerned about coffee spilling onto the keyboard.",
+      "p": 0.15145998689288576
+     },
+     {
+      "cand": "The user may want coffee while working.",
+      "p": 0.13487151213795065
+     },
+     {
+      "cand": "The user may appreciate the robot anticipating their routine.",
+      "p": 0.12709046336076116
+     },
+     {
+      "cand": "The user may want to focus on reading email without interruption.",
+      "p": 0.11602916853044283
+     },
+     {
+      "cand": "The user may want the robot to ask before bringing a drink.",
+      "p": 0.10115363410346298
+     },
+     {
+      "cand": "The user may want the coffee covered to keep it warm or prevent spills.",
+      "p": 0.09520342033267107
+     },
+     {
+      "cand": "The user may not want coffee at that moment.",
+      "p": 0.06224839021751566
+     },
+     {
+      "cand": "The user may prefer the coffee on the left side.",
+      "p": 0.05980727687565229
+     }
+    ],
+    "score_errors": 0
+   }
+  }
+ },
+ {
+  "id": 4,
+  "title": "짜증의 대상",
+  "hidden": "음료는 반가웠고, 짜증은 문자 때문이었다",
+  "initial_candidates": [
+   "The user may want some time alone to process upsetting news.",
+   "The user may want emotional support from someone nearby.",
+   "The user may want to resolve a problem raised in the message.",
+   "The user may feel worried about the person who sent the message.",
+   "The user may feel annoyed by the interruption.",
+   "The user may want a distraction from the message.",
+   "The user may want a drink while sitting at the desk.",
+   "The user may not want soda or additional refreshment."
+  ],
+  "methods": {
+   "ga": {
+    "candidates": [
+     "The user may want some time alone to process upsetting news.",
+     "The user may want emotional support from someone nearby.",
+     "The user may want to resolve a problem raised in the message.",
+     "The user may feel worried about the person who sent the message.",
+     "The user may feel annoyed by the interruption.",
+     "The user may want a distraction from the message.",
+     "The user may want a drink while sitting at the desk.",
+     "The user may not want soda or additional refreshment."
+    ],
+    "regens": [],
+    "per_cand": [
+     {
+      "cand": "The user may want some time alone to process upsetting news.",
+      "ev": [
+       81.3797654187445,
+       85.36687524103138,
+       73.63657790420675,
+       70.49991059024441,
+       81.37869377787453
+      ],
+      "said": [
+       80,
+       90,
+       75,
+       70,
+       80
+      ]
+     },
+     {
+      "cand": "The user may want emotional support from someone nearby.",
+      "ev": [
+       84.15270218109221,
+       84.1300037612115,
+       77.09417946917908,
+       67.09704375366975,
+       73.57013158761387
+      ],
+      "said": [
+       85,
+       85,
+       75,
+       60,
+       70
+      ]
+     },
+     {
+      "cand": "The user may want to resolve a problem raised in the message.",
+      "ev": [
+       80.4449700026617,
+       85.90948214997194,
+       87.29024249230895,
+       68.21328155264061,
+       70.71495548621382
+      ],
+      "said": [
+       80,
+       85,
+       90,
+       65,
+       70
+      ]
+     },
+     {
+      "cand": "The user may feel worried about the person who sent the message.",
+      "ev": [
+       83.4603823375725,
+       83.4582963700343,
+       83.73441256528368,
+       75.99558440274552,
+       80.65304056797537
+      ],
+      "said": [
+       85,
+       80,
+       85,
+       75,
+       85
+      ]
+     },
+     {
+      "cand": "The user may feel annoyed by the interruption.",
+      "ev": [
+       79.66384596026062,
+       85.41461378565108,
+       81.38476463068628,
+       69.31448368680887,
+       78.21429275355023
+      ],
+      "said": [
+       80,
+       90,
+       80,
+       70,
+       85
+      ]
+     },
+     {
+      "cand": "The user may want a distraction from the message.",
+      "ev": [
+       74.95488075042621,
+       75.19633178123529,
+       47.57946217093742,
+       75.39874342686272,
+       76.63130986127678
+      ],
+      "said": [
+       75,
+       75,
+       50,
+       75,
+       75
+      ]
+     },
+     {
+      "cand": "The user may want a drink while sitting at the desk.",
+      "ev": [
+       52.89814803012351,
+       42.73307071643578,
+       57.51846346390003,
+       87.88804457211171,
+       86.64704707864959
+      ],
+      "said": [
+       50,
+       30,
+       70,
+       90,
+       85
+      ]
+     },
+     {
+      "cand": "The user may not want soda or additional refreshment.",
+      "ev": [
+       73.34127061758997,
+       71.18808650393929,
+       84.86442746093388,
+       45.28313655216608,
+       78.73526804254733
+      ],
+      "said": [
+       70,
+       75,
+       85,
+       40,
+       75
+      ]
+     }
+    ],
+    "rank_ev": [
+     {
+      "cand": "The user may feel worried about the person who sent the message.",
+      "p": 0.18584682623880486
+     },
+     {
+      "cand": "The user may feel annoyed by the interruption.",
+      "p": 0.15607698241300613
+     },
+     {
+      "cand": "The user may want some time alone to process upsetting news.",
+      "p": 0.15257763501083862
+     },
+     {
+      "cand": "The user may want to resolve a problem raised in the message.",
+      "p": 0.15127880752068393
+     },
+     {
+      "cand": "The user may want emotional support from someone nearby.",
+      "p": 0.1400675930298654
+     },
+     {
+      "cand": "The user may not want soda or additional refreshment.",
+      "p": 0.08212576500938014
+     },
+     {
+      "cand": "The user may want a distraction from the message.",
+      "p": 0.08055242900463698
+     },
+     {
+      "cand": "The user may want a drink while sitting at the desk.",
+      "p": 0.05147396177278373
+     }
+    ],
+    "rank_said": [
+     {
+      "cand": "The user may feel worried about the person who sent the message.",
+      "p": 0.1947495320045467
+     },
+     {
+      "cand": "The user may feel annoyed by the interruption.",
+      "p": 0.18113728097862333
+     },
+     {
+      "cand": "The user may want some time alone to process upsetting news.",
+      "p": 0.1598270126281971
+     },
+     {
+      "cand": "The user may want to resolve a problem raised in the message.",
+      "p": 0.1471740407951315
+     },
+     {
+      "cand": "The user may want emotional support from someone nearby.",
+      "p": 0.12028647564986704
+     },
+     {
+      "cand": "The user may want a distraction from the message.",
+      "p": 0.08361485733199488
+     },
+     {
+      "cand": "The user may not want soda or additional refreshment.",
+      "p": 0.07075675038227475
+     },
+     {
+      "cand": "The user may want a drink while sitting at the desk.",
+      "p": 0.04245405022936483
+     }
+    ],
+    "score_errors": 0
+   },
+   "ga_warn": {
+    "candidates": [
+     "The user may want some time alone to process upsetting news.",
+     "The user may want emotional support from someone nearby.",
+     "The user may want to resolve a problem raised in the message.",
+     "The user may feel worried about the person who sent the message.",
+     "The user may feel annoyed by the interruption.",
+     "The user may want a distraction from the message.",
+     "The user may want a drink while sitting at the desk.",
+     "The user may not want soda or additional refreshment."
+    ],
+    "regens": [],
+    "per_cand": [
+     {
+      "cand": "The user may want some time alone to process upsetting news.",
+      "ev": [
+       66.21957808085251,
+       71.63980843017124,
+       63.16855604833397,
+       65.63969861336517,
+       71.18382359440464
+      ],
+      "said": [
+       65,
+       70,
+       55,
+       65,
+       75
+      ]
+     },
+     {
+      "cand": "The user may want emotional support from someone nearby.",
+      "ev": [
+       65.33550842930701,
+       68.72982065577648,
+       64.16631353371471,
+       59.326442887824825,
+       58.563865392315414
+      ],
+      "said": [
+       65,
+       65,
+       60,
+       60,
+       60
+      ]
+     },
+     {
+      "cand": "The user may want to resolve a problem raised in the message.",
+      "ev": [
+       65.31050661847782,
+       73.30106884918978,
+       75.33034246537906,
+       59.726339330758925,
+       64.77201442035599
+      ],
+      "said": [
+       65,
+       80,
+       80,
+       65,
+       65
+      ]
+     },
+     {
+      "cand": "The user may feel worried about the person who sent the message.",
+      "ev": [
+       65.5296416815279,
+       69.19678239633072,
+       71.57844902848574,
+       66.82443988336254,
+       70.31260689106753
+      ],
+      "said": [
+       65,
+       65,
+       75,
+       70,
+       70
+      ]
+     },
+     {
+      "cand": "The user may feel annoyed by the interruption.",
+      "ev": [
+       66.02583194637681,
+       68.25548176447094,
+       68.07368497692558,
+       63.36137587081221,
+       68.43466521069344
+      ],
+      "said": [
+       65,
+       65,
+       65,
+       60,
+       65
+      ]
+     },
+     {
+      "cand": "The user may want a distraction from the message.",
+      "ev": [
+       61.47228352128346,
+       72.09697737329273,
+       50.75186253111562,
+       64.37245708666316,
+       65.62018591158862
+      ],
+      "said": [
+       60,
+       65,
+       45,
+       65,
+       65
+      ]
+     },
+     {
+      "cand": "The user may want a drink while sitting at the desk.",
+      "ev": [
+       47.12051353160501,
+       49.467805490925194,
+       58.36002919386071,
+       73.70213593502592,
+       70.66584126088618
+      ],
+      "said": [
+       45,
+       45,
+       60,
+       70,
+       75
+      ]
+     },
+     {
+      "cand": "The user may not want soda or additional refreshment.",
+      "ev": [
+       57.70679961989276,
+       65.55435290427356,
+       72.96168716519007,
+       33.149003614418135,
+       65.3523808111968
+      ],
+      "said": [
+       55,
+       65,
+       75,
+       35,
+       60
+      ]
+     }
+    ],
+    "rank_ev": [
+     {
+      "cand": "The user may feel worried about the person who sent the message.",
+      "p": 0.17119107463147312
+     },
+     {
+      "cand": "The user may want some time alone to process upsetting news.",
+      "p": 0.15717963596206747
+     },
+     {
+      "cand": "The user may want to resolve a problem raised in the message.",
+      "p": 0.15661134395943535
+     },
+     {
+      "cand": "The user may feel annoyed by the interruption.",
+      "p": 0.14932689634124016
+     },
+     {
+      "cand": "The user may want emotional support from someone nearby.",
+      "p": 0.1123792764112002
+     },
+     {
+      "cand": "The user may want a distraction from the message.",
+      "p": 0.10665778123617613
+     },
+     {
+      "cand": "The user may want a drink while sitting at the desk.",
+      "p": 0.07953245361197253
+     },
+     {
+      "cand": "The user may not want soda or additional refreshment.",
+      "p": 0.06712153784643497
+     }
+    ],
+    "rank_said": [
+     {
+      "cand": "The user may want to resolve a problem raised in the message.",
+      "p": 0.20784457776026952
+     },
+     {
+      "cand": "The user may feel worried about the person who sent the message.",
+      "p": 0.1836126979011996
+     },
+     {
+      "cand": "The user may want some time alone to process upsetting news.",
+      "p": 0.144267119779514
+     },
+     {
+      "cand": "The user may feel annoyed by the interruption.",
+      "p": 0.12665528957266423
+     },
+     {
+      "cand": "The user may want emotional support from someone nearby.",
+      "p": 0.10791929999090916
+     },
+     {
+      "cand": "The user may want a distraction from the message.",
+      "p": 0.0876844312426137
+     },
+     {
+      "cand": "The user may want a drink while sitting at the desk.",
+      "p": 0.07543175923920796
+     },
+     {
+      "cand": "The user may not want soda or additional refreshment.",
+      "p": 0.06658482451362184
+     }
+    ],
+    "score_errors": 0
+   }
+  }
+ },
+ {
+  "id": 5,
+  "title": "반만 맞음",
+  "hidden": "큰 불은 꺼도 되지만, 아직 자지 않고 책을 읽으려 한다",
+  "initial_candidates": [
+   "The user may want to go to sleep soon.",
+   "The user may want to read in bed with enough light.",
+   "The user may want to relax after working.",
+   "The user may want a change of activity without ending their day.",
+   "The user may want the room to be dark and restful.",
+   "The user may want to save electricity.",
+   "The user may prefer to control the lighting themselves."
+  ],
+  "methods": {
+   "ga": {
+    "candidates": [
+     "The user may want to go to sleep soon.",
+     "The user may want to read in bed with enough light.",
+     "The user may want to relax after working.",
+     "The user may want a change of activity without ending their day.",
+     "The user may want the room to be dark and restful.",
+     "The user may want to save electricity.",
+     "The user may prefer to control the lighting themselves."
+    ],
+    "regens": [],
+    "per_cand": [
+     {
+      "cand": "The user may want to go to sleep soon.",
+      "ev": [
+       84.44955920653341,
+       77.33485150001982,
+       82.12752100875187
+      ],
+      "said": [
+       85,
+       75,
+       85
+      ]
+     },
+     {
+      "cand": "The user may want to read in bed with enough light.",
+      "ev": [
+       81.71606804594668,
+       95.0,
+       95.0
+      ],
+      "said": [
+       80,
+       95,
+       95
+      ]
+     },
+     {
+      "cand": "The user may want to relax after working.",
+      "ev": [
+       81.64614866810037,
+       88.2286463205947,
+       92.17096624864513
+      ],
+      "said": [
+       85,
+       90,
+       95
+      ]
+     },
+     {
+      "cand": "The user may want a change of activity without ending their day.",
+      "ev": [
+       79.19711750647446,
+       91.14780087615324,
+       92.28340230018347
+      ],
+      "said": [
+       80,
+       95,
+       90
+      ]
+     },
+     {
+      "cand": "The user may want the room to be dark and restful.",
+      "ev": [
+       78.93158094147871,
+       84.5607370619401,
+       87.86131715864045
+      ],
+      "said": [
+       75,
+       80,
+       85
+      ]
+     },
+     {
+      "cand": "The user may want to save electricity.",
+      "ev": [
+       78.07822714643278,
+       71.01067363572264,
+       84.79566508409792
+      ],
+      "said": [
+       75,
+       65,
+       85
+      ]
+     },
+     {
+      "cand": "The user may prefer to control the lighting themselves.",
+      "ev": [
+       70.3703983168857,
+       84.94608580941261,
+       85.75296744348138
+      ],
+      "said": [
+       65,
+       85,
+       80
+      ]
+     }
+    ],
+    "rank_ev": [
+     {
+      "cand": "The user may want to read in bed with enough light.",
+      "p": 0.1767221512021235
+     },
+     {
+      "cand": "The user may want a change of activity without ending their day.",
+      "p": 0.15963035710010817
+     },
+     {
+      "cand": "The user may want to relax after working.",
+      "p": 0.15910205063490132
+     },
+     {
+      "cand": "The user may want the room to be dark and restful.",
+      "p": 0.1405249982006307
+     },
+     {
+      "cand": "The user may want to go to sleep soon.",
+      "p": 0.12852797776323868
+     },
+     {
+      "cand": "The user may prefer to control the lighting themselves.",
+      "p": 0.1228340740349656
+     },
+     {
+      "cand": "The user may want to save electricity.",
+      "p": 0.11265839106403208
+     }
+    ],
+    "rank_said": [
+     {
+      "cand": "The user may want to relax after working.",
+      "p": 0.17984409799554563
+     },
+     {
+      "cand": "The user may want to read in bed with enough light.",
+      "p": 0.1786686463746597
+     },
+     {
+      "cand": "The user may want a change of activity without ending their day.",
+      "p": 0.16926503340757237
+     },
+     {
+      "cand": "The user may want to go to sleep soon.",
+      "p": 0.13409428359317
+     },
+     {
+      "cand": "The user may want the room to be dark and restful.",
+      "p": 0.12620638455827765
+     },
+     {
+      "cand": "The user may prefer to control the lighting themselves.",
+      "p": 0.10937886661717396
+     },
+     {
+      "cand": "The user may want to save electricity.",
+      "p": 0.1025426874536006
+     }
+    ],
+    "score_errors": 0
+   },
+   "ga_warn": {
+    "candidates": [
+     "The user may want to go to sleep soon.",
+     "The user may want to read in bed with enough light.",
+     "The user may want to relax after working.",
+     "The user may want a change of activity without ending their day.",
+     "The user may want the room to be dark and restful.",
+     "The user may want to save electricity.",
+     "The user may prefer to control the lighting themselves."
+    ],
+    "regens": [],
+    "per_cand": [
+     {
+      "cand": "The user may want to go to sleep soon.",
+      "ev": [
+       71.69298321472375,
+       72.55074345858658,
+       71.84230648625469
+      ],
+      "said": [
+       75,
+       70,
+       75
+      ]
+     },
+     {
+      "cand": "The user may want to read in bed with enough light.",
+      "ev": [
+       67.78260216377777,
+       84.91730711596917,
+       87.97692938327059
+      ],
+      "said": [
+       75,
+       85,
+       90
+      ]
+     },
+     {
+      "cand": "The user may want to relax after working.",
+      "ev": [
+       67.47503001252544,
+       78.71859949757939,
+       81.58700259454078
+      ],
+      "said": [
+       65,
+       85,
+       85
+      ]
+     },
+     {
+      "cand": "The user may want a change of activity without ending their day.",
+      "ev": [
+       69.45312941470054,
+       80.24498908785799,
+       83.0382736654238
+      ],
+      "said": [
+       75,
+       80,
+       85
+      ]
+     },
+     {
+      "cand": "The user may want the room to be dark and restful.",
+      "ev": [
+       71.84967896089712,
+       69.10857721672825,
+       76.7853367594676
+      ],
+      "said": [
+       75,
+       75,
+       75
+      ]
+     },
+     {
+      "cand": "The user may want to save electricity.",
+      "ev": [
+       51.782137769854785,
+       68.10069751299764,
+       74.933586111587
+      ],
+      "said": [
+       55,
+       65,
+       75
+      ]
+     },
+     {
+      "cand": "The user may prefer to control the lighting themselves.",
+      "ev": [
+       54.54762542925236,
+       68.85583302306564,
+       68.84055503679664
+      ],
+      "said": [
+       50,
+       75,
+       70
+      ]
+     }
+    ],
+    "rank_ev": [
+     {
+      "cand": "The user may want to read in bed with enough light.",
+      "p": 0.18893012495146896
+     },
+     {
+      "cand": "The user may want a change of activity without ending their day.",
+      "p": 0.17266567634618174
+     },
+     {
+      "cand": "The user may want to relax after working.",
+      "p": 0.16168114805935002
+     },
+     {
+      "cand": "The user may want the room to be dark and restful.",
+      "p": 0.14225025000186475
+     },
+     {
+      "cand": "The user may want to go to sleep soon.",
+      "p": 0.13941732553066355
+     },
+     {
+      "cand": "The user may want to save electricity.",
+      "p": 0.09858844445907312
+     },
+     {
+      "cand": "The user may prefer to control the lighting themselves.",
+      "p": 0.0964670306513978
+     }
+    ],
+    "rank_said": [
+     {
+      "cand": "The user may want to read in bed with enough light.",
+      "p": 0.19787041427770835
+     },
+     {
+      "cand": "The user may want a change of activity without ending their day.",
+      "p": 0.1758848126912963
+     },
+     {
+      "cand": "The user may want to relax after working.",
+      "p": 0.16196059835323534
+     },
+     {
+      "cand": "The user may want the room to be dark and restful.",
+      "p": 0.14549295167478554
+     },
+     {
+      "cand": "The user may want to go to sleep soon.",
+      "p": 0.13579342156313315
+     },
+     {
+      "cand": "The user may want to save electricity.",
+      "p": 0.09246885373108593
+     },
+     {
+      "cand": "The user may prefer to control the lighting themselves.",
+      "p": 0.09052894770875544
+     }
+    ],
+    "score_errors": 0
+   }
+  }
+ },
+ {
+  "id": 6,
+  "title": "너무 일찍 치움",
+  "hidden": "치우는 건 좋지만, 잠깐 자리를 비운 것이지 다 먹은 게 아니었다",
+  "initial_candidates": [
+   "The user may intend to return and finish the snacks.",
+   "The user may be finished eating and want the remaining snacks discarded.",
+   "The user may want the remaining snacks saved for later.",
+   "The user may want someone else to have the remaining snacks.",
+   "The user may be taking only a brief bathroom break and expect the bowl to stay where it is.",
+   "The user may want the table cleared while they are away.",
+   "The user may not care what happens to the remaining snacks or the bowl.",
+   "The user may expect the robot to ask before handling their food.",
+   "The user may be unaware that the bowl still contains snacks."
+  ],
+  "methods": {
+   "ga": {
+    "candidates": [
+     "The user may intend to return and finish the snacks.",
+     "The user may be finished eating and want the remaining snacks discarded.",
+     "The user may want the remaining snacks saved for later.",
+     "The user may want someone else to have the remaining snacks.",
+     "The user may be taking only a brief bathroom break and expect the bowl to stay where it is.",
+     "The user may want the table cleared while they are away.",
+     "The user may not care what happens to the remaining snacks or the bowl.",
+     "The user may expect the robot to ask before handling their food.",
+     "The user may be unaware that the bowl still contains snacks."
+    ],
+    "regens": [],
+    "per_cand": [
+     {
+      "cand": "The user may intend to return and finish the snacks.",
+      "ev": [
+       91.53512982416581,
+       94.3736120711643,
+       95.0,
+       95.0
+      ],
+      "said": [
+       90,
+       95,
+       95,
+       95
+      ]
+     },
+     {
+      "cand": "The user may be finished eating and want the remaining snacks discarded.",
+      "ev": [
+       29.375826449077934,
+       17.049350899568083,
+       5.148912861008886,
+       6.143209424819329
+      ],
+      "said": [
+       20,
+       15,
+       5,
+       5
+      ]
+     },
+     {
+      "cand": "The user may want the remaining snacks saved for later.",
+      "ev": [
+       90.10434466373201,
+       90.13678664090799,
+       94.79343779830982,
+       94.86043878923307
+      ],
+      "said": [
+       90,
+       90,
+       95,
+       95
+      ]
+     },
+     {
+      "cand": "The user may want someone else to have the remaining snacks.",
+      "ev": [
+       83.70380035902708,
+       86.35695059617055,
+       21.29046795781563,
+       19.132052030505843
+      ],
+      "said": [
+       85,
+       90,
+       20,
+       20
+      ]
+     },
+     {
+      "cand": "The user may be taking only a brief bathroom break and expect the bowl to stay where it is.",
+      "ev": [
+       94.39277904830045,
+       86.27740729055213,
+       95.0,
+       95.0
+      ],
+      "said": [
+       95,
+       85,
+       95,
+       95
+      ]
+     },
+     {
+      "cand": "The user may want the table cleared while they are away.",
+      "ev": [
+       67.64886157248563,
+       31.82234863753915,
+       51.53839385574216,
+       81.58657189840079
+      ],
+      "said": [
+       80,
+       30,
+       30,
+       80
+      ]
+     },
+     {
+      "cand": "The user may not care what happens to the remaining snacks or the bowl.",
+      "ev": [
+       49.79168413939895,
+       28.143894194311777,
+       11.601442064784388,
+       51.157456644472965
+      ],
+      "said": [
+       50,
+       30,
+       10,
+       60
+      ]
+     },
+     {
+      "cand": "The user may expect the robot to ask before handling their food.",
+      "ev": [
+       88.24419223589612,
+       85.58682218908197,
+       91.92393307299248,
+       91.9300367022944
+      ],
+      "said": [
+       90,
+       85,
+       90,
+       90
+      ]
+     },
+     {
+      "cand": "The user may be unaware that the bowl still contains snacks.",
+      "ev": [
+       82.37836524434393,
+       31.584357185508,
+       68.07849215786801,
+       87.91273417091556
+      ],
+      "said": [
+       80,
+       30,
+       60,
+       85
+      ]
+     }
+    ],
+    "rank_ev": [
+     {
+      "cand": "The user may intend to return and finish the snacks.",
+      "p": 0.24614601555748608
+     },
+     {
+      "cand": "The user may be taking only a brief bathroom break and expect the bowl to stay where it is.",
+      "p": 0.2320546571783269
+     },
+     {
+      "cand": "The user may want the remaining snacks saved for later.",
+      "p": 0.23057829680559375
+     },
+     {
+      "cand": "The user may expect the robot to ask before handling their food.",
+      "p": 0.20150521253825573
+     },
+     {
+      "cand": "The user may be unaware that the bowl still contains snacks.",
+      "p": 0.0491647853350095
+     },
+     {
+      "cand": "The user may want the table cleared while they are away.",
+      "p": 0.028579163129592723
+     },
+     {
+      "cand": "The user may want someone else to have the remaining snacks.",
+      "p": 0.009296007283640016
+     },
+     {
+      "cand": "The user may not care what happens to the remaining snacks or the bowl.",
+      "p": 0.0026258453579134427
+     },
+     {
+      "cand": "The user may be finished eating and want the remaining snacks discarded.",
+      "p": 5.00168141819535e-05
+     }
+    ],
+    "rank_said": [
+     {
+      "cand": "The user may intend to return and finish the snacks.",
+      "p": 0.25128581925055105
+     },
+     {
+      "cand": "The user may want the remaining snacks saved for later.",
+      "p": 0.23806024981631152
+     },
+     {
+      "cand": "The user may be taking only a brief bathroom break and expect the bowl to stay where it is.",
+      "p": 0.23732549595885377
+     },
+     {
+      "cand": "The user may expect the robot to ask before handling their food.",
+      "p": 0.2017906826697821
+     },
+     {
+      "cand": "The user may be unaware that the bowl still contains snacks.",
+      "p": 0.03985988793477176
+     },
+     {
+      "cand": "The user may want the table cleared while they are away.",
+      "p": 0.018757594322245535
+     },
+     {
+      "cand": "The user may want someone else to have the remaining snacks.",
+      "p": 0.009964971983692943
+     },
+     {
+      "cand": "The user may not care what happens to the remaining snacks or the bowl.",
+      "p": 0.0029308741128508684
+     },
+     {
+      "cand": "The user may be finished eating and want the remaining snacks discarded.",
+      "p": 2.4423950940423864e-05
+     }
+    ],
+    "score_errors": 0
+   },
+   "ga_warn": {
+    "candidates": [
+     "The user may intend to return and finish the snacks.",
+     "The user may be finished eating and want the remaining snacks discarded.",
+     "The user may want the remaining snacks saved for later.",
+     "The user may want someone else to have the remaining snacks.",
+     "The user may be taking only a brief bathroom break and expect the bowl to stay where it is.",
+     "The user may want the table cleared while they are away.",
+     "The user may not care what happens to the remaining snacks or the bowl.",
+     "The user may expect the robot to ask before handling their food.",
+     "The user may be unaware that the bowl still contains snacks."
+    ],
+    "regens": [],
+    "per_cand": [
+     {
+      "cand": "The user may intend to return and finish the snacks.",
+      "ev": [
+       83.851750365983,
+       68.34072306122137,
+       82.52173638604594,
+       84.78235930833608
+      ],
+      "said": [
+       85,
+       75,
+       85,
+       85
+      ]
+     },
+     {
+      "cand": "The user may be finished eating and want the remaining snacks discarded.",
+      "ev": [
+       45.021803120357916,
+       28.513794129218166,
+       17.168537397453065,
+       8.531997619195336
+      ],
+      "said": [
+       35,
+       25,
+       10,
+       15
+      ]
+     },
+     {
+      "cand": "The user may want the remaining snacks saved for later.",
+      "ev": [
+       75.75978969825167,
+       75.91819282106137,
+       83.1787499545544,
+       77.1760230014791
+      ],
+      "said": [
+       75,
+       75,
+       85,
+       75
+      ]
+     },
+     {
+      "cand": "The user may want someone else to have the remaining snacks.",
+      "ev": [
+       67.60447246516954,
+       66.77842867772395,
+       29.21660271072737,
+       61.013141441182015
+      ],
+      "said": [
+       70,
+       65,
+       35,
+       65
+      ]
+     },
+     {
+      "cand": "The user may be taking only a brief bathroom break and expect the bowl to stay where it is.",
+      "ev": [
+       78.48282101926902,
+       64.61583264300411,
+       84.42923218976917,
+       86.70410606976814
+      ],
+      "said": [
+       80,
+       75,
+       85,
+       85
+      ]
+     },
+     {
+      "cand": "The user may want the table cleared while they are away.",
+      "ev": [
+       64.31696570432644,
+       58.923837851044155,
+       71.75517333765202,
+       57.25872876904617
+      ],
+      "said": [
+       60,
+       60,
+       75,
+       55
+      ]
+     },
+     {
+      "cand": "The user may not care what happens to the remaining snacks or the bowl.",
+      "ev": [
+       49.91606651415439,
+       34.411002786318754,
+       26.309918429517513,
+       35.200408060700404
+      ],
+      "said": [
+       50,
+       35,
+       20,
+       35
+      ]
+     },
+     {
+      "cand": "The user may expect the robot to ask before handling their food.",
+      "ev": [
+       75.01761457045963,
+       69.7759231785126,
+       81.80239386526097,
+       84.19569055517309
+      ],
+      "said": [
+       70,
+       70,
+       75,
+       85
+      ]
+     },
+     {
+      "cand": "The user may be unaware that the bowl still contains snacks.",
+      "ev": [
+       68.1115304602449,
+       51.38934504068199,
+       51.89217615299506,
+       73.48984420884766
+      ],
+      "said": [
+       75,
+       55,
+       25,
+       55
+      ]
+     }
+    ],
+    "rank_ev": [
+     {
+      "cand": "The user may intend to return and finish the snacks.",
+      "p": 0.2122043513543378
+     },
+     {
+      "cand": "The user may be taking only a brief bathroom break and expect the bowl to stay where it is.",
+      "p": 0.19648743455281212
+     },
+     {
+      "cand": "The user may want the remaining snacks saved for later.",
+      "p": 0.19541960611767897
+     },
+     {
+      "cand": "The user may expect the robot to ask before handling their food.",
+      "p": 0.19081541014469758
+     },
+     {
+      "cand": "The user may want the table cleared while they are away.",
+      "p": 0.08241385329889588
+     },
+     {
+      "cand": "The user may be unaware that the bowl still contains snacks.",
+      "p": 0.07064991755501214
+     },
+     {
+      "cand": "The user may want someone else to have the remaining snacks.",
+      "p": 0.04259449296781367
+     },
+     {
+      "cand": "The user may not care what happens to the remaining snacks or the bowl.",
+      "p": 0.008419641704715895
+     },
+     {
+      "cand": "The user may be finished eating and want the remaining snacks discarded.",
+      "p": 0.0009952923040359505
+     }
+    ],
+    "rank_said": [
+     {
+      "cand": "The user may intend to return and finish the snacks.",
+      "p": 0.2440417647701646
+     },
+     {
+      "cand": "The user may be taking only a brief bathroom break and expect the bowl to stay where it is.",
+      "p": 0.22968636684250784
+     },
+     {
+      "cand": "The user may want the remaining snacks saved for later.",
+      "p": 0.18999791374839808
+     },
+     {
+      "cand": "The user may expect the robot to ask before handling their food.",
+      "p": 0.16550929375416007
+     },
+     {
+      "cand": "The user may want the table cleared while they are away.",
+      "p": 0.0786814889875719
+     },
+     {
+      "cand": "The user may want someone else to have the remaining snacks.",
+      "p": 0.054845236557751094
+     },
+     {
+      "cand": "The user may be unaware that the bowl still contains snacks.",
+      "p": 0.030051957599419837
+     },
+     {
+      "cand": "The user may not care what happens to the remaining snacks or the bowl.",
+      "p": 0.006490560539378823
+     },
+     {
+      "cand": "The user may be finished eating and want the remaining snacks discarded.",
+      "p": 0.0006954172006477308
+     }
+    ],
+    "score_errors": 0
+   }
+  }
+ },
+ {
+  "id": 7,
+  "title": "친구에게 밀어 줌",
+  "hidden": "자기는 물이 있어서 괜찮고, 기침하는 친구가 마시길 바랐다",
+  "initial_candidates": [
+   "The user may want to stay focused on their laptop work without interruption.",
+   "The user may want a drink while working.",
+   "The user may prefer to use the water bottle already in front of them.",
+   "The user may appreciate the robot anticipating their needs.",
+   "The user may be concerned that their friend is unwell or needs water.",
+   "The user may wish the robot had offered the drink to their friend instead.",
+   "The user may be puzzled about why the robot brought a canned drink.",
+   "The user may not want an unsolicited drink, perhaps because of its contents or their preferences."
+  ],
+  "methods": {
+   "ga": {
+    "candidates": [
+     "The user may want to stay focused on their laptop work without interruption.",
+     "The user may want a drink while working.",
+     "The user may prefer to use the water bottle already in front of them.",
+     "The user may appreciate the robot anticipating their needs.",
+     "The user may be concerned that their friend is unwell or needs water.",
+     "The user may wish the robot had offered the drink to their friend instead.",
+     "The user may be puzzled about why the robot brought a canned drink.",
+     "The user may not want an unsolicited drink, perhaps because of its contents or their preferences."
+    ],
+    "regens": [],
+    "per_cand": [
+     {
+      "cand": "The user may want to stay focused on their laptop work without interruption.",
+      "ev": [
+       73.62774140538542,
+       73.30689353871287,
+       82.47233569800795,
+       94.46406057797601
+      ],
+      "said": [
+       65,
+       70,
+       80,
+       95
+      ]
+     },
+     {
+      "cand": "The user may want a drink while working.",
+      "ev": [
+       60.22482411167196,
+       23.13274318026403,
+       89.57704883984118,
+       93.02173465981497
+      ],
+      "said": [
+       50,
+       20,
+       90,
+       90
+      ]
+     },
+     {
+      "cand": "The user may prefer to use the water bottle already in front of them.",
+      "ev": [
+       82.27604032679007,
+       89.07359697228605,
+       90.37815857499723,
+       92.6912426587814
+      ],
+      "said": [
+       85,
+       85,
+       90,
+       90
+      ]
+     },
+     {
+      "cand": "The user may appreciate the robot anticipating their needs.",
+      "ev": [
+       75.83931859365416,
+       80.08618294553384,
+       82.61298280204046,
+       91.98816736086182
+      ],
+      "said": [
+       70,
+       80,
+       75,
+       90
+      ]
+     },
+     {
+      "cand": "The user may be concerned that their friend is unwell or needs water.",
+      "ev": [
+       89.72836228396412,
+       94.3344594352947,
+       85.49757792437104,
+       89.10177393864575
+      ],
+      "said": [
+       90,
+       95,
+       85,
+       90
+      ]
+     },
+     {
+      "cand": "The user may wish the robot had offered the drink to their friend instead.",
+      "ev": [
+       92.11697814015099,
+       94.67158741777904,
+       89.48174802457498,
+       89.94514830440251
+      ],
+      "said": [
+       90,
+       95,
+       90,
+       90
+      ]
+     },
+     {
+      "cand": "The user may be puzzled about why the robot brought a canned drink.",
+      "ev": [
+       73.60730028800201,
+       80.3890422533844,
+       82.32705227502191,
+       87.6746971486662
+      ],
+      "said": [
+       70,
+       80,
+       80,
+       85
+      ]
+     },
+     {
+      "cand": "The user may not want an unsolicited drink, perhaps because of its contents or their preferences.",
+      "ev": [
+       80.84552702461792,
+       85.34945452741913,
+       86.87810228754103,
+       90.00044217635474
+      ],
+      "said": [
+       80,
+       85,
+       85,
+       90
+      ]
+     }
+    ],
+    "rank_ev": [
+     {
+      "cand": "The user may wish the robot had offered the drink to their friend instead.",
+      "p": 0.17880683907028797
+     },
+     {
+      "cand": "The user may be concerned that their friend is unwell or needs water.",
+      "p": 0.1642679550707315
+     },
+     {
+      "cand": "The user may prefer to use the water bottle already in front of them.",
+      "p": 0.15640014378664888
+     },
+     {
+      "cand": "The user may not want an unsolicited drink, perhaps because of its contents or their preferences.",
+      "p": 0.1374435290246362
+     },
+     {
+      "cand": "The user may appreciate the robot anticipating their needs.",
+      "p": 0.11758309002665608
+     },
+     {
+      "cand": "The user may be puzzled about why the robot brought a canned drink.",
+      "p": 0.10880457734043159
+     },
+     {
+      "cand": "The user may want to stay focused on their laptop work without interruption.",
+      "p": 0.1071207935121402
+     },
+     {
+      "cand": "The user may want a drink while working.",
+      "p": 0.029573072168467544
+     }
+    ],
+    "rank_said": [
+     {
+      "cand": "The user may wish the robot had offered the drink to their friend instead.",
+      "p": 0.1903839016947755
+     },
+     {
+      "cand": "The user may be concerned that their friend is unwell or needs water.",
+      "p": 0.17980701826728795
+     },
+     {
+      "cand": "The user may prefer to use the water bottle already in front of them.",
+      "p": 0.16087996371283658
+     },
+     {
+      "cand": "The user may not want an unsolicited drink, perhaps because of its contents or their preferences.",
+      "p": 0.14300441218918808
+     },
+     {
+      "cand": "The user may be puzzled about why the robot brought a canned drink.",
+      "p": 0.10468296839992854
+     },
+     {
+      "cand": "The user may appreciate the robot anticipating their needs.",
+      "p": 0.10391324069110552
+     },
+     {
+      "cand": "The user may want to stay focused on their laptop work without interruption.",
+      "p": 0.09506137203964099
+     },
+     {
+      "cand": "The user may want a drink while working.",
+      "p": 0.022267123005236908
+     }
+    ],
+    "score_errors": 0
+   },
+   "ga_warn": {
+    "candidates": [
+     "The user may want to stay focused on their laptop work without interruption.",
+     "The user may want a drink while working.",
+     "The user may prefer to use the water bottle already in front of them.",
+     "The user may appreciate the robot anticipating their needs.",
+     "The user may be concerned that their friend is unwell or needs water.",
+     "The user may wish the robot had offered the drink to their friend instead.",
+     "The user may be puzzled about why the robot brought a canned drink.",
+     "The user may not want an unsolicited drink, perhaps because of its contents or their preferences."
+    ],
+    "regens": [],
+    "per_cand": [
+     {
+      "cand": "The user may want to stay focused on their laptop work without interruption.",
+      "ev": [
+       61.147144112427895,
+       56.342871117471184,
+       71.35650804010766,
+       78.04695845228993
+      ],
+      "said": [
+       60,
+       75,
+       65,
+       75
+      ]
+     },
+     {
+      "cand": "The user may want a drink while working.",
+      "ev": [
+       53.737629907157775,
+       34.45916718804661,
+       76.9572820971476,
+       82.5962038672402
+      ],
+      "said": [
+       45,
+       30,
+       75,
+       85
+      ]
+     },
+     {
+      "cand": "The user may prefer to use the water bottle already in front of them.",
+      "ev": [
+       70.84340211328168,
+       77.49235013090734,
+       81.43073952397738,
+       75.69607084281579
+      ],
+      "said": [
+       70,
+       85,
+       80,
+       65
+      ]
+     },
+     {
+      "cand": "The user may appreciate the robot anticipating their needs.",
+      "ev": [
+       65.02190233226219,
+       69.41934813883967,
+       73.46180158823135,
+       75.9482191195124
+      ],
+      "said": [
+       65,
+       70,
+       75,
+       80
+      ]
+     },
+     {
+      "cand": "The user may be concerned that their friend is unwell or needs water.",
+      "ev": [
+       75.03135972103632,
+       85.07595844872833,
+       67.45126108424012,
+       79.87562893495127
+      ],
+      "said": [
+       75,
+       85,
+       65,
+       85
+      ]
+     },
+     {
+      "cand": "The user may wish the robot had offered the drink to their friend instead.",
+      "ev": [
+       85.0219324454875,
+       83.38578437919287,
+       76.07667173558524,
+       80.26278780257097
+      ],
+      "said": [
+       85,
+       85,
+       75,
+       80
+      ]
+     },
+     {
+      "cand": "The user may be puzzled about why the robot brought a canned drink.",
+      "ev": [
+       66.86654383057844,
+       65.63070061190166,
+       67.63353862952697,
+       74.77698563503557
+      ],
+      "said": [
+       65,
+       70,
+       65,
+       75
+      ]
+     },
+     {
+      "cand": "The user may not want an unsolicited drink, perhaps because of its contents or their preferences.",
+      "ev": [
+       67.48392038594743,
+       75.2271587087239,
+       76.60384181056942,
+       82.82450352083555
+      ],
+      "said": [
+       70,
+       65,
+       80,
+       80
+      ]
+     }
+    ],
+    "rank_ev": [
+     {
+      "cand": "The user may wish the robot had offered the drink to their friend instead.",
+      "p": 0.19494244456833815
+     },
+     {
+      "cand": "The user may be concerned that their friend is unwell or needs water.",
+      "p": 0.15487157137328253
+     },
+     {
+      "cand": "The user may prefer to use the water bottle already in front of them.",
+      "p": 0.15238338979354535
+     },
+     {
+      "cand": "The user may not want an unsolicited drink, perhaps because of its contents or their preferences.",
+      "p": 0.14504475489940483
+     },
+     {
+      "cand": "The user may appreciate the robot anticipating their needs.",
+      "p": 0.11340626445542834
+     },
+     {
+      "cand": "The user may be puzzled about why the robot brought a canned drink.",
+      "p": 0.09994559420045049
+     },
+     {
+      "cand": "The user may want to stay focused on their laptop work without interruption.",
+      "p": 0.08640172175691653
+     },
+     {
+      "cand": "The user may want a drink while working.",
+      "p": 0.053004258952633616
+     }
+    ],
+    "rank_said": [
+     {
+      "cand": "The user may wish the robot had offered the drink to their friend instead.",
+      "p": 0.1982558289100217
+     },
+     {
+      "cand": "The user may be concerned that their friend is unwell or needs water.",
+      "p": 0.16108286098939265
+     },
+     {
+      "cand": "The user may prefer to use the water bottle already in front of them.",
+      "p": 0.14150023867303507
+     },
+     {
+      "cand": "The user may not want an unsolicited drink, perhaps because of its contents or their preferences.",
+      "p": 0.1331766952216801
+     },
+     {
+      "cand": "The user may appreciate the robot anticipating their needs.",
+      "p": 0.12485315177032508
+     },
+     {
+      "cand": "The user may be puzzled about why the robot brought a canned drink.",
+      "p": 0.10144318581338913
+     },
+     {
+      "cand": "The user may want to stay focused on their laptop work without interruption.",
+      "p": 0.10032842552972554
+     },
+     {
+      "cand": "The user may want a drink while working.",
+      "p": 0.03935961309243077
+     }
+    ],
+    "score_errors": 0
+   }
+  }
+ },
+ {
+  "id": 8,
+  "title": "커튼이 10분 이름",
+  "hidden": "커튼 여는 건 좋지만 10분쯤 일렀다",
+  "initial_candidates": [
+   "The user may want to wake up and start the day.",
+   "The user may want to continue sleeping.",
+   "The user may be struggling to fall asleep.",
+   "The user may be uncomfortable and seeking relief.",
+   "The user may be anxious or preoccupied by a concern.",
+   "The user may want more natural light in the room.",
+   "The user may want the room to remain dark and private.",
+   "The user may be reluctant to get out of bed because they feel tired."
+  ],
+  "methods": {
+   "ga": {
+    "candidates": [
+     "The user may want to wake up and start the day.",
+     "The user may want to continue sleeping.",
+     "The user may be struggling to fall asleep.",
+     "The user may be uncomfortable and seeking relief.",
+     "The user may be anxious or preoccupied by a concern.",
+     "The user may want more natural light in the room.",
+     "The user may want the room to remain dark and private.",
+     "The user may be reluctant to get out of bed because they feel tired."
+    ],
+    "regens": [],
+    "per_cand": [
+     {
+      "cand": "The user may want to wake up and start the day.",
+      "ev": [
+       25.130204940682347,
+       37.95963731933998,
+       74.42519778879695,
+       85.0755998625986,
+       89.83472868285253,
+       90.28036793441353
+      ],
+      "said": [
+       20,
+       70,
+       75,
+       85,
+       90,
+       90
+      ]
+     },
+     {
+      "cand": "The user may want to continue sleeping.",
+      "ev": [
+       90.93101277924946,
+       95.0,
+       91.70200193818876,
+       83.33315394148872,
+       68.44250948410107,
+       80.26503845001001
+      ],
+      "said": [
+       90,
+       95,
+       95,
+       85,
+       70,
+       75
+      ]
+     },
+     {
+      "cand": "The user may be struggling to fall asleep.",
+      "ev": [
+       88.74325155705722,
+       83.03607318510804,
+       86.01479106909396,
+       65.90133243817543,
+       64.69781278411727,
+       28.71423330534056
+      ],
+      "said": [
+       90,
+       80,
+       85,
+       70,
+       40,
+       30
+      ]
+     },
+     {
+      "cand": "The user may be uncomfortable and seeking relief.",
+      "ev": [
+       82.1217247971273,
+       90.08450899764287,
+       87.0197856032723,
+       74.43789251833766,
+       76.09339544112288,
+       77.72751530539372
+      ],
+      "said": [
+       85,
+       90,
+       90,
+       70,
+       75,
+       75
+      ]
+     },
+     {
+      "cand": "The user may be anxious or preoccupied by a concern.",
+      "ev": [
+       76.29257683614314,
+       75.19658002755422,
+       80.38233934427025,
+       69.14156946979628,
+       68.36376031745488,
+       74.20600476361273
+      ],
+      "said": [
+       75,
+       80,
+       75,
+       70,
+       70,
+       65
+      ]
+     },
+     {
+      "cand": "The user may want more natural light in the room.",
+      "ev": [
+       17.4610756469224,
+       15.797457687145483,
+       19.085860229354054,
+       74.65938748524594,
+       84.84602778278506,
+       86.03121047392858
+      ],
+      "said": [
+       20,
+       15,
+       20,
+       75,
+       85,
+       85
+      ]
+     },
+     {
+      "cand": "The user may want the room to remain dark and private.",
+      "ev": [
+       90.21010285461423,
+       92.84330490807201,
+       89.62798923139744,
+       65.39502523806944,
+       64.06229892203795,
+       38.13430742588083
+      ],
+      "said": [
+       90,
+       95,
+       90,
+       70,
+       60,
+       35
+      ]
+     },
+     {
+      "cand": "The user may be reluctant to get out of bed because they feel tired.",
+      "ev": [
+       87.35067995842773,
+       94.62673785416473,
+       88.945851157641,
+       73.30070081432942,
+       84.69643934331513,
+       84.90504135814544
+      ],
+      "said": [
+       85,
+       95,
+       90,
+       75,
+       85,
+       85
+      ]
+     }
+    ],
+    "rank_ev": [
+     {
+      "cand": "The user may be reluctant to get out of bed because they feel tired.",
+      "p": 0.26823911940375256
+     },
+     {
+      "cand": "The user may want to continue sleeping.",
+      "p": 0.2510117869228468
+     },
+     {
+      "cand": "The user may be uncomfortable and seeking relief.",
+      "p": 0.19617854429473297
+     },
+     {
+      "cand": "The user may be anxious or preoccupied by a concern.",
+      "p": 0.11195789992622183
+     },
+     {
+      "cand": "The user may want the room to remain dark and private.",
+      "p": 0.08300839574417437
+     },
+     {
+      "cand": "The user may be struggling to fall asleep.",
+      "p": 0.053711316988434385
+     },
+     {
+      "cand": "The user may want to wake up and start the day.",
+      "p": 0.03390706400947008
+     },
+     {
+      "cand": "The user may want more natural light in the room.",
+      "p": 0.0019858727103669884
+     }
+    ],
+    "rank_said": [
+     {
+      "cand": "The user may be reluctant to get out of bed because they feel tired.",
+      "p": 0.2791448890770848
+     },
+     {
+      "cand": "The user may want to continue sleeping.",
+      "p": 0.25692920586333745
+     },
+     {
+      "cand": "The user may be uncomfortable and seeking relief.",
+      "p": 0.19216311795872887
+     },
+     {
+      "cand": "The user may be anxious or preoccupied by a concern.",
+      "p": 0.10159386337977823
+     },
+     {
+      "cand": "The user may want the room to remain dark and private.",
+      "p": 0.08018100294434805
+     },
+     {
+      "cand": "The user may want to wake up and start the day.",
+      "p": 0.05124349812232769
+     },
+     {
+      "cand": "The user may be struggling to fall asleep.",
+      "p": 0.0364398208869886
+     },
+     {
+      "cand": "The user may want more natural light in the room.",
+      "p": 0.0023046017674062703
+     }
+    ],
+    "score_errors": 0
+   },
+   "ga_warn": {
+    "candidates": [
+     "The user may want to wake up and start the day.",
+     "The user may want to continue sleeping.",
+     "The user may be struggling to fall asleep.",
+     "The user may be uncomfortable and seeking relief.",
+     "The user may be anxious or preoccupied by a concern.",
+     "The user may want more natural light in the room.",
+     "The user may want the room to remain dark and private.",
+     "The user may be reluctant to get out of bed because they feel tired."
+    ],
+    "regens": [],
+    "per_cand": [
+     {
+      "cand": "The user may want to wake up and start the day.",
+      "ev": [
+       35.58997006151517,
+       55.0834950657959,
+       56.7423360276629,
+       71.88952418551837,
+       75.20873679774645,
+       74.66537119629785
+      ],
+      "said": [
+       35,
+       65,
+       65,
+       75,
+       75,
+       80
+      ]
+     },
+     {
+      "cand": "The user may want to continue sleeping.",
+      "ev": [
+       79.58909194858923,
+       87.86621794183175,
+       83.8666770044515,
+       57.315570256512196,
+       63.586814897866525,
+       64.65946654896524
+      ],
+      "said": [
+       75,
+       90,
+       85,
+       50,
+       50,
+       70
+      ]
+     },
+     {
+      "cand": "The user may be struggling to fall asleep.",
+      "ev": [
+       74.15075893240639,
+       47.79284958969261,
+       66.72956968271903,
+       56.01548443943944,
+       43.58631585036582,
+       54.608996389019275
+      ],
+      "said": [
+       75,
+       35,
+       65,
+       45,
+       35,
+       55
+      ]
+     },
+     {
+      "cand": "The user may be uncomfortable and seeking relief.",
+      "ev": [
+       66.05632077049015,
+       76.48257713019044,
+       72.32488255433626,
+       58.48545296136088,
+       62.003824266757924,
+       65.5903656882622
+      ],
+      "said": [
+       70,
+       80,
+       75,
+       60,
+       60,
+       65
+      ]
+     },
+     {
+      "cand": "The user may be anxious or preoccupied by a concern.",
+      "ev": [
+       62.83382335806152,
+       61.11013165137427,
+       60.21755837274977,
+       61.19173295913039,
+       62.4856318365498,
+       62.354901080867265
+      ],
+      "said": [
+       60,
+       60,
+       45,
+       55,
+       55,
+       65
+      ]
+     },
+     {
+      "cand": "The user may want more natural light in the room.",
+      "ev": [
+       30.697468973428485,
+       33.39165550095937,
+       45.10217553653559,
+       55.45048692502644,
+       67.91968442782016,
+       68.89076639989568
+      ],
+      "said": [
+       25,
+       35,
+       45,
+       55,
+       65,
+       70
+      ]
+     },
+     {
+      "cand": "The user may want the room to remain dark and private.",
+      "ev": [
+       74.77363118123814,
+       79.15310180705933,
+       75.27089270109796,
+       59.00549632435907,
+       60.39212330965188,
+       48.66102650516783
+      ],
+      "said": [
+       70,
+       85,
+       75,
+       55,
+       50,
+       45
+      ]
+     },
+     {
+      "cand": "The user may be reluctant to get out of bed because they feel tired.",
+      "ev": [
+       74.18701601888421,
+       83.5446850260244,
+       73.34485050992426,
+       63.73171828935546,
+       73.05073983615507,
+       70.99146110852492
+      ],
+      "said": [
+       70,
+       85,
+       75,
+       55,
+       65,
+       75
+      ]
+     }
+    ],
+    "rank_ev": [
+     {
+      "cand": "The user may be reluctant to get out of bed because they feel tired.",
+      "p": 0.25201671705327366
+     },
+     {
+      "cand": "The user may want to continue sleeping.",
+      "p": 0.23182664866409286
+     },
+     {
+      "cand": "The user may be uncomfortable and seeking relief.",
+      "p": 0.14577990054016934
+     },
+     {
+      "cand": "The user may want the room to remain dark and private.",
+      "p": 0.12957587241437282
+     },
+     {
+      "cand": "The user may be anxious or preoccupied by a concern.",
+      "p": 0.09246981594245973
+     },
+     {
+      "cand": "The user may want to wake up and start the day.",
+      "p": 0.07532447033123088
+     },
+     {
+      "cand": "The user may be struggling to fall asleep.",
+      "p": 0.05288663498312752
+     },
+     {
+      "cand": "The user may want more natural light in the room.",
+      "p": 0.02011994007127313
+     }
+    ],
+    "rank_said": [
+     {
+      "cand": "The user may be reluctant to get out of bed because they feel tired.",
+      "p": 0.24094410102519834
+     },
+     {
+      "cand": "The user may want to continue sleeping.",
+      "p": 0.2021908540071594
+     },
+     {
+      "cand": "The user may be uncomfortable and seeking relief.",
+      "p": 0.19790916533406652
+     },
+     {
+      "cand": "The user may want to wake up and start the day.",
+      "p": 0.13400099736160764
+     },
+     {
+      "cand": "The user may want the room to remain dark and private.",
+      "p": 0.11120496970393763
+     },
+     {
+      "cand": "The user may be anxious or preoccupied by a concern.",
+      "p": 0.0641437741216662
+     },
+     {
+      "cand": "The user may be struggling to fall asleep.",
+      "p": 0.02976368306781861
+     },
+     {
+      "cand": "The user may want more natural light in the room.",
+      "p": 0.019842455378545735
+     }
+    ],
+    "score_errors": 0
+   }
+  }
+ },
+ {
+  "id": 9,
+  "title": "고맙지만 더움",
+  "hidden": "챙겨 준 마음은 고맙지만, 더워서 담요는 필요 없다",
+  "initial_candidates": [
+   "The user may want to rest or sleep.",
+   "The user may want to stay warm and comfortable.",
+   "The user may be tired but intend to continue watching TV later.",
+   "The user may prefer not to be disturbed.",
+   "The user may welcome help with staying comfortable.",
+   "The user may prefer not to be covered or touched."
+  ],
+  "methods": {
+   "ga": {
+    "candidates": [
+     "The user may want to rest or sleep.",
+     "The user may want to stay warm and comfortable.",
+     "The user may be tired but intend to continue watching TV later.",
+     "The user may prefer not to be disturbed.",
+     "The user may welcome help with staying comfortable.",
+     "The user may prefer not to be covered or touched."
+    ],
+    "regens": [],
+    "per_cand": [
+     {
+      "cand": "The user may want to rest or sleep.",
+      "ev": [
+       64.3140594953539,
+       90.46732392788994,
+       36.795652947229776,
+       67.74598495489754,
+       71.79404512485355,
+       67.5584601418153
+      ],
+      "said": [
+       65,
+       90,
+       35,
+       75,
+       70,
+       70
+      ]
+     },
+     {
+      "cand": "The user may want to stay warm and comfortable.",
+      "ev": [
+       69.44925642071348,
+       89.64885456611925,
+       67.2818761663391,
+       70.40616661692374,
+       23.602219809046634,
+       53.45957016327157
+      ],
+      "said": [
+       75,
+       90,
+       70,
+       60,
+       20,
+       75
+      ]
+     },
+     {
+      "cand": "The user may be tired but intend to continue watching TV later.",
+      "ev": [
+       78.81212676867393,
+       87.89299431868238,
+       80.42969980910752,
+       79.06371668364044,
+       80.95490905778146,
+       91.3376910850532
+      ],
+      "said": [
+       80,
+       85,
+       85,
+       80,
+       80,
+       95
+      ]
+     },
+     {
+      "cand": "The user may prefer not to be disturbed.",
+      "ev": [
+       49.48057919214965,
+       73.26794658181488,
+       76.63034828867963,
+       51.89690154433463,
+       48.863774161826235,
+       83.45366895642309
+      ],
+      "said": [
+       50,
+       75,
+       80,
+       50,
+       35,
+       85
+      ]
+     },
+     {
+      "cand": "The user may welcome help with staying comfortable.",
+      "ev": [
+       63.24981780104491,
+       89.81471243623942,
+       65.57751416403785,
+       82.6910030369391,
+       87.59034304844883,
+       90.15028618471382
+      ],
+      "said": [
+       70,
+       90,
+       65,
+       80,
+       85,
+       90
+      ]
+     },
+     {
+      "cand": "The user may prefer not to be covered or touched.",
+      "ev": [
+       69.43629293382118,
+       61.75717255134821,
+       89.89298950534722,
+       78.27066694851347,
+       78.86912529797824,
+       88.47136536406803
+      ],
+      "said": [
+       75,
+       65,
+       90,
+       80,
+       80,
+       85
+      ]
+     }
+    ],
+    "rank_ev": [
+     {
+      "cand": "The user may be tired but intend to continue watching TV later.",
+      "p": 0.34436393624466044
+     },
+     {
+      "cand": "The user may welcome help with staying comfortable.",
+      "p": 0.2571738303498493
+     },
+     {
+      "cand": "The user may prefer not to be covered or touched.",
+      "p": 0.22258300793930313
+     },
+     {
+      "cand": "The user may want to rest or sleep.",
+      "p": 0.07437540985172689
+     },
+     {
+      "cand": "The user may prefer not to be disturbed.",
+      "p": 0.06215941670548033
+     },
+     {
+      "cand": "The user may want to stay warm and comfortable.",
+      "p": 0.03934439890897989
+     }
+    ],
+    "rank_said": [
+     {
+      "cand": "The user may be tired but intend to continue watching TV later.",
+      "p": 0.3503331938094251
+     },
+     {
+      "cand": "The user may welcome help with staying comfortable.",
+      "p": 0.24983610406049464
+     },
+     {
+      "cand": "The user may prefer not to be covered or touched.",
+      "p": 0.23793914672428063
+     },
+     {
+      "cand": "The user may want to rest or sleep.",
+      "p": 0.0750120655573789
+     },
+     {
+      "cand": "The user may prefer not to be disturbed.",
+      "p": 0.044486485765757575
+     },
+     {
+      "cand": "The user may want to stay warm and comfortable.",
+      "p": 0.042393004082663124
+     }
+    ],
+    "score_errors": 0
+   },
+   "ga_warn": {
+    "candidates": [
+     "The user may want to rest or sleep.",
+     "The user may want to stay warm and comfortable.",
+     "The user may be tired but intend to continue watching TV later.",
+     "The user may prefer not to be disturbed.",
+     "The user may welcome help with staying comfortable.",
+     "The user may prefer not to be covered or touched."
+    ],
+    "regens": [],
+    "per_cand": [
+     {
+      "cand": "The user may want to rest or sleep.",
+      "ev": [
+       51.01387674196685,
+       75.23720159299346,
+       45.32613470199586,
+       63.68831107617791,
+       64.04691348372371,
+       65.01270738497524
+      ],
+      "said": [
+       50,
+       75,
+       55,
+       70,
+       65,
+       65
+      ]
+     },
+     {
+      "cand": "The user may want to stay warm and comfortable.",
+      "ev": [
+       59.91977696492588,
+       76.05887396540896,
+       44.93168744067821,
+       57.483592591885106,
+       45.05483324265777,
+       69.54921019602786
+      ],
+      "said": [
+       60,
+       75,
+       45,
+       65,
+       40,
+       55
+      ]
+     },
+     {
+      "cand": "The user may be tired but intend to continue watching TV later.",
+      "ev": [
+       68.96101124892897,
+       72.79237953152823,
+       64.46270486357628,
+       57.99401631424929,
+       69.31596614698573,
+       77.80808153082944
+      ],
+      "said": [
+       70,
+       70,
+       60,
+       60,
+       70,
+       85
+      ]
+     },
+     {
+      "cand": "The user may prefer not to be disturbed.",
+      "ev": [
+       54.04789907620683,
+       66.75028959551359,
+       59.163234879420365,
+       51.94883414572455,
+       61.32379305578873,
+       66.32399220488463
+      ],
+      "said": [
+       45,
+       75,
+       60,
+       50,
+       60,
+       65
+      ]
+     },
+     {
+      "cand": "The user may welcome help with staying comfortable.",
+      "ev": [
+       57.98407945837802,
+       75.96740249837622,
+       55.997082691634276,
+       67.93386661012201,
+       73.60058106120039,
+       78.34244022327
+      ],
+      "said": [
+       50,
+       75,
+       55,
+       70,
+       70,
+       85
+      ]
+     },
+     {
+      "cand": "The user may prefer not to be covered or touched.",
+      "ev": [
+       53.626170648623436,
+       55.581917749561605,
+       75.5110349472277,
+       65.27418205113295,
+       68.54812667997666,
+       74.3242141854584
+      ],
+      "said": [
+       45,
+       55,
+       80,
+       65,
+       70,
+       75
+      ]
+     }
+    ],
+    "rank_ev": [
+     {
+      "cand": "The user may be tired but intend to continue watching TV later.",
+      "p": 0.25252877465736573
+     },
+     {
+      "cand": "The user may welcome help with staying comfortable.",
+      "p": 0.24106699391711883
+     },
+     {
+      "cand": "The user may prefer not to be covered or touched.",
+      "p": 0.18674961941330745
+     },
+     {
+      "cand": "The user may want to rest or sleep.",
+      "p": 0.1151058699251018
+     },
+     {
+      "cand": "The user may prefer not to be disturbed.",
+      "p": 0.11252032863127777
+     },
+     {
+      "cand": "The user may want to stay warm and comfortable.",
+      "p": 0.09202841345582848
+     }
+    ],
+    "rank_said": [
+     {
+      "cand": "The user may be tired but intend to continue watching TV later.",
+      "p": 0.27059953563940936
+     },
+     {
+      "cand": "The user may welcome help with staying comfortable.",
+      "p": 0.22147283422868325
+     },
+     {
+      "cand": "The user may prefer not to be covered or touched.",
+      "p": 0.17420048137651067
+     },
+     {
+      "cand": "The user may want to rest or sleep.",
+      "p": 0.15726432346490543
+     },
+     {
+      "cand": "The user may prefer not to be disturbed.",
+      "p": 0.10180547612912957
+     },
+     {
+      "cand": "The user may want to stay warm and comfortable.",
+      "p": 0.07465734916136167
+     }
+    ],
+    "score_errors": 0
+   }
+  }
+ },
+ {
+  "id": 10,
+  "title": "약 먹을 물",
+  "hidden": "목이 말라서가 아니라 약을 먹으려고 물이 필요했다",
+  "initial_candidates": [
+   "The user may want a drink of water.",
+   "The user may want to continue working at the desk without interruption.",
+   "The user may appreciate being cared for.",
+   "The user may prefer not to have a cup near their workspace.",
+   "The user may want privacy while using their phone.",
+   "The user may be ready to take a break.",
+   "The user may feel curious about why the robot brought water.",
+   "The user may be concerned about spilling water near the desk."
+  ],
+  "methods": {
+   "ga": {
+    "candidates": [
+     "The user may want a drink of water.",
+     "The user may want to continue working at the desk without interruption.",
+     "The user may appreciate being cared for.",
+     "The user may prefer not to have a cup near their workspace.",
+     "The user may want privacy while using their phone.",
+     "The user may be ready to take a break.",
+     "The user may feel curious about why the robot brought water.",
+     "The user may be concerned about spilling water near the desk."
+    ],
+    "regens": [],
+    "per_cand": [
+     {
+      "cand": "The user may want a drink of water.",
+      "ev": [
+       72.3949720302815,
+       74.16064577092895,
+       92.51278389278329,
+       82.1180640503628
+      ],
+      "said": [
+       70,
+       75,
+       90,
+       90
+      ]
+     },
+     {
+      "cand": "The user may want to continue working at the desk without interruption.",
+      "ev": [
+       66.48324910027988,
+       74.14061478655327,
+       87.20631163935694,
+       85.45642424261962
+      ],
+      "said": [
+       70,
+       75,
+       90,
+       85
+      ]
+     },
+     {
+      "cand": "The user may appreciate being cared for.",
+      "ev": [
+       50.654174113598245,
+       78.34159878451874,
+       92.82767009184614,
+       85.36786259217203
+      ],
+      "said": [
+       50,
+       80,
+       95,
+       85
+      ]
+     },
+     {
+      "cand": "The user may prefer not to have a cup near their workspace.",
+      "ev": [
+       50.444866184454504,
+       73.11267583472723,
+       76.26151446826447,
+       88.53797081930317
+      ],
+      "said": [
+       50,
+       80,
+       70,
+       85
+      ]
+     },
+     {
+      "cand": "The user may want privacy while using their phone.",
+      "ev": [
+       50.0,
+       67.58700679941053,
+       81.87797131530823,
+       84.67320369859667
+      ],
+      "said": [
+       50,
+       70,
+       75,
+       85
+      ]
+     },
+     {
+      "cand": "The user may be ready to take a break.",
+      "ev": [
+       51.23779992409522,
+       53.254126754065325,
+       85.48255803825054,
+       73.57679477154369
+      ],
+      "said": [
+       40,
+       50,
+       90,
+       70
+      ]
+     },
+     {
+      "cand": "The user may feel curious about why the robot brought water.",
+      "ev": [
+       50.54254904970687,
+       83.95723509019999,
+       94.30355793010332,
+       82.57213228192842
+      ],
+      "said": [
+       50,
+       90,
+       95,
+       85
+      ]
+     },
+     {
+      "cand": "The user may be concerned about spilling water near the desk.",
+      "ev": [
+       50.68807347791575,
+       74.04570730631114,
+       83.0656332323397,
+       81.62767563334774
+      ],
+      "said": [
+       50,
+       80,
+       85,
+       80
+      ]
+     }
+    ],
+    "rank_ev": [
+     {
+      "cand": "The user may want a drink of water.",
+      "p": 0.1750879081708251
+     },
+     {
+      "cand": "The user may want to continue working at the desk without interruption.",
+      "p": 0.157686621461613
+     },
+     {
+      "cand": "The user may feel curious about why the robot brought water.",
+      "p": 0.1418438927167449
+     },
+     {
+      "cand": "The user may appreciate being cared for.",
+      "p": 0.13499364422865018
+     },
+     {
+      "cand": "The user may be concerned about spilling water near the desk.",
+      "p": 0.10924417158995345
+     },
+     {
+      "cand": "The user may prefer not to have a cup near their workspace.",
+      "p": 0.106900180237283
+     },
+     {
+      "cand": "The user may want privacy while using their phone.",
+      "p": 0.10057269268331613
+     },
+     {
+      "cand": "The user may be ready to take a break.",
+      "p": 0.07367088891161416
+     }
+    ],
+    "rank_said": [
+     {
+      "cand": "The user may want a drink of water.",
+      "p": 0.17925075082986455
+     },
+     {
+      "cand": "The user may want to continue working at the desk without interruption.",
+      "p": 0.169292375783761
+     },
+     {
+      "cand": "The user may feel curious about why the robot brought water.",
+      "p": 0.15316929237578375
+     },
+     {
+      "cand": "The user may appreciate being cared for.",
+      "p": 0.13615048211180775
+     },
+     {
+      "cand": "The user may be concerned about spilling water near the desk.",
+      "p": 0.11465303756783812
+     },
+     {
+      "cand": "The user may prefer not to have a cup near their workspace.",
+      "p": 0.10032140787185834
+     },
+     {
+      "cand": "The user may want privacy while using their phone.",
+      "p": 0.0940513198798672
+     },
+     {
+      "cand": "The user may be ready to take a break.",
+      "p": 0.053111333579219135
+     }
+    ],
+    "score_errors": 0
+   },
+   "ga_warn": {
+    "candidates": [
+     "The user may want a drink of water.",
+     "The user may want to continue working at the desk without interruption.",
+     "The user may appreciate being cared for.",
+     "The user may prefer not to have a cup near their workspace.",
+     "The user may want privacy while using their phone.",
+     "The user may be ready to take a break.",
+     "The user may feel curious about why the robot brought water.",
+     "The user may be concerned about spilling water near the desk."
+    ],
+    "regens": [],
+    "per_cand": [
+     {
+      "cand": "The user may want a drink of water.",
+      "ev": [
+       53.76111943430495,
+       64.82419812151504,
+       80.931544286616,
+       78.2316542009451
+      ],
+      "said": [
+       55,
+       70,
+       85,
+       80
+      ]
+     },
+     {
+      "cand": "The user may want to continue working at the desk without interruption.",
+      "ev": [
+       55.04292355214436,
+       65.66535253403244,
+       74.77288004551434,
+       77.269090495558
+      ],
+      "said": [
+       45,
+       65,
+       75,
+       85
+      ]
+     },
+     {
+      "cand": "The user may appreciate being cared for.",
+      "ev": [
+       52.83572297874262,
+       65.10487116462284,
+       83.68930436835628,
+       75.07542106556298
+      ],
+      "said": [
+       55,
+       65,
+       85,
+       80
+      ]
+     },
+     {
+      "cand": "The user may prefer not to have a cup near their workspace.",
+      "ev": [
+       49.9319314331432,
+       55.72016017889211,
+       70.05625742842314,
+       74.63376721842037
+      ],
+      "said": [
+       50,
+       60,
+       70,
+       75
+      ]
+     },
+     {
+      "cand": "The user may want privacy while using their phone.",
+      "ev": [
+       49.93228602205933,
+       66.40295598414004,
+       81.84242566091893,
+       72.91362963416381
+      ],
+      "said": [
+       50,
+       75,
+       85,
+       75
+      ]
+     },
+     {
+      "cand": "The user may be ready to take a break.",
+      "ev": [
+       47.90560773294667,
+       46.907404105845075,
+       77.82573295673566,
+       68.40546612239838
+      ],
+      "said": [
+       40,
+       55,
+       75,
+       65
+      ]
+     },
+     {
+      "cand": "The user may feel curious about why the robot brought water.",
+      "ev": [
+       36.63025010807266,
+       61.21209322130989,
+       71.75182672436199,
+       66.75184863107303
+      ],
+      "said": [
+       35,
+       55,
+       70,
+       75
+      ]
+     },
+     {
+      "cand": "The user may be concerned about spilling water near the desk.",
+      "ev": [
+       51.21062712917437,
+       69.53738447552614,
+       74.5737858135349,
+       71.37863684818107
+      ],
+      "said": [
+       50,
+       65,
+       75,
+       70
+      ]
+     }
+    ],
+    "rank_ev": [
+     {
+      "cand": "The user may want a drink of water.",
+      "p": 0.1569898252199148
+     },
+     {
+      "cand": "The user may appreciate being cared for.",
+      "p": 0.15377105060525487
+     },
+     {
+      "cand": "The user may want to continue working at the desk without interruption.",
+      "p": 0.14857761783848297
+     },
+     {
+      "cand": "The user may want privacy while using their phone.",
+      "p": 0.1407737830036217
+     },
+     {
+      "cand": "The user may be concerned about spilling water near the desk.",
+      "p": 0.13486479457066028
+     },
+     {
+      "cand": "The user may prefer not to have a cup near their workspace.",
+      "p": 0.10349961315455579
+     },
+     {
+      "cand": "The user may be ready to take a break.",
+      "p": 0.08511527137952192
+     },
+     {
+      "cand": "The user may feel curious about why the robot brought water.",
+      "p": 0.07640804422798766
+     }
+    ],
+    "rank_said": [
+     {
+      "cand": "The user may want a drink of water.",
+      "p": 0.17847540892803124
+     },
+     {
+      "cand": "The user may appreciate being cared for.",
+      "p": 0.16572716543317187
+     },
+     {
+      "cand": "The user may want privacy while using their phone.",
+      "p": 0.16297470376950904
+     },
+     {
+      "cand": "The user may want to continue working at the desk without interruption.",
+      "p": 0.12712026894021708
+     },
+     {
+      "cand": "The user may be concerned about spilling water near the desk.",
+      "p": 0.11631920033745353
+     },
+     {
+      "cand": "The user may prefer not to have a cup near their workspace.",
+      "p": 0.1073715695422648
+     },
+     {
+      "cand": "The user may be ready to take a break.",
+      "p": 0.07311492592639939
+     },
+     {
+      "cand": "The user may feel curious about why the robot brought water.",
+      "p": 0.06889675712295322
+     }
+    ],
+    "score_errors": 0
+   }
+  }
+ },
+ {
+  "id": 11,
+  "title": "스탠드가 눈부심",
+  "hidden": "켜 준 건 좋지만, 너무 밝고 빛이 눈에 바로 왔다",
+  "initial_candidates": [
+   "The user may want to read the book.",
+   "The user may want to study or learn something.",
+   "The user may be looking for a specific piece of information.",
+   "The user may want to check or organize something kept inside the book.",
+   "The user may want to relax by looking through the book.",
+   "The user may want better lighting to see the pages.",
+   "The user may prefer the existing lighting and not want the lamp on."
+  ],
+  "methods": {
+   "ga": {
+    "candidates": [
+     "The user may want to read the book.",
+     "The user may want to study or learn something.",
+     "The user may be looking for a specific piece of information.",
+     "The user may want to check or organize something kept inside the book.",
+     "The user may want to relax by looking through the book.",
+     "The user may want better lighting to see the pages.",
+     "The user may prefer the existing lighting and not want the lamp on."
+    ],
+    "regens": [],
+    "per_cand": [
+     {
+      "cand": "The user may want to read the book.",
+      "ev": [
+       70.93221642745235,
+       78.29618393777956,
+       92.41990447379949,
+       95.0
+      ],
+      "said": [
+       75,
+       80,
+       95,
+       95
+      ]
+     },
+     {
+      "cand": "The user may want to study or learn something.",
+      "ev": [
+       67.25414428916015,
+       86.67065835981522,
+       91.3101994386872,
+       94.87306654233943
+      ],
+      "said": [
+       70,
+       90,
+       90,
+       95
+      ]
+     },
+     {
+      "cand": "The user may be looking for a specific piece of information.",
+      "ev": [
+       70.62266158653482,
+       85.48168371570054,
+       88.22052566983177,
+       91.28052219221038
+      ],
+      "said": [
+       70,
+       85,
+       90,
+       90
+      ]
+     },
+     {
+      "cand": "The user may want to check or organize something kept inside the book.",
+      "ev": [
+       66.08607757024434,
+       79.44784115725707,
+       80.39769960143367,
+       28.74311863045073
+      ],
+      "said": [
+       60,
+       80,
+       85,
+       30
+      ]
+     },
+     {
+      "cand": "The user may want to relax by looking through the book.",
+      "ev": [
+       72.24881859210782,
+       89.66490989893178,
+       90.82955859000602,
+       93.6846152734918
+      ],
+      "said": [
+       70,
+       90,
+       90,
+       90
+      ]
+     },
+     {
+      "cand": "The user may want better lighting to see the pages.",
+      "ev": [
+       28.2626247646441,
+       73.53354766965955,
+       88.01256087000532,
+       94.33523596786485
+      ],
+      "said": [
+       20,
+       80,
+       90,
+       95
+      ]
+     },
+     {
+      "cand": "The user may prefer the existing lighting and not want the lamp on.",
+      "ev": [
+       88.6871503420303,
+       88.49753530229478,
+       89.74918969837076,
+       35.81039646326634
+      ],
+      "said": [
+       85,
+       90,
+       90,
+       35
+      ]
+     }
+    ],
+    "rank_ev": [
+     {
+      "cand": "The user may want to relax by looking through the book.",
+      "p": 0.21398699870188487
+     },
+     {
+      "cand": "The user may want to study or learn something.",
+      "p": 0.196016222922933
+     },
+     {
+      "cand": "The user may want to read the book.",
+      "p": 0.18928312029031716
+     },
+     {
+      "cand": "The user may be looking for a specific piece of information.",
+      "p": 0.18871375046853625
+     },
+     {
+      "cand": "The user may prefer the existing lighting and not want the lamp on.",
+      "p": 0.09791972417472065
+     },
+     {
+      "cand": "The user may want better lighting to see the pages.",
+      "p": 0.06698155868893872
+     },
+     {
+      "cand": "The user may want to check or organize something kept inside the book.",
+      "p": 0.04709862475266932
+     }
+    ],
+    "rank_said": [
+     {
+      "cand": "The user may want to read the book.",
+      "p": 0.21048949010232937
+     },
+     {
+      "cand": "The user may want to study or learn something.",
+      "p": 0.20938165068073816
+     },
+     {
+      "cand": "The user may want to relax by looking through the book.",
+      "p": 0.1983615638028046
+     },
+     {
+      "cand": "The user may be looking for a specific piece of information.",
+      "p": 0.187341476924871
+     },
+     {
+      "cand": "The user may prefer the existing lighting and not want the lamp on.",
+      "p": 0.09367073846243548
+     },
+     {
+      "cand": "The user may want better lighting to see the pages.",
+      "p": 0.05317629223637796
+     },
+     {
+      "cand": "The user may want to check or organize something kept inside the book.",
+      "p": 0.04757878779044342
+     }
+    ],
+    "score_errors": 0
+   },
+   "ga_warn": {
+    "candidates": [
+     "The user may want to read the book.",
+     "The user may want to study or learn something.",
+     "The user may be looking for a specific piece of information.",
+     "The user may want to check or organize something kept inside the book.",
+     "The user may want to relax by looking through the book.",
+     "The user may want better lighting to see the pages.",
+     "The user may prefer the existing lighting and not want the lamp on."
+    ],
+    "regens": [],
+    "per_cand": [
+     {
+      "cand": "The user may want to read the book.",
+      "ev": [
+       55.4882473373911,
+       73.08448704935078,
+       84.48468745345495,
+       86.16284198806616
+      ],
+      "said": [
+       60,
+       65,
+       85,
+       88
+      ]
+     },
+     {
+      "cand": "The user may want to study or learn something.",
+      "ev": [
+       57.453168540366676,
+       68.191291435227,
+       79.44875950311244,
+       84.72824364785689
+      ],
+      "said": [
+       45,
+       70,
+       80,
+       80
+      ]
+     },
+     {
+      "cand": "The user may be looking for a specific piece of information.",
+      "ev": [
+       50.03806525425259,
+       75.51680975822556,
+       77.60958074783345,
+       79.96654294081084
+      ],
+      "said": [
+       50,
+       65,
+       75,
+       80
+      ]
+     },
+     {
+      "cand": "The user may want to check or organize something kept inside the book.",
+      "ev": [
+       44.356280215879956,
+       68.47599232456632,
+       66.87876995016929,
+       58.663725384129414
+      ],
+      "said": [
+       50,
+       65,
+       65,
+       65
+      ]
+     },
+     {
+      "cand": "The user may want to relax by looking through the book.",
+      "ev": [
+       61.913370876992396,
+       75.08298483216873,
+       75.8111712675816,
+       81.60439520764506
+      ],
+      "said": [
+       60,
+       75,
+       75,
+       85
+      ]
+     },
+     {
+      "cand": "The user may want better lighting to see the pages.",
+      "ev": [
+       46.17504649979593,
+       65.09048281753404,
+       74.89606677999411,
+       83.78915431494082
+      ],
+      "said": [
+       40,
+       70,
+       75,
+       85
+      ]
+     },
+     {
+      "cand": "The user may prefer the existing lighting and not want the lamp on.",
+      "ev": [
+       74.49044639490172,
+       76.77617445721346,
+       78.0410315183071,
+       49.43231268947566
+      ],
+      "said": [
+       75,
+       75,
+       75,
+       65
+      ]
+     }
+    ],
+    "rank_ev": [
+     {
+      "cand": "The user may want to read the book.",
+      "p": 0.18342067521901764
+     },
+     {
+      "cand": "The user may want to relax by looking through the book.",
+      "p": 0.1786885794409553
+     },
+     {
+      "cand": "The user may want to study or learn something.",
+      "p": 0.16386352204395555
+     },
+     {
+      "cand": "The user may be looking for a specific piece of information.",
+      "p": 0.14571084034048815
+     },
+     {
+      "cand": "The user may prefer the existing lighting and not want the lamp on.",
+      "p": 0.13708345331105948
+     },
+     {
+      "cand": "The user may want better lighting to see the pages.",
+      "p": 0.11719139202124551
+     },
+     {
+      "cand": "The user may want to check or organize something kept inside the book.",
+      "p": 0.07404153762327839
+     }
+    ],
+    "rank_said": [
+     {
+      "cand": "The user may want to read the book.",
+      "p": 0.1863756118324747
+     },
+     {
+      "cand": "The user may want to relax by looking through the book.",
+      "p": 0.1832802126849074
+     },
+     {
+      "cand": "The user may prefer the existing lighting and not want the lamp on.",
+      "p": 0.17519432094880857
+     },
+     {
+      "cand": "The user may want to study or learn something.",
+      "p": 0.12879927103190353
+     },
+     {
+      "cand": "The user may be looking for a specific piece of information.",
+      "p": 0.12458262823026388
+     },
+     {
+      "cand": "The user may want better lighting to see the pages.",
+      "p": 0.11404102122616461
+     },
+     {
+      "cand": "The user may want to check or organize something kept inside the book.",
+      "p": 0.08772693404547749
+     }
+    ],
+    "score_errors": 0
+   }
+  }
+ },
+ {
+  "id": 12,
+  "title": "이미 물이 있음",
+  "hidden": "물은 원하지만, 마시던 물병이 이미 있었다",
+  "initial_candidates": [
+   "The user may want to stay hydrated while studying.",
+   "The user may prefer to finish the water already on the desk before opening another bottle.",
+   "The user may want to concentrate without interruptions.",
+   "The user may appreciate having supplies brought proactively.",
+   "The user may prefer to manage their own needs without assistance.",
+   "The user may want to keep the desk clear of unnecessary items.",
+   "The user may be concerned about wasting water or creating extra plastic waste.",
+   "The user may wonder why the robot brought another bottle when one is already available."
+  ],
+  "methods": {
+   "ga": {
+    "candidates": [
+     "The user may want to stay hydrated while studying.",
+     "The user may prefer to finish the water already on the desk before opening another bottle.",
+     "The user may want to concentrate without interruptions.",
+     "The user may appreciate having supplies brought proactively.",
+     "The user may prefer to manage their own needs without assistance.",
+     "The user may want to keep the desk clear of unnecessary items.",
+     "The user may be concerned about wasting water or creating extra plastic waste.",
+     "The user may wonder why the robot brought another bottle when one is already available."
+    ],
+    "regens": [],
+    "per_cand": [
+     {
+      "cand": "The user may want to stay hydrated while studying.",
+      "ev": [
+       76.67155771521982,
+       90.4208187359279,
+       91.57396540342984,
+       93.31618979055496
+      ],
+      "said": [
+       80,
+       90,
+       90,
+       90
+      ]
+     },
+     {
+      "cand": "The user may prefer to finish the water already on the desk before opening another bottle.",
+      "ev": [
+       87.07826886815552,
+       91.32145056591278,
+       91.10754919600194,
+       91.83728252900654
+      ],
+      "said": [
+       90,
+       90,
+       95,
+       95
+      ]
+     },
+     {
+      "cand": "The user may want to concentrate without interruptions.",
+      "ev": [
+       34.73570004591987,
+       88.35228460720893,
+       89.53713160449217,
+       92.73896943174053
+      ],
+      "said": [
+       30,
+       90,
+       90,
+       95
+      ]
+     },
+     {
+      "cand": "The user may appreciate having supplies brought proactively.",
+      "ev": [
+       71.56405283827257,
+       90.31806083194728,
+       85.35904282124363,
+       90.40478950184634
+      ],
+      "said": [
+       70,
+       90,
+       85,
+       90
+      ]
+     },
+     {
+      "cand": "The user may prefer to manage their own needs without assistance.",
+      "ev": [
+       74.6292846084181,
+       88.22581268179982,
+       85.9179745689204,
+       92.88418588571741
+      ],
+      "said": [
+       75,
+       90,
+       85,
+       95
+      ]
+     },
+     {
+      "cand": "The user may want to keep the desk clear of unnecessary items.",
+      "ev": [
+       84.67932727717728,
+       89.56934807094837,
+       85.9193050279461,
+       92.87085936518655
+      ],
+      "said": [
+       85,
+       90,
+       85,
+       95
+      ]
+     },
+     {
+      "cand": "The user may be concerned about wasting water or creating extra plastic waste.",
+      "ev": [
+       78.51576415151798,
+       90.7035906191617,
+       90.98182338690525,
+       92.75635419969734
+      ],
+      "said": [
+       80,
+       90,
+       90,
+       95
+      ]
+     },
+     {
+      "cand": "The user may wonder why the robot brought another bottle when one is already available.",
+      "ev": [
+       76.65828570509136,
+       88.02842554524005,
+       89.3638430069235,
+       88.51009660040675
+      ],
+      "said": [
+       75,
+       90,
+       90,
+       90
+      ]
+     }
+    ],
+    "rank_ev": [
+     {
+      "cand": "The user may prefer to finish the water already on the desk before opening another bottle.",
+      "p": 0.15557347088131157
+     },
+     {
+      "cand": "The user may want to keep the desk clear of unnecessary items.",
+      "p": 0.14150982589104677
+     },
+     {
+      "cand": "The user may be concerned about wasting water or creating extra plastic waste.",
+      "p": 0.14052681799521316
+     },
+     {
+      "cand": "The user may want to stay hydrated while studying.",
+      "p": 0.1385196242712641
+     },
+     {
+      "cand": "The user may wonder why the robot brought another bottle when one is already available.",
+      "p": 0.12480047933043287
+     },
+     {
+      "cand": "The user may prefer to manage their own needs without assistance.",
+      "p": 0.12285994593086014
+     },
+     {
+      "cand": "The user may appreciate having supplies brought proactively.",
+      "p": 0.11662457456063398
+     },
+     {
+      "cand": "The user may want to concentrate without interruptions.",
+      "p": 0.05958526113923736
+     }
+    ],
+    "rank_said": [
+     {
+      "cand": "The user may prefer to finish the water already on the desk before opening another bottle.",
+      "p": 0.16796774026779712
+     },
+     {
+      "cand": "The user may want to keep the desk clear of unnecessary items.",
+      "p": 0.1419376518637233
+     },
+     {
+      "cand": "The user may be concerned about wasting water or creating extra plastic waste.",
+      "p": 0.14144651812025022
+     },
+     {
+      "cand": "The user may want to stay hydrated while studying.",
+      "p": 0.1340019645349739
+     },
+     {
+      "cand": "The user may wonder why the robot brought another bottle when one is already available.",
+      "p": 0.12562684175153804
+     },
+     {
+      "cand": "The user may prefer to manage their own needs without assistance.",
+      "p": 0.1252391045856382
+     },
+     {
+      "cand": "The user may appreciate having supplies brought proactively.",
+      "p": 0.11073773458098535
+     },
+     {
+      "cand": "The user may want to concentrate without interruptions.",
+      "p": 0.05304244429509382
+     }
+    ],
+    "score_errors": 0
+   },
+   "ga_warn": {
+    "candidates": [
+     "The user may want to stay hydrated while studying.",
+     "The user may prefer to finish the water already on the desk before opening another bottle.",
+     "The user may want to concentrate without interruptions.",
+     "The user may appreciate having supplies brought proactively.",
+     "The user may prefer to manage their own needs without assistance.",
+     "The user may want to keep the desk clear of unnecessary items.",
+     "The user may be concerned about wasting water or creating extra plastic waste.",
+     "The user may wonder why the robot brought another bottle when one is already available."
+    ],
+    "regens": [],
+    "per_cand": [
+     {
+      "cand": "The user may want to stay hydrated while studying.",
+      "ev": [
+       55.30371847134236,
+       78.87711771681185,
+       77.87487804030222,
+       78.33229653814111
+      ],
+      "said": [
+       65,
+       75,
+       80,
+       75
+      ]
+     },
+     {
+      "cand": "The user may prefer to finish the water already on the desk before opening another bottle.",
+      "ev": [
+       74.05424371444434,
+       81.64817304641966,
+       78.20247504722025,
+       79.2132789243535
+      ],
+      "said": [
+       75,
+       80,
+       80,
+       75
+      ]
+     },
+     {
+      "cand": "The user may want to concentrate without interruptions.",
+      "ev": [
+       39.233107746942,
+       81.66003336122293,
+       76.47115579307794,
+       76.18023377394645
+      ],
+      "said": [
+       35,
+       85,
+       85,
+       80
+      ]
+     },
+     {
+      "cand": "The user may appreciate having supplies brought proactively.",
+      "ev": [
+       56.25434015181704,
+       76.33870196247905,
+       73.33397387385172,
+       76.2867013918647
+      ],
+      "said": [
+       55,
+       80,
+       70,
+       75
+      ]
+     },
+     {
+      "cand": "The user may prefer to manage their own needs without assistance.",
+      "ev": [
+       52.19580209311197,
+       76.89181836473064,
+       75.36035854952354,
+       75.63589084930683
+      ],
+      "said": [
+       55,
+       85,
+       85,
+       75
+      ]
+     },
+     {
+      "cand": "The user may want to keep the desk clear of unnecessary items.",
+      "ev": [
+       70.91304056692405,
+       73.83037929762152,
+       72.64628047699912,
+       78.24341519128492
+      ],
+      "said": [
+       70,
+       75,
+       70,
+       80
+      ]
+     },
+     {
+      "cand": "The user may be concerned about wasting water or creating extra plastic waste.",
+      "ev": [
+       66.23081010703328,
+       79.00093482773565,
+       79.42214897928068,
+       81.37325470131796
+      ],
+      "said": [
+       60,
+       75,
+       80,
+       85
+      ]
+     },
+     {
+      "cand": "The user may wonder why the robot brought another bottle when one is already available.",
+      "ev": [
+       64.91260423167036,
+       76.1213356909747,
+       76.59009427042258,
+       83.41513051916816
+      ],
+      "said": [
+       65,
+       80,
+       75,
+       85
+      ]
+     }
+    ],
+    "rank_ev": [
+     {
+      "cand": "The user may prefer to finish the water already on the desk before opening another bottle.",
+      "p": 0.1666365135217254
+     },
+     {
+      "cand": "The user may be concerned about wasting water or creating extra plastic waste.",
+      "p": 0.15044261622877433
+     },
+     {
+      "cand": "The user may wonder why the robot brought another bottle when one is already available.",
+      "p": 0.14044559742137158
+     },
+     {
+      "cand": "The user may want to keep the desk clear of unnecessary items.",
+      "p": 0.1323968484124262
+     },
+     {
+      "cand": "The user may want to stay hydrated while studying.",
+      "p": 0.11838559557064503
+     },
+     {
+      "cand": "The user may appreciate having supplies brought proactively.",
+      "p": 0.10688336568168588
+     },
+     {
+      "cand": "The user may prefer to manage their own needs without assistance.",
+      "p": 0.10177517284184008
+     },
+     {
+      "cand": "The user may want to concentrate without interruptions.",
+      "p": 0.08303429032153159
+     }
+    ],
+    "rank_said": [
+     {
+      "cand": "The user may prefer to finish the water already on the desk before opening another bottle.",
+      "p": 0.15548531122706524
+     },
+     {
+      "cand": "The user may wonder why the robot brought another bottle when one is already available.",
+      "p": 0.14317605742158926
+     },
+     {
+      "cand": "The user may be concerned about wasting water or creating extra plastic waste.",
+      "p": 0.13216251454300545
+     },
+     {
+      "cand": "The user may prefer to manage their own needs without assistance.",
+      "p": 0.128720782393448
+     },
+     {
+      "cand": "The user may want to keep the desk clear of unnecessary items.",
+      "p": 0.1269796708354366
+     },
+     {
+      "cand": "The user may want to stay hydrated while studying.",
+      "p": 0.1263318153719905
+     },
+     {
+      "cand": "The user may appreciate having supplies brought proactively.",
+      "p": 0.09976974137070017
+     },
+     {
+      "cand": "The user may want to concentrate without interruptions.",
+      "p": 0.0873741068367647
+     }
+    ],
+    "score_errors": 0
+   }
+  }
+ },
+ {
+  "id": 13,
+  "title": "휴지에 웃음",
+  "hidden": "갑작스러워서 웃겼지만, 고맙고 도움이 됐다",
+  "initial_candidates": [
+   "The user may want tissues to wipe away their tears.",
+   "The user may want to keep watching the movie without interruption.",
+   "The user may want to experience the emotional scene fully.",
+   "The user may want comfort or companionship.",
+   "The user may want privacy while feeling emotional.",
+   "The user may feel embarrassed about crying in front of the robot.",
+   "The user may appreciate the robot noticing and helping.",
+   "The user may feel that the robot has mistaken watery eyes for sadness.",
+   "The user may want the robot to leave them alone.",
+   "The user may wonder why the robot brought tissues."
+  ],
+  "methods": {
+   "ga": {
+    "candidates": [
+     "The user may want tissues to wipe away their tears.",
+     "The user may want to keep watching the movie without interruption.",
+     "The user may want to experience the emotional scene fully.",
+     "The user may want comfort or companionship.",
+     "The user may want privacy while feeling emotional.",
+     "The user may feel embarrassed about crying in front of the robot.",
+     "The user may appreciate the robot noticing and helping.",
+     "The user may feel that the robot has mistaken watery eyes for sadness.",
+     "The user may want the robot to leave them alone.",
+     "The user may wonder why the robot brought tissues."
+    ],
+    "regens": [],
+    "per_cand": [
+     {
+      "cand": "The user may want tissues to wipe away their tears.",
+      "ev": [
+       38.0552624827623,
+       76.36672360000132,
+       93.24669461970149,
+       90.1896506642068
+      ],
+      "said": [
+       30,
+       75,
+       95,
+       90
+      ]
+     },
+     {
+      "cand": "The user may want to keep watching the movie without interruption.",
+      "ev": [
+       42.778019176815334,
+       79.22782633935581,
+       89.9034477570241,
+       92.7530273886278
+      ],
+      "said": [
+       30,
+       80,
+       90,
+       95
+      ]
+     },
+     {
+      "cand": "The user may want to experience the emotional scene fully.",
+      "ev": [
+       70.89977473267857,
+       86.032137650689,
+       83.12603941450178,
+       89.21782830081725
+      ],
+      "said": [
+       70,
+       85,
+       85,
+       90
+      ]
+     },
+     {
+      "cand": "The user may want comfort or companionship.",
+      "ev": [
+       61.3194842886054,
+       83.92061374285949,
+       89.49759463640034,
+       86.34852059335542
+      ],
+      "said": [
+       70,
+       85,
+       90,
+       85
+      ]
+     },
+     {
+      "cand": "The user may want privacy while feeling emotional.",
+      "ev": [
+       37.58549229716354,
+       69.77433988513965,
+       77.62104200798902,
+       80.65245278479556
+      ],
+      "said": [
+       40,
+       55,
+       75,
+       75
+      ]
+     },
+     {
+      "cand": "The user may feel embarrassed about crying in front of the robot.",
+      "ev": [
+       68.75115934433667,
+       81.9651520742362,
+       84.36660185595862,
+       79.42056150894575
+      ],
+      "said": [
+       60,
+       80,
+       80,
+       85
+      ]
+     },
+     {
+      "cand": "The user may appreciate the robot noticing and helping.",
+      "ev": [
+       71.93578271967044,
+       88.67499423656272,
+       90.74888508505883,
+       90.0877830571784
+      ],
+      "said": [
+       75,
+       85,
+       95,
+       90
+      ]
+     },
+     {
+      "cand": "The user may feel that the robot has mistaken watery eyes for sadness.",
+      "ev": [
+       84.41192713651776,
+       90.68192464335769,
+       86.18754357852336,
+       82.90231581139189
+      ],
+      "said": [
+       80,
+       90,
+       85,
+       85
+      ]
+     },
+     {
+      "cand": "The user may want the robot to leave them alone.",
+      "ev": [
+       34.64783119765781,
+       67.43761097541768,
+       71.53359862769868,
+       78.46537830108385
+      ],
+      "said": [
+       30,
+       70,
+       60,
+       85
+      ]
+     },
+     {
+      "cand": "The user may wonder why the robot brought tissues.",
+      "ev": [
+       56.656219002683855,
+       94.13764727334829,
+       89.09161711870753,
+       87.25102735297106
+      ],
+      "said": [
+       45,
+       90,
+       90,
+       85
+      ]
+     }
+    ],
+    "rank_ev": [
+     {
+      "cand": "The user may feel that the robot has mistaken watery eyes for sadness.",
+      "p": 0.15480717892607104
+     },
+     {
+      "cand": "The user may appreciate the robot noticing and helping.",
+      "p": 0.14760760261418293
+     },
+     {
+      "cand": "The user may want to experience the emotional scene fully.",
+      "p": 0.12804118720439667
+     },
+     {
+      "cand": "The user may wonder why the robot brought tissues.",
+      "p": 0.1173474633434988
+     },
+     {
+      "cand": "The user may want comfort or companionship.",
+      "p": 0.11256122115528801
+     },
+     {
+      "cand": "The user may feel embarrassed about crying in front of the robot.",
+      "p": 0.1068730421015554
+     },
+     {
+      "cand": "The user may want to keep watching the movie without interruption.",
+      "p": 0.07999415200848234
+     },
+     {
+      "cand": "The user may want tissues to wipe away their tears.",
+      "p": 0.06917742900932794
+     },
+     {
+      "cand": "The user may want privacy while feeling emotional.",
+      "p": 0.046469544356828985
+     },
+     {
+      "cand": "The user may want the robot to leave them alone.",
+      "p": 0.03712117928036791
+     }
+    ],
+    "rank_said": [
+     {
+      "cand": "The user may appreciate the robot noticing and helping.",
+      "p": 0.16821553809297857
+     },
+     {
+      "cand": "The user may feel that the robot has mistaken watery eyes for sadness.",
+      "p": 0.16054254863610587
+     },
+     {
+      "cand": "The user may want to experience the emotional scene fully.",
+      "p": 0.1404747300565926
+     },
+     {
+      "cand": "The user may want comfort or companionship.",
+      "p": 0.1404747300565926
+     },
+     {
+      "cand": "The user may feel embarrassed about crying in front of the robot.",
+      "p": 0.10073257953638015
+     },
+     {
+      "cand": "The user may wonder why the robot brought tissues.",
+      "p": 0.09561725323179834
+     },
+     {
+      "cand": "The user may want to keep watching the movie without interruption.",
+      "p": 0.06332820257618016
+     },
+     {
+      "cand": "The user may want tissues to wipe away their tears.",
+      "p": 0.05937018991516888
+     },
+     {
+      "cand": "The user may want privacy while feeling emotional.",
+      "p": 0.03819135023782797
+     },
+     {
+      "cand": "The user may want the robot to leave them alone.",
+      "p": 0.033052877660374715
+     }
+    ],
+    "score_errors": 0
+   },
+   "ga_warn": {
+    "candidates": [
+     "The user may want tissues to wipe away their tears.",
+     "The user may want to keep watching the movie without interruption.",
+     "The user may want to experience the emotional scene fully.",
+     "The user may want comfort or companionship.",
+     "The user may want privacy while feeling emotional.",
+     "The user may feel embarrassed about crying in front of the robot.",
+     "The user may appreciate the robot noticing and helping.",
+     "The user may feel that the robot has mistaken watery eyes for sadness.",
+     "The user may want the robot to leave them alone.",
+     "The user may wonder why the robot brought tissues."
+    ],
+    "regens": [],
+    "per_cand": [
+     {
+      "cand": "The user may want tissues to wipe away their tears.",
+      "ev": [
+       29.43670177447895,
+       65.40163181311482,
+       80.03065035807411,
+       80.52490102558038
+      ],
+      "said": [
+       25,
+       70,
+       75,
+       85
+      ]
+     },
+     {
+      "cand": "The user may want to keep watching the movie without interruption.",
+      "ev": [
+       38.75877063284884,
+       67.06832366410516,
+       78.58336029632032,
+       77.21507420340356
+      ],
+      "said": [
+       35,
+       60,
+       75,
+       75
+      ]
+     },
+     {
+      "cand": "The user may want to experience the emotional scene fully.",
+      "ev": [
+       55.52387594235776,
+       72.0500458964081,
+       75.07338003315488,
+       79.03487541657549
+      ],
+      "said": [
+       65,
+       70,
+       75,
+       80
+      ]
+     },
+     {
+      "cand": "The user may want comfort or companionship.",
+      "ev": [
+       42.583918212389364,
+       73.01639286382868,
+       75.27092742168051,
+       71.66517102948944
+      ],
+      "said": [
+       45,
+       75,
+       75,
+       75
+      ]
+     },
+     {
+      "cand": "The user may want privacy while feeling emotional.",
+      "ev": [
+       37.12011307222749,
+       53.71208774020354,
+       69.97351467753221,
+       72.92070541564362
+      ],
+      "said": [
+       40,
+       50,
+       70,
+       75
+      ]
+     },
+     {
+      "cand": "The user may feel embarrassed about crying in front of the robot.",
+      "ev": [
+       48.257956422648846,
+       67.43747190731908,
+       74.62153728838223,
+       72.85122192436319
+      ],
+      "said": [
+       40,
+       70,
+       75,
+       75
+      ]
+     },
+     {
+      "cand": "The user may appreciate the robot noticing and helping.",
+      "ev": [
+       51.28686789684271,
+       71.23816685610883,
+       76.59727120022082,
+       78.56800345646417
+      ],
+      "said": [
+       55,
+       70,
+       75,
+       75
+      ]
+     },
+     {
+      "cand": "The user may feel that the robot has mistaken watery eyes for sadness.",
+      "ev": [
+       66.3808050958688,
+       76.22751395133088,
+       76.67262327177052,
+       75.21536597651142
+      ],
+      "said": [
+       65,
+       75,
+       85,
+       75
+      ]
+     },
+     {
+      "cand": "The user may want the robot to leave them alone.",
+      "ev": [
+       40.28263265682872,
+       63.816975885658785,
+       62.665859905126034,
+       69.9110461329007
+      ],
+      "said": [
+       50,
+       60,
+       65,
+       70
+      ]
+     },
+     {
+      "cand": "The user may wonder why the robot brought tissues.",
+      "ev": [
+       32.89947664230186,
+       81.20365388501648,
+       78.01992075698834,
+       77.45632208242087
+      ],
+      "said": [
+       35,
+       85,
+       80,
+       75
+      ]
+     }
+    ],
+    "rank_ev": [
+     {
+      "cand": "The user may feel that the robot has mistaken watery eyes for sadness.",
+      "p": 0.16662497234547943
+     },
+     {
+      "cand": "The user may want to experience the emotional scene fully.",
+      "p": 0.13553694829537763
+     },
+     {
+      "cand": "The user may appreciate the robot noticing and helping.",
+      "p": 0.12555003882435792
+     },
+     {
+      "cand": "The user may feel embarrassed about crying in front of the robot.",
+      "p": 0.10102065118752747
+     },
+     {
+      "cand": "The user may want comfort or companionship.",
+      "p": 0.09577239000055335
+     },
+     {
+      "cand": "The user may wonder why the robot brought tissues.",
+      "p": 0.09218618872845219
+     },
+     {
+      "cand": "The user may want to keep watching the movie without interruption.",
+      "p": 0.09006562294487169
+     },
+     {
+      "cand": "The user may want tissues to wipe away their tears.",
+      "p": 0.07084402075262172
+     },
+     {
+      "cand": "The user may want the robot to leave them alone.",
+      "p": 0.06430870941024502
+     },
+     {
+      "cand": "The user may want privacy while feeling emotional.",
+      "p": 0.05809045751051373
+     }
+    ],
+    "rank_said": [
+     {
+      "cand": "The user may feel that the robot has mistaken watery eyes for sadness.",
+      "p": 0.17290840809513877
+     },
+     {
+      "cand": "The user may want to experience the emotional scene fully.",
+      "p": 0.15188817024827875
+     },
+     {
+      "cand": "The user may appreciate the robot noticing and helping.",
+      "p": 0.12048821197579804
+     },
+     {
+      "cand": "The user may want comfort or companionship.",
+      "p": 0.10562278322553727
+     },
+     {
+      "cand": "The user may wonder why the robot brought tissues.",
+      "p": 0.09931149593156684
+     },
+     {
+      "cand": "The user may feel embarrassed about crying in front of the robot.",
+      "p": 0.08762779052785313
+     },
+     {
+      "cand": "The user may want the robot to leave them alone.",
+      "p": 0.07594408512413939
+     },
+     {
+      "cand": "The user may want to keep watching the movie without interruption.",
+      "p": 0.06572084289588982
+     },
+     {
+      "cand": "The user may want tissues to wipe away their tears.",
+      "p": 0.062069684957229275
+     },
+     {
+      "cand": "The user may want privacy while feeling emotional.",
+      "p": 0.05841852701856874
+     }
+    ],
+    "score_errors": 0
+   }
+  }
+ },
+ {
+  "id": 14,
+  "title": "룸메이트가 자는 중",
+  "hidden": "평소엔 불 켜기가 좋지만, 지금은 룸메이트가 자고 있다",
+  "initial_candidates": [
+   "The user may want enough light to see and navigate safely.",
+   "The user may want the room to remain dark so their roommate can sleep.",
+   "The user may want a dimmer light rather than the ceiling light.",
+   "The user may want to avoid waking or disturbing their roommate.",
+   "The user may want to check on their roommate.",
+   "The user may want to find or retrieve something in the room.",
+   "The user may want to get ready for bed.",
+   "The user may want to control the room lighting themselves.",
+   "The user may appreciate the robot anticipating their needs.",
+   "The user may feel annoyed that the robot did not account for the roommate."
+  ],
+  "methods": {
+   "ga": {
+    "candidates": [
+     "The user may want enough light to see and navigate safely.",
+     "The user may want the room to remain dark so their roommate can sleep.",
+     "The user may want a dimmer light rather than the ceiling light.",
+     "The user may want to avoid waking or disturbing their roommate.",
+     "The user may want to check on their roommate.",
+     "The user may want to find or retrieve something in the room.",
+     "The user may want to get ready for bed.",
+     "The user may want to control the room lighting themselves.",
+     "The user may appreciate the robot anticipating their needs.",
+     "The user may feel annoyed that the robot did not account for the roommate."
+    ],
+    "regens": [],
+    "per_cand": [
+     {
+      "cand": "The user may want enough light to see and navigate safely.",
+      "ev": [
+       72.75824133651761,
+       40.10137933418822,
+       77.46495249666184,
+       94.76367929672737,
+       95.0
+      ],
+      "said": [
+       80,
+       65,
+       70,
+       95,
+       95
+      ]
+     },
+     {
+      "cand": "The user may want the room to remain dark so their roommate can sleep.",
+      "ev": [
+       85.31305490755881,
+       95.0,
+       95.0,
+       89.12235379740784,
+       95.0
+      ],
+      "said": [
+       85,
+       95,
+       95,
+       90,
+       95
+      ]
+     },
+     {
+      "cand": "The user may want a dimmer light rather than the ceiling light.",
+      "ev": [
+       75.82618543667536,
+       90.87070920944055,
+       84.92732017524865,
+       91.23294664754947,
+       95.0
+      ],
+      "said": [
+       75,
+       90,
+       85,
+       90,
+       95
+      ]
+     },
+     {
+      "cand": "The user may want to avoid waking or disturbing their roommate.",
+      "ev": [
+       87.86521934758319,
+       94.44521986389871,
+       95.0,
+       90.1225260414095,
+       95.0
+      ],
+      "said": [
+       85,
+       95,
+       95,
+       90,
+       95
+      ]
+     },
+     {
+      "cand": "The user may want to check on their roommate.",
+      "ev": [
+       89.93523414635528,
+       70.89779149347609,
+       86.8610613702953,
+       89.98177517162846,
+       47.55091331383578
+      ],
+      "said": [
+       90,
+       75,
+       85,
+       90,
+       70
+      ]
+     },
+     {
+      "cand": "The user may want to find or retrieve something in the room.",
+      "ev": [
+       70.51642756744069,
+       55.76573270989966,
+       85.48003446185257,
+       93.94483211702178,
+       65.5254232268881
+      ],
+      "said": [
+       70,
+       40,
+       85,
+       95,
+       65
+      ]
+     },
+     {
+      "cand": "The user may want to get ready for bed.",
+      "ev": [
+       77.81065377888041,
+       84.23933728594945,
+       90.34118120599737,
+       90.51656925992526,
+       95.0
+      ],
+      "said": [
+       70,
+       85,
+       90,
+       90,
+       95
+      ]
+     },
+     {
+      "cand": "The user may want to control the room lighting themselves.",
+      "ev": [
+       41.03603239545647,
+       87.22851938796113,
+       71.4331071002131,
+       88.20325434039482,
+       92.8209754585556
+      ],
+      "said": [
+       40,
+       90,
+       75,
+       85,
+       95
+      ]
+     },
+     {
+      "cand": "The user may appreciate the robot anticipating their needs.",
+      "ev": [
+       73.66743649384078,
+       70.30518790343984,
+       80.48894953802056,
+       90.65117818854588,
+       92.63215983313206
+      ],
+      "said": [
+       70,
+       50,
+       85,
+       90,
+       90
+      ]
+     },
+     {
+      "cand": "The user may feel annoyed that the robot did not account for the roommate.",
+      "ev": [
+       85.21924002848766,
+       93.20515919325787,
+       90.90410175575846,
+       90.28917858808826,
+       94.85623947578775
+      ],
+      "said": [
+       85,
+       95,
+       90,
+       90,
+       95
+      ]
+     }
+    ],
+    "rank_ev": [
+     {
+      "cand": "The user may want to avoid waking or disturbing their roommate.",
+      "p": 0.16192320698093607
+     },
+     {
+      "cand": "The user may want the room to remain dark so their roommate can sleep.",
+      "p": 0.15638838977652308
+     },
+     {
+      "cand": "The user may feel annoyed that the robot did not account for the roommate.",
+      "p": 0.1483522867802595
+     },
+     {
+      "cand": "The user may want to get ready for bed.",
+      "p": 0.12215830877230391
+     },
+     {
+      "cand": "The user may want a dimmer light rather than the ceiling light.",
+      "p": 0.1216738932079408
+     },
+     {
+      "cand": "The user may appreciate the robot anticipating their needs.",
+      "p": 0.08397808828720184
+     },
+     {
+      "cand": "The user may want to check on their roommate.",
+      "p": 0.05685028922587795
+     },
+     {
+      "cand": "The user may want to control the room lighting themselves.",
+      "p": 0.0502210390167496
+     },
+     {
+      "cand": "The user may want to find or retrieve something in the room.",
+      "p": 0.049640561319411046
+     },
+     {
+      "cand": "The user may want enough light to see and navigate safely.",
+      "p": 0.04881393663279629
+     }
+    ],
+    "rank_said": [
+     {
+      "cand": "The user may want the room to remain dark so their roommate can sleep.",
+      "p": 0.157005787849854
+     },
+     {
+      "cand": "The user may want to avoid waking or disturbing their roommate.",
+      "p": 0.157005787849854
+     },
+     {
+      "cand": "The user may feel annoyed that the robot did not account for the roommate.",
+      "p": 0.14874232533144066
+     },
+     {
+      "cand": "The user may want a dimmer light rather than the ceiling light.",
+      "p": 0.11742815157745315
+     },
+     {
+      "cand": "The user may want to get ready for bed.",
+      "p": 0.10959960813895626
+     },
+     {
+      "cand": "The user may want to check on their roommate.",
+      "p": 0.08652600642549181
+     },
+     {
+      "cand": "The user may want enough light to see and navigate safely.",
+      "p": 0.07863791782228671
+     },
+     {
+      "cand": "The user may appreciate the robot anticipating their needs.",
+      "p": 0.05768400428366119
+     },
+     {
+      "cand": "The user may want to control the room lighting themselves.",
+      "p": 0.05219028958997918
+     },
+     {
+      "cand": "The user may want to find or retrieve something in the room.",
+      "p": 0.035180121131023
+     }
+    ],
+    "score_errors": 0
+   },
+   "ga_warn": {
+    "candidates": [
+     "The user may want enough light to see and navigate safely.",
+     "The user may want the room to remain dark so their roommate can sleep.",
+     "The user may want a dimmer light rather than the ceiling light.",
+     "The user may want to avoid waking or disturbing their roommate.",
+     "The user may want to check on their roommate.",
+     "The user may want to find or retrieve something in the room.",
+     "The user may want to get ready for bed.",
+     "The user may want to control the room lighting themselves.",
+     "The user may appreciate the robot anticipating their needs.",
+     "The user may feel annoyed that the robot did not account for the roommate."
+    ],
+    "regens": [],
+    "per_cand": [
+     {
+      "cand": "The user may want enough light to see and navigate safely.",
+      "ev": [
+       53.43100485769374,
+       41.34384211512697,
+       60.02541389696854,
+       83.1464204512752,
+       85.50273075509641
+      ],
+      "said": [
+       55,
+       35,
+       65,
+       80,
+       85
+      ]
+     },
+     {
+      "cand": "The user may want the room to remain dark so their roommate can sleep.",
+      "ev": [
+       73.829049183594,
+       84.56160079290723,
+       77.34674239075393,
+       80.4780720691159,
+       89.77833953161844
+      ],
+      "said": [
+       70,
+       85,
+       80,
+       80,
+       90
+      ]
+     },
+     {
+      "cand": "The user may want a dimmer light rather than the ceiling light.",
+      "ev": [
+       67.97626707756288,
+       80.10306997928095,
+       63.376010320114254,
+       78.81594196259456,
+       81.50264764382695
+      ],
+      "said": [
+       65,
+       80,
+       65,
+       75,
+       80
+      ]
+     },
+     {
+      "cand": "The user may want to avoid waking or disturbing their roommate.",
+      "ev": [
+       73.2978023475703,
+       84.74046246732024,
+       75.04589159132064,
+       78.48546745104476,
+       88.55945638529225
+      ],
+      "said": [
+       75,
+       85,
+       80,
+       75,
+       90
+      ]
+     },
+     {
+      "cand": "The user may want to check on their roommate.",
+      "ev": [
+       74.06297495728107,
+       57.37538210392433,
+       75.79599064724589,
+       81.42235283725219,
+       57.93140083381675
+      ],
+      "said": [
+       75,
+       65,
+       75,
+       85,
+       55
+      ]
+     },
+     {
+      "cand": "The user may want to find or retrieve something in the room.",
+      "ev": [
+       63.8744989417282,
+       51.6537169029336,
+       72.99583523023014,
+       81.6930824446452,
+       61.38695438348976
+      ],
+      "said": [
+       65,
+       45,
+       65,
+       85,
+       65
+      ]
+     },
+     {
+      "cand": "The user may want to get ready for bed.",
+      "ev": [
+       65.96648389152914,
+       72.05166467117412,
+       75.80572636569634,
+       76.21029032934578,
+       85.51089166165022
+      ],
+      "said": [
+       65,
+       70,
+       75,
+       80,
+       85
+      ]
+     },
+     {
+      "cand": "The user may want to control the room lighting themselves.",
+      "ev": [
+       54.74106819733241,
+       72.66412589734301,
+       50.79093990255282,
+       74.49005061174856,
+       83.47257080524805
+      ],
+      "said": [
+       50,
+       75,
+       45,
+       70,
+       80
+      ]
+     },
+     {
+      "cand": "The user may appreciate the robot anticipating their needs.",
+      "ev": [
+       57.84687303566417,
+       53.479922177170074,
+       73.34426270694995,
+       71.12248453257898,
+       85.99327728972291
+      ],
+      "said": [
+       55,
+       40,
+       85,
+       80,
+       70
+      ]
+     },
+     {
+      "cand": "The user may feel annoyed that the robot did not account for the roommate.",
+      "ev": [
+       70.42274001569172,
+       81.93561196097144,
+       74.83277423277556,
+       75.64178668039123,
+       84.37036318306059
+      ],
+      "said": [
+       65,
+       85,
+       75,
+       75,
+       85
+      ]
+     }
+    ],
+    "rank_ev": [
+     {
+      "cand": "The user may want the room to remain dark so their roommate can sleep.",
+      "p": 0.17133677881284204
+     },
+     {
+      "cand": "The user may want to avoid waking or disturbing their roommate.",
+      "p": 0.1591079437067398
+     },
+     {
+      "cand": "The user may feel annoyed that the robot did not account for the roommate.",
+      "p": 0.1353281453684133
+     },
+     {
+      "cand": "The user may want to get ready for bed.",
+      "p": 0.11530904802219595
+     },
+     {
+      "cand": "The user may want a dimmer light rather than the ceiling light.",
+      "p": 0.10886195329016278
+     },
+     {
+      "cand": "The user may want to check on their roommate.",
+      "p": 0.07460872563247559
+     },
+     {
+      "cand": "The user may appreciate the robot anticipating their needs.",
+      "p": 0.06815020843123618
+     },
+     {
+      "cand": "The user may want to control the room lighting themselves.",
+      "p": 0.06169082758748356
+     },
+     {
+      "cand": "The user may want to find or retrieve something in the room.",
+      "p": 0.05931267395860334
+     },
+     {
+      "cand": "The user may want enough light to see and navigate safely.",
+      "p": 0.04629369518984745
+     }
+    ],
+    "rank_said": [
+     {
+      "cand": "The user may want to avoid waking or disturbing their roommate.",
+      "p": 0.17687744830196206
+     },
+     {
+      "cand": "The user may want the room to remain dark so their roommate can sleep.",
+      "p": 0.17609132630950888
+     },
+     {
+      "cand": "The user may feel annoyed that the robot did not account for the roommate.",
+      "p": 0.13572887525949173
+     },
+     {
+      "cand": "The user may want to get ready for bed.",
+      "p": 0.11922850218872998
+     },
+     {
+      "cand": "The user may want a dimmer light rather than the ceiling light.",
+      "p": 0.10419969939183124
+     },
+     {
+      "cand": "The user may want to check on their roommate.",
+      "p": 0.08782456634437698
+     },
+     {
+      "cand": "The user may want to find or retrieve something in the room.",
+      "p": 0.05397218804436259
+     },
+     {
+      "cand": "The user may appreciate the robot anticipating their needs.",
+      "p": 0.05380568303901662
+     },
+     {
+      "cand": "The user may want to control the room lighting themselves.",
+      "p": 0.04855459365151899
+     },
+     {
+      "cand": "The user may want enough light to see and navigate safely.",
+      "p": 0.04371711746920097
+     }
+    ],
+    "score_errors": 0
+   }
+  }
+ },
+ {
+  "id": 15,
+  "title": "커피가 씀",
+  "hidden": "커피는 원하지만 설탕이 필요했다",
+  "initial_candidates": [
+   "The user wants coffee to help them wake up and focus.",
+   "The user wants a different drink instead of coffee.",
+   "The user does not want anything to drink right now.",
+   "The user appreciates the robot anticipating their needs.",
+   "The user prefers to decide for themselves when to ask for assistance.",
+   "The user is concerned that a drink near the laptop could spill.",
+   "The user dislikes black coffee or avoids caffeine.",
+   "The user wants to begin working without interruption."
+  ],
+  "methods": {
+   "ga": {
+    "candidates": [
+     "The user wants coffee to help them wake up and focus.",
+     "The user wants a different drink instead of coffee.",
+     "The user does not want anything to drink right now.",
+     "The user appreciates the robot anticipating their needs.",
+     "The user prefers to decide for themselves when to ask for assistance.",
+     "The user is concerned that a drink near the laptop could spill.",
+     "The user dislikes black coffee or avoids caffeine.",
+     "The user wants to begin working without interruption."
+    ],
+    "regens": [],
+    "per_cand": [
+     {
+      "cand": "The user wants coffee to help them wake up and focus.",
+      "ev": [
+       58.82086866324806,
+       88.24101411068875,
+       94.3997449341448,
+       95.0631940821405,
+       95.0
+      ],
+      "said": [
+       60,
+       85,
+       95,
+       95,
+       95
+      ]
+     },
+     {
+      "cand": "The user wants a different drink instead of coffee.",
+      "ev": [
+       85.05292383663671,
+       23.29599774534872,
+       16.39492535183138,
+       29.328017360020006,
+       27.86184109791185
+      ],
+      "said": [
+       85,
+       20,
+       15,
+       35,
+       20
+      ]
+     },
+     {
+      "cand": "The user does not want anything to drink right now.",
+      "ev": [
+       41.740900452389475,
+       17.570659102787324,
+       19.573729596755864,
+       20.052351853107517,
+       16.338182526915652
+      ],
+      "said": [
+       40,
+       15,
+       20,
+       20,
+       15
+      ]
+     },
+     {
+      "cand": "The user appreciates the robot anticipating their needs.",
+      "ev": [
+       39.7578194067984,
+       84.24631633364847,
+       94.87735307479787,
+       95.05078071931392,
+       90.63609769177339
+      ],
+      "said": [
+       40,
+       85,
+       95,
+       95,
+       90
+      ]
+     },
+     {
+      "cand": "The user prefers to decide for themselves when to ask for assistance.",
+      "ev": [
+       65.45477956010532,
+       84.43385176039351,
+       92.5464303881927,
+       94.08718944417787,
+       84.11341328182849
+      ],
+      "said": [
+       60,
+       85,
+       90,
+       95,
+       90
+      ]
+     },
+     {
+      "cand": "The user is concerned that a drink near the laptop could spill.",
+      "ev": [
+       40.789137595813024,
+       53.857668396818475,
+       71.06875312290957,
+       74.81470481156519,
+       71.96184986733891
+      ],
+      "said": [
+       35,
+       50,
+       70,
+       75,
+       70
+      ]
+     },
+     {
+      "cand": "The user dislikes black coffee or avoids caffeine.",
+      "ev": [
+       89.58866848256427,
+       71.9716446490834,
+       89.8707934925122,
+       87.49852684528219,
+       88.60666472072205
+      ],
+      "said": [
+       90,
+       65,
+       90,
+       85,
+       85
+      ]
+     },
+     {
+      "cand": "The user wants to begin working without interruption.",
+      "ev": [
+       64.38399669959001,
+       36.19302093060804,
+       87.77941840266037,
+       93.5268845762489,
+       93.16007023254136
+      ],
+      "said": [
+       70,
+       25,
+       85,
+       95,
+       95
+      ]
+     }
+    ],
+    "rank_ev": [
+     {
+      "cand": "The user dislikes black coffee or avoids caffeine.",
+      "p": 0.24473524918132608
+     },
+     {
+      "cand": "The user wants coffee to help them wake up and focus.",
+      "p": 0.24104884918987127
+     },
+     {
+      "cand": "The user prefers to decide for themselves when to ask for assistance.",
+      "p": 0.22050056181308642
+     },
+     {
+      "cand": "The user appreciates the robot anticipating their needs.",
+      "p": 0.14913831566575758
+     },
+     {
+      "cand": "The user wants to begin working without interruption.",
+      "p": 0.09708632236025948
+     },
+     {
+      "cand": "The user is concerned that a drink near the laptop could spill.",
+      "p": 0.045788494274679306
+     },
+     {
+      "cand": "The user wants a different drink instead of coffee.",
+      "p": 0.0014460017956149222
+     },
+     {
+      "cand": "The user does not want anything to drink right now.",
+      "p": 0.00025620571940510256
+     }
+    ],
+    "rank_said": [
+     {
+      "cand": "The user wants coffee to help them wake up and focus.",
+      "p": 0.25919889743271507
+     },
+     {
+      "cand": "The user prefers to decide for themselves when to ask for assistance.",
+      "p": 0.23263280545207668
+     },
+     {
+      "cand": "The user dislikes black coffee or avoids caffeine.",
+      "p": 0.2254905701969691
+     },
+     {
+      "cand": "The user appreciates the robot anticipating their needs.",
+      "p": 0.16370456679960949
+     },
+     {
+      "cand": "The user wants to begin working without interruption.",
+      "p": 0.07957860886092129
+     },
+     {
+      "cand": "The user is concerned that a drink near the laptop could spill.",
+      "p": 0.03812304221135874
+     },
+     {
+      "cand": "The user wants a different drink instead of coffee.",
+      "p": 0.001058108926682609
+     },
+     {
+      "cand": "The user does not want anything to drink right now.",
+      "p": 0.0002134001196670809
+     }
+    ],
+    "score_errors": 0
+   },
+   "ga_warn": {
+    "candidates": [
+     "The user wants coffee to help them wake up and focus.",
+     "The user wants a different drink instead of coffee.",
+     "The user does not want anything to drink right now.",
+     "The user appreciates the robot anticipating their needs.",
+     "The user prefers to decide for themselves when to ask for assistance.",
+     "The user is concerned that a drink near the laptop could spill.",
+     "The user dislikes black coffee or avoids caffeine.",
+     "The user wants to begin working without interruption."
+    ],
+    "regens": [],
+    "per_cand": [
+     {
+      "cand": "The user wants coffee to help them wake up and focus.",
+      "ev": [
+       35.07414874845182,
+       74.68603639766307,
+       75.38032958238493,
+       92.2855509057638,
+       82.60256355520761
+      ],
+      "said": [
+       30,
+       75,
+       75,
+       90,
+       75
+      ]
+     },
+     {
+      "cand": "The user wants a different drink instead of coffee.",
+      "ev": [
+       67.48576613290655,
+       30.848644803432723,
+       26.303860809158774,
+       40.20576633828084,
+       41.401066297802906
+      ],
+      "said": [
+       70,
+       25,
+       30,
+       40,
+       45
+      ]
+     },
+     {
+      "cand": "The user does not want anything to drink right now.",
+      "ev": [
+       56.42807380287691,
+       28.72035947076807,
+       29.397940165799493,
+       32.994467107401306,
+       33.58589948858396
+      ],
+      "said": [
+       55,
+       30,
+       20,
+       35,
+       35
+      ]
+     },
+     {
+      "cand": "The user appreciates the robot anticipating their needs.",
+      "ev": [
+       42.63326626353406,
+       72.47865711633193,
+       82.14883479363132,
+       86.20041578786459,
+       78.2333307290366
+      ],
+      "said": [
+       35,
+       75,
+       75,
+       85,
+       75
+      ]
+     },
+     {
+      "cand": "The user prefers to decide for themselves when to ask for assistance.",
+      "ev": [
+       41.76613804251233,
+       66.9122675583963,
+       81.69037631245673,
+       86.59914102118985,
+       74.0955109748607
+      ],
+      "said": [
+       45,
+       65,
+       90,
+       90,
+       80
+      ]
+     },
+     {
+      "cand": "The user is concerned that a drink near the laptop could spill.",
+      "ev": [
+       48.19997726813135,
+       51.988189805707975,
+       66.58290140997215,
+       64.2932465205423,
+       66.8288525558682
+      ],
+      "said": [
+       45,
+       55,
+       75,
+       60,
+       60
+      ]
+     },
+     {
+      "cand": "The user dislikes black coffee or avoids caffeine.",
+      "ev": [
+       80.75520720600498,
+       67.17585329882206,
+       77.67750625079663,
+       86.0310206467062,
+       78.05175699705784
+      ],
+      "said": [
+       80,
+       70,
+       75,
+       90,
+       75
+      ]
+     },
+     {
+      "cand": "The user wants to begin working without interruption.",
+      "ev": [
+       42.590386813525356,
+       46.73862573305071,
+       83.27487032838643,
+       84.24651389850382,
+       80.40387161553797
+      ],
+      "said": [
+       35,
+       60,
+       90,
+       85,
+       75
+      ]
+     }
+    ],
+    "rank_ev": [
+     {
+      "cand": "The user dislikes black coffee or avoids caffeine.",
+      "p": 0.29799656035264244
+     },
+     {
+      "cand": "The user appreciates the robot anticipating their needs.",
+      "p": 0.18028343471054872
+     },
+     {
+      "cand": "The user wants coffee to help them wake up and focus.",
+      "p": 0.15852811964515393
+     },
+     {
+      "cand": "The user prefers to decide for themselves when to ask for assistance.",
+      "p": 0.15427691133984933
+     },
+     {
+      "cand": "The user wants to begin working without interruption.",
+      "p": 0.1182564611527553
+     },
+     {
+      "cand": "The user is concerned that a drink near the laptop could spill.",
+      "p": 0.07549846050015335
+     },
+     {
+      "cand": "The user wants a different drink instead of coffee.",
+      "p": 0.009599798811833166
+     },
+     {
+      "cand": "The user does not want anything to drink right now.",
+      "p": 0.005560253487063778
+     }
+    ],
+    "rank_said": [
+     {
+      "cand": "The user dislikes black coffee or avoids caffeine.",
+      "p": 0.3104267032663583
+     },
+     {
+      "cand": "The user prefers to decide for themselves when to ask for assistance.",
+      "p": 0.20754242446950805
+     },
+     {
+      "cand": "The user appreciates the robot anticipating their needs.",
+      "p": 0.1374284884252107
+     },
+     {
+      "cand": "The user wants to begin working without interruption.",
+      "p": 0.13193134888820224
+     },
+     {
+      "cand": "The user wants coffee to help them wake up and focus.",
+      "p": 0.12472501470523321
+     },
+     {
+      "cand": "The user is concerned that a drink near the laptop could spill.",
+      "p": 0.0731720086270702
+     },
+     {
+      "cand": "The user wants a different drink instead of coffee.",
+      "p": 0.010347556775545276
+     },
+     {
+      "cand": "The user does not want anything to drink right now.",
+      "p": 0.004426454842872144
+     }
+    ],
+    "score_errors": 0
+   }
+  }
+ }
+]
