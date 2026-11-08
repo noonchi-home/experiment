@@ -10,11 +10,12 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from pam.__main__ import main as prepare
+from pam.experiment_paths import breakfast_dataset
 from pam.inference import infer_bundle
 
 
 def run(dataset: Path, output: Path, execute: bool) -> dict:
-    dataset, output = dataset.resolve(), output.resolve()
+    dataset, output = breakfast_dataset(dataset), output.resolve()
     output.mkdir(parents=True, exist_ok=False)
     scenario = ROOT / "scenarios/breakfast/scenario.json"
     seed = scenario.parent / "initial_fsm.json"

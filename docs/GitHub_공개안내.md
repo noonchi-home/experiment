@@ -8,7 +8,7 @@
 - `prompts/`, `config/`: 원문 전사와 출처, 공개 연결 설정(키 없음)
 - `scenarios/breakfast/`: 현재 식탁 시작 기억; `scenarios/morning/`: 보존용 과거 설정
 - `tests/`, `tools/`: 검사·실행·합성 생성 도구
-- `examples/breakfast_2026-10-25/`: 원본 사진 20장, 상대 경로 목록, 실행 당시 기억, 실제 응답 두 건과 증거
+- `experiments/breakfast_2026-10-25/`: 원본 사진 20장, 상대 경로 목록, 실행 당시 기억, 실제 응답 두 건과 증거
 - README, 출처 문서, 논문 충실도 검증 보고서
 - `docs/research/`, `docs/presentations/`: 별도로 검토한 연구 방향 문서와 Markdown 발표 자료. 구현·효과 검증 전의 제안임을 명시하며 발표 대본은 포함하지 않음
 
@@ -28,7 +28,7 @@ python tools/prepare_github_snapshot.py --output publish/PAM_breakfast_reviewed
 
 1. 사본 루트에서 Python 3.11 이상 환경을 만들고 `pip install -e '.[dev]'`를 실행합니다.
 2. `python tools/verify_saved_evidence.py`는 포함된 원본 사진에서 모델 요청을 재구성하고 원본 응답과 결과를 대조합니다. API 호출·과금은 없습니다.
-3. `python tools/run_breakfast_checks.py --dataset examples/breakfast_2026-10-25 --output artifacts/prepared`는 현재 초기 기억으로 새 입력을 준비합니다. 역시 API 호출이 없습니다.
+3. `python tools/run_breakfast_checks.py --dataset experiments/breakfast_2026-10-25 --output artifacts/prepared`는 현재 초기 기억으로 새 입력을 준비합니다. 역시 API 호출이 없습니다.
 4. 실제 재실행은 환경변수 키를 설정하고 새 출력 경로 및 `--execute`를 사용합니다. 결과는 이전과 달라질 수 있습니다.
 5. 원문 대조·전체 자동 검사는 검토한 PDF를 별도로 `papers/2610.21211v1.pdf`에 준비한 뒤 `python tools/extract_paper_prompts.py --check`, `python -m unittest discover -s tests -v`로 실행합니다.
 

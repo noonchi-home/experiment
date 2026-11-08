@@ -13,7 +13,7 @@ tmp/
 artifacts/
 publish/
 # Local source archives, full datasets, private-path logs and generated decks.
-# Share only the reviewed portable sample under examples/.
+# Share only the reviewed portable sample under experiments/breakfast_2026-10-25/.
 /papers/
 /reference/
 /data/

@@ -13,6 +13,8 @@
 - 검토 기준: 제공받은 논문 v1과 공개 저장소 버전 `656a63ef4607177dd3b404042086486531a573f4`
 - 이 프로젝트는 저자의 공식 실행 코드가 아니라, 논문·부록에 근거해 작성한 상황 변경 구현입니다. [출처 구분](THIRD_PARTY.md) · [상세 검증 보고서](docs/논문충실도_검증보고서.md)
 
+[실험 전체 보기 — 질문, 결과, 원자료](experiments/README.md)
+
 ## 추가 연구 검토 — 사용자 반응과 역계획
 
 사용자가 직접 한 일과 도움 이후 행동을 해석해 PAM의 도움 규칙을 생성·수정하는 방식을 검토합니다. **2026-11-02 현재 실제 촬영본 10편의 내용을 확인했으며, 역계획 구현·촬영본의 모델 실행·성능 비교는 아직 하지 않았습니다.** 행동 직전의 역계획 적용은 이번 범위에서 미룹니다.
@@ -34,11 +36,11 @@
 
 (행동 F1, 1이 만점. 같은 입력을 두 번 돌린 A1이 0.04와 0.15로 달라, FSM과 목록의 작은 차이는 우연일 수 있습니다.)
 
-- [결과 문서](docs/research/4일실험_결과_2026-11-04.md): 점수, 구간별 결과, 규칙 변화, 논문과 다른 점
-- [점수·기억 원문·그림·정답 초안](docs/research/routine_2026-11-04/): 영상과 1초 사진은 공유하지 않습니다
+- [결과 문서](experiments/routine_2026-11-04/결과.md): 점수, 구간별 결과, 규칙 변화, 논문과 다른 점
+- [점수·기억 원문·그림·정답 초안](experiments/routine_2026-11-04/): 영상과 1초 사진은 공유하지 않습니다
 - 시나리오 설정: [scenarios/routine/](scenarios/routine/README.md)
 - 다시 돌리기 (유료 GPU 서버 필요): `python -m pam.routine_experiment --videos <영상 폴더> --output artifacts/<새 폴더> --vllm-url <서버 주소> --workers 4 --reflector-max-tokens 24000` (목록 기억은 `--memory-kind list`, 기억 없음은 `--no-memory`, 끊긴 실행을 이어 가려면 `--resume`). 서버 접속 비밀번호는 환경 변수 `VLLM_API_KEY`로만 줍니다. `--vllm-url` 없이 돌리면 모델 호출 없이 흐름만 확인합니다.
-- 채점: `python -m pam.routine_scoring --run artifacts/<폴더> --labels docs/research/routine_2026-11-04/정답/4일_정답_초안.json`
+- 채점: `python -m pam.routine_scoring --run artifacts/<폴더> --labels experiments/routine_2026-11-04/정답/4일_정답_초안.json`
 
 ## 1. 논문이 해결하려는 문제
 
@@ -257,13 +259,13 @@ PAM은 하루 동안 고정하고, 하루 종료 후 만든 새 기억을 다음
 
 **우유가 없는 장면:**
 
-![식탁에 앉아 있고 우유는 주방대에 있는 실제 합성 입력](examples/breakfast_2026-10-25/seated_without_milk/frames/004_right.png)
+![식탁에 앉아 있고 우유는 주방대에 있는 실제 합성 입력](experiments/breakfast_2026-10-25/seated_without_milk/frames/004_right.png)
 
 **우유가 이미 식탁에 있는 장면:**
 
-![식탁에 앉아 있고 우유병이 식탁 위에 있는 실제 합성 입력](examples/breakfast_2026-10-25/seated_with_milk/frames/004_right.png)
+![식탁에 앉아 있고 우유병이 식탁 위에 있는 실제 합성 입력](experiments/breakfast_2026-10-25/seated_with_milk/frames/004_right.png)
 
-위 이미지는 각 입력 묶음의 마지막 시점에서 오른쪽 카메라만 보여준 것입니다. 모델에는 각 시점의 두 카메라를 붙인 사진 다섯 장을 전달했습니다. [전체 사진과 실제 요청·응답](examples/breakfast_2026-10-25/README.md)에서 확인할 수 있습니다.
+위 이미지는 각 입력 묶음의 마지막 시점에서 오른쪽 카메라만 보여준 것입니다. 모델에는 각 시점의 두 카메라를 붙인 사진 다섯 장을 전달했습니다. [전체 사진과 실제 요청·응답](experiments/breakfast_2026-10-25/README.md)에서 확인할 수 있습니다.
 
 한 합성 환경에서 조건별 한 번 실행한 결과입니다. 두 장면만으로 일반적인 정확도나 논문 성능을 주장하지 않습니다. 이번 두 호출에는 자기반성을 포함하지 않았습니다.
 
@@ -295,7 +297,7 @@ PAM은 하루 동안 고정하고, 하루 종료 후 만든 새 기억을 다음
 | [tools/run_breakfast_checks.py](tools/run_breakfast_checks.py) | 현재 식탁 두 조건의 입력 준비 또는 실제 호출 |
 | [pam/reflection_experiment.py](pam/reflection_experiment.py) · [tools/run_reflection_experiment.py](tools/run_reflection_experiment.py) | 반성 전후 비교 실험의 실행 순서. 기존 세 조건 실험용이므로 현재 두 조건 순환의 완성된 실행기로 간주하지 않음 |
 | [tools/render_morning_3d.py](tools/render_morning_3d.py) | Blender에서 집·사람·물건과 관찰 사진 생성 |
-| [examples/breakfast_2026-10-25/](examples/breakfast_2026-10-25/) | 공개용 두 장면의 사진 20장, 당시 기억, 실제 응답, 해시 |
+| [experiments/breakfast_2026-10-25/](experiments/breakfast_2026-10-25/) | 공개용 두 장면의 사진 20장, 당시 기억, 실제 응답, 해시 |
 | [tests/](tests/) · [tools/verify_saved_evidence.py](tools/verify_saved_evidence.py) | 코드 검사와 저장된 요청·응답 재구성 확인 |
 
 별도로 필요한 것은 다음과 같습니다.
@@ -328,7 +330,7 @@ python -m venv .venv
 ### 현재 식탁 장면의 입력만 준비하기 — API 호출 없음
 
 ```powershell
-.\.venv\Scripts\python.exe tools/run_breakfast_checks.py --dataset examples/breakfast_2026-10-25 --output artifacts/my_prepared_check
+.\.venv\Scripts\python.exe tools/run_breakfast_checks.py --dataset experiments/breakfast_2026-10-25 --output artifacts/my_prepared_check
 ```
 
 ### 실제 모델 호출하기 — 최대 두 번의 유료 호출
@@ -336,7 +338,7 @@ python -m venv .venv
 `OPENROUTER_API_KEY`를 로컬 환경변수에 설정한 뒤 아래 명령을 실행합니다. 출력 폴더는 아직 존재하지 않는 새 경로여야 합니다.
 
 ```powershell
-.\.venv\Scripts\python.exe tools/run_breakfast_checks.py --dataset examples/breakfast_2026-10-25 --output artifacts/my_live_check --execute
+.\.venv\Scripts\python.exe tools/run_breakfast_checks.py --dataset experiments/breakfast_2026-10-25 --output artifacts/my_live_check --execute
 ```
 
 이 명령은 현재 초기 기억으로 **우유 유무 두 장면을 판단**하며, 자기반성까지 실행하지는 않습니다. 결과는 실행마다 달라질 수 있습니다. 잘못된 응답을 정답으로 고치거나 오류를 대기로 바꾸지 않습니다.
