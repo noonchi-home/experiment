@@ -18,6 +18,7 @@ import json
 import sys
 from pathlib import Path
 
+from .experiment_paths import routine_labels
 from .messages import read_json
 
 
@@ -92,6 +93,7 @@ def score_round(labels: dict, predictions: list[int | None], task_count: int) ->
 
 def score_run(run_dir: Path, labels_path: Path) -> dict:
     run_dir = Path(run_dir).resolve()
+    labels_path = routine_labels(Path(labels_path))
     report, labels = read_json(run_dir / "report.json"), read_json(labels_path)
     task_count = len(read_json(Path(report["settings"]["tasks_file"])))
     result = {"run": str(run_dir), "mode": report["mode"], "labels": str(Path(labels_path).resolve()),

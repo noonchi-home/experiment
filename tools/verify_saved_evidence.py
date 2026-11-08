@@ -9,6 +9,7 @@ import tempfile
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
+from pam.experiment_paths import breakfast_dataset
 from pam.inference import _request_record, inspect_completion
 from pam.messages import build_predictor_messages
 from pam.observations import compose_observations, load_observations
@@ -25,7 +26,7 @@ def digest(path):
 
 
 def verify(example: Path) -> dict:
-    example = example.resolve()
+    example = breakfast_dataset(example)
     evidence = read(example / "evidence.json")
     scenario = load_scenario(example / "scenario/scenario.json")
     config = load_openrouter_config(ROOT / "config/openrouter.json")
@@ -71,6 +72,6 @@ def verify(example: Path) -> dict:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--example", type=Path, default=ROOT / "examples/breakfast_2026-10-25")
+    parser.add_argument("--example", type=Path, default=ROOT / "experiments/breakfast_2026-10-25")
     args = parser.parse_args()
     print(json.dumps(verify(args.example), ensure_ascii=False))
