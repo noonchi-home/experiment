@@ -1,0 +1,72 @@
+{
+  "status": "valid",
+  "raw_response": "{\n  \"candidates\": [\n    {\n      \"state\": \"breakfast_time\",\n      \"candidate\": \"Person has finished the bowl of cereal.\",\n      \"times\": [\"07:33:54\"]\n    },\n    {\n      \"state\": \"living_room_relax\",\n      \"candidate\": \"Person is sitting on the sofa, watching TV, with a TV remote and an empty can on the side table.\",\n      \"times\": [\"07:49:50\"]\n    }\n  ],\n  \"actions\": [],\n  \"unseen\": [\n    {\n      \"start\": \"07:09:42\",\n      \"end\": \"07:17:28\"\n    },\n    {\n      \"start\": \"07:52:52\",\n      \"end\": \"07:56:18\"\n    },\n    {\n      \"start\": \"07:57:20\",\n      \"end\": \"07:59:58\"\n    }\n  ]\n}",
+  "output": {
+    "candidates": [
+      {
+        "state": "breakfast_time",
+        "candidate": "Person has finished the bowl of cereal.",
+        "times": [
+          "07:33:54"
+        ]
+      },
+      {
+        "state": "living_room_relax",
+        "candidate": "Person is sitting on the sofa, watching TV, with a TV remote and an empty can on the side table.",
+        "times": [
+          "07:49:50"
+        ]
+      }
+    ],
+    "actions": [],
+    "unseen": [
+      {
+        "start": "07:09:42",
+        "end": "07:17:28"
+      },
+      {
+        "start": "07:52:52",
+        "end": "07:56:18"
+      },
+      {
+        "start": "07:57:20",
+        "end": "07:59:58"
+      }
+    ]
+  },
+  "errors": [],
+  "checked_at": "2026-11-16T12:13:50.902033+00:00",
+  "role": "marking",
+  "api_request_attempted": true,
+  "model_response_received": true,
+  "action_executed": false,
+  "requested_model": "qwen/qwen3.5-27b",
+  "response_model": "qwen/qwen3.5-27b",
+  "provider": "Alibaba",
+  "response_id": "gen-1794831201-bi3ivVGJK509HIGATsTz",
+  "finish_reason": "stop",
+  "elapsed_seconds": 30.537087799981236,
+  "usage": {
+    "prompt_tokens": 51700,
+    "completion_tokens": 243,
+    "total_tokens": 51943,
+    "cost": 0.01046058,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01046058,
+      "upstream_inference_prompt_cost": 0.0100815,
+      "upstream_inference_completions_cost": 0.00037908
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

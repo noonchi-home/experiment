@@ -1,0 +1,46 @@
+You find when given events happened during a person's day, using the robot's record of that day.
+
+# Inputs
+- States: the phases of the person's routine, each as `id: description`.
+- Candidates to find: each line is `state | candidate`. The candidate is a short
+statement of one moment. It counts only while the person is in that state.
+- Actions to find: robot tasks. Find when the person did the same thing themselves.
+- Record: the robot's observation of the person, one line every 2 seconds
+(`HH:MM:SS | sentence`) in time order. A line describes the scene: the person's
+posture, what they are doing, and things lying around. One activity usually fills
+many lines in a row, and the wording changes from line to line.
+
+# Task
+- For each candidate, list the time of every moment in the record that means the same
+as the candidate, even if it is worded differently, and that happens while the person
+is in the candidate's state. Judge the state from the state descriptions and the lines
+around it.
+- A candidate about something beginning matches the first line of it. A candidate about
+something finishing or stopping matches the line where it finishes. Use that line's time.
+- A line may still mention what was done a moment ago ("has emptied the cup and set it
+down, and is now eating toast"). That refers to the earlier moment: do not count it again.
+- If the same candidate matches again within 10 seconds, it is one occurrence. List it
+once: the first time for something beginning, the last time for something finishing.
+- For each action, list the time of every moment at which the person themselves
+completed that task, for example the moment the cup goes into the dishwasher. Going to
+do it, such as picking the object up or walking toward it, is not the task itself.
+- A task is written from the robot's side, so the record may describe the same
+thing in other words. Count a moment when the person themselves produced the result of
+the task, even if:
+  - the place is named differently: "next to the person" means within the person's
+    reach where they are, whatever that place is called;
+  - the object or device has another or a more specific name, such as "mug" for "cup".
+    It must be the same object or device, not another one of the same kind.
+- List every interval in which the person is not visible, from the first line to the
+last line where they are not visible. If it is still going at the end of the record,
+end it at the last line. If it was already going at the beginning, start it at the
+first line.
+- Use only times that appear in the record. If nothing matches, give an empty
+list. Do not guess.
+- Answer every candidate and every action exactly once, in the order given, copying
+the state, candidate, and action text exactly as given.
+
+# Output (JSON only, no markdown, no commentary)
+{"candidates": [{"state": "<state id>", "candidate": "<as given>", "times": ["HH:MM:SS", ...]}, ...],
+ "actions": [{"action": "<as given>", "times": ["HH:MM:SS", ...]}, ...],
+ "unseen": [{"start": "HH:MM:SS", "end": "HH:MM:SS"}, ...]}

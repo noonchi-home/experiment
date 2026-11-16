@@ -1,0 +1,58 @@
+{
+  "initial_state": "wake",
+  "states": [
+    {
+      "id": "wake",
+      "description": "잠에서 깨서 씻고 옷 입기",
+      "rules": [],
+      "next": []
+    },
+    {
+      "id": "breakfast",
+      "description": "아침 식사",
+      "rules": [
+        {
+          "trigger": "finish_drinking",
+          "action": "Pick up the cup and place it in the dishwasher."
+        },
+        {
+          "trigger": "finish_meal",
+          "action": "Pick up the bowl and place it in the dishwasher."
+        },
+        {
+          "trigger": "finish_meal",
+          "action": "Pick up the can and place it next to the person."
+        }
+      ],
+      "next": []
+    },
+    {
+      "id": "rest",
+      "description": "소파에서 커피 마시며 TV 보기",
+      "rules": [
+        {
+          "trigger": "finish_coffee or phone_rings",
+          "action": "Pick up the can and place it in the designated storage area."
+        }
+      ],
+      "next": []
+    },
+    {
+      "id": "leaving",
+      "description": "외출 준비",
+      "rules": [
+        {
+          "trigger": "put_on_bag",
+          "action": "Turn off the room light."
+        }
+      ],
+      "next": []
+    },
+    {
+      "id": "away",
+      "description": "외출 (안 보임)",
+      "rules": [],
+      "next": []
+    }
+  ]
+}

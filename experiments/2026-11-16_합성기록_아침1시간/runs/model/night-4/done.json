@@ -1,0 +1,32 @@
+{
+  "night": 4,
+  "states": 5,
+  "candidates": 11,
+  "passed": [
+    {
+      "state": "departure_routine",
+      "action": "Turn off the room light.",
+      "candidate": "Person is heading toward the wall switch by the door."
+    },
+    {
+      "state": "departure_routine",
+      "action": "Turn off the room light.",
+      "candidate": "Person is slinging the bag over their shoulder."
+    },
+    {
+      "state": "living_room_relax",
+      "action": "Pick up the can and place it in the designated storage area.",
+      "candidate": "Person has finished the coffee and set the empty can down."
+    },
+    {
+      "state": "morning_wake_up",
+      "action": "Open the curtains.",
+      "candidate": "Person has walked up to the window."
+    },
+    {
+      "state": "morning_wake_up",
+      "action": "Open the curtains.",
+      "candidate": "Person is heading to the curtains."
+    }
+  ]
+}

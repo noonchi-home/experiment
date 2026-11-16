@@ -1,0 +1,6067 @@
+{
+  "about": "합성 기록 정답표 (혼자 사는 사람의 평일 아침 1시간, 5일). 모델 입력에 넣지 않는다. 시각은 HH:MM:SS이고 끝 시각은 포함하지 않는다.",
+  "seed": 20261116,
+  "line_seconds": 2,
+  "follow_seconds": 300,
+  "day_start": "07:00:00",
+  "day_end": "08:00:00",
+  "tasks": [
+    "Pick up the cup and place it next to the person.",
+    "Pick up the cup and place it in the dishwasher.",
+    "Pick up the can and place it next to the person.",
+    "Pick up the can and place it in the designated storage area.",
+    "Pick up the book and place it next to the person.",
+    "Pick up the book and place it in the designated storage area.",
+    "Pick up the bowl and place it in the dishwasher.",
+    "Turn off the room light.",
+    "Turn off the bedside lamp.",
+    "Pick up the bedside lamp and place it in the designated storage area.",
+    "Open the curtains."
+  ],
+  "states": {
+    "wake": "잠에서 깨서 씻고 옷 입기",
+    "breakfast": "아침 식사",
+    "rest": "소파에서 커피 마시며 TV 보기",
+    "leaving": "외출 준비",
+    "away": "외출 (안 보임)"
+  },
+  "events": {
+    "open_curtains": {
+      "ko": "커튼을 연다",
+      "task": 10,
+      "phrases": [
+        "The person is opening the curtains.",
+        "The person is drawing the curtains open to let the light in.",
+        "The person has just pulled the curtains open."
+      ]
+    },
+    "put_bowl_in_dishwasher": {
+      "ko": "그릇을 식기세척기에 넣는다",
+      "task": 6,
+      "phrases": [
+        "The person is putting the empty bowl into the dishwasher.",
+        "The person is loading the bowl into the dishwasher rack.",
+        "The person has just placed the bowl in the dishwasher."
+      ]
+    },
+    "put_cup_in_dishwasher": {
+      "ko": "컵을 식기세척기에 넣는다",
+      "task": 1,
+      "phrases": [
+        "The person is putting the empty cup into the dishwasher.",
+        "The person is loading the cup into the dishwasher rack.",
+        "The person has just placed the cup in the dishwasher."
+      ]
+    },
+    "put_can_next_to_self": {
+      "ko": "캔 커피를 소파 옆 탁자에 놓는다",
+      "task": 2,
+      "phrases": [
+        "The person is setting a can of coffee down on the side table next to the sofa.",
+        "The person is putting a can of coffee down on the side table beside them.",
+        "The person has just placed a can of coffee on the side table within reach."
+      ]
+    },
+    "put_can_in_storage": {
+      "ko": "빈 캔을 보관함에 넣는다",
+      "task": 3,
+      "phrases": [
+        "The person is dropping the empty can into the storage bin.",
+        "The person is placing the empty coffee can in the designated storage bin.",
+        "The person has just put the empty can in the storage bin."
+      ]
+    },
+    "turn_off_room_light": {
+      "ko": "방 불을 끈다",
+      "task": 7,
+      "phrases": [
+        "The person is pressing the wall switch to turn off the room light.",
+        "The person is switching off the main room light.",
+        "The person has just turned off the room light at the wall switch."
+      ]
+    },
+    "walk_to_curtains": {
+      "ko": "창가로 간다",
+      "task": null,
+      "phrases": [
+        "The person is walking over to the window.",
+        "The person is heading to the curtains.",
+        "The person has walked up to the window."
+      ]
+    },
+    "pick_up_dishes": {
+      "ko": "빈 그릇과 컵을 집는다",
+      "task": null,
+      "phrases": [
+        "The person is picking up the empty bowl and the cup from the table.",
+        "The person is gathering the bowl and the cup from the table.",
+        "The person has picked up the bowl and the cup and is standing up from the table."
+      ]
+    },
+    "carry_dishes_to_kitchen": {
+      "ko": "그릇과 컵을 들고 주방으로 간다",
+      "task": null,
+      "phrases": [
+        "The person is carrying the bowl and the cup to the kitchen.",
+        "The person is walking over to the kitchen holding the bowl and the cup.",
+        "The person is taking the dishes over to the kitchen."
+      ]
+    },
+    "take_coffee_from_fridge": {
+      "ko": "냉장고에서 캔 커피를 꺼낸다",
+      "task": null,
+      "phrases": [
+        "The person is taking a can of coffee out of the fridge.",
+        "The person is pulling a can of coffee from the refrigerator.",
+        "The person has opened the fridge and is taking out a can of coffee."
+      ]
+    },
+    "carry_coffee_to_sofa": {
+      "ko": "캔 커피를 들고 소파로 간다",
+      "task": null,
+      "phrases": [
+        "The person is walking to the sofa holding a can of coffee.",
+        "The person is carrying a can of coffee over to the sofa.",
+        "The person is bringing a can of coffee to the sofa."
+      ]
+    },
+    "pick_up_empty_can": {
+      "ko": "빈 캔을 집는다",
+      "task": null,
+      "phrases": [
+        "The person is picking up the empty can from the side table.",
+        "The person is lifting the empty can off the side table.",
+        "The person has picked up the empty can and is standing up from the sofa."
+      ]
+    },
+    "carry_can_to_bin": {
+      "ko": "빈 캔을 들고 보관함으로 간다",
+      "task": null,
+      "phrases": [
+        "The person is walking to the storage bin with the empty can.",
+        "The person is carrying the empty can over to the storage bin.",
+        "The person is taking the empty can to the storage bin."
+      ]
+    },
+    "walk_to_light_switch": {
+      "ko": "전등 스위치로 간다",
+      "task": null,
+      "phrases": [
+        "The person is walking to the light switch on the wall.",
+        "The person is heading toward the wall switch by the door.",
+        "The person has walked over to the light switch."
+      ]
+    },
+    "get_out_of_bed": {
+      "ko": "침대에서 일어난다",
+      "task": null,
+      "phrases": [
+        "The person is getting out of bed.",
+        "The person is standing up from the bed.",
+        "The person has just gotten out of bed."
+      ]
+    },
+    "finish_drinking": {
+      "ko": "물을 다 마신다",
+      "task": null,
+      "phrases": [
+        "The person is drinking the last of the water and setting the empty cup down on the table.",
+        "The person is tipping the cup all the way back to finish the water, then setting it down empty.",
+        "The person has just emptied the cup and is putting it back down on the table."
+      ]
+    },
+    "look_at_phone": {
+      "ko": "휴대폰을 본다",
+      "task": null,
+      "phrases": [
+        "The person is sitting on the sofa looking at their phone.",
+        "The person is sitting on the sofa holding a smartphone and looking at it.",
+        "The person is sitting on the sofa using a smartphone.",
+        "The person is sitting on the sofa scrolling on their phone."
+      ]
+    },
+    "finish_meal": {
+      "ko": "시리얼을 다 먹는다",
+      "task": null,
+      "phrases": [
+        "The person is eating the last spoonful of cereal.",
+        "The person is scraping up the last of the cereal from the bowl.",
+        "The person has just finished the bowl of cereal."
+      ]
+    },
+    "wipe_mouth": {
+      "ko": "냅킨으로 입을 닦는다",
+      "task": null,
+      "phrases": [
+        "The person is wiping their mouth with a napkin.",
+        "The person is dabbing their lips with a napkin.",
+        "The person has picked up a napkin and is wiping their mouth."
+      ]
+    },
+    "finish_coffee": {
+      "ko": "커피를 다 마신다",
+      "task": null,
+      "phrases": [
+        "The person is drinking the last of the coffee and setting the empty can down on the side table.",
+        "The person is tipping the can all the way back to finish the coffee.",
+        "The person has just finished the can of coffee and put it down."
+      ]
+    },
+    "phone_rings": {
+      "ko": "전화가 와서 받는다",
+      "task": null,
+      "phrases": [
+        "The person is answering a ringing phone.",
+        "The person is picking up the phone as it rings.",
+        "The person has picked up an incoming call."
+      ]
+    },
+    "put_on_bag": {
+      "ko": "가방을 멘다",
+      "task": null,
+      "phrases": [
+        "The person is putting on a backpack.",
+        "The person is slinging the bag over their shoulder.",
+        "The person has just shouldered their bag."
+      ]
+    },
+    "sleep": {
+      "ko": "자고 있다",
+      "task": null,
+      "phrases": [
+        "The person is lying in bed asleep under the covers.",
+        "The person is lying in bed sleeping.",
+        "The person is lying in bed asleep, curled up under the blanket."
+      ]
+    },
+    "wake_slowly": {
+      "ko": "침대 가장자리에 앉아 잠을 깬다",
+      "task": null,
+      "phrases": [
+        "The person is sitting on the edge of the bed slowly waking up.",
+        "The person is sitting on the edge of the bed pausing for a moment, still sleepy.",
+        "The person is sitting on the edge of the bed looking half asleep."
+      ]
+    },
+    "make_bed": {
+      "ko": "이불을 갠다",
+      "task": null,
+      "phrases": [
+        "The person is standing by the bed making the bed.",
+        "The person is standing by the bed straightening the blanket on the bed.",
+        "The person is standing by the bed folding the blanket and fixing the pillow."
+      ]
+    },
+    "lie_awake": {
+      "ko": "잠에서 깨 누워 있다",
+      "task": null,
+      "phrases": [
+        "The person is lying in bed awake under the covers.",
+        "The person is lying in bed awake with their eyes open.",
+        "The person is lying in bed awake and not yet getting up."
+      ]
+    },
+    "turn_off_alarm": {
+      "ko": "휴대폰 알람을 끈다",
+      "task": null,
+      "phrases": [
+        "The person is turning off the alarm on their phone.",
+        "The person is reaching for the phone to stop the alarm.",
+        "The person has just switched off the phone alarm."
+      ]
+    },
+    "sit_up_in_bed": {
+      "ko": "침대에서 몸을 일으켜 앉는다",
+      "task": null,
+      "phrases": [
+        "The person is sitting up in bed.",
+        "The person is pushing the covers back and sitting up in bed.",
+        "The person has just sat up in bed."
+      ]
+    },
+    "turn_on_room_light": {
+      "ko": "방 불을 켠다",
+      "task": null,
+      "phrases": [
+        "The person is pressing the wall switch to turn on the room light.",
+        "The person is switching on the main room light.",
+        "The person has just turned on the room light at the wall switch."
+      ]
+    },
+    "look_out_window": {
+      "ko": "창밖을 본다",
+      "task": null,
+      "phrases": [
+        "The person is standing at the window looking outside.",
+        "The person is standing at the window looking out at the street.",
+        "The person is standing at the window glancing out at the weather."
+      ]
+    },
+    "dry_hair": {
+      "ko": "수건으로 머리를 말린다",
+      "task": null,
+      "phrases": [
+        "The person is standing in the room drying their hair with a towel.",
+        "The person is standing in the room rubbing their wet hair with a towel.",
+        "The person is standing in the room drying their wet hair with a towel."
+      ]
+    },
+    "get_dressed": {
+      "ko": "옷을 입는다",
+      "task": null,
+      "phrases": [
+        "The person is standing by the bed getting dressed.",
+        "The person is standing by the bed putting on clothes for the day.",
+        "The person is standing by the bed changing into day clothes."
+      ]
+    },
+    "walk_to_kitchen": {
+      "ko": "주방으로 간다",
+      "task": null,
+      "phrases": [
+        "The person is walking to the kitchen.",
+        "The person is heading into the kitchen.",
+        "The person has walked over to the kitchen."
+      ]
+    },
+    "take_bowl": {
+      "ko": "찬장에서 그릇을 꺼낸다",
+      "task": null,
+      "phrases": [
+        "The person is taking a bowl out of the cupboard.",
+        "The person is getting a bowl down from the cupboard.",
+        "The person has taken a bowl from the cupboard."
+      ]
+    },
+    "pour_cereal": {
+      "ko": "그릇에 시리얼을 붓는다",
+      "task": null,
+      "phrases": [
+        "The person is standing in the kitchen pouring cereal into a bowl.",
+        "The person is standing in the kitchen shaking cereal out of the box into a bowl.",
+        "The person is standing in the kitchen filling a bowl with cereal."
+      ]
+    },
+    "take_milk": {
+      "ko": "냉장고에서 우유를 꺼낸다",
+      "task": null,
+      "phrases": [
+        "The person is taking the milk out of the fridge.",
+        "The person has opened the fridge and is taking out the milk.",
+        "The person is getting the milk carton from the fridge."
+      ]
+    },
+    "pour_milk": {
+      "ko": "시리얼에 우유를 붓는다",
+      "task": null,
+      "phrases": [
+        "The person is standing in the kitchen pouring milk over the cereal.",
+        "The person is standing in the kitchen pouring milk into the bowl of cereal.",
+        "The person is standing in the kitchen adding milk to the cereal."
+      ]
+    },
+    "put_milk_back": {
+      "ko": "우유를 냉장고에 다시 넣는다",
+      "task": null,
+      "phrases": [
+        "The person is putting the milk carton into the fridge.",
+        "The person is returning the milk to the fridge.",
+        "The person has put the milk in the fridge and closed the door."
+      ]
+    },
+    "fill_cup_at_purifier": {
+      "ko": "정수기에서 컵에 물을 받는다",
+      "task": null,
+      "phrases": [
+        "The person is filling a cup with water at the water purifier.",
+        "The person is standing at the water purifier filling a cup.",
+        "The person is holding a cup under the water purifier."
+      ]
+    },
+    "bring_breakfast": {
+      "ko": "시리얼과 물컵을 식탁으로 가져간다",
+      "task": null,
+      "phrases": [
+        "The person is carrying the bowl of cereal and a cup of water to the dining table.",
+        "The person is bringing breakfast over to the dining table.",
+        "The person is walking to the table with the cereal and a cup of water."
+      ]
+    },
+    "sit_at_table": {
+      "ko": "식탁에 앉는다",
+      "task": null,
+      "phrases": [
+        "The person is sitting down at the dining table.",
+        "The person is pulling out a chair and sitting down at the table.",
+        "The person has just sat down at the table."
+      ]
+    },
+    "eat_cereal": {
+      "ko": "시리얼을 먹는다",
+      "task": null,
+      "phrases": [
+        "The person is sitting at the dining table eating cereal with a spoon.",
+        "The person is sitting at the dining table eating a spoonful of cereal.",
+        "The person is sitting at the dining table having cereal for breakfast.",
+        "The person is sitting at the dining table eating from the bowl of cereal."
+      ]
+    },
+    "drink_water": {
+      "ko": "컵으로 물을 마신다",
+      "task": null,
+      "phrases": [
+        "The person is sitting at the dining table drinking water from a cup.",
+        "The person is sitting at the dining table holding a cup to their mouth and drinking.",
+        "The person is sitting at the dining table taking a sip of water from the cup."
+      ]
+    },
+    "put_down_spoon": {
+      "ko": "숟가락을 내려놓는다",
+      "task": null,
+      "phrases": [
+        "The person is putting the spoon down in the bowl.",
+        "The person is resting the spoon on the edge of the bowl.",
+        "The person has just set the spoon down."
+      ]
+    },
+    "pick_up_spoon": {
+      "ko": "숟가락을 든다",
+      "task": null,
+      "phrases": [
+        "The person is picking up the spoon.",
+        "The person is taking the spoon in hand.",
+        "The person has picked up the spoon."
+      ]
+    },
+    "chew": {
+      "ko": "씹는다",
+      "task": null,
+      "phrases": [
+        "The person is sitting at the dining table chewing a mouthful of cereal.",
+        "The person is sitting at the dining table chewing slowly.",
+        "The person is sitting at the dining table chewing and looking down at the bowl."
+      ]
+    },
+    "sit_idle_at_table": {
+      "ko": "식탁에 앉아 잠깐 쉰다",
+      "task": null,
+      "phrases": [
+        "The person is sitting at the dining table doing nothing in particular.",
+        "The person is sitting at the dining table resting for a moment after eating.",
+        "The person is sitting at the dining table leaning back in the chair.",
+        "The person is sitting at the dining table looking ahead idly."
+      ]
+    },
+    "go_to_sofa": {
+      "ko": "소파에 앉는다",
+      "task": null,
+      "phrases": [
+        "The person is sitting down on the sofa.",
+        "The person is settling onto the sofa.",
+        "The person has just sat down on the sofa."
+      ]
+    },
+    "open_coffee_can": {
+      "ko": "캔 커피를 딴다",
+      "task": null,
+      "phrases": [
+        "The person is opening the can of coffee.",
+        "The person is pulling the tab on the can of coffee.",
+        "The person has just cracked open the can of coffee."
+      ]
+    },
+    "drink_coffee": {
+      "ko": "커피를 마신다",
+      "task": null,
+      "phrases": [
+        "The person is sitting on the sofa drinking coffee from the can.",
+        "The person is sitting on the sofa taking a sip of coffee from the can.",
+        "The person is sitting on the sofa holding the coffee can to their mouth and drinking."
+      ]
+    },
+    "pick_up_remote": {
+      "ko": "리모컨을 집는다",
+      "task": null,
+      "phrases": [
+        "The person is picking up the TV remote.",
+        "The person is reaching for the remote control.",
+        "The person has picked up the remote."
+      ]
+    },
+    "turn_on_tv": {
+      "ko": "TV를 켠다",
+      "task": null,
+      "phrases": [
+        "The person is turning on the TV with the remote.",
+        "The person is switching the TV on.",
+        "The person has just turned on the TV."
+      ]
+    },
+    "watch_tv": {
+      "ko": "TV를 본다",
+      "task": null,
+      "phrases": [
+        "The person is sitting on the sofa watching TV.",
+        "The person is sitting on the sofa watching the morning news on TV.",
+        "The person is sitting on the sofa looking at the TV screen.",
+        "The person is sitting on the sofa watching something on the TV."
+      ]
+    },
+    "change_channel": {
+      "ko": "채널을 바꾼다",
+      "task": null,
+      "phrases": [
+        "The person is changing the TV channel with the remote.",
+        "The person is flipping through channels with the remote.",
+        "The person has just switched to another channel."
+      ]
+    },
+    "adjust_cushion": {
+      "ko": "쿠션을 고쳐 놓는다",
+      "task": null,
+      "phrases": [
+        "The person is adjusting a cushion behind their back.",
+        "The person is moving a sofa cushion to get comfortable.",
+        "The person has just straightened the cushion behind them."
+      ]
+    },
+    "check_time": {
+      "ko": "벽시계를 본다",
+      "task": null,
+      "phrases": [
+        "The person is glancing at the clock on the wall.",
+        "The person is checking the time on the wall clock.",
+        "The person has just looked up at the clock."
+      ]
+    },
+    "talk_on_phone": {
+      "ko": "통화한다",
+      "task": null,
+      "phrases": [
+        "The person is sitting on the sofa talking on the phone.",
+        "The person is sitting on the sofa holding a phone to their ear and talking.",
+        "The person is sitting on the sofa having a phone call."
+      ]
+    },
+    "turn_off_tv": {
+      "ko": "TV를 끈다",
+      "task": null,
+      "phrases": [
+        "The person is turning off the TV with the remote.",
+        "The person is switching the TV off.",
+        "The person has just turned off the TV."
+      ]
+    },
+    "walk_to_desk": {
+      "ko": "책상으로 간다",
+      "task": null,
+      "phrases": [
+        "The person is walking over to the desk.",
+        "The person is heading to the desk.",
+        "The person has walked over to the desk."
+      ]
+    },
+    "pack_bag": {
+      "ko": "노트북과 충전기를 가방에 넣는다",
+      "task": null,
+      "phrases": [
+        "The person is standing by the desk putting the laptop and its charger into a backpack.",
+        "The person is standing by the desk packing a laptop into a backpack.",
+        "The person is standing by the desk packing things into a backpack on the desk."
+      ]
+    },
+    "zip_bag": {
+      "ko": "가방 지퍼를 닫는다",
+      "task": null,
+      "phrases": [
+        "The person is zipping the backpack closed.",
+        "The person is pulling the zipper of the backpack shut.",
+        "The person has just zipped up the backpack."
+      ]
+    },
+    "put_on_jacket": {
+      "ko": "겉옷을 입는다",
+      "task": null,
+      "phrases": [
+        "The person is putting on a jacket.",
+        "The person is pulling on a jacket and adjusting it.",
+        "The person is slipping their arms into a jacket."
+      ]
+    },
+    "check_pockets": {
+      "ko": "주머니를 확인한다",
+      "task": null,
+      "phrases": [
+        "The person is checking their pockets.",
+        "The person is patting their pockets.",
+        "The person is feeling through their pockets for keys."
+      ]
+    },
+    "check_mirror": {
+      "ko": "거울을 보며 머리를 정리한다",
+      "task": null,
+      "phrases": [
+        "The person is checking their hair in the mirror by the door.",
+        "The person is fixing their hair in the mirror.",
+        "The person is glancing at the mirror by the door."
+      ]
+    },
+    "leave_home": {
+      "ko": "현관으로 나간다",
+      "task": null,
+      "phrases": [
+        "The person is walking out through the front door.",
+        "The person is leaving the home through the front door.",
+        "The person has opened the front door and is stepping out."
+      ]
+    },
+    "leave_room": {
+      "ko": "방에서 나간다",
+      "task": null,
+      "phrases": [
+        "The person is walking out of the room.",
+        "The person is leaving the room.",
+        "The person is heading out of the room through the door."
+      ]
+    },
+    "enter_room": {
+      "ko": "방으로 돌아온다",
+      "task": null,
+      "phrases": [
+        "The person has come back into the room.",
+        "The person is walking back into the room.",
+        "The person has returned to the room."
+      ]
+    },
+    "stretch": {
+      "ko": "기지개를 켠다",
+      "task": null,
+      "phrases": [
+        "The person is sitting on the sofa stretching their arms overhead.",
+        "The person is sitting on the sofa stretching their arms and rolling their shoulders.",
+        "The person is sitting on the sofa leaning back and stretching."
+      ]
+    },
+    "yawn": {
+      "ko": "하품한다",
+      "task": null,
+      "phrases": [
+        "The person is sitting on the sofa yawning.",
+        "The person is sitting on the sofa yawning widely.",
+        "The person is sitting on the sofa covering a yawn with one hand."
+      ]
+    },
+    "rub_eyes": {
+      "ko": "눈을 비빈다",
+      "task": null,
+      "phrases": [
+        "The person is standing by the bed rubbing their eyes.",
+        "The person is standing by the bed rubbing their face.",
+        "The person is standing by the bed looking sleepy and rubbing their eyes."
+      ]
+    },
+    "look_around": {
+      "ko": "주변을 둘러본다",
+      "task": null,
+      "phrases": [
+        "The person is sitting on the sofa looking around the room.",
+        "The person is sitting on the sofa glancing around the room.",
+        "The person is sitting on the sofa looking away toward the window."
+      ]
+    },
+    "shift_position": {
+      "ko": "자세를 고쳐 앉는다",
+      "task": null,
+      "phrases": [
+        "The person is sitting on the sofa shifting their position.",
+        "The person is sitting on the sofa adjusting how they sit.",
+        "The person is sitting on the sofa shifting their weight on the seat."
+      ]
+    },
+    "unseen": {
+      "ko": "사람이 보이지 않는다",
+      "task": null,
+      "phrases": [
+        "No person is visible in the room.",
+        "The person is not visible in the frame.",
+        "The room is empty and no person is in view."
+      ]
+    }
+  },
+  "rules": [
+    {
+      "id": "R1",
+      "state": "wake",
+      "task": 10,
+      "candidates": [
+        {
+          "event": "get_out_of_bed",
+          "expected_nights": [
+            5
+          ]
+        }
+      ],
+      "forbidden": [
+        "walk_to_curtains"
+      ]
+    },
+    {
+      "id": "R2",
+      "state": "breakfast",
+      "task": 1,
+      "candidates": [
+        {
+          "event": "finish_drinking",
+          "expected_nights": [
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "event": "look_at_phone",
+          "expected_nights": []
+        }
+      ],
+      "forbidden": [
+        "pick_up_dishes",
+        "carry_dishes_to_kitchen"
+      ]
+    },
+    {
+      "id": "R3",
+      "state": "breakfast",
+      "task": 6,
+      "candidates": [
+        {
+          "event": "finish_meal",
+          "expected_nights": [
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "event": "wipe_mouth",
+          "expected_nights": []
+        }
+      ],
+      "forbidden": [
+        "pick_up_dishes",
+        "carry_dishes_to_kitchen"
+      ]
+    },
+    {
+      "id": "R4",
+      "state": "breakfast",
+      "task": 2,
+      "candidates": [
+        {
+          "event": "finish_meal",
+          "expected_nights": [
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ],
+      "forbidden": [
+        "take_coffee_from_fridge",
+        "carry_coffee_to_sofa"
+      ]
+    },
+    {
+      "id": "R5",
+      "state": "rest",
+      "task": 3,
+      "candidates": [
+        {
+          "event": "finish_coffee",
+          "expected_nights": [
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "event": "phone_rings",
+          "expected_nights": [
+            2
+          ]
+        }
+      ],
+      "forbidden": [
+        "pick_up_empty_can",
+        "carry_can_to_bin"
+      ]
+    },
+    {
+      "id": "R6",
+      "state": "leaving",
+      "task": 7,
+      "candidates": [
+        {
+          "event": "put_on_bag",
+          "expected_nights": [
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ],
+      "forbidden": [
+        "walk_to_light_switch"
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "occasional_miss",
+      "ko": "가끔 빠지는 습관",
+      "rule": "R1",
+      "candidate": "get_out_of_bed",
+      "true_habit": "예",
+      "note": "침대에서 일어나 1분 안에 커튼을 연다. 2일째만 일어나서 6분 넘게 방에서 이불을 개고 휴대폰을 보다가 씻으러 나가고, 커튼은 씻고 와서 연다. 5일째 밤(5번 중 4번 = 80%)에야 통과한다."
+    },
+    {
+      "id": "daily_habit",
+      "ko": "매일 하는 습관",
+      "rule": "R2",
+      "candidate": "finish_drinking",
+      "true_habit": "예",
+      "note": "아침을 먹다가 물을 다 마시고, 2~4분 뒤 컵을 식기세척기에 넣는다. 5일 모두."
+    },
+    {
+      "id": "one_signal_two_habits",
+      "ko": "신호 하나에 습관 둘 (그릇)",
+      "rule": "R3",
+      "candidate": "finish_meal",
+      "true_habit": "예",
+      "note": "시리얼을 다 먹고 1.5~3분 뒤 그릇을 식기세척기에 넣는다. 5일 모두."
+    },
+    {
+      "id": "coffee",
+      "ko": "신호 하나에 습관 둘 (커피)",
+      "rule": "R4",
+      "candidate": "finish_meal",
+      "true_habit": "예",
+      "note": "그릇과 컵을 넣은 뒤 바로 냉장고에서 캔 커피를 꺼내 소파 옆 탁자에 놓는다. 다 먹고 2~3.5분 뒤다. 5일 모두."
+    },
+    {
+      "id": "empty_can",
+      "ko": "다 마신 캔",
+      "rule": "R5",
+      "candidate": "finish_coffee",
+      "true_habit": "예",
+      "note": "커피를 다 마시고 1~2분 뒤 TV를 끄고 빈 캔을 보관함에 넣는다. 5일 모두."
+    },
+    {
+      "id": "unseen",
+      "ko": "못 봄",
+      "rule": "R6",
+      "candidate": "put_on_bag",
+      "true_habit": "예",
+      "note": "가방을 메고 30초 안에 방 불을 끄고 나간다. 3·5일째는 가방을 메자마자 나가서 불은 안 보이는 곳에서 끈다(기록에 없음). 못 본 날을 빼야 계속 통과한다."
+    },
+    {
+      "id": "repeated_candidate",
+      "ko": "식사 중에도 하는 동작",
+      "rule": "R3",
+      "candidate": "wipe_mouth",
+      "true_habit": "아니요",
+      "note": "식사 중간에 1~2번, 다 먹고 1번 입을 닦는다. 그릇이 따라오는 건 마지막 1번뿐이다."
+    },
+    {
+      "id": "frequent_event",
+      "ko": "자주 있는 사건",
+      "rule": "R2",
+      "candidate": "look_at_phone",
+      "true_habit": "아니요",
+      "note": "아침 먹는 동안 휴대폰을 2~3번 본다. 1·3·4일째에만 다 먹고 한 번 더 봐서, 그게 컵 넣기 5분 안이다."
+    },
+    {
+      "id": "early_coincidence",
+      "ko": "처음 며칠에 겹친 우연",
+      "rule": "R5",
+      "candidate": "phone_rings",
+      "true_habit": "아니요 (기준의 약점)",
+      "note": "전화는 매일 소파에서 받는다. 1·2일째는 통화 직후 커피를 다 마셔서 캔 치우기가 우연히 5분 안에 따라온다. 3~5일째는 전화가 일찍 와서 캔 치우기가 8분 넘게 뒤다. 2일째 밤에만 통과한다."
+    },
+    {
+      "id": "part_of_action",
+      "ko": "행동의 일부",
+      "rule": null,
+      "candidate": null,
+      "true_habit": "아니요",
+      "note": "모든 행동 앞에 그 행동을 하러 가는 줄이 있다. 각 규칙의 forbidden 사건이 예측 모델용 FSM에 들어가면 실패다."
+    }
+  ],
+  "days": [
+    {
+      "day": 1,
+      "segments": [
+        {
+          "start": "07:00:00",
+          "end": "07:00:18",
+          "event": "sleep",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:00:18",
+          "end": "07:00:22",
+          "event": "turn_off_alarm",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:00:22",
+          "end": "07:01:54",
+          "event": "look_at_phone",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:01:54",
+          "end": "07:02:22",
+          "event": "lie_awake",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:02:22",
+          "end": "07:02:28",
+          "event": "sit_up_in_bed",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:02:28",
+          "end": "07:02:44",
+          "event": "wake_slowly",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:02:44",
+          "end": "07:02:48",
+          "event": "get_out_of_bed",
+          "state": "wake",
+          "role": "candidate",
+          "case": "occasional_miss"
+        },
+        {
+          "start": "07:02:48",
+          "end": "07:02:52",
+          "event": "turn_on_room_light",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:02:52",
+          "end": "07:02:54",
+          "event": "walk_to_curtains",
+          "state": "wake",
+          "role": "approach",
+          "case": "occasional_miss"
+        },
+        {
+          "start": "07:02:54",
+          "end": "07:02:58",
+          "event": "open_curtains",
+          "state": "wake",
+          "role": "action",
+          "case": "occasional_miss"
+        },
+        {
+          "start": "07:02:58",
+          "end": "07:03:12",
+          "event": "look_out_window",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:03:12",
+          "end": "07:03:14",
+          "event": "leave_room",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:03:14",
+          "end": "07:12:56",
+          "event": "unseen",
+          "state": "wake",
+          "role": "unseen",
+          "case": null
+        },
+        {
+          "start": "07:12:56",
+          "end": "07:12:58",
+          "event": "enter_room",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:12:58",
+          "end": "07:14:08",
+          "event": "dry_hair",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:14:08",
+          "end": "07:16:54",
+          "event": "get_dressed",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:16:54",
+          "end": "07:17:26",
+          "event": "make_bed",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:17:26",
+          "end": "07:17:30",
+          "event": "walk_to_kitchen",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:17:30",
+          "end": "07:17:36",
+          "event": "take_bowl",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:17:36",
+          "end": "07:17:46",
+          "event": "pour_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:17:46",
+          "end": "07:17:50",
+          "event": "take_milk",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:17:50",
+          "end": "07:17:54",
+          "event": "pour_milk",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:17:54",
+          "end": "07:17:58",
+          "event": "put_milk_back",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:17:58",
+          "end": "07:18:04",
+          "event": "fill_cup_at_purifier",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:18:04",
+          "end": "07:18:10",
+          "event": "bring_breakfast",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:18:10",
+          "end": "07:18:14",
+          "event": "sit_at_table",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:18:14",
+          "end": "07:18:18",
+          "event": "pick_up_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:18:18",
+          "end": "07:18:46",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:18:46",
+          "end": "07:18:52",
+          "event": "drink_water",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:18:52",
+          "end": "07:20:10",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:20:10",
+          "end": "07:20:12",
+          "event": "put_down_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:20:12",
+          "end": "07:20:20",
+          "event": "look_at_phone",
+          "state": "breakfast",
+          "role": "candidate",
+          "case": "frequent_event"
+        },
+        {
+          "start": "07:20:20",
+          "end": "07:20:24",
+          "event": "pick_up_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:20:24",
+          "end": "07:21:10",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:21:10",
+          "end": "07:21:14",
+          "event": "put_down_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:21:14",
+          "end": "07:21:18",
+          "event": "wipe_mouth",
+          "state": "breakfast",
+          "role": "candidate",
+          "case": "repeated_candidate"
+        },
+        {
+          "start": "07:21:18",
+          "end": "07:21:26",
+          "event": "drink_water",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:21:26",
+          "end": "07:21:28",
+          "event": "pick_up_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:21:28",
+          "end": "07:22:10",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:22:10",
+          "end": "07:22:14",
+          "event": "put_down_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:22:14",
+          "end": "07:22:42",
+          "event": "look_at_phone",
+          "state": "breakfast",
+          "role": "candidate",
+          "case": "frequent_event"
+        },
+        {
+          "start": "07:22:42",
+          "end": "07:22:46",
+          "event": "chew",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:22:46",
+          "end": "07:22:50",
+          "event": "pick_up_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:22:50",
+          "end": "07:24:10",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:24:10",
+          "end": "07:24:14",
+          "event": "put_down_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:24:14",
+          "end": "07:24:32",
+          "event": "look_at_phone",
+          "state": "breakfast",
+          "role": "candidate",
+          "case": "frequent_event"
+        },
+        {
+          "start": "07:24:32",
+          "end": "07:24:36",
+          "event": "pick_up_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:24:36",
+          "end": "07:25:40",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:25:40",
+          "end": "07:25:44",
+          "event": "drink_water",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:25:44",
+          "end": "07:26:40",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:26:40",
+          "end": "07:26:44",
+          "event": "wipe_mouth",
+          "state": "breakfast",
+          "role": "candidate",
+          "case": "repeated_candidate"
+        },
+        {
+          "start": "07:26:44",
+          "end": "07:28:26",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:28:26",
+          "end": "07:28:30",
+          "event": "drink_water",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:28:30",
+          "end": "07:29:46",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:29:46",
+          "end": "07:29:50",
+          "event": "put_down_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:29:50",
+          "end": "07:29:54",
+          "event": "finish_drinking",
+          "state": "breakfast",
+          "role": "candidate",
+          "case": "daily_habit"
+        },
+        {
+          "start": "07:29:54",
+          "end": "07:29:58",
+          "event": "pick_up_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:29:58",
+          "end": "07:30:46",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:30:46",
+          "end": "07:30:50",
+          "event": "finish_meal",
+          "state": "breakfast",
+          "role": "candidate",
+          "case": "one_signal_two_habits"
+        },
+        {
+          "start": "07:30:50",
+          "end": "07:30:54",
+          "event": "put_down_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:30:54",
+          "end": "07:31:04",
+          "event": "sit_idle_at_table",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:31:04",
+          "end": "07:31:08",
+          "event": "wipe_mouth",
+          "state": "breakfast",
+          "role": "candidate",
+          "case": "repeated_candidate"
+        },
+        {
+          "start": "07:31:08",
+          "end": "07:31:16",
+          "event": "sit_idle_at_table",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:31:16",
+          "end": "07:31:30",
+          "event": "look_at_phone",
+          "state": "breakfast",
+          "role": "candidate",
+          "case": "frequent_event"
+        },
+        {
+          "start": "07:31:30",
+          "end": "07:31:50",
+          "event": "sit_idle_at_table",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:31:50",
+          "end": "07:31:56",
+          "event": "shift_position",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:31:56",
+          "end": "07:32:36",
+          "event": "sit_idle_at_table",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:32:36",
+          "end": "07:32:42",
+          "event": "look_around",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:32:42",
+          "end": "07:32:50",
+          "event": "sit_idle_at_table",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:32:50",
+          "end": "07:32:56",
+          "event": "pick_up_dishes",
+          "state": "breakfast",
+          "role": "approach",
+          "case": null
+        },
+        {
+          "start": "07:32:56",
+          "end": "07:33:00",
+          "event": "carry_dishes_to_kitchen",
+          "state": "breakfast",
+          "role": "approach",
+          "case": null
+        },
+        {
+          "start": "07:33:00",
+          "end": "07:33:04",
+          "event": "put_bowl_in_dishwasher",
+          "state": "breakfast",
+          "role": "action",
+          "case": "one_signal_two_habits"
+        },
+        {
+          "start": "07:33:04",
+          "end": "07:33:10",
+          "event": "put_cup_in_dishwasher",
+          "state": "breakfast",
+          "role": "action",
+          "case": "daily_habit"
+        },
+        {
+          "start": "07:33:10",
+          "end": "07:33:16",
+          "event": "take_coffee_from_fridge",
+          "state": "rest",
+          "role": "approach",
+          "case": "coffee"
+        },
+        {
+          "start": "07:33:16",
+          "end": "07:33:22",
+          "event": "carry_coffee_to_sofa",
+          "state": "rest",
+          "role": "approach",
+          "case": "coffee"
+        },
+        {
+          "start": "07:33:22",
+          "end": "07:33:26",
+          "event": "put_can_next_to_self",
+          "state": "rest",
+          "role": "action",
+          "case": "coffee"
+        },
+        {
+          "start": "07:33:26",
+          "end": "07:33:30",
+          "event": "go_to_sofa",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:33:30",
+          "end": "07:33:34",
+          "event": "pick_up_remote",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:33:34",
+          "end": "07:33:38",
+          "event": "turn_on_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:33:38",
+          "end": "07:33:42",
+          "event": "open_coffee_can",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:33:42",
+          "end": "07:33:48",
+          "event": "drink_coffee",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:33:48",
+          "end": "07:35:28",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:35:28",
+          "end": "07:35:32",
+          "event": "drink_coffee",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:35:32",
+          "end": "07:37:22",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:37:22",
+          "end": "07:37:26",
+          "event": "drink_coffee",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:37:26",
+          "end": "07:37:30",
+          "event": "yawn",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:37:30",
+          "end": "07:38:46",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:38:46",
+          "end": "07:38:50",
+          "event": "change_channel",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:38:50",
+          "end": "07:39:28",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:39:28",
+          "end": "07:39:36",
+          "event": "drink_coffee",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:39:36",
+          "end": "07:41:42",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:41:42",
+          "end": "07:41:50",
+          "event": "drink_coffee",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:41:50",
+          "end": "07:44:54",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:44:54",
+          "end": "07:44:58",
+          "event": "drink_coffee",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:44:58",
+          "end": "07:45:02",
+          "event": "look_around",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:45:02",
+          "end": "07:47:48",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:47:48",
+          "end": "07:47:54",
+          "event": "drink_coffee",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:47:54",
+          "end": "07:49:08",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:49:08",
+          "end": "07:49:10",
+          "event": "phone_rings",
+          "state": "rest",
+          "role": "candidate",
+          "case": "early_coincidence"
+        },
+        {
+          "start": "07:49:10",
+          "end": "07:50:20",
+          "event": "talk_on_phone",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:50:20",
+          "end": "07:50:24",
+          "event": "look_around",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:50:24",
+          "end": "07:50:28",
+          "event": "adjust_cushion",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:50:28",
+          "end": "07:51:20",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:51:20",
+          "end": "07:51:24",
+          "event": "finish_coffee",
+          "state": "rest",
+          "role": "candidate",
+          "case": "empty_can"
+        },
+        {
+          "start": "07:51:24",
+          "end": "07:52:00",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:52:00",
+          "end": "07:52:04",
+          "event": "turn_off_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:52:04",
+          "end": "07:52:08",
+          "event": "pick_up_empty_can",
+          "state": "rest",
+          "role": "approach",
+          "case": "empty_can"
+        },
+        {
+          "start": "07:52:08",
+          "end": "07:52:12",
+          "event": "carry_can_to_bin",
+          "state": "rest",
+          "role": "approach",
+          "case": "empty_can"
+        },
+        {
+          "start": "07:52:12",
+          "end": "07:52:16",
+          "event": "put_can_in_storage",
+          "state": "rest",
+          "role": "action",
+          "case": "empty_can"
+        },
+        {
+          "start": "07:52:16",
+          "end": "07:52:20",
+          "event": "walk_to_desk",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:52:20",
+          "end": "07:53:48",
+          "event": "pack_bag",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:53:48",
+          "end": "07:53:50",
+          "event": "zip_bag",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:53:50",
+          "end": "07:53:52",
+          "event": "leave_room",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:53:52",
+          "end": "07:56:46",
+          "event": "unseen",
+          "state": "leaving",
+          "role": "unseen",
+          "case": null
+        },
+        {
+          "start": "07:56:46",
+          "end": "07:56:48",
+          "event": "enter_room",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:56:48",
+          "end": "07:57:02",
+          "event": "put_on_jacket",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:57:02",
+          "end": "07:57:08",
+          "event": "check_pockets",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:57:08",
+          "end": "07:57:18",
+          "event": "check_mirror",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:57:18",
+          "end": "07:57:22",
+          "event": "put_on_bag",
+          "state": "leaving",
+          "role": "candidate",
+          "case": "unseen"
+        },
+        {
+          "start": "07:57:22",
+          "end": "07:57:28",
+          "event": "look_at_phone",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:57:28",
+          "end": "07:57:32",
+          "event": "walk_to_light_switch",
+          "state": "leaving",
+          "role": "approach",
+          "case": "unseen"
+        },
+        {
+          "start": "07:57:32",
+          "end": "07:57:36",
+          "event": "turn_off_room_light",
+          "state": "leaving",
+          "role": "action",
+          "case": "unseen"
+        },
+        {
+          "start": "07:57:36",
+          "end": "07:57:38",
+          "event": "leave_home",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:57:38",
+          "end": "08:00:00",
+          "event": "unseen",
+          "state": "away",
+          "role": "unseen",
+          "case": null
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "segments": [
+        {
+          "start": "07:00:00",
+          "end": "07:00:30",
+          "event": "sleep",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:00:30",
+          "end": "07:00:36",
+          "event": "turn_off_alarm",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:00:36",
+          "end": "07:00:52",
+          "event": "lie_awake",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:00:52",
+          "end": "07:02:46",
+          "event": "look_at_phone",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:02:46",
+          "end": "07:02:52",
+          "event": "sit_up_in_bed",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:02:52",
+          "end": "07:02:54",
+          "event": "yawn",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:02:54",
+          "end": "07:03:04",
+          "event": "wake_slowly",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:03:04",
+          "end": "07:03:08",
+          "event": "get_out_of_bed",
+          "state": "wake",
+          "role": "candidate",
+          "case": "occasional_miss"
+        },
+        {
+          "start": "07:03:08",
+          "end": "07:03:12",
+          "event": "turn_on_room_light",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:03:12",
+          "end": "07:04:14",
+          "event": "make_bed",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:04:14",
+          "end": "07:04:18",
+          "event": "look_around",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:04:18",
+          "end": "07:04:20",
+          "event": "rub_eyes",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:04:20",
+          "end": "07:09:32",
+          "event": "look_at_phone",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:09:32",
+          "end": "07:09:36",
+          "event": "leave_room",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:09:36",
+          "end": "07:17:28",
+          "event": "unseen",
+          "state": "wake",
+          "role": "unseen",
+          "case": null
+        },
+        {
+          "start": "07:17:28",
+          "end": "07:17:32",
+          "event": "enter_room",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:17:32",
+          "end": "07:18:50",
+          "event": "dry_hair",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:18:50",
+          "end": "07:20:58",
+          "event": "get_dressed",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:20:58",
+          "end": "07:21:00",
+          "event": "walk_to_curtains",
+          "state": "wake",
+          "role": "approach",
+          "case": "occasional_miss"
+        },
+        {
+          "start": "07:21:00",
+          "end": "07:21:04",
+          "event": "open_curtains",
+          "state": "wake",
+          "role": "action",
+          "case": "occasional_miss"
+        },
+        {
+          "start": "07:21:04",
+          "end": "07:21:14",
+          "event": "look_out_window",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:21:14",
+          "end": "07:21:18",
+          "event": "walk_to_kitchen",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:21:18",
+          "end": "07:21:24",
+          "event": "take_bowl",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:21:24",
+          "end": "07:21:32",
+          "event": "pour_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:21:32",
+          "end": "07:21:36",
+          "event": "take_milk",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:21:36",
+          "end": "07:21:44",
+          "event": "pour_milk",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:21:44",
+          "end": "07:21:50",
+          "event": "put_milk_back",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:21:50",
+          "end": "07:21:58",
+          "event": "fill_cup_at_purifier",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:21:58",
+          "end": "07:22:04",
+          "event": "bring_breakfast",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:22:04",
+          "end": "07:22:08",
+          "event": "sit_at_table",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:22:08",
+          "end": "07:22:12",
+          "event": "pick_up_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:22:12",
+          "end": "07:23:04",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:23:04",
+          "end": "07:23:08",
+          "event": "put_down_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:23:08",
+          "end": "07:23:34",
+          "event": "look_at_phone",
+          "state": "breakfast",
+          "role": "candidate",
+          "case": "frequent_event"
+        },
+        {
+          "start": "07:23:34",
+          "end": "07:23:38",
+          "event": "pick_up_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:23:38",
+          "end": "07:24:04",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:24:04",
+          "end": "07:24:08",
+          "event": "put_down_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:24:08",
+          "end": "07:24:36",
+          "event": "look_at_phone",
+          "state": "breakfast",
+          "role": "candidate",
+          "case": "frequent_event"
+        },
+        {
+          "start": "07:24:36",
+          "end": "07:24:40",
+          "event": "chew",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:24:40",
+          "end": "07:24:42",
+          "event": "pick_up_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:24:42",
+          "end": "07:25:44",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:25:44",
+          "end": "07:25:52",
+          "event": "chew",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:25:52",
+          "end": "07:26:04",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:26:04",
+          "end": "07:26:06",
+          "event": "put_down_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:26:06",
+          "end": "07:26:36",
+          "event": "look_at_phone",
+          "state": "breakfast",
+          "role": "candidate",
+          "case": "frequent_event"
+        },
+        {
+          "start": "07:26:36",
+          "end": "07:26:38",
+          "event": "pick_up_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:26:38",
+          "end": "07:27:46",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:27:46",
+          "end": "07:27:50",
+          "event": "put_down_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:27:50",
+          "end": "07:27:54",
+          "event": "drink_water",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:27:54",
+          "end": "07:27:56",
+          "event": "pick_up_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:27:56",
+          "end": "07:28:04",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:28:04",
+          "end": "07:28:06",
+          "event": "put_down_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:28:06",
+          "end": "07:28:12",
+          "event": "drink_water",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:28:12",
+          "end": "07:28:16",
+          "event": "pick_up_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:28:16",
+          "end": "07:28:54",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:28:54",
+          "end": "07:29:02",
+          "event": "chew",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:29:02",
+          "end": "07:29:32",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:29:32",
+          "end": "07:29:36",
+          "event": "put_down_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:29:36",
+          "end": "07:29:44",
+          "event": "drink_water",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:29:44",
+          "end": "07:29:52",
+          "event": "chew",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:29:52",
+          "end": "07:29:56",
+          "event": "pick_up_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:29:56",
+          "end": "07:30:34",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:30:34",
+          "end": "07:30:38",
+          "event": "wipe_mouth",
+          "state": "breakfast",
+          "role": "candidate",
+          "case": "repeated_candidate"
+        },
+        {
+          "start": "07:30:38",
+          "end": "07:32:04",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:32:04",
+          "end": "07:32:08",
+          "event": "put_down_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:32:08",
+          "end": "07:32:12",
+          "event": "wipe_mouth",
+          "state": "breakfast",
+          "role": "candidate",
+          "case": "repeated_candidate"
+        },
+        {
+          "start": "07:32:12",
+          "end": "07:32:14",
+          "event": "pick_up_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:32:14",
+          "end": "07:33:04",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:33:04",
+          "end": "07:33:06",
+          "event": "put_down_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:33:06",
+          "end": "07:33:10",
+          "event": "finish_drinking",
+          "state": "breakfast",
+          "role": "candidate",
+          "case": "daily_habit"
+        },
+        {
+          "start": "07:33:10",
+          "end": "07:33:14",
+          "event": "pick_up_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:33:14",
+          "end": "07:33:52",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:33:52",
+          "end": "07:33:56",
+          "event": "finish_meal",
+          "state": "breakfast",
+          "role": "candidate",
+          "case": "one_signal_two_habits"
+        },
+        {
+          "start": "07:33:56",
+          "end": "07:33:58",
+          "event": "put_down_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:33:58",
+          "end": "07:34:24",
+          "event": "sit_idle_at_table",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:34:24",
+          "end": "07:34:28",
+          "event": "wipe_mouth",
+          "state": "breakfast",
+          "role": "candidate",
+          "case": "repeated_candidate"
+        },
+        {
+          "start": "07:34:28",
+          "end": "07:34:48",
+          "event": "sit_idle_at_table",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:34:48",
+          "end": "07:34:52",
+          "event": "look_around",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:34:52",
+          "end": "07:35:46",
+          "event": "sit_idle_at_table",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:35:46",
+          "end": "07:35:50",
+          "event": "pick_up_dishes",
+          "state": "breakfast",
+          "role": "approach",
+          "case": null
+        },
+        {
+          "start": "07:35:50",
+          "end": "07:35:56",
+          "event": "carry_dishes_to_kitchen",
+          "state": "breakfast",
+          "role": "approach",
+          "case": null
+        },
+        {
+          "start": "07:35:56",
+          "end": "07:36:00",
+          "event": "put_bowl_in_dishwasher",
+          "state": "breakfast",
+          "role": "action",
+          "case": "one_signal_two_habits"
+        },
+        {
+          "start": "07:36:00",
+          "end": "07:36:04",
+          "event": "put_cup_in_dishwasher",
+          "state": "breakfast",
+          "role": "action",
+          "case": "daily_habit"
+        },
+        {
+          "start": "07:36:04",
+          "end": "07:36:14",
+          "event": "take_coffee_from_fridge",
+          "state": "rest",
+          "role": "approach",
+          "case": "coffee"
+        },
+        {
+          "start": "07:36:14",
+          "end": "07:36:18",
+          "event": "carry_coffee_to_sofa",
+          "state": "rest",
+          "role": "approach",
+          "case": "coffee"
+        },
+        {
+          "start": "07:36:18",
+          "end": "07:36:22",
+          "event": "put_can_next_to_self",
+          "state": "rest",
+          "role": "action",
+          "case": "coffee"
+        },
+        {
+          "start": "07:36:22",
+          "end": "07:36:26",
+          "event": "go_to_sofa",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:36:26",
+          "end": "07:36:30",
+          "event": "pick_up_remote",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:36:30",
+          "end": "07:36:34",
+          "event": "turn_on_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:36:34",
+          "end": "07:36:38",
+          "event": "open_coffee_can",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:36:38",
+          "end": "07:36:42",
+          "event": "drink_coffee",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:36:42",
+          "end": "07:36:50",
+          "event": "stretch",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:36:50",
+          "end": "07:37:04",
+          "event": "look_at_phone",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:37:04",
+          "end": "07:37:48",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:37:48",
+          "end": "07:37:54",
+          "event": "shift_position",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:37:54",
+          "end": "07:38:44",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:38:44",
+          "end": "07:38:52",
+          "event": "drink_coffee",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:38:52",
+          "end": "07:39:40",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:39:40",
+          "end": "07:40:18",
+          "event": "look_at_phone",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:40:18",
+          "end": "07:40:20",
+          "event": "change_channel",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:40:20",
+          "end": "07:40:22",
+          "event": "look_around",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:40:22",
+          "end": "07:41:08",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:41:08",
+          "end": "07:41:14",
+          "event": "drink_coffee",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:41:14",
+          "end": "07:44:42",
+          "event": "look_at_phone",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:44:42",
+          "end": "07:44:50",
+          "event": "drink_coffee",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:44:50",
+          "end": "07:45:24",
+          "event": "look_at_phone",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:45:24",
+          "end": "07:46:46",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:46:46",
+          "end": "07:46:50",
+          "event": "adjust_cushion",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:46:50",
+          "end": "07:47:22",
+          "event": "look_at_phone",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:47:22",
+          "end": "07:47:26",
+          "event": "shift_position",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:47:26",
+          "end": "07:47:36",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:47:36",
+          "end": "07:47:38",
+          "event": "phone_rings",
+          "state": "rest",
+          "role": "candidate",
+          "case": "early_coincidence"
+        },
+        {
+          "start": "07:47:38",
+          "end": "07:48:44",
+          "event": "talk_on_phone",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:48:44",
+          "end": "07:49:42",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:49:42",
+          "end": "07:49:46",
+          "event": "finish_coffee",
+          "state": "rest",
+          "role": "candidate",
+          "case": "empty_can"
+        },
+        {
+          "start": "07:49:46",
+          "end": "07:51:00",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:51:00",
+          "end": "07:51:04",
+          "event": "turn_off_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:51:04",
+          "end": "07:51:08",
+          "event": "pick_up_empty_can",
+          "state": "rest",
+          "role": "approach",
+          "case": "empty_can"
+        },
+        {
+          "start": "07:51:08",
+          "end": "07:51:14",
+          "event": "carry_can_to_bin",
+          "state": "rest",
+          "role": "approach",
+          "case": "empty_can"
+        },
+        {
+          "start": "07:51:14",
+          "end": "07:51:18",
+          "event": "put_can_in_storage",
+          "state": "rest",
+          "role": "action",
+          "case": "empty_can"
+        },
+        {
+          "start": "07:51:18",
+          "end": "07:51:24",
+          "event": "walk_to_desk",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:51:24",
+          "end": "07:52:40",
+          "event": "pack_bag",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:52:40",
+          "end": "07:52:42",
+          "event": "zip_bag",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:52:42",
+          "end": "07:52:44",
+          "event": "leave_room",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:52:44",
+          "end": "07:56:18",
+          "event": "unseen",
+          "state": "leaving",
+          "role": "unseen",
+          "case": null
+        },
+        {
+          "start": "07:56:18",
+          "end": "07:56:20",
+          "event": "enter_room",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:56:20",
+          "end": "07:56:36",
+          "event": "put_on_jacket",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:56:36",
+          "end": "07:56:42",
+          "event": "check_pockets",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:56:42",
+          "end": "07:56:54",
+          "event": "check_mirror",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:56:54",
+          "end": "07:56:58",
+          "event": "put_on_bag",
+          "state": "leaving",
+          "role": "candidate",
+          "case": "unseen"
+        },
+        {
+          "start": "07:56:58",
+          "end": "07:57:06",
+          "event": "look_at_phone",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:57:06",
+          "end": "07:57:10",
+          "event": "walk_to_light_switch",
+          "state": "leaving",
+          "role": "approach",
+          "case": "unseen"
+        },
+        {
+          "start": "07:57:10",
+          "end": "07:57:14",
+          "event": "turn_off_room_light",
+          "state": "leaving",
+          "role": "action",
+          "case": "unseen"
+        },
+        {
+          "start": "07:57:14",
+          "end": "07:57:16",
+          "event": "leave_home",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:57:16",
+          "end": "08:00:00",
+          "event": "unseen",
+          "state": "away",
+          "role": "unseen",
+          "case": null
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "segments": [
+        {
+          "start": "07:00:00",
+          "end": "07:00:16",
+          "event": "sleep",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:00:16",
+          "end": "07:00:22",
+          "event": "turn_off_alarm",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:00:22",
+          "end": "07:01:22",
+          "event": "lie_awake",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:01:22",
+          "end": "07:01:24",
+          "event": "yawn",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:01:24",
+          "end": "07:01:58",
+          "event": "lie_awake",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:01:58",
+          "end": "07:02:20",
+          "event": "look_at_phone",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:02:20",
+          "end": "07:02:26",
+          "event": "sit_up_in_bed",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:02:26",
+          "end": "07:02:56",
+          "event": "wake_slowly",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:02:56",
+          "end": "07:03:00",
+          "event": "get_out_of_bed",
+          "state": "wake",
+          "role": "candidate",
+          "case": "occasional_miss"
+        },
+        {
+          "start": "07:03:00",
+          "end": "07:03:04",
+          "event": "turn_on_room_light",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:03:04",
+          "end": "07:03:08",
+          "event": "walk_to_curtains",
+          "state": "wake",
+          "role": "approach",
+          "case": "occasional_miss"
+        },
+        {
+          "start": "07:03:08",
+          "end": "07:03:14",
+          "event": "open_curtains",
+          "state": "wake",
+          "role": "action",
+          "case": "occasional_miss"
+        },
+        {
+          "start": "07:03:14",
+          "end": "07:03:32",
+          "event": "look_out_window",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:03:32",
+          "end": "07:03:36",
+          "event": "leave_room",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:03:36",
+          "end": "07:10:54",
+          "event": "unseen",
+          "state": "wake",
+          "role": "unseen",
+          "case": null
+        },
+        {
+          "start": "07:10:54",
+          "end": "07:10:56",
+          "event": "enter_room",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:10:56",
+          "end": "07:12:00",
+          "event": "dry_hair",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:12:00",
+          "end": "07:14:20",
+          "event": "get_dressed",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:14:20",
+          "end": "07:15:24",
+          "event": "make_bed",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:15:24",
+          "end": "07:15:30",
+          "event": "walk_to_kitchen",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:15:30",
+          "end": "07:15:36",
+          "event": "take_bowl",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:15:36",
+          "end": "07:15:48",
+          "event": "pour_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:15:48",
+          "end": "07:15:52",
+          "event": "take_milk",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:15:52",
+          "end": "07:15:58",
+          "event": "pour_milk",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:15:58",
+          "end": "07:16:04",
+          "event": "put_milk_back",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:16:04",
+          "end": "07:16:12",
+          "event": "fill_cup_at_purifier",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:16:12",
+          "end": "07:16:20",
+          "event": "bring_breakfast",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:16:20",
+          "end": "07:16:24",
+          "event": "sit_at_table",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:16:24",
+          "end": "07:16:28",
+          "event": "pick_up_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:16:28",
+          "end": "07:16:48",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:16:48",
+          "end": "07:16:58",
+          "event": "chew",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:16:58",
+          "end": "07:18:20",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:18:20",
+          "end": "07:18:22",
+          "event": "put_down_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:18:22",
+          "end": "07:18:48",
+          "event": "look_at_phone",
+          "state": "breakfast",
+          "role": "candidate",
+          "case": "frequent_event"
+        },
+        {
+          "start": "07:18:48",
+          "end": "07:18:50",
+          "event": "pick_up_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:18:50",
+          "end": "07:20:20",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:20:20",
+          "end": "07:20:22",
+          "event": "put_down_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:20:22",
+          "end": "07:20:34",
+          "event": "look_at_phone",
+          "state": "breakfast",
+          "role": "candidate",
+          "case": "frequent_event"
+        },
+        {
+          "start": "07:20:34",
+          "end": "07:20:38",
+          "event": "pick_up_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:20:38",
+          "end": "07:20:54",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:20:54",
+          "end": "07:20:58",
+          "event": "put_down_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:20:58",
+          "end": "07:21:04",
+          "event": "drink_water",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:21:04",
+          "end": "07:21:08",
+          "event": "pick_up_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:21:08",
+          "end": "07:22:20",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:22:20",
+          "end": "07:22:24",
+          "event": "put_down_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:22:24",
+          "end": "07:22:28",
+          "event": "wipe_mouth",
+          "state": "breakfast",
+          "role": "candidate",
+          "case": "repeated_candidate"
+        },
+        {
+          "start": "07:22:28",
+          "end": "07:22:32",
+          "event": "pick_up_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:22:32",
+          "end": "07:23:20",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:23:20",
+          "end": "07:23:24",
+          "event": "put_down_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:23:24",
+          "end": "07:23:28",
+          "event": "drink_water",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:23:28",
+          "end": "07:23:30",
+          "event": "pick_up_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:23:30",
+          "end": "07:24:08",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:24:08",
+          "end": "07:24:16",
+          "event": "chew",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:24:16",
+          "end": "07:24:42",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:24:42",
+          "end": "07:24:46",
+          "event": "put_down_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:24:46",
+          "end": "07:24:52",
+          "event": "drink_water",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:24:52",
+          "end": "07:24:56",
+          "event": "pick_up_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:24:56",
+          "end": "07:25:28",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:25:28",
+          "end": "07:25:34",
+          "event": "drink_water",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:25:34",
+          "end": "07:25:38",
+          "event": "chew",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:25:38",
+          "end": "07:25:50",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:25:50",
+          "end": "07:25:54",
+          "event": "wipe_mouth",
+          "state": "breakfast",
+          "role": "candidate",
+          "case": "repeated_candidate"
+        },
+        {
+          "start": "07:25:54",
+          "end": "07:26:36",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:26:36",
+          "end": "07:26:40",
+          "event": "put_down_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:26:40",
+          "end": "07:26:44",
+          "event": "finish_drinking",
+          "state": "breakfast",
+          "role": "candidate",
+          "case": "daily_habit"
+        },
+        {
+          "start": "07:26:44",
+          "end": "07:26:46",
+          "event": "pick_up_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:26:46",
+          "end": "07:27:28",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:27:28",
+          "end": "07:27:32",
+          "event": "finish_meal",
+          "state": "breakfast",
+          "role": "candidate",
+          "case": "one_signal_two_habits"
+        },
+        {
+          "start": "07:27:32",
+          "end": "07:27:36",
+          "event": "put_down_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:27:36",
+          "end": "07:28:04",
+          "event": "sit_idle_at_table",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:28:04",
+          "end": "07:28:08",
+          "event": "wipe_mouth",
+          "state": "breakfast",
+          "role": "candidate",
+          "case": "repeated_candidate"
+        },
+        {
+          "start": "07:28:08",
+          "end": "07:28:22",
+          "event": "sit_idle_at_table",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:28:22",
+          "end": "07:28:38",
+          "event": "look_at_phone",
+          "state": "breakfast",
+          "role": "candidate",
+          "case": "frequent_event"
+        },
+        {
+          "start": "07:28:38",
+          "end": "07:29:02",
+          "event": "sit_idle_at_table",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:29:02",
+          "end": "07:29:06",
+          "event": "pick_up_dishes",
+          "state": "breakfast",
+          "role": "approach",
+          "case": null
+        },
+        {
+          "start": "07:29:06",
+          "end": "07:29:10",
+          "event": "carry_dishes_to_kitchen",
+          "state": "breakfast",
+          "role": "approach",
+          "case": null
+        },
+        {
+          "start": "07:29:10",
+          "end": "07:29:16",
+          "event": "put_bowl_in_dishwasher",
+          "state": "breakfast",
+          "role": "action",
+          "case": "one_signal_two_habits"
+        },
+        {
+          "start": "07:29:16",
+          "end": "07:29:20",
+          "event": "put_cup_in_dishwasher",
+          "state": "breakfast",
+          "role": "action",
+          "case": "daily_habit"
+        },
+        {
+          "start": "07:29:20",
+          "end": "07:29:30",
+          "event": "take_coffee_from_fridge",
+          "state": "rest",
+          "role": "approach",
+          "case": "coffee"
+        },
+        {
+          "start": "07:29:30",
+          "end": "07:29:34",
+          "event": "carry_coffee_to_sofa",
+          "state": "rest",
+          "role": "approach",
+          "case": "coffee"
+        },
+        {
+          "start": "07:29:34",
+          "end": "07:29:38",
+          "event": "put_can_next_to_self",
+          "state": "rest",
+          "role": "action",
+          "case": "coffee"
+        },
+        {
+          "start": "07:29:38",
+          "end": "07:29:42",
+          "event": "go_to_sofa",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:29:42",
+          "end": "07:29:46",
+          "event": "pick_up_remote",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:29:46",
+          "end": "07:29:50",
+          "event": "turn_on_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:29:50",
+          "end": "07:29:54",
+          "event": "open_coffee_can",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:29:54",
+          "end": "07:29:58",
+          "event": "drink_coffee",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:29:58",
+          "end": "07:31:10",
+          "event": "look_at_phone",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:31:10",
+          "end": "07:31:34",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:31:34",
+          "end": "07:31:38",
+          "event": "drink_coffee",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:31:38",
+          "end": "07:31:48",
+          "event": "look_at_phone",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:31:48",
+          "end": "07:32:36",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:32:36",
+          "end": "07:32:38",
+          "event": "phone_rings",
+          "state": "rest",
+          "role": "candidate",
+          "case": "early_coincidence"
+        },
+        {
+          "start": "07:32:38",
+          "end": "07:33:44",
+          "event": "talk_on_phone",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:33:44",
+          "end": "07:33:46",
+          "event": "change_channel",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:33:46",
+          "end": "07:34:14",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:34:14",
+          "end": "07:34:22",
+          "event": "drink_coffee",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:34:22",
+          "end": "07:37:56",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:37:56",
+          "end": "07:38:02",
+          "event": "drink_coffee",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:38:02",
+          "end": "07:39:40",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:39:40",
+          "end": "07:39:46",
+          "event": "drink_coffee",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:39:46",
+          "end": "07:41:14",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:41:14",
+          "end": "07:41:20",
+          "event": "drink_coffee",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:41:20",
+          "end": "07:41:58",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:41:58",
+          "end": "07:42:12",
+          "event": "look_at_phone",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:42:12",
+          "end": "07:44:00",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:44:00",
+          "end": "07:44:06",
+          "event": "drink_coffee",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:44:06",
+          "end": "07:44:10",
+          "event": "check_time",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:44:10",
+          "end": "07:44:14",
+          "event": "change_channel",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:44:14",
+          "end": "07:45:38",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:45:38",
+          "end": "07:45:46",
+          "event": "drink_coffee",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:45:46",
+          "end": "07:45:56",
+          "event": "look_at_phone",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:45:56",
+          "end": "07:46:06",
+          "event": "stretch",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:46:06",
+          "end": "07:46:10",
+          "event": "yawn",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:46:10",
+          "end": "07:46:50",
+          "event": "look_at_phone",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:46:50",
+          "end": "07:48:40",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:48:40",
+          "end": "07:48:44",
+          "event": "drink_coffee",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:48:44",
+          "end": "07:50:06",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:50:06",
+          "end": "07:50:10",
+          "event": "finish_coffee",
+          "state": "rest",
+          "role": "candidate",
+          "case": "empty_can"
+        },
+        {
+          "start": "07:50:10",
+          "end": "07:50:48",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:50:48",
+          "end": "07:50:52",
+          "event": "turn_off_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:50:52",
+          "end": "07:50:56",
+          "event": "pick_up_empty_can",
+          "state": "rest",
+          "role": "approach",
+          "case": "empty_can"
+        },
+        {
+          "start": "07:50:56",
+          "end": "07:51:00",
+          "event": "carry_can_to_bin",
+          "state": "rest",
+          "role": "approach",
+          "case": "empty_can"
+        },
+        {
+          "start": "07:51:00",
+          "end": "07:51:04",
+          "event": "put_can_in_storage",
+          "state": "rest",
+          "role": "action",
+          "case": "empty_can"
+        },
+        {
+          "start": "07:51:04",
+          "end": "07:51:08",
+          "event": "walk_to_desk",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:51:08",
+          "end": "07:52:20",
+          "event": "pack_bag",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:52:20",
+          "end": "07:52:22",
+          "event": "zip_bag",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:52:22",
+          "end": "07:52:26",
+          "event": "leave_room",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:52:26",
+          "end": "07:56:08",
+          "event": "unseen",
+          "state": "leaving",
+          "role": "unseen",
+          "case": null
+        },
+        {
+          "start": "07:56:08",
+          "end": "07:56:12",
+          "event": "enter_room",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:56:12",
+          "end": "07:56:28",
+          "event": "put_on_jacket",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:56:28",
+          "end": "07:56:34",
+          "event": "check_pockets",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:56:34",
+          "end": "07:56:46",
+          "event": "check_mirror",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:56:46",
+          "end": "07:56:50",
+          "event": "put_on_bag",
+          "state": "leaving",
+          "role": "candidate",
+          "case": "unseen"
+        },
+        {
+          "start": "07:56:50",
+          "end": "07:56:54",
+          "event": "leave_home",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:56:54",
+          "end": "08:00:00",
+          "event": "unseen",
+          "state": "away",
+          "role": "unseen",
+          "case": "unseen"
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "segments": [
+        {
+          "start": "07:00:00",
+          "end": "07:00:10",
+          "event": "sleep",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:00:10",
+          "end": "07:00:14",
+          "event": "turn_off_alarm",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:00:14",
+          "end": "07:01:04",
+          "event": "look_at_phone",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:01:04",
+          "end": "07:01:24",
+          "event": "lie_awake",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:01:24",
+          "end": "07:01:36",
+          "event": "stretch",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:01:36",
+          "end": "07:01:54",
+          "event": "lie_awake",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:01:54",
+          "end": "07:02:00",
+          "event": "sit_up_in_bed",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:02:00",
+          "end": "07:02:10",
+          "event": "wake_slowly",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:02:10",
+          "end": "07:02:14",
+          "event": "get_out_of_bed",
+          "state": "wake",
+          "role": "candidate",
+          "case": "occasional_miss"
+        },
+        {
+          "start": "07:02:14",
+          "end": "07:02:18",
+          "event": "turn_on_room_light",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:02:18",
+          "end": "07:02:20",
+          "event": "walk_to_curtains",
+          "state": "wake",
+          "role": "approach",
+          "case": "occasional_miss"
+        },
+        {
+          "start": "07:02:20",
+          "end": "07:02:24",
+          "event": "open_curtains",
+          "state": "wake",
+          "role": "action",
+          "case": "occasional_miss"
+        },
+        {
+          "start": "07:02:24",
+          "end": "07:02:44",
+          "event": "look_out_window",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:02:44",
+          "end": "07:02:46",
+          "event": "leave_room",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:02:46",
+          "end": "07:12:22",
+          "event": "unseen",
+          "state": "wake",
+          "role": "unseen",
+          "case": null
+        },
+        {
+          "start": "07:12:22",
+          "end": "07:12:24",
+          "event": "enter_room",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:12:24",
+          "end": "07:12:56",
+          "event": "dry_hair",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:12:56",
+          "end": "07:15:10",
+          "event": "get_dressed",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:15:10",
+          "end": "07:16:00",
+          "event": "make_bed",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:16:00",
+          "end": "07:16:06",
+          "event": "walk_to_kitchen",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:16:06",
+          "end": "07:16:12",
+          "event": "take_bowl",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:16:12",
+          "end": "07:16:18",
+          "event": "pour_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:16:18",
+          "end": "07:16:24",
+          "event": "take_milk",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:16:24",
+          "end": "07:16:28",
+          "event": "pour_milk",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:16:28",
+          "end": "07:16:34",
+          "event": "put_milk_back",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:16:34",
+          "end": "07:16:44",
+          "event": "fill_cup_at_purifier",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:16:44",
+          "end": "07:16:50",
+          "event": "bring_breakfast",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:16:50",
+          "end": "07:16:54",
+          "event": "sit_at_table",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:16:54",
+          "end": "07:16:56",
+          "event": "pick_up_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:16:56",
+          "end": "07:17:50",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:17:50",
+          "end": "07:17:54",
+          "event": "put_down_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:17:54",
+          "end": "07:18:04",
+          "event": "look_at_phone",
+          "state": "breakfast",
+          "role": "candidate",
+          "case": "frequent_event"
+        },
+        {
+          "start": "07:18:04",
+          "end": "07:18:08",
+          "event": "chew",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:18:08",
+          "end": "07:18:10",
+          "event": "pick_up_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:18:10",
+          "end": "07:19:20",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:19:20",
+          "end": "07:19:28",
+          "event": "drink_water",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:19:28",
+          "end": "07:19:32",
+          "event": "chew",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:19:32",
+          "end": "07:20:48",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:20:48",
+          "end": "07:20:52",
+          "event": "look_around",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:20:52",
+          "end": "07:21:20",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:21:20",
+          "end": "07:21:24",
+          "event": "wipe_mouth",
+          "state": "breakfast",
+          "role": "candidate",
+          "case": "repeated_candidate"
+        },
+        {
+          "start": "07:21:24",
+          "end": "07:22:50",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:22:50",
+          "end": "07:22:54",
+          "event": "put_down_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:22:54",
+          "end": "07:23:18",
+          "event": "look_at_phone",
+          "state": "breakfast",
+          "role": "candidate",
+          "case": "frequent_event"
+        },
+        {
+          "start": "07:23:18",
+          "end": "07:23:20",
+          "event": "pick_up_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:23:20",
+          "end": "07:24:40",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:24:40",
+          "end": "07:24:44",
+          "event": "chew",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:24:44",
+          "end": "07:28:54",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:28:54",
+          "end": "07:28:56",
+          "event": "put_down_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:28:56",
+          "end": "07:29:00",
+          "event": "finish_drinking",
+          "state": "breakfast",
+          "role": "candidate",
+          "case": "daily_habit"
+        },
+        {
+          "start": "07:29:00",
+          "end": "07:29:02",
+          "event": "pick_up_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:29:02",
+          "end": "07:29:56",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:29:56",
+          "end": "07:30:00",
+          "event": "finish_meal",
+          "state": "breakfast",
+          "role": "candidate",
+          "case": "one_signal_two_habits"
+        },
+        {
+          "start": "07:30:00",
+          "end": "07:30:02",
+          "event": "put_down_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:30:02",
+          "end": "07:30:28",
+          "event": "sit_idle_at_table",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:30:28",
+          "end": "07:30:32",
+          "event": "wipe_mouth",
+          "state": "breakfast",
+          "role": "candidate",
+          "case": "repeated_candidate"
+        },
+        {
+          "start": "07:30:32",
+          "end": "07:30:44",
+          "event": "sit_idle_at_table",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:30:44",
+          "end": "07:30:50",
+          "event": "look_at_phone",
+          "state": "breakfast",
+          "role": "candidate",
+          "case": "frequent_event"
+        },
+        {
+          "start": "07:30:50",
+          "end": "07:31:38",
+          "event": "sit_idle_at_table",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:31:38",
+          "end": "07:31:42",
+          "event": "pick_up_dishes",
+          "state": "breakfast",
+          "role": "approach",
+          "case": null
+        },
+        {
+          "start": "07:31:42",
+          "end": "07:31:48",
+          "event": "carry_dishes_to_kitchen",
+          "state": "breakfast",
+          "role": "approach",
+          "case": null
+        },
+        {
+          "start": "07:31:48",
+          "end": "07:31:52",
+          "event": "put_bowl_in_dishwasher",
+          "state": "breakfast",
+          "role": "action",
+          "case": "one_signal_two_habits"
+        },
+        {
+          "start": "07:31:52",
+          "end": "07:31:58",
+          "event": "put_cup_in_dishwasher",
+          "state": "breakfast",
+          "role": "action",
+          "case": "daily_habit"
+        },
+        {
+          "start": "07:31:58",
+          "end": "07:32:04",
+          "event": "take_coffee_from_fridge",
+          "state": "rest",
+          "role": "approach",
+          "case": "coffee"
+        },
+        {
+          "start": "07:32:04",
+          "end": "07:32:08",
+          "event": "carry_coffee_to_sofa",
+          "state": "rest",
+          "role": "approach",
+          "case": "coffee"
+        },
+        {
+          "start": "07:32:08",
+          "end": "07:32:12",
+          "event": "put_can_next_to_self",
+          "state": "rest",
+          "role": "action",
+          "case": "coffee"
+        },
+        {
+          "start": "07:32:12",
+          "end": "07:32:16",
+          "event": "go_to_sofa",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:32:16",
+          "end": "07:32:18",
+          "event": "pick_up_remote",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:32:18",
+          "end": "07:32:22",
+          "event": "turn_on_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:32:22",
+          "end": "07:32:26",
+          "event": "open_coffee_can",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:32:26",
+          "end": "07:32:34",
+          "event": "drink_coffee",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:32:34",
+          "end": "07:32:44",
+          "event": "look_at_phone",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:32:44",
+          "end": "07:32:46",
+          "event": "check_time",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:32:46",
+          "end": "07:34:36",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:34:36",
+          "end": "07:35:22",
+          "event": "look_at_phone",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:35:22",
+          "end": "07:35:26",
+          "event": "phone_rings",
+          "state": "rest",
+          "role": "candidate",
+          "case": "early_coincidence"
+        },
+        {
+          "start": "07:35:26",
+          "end": "07:36:06",
+          "event": "talk_on_phone",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:36:06",
+          "end": "07:36:08",
+          "event": "look_around",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:36:08",
+          "end": "07:38:32",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:38:32",
+          "end": "07:38:42",
+          "event": "stretch",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:38:42",
+          "end": "07:39:36",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:39:36",
+          "end": "07:39:38",
+          "event": "look_at_phone",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:39:38",
+          "end": "07:39:46",
+          "event": "drink_coffee",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:39:46",
+          "end": "07:40:16",
+          "event": "look_at_phone",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:40:16",
+          "end": "07:40:22",
+          "event": "look_around",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:40:22",
+          "end": "07:42:02",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:42:02",
+          "end": "07:42:06",
+          "event": "drink_coffee",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:42:06",
+          "end": "07:42:36",
+          "event": "look_at_phone",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:42:36",
+          "end": "07:43:32",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:43:32",
+          "end": "07:43:36",
+          "event": "drink_coffee",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:43:36",
+          "end": "07:43:44",
+          "event": "look_at_phone",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:43:44",
+          "end": "07:43:46",
+          "event": "change_channel",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:43:46",
+          "end": "07:45:30",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:45:30",
+          "end": "07:45:36",
+          "event": "drink_coffee",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:45:36",
+          "end": "07:45:38",
+          "event": "shift_position",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:45:38",
+          "end": "07:47:36",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:47:36",
+          "end": "07:47:44",
+          "event": "drink_coffee",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:47:44",
+          "end": "07:47:52",
+          "event": "look_at_phone",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:47:52",
+          "end": "07:49:20",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:49:20",
+          "end": "07:49:24",
+          "event": "look_at_phone",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:49:24",
+          "end": "07:49:28",
+          "event": "finish_coffee",
+          "state": "rest",
+          "role": "candidate",
+          "case": "empty_can"
+        },
+        {
+          "start": "07:49:28",
+          "end": "07:50:42",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:50:42",
+          "end": "07:50:46",
+          "event": "turn_off_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:50:46",
+          "end": "07:50:50",
+          "event": "pick_up_empty_can",
+          "state": "rest",
+          "role": "approach",
+          "case": "empty_can"
+        },
+        {
+          "start": "07:50:50",
+          "end": "07:50:54",
+          "event": "carry_can_to_bin",
+          "state": "rest",
+          "role": "approach",
+          "case": "empty_can"
+        },
+        {
+          "start": "07:50:54",
+          "end": "07:50:58",
+          "event": "put_can_in_storage",
+          "state": "rest",
+          "role": "action",
+          "case": "empty_can"
+        },
+        {
+          "start": "07:50:58",
+          "end": "07:51:04",
+          "event": "walk_to_desk",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:51:04",
+          "end": "07:52:28",
+          "event": "pack_bag",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:52:28",
+          "end": "07:52:32",
+          "event": "zip_bag",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:52:32",
+          "end": "07:52:34",
+          "event": "leave_room",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:52:34",
+          "end": "07:56:20",
+          "event": "unseen",
+          "state": "leaving",
+          "role": "unseen",
+          "case": null
+        },
+        {
+          "start": "07:56:20",
+          "end": "07:56:24",
+          "event": "enter_room",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:56:24",
+          "end": "07:56:36",
+          "event": "put_on_jacket",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:56:36",
+          "end": "07:56:40",
+          "event": "check_pockets",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:56:40",
+          "end": "07:56:46",
+          "event": "check_mirror",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:56:46",
+          "end": "07:56:50",
+          "event": "put_on_bag",
+          "state": "leaving",
+          "role": "candidate",
+          "case": "unseen"
+        },
+        {
+          "start": "07:56:50",
+          "end": "07:56:54",
+          "event": "walk_to_light_switch",
+          "state": "leaving",
+          "role": "approach",
+          "case": "unseen"
+        },
+        {
+          "start": "07:56:54",
+          "end": "07:56:58",
+          "event": "turn_off_room_light",
+          "state": "leaving",
+          "role": "action",
+          "case": "unseen"
+        },
+        {
+          "start": "07:56:58",
+          "end": "07:57:02",
+          "event": "leave_home",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:57:02",
+          "end": "08:00:00",
+          "event": "unseen",
+          "state": "away",
+          "role": "unseen",
+          "case": null
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "segments": [
+        {
+          "start": "07:00:00",
+          "end": "07:00:24",
+          "event": "sleep",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:00:24",
+          "end": "07:00:28",
+          "event": "turn_off_alarm",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:00:28",
+          "end": "07:00:36",
+          "event": "stretch",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:00:36",
+          "end": "07:01:54",
+          "event": "lie_awake",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:01:54",
+          "end": "07:02:20",
+          "event": "look_at_phone",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:02:20",
+          "end": "07:02:52",
+          "event": "lie_awake",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:02:52",
+          "end": "07:02:56",
+          "event": "sit_up_in_bed",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:02:56",
+          "end": "07:03:08",
+          "event": "wake_slowly",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:03:08",
+          "end": "07:03:10",
+          "event": "rub_eyes",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:03:10",
+          "end": "07:03:24",
+          "event": "wake_slowly",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:03:24",
+          "end": "07:03:28",
+          "event": "get_out_of_bed",
+          "state": "wake",
+          "role": "candidate",
+          "case": "occasional_miss"
+        },
+        {
+          "start": "07:03:28",
+          "end": "07:03:32",
+          "event": "turn_on_room_light",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:03:32",
+          "end": "07:03:36",
+          "event": "walk_to_curtains",
+          "state": "wake",
+          "role": "approach",
+          "case": "occasional_miss"
+        },
+        {
+          "start": "07:03:36",
+          "end": "07:03:40",
+          "event": "open_curtains",
+          "state": "wake",
+          "role": "action",
+          "case": "occasional_miss"
+        },
+        {
+          "start": "07:03:40",
+          "end": "07:03:48",
+          "event": "look_out_window",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:03:48",
+          "end": "07:03:52",
+          "event": "leave_room",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:03:52",
+          "end": "07:11:50",
+          "event": "unseen",
+          "state": "wake",
+          "role": "unseen",
+          "case": null
+        },
+        {
+          "start": "07:11:50",
+          "end": "07:11:54",
+          "event": "enter_room",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:11:54",
+          "end": "07:12:40",
+          "event": "dry_hair",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:12:40",
+          "end": "07:15:00",
+          "event": "get_dressed",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:15:00",
+          "end": "07:16:06",
+          "event": "make_bed",
+          "state": "wake",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:16:06",
+          "end": "07:16:10",
+          "event": "walk_to_kitchen",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:16:10",
+          "end": "07:16:14",
+          "event": "take_bowl",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:16:14",
+          "end": "07:16:24",
+          "event": "pour_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:16:24",
+          "end": "07:16:30",
+          "event": "take_milk",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:16:30",
+          "end": "07:16:34",
+          "event": "pour_milk",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:16:34",
+          "end": "07:16:40",
+          "event": "put_milk_back",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:16:40",
+          "end": "07:16:46",
+          "event": "fill_cup_at_purifier",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:16:46",
+          "end": "07:16:54",
+          "event": "bring_breakfast",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:16:54",
+          "end": "07:16:58",
+          "event": "sit_at_table",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:16:58",
+          "end": "07:17:06",
+          "event": "drink_water",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:17:06",
+          "end": "07:17:10",
+          "event": "pick_up_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:17:10",
+          "end": "07:17:54",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:17:54",
+          "end": "07:17:56",
+          "event": "put_down_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:17:56",
+          "end": "07:18:00",
+          "event": "drink_water",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:18:00",
+          "end": "07:18:04",
+          "event": "pick_up_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:18:04",
+          "end": "07:20:46",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:20:46",
+          "end": "07:20:52",
+          "event": "chew",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:20:52",
+          "end": "07:20:54",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:20:54",
+          "end": "07:21:20",
+          "event": "look_at_phone",
+          "state": "breakfast",
+          "role": "candidate",
+          "case": "frequent_event"
+        },
+        {
+          "start": "07:21:20",
+          "end": "07:21:54",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:21:54",
+          "end": "07:21:58",
+          "event": "put_down_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:21:58",
+          "end": "07:22:20",
+          "event": "look_at_phone",
+          "state": "breakfast",
+          "role": "candidate",
+          "case": "frequent_event"
+        },
+        {
+          "start": "07:22:20",
+          "end": "07:22:22",
+          "event": "pick_up_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:22:22",
+          "end": "07:22:34",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:22:34",
+          "end": "07:22:42",
+          "event": "chew",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:22:42",
+          "end": "07:23:22",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:23:22",
+          "end": "07:23:30",
+          "event": "chew",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:23:30",
+          "end": "07:24:08",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:24:08",
+          "end": "07:24:12",
+          "event": "chew",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:24:12",
+          "end": "07:25:08",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:25:08",
+          "end": "07:25:14",
+          "event": "look_around",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:25:14",
+          "end": "07:25:44",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:25:44",
+          "end": "07:25:54",
+          "event": "chew",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:25:54",
+          "end": "07:25:58",
+          "event": "wipe_mouth",
+          "state": "breakfast",
+          "role": "candidate",
+          "case": "repeated_candidate"
+        },
+        {
+          "start": "07:25:58",
+          "end": "07:26:28",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:26:28",
+          "end": "07:26:36",
+          "event": "chew",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:26:36",
+          "end": "07:27:58",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:27:58",
+          "end": "07:28:02",
+          "event": "finish_drinking",
+          "state": "breakfast",
+          "role": "candidate",
+          "case": "daily_habit"
+        },
+        {
+          "start": "07:28:02",
+          "end": "07:28:38",
+          "event": "eat_cereal",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:28:38",
+          "end": "07:28:42",
+          "event": "finish_meal",
+          "state": "breakfast",
+          "role": "candidate",
+          "case": "one_signal_two_habits"
+        },
+        {
+          "start": "07:28:42",
+          "end": "07:28:44",
+          "event": "put_down_spoon",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:28:44",
+          "end": "07:28:54",
+          "event": "sit_idle_at_table",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:28:54",
+          "end": "07:28:58",
+          "event": "wipe_mouth",
+          "state": "breakfast",
+          "role": "candidate",
+          "case": "repeated_candidate"
+        },
+        {
+          "start": "07:28:58",
+          "end": "07:29:24",
+          "event": "sit_idle_at_table",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:29:24",
+          "end": "07:29:28",
+          "event": "shift_position",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:29:28",
+          "end": "07:30:32",
+          "event": "sit_idle_at_table",
+          "state": "breakfast",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:30:32",
+          "end": "07:30:38",
+          "event": "pick_up_dishes",
+          "state": "breakfast",
+          "role": "approach",
+          "case": null
+        },
+        {
+          "start": "07:30:38",
+          "end": "07:30:44",
+          "event": "carry_dishes_to_kitchen",
+          "state": "breakfast",
+          "role": "approach",
+          "case": null
+        },
+        {
+          "start": "07:30:44",
+          "end": "07:30:50",
+          "event": "put_bowl_in_dishwasher",
+          "state": "breakfast",
+          "role": "action",
+          "case": "one_signal_two_habits"
+        },
+        {
+          "start": "07:30:50",
+          "end": "07:30:56",
+          "event": "put_cup_in_dishwasher",
+          "state": "breakfast",
+          "role": "action",
+          "case": "daily_habit"
+        },
+        {
+          "start": "07:30:56",
+          "end": "07:31:02",
+          "event": "take_coffee_from_fridge",
+          "state": "rest",
+          "role": "approach",
+          "case": "coffee"
+        },
+        {
+          "start": "07:31:02",
+          "end": "07:31:06",
+          "event": "carry_coffee_to_sofa",
+          "state": "rest",
+          "role": "approach",
+          "case": "coffee"
+        },
+        {
+          "start": "07:31:06",
+          "end": "07:31:10",
+          "event": "put_can_next_to_self",
+          "state": "rest",
+          "role": "action",
+          "case": "coffee"
+        },
+        {
+          "start": "07:31:10",
+          "end": "07:31:14",
+          "event": "go_to_sofa",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:31:14",
+          "end": "07:31:16",
+          "event": "pick_up_remote",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:31:16",
+          "end": "07:31:20",
+          "event": "turn_on_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:31:20",
+          "end": "07:31:24",
+          "event": "open_coffee_can",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:31:24",
+          "end": "07:31:32",
+          "event": "drink_coffee",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:31:32",
+          "end": "07:31:34",
+          "event": "yawn",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:31:34",
+          "end": "07:32:14",
+          "event": "look_at_phone",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:32:14",
+          "end": "07:32:18",
+          "event": "look_around",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:32:18",
+          "end": "07:32:22",
+          "event": "change_channel",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:32:22",
+          "end": "07:32:44",
+          "event": "look_at_phone",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:32:44",
+          "end": "07:33:46",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:33:46",
+          "end": "07:33:54",
+          "event": "drink_coffee",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:33:54",
+          "end": "07:34:44",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:34:44",
+          "end": "07:35:02",
+          "event": "look_at_phone",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:35:02",
+          "end": "07:35:04",
+          "event": "phone_rings",
+          "state": "rest",
+          "role": "candidate",
+          "case": "early_coincidence"
+        },
+        {
+          "start": "07:35:04",
+          "end": "07:35:56",
+          "event": "talk_on_phone",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:35:56",
+          "end": "07:37:16",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:37:16",
+          "end": "07:37:24",
+          "event": "drink_coffee",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:37:24",
+          "end": "07:39:28",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:39:28",
+          "end": "07:39:58",
+          "event": "look_at_phone",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:39:58",
+          "end": "07:40:56",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:40:56",
+          "end": "07:40:58",
+          "event": "look_at_phone",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:40:58",
+          "end": "07:41:02",
+          "event": "drink_coffee",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:41:02",
+          "end": "07:41:56",
+          "event": "look_at_phone",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:41:56",
+          "end": "07:43:06",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:43:06",
+          "end": "07:43:14",
+          "event": "look_at_phone",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:43:14",
+          "end": "07:43:22",
+          "event": "drink_coffee",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:43:22",
+          "end": "07:46:32",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:46:32",
+          "end": "07:46:34",
+          "event": "change_channel",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:46:34",
+          "end": "07:46:38",
+          "event": "adjust_cushion",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:46:38",
+          "end": "07:47:10",
+          "event": "look_at_phone",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:47:10",
+          "end": "07:47:18",
+          "event": "drink_coffee",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:47:18",
+          "end": "07:47:22",
+          "event": "yawn",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:47:22",
+          "end": "07:48:56",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:48:56",
+          "end": "07:49:00",
+          "event": "shift_position",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:49:00",
+          "end": "07:50:14",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:50:14",
+          "end": "07:50:18",
+          "event": "finish_coffee",
+          "state": "rest",
+          "role": "candidate",
+          "case": "empty_can"
+        },
+        {
+          "start": "07:50:18",
+          "end": "07:50:58",
+          "event": "watch_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:50:58",
+          "end": "07:51:02",
+          "event": "turn_off_tv",
+          "state": "rest",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:51:02",
+          "end": "07:51:06",
+          "event": "pick_up_empty_can",
+          "state": "rest",
+          "role": "approach",
+          "case": "empty_can"
+        },
+        {
+          "start": "07:51:06",
+          "end": "07:51:10",
+          "event": "carry_can_to_bin",
+          "state": "rest",
+          "role": "approach",
+          "case": "empty_can"
+        },
+        {
+          "start": "07:51:10",
+          "end": "07:51:16",
+          "event": "put_can_in_storage",
+          "state": "rest",
+          "role": "action",
+          "case": "empty_can"
+        },
+        {
+          "start": "07:51:16",
+          "end": "07:51:22",
+          "event": "walk_to_desk",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:51:22",
+          "end": "07:52:24",
+          "event": "pack_bag",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:52:24",
+          "end": "07:52:28",
+          "event": "zip_bag",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:52:28",
+          "end": "07:52:30",
+          "event": "leave_room",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:52:30",
+          "end": "07:55:40",
+          "event": "unseen",
+          "state": "leaving",
+          "role": "unseen",
+          "case": null
+        },
+        {
+          "start": "07:55:40",
+          "end": "07:55:44",
+          "event": "enter_room",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:55:44",
+          "end": "07:55:58",
+          "event": "put_on_jacket",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:55:58",
+          "end": "07:56:08",
+          "event": "check_pockets",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:56:08",
+          "end": "07:56:16",
+          "event": "check_mirror",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:56:16",
+          "end": "07:56:20",
+          "event": "put_on_bag",
+          "state": "leaving",
+          "role": "candidate",
+          "case": "unseen"
+        },
+        {
+          "start": "07:56:20",
+          "end": "07:56:22",
+          "event": "leave_home",
+          "state": "leaving",
+          "role": "background",
+          "case": null
+        },
+        {
+          "start": "07:56:22",
+          "end": "08:00:00",
+          "event": "unseen",
+          "state": "away",
+          "role": "unseen",
+          "case": "unseen"
+        }
+      ]
+    }
+  ]
+}

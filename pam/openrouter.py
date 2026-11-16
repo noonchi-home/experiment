@@ -104,20 +104,7 @@ def _validate_config(config: dict) -> dict:
     if (not isinstance(config, dict) or not required <= set(config)
             or set(config) - required - {"provenance", "image_detail", "reflector_frame_count"}):
         raise OpenRouterError("Invalid OpenRouter configuration fields.")
-    if config["endpoint"] != ENDPOINT or config["model"] != MODEL:
-        raise OpenRouterError("The transport requires the fixed OpenRouter endpoint and qwen/qwen3.5-27b model.")
-    if config["api_key_env"] != "OPENROUTER_API_KEY":
-        raise OpenRouterError("Authentication must use OPENROUTER_API_KEY.")
-    provider = config["provider"]
-    if (not isinstance(provider, dict)
-            or set(provider) != {"order", "allow_fallbacks", "require_parameters"}
-            or not isinstance(provider["order"], list) or len(provider["order"]) != 1
-            or not isinstance(provider["order"][0], str) or not provider["order"][0].strip()
-            or provider["allow_fallbacks"] is not False or provider["require_parameters"] is not True):
-        raise OpenRouterError("Pin exactly one provider, disable fallbacks, and require parameter support.")
-    timeout = config["timeout_seconds"]
-    if type(timeout) not in (int, float) or not math.isfinite(timeout) or not 0 < timeout <= 600:
-        raise OpenRouterError("timeout_seconds must be a finite positive number at most 600.")
+    _validate_connection(config)
     limits = config["max_tokens"]
     if not isinstance(limits, dict) or set(limits) != {"predictor", "reflector"}:
         raise OpenRouterError("Provide separate predictor and reflector output-token limits.")
@@ -133,6 +120,24 @@ def _validate_config(config: dict) -> dict:
                        for value in details.values())):
             raise OpenRouterError("image_detail accepts only predictor/reflector roles and auto/high/low values.")
     return config
+
+
+def _validate_connection(config: dict) -> None:
+    """Fixed endpoint, model and key variable, one pinned provider, a bounded timeout."""
+    if config["endpoint"] != ENDPOINT or config["model"] != MODEL:
+        raise OpenRouterError("The transport requires the fixed OpenRouter endpoint and qwen/qwen3.5-27b model.")
+    if config["api_key_env"] != "OPENROUTER_API_KEY":
+        raise OpenRouterError("Authentication must use OPENROUTER_API_KEY.")
+    provider = config["provider"]
+    if (not isinstance(provider, dict)
+            or set(provider) != {"order", "allow_fallbacks", "require_parameters"}
+            or not isinstance(provider["order"], list) or len(provider["order"]) != 1
+            or not isinstance(provider["order"][0], str) or not provider["order"][0].strip()
+            or provider["allow_fallbacks"] is not False or provider["require_parameters"] is not True):
+        raise OpenRouterError("Pin exactly one provider, disable fallbacks, and require parameter support.")
+    timeout = config["timeout_seconds"]
+    if type(timeout) not in (int, float) or not math.isfinite(timeout) or not 0 < timeout <= 1800:
+        raise OpenRouterError("timeout_seconds must be a finite positive number at most 1800.")
 
 
 def load_openrouter_config(path: Path) -> dict:
@@ -277,6 +282,11 @@ def send_request(payload: dict, config: dict, *, api_key: str | None = None,
     """
     _validate_config(config)
     _validate_payload(payload, config, predictor_images)
+    return _post(payload, config, api_key)
+
+
+def _post(payload: dict, config: dict, api_key: str | None) -> dict:
+    """One POST of an already validated payload; no retry. Shared by both request kinds."""
     key = os.environ.get(config["api_key_env"]) if api_key is None else api_key
     if not isinstance(key, str) or not key or any(not 33 <= ord(char) <= 126 for char in key):
         raise OpenRouterError("OPENROUTER_API_KEY is missing or is not a valid header value.")
@@ -333,3 +343,85 @@ def send_request(payload: dict, config: dict, *, api_key: str | None = None,
     # Do not parse task JSON here. In particular, finish_reason='length' remains
     # available for the caller to classify and preserve as a truncated result.
     return {"response": parsed, "raw_response": raw, "elapsed_seconds": elapsed, "http_status": status}
+
+
+# Text version of the nightly steps: same model, endpoint and pinned provider, no images.
+# Thinking stays on only for the reflector, as in the paper.
+TEXT_THINKING = {"reflector_text": True, "marking": False}
+
+
+def _validate_text_config(config: dict) -> dict:
+    required = {"endpoint", "model", "api_key_env", "provider", "timeout_seconds", "max_tokens"}
+    if not isinstance(config, dict) or not required <= set(config) or set(config) - required - {"provenance"}:
+        raise OpenRouterError("Invalid text OpenRouter configuration fields.")
+    _validate_connection(config)
+    limits = config["max_tokens"]
+    if not isinstance(limits, dict) or set(limits) != set(TEXT_THINKING):
+        raise OpenRouterError("Provide output-token limits for reflector_text and marking.")
+    if any(type(limit) is not int or not 1 <= limit <= 65536 for limit in limits.values()):
+        raise OpenRouterError("Output-token limits must be integers from 1 to 65536.")
+    return config
+
+
+def load_text_config(path: Path) -> dict:
+    """Read the text-step connection settings; never read or accept a stored secret."""
+    try:
+        config = read_json(Path(path))
+    except (ContractError, OSError, ValueError, TypeError):
+        raise OpenRouterError("Cannot read valid text OpenRouter configuration JSON.") from None
+    return _validate_text_config(config)
+
+
+def _text_messages(messages: object) -> list[dict]:
+    if (not isinstance(messages, list) or len(messages) != 2
+            or any(not isinstance(message, dict) or set(message) != {"role", "content"} for message in messages)
+            or [message["role"] for message in messages] != ["system", "user"]
+            or not isinstance(messages[0]["content"], str) or not messages[0]["content"].strip()
+            or not isinstance(messages[1]["content"], list) or not messages[1]["content"]):
+        raise OpenRouterError("Expected a system prompt and a text user message.")
+    for part in messages[1]["content"]:
+        if (not isinstance(part, dict) or part.get("type") != "text" or set(part) != {"type", "text"}
+                or not isinstance(part["text"], str)):
+            raise OpenRouterError("A text request carries text parts only; images are not sent.")
+    return messages
+
+
+def build_text_request(bundle: dict, config: dict) -> dict:
+    _validate_text_config(config)
+    role = bundle.get("role") if isinstance(bundle, dict) else None
+    if role not in TEXT_THINKING:
+        raise OpenRouterError("Text bundle role must be reflector_text or marking.")
+    if bundle.get("model") != "Qwen3.5-27B":
+        raise OpenRouterError("Input bundle must use the paper's Qwen3.5-27B model.")
+    generation = bundle.get("generation")
+    if (not isinstance(generation, dict) or set(generation) != {"temperature", "enable_thinking"}
+            or type(generation["temperature"]) is not float or not 0.0 <= generation["temperature"] <= 1.0
+            or generation["enable_thinking"] is not TEXT_THINKING[role]):
+        raise OpenRouterError("Text role temperature or thinking setting is invalid.")
+    messages = _text_messages(bundle.get("messages"))
+    return {
+        "model": MODEL,
+        "messages": [dict(messages[0]), {"role": "user", "content": [dict(p) for p in messages[1]["content"]]}],
+        "temperature": generation["temperature"],
+        "reasoning": {"enabled": TEXT_THINKING[role]},
+        "max_tokens": config["max_tokens"][role],
+        "provider": deepcopy(config["provider"]),
+        "stream": False,
+        "plugins": deepcopy(_NO_COMPRESSION),
+    }
+
+
+def send_text_request(payload: dict, config: dict, *, role: str, api_key: str | None = None) -> dict:
+    """One POST of a text payload built for `role`; no retry and no images."""
+    _validate_text_config(config)
+    fields = {"model", "messages", "temperature", "reasoning", "max_tokens", "provider", "stream", "plugins"}
+    if role not in TEXT_THINKING or not isinstance(payload, dict) or set(payload) != fields:
+        raise OpenRouterError("Send only the payload produced by build_text_request.")
+    if (payload["model"] != MODEL or payload["provider"] != config["provider"]
+            or type(payload["temperature"]) is not float or not 0.0 <= payload["temperature"] <= 1.0
+            or payload["reasoning"] != {"enabled": TEXT_THINKING[role]}
+            or payload["max_tokens"] != config["max_tokens"][role]
+            or payload["stream"] is not False or payload["plugins"] != _NO_COMPRESSION):
+        raise OpenRouterError("The text payload does not match its role settings.")
+    _text_messages(payload["messages"])
+    return _post(payload, config, api_key)

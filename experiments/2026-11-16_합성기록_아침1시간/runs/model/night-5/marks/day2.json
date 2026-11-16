@@ -1,0 +1,34 @@
+{
+  "day": 2,
+  "candidates": [
+    {
+      "state": "breakfast_time",
+      "candidate": "Person has finished the bowl of cereal.",
+      "times": [
+        "07:33:54"
+      ]
+    },
+    {
+      "state": "living_room_relax",
+      "candidate": "Person is sitting on the sofa, watching TV, with a TV remote and an empty can on the side table.",
+      "times": [
+        "07:49:50"
+      ]
+    }
+  ],
+  "actions": [],
+  "unseen": [
+    {
+      "start": "07:09:42",
+      "end": "07:17:28"
+    },
+    {
+      "start": "07:52:52",
+      "end": "07:56:18"
+    },
+    {
+      "start": "07:57:20",
+      "end": "07:59:58"
+    }
+  ]
+}

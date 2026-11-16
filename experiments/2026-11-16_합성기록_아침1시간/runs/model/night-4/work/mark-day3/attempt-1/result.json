@@ -1,0 +1,91 @@
+{
+  "status": "valid",
+  "raw_response": "{\n  \"candidates\": [\n    {\n      \"state\": \"morning_wake_up\",\n      \"candidate\": \"Person has walked up to the window.\",\n      \"times\": [\"07:03:04\"]\n    },\n    {\n      \"state\": \"breakfast_time\",\n      \"candidate\": \"Person is seated at the dining table, looking ahead idly, with an empty bowl and an empty cup sitting on the table.\",\n      \"times\": [\"07:28:48\"]\n    },\n    {\n      \"state\": \"breakfast_time\",\n      \"candidate\": \"Person is using a smartphone, with an empty bowl and an empty cup sitting on the table.\",\n      \"times\": [\"07:28:28\"]\n    },\n    {\n      \"state\": \"living_room_relax\",\n      \"candidate\": \"Person is switching the TV off.\",\n      \"times\": [\"07:50:48\"]\n    },\n    {\n      \"state\": \"departure_routine\",\n      \"candidate\": \"Person is putting on a backpack.\",\n      \"times\": []\n    }\n  ],\n  \"actions\": [],\n  \"unseen\": [\n    {\n      \"start\": \"07:03:40\",\n      \"end\": \"07:10:54\"\n    },\n    {\n      \"start\": \"07:52:30\",\n      \"end\": \"07:56:08\"\n    },\n    {\n      \"start\": \"07:56:58\",\n      \"end\": \"07:59:58\"\n    }\n  ]\n}",
+  "output": {
+    "candidates": [
+      {
+        "state": "morning_wake_up",
+        "candidate": "Person has walked up to the window.",
+        "times": [
+          "07:03:04"
+        ]
+      },
+      {
+        "state": "breakfast_time",
+        "candidate": "Person is seated at the dining table, looking ahead idly, with an empty bowl and an empty cup sitting on the table.",
+        "times": [
+          "07:28:48"
+        ]
+      },
+      {
+        "state": "breakfast_time",
+        "candidate": "Person is using a smartphone, with an empty bowl and an empty cup sitting on the table.",
+        "times": [
+          "07:28:28"
+        ]
+      },
+      {
+        "state": "living_room_relax",
+        "candidate": "Person is switching the TV off.",
+        "times": [
+          "07:50:48"
+        ]
+      },
+      {
+        "state": "departure_routine",
+        "candidate": "Person is putting on a backpack.",
+        "times": []
+      }
+    ],
+    "actions": [],
+    "unseen": [
+      {
+        "start": "07:03:40",
+        "end": "07:10:54"
+      },
+      {
+        "start": "07:52:30",
+        "end": "07:56:08"
+      },
+      {
+        "start": "07:56:58",
+        "end": "07:59:58"
+      }
+    ]
+  },
+  "errors": [],
+  "checked_at": "2026-11-16T11:59:14.783274+00:00",
+  "role": "marking",
+  "api_request_attempted": true,
+  "model_response_received": true,
+  "action_executed": false,
+  "requested_model": "qwen/qwen3.5-27b",
+  "response_model": "qwen/qwen3.5-27b",
+  "provider": "Alibaba",
+  "response_id": "gen-1794830324-rTX8Mw5Gd16ik4otz66i",
+  "finish_reason": "stop",
+  "elapsed_seconds": 30.408708299975842,
+  "usage": {
+    "prompt_tokens": 52830,
+    "completion_tokens": 382,
+    "total_tokens": 53212,
+    "cost": 0.01089777,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01089777,
+      "upstream_inference_prompt_cost": 0.01030185,
+      "upstream_inference_completions_cost": 0.00059592
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

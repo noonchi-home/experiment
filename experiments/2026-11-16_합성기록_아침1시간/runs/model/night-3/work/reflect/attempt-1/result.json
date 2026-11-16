@@ -1,0 +1,132 @@
+{
+  "status": "valid",
+  "raw_response": "{\n  \"initial_state\": \"morning_wake_up\",\n  \"states\": [\n    {\n      \"id\": \"morning_wake_up\",\n      \"description\": \"Person wakes up, uses phone, gets out of bed, turns on light, opens curtains, and leaves the bedroom.\",\n      \"rules\": [\n        {\n          \"triggers\": [\n            \"Person is switching on the main room light.\",\n            \"Person is heading to the curtains.\"\n          ],\n          \"action\": \"Open the curtains.\"\n        }\n      ],\n      \"next\": [\n        {\n          \"to\": \"morning_prep\",\n          \"on\": \"Person has returned to the room.\"\n        }\n      ]\n    },\n    {\n      \"id\": \"morning_prep\",\n      \"description\": \"Person returns to the room, dries hair, dresses, and makes the bed.\",\n      \"rules\": [],\n      \"next\": [\n        {\n          \"to\": \"breakfast_time\",\n          \"on\": \"Person is heading into the kitchen.\"\n        }\n      ]\n    },\n    {\n      \"id\": \"breakfast_time\",\n      \"description\": \"Person prepares and eats breakfast at the dining table.\",\n      \"rules\": [\n        {\n          \"triggers\": [\n            \"Person is seated at the dining table resting for a moment after eating.\",\n            \"Person is sitting at the table leaning back in the chair.\"\n          ],\n          \"action\": \"Pick up the bowl and place it in the dishwasher.\"\n        },\n        {\n          \"triggers\": [\n            \"Person is seated at the dining table resting for a moment after eating.\",\n            \"Person is sitting at the table leaning back in the chair.\"\n          ],\n          \"action\": \"Pick up the cup and place it in the dishwasher.\"\n        }\n      ],\n      \"next\": [\n        {\n          \"to\": \"living_room_relax\",\n          \"on\": \"Person is bringing a can of coffee to the sofa.\"\n        }\n      ]\n    },\n    {\n      \"id\": \"living_room_relax\",\n      \"description\": \"Person sits on the sofa, drinks coffee, watches TV, and takes a phone call.\",\n      \"rules\": [\n        {\n          \"triggers\": [\n            \"Person has finished the coffee and set the empty can down.\"\n          ],\n          \"action\": \"Pick up the can and place it in the designated storage area.\"\n        }\n      ],\n      \"next\": [\n        {\n          \"to\": \"departure_routine\",\n          \"on\": \"Person is heading to the desk.\"\n        }\n      ]\n    },\n    {\n      \"id\": \"departure_routine\",\n      \"description\": \"Person packs bag, puts on jacket, turns off lights, and leaves the home.\",\n      \"rules\": [\n        {\n          \"triggers\": [\n            \"Person is slinging the bag over their shoulder.\",\n            \"Person is heading toward the wall switch by the door.\"\n          ],\n          \"action\": \"Turn off the room light.\"\n        }\n      ],\n      \"next\": []\n    }\n  ]\n}",
+  "output": {
+    "initial_state": "morning_wake_up",
+    "states": [
+      {
+        "id": "morning_wake_up",
+        "description": "Person wakes up, uses phone, gets out of bed, turns on light, opens curtains, and leaves the bedroom.",
+        "rules": [
+          {
+            "triggers": [
+              "Person is switching on the main room light.",
+              "Person is heading to the curtains."
+            ],
+            "action": "Open the curtains."
+          }
+        ],
+        "next": [
+          {
+            "to": "morning_prep",
+            "on": "Person has returned to the room."
+          }
+        ]
+      },
+      {
+        "id": "morning_prep",
+        "description": "Person returns to the room, dries hair, dresses, and makes the bed.",
+        "rules": [],
+        "next": [
+          {
+            "to": "breakfast_time",
+            "on": "Person is heading into the kitchen."
+          }
+        ]
+      },
+      {
+        "id": "breakfast_time",
+        "description": "Person prepares and eats breakfast at the dining table.",
+        "rules": [
+          {
+            "triggers": [
+              "Person is seated at the dining table resting for a moment after eating.",
+              "Person is sitting at the table leaning back in the chair."
+            ],
+            "action": "Pick up the bowl and place it in the dishwasher."
+          },
+          {
+            "triggers": [
+              "Person is seated at the dining table resting for a moment after eating.",
+              "Person is sitting at the table leaning back in the chair."
+            ],
+            "action": "Pick up the cup and place it in the dishwasher."
+          }
+        ],
+        "next": [
+          {
+            "to": "living_room_relax",
+            "on": "Person is bringing a can of coffee to the sofa."
+          }
+        ]
+      },
+      {
+        "id": "living_room_relax",
+        "description": "Person sits on the sofa, drinks coffee, watches TV, and takes a phone call.",
+        "rules": [
+          {
+            "triggers": [
+              "Person has finished the coffee and set the empty can down."
+            ],
+            "action": "Pick up the can and place it in the designated storage area."
+          }
+        ],
+        "next": [
+          {
+            "to": "departure_routine",
+            "on": "Person is heading to the desk."
+          }
+        ]
+      },
+      {
+        "id": "departure_routine",
+        "description": "Person packs bag, puts on jacket, turns off lights, and leaves the home.",
+        "rules": [
+          {
+            "triggers": [
+              "Person is slinging the bag over their shoulder.",
+              "Person is heading toward the wall switch by the door."
+            ],
+            "action": "Turn off the room light."
+          }
+        ],
+        "next": []
+      }
+    ]
+  },
+  "errors": [],
+  "checked_at": "2026-11-16T11:39:42.838182+00:00",
+  "role": "reflector_text",
+  "api_request_attempted": true,
+  "model_response_received": true,
+  "action_executed": false,
+  "requested_model": "qwen/qwen3.5-27b",
+  "response_model": "qwen/qwen3.5-27b",
+  "provider": "Alibaba",
+  "response_id": "gen-1794829068-OtdypiWYq7wI7VvPNBAY",
+  "finish_reason": "stop",
+  "elapsed_seconds": 114.78807280003093,
+  "usage": {
+    "prompt_tokens": 55833,
+    "completion_tokens": 7268,
+    "total_tokens": 63101,
+    "cost": 0.022225515,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.022225515,
+      "upstream_inference_prompt_cost": 0.010887435,
+      "upstream_inference_completions_cost": 0.01133808
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6551,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,131 @@
+You are reading a record of a person's daily activities to build a procedural memory
+of when and how a household robot should help them.
+
+# Environment
+- The setting is a home with a bed with a bedside lamp, window curtains, a dining
+table, a kitchen with a dishwasher and a fridge, a sofa with a TV and a side table,
+and a desk, where a single person performs everyday activities.
+- The designated storage area: a place in the home where items such as books, empty
+cans, and the bedside lamp are normally kept. Used cups and bowls go to the dishwasher.
+
+# Proactive Assistance Goals
+- bringing the person an object they may need next.
+- putting away objects the person appears to have finished using.
+- turning off a light the person no longer needs.
+- opening the curtains.
+- etc. –- any helpful pick-and-place, switch-off or opening action that is grounded in observed behavior.
+# Inputs
+- Available robot tasks: the only actions the robot can perform.
+- Check window: how soon after a candidate the rule's action must come to count as
+following it.
+- Today's record: the robot's observation of the person, one line every 2 seconds
+(`HH:MM:SS | sentence`) in time order. Each line describes the scene: the person's
+posture, what they are doing, and things lying around; a line may still mention what
+was done a moment ago. One activity usually fills many lines in a row, and the wording
+changes from line to line. The robot
+did not act today; every action in the record was done by the person.
+- Current memory: the FSM (states, per-state rules with their trigger candidates, and
+transitions) built so far.
+- Check results: for every trigger candidate checked so far, over all days recorded
+before today: n = how many times the candidate happened, k = how many of those were
+followed by the rule's action within the check window, rate = k / n, and whether the
+candidate passed the check and was given to the robot.
+- Human feedback: today's feedback from the person, may be absent
+
+# Task
+- Given today's record, the current memory, the check results, and human
+feedback, update the FSM memory.
+- The memory will be used by the robot to proactively assist the person in future
+days, so the goal is to produce a memory that helps the person as much as possible.
+- Each rule lists one to three TRIGGER CANDIDATES. Every night, each candidate is
+checked against all days recorded so far, and only the candidates that are reliably
+followed by the rule's action are given to the robot.
+
+# Memory Structure
+The memory is structured as a HYBRID FINITE-STATE MACHINE.
+- The person's activities are segmented into temporally ordered PHASES (FSM states).
+ Each state should correspond to a meaningfully different activity, not a fleeting
+micro-moment.
+- Each state holds a set of PRODUCTION RULES that fire while the FSM occupies that
+state. A rule = (NL trigger candidates, NL action). A state may have zero rules if no
+helpful action applies during that phase, or multiple rules if several distinct
+visible cues each warrant a different proactive action.
+- A rule MAY appear in multiple states if the same proactive step is appropriate in
+more than one phase.
+- Between states, EVENT-DRIVEN TRANSITIONS define progression. Each `next` entry: (
+to: <state_id>, on: <NL event>). Transitions are not robot actions. Terminal states
+use next: [].
+- Exactly one state is the `initial_state`.
+
+# Update Instructions
+- Use the record, current memory, check results, and human feedback to update the
+FSM memory.
+- First, explicitly RE-STATE the pick-and-place and switch-off actions that the human
+performed in this record. Then, for EACH of those human actions, think concretely
+about HOW the robot could have taken that action over on the person's behalf. Your
+rules should be built around these take-over opportunities –- do NOT invent rules
+for objects or actions the human did not interact with.
+- Each rule's action MUST be one of the available robot tasks, copied exactly, and it
+MUST mirror an action the human performed in this record. Do NOT invent
+hypothetical actions.
+- If a trigger describes the person already in motion with an object, the object the
+ person is in motion with MUST be DIFFERENT from the object the rule's action
+manipulates. Same-object triggers are forbidden.
+- Deployment caveat: when this memory is deployed, the human will act expecting the
+robot to help. Each rule's trigger must describe an observable cue the human will
+produce REGARDLESS of robot assistance.
+- Add a new state when the record reveals a distinct phase of the routine that is
+not yet modeled.
+- Keep every existing state id exactly as it is. When today's record shows a phase
+that is already a state, use that state; you may refine its description but not its id.
+Check results are tied to the state id, so a renamed state turns all of its candidates
+into new ones.
+- Default to ADDING a new rule whenever the record shows a human pick-and-place or
+switch-off action that the robot could plausibly take over and that is not yet covered
+by the current memory. Err on the side of MORE rules, not fewer.
+- Refine a state's description, rules, or transitions when they are too rigid, too
+loose, ambiguous, or otherwise misaligned with helpful robot behavior.
+- Never reword an existing trigger candidate. Its check results are tied to its exact
+text; a reworded candidate is treated as a new candidate and has to be searched for
+again in every past day.
+- IF AND ONLY IF a memory rule's action is in the memory AND the record shows the
+human performed that action: if the rule has fewer than three candidates, you may add
+another observable cue, a moment within the check window before the action, as a new
+candidate, and/or move or duplicate the rule to the
+correct state. Keep the existing candidates intact.
+- Use the check results. A candidate that has happened at least three times (n >= 3)
+and was followed less than 80% of the time (rate < 0.8) is a weak cue: you may replace
+it with a better cue from today's record. Do not replace a candidate that has
+happened fewer than three times; it has not had enough chances yet. A rule never has
+more than three candidates.
+- Remove a state or rule only when it is clearly wrong, such as when the trigger
+fired but the action would have been inappropriate.
+- Do not remove a state or rule simply because its trigger did not occur in today's
+record.
+- Ensure `initial_state` names one of the states, and every `next.to` references an
+existing state id.
+- If human feedback is provided, treat it as authoritative and prioritize it over
+your own judgment.
+# Output explanations
+- triggers: one to three trigger candidates. Each is a single short natural-language
+statement describing one visible moment that should cause this rule's action to fire.
+Each candidate MUST be self-contained, and the candidates of one rule must differ.
+- action: one of the available robot tasks, copied exactly. The tasks use the
+canonical forms `Pick up <object> and place it <location>.`, `Turn off the <object>.`
+and `Open the <object>.`
+
+# Output (JSON only, no markdown, no commentary)
+{
+  "initial_state": "<state_id>",
+  "states": [
+    {
+      "id": "<snake_case>",
+      "description": "<one-sentence>",
+      "rules": [
+        {"triggers": ["<NL statement>", ...], "action": "<available robot task>"},
+        ...
+      ],
+      "next": [{"to": "<state_id>", "on": "<NL event>"}]
+    }
+  ]
+}

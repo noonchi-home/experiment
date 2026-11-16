@@ -10,9 +10,10 @@ import os
 from datetime import datetime, timezone
 from pathlib import Path
 
-from .contracts import ContractError, parse_prediction, validate_memory
+from .contracts import ContractError, parse_prediction, validate_candidate_memory, validate_marks, validate_memory
 from .messages import predictor_image_count, read_json
-from .openrouter import MODEL, OpenRouterError, build_request, load_openrouter_config, send_request
+from .openrouter import (MODEL, OpenRouterError, build_request, build_text_request, load_openrouter_config,
+                         load_text_config, send_request, send_text_request)
 
 
 def _save(path: Path, value: object) -> None:
@@ -190,4 +191,96 @@ def infer_bundle(bundle_path: Path, config_path: Path, output: Path, *, run_stat
     if checked["status"] == "valid" and bundle["role"] == "reflector":
         (output / "memory.json").write_bytes(checked["raw_response"].encode("utf-8"))
     _write_review(output, result, bundle)
+    return result
+
+
+# Text version of the nightly steps (reflector_text, marking).
+
+def _strict_json(raw: str):
+    """Only a complete JSON value; duplicate keys and nonstandard constants are refused."""
+    def unique(pairs):
+        obj = {}
+        for key, value in pairs:
+            if key in obj:
+                raise ContractError("Response has duplicate JSON keys.")
+            obj[key] = value
+        return obj
+
+    def reject_constant(value):
+        raise ContractError(f"Response has invalid JSON constant: {value}")
+
+    return json.loads(raw, object_pairs_hook=unique, parse_constant=reject_constant)
+
+
+def inspect_text_completion(response: dict, bundle: dict) -> dict:
+    """Right model, complete answer, strict JSON in the shape of the bundle's role."""
+    choice = response["choices"][0]
+    message = choice.get("message")
+    raw = message.get("content") if isinstance(message, dict) else None
+    finish = choice.get("finish_reason")
+    if response.get("model") != MODEL:
+        return {"status": "invalid", "raw_response": raw, "output": None,
+                "errors": ["Response model does not match qwen/qwen3.5-27b."]}
+    if finish != "stop" or not isinstance(raw, str):
+        return {"status": "invalid", "raw_response": raw, "output": None,
+                "errors": [f"Incomplete text completion: finish_reason={finish!r}"]}
+    try:
+        value = _strict_json(raw)
+        role = bundle["role"]
+        if role == "reflector_text":
+            validate_candidate_memory(value)
+        elif role == "marking":
+            validate_marks(value, [tuple(pair) for pair in bundle["asked_candidates"]], bundle["asked_actions"],
+                           within=(bundle["first_time"], bundle["last_time"], bundle["line_seconds"]))
+        else:
+            raise ContractError(f"Unknown text role: {role!r}")
+    except (ValueError, TypeError, KeyError) as exc:
+        return {"status": "invalid", "raw_response": raw, "output": None, "errors": [str(exc)]}
+    return {"status": "valid", "raw_response": raw, "output": value, "errors": []}
+
+
+def infer_text_bundle(bundle_path: Path, config_path: Path, output: Path) -> dict:
+    """Text-step version of infer_bundle: one call, no retries, into an existing folder."""
+    bundle = read_json(bundle_path)
+    if bundle.get("status") != "prepared" or bundle.get("execution_mode") != "offline_preparation":
+        raise ContractError("Inference requires a successfully prepared input bundle.")
+    config = load_text_config(config_path)
+    payload = build_text_request(bundle, config)
+    _save(output / "request_record.json", payload)
+    _save(output / "input_reference.json", {
+        "path": str(bundle_path.resolve()), "sha256": hashlib.sha256(bundle_path.read_bytes()).hexdigest(),
+        "provider_config": config, "action_executed": False,
+    })
+    if not os.environ.get(config["api_key_env"]):
+        raise OpenRouterError("OPENROUTER_API_KEY is not set; no API call was made.")
+    try:
+        transport = send_text_request(payload, config, role=bundle["role"])
+    except OpenRouterError as exc:
+        error = {"status": "api_error", "api_request_attempted": exc.elapsed_seconds is not None,
+                 "model_response_received": False, "output": None, "action_executed": False,
+                 "error": str(exc), "http_status": exc.http_status, "elapsed_seconds": exc.elapsed_seconds,
+                 "error_code": exc.error_code, "diagnostic": exc.diagnostic}
+        _save(output / "api_error.json", error)
+        return error
+    response = transport["response"]
+    (output / "api_response.raw.json").write_text(transport["raw_response"], encoding="utf-8")
+    checked = inspect_text_completion(response, bundle)
+    if str(response.get("provider", "")).casefold() != config["provider"]["order"][0].casefold():
+        checked = {"status": "invalid", "raw_response": checked.get("raw_response"), "output": None,
+                   "errors": ["Response provider does not match the pinned provider."]}
+    message = response["choices"][0].get("message") or {}
+    usage = response.get("usage") or {}
+    reasoning_tokens = (usage.get("completion_tokens_details") or {}).get("reasoning_tokens")
+    separate_reasoning = bool(message.get("reasoning") or message.get("reasoning_details"))
+    if not bundle["generation"]["enable_thinking"] and (
+            separate_reasoning or isinstance(reasoning_tokens, (int, float)) and reasoning_tokens > 0):
+        checked = {"status": "invalid", "raw_response": checked.get("raw_response"), "output": None,
+                   "errors": ["Thinking was returned although it was turned off for this step."]}
+    result = {**checked, "checked_at": datetime.now(timezone.utc).isoformat(), "role": bundle["role"],
+              "api_request_attempted": True, "model_response_received": True, "action_executed": False,
+              "requested_model": payload["model"], "response_model": response.get("model"),
+              "provider": response.get("provider"), "response_id": response.get("id"),
+              "finish_reason": response["choices"][0].get("finish_reason"),
+              "elapsed_seconds": transport["elapsed_seconds"], "usage": response.get("usage")}
+    _save(output / "result.json", result)
     return result
