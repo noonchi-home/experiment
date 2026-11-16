@@ -8,6 +8,7 @@ from __future__ import annotations
 
 from datetime import datetime
 import json
+import re
 from typing import Any
 
 
@@ -182,3 +183,100 @@ def validate_observation_records(value: Any) -> list[dict]:
             raise ContractError(f"{path}.timestamp: timestamps must be unique and increasing")
         previous = current
     return records
+
+
+# Text version of the nightly steps (설계문서/2026-11-14_PAM_80퍼센트_p-value_구현계획서.md).
+
+_CLOCK = re.compile(r"^([01]\d|2[0-3]):([0-5]\d):([0-5]\d)$")
+
+
+def _clock(value: Any, path: str) -> int:
+    """Seconds since midnight for an "HH:MM:SS" string."""
+    match = _CLOCK.match(value) if isinstance(value, str) else None
+    if match is None:
+        raise ContractError(f"{path}: expected a time as HH:MM:SS")
+    return int(match[1]) * 3600 + int(match[2]) * 60 + int(match[3])
+
+
+def validate_candidate_memory(value: Any) -> dict:
+    """Reflector-side FSM: the paper FSM, except each rule lists 1-3 trigger candidates."""
+    memory = _object(value, {"initial_state", "states"}, "memory")
+    initial_state = _text(memory["initial_state"], "memory.initial_state")
+    states = _array(memory["states"], "memory.states")
+    if not states:
+        raise ContractError("memory.states: at least one state is required")
+    identifiers: set[str] = set()
+    destinations: list[tuple[str, str]] = []
+    for index, state in enumerate(states):
+        path = f"memory.states[{index}]"
+        _object(state, {"id", "description", "rules", "next"}, path)
+        identifier = _text(state["id"], f"{path}.id")
+        if identifier in identifiers:
+            raise ContractError(f"{path}.id: duplicate state identifier {identifier!r}")
+        identifiers.add(identifier)
+        _text(state["description"], f"{path}.description")
+        for rule_index, rule in enumerate(_array(state["rules"], f"{path}.rules")):
+            rule_path = f"{path}.rules[{rule_index}]"
+            _object(rule, {"triggers", "action"}, rule_path)
+            triggers = _array(rule["triggers"], f"{rule_path}.triggers")
+            if not 1 <= len(triggers) <= 3:
+                raise ContractError(f"{rule_path}.triggers: expected 1 to 3 candidates")
+            for trigger_index, trigger in enumerate(triggers):
+                _text(trigger, f"{rule_path}.triggers[{trigger_index}]")
+            if len(set(triggers)) != len(triggers):
+                raise ContractError(f"{rule_path}.triggers: candidates must differ")
+            _text(rule["action"], f"{rule_path}.action")
+        for next_index, transition in enumerate(_array(state["next"], f"{path}.next")):
+            next_path = f"{path}.next[{next_index}]"
+            _object(transition, {"to", "on"}, next_path)
+            destinations.append((f"{next_path}.to", _text(transition["to"], f"{next_path}.to")))
+            _text(transition["on"], f"{next_path}.on")
+    if initial_state not in identifiers:
+        raise ContractError("memory.initial_state: must name an existing state")
+    for path, destination in destinations:
+        if destination not in identifiers:
+            raise ContractError(f"{path}: unknown state identifier {destination!r}")
+    return memory
+
+
+def validate_marks(value: Any, candidates: list[tuple[str, str]], actions: list[str],
+                   within: tuple[str, str, int] | None = None) -> dict:
+    """Times of every asked (state, candidate) and action exactly once, plus unseen intervals.
+
+    `within` is (first line, last line, seconds between lines) of the record that was read;
+    every time must then be the time of one of its lines.
+    """
+    marks = _object(value, {"candidates", "actions", "unseen"}, "marks")
+
+    def line_time(text: Any, path: str) -> int:
+        moment = _clock(text, path)
+        if within is not None:
+            first, last, step = _clock(within[0], "within"), _clock(within[1], "within"), within[2]
+            if not first <= moment <= last or (moment - first) % step:
+                raise ContractError(f"{path}: {text} is not the time of a line of the record")
+        return moment
+
+    answered = []
+    for index, item in enumerate(_array(marks["candidates"], "marks.candidates")):
+        path = f"marks.candidates[{index}]"
+        _object(item, {"state", "candidate", "times"}, path)
+        answered.append((_text(item["state"], f"{path}.state"), _text(item["candidate"], f"{path}.candidate")))
+        for time_index, moment in enumerate(_array(item["times"], f"{path}.times")):
+            line_time(moment, f"{path}.times[{time_index}]")
+    if sorted(answered) != sorted(tuple(pair) for pair in candidates):
+        raise ContractError("marks.candidates: answer every asked candidate exactly once")
+    found = []
+    for index, item in enumerate(_array(marks["actions"], "marks.actions")):
+        path = f"marks.actions[{index}]"
+        _object(item, {"action", "times"}, path)
+        found.append(_text(item["action"], f"{path}.action"))
+        for time_index, moment in enumerate(_array(item["times"], f"{path}.times")):
+            line_time(moment, f"{path}.times[{time_index}]")
+    if sorted(found) != sorted(actions):
+        raise ContractError("marks.actions: answer every asked action exactly once")
+    for index, interval in enumerate(_array(marks["unseen"], "marks.unseen")):
+        path = f"marks.unseen[{index}]"
+        _object(interval, {"start", "end"}, path)
+        if line_time(interval["end"], f"{path}.end") < line_time(interval["start"], f"{path}.start"):
+            raise ContractError(f"{path}: end must not come before start")
+    return marks
