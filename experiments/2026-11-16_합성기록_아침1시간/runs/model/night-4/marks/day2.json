@@ -1,0 +1,74 @@
+{
+  "day": 2,
+  "candidates": [
+    {
+      "state": "morning_wake_up",
+      "candidate": "Person has walked up to the window.",
+      "times": [
+        "07:20:58"
+      ]
+    },
+    {
+      "state": "breakfast_time",
+      "candidate": "Person is seated at the dining table, looking ahead idly, with an empty bowl and an empty cup sitting on the table.",
+      "times": [
+        "07:34:04",
+        "07:34:06",
+        "07:34:08",
+        "07:34:10",
+        "07:34:12",
+        "07:34:14",
+        "07:34:16",
+        "07:34:18",
+        "07:34:20",
+        "07:34:22",
+        "07:34:28",
+        "07:34:30",
+        "07:34:34",
+        "07:34:36",
+        "07:34:52",
+        "07:34:54",
+        "07:34:56",
+        "07:34:58",
+        "07:35:00",
+        "07:35:44"
+      ]
+    },
+    {
+      "state": "breakfast_time",
+      "candidate": "Person is using a smartphone, with an empty bowl and an empty cup sitting on the table.",
+      "times": []
+    },
+    {
+      "state": "living_room_relax",
+      "candidate": "Person is switching the TV off.",
+      "times": [
+        "07:51:00",
+        "07:51:02"
+      ]
+    },
+    {
+      "state": "departure_routine",
+      "candidate": "Person is putting on a backpack.",
+      "times": [
+        "07:56:54",
+        "07:56:56"
+      ]
+    }
+  ],
+  "actions": [],
+  "unseen": [
+    {
+      "start": "07:09:42",
+      "end": "07:17:28"
+    },
+    {
+      "start": "07:52:52",
+      "end": "07:56:18"
+    },
+    {
+      "start": "07:57:20",
+      "end": "07:59:58"
+    }
+  ]
+}

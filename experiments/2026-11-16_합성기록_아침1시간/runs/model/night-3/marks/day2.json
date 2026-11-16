@@ -1,0 +1,41 @@
+{
+  "day": 2,
+  "candidates": [
+    {
+      "state": "morning_wake_up",
+      "candidate": "Person is switching on the main room light.",
+      "times": [
+        "07:03:08"
+      ]
+    },
+    {
+      "state": "morning_wake_up",
+      "candidate": "Person is heading to the curtains.",
+      "times": [
+        "07:20:58"
+      ]
+    },
+    {
+      "state": "breakfast_time",
+      "candidate": "Person is sitting at the table leaning back in the chair.",
+      "times": [
+        "07:34:46"
+      ]
+    }
+  ],
+  "actions": [],
+  "unseen": [
+    {
+      "start": "07:09:42",
+      "end": "07:17:28"
+    },
+    {
+      "start": "07:52:52",
+      "end": "07:56:18"
+    },
+    {
+      "start": "07:57:20",
+      "end": "07:59:58"
+    }
+  ]
+}

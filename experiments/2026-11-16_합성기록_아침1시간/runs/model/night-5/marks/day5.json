@@ -1,0 +1,88 @@
+{
+  "day": 5,
+  "candidates": [
+    {
+      "state": "morning_wake_up",
+      "candidate": "Person is heading to the curtains.",
+      "times": [
+        "07:03:32"
+      ]
+    },
+    {
+      "state": "morning_wake_up",
+      "candidate": "Person has walked up to the window.",
+      "times": [
+        "07:03:46"
+      ]
+    },
+    {
+      "state": "breakfast_time",
+      "candidate": "Person has finished the bowl of cereal.",
+      "times": [
+        "07:28:40"
+      ]
+    },
+    {
+      "state": "breakfast_time",
+      "candidate": "Person is wiping their mouth with a napkin.",
+      "times": [
+        "07:25:56",
+        "07:28:54"
+      ]
+    },
+    {
+      "state": "living_room_relax",
+      "candidate": "Person has finished the coffee and set the empty can down.",
+      "times": [
+        "07:50:18"
+      ]
+    },
+    {
+      "state": "living_room_relax",
+      "candidate": "Person is sitting on the sofa, watching TV, with a TV remote and an empty can on the side table.",
+      "times": [
+        "07:50:26"
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "action": "Open the curtains.",
+      "times": [
+        "07:03:38"
+      ]
+    },
+    {
+      "action": "Pick up the bowl and place it in the dishwasher.",
+      "times": [
+        "07:30:48"
+      ]
+    },
+    {
+      "action": "Pick up the can and place it in the designated storage area.",
+      "times": [
+        "07:51:10"
+      ]
+    },
+    {
+      "action": "Pick up the cup and place it in the dishwasher.",
+      "times": [
+        "07:30:54"
+      ]
+    }
+  ],
+  "unseen": [
+    {
+      "start": "07:03:56",
+      "end": "07:11:48"
+    },
+    {
+      "start": "07:52:34",
+      "end": "07:55:40"
+    },
+    {
+      "start": "07:56:28",
+      "end": "07:59:58"
+    }
+  ]
+}

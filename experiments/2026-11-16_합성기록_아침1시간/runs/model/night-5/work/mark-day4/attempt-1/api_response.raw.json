@@ -1,0 +1,23 @@
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+{"id":"gen-1794831354-8jJ4ND0nNcjHJZOWG9HR","object":"chat.completion","created":1794831354,"model":"qwen/qwen3.5-27b","provider":"Alibaba","system_fingerprint":null,"service_tier":null,"choices":[{"index":0,"logprobs":null,"finish_reason":"stop","native_finish_reason":"stop","message":{"role":"assistant","content":"{\n  \"candidates\": [\n    {\n      \"state\": \"breakfast_time\",\n      \"candidate\": \"Person has finished the bowl of cereal.\",\n      \"times\": [\"07:29:58\"]\n    },\n    {\n      \"state\": \"breakfast_time\",\n      \"candidate\": \"Person is wiping their mouth with a napkin.\",\n      \"times\": [\"07:21:20\", \"07:30:30\"]\n    },\n    {\n      \"state\": \"living_room_relax\",\n      \"candidate\": \"Person is sitting on the sofa, watching TV, with a TV remote and an empty can on the side table.\",\n      \"times\": [\"07:49:32\"]\n    }\n  ],\n  \"actions\": [],\n  \"unseen\": [\n    {\n      \"start\": \"07:02:54\",\n      \"end\": \"07:12:22\"\n    },\n    {\n      \"start\": \"07:52:38\",\n      \"end\": \"07:56:20\"\n    },\n    {\n      \"start\": \"07:57:06\",\n      \"end\": \"07:59:58\"\n    }\n  ]\n}","refusal":null,"reasoning":null}}],"usage":{"prompt_tokens":52718,"completion_tokens":300,"total_tokens":53018,"cost":0.01074801,"is_byok":false,"prompt_tokens_details":{"cached_tokens":0,"cache_write_tokens":0,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.01074801,"upstream_inference_prompt_cost":0.01028001,"upstream_inference_completions_cost":0.000468},"completion_tokens_details":{"reasoning_tokens":0,"image_tokens":0,"audio_tokens":0}}}

@@ -1,0 +1,53 @@
+{
+  "day": 3,
+  "candidates": [
+    {
+      "state": "morning_wake_up",
+      "candidate": "Person has walked up to the window.",
+      "times": [
+        "07:03:04"
+      ]
+    },
+    {
+      "state": "breakfast_time",
+      "candidate": "Person is seated at the dining table, looking ahead idly, with an empty bowl and an empty cup sitting on the table.",
+      "times": [
+        "07:28:48"
+      ]
+    },
+    {
+      "state": "breakfast_time",
+      "candidate": "Person is using a smartphone, with an empty bowl and an empty cup sitting on the table.",
+      "times": [
+        "07:28:28"
+      ]
+    },
+    {
+      "state": "living_room_relax",
+      "candidate": "Person is switching the TV off.",
+      "times": [
+        "07:50:48"
+      ]
+    },
+    {
+      "state": "departure_routine",
+      "candidate": "Person is putting on a backpack.",
+      "times": []
+    }
+  ],
+  "actions": [],
+  "unseen": [
+    {
+      "start": "07:03:40",
+      "end": "07:10:54"
+    },
+    {
+      "start": "07:52:30",
+      "end": "07:56:08"
+    },
+    {
+      "start": "07:56:58",
+      "end": "07:59:58"
+    }
+  ]
+}

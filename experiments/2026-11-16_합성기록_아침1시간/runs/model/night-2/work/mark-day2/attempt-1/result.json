@@ -1,0 +1,147 @@
+{
+  "status": "valid",
+  "raw_response": "{\n  \"candidates\": [\n    {\n      \"state\": \"morning_prep\",\n      \"candidate\": \"Person has returned to the room.\",\n      \"times\": [\"07:17:30\"]\n    },\n    {\n      \"state\": \"morning_prep\",\n      \"candidate\": \"Person is standing by the bed changing into day clothes.\",\n      \"times\": [\"07:18:54\"]\n    },\n    {\n      \"state\": \"breakfast_time\",\n      \"candidate\": \"Person is wiping their mouth with a napkin.\",\n      \"times\": [\"07:30:36\", \"07:32:08\", \"07:34:24\"]\n    },\n    {\n      \"state\": \"breakfast_time\",\n      \"candidate\": \"Person is seated at the dining table resting for a moment after eating.\",\n      \"times\": [\"07:33:58\"]\n    },\n    {\n      \"state\": \"living_room_relax\",\n      \"candidate\": \"Person has finished the coffee and set the empty can down.\",\n      \"times\": [\"07:49:46\"]\n    },\n    {\n      \"state\": \"living_room_relax\",\n      \"candidate\": \"Person is sitting on the sofa watching the morning news on TV, with a TV remote and an empty can sitting on the side table.\",\n      \"times\": [\"07:49:50\"]\n    },\n    {\n      \"state\": \"departure_routine\",\n      \"candidate\": \"Person is slinging the bag over their shoulder.\",\n      \"times\": [\"07:56:56\"]\n    },\n    {\n      \"state\": \"departure_routine\",\n      \"candidate\": \"Person is heading toward the wall switch by the door.\",\n      \"times\": [\"07:57:06\"]\n    }\n  ],\n  \"actions\": [\n    {\n      \"action\": \"Open the curtains.\",\n      \"times\": [\"07:21:02\"]\n    },\n    {\n      \"action\": \"Pick up the bowl and place it in the dishwasher.\",\n      \"times\": [\"07:35:58\"]\n    },\n    {\n      \"action\": \"Pick up the can and place it in the designated storage area.\",\n      \"times\": [\"07:51:14\"]\n    },\n    {\n      \"action\": \"Pick up the cup and place it in the dishwasher.\",\n      \"times\": [\"07:36:00\"]\n    },\n    {\n      \"action\": \"Turn off the room light.\",\n      \"times\": [\"07:57:10\"]\n    }\n  ],\n  \"unseen\": [\n    {\n      \"start\": \"07:09:42\",\n      \"end\": \"07:17:28\"\n    },\n    {\n      \"start\": \"07:52:52\",\n      \"end\": \"07:56:18\"\n    },\n    {\n      \"start\": \"07:57:20\",\n      \"end\": \"07:59:58\"\n    }\n  ]\n}",
+  "output": {
+    "candidates": [
+      {
+        "state": "morning_prep",
+        "candidate": "Person has returned to the room.",
+        "times": [
+          "07:17:30"
+        ]
+      },
+      {
+        "state": "morning_prep",
+        "candidate": "Person is standing by the bed changing into day clothes.",
+        "times": [
+          "07:18:54"
+        ]
+      },
+      {
+        "state": "breakfast_time",
+        "candidate": "Person is wiping their mouth with a napkin.",
+        "times": [
+          "07:30:36",
+          "07:32:08",
+          "07:34:24"
+        ]
+      },
+      {
+        "state": "breakfast_time",
+        "candidate": "Person is seated at the dining table resting for a moment after eating.",
+        "times": [
+          "07:33:58"
+        ]
+      },
+      {
+        "state": "living_room_relax",
+        "candidate": "Person has finished the coffee and set the empty can down.",
+        "times": [
+          "07:49:46"
+        ]
+      },
+      {
+        "state": "living_room_relax",
+        "candidate": "Person is sitting on the sofa watching the morning news on TV, with a TV remote and an empty can sitting on the side table.",
+        "times": [
+          "07:49:50"
+        ]
+      },
+      {
+        "state": "departure_routine",
+        "candidate": "Person is slinging the bag over their shoulder.",
+        "times": [
+          "07:56:56"
+        ]
+      },
+      {
+        "state": "departure_routine",
+        "candidate": "Person is heading toward the wall switch by the door.",
+        "times": [
+          "07:57:06"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "action": "Open the curtains.",
+        "times": [
+          "07:21:02"
+        ]
+      },
+      {
+        "action": "Pick up the bowl and place it in the dishwasher.",
+        "times": [
+          "07:35:58"
+        ]
+      },
+      {
+        "action": "Pick up the can and place it in the designated storage area.",
+        "times": [
+          "07:51:14"
+        ]
+      },
+      {
+        "action": "Pick up the cup and place it in the dishwasher.",
+        "times": [
+          "07:36:00"
+        ]
+      },
+      {
+        "action": "Turn off the room light.",
+        "times": [
+          "07:57:10"
+        ]
+      }
+    ],
+    "unseen": [
+      {
+        "start": "07:09:42",
+        "end": "07:17:28"
+      },
+      {
+        "start": "07:52:52",
+        "end": "07:56:18"
+      },
+      {
+        "start": "07:57:20",
+        "end": "07:59:58"
+      }
+    ]
+  },
+  "errors": [],
+  "checked_at": "2026-11-16T11:05:54.201946+00:00",
+  "role": "marking",
+  "api_request_attempted": true,
+  "model_response_received": true,
+  "action_executed": false,
+  "requested_model": "qwen/qwen3.5-27b",
+  "response_model": "qwen/qwen3.5-27b",
+  "provider": "Alibaba",
+  "response_id": "gen-1794827122-jWHpsDJFi5U3YALVca5N",
+  "finish_reason": "stop",
+  "elapsed_seconds": 32.2237812000094,
+  "usage": {
+    "prompt_tokens": 51849,
+    "completion_tokens": 739,
+    "total_tokens": 52588,
+    "cost": 0.011263395,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.011263395,
+      "upstream_inference_prompt_cost": 0.010110555,
+      "upstream_inference_completions_cost": 0.00115284
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "day": 3,
+  "candidates": [
+    {
+      "state": "wake",
+      "candidate": "get_out_of_bed",
+      "times": [
+        "07:02:56"
+      ]
+    },
+    {
+      "state": "breakfast",
+      "candidate": "finish_drinking",
+      "times": [
+        "07:26:40"
+      ]
+    },
+    {
+      "state": "breakfast",
+      "candidate": "look_at_phone",
+      "times": [
+        "07:18:22",
+        "07:20:22",
+        "07:28:22"
+      ]
+    },
+    {
+      "state": "breakfast",
+      "candidate": "finish_meal",
+      "times": [
+        "07:27:28"
+      ]
+    },
+    {
+      "state": "breakfast",
+      "candidate": "wipe_mouth",
+      "times": [
+        "07:22:24",
+        "07:25:50",
+        "07:28:04"
+      ]
+    },
+    {
+      "state": "rest",
+      "candidate": "finish_coffee",
+      "times": [
+        "07:50:06"
+      ]
+    },
+    {
+      "state": "rest",
+      "candidate": "phone_rings",
+      "times": [
+        "07:32:36"
+      ]
+    },
+    {
+      "state": "leaving",
+      "candidate": "put_on_bag",
+      "times": [
+        "07:56:46"
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "action": "Open the curtains.",
+      "times": [
+        "07:03:08"
+      ]
+    },
+    {
+      "action": "Pick up the bowl and place it in the dishwasher.",
+      "times": [
+        "07:29:10"
+      ]
+    },
+    {
+      "action": "Pick up the can and place it in the designated storage area.",
+      "times": [
+        "07:51:00"
+      ]
+    },
+    {
+      "action": "Pick up the can and place it next to the person.",
+      "times": [
+        "07:29:34"
+      ]
+    },
+    {
+      "action": "Pick up the cup and place it in the dishwasher.",
+      "times": [
+        "07:29:16"
+      ]
+    },
+    {
+      "action": "Turn off the room light.",
+      "times": []
+    }
+  ],
+  "unseen": [
+    {
+      "start": "07:03:36",
+      "end": "07:10:52"
+    },
+    {
+      "start": "07:52:26",
+      "end": "07:56:06"
+    },
+    {
+      "start": "07:56:54",
+      "end": "07:59:58"
+    }
+  ]
+}

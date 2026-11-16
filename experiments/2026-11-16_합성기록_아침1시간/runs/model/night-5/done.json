@@ -1,0 +1,37 @@
+{
+  "night": 5,
+  "states": 5,
+  "candidates": 8,
+  "passed": [
+    {
+      "state": "breakfast_time",
+      "action": "Pick up the bowl and place it in the dishwasher.",
+      "candidate": "Person has finished the bowl of cereal."
+    },
+    {
+      "state": "breakfast_time",
+      "action": "Pick up the cup and place it in the dishwasher.",
+      "candidate": "Person has finished the bowl of cereal."
+    },
+    {
+      "state": "living_room_relax",
+      "action": "Pick up the can and place it in the designated storage area.",
+      "candidate": "Person has finished the coffee and set the empty can down."
+    },
+    {
+      "state": "living_room_relax",
+      "action": "Pick up the can and place it in the designated storage area.",
+      "candidate": "Person is sitting on the sofa, watching TV, with a TV remote and an empty can on the side table."
+    },
+    {
+      "state": "morning_wake_up",
+      "action": "Open the curtains.",
+      "candidate": "Person has walked up to the window."
+    },
+    {
+      "state": "morning_wake_up",
+      "action": "Open the curtains.",
+      "candidate": "Person is heading to the curtains."
+    }
+  ]
+}

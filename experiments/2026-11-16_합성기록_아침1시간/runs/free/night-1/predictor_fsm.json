@@ -1,0 +1,35 @@
+{
+  "initial_state": "wake",
+  "states": [
+    {
+      "id": "wake",
+      "description": "잠에서 깨서 씻고 옷 입기",
+      "rules": [],
+      "next": []
+    },
+    {
+      "id": "breakfast",
+      "description": "아침 식사",
+      "rules": [],
+      "next": []
+    },
+    {
+      "id": "rest",
+      "description": "소파에서 커피 마시며 TV 보기",
+      "rules": [],
+      "next": []
+    },
+    {
+      "id": "leaving",
+      "description": "외출 준비",
+      "rules": [],
+      "next": []
+    },
+    {
+      "id": "away",
+      "description": "외출 (안 보임)",
+      "rules": [],
+      "next": []
+    }
+  ]
+}
