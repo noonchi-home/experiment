@@ -1,0 +1,95 @@
+{
+  "initial_state": "morning_wake_up",
+  "states": [
+    {
+      "id": "morning_wake_up",
+      "description": "Person wakes up, uses phone, gets out of bed, turns on light, opens curtains, and leaves the bedroom.",
+      "rules": [
+        {
+          "triggers": [
+            "Person is heading to the curtains.",
+            "Person has walked up to the window."
+          ],
+          "action": "Open the curtains."
+        }
+      ],
+      "next": [
+        {
+          "to": "morning_prep",
+          "on": "Person has returned to the room."
+        }
+      ]
+    },
+    {
+      "id": "morning_prep",
+      "description": "Person returns to the room, dries hair, dresses, and makes the bed.",
+      "rules": [],
+      "next": [
+        {
+          "to": "breakfast_time",
+          "on": "Person is heading into the kitchen."
+        }
+      ]
+    },
+    {
+      "id": "breakfast_time",
+      "description": "Person prepares and eats breakfast at the dining table.",
+      "rules": [
+        {
+          "triggers": [
+            "Person is seated at the dining table, looking ahead idly, with an empty bowl and an empty cup sitting on the table.",
+            "Person is using a smartphone, with an empty bowl and an empty cup sitting on the table."
+          ],
+          "action": "Pick up the bowl and place it in the dishwasher."
+        },
+        {
+          "triggers": [
+            "Person is seated at the dining table, looking ahead idly, with an empty bowl and an empty cup sitting on the table.",
+            "Person is using a smartphone, with an empty bowl and an empty cup sitting on the table."
+          ],
+          "action": "Pick up the cup and place it in the dishwasher."
+        }
+      ],
+      "next": [
+        {
+          "to": "living_room_relax",
+          "on": "Person is bringing a can of coffee to the sofa."
+        }
+      ]
+    },
+    {
+      "id": "living_room_relax",
+      "description": "Person sits on the sofa, drinks coffee, watches TV, and takes a phone call.",
+      "rules": [
+        {
+          "triggers": [
+            "Person has finished the coffee and set the empty can down.",
+            "Person is switching the TV off."
+          ],
+          "action": "Pick up the can and place it in the designated storage area."
+        }
+      ],
+      "next": [
+        {
+          "to": "departure_routine",
+          "on": "Person is heading to the desk."
+        }
+      ]
+    },
+    {
+      "id": "departure_routine",
+      "description": "Person packs bag, puts on jacket, turns off lights, and leaves the home.",
+      "rules": [
+        {
+          "triggers": [
+            "Person is slinging the bag over their shoulder.",
+            "Person is heading toward the wall switch by the door.",
+            "Person is putting on a backpack."
+          ],
+          "action": "Turn off the room light."
+        }
+      ],
+      "next": []
+    }
+  ]
+}

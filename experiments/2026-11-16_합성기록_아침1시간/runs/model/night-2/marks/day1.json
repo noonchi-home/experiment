@@ -1,0 +1,44 @@
+{
+  "day": 1,
+  "candidates": [
+    {
+      "state": "morning_prep",
+      "candidate": "Person has returned to the room.",
+      "times": [
+        "07:12:56"
+      ]
+    },
+    {
+      "state": "morning_prep",
+      "candidate": "Person is standing by the bed changing into day clothes.",
+      "times": [
+        "07:14:08"
+      ]
+    },
+    {
+      "state": "breakfast_time",
+      "candidate": "Person is wiping their mouth with a napkin.",
+      "times": [
+        "07:21:14",
+        "07:26:40",
+        "07:31:04"
+      ]
+    },
+    {
+      "state": "living_room_relax",
+      "candidate": "Person is sitting on the sofa watching the morning news on TV, with a TV remote and an empty can sitting on the side table.",
+      "times": []
+    }
+  ],
+  "actions": [],
+  "unseen": [
+    {
+      "start": "07:03:20",
+      "end": "07:12:54"
+    },
+    {
+      "start": "07:53:58",
+      "end": "07:59:58"
+    }
+  ]
+}

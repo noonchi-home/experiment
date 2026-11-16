@@ -1,0 +1,23 @@
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+{"id":"gen-1794830949-TaHojoGiWVTOtu13hZgf","object":"chat.completion","created":1794830949,"model":"qwen/qwen3.5-27b","provider":"Alibaba","system_fingerprint":null,"service_tier":null,"choices":[{"index":0,"logprobs":null,"finish_reason":"stop","native_finish_reason":"stop","message":{"role":"assistant","content":"{\n  \"candidates\": [\n    {\n      \"state\": \"breakfast_time\",\n      \"candidate\": \"Person has finished the bowl of cereal.\",\n      \"times\": [\n        \"07:30:48\"\n      ]\n    },\n    {\n      \"state\": \"living_room_relax\",\n      \"candidate\": \"Person is sitting on the sofa, watching TV, with a TV remote and an empty can on the side table.\",\n      \"times\": [\n        \"07:51:30\"\n      ]\n    }\n  ],\n  \"actions\": [],\n  \"unseen\": [\n    {\n      \"start\": \"07:03:20\",\n      \"end\": \"07:12:56\"\n    }\n  ]\n}","refusal":null,"reasoning":null}}],"usage":{"prompt_tokens":52847,"completion_tokens":183,"total_tokens":53030,"cost":0.010590645,"is_byok":false,"prompt_tokens_details":{"cached_tokens":0,"cache_write_tokens":0,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.010590645,"upstream_inference_prompt_cost":0.010305165,"upstream_inference_completions_cost":0.00028548},"completion_tokens_details":{"reasoning_tokens":0,"image_tokens":0,"audio_tokens":0}}}

@@ -1,0 +1,116 @@
+{
+  "day": 4,
+  "candidates": [
+    {
+      "state": "wake",
+      "candidate": "get_out_of_bed",
+      "times": [
+        "07:02:10"
+      ]
+    },
+    {
+      "state": "breakfast",
+      "candidate": "finish_drinking",
+      "times": [
+        "07:28:56"
+      ]
+    },
+    {
+      "state": "breakfast",
+      "candidate": "look_at_phone",
+      "times": [
+        "07:17:54",
+        "07:22:54",
+        "07:30:44"
+      ]
+    },
+    {
+      "state": "breakfast",
+      "candidate": "finish_meal",
+      "times": [
+        "07:29:56"
+      ]
+    },
+    {
+      "state": "breakfast",
+      "candidate": "wipe_mouth",
+      "times": [
+        "07:21:20",
+        "07:30:28"
+      ]
+    },
+    {
+      "state": "rest",
+      "candidate": "finish_coffee",
+      "times": [
+        "07:49:24"
+      ]
+    },
+    {
+      "state": "rest",
+      "candidate": "phone_rings",
+      "times": [
+        "07:35:22"
+      ]
+    },
+    {
+      "state": "leaving",
+      "candidate": "put_on_bag",
+      "times": [
+        "07:56:46"
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "action": "Open the curtains.",
+      "times": [
+        "07:02:20"
+      ]
+    },
+    {
+      "action": "Pick up the bowl and place it in the dishwasher.",
+      "times": [
+        "07:31:48"
+      ]
+    },
+    {
+      "action": "Pick up the can and place it in the designated storage area.",
+      "times": [
+        "07:50:54"
+      ]
+    },
+    {
+      "action": "Pick up the can and place it next to the person.",
+      "times": [
+        "07:32:08"
+      ]
+    },
+    {
+      "action": "Pick up the cup and place it in the dishwasher.",
+      "times": [
+        "07:31:52"
+      ]
+    },
+    {
+      "action": "Turn off the room light.",
+      "times": [
+        "07:56:54"
+      ]
+    }
+  ],
+  "unseen": [
+    {
+      "start": "07:02:46",
+      "end": "07:12:20"
+    },
+    {
+      "start": "07:52:34",
+      "end": "07:56:18"
+    },
+    {
+      "start": "07:57:02",
+      "end": "07:59:58"
+    }
+  ]
+}

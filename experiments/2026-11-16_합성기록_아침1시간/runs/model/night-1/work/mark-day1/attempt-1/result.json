@@ -1,0 +1,141 @@
+{
+  "status": "valid",
+  "raw_response": "{\n  \"candidates\": [\n    {\n      \"state\": \"morning_wake_up\",\n      \"candidate\": \"Person gets out of bed.\",\n      \"times\": [\"07:02:44\"]\n    },\n    {\n      \"state\": \"morning_wake_up\",\n      \"candidate\": \"Person turns on the room light.\",\n      \"times\": [\"07:02:48\"]\n    },\n    {\n      \"state\": \"breakfast_time\",\n      \"candidate\": \"Person rests the spoon on the edge of the bowl.\",\n      \"times\": [\"07:22:10\", \"07:24:10\", \"07:29:46\", \"07:30:50\"]\n    },\n    {\n      \"state\": \"breakfast_time\",\n      \"candidate\": \"Person is seated at the dining table resting for a moment after eating.\",\n      \"times\": [\"07:30:56\"]\n    },\n    {\n      \"state\": \"living_room_relax\",\n      \"candidate\": \"Person has finished the coffee and set the empty can down.\",\n      \"times\": [\"07:51:24\"]\n    },\n    {\n      \"state\": \"departure_routine\",\n      \"candidate\": \"Person is slinging the bag over their shoulder.\",\n      \"times\": [\"07:57:18\"]\n    },\n    {\n      \"state\": \"departure_routine\",\n      \"candidate\": \"Person is heading toward the wall switch by the door.\",\n      \"times\": [\"07:57:28\"]\n    }\n  ],\n  \"actions\": [\n    {\n      \"action\": \"Open the curtains.\",\n      \"times\": [\"07:02:58\"]\n    },\n    {\n      \"action\": \"Pick up the bowl and place it in the dishwasher.\",\n      \"times\": [\"07:33:02\"]\n    },\n    {\n      \"action\": \"Pick up the can and place it in the designated storage area.\",\n      \"times\": [\"07:52:14\"]\n    },\n    {\n      \"action\": \"Pick up the cup and place it in the dishwasher.\",\n      \"times\": [\"07:33:06\"]\n    },\n    {\n      \"action\": \"Turn off the room light.\",\n      \"times\": [\"07:57:32\"]\n    }\n  ],\n  \"unseen\": [\n    {\n      \"start\": \"07:03:20\",\n      \"end\": \"07:12:54\"\n    },\n    {\n      \"start\": \"07:53:58\",\n      \"end\": \"07:56:44\"\n    },\n    {\n      \"start\": \"07:57:50\",\n      \"end\": \"07:59:58\"\n    }\n  ]\n}",
+  "output": {
+    "candidates": [
+      {
+        "state": "morning_wake_up",
+        "candidate": "Person gets out of bed.",
+        "times": [
+          "07:02:44"
+        ]
+      },
+      {
+        "state": "morning_wake_up",
+        "candidate": "Person turns on the room light.",
+        "times": [
+          "07:02:48"
+        ]
+      },
+      {
+        "state": "breakfast_time",
+        "candidate": "Person rests the spoon on the edge of the bowl.",
+        "times": [
+          "07:22:10",
+          "07:24:10",
+          "07:29:46",
+          "07:30:50"
+        ]
+      },
+      {
+        "state": "breakfast_time",
+        "candidate": "Person is seated at the dining table resting for a moment after eating.",
+        "times": [
+          "07:30:56"
+        ]
+      },
+      {
+        "state": "living_room_relax",
+        "candidate": "Person has finished the coffee and set the empty can down.",
+        "times": [
+          "07:51:24"
+        ]
+      },
+      {
+        "state": "departure_routine",
+        "candidate": "Person is slinging the bag over their shoulder.",
+        "times": [
+          "07:57:18"
+        ]
+      },
+      {
+        "state": "departure_routine",
+        "candidate": "Person is heading toward the wall switch by the door.",
+        "times": [
+          "07:57:28"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "action": "Open the curtains.",
+        "times": [
+          "07:02:58"
+        ]
+      },
+      {
+        "action": "Pick up the bowl and place it in the dishwasher.",
+        "times": [
+          "07:33:02"
+        ]
+      },
+      {
+        "action": "Pick up the can and place it in the designated storage area.",
+        "times": [
+          "07:52:14"
+        ]
+      },
+      {
+        "action": "Pick up the cup and place it in the dishwasher.",
+        "times": [
+          "07:33:06"
+        ]
+      },
+      {
+        "action": "Turn off the room light.",
+        "times": [
+          "07:57:32"
+        ]
+      }
+    ],
+    "unseen": [
+      {
+        "start": "07:03:20",
+        "end": "07:12:54"
+      },
+      {
+        "start": "07:53:58",
+        "end": "07:56:44"
+      },
+      {
+        "start": "07:57:50",
+        "end": "07:59:58"
+      }
+    ]
+  },
+  "errors": [],
+  "checked_at": "2026-11-16T10:47:40.874637+00:00",
+  "role": "marking",
+  "api_request_attempted": true,
+  "model_response_received": true,
+  "action_executed": false,
+  "requested_model": "qwen/qwen3.5-27b",
+  "response_model": "qwen/qwen3.5-27b",
+  "provider": "Alibaba",
+  "response_id": "gen-1794826017-pjSgRfXKtTM681DokcNM",
+  "finish_reason": "stop",
+  "elapsed_seconds": 43.823218299949076,
+  "usage": {
+    "prompt_tokens": 52959,
+    "completion_tokens": 685,
+    "total_tokens": 53644,
+    "cost": 0.011395605,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.011395605,
+      "upstream_inference_prompt_cost": 0.010327005,
+      "upstream_inference_completions_cost": 0.0010686
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

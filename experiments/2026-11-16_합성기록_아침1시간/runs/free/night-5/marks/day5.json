@@ -1,0 +1,113 @@
+{
+  "day": 5,
+  "candidates": [
+    {
+      "state": "wake",
+      "candidate": "get_out_of_bed",
+      "times": [
+        "07:03:24"
+      ]
+    },
+    {
+      "state": "breakfast",
+      "candidate": "finish_drinking",
+      "times": [
+        "07:27:58"
+      ]
+    },
+    {
+      "state": "breakfast",
+      "candidate": "look_at_phone",
+      "times": [
+        "07:20:54",
+        "07:21:58"
+      ]
+    },
+    {
+      "state": "breakfast",
+      "candidate": "finish_meal",
+      "times": [
+        "07:28:38"
+      ]
+    },
+    {
+      "state": "breakfast",
+      "candidate": "wipe_mouth",
+      "times": [
+        "07:25:54",
+        "07:28:54"
+      ]
+    },
+    {
+      "state": "rest",
+      "candidate": "finish_coffee",
+      "times": [
+        "07:50:14"
+      ]
+    },
+    {
+      "state": "rest",
+      "candidate": "phone_rings",
+      "times": [
+        "07:35:02"
+      ]
+    },
+    {
+      "state": "leaving",
+      "candidate": "put_on_bag",
+      "times": [
+        "07:56:16"
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "action": "Open the curtains.",
+      "times": [
+        "07:03:36"
+      ]
+    },
+    {
+      "action": "Pick up the bowl and place it in the dishwasher.",
+      "times": [
+        "07:30:44"
+      ]
+    },
+    {
+      "action": "Pick up the can and place it in the designated storage area.",
+      "times": [
+        "07:51:10"
+      ]
+    },
+    {
+      "action": "Pick up the can and place it next to the person.",
+      "times": [
+        "07:31:06"
+      ]
+    },
+    {
+      "action": "Pick up the cup and place it in the dishwasher.",
+      "times": [
+        "07:30:50"
+      ]
+    },
+    {
+      "action": "Turn off the room light.",
+      "times": []
+    }
+  ],
+  "unseen": [
+    {
+      "start": "07:03:52",
+      "end": "07:11:48"
+    },
+    {
+      "start": "07:52:30",
+      "end": "07:55:38"
+    },
+    {
+      "start": "07:56:22",
+      "end": "07:59:58"
+    }
+  ]
+}

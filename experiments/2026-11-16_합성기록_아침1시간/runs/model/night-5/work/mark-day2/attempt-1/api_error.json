@@ -1,0 +1,21 @@
+{
+  "status": "api_error",
+  "api_request_attempted": true,
+  "model_response_received": false,
+  "output": null,
+  "action_executed": false,
+  "error": "OpenRouter returned an API error in the response body.",
+  "http_status": 200,
+  "elapsed_seconds": 9.05527210002765,
+  "error_code": 502,
+  "diagnostic": {
+    "body_bytes_read": 327,
+    "body_read_limit": 65536,
+    "body_limit_reached": false,
+    "format": "json",
+    "error": {
+      "code": 502,
+      "message": "Upstream error from Alibaba: Request rate increased too quickly. To ensure system stability, please adjust your client logic to scale requests more smoothly over time."
+    }
+  }
+}

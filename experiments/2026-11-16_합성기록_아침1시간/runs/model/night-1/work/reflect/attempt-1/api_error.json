@@ -1,0 +1,12 @@
+{
+  "status": "api_error",
+  "api_request_attempted": true,
+  "model_response_received": false,
+  "output": null,
+  "action_executed": false,
+  "error": "OpenRouter connection failed or timed out; completion and billing are unknown.",
+  "http_status": null,
+  "elapsed_seconds": 699.5302237999858,
+  "error_code": null,
+  "diagnostic": {}
+}
