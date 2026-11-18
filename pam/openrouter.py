@@ -347,7 +347,7 @@ def _post(payload: dict, config: dict, api_key: str | None) -> dict:
 
 # Text version of the nightly steps: same model, endpoint and pinned provider, no images.
 # Thinking stays on only for the reflector, as in the paper.
-TEXT_THINKING = {"reflector_text": True, "marking": False}
+TEXT_THINKING = {"reflector_text": True, "marking": False, "chunking": False}
 
 
 def _validate_text_config(config: dict) -> dict:
@@ -357,7 +357,7 @@ def _validate_text_config(config: dict) -> dict:
     _validate_connection(config)
     limits = config["max_tokens"]
     if not isinstance(limits, dict) or set(limits) != set(TEXT_THINKING):
-        raise OpenRouterError("Provide output-token limits for reflector_text and marking.")
+        raise OpenRouterError("Provide output-token limits for reflector_text, marking and chunking.")
     if any(type(limit) is not int or not 1 <= limit <= 65536 for limit in limits.values()):
         raise OpenRouterError("Output-token limits must be integers from 1 to 65536.")
     return config
@@ -390,7 +390,7 @@ def build_text_request(bundle: dict, config: dict) -> dict:
     _validate_text_config(config)
     role = bundle.get("role") if isinstance(bundle, dict) else None
     if role not in TEXT_THINKING:
-        raise OpenRouterError("Text bundle role must be reflector_text or marking.")
+        raise OpenRouterError("Text bundle role must be reflector_text, marking or chunking.")
     if bundle.get("model") != "Qwen3.5-27B":
         raise OpenRouterError("Input bundle must use the paper's Qwen3.5-27B model.")
     generation = bundle.get("generation")

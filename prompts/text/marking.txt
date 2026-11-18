@@ -5,7 +5,7 @@ You find when given events happened during a person's day, using the robot's rec
 - Candidates to find: each line is `state | candidate`. The candidate is a short
 statement of one moment. It counts only while the person is in that state.
 - Actions to find: robot tasks. Find when the person did the same thing themselves.
-- Record: the robot's observation of the person, one line every 2 seconds
+- Record: the robot's observation of the person, one line every {line_step}
 (`HH:MM:SS | sentence`) in time order. A line describes the scene: the person's
 posture, what they are doing, and things lying around. One activity usually fills
 many lines in a row, and the wording changes from line to line.
@@ -21,11 +21,13 @@ something finishing or stopping matches the line where it finishes. Use that lin
 down, and is now eating toast"). That refers to the earlier moment: do not count it again.
 - If the same candidate matches again within 10 seconds, it is one occurrence. List it
 once: the first time for something beginning, the last time for something finishing.
-- For each action, list the time of every moment at which the person themselves
-completed that task, for example the moment the cup goes into the dishwasher. Going to
-do it, such as picking the object up or walking toward it, is not the task itself.
+- For each action, first find each moment the person themselves did the task, for
+example the cup going into the dishwasher. Then go back from that moment, line by line,
+to the first line where they started walking toward the object or place, even if that
+line does not name the object (walking over to a plant comes before watering it). List
+that line's time.
 - A task is written from the robot's side, so the record may describe the same
-thing in other words. Count a moment when the person themselves produced the result of
+thing in other words. Count a run in which the person themselves produced the result of
 the task, even if:
   - the place is named differently: "next to the person" means within the person's
     reach where they are, whatever that place is called;

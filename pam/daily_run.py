@@ -2,9 +2,11 @@
 
 Night N: the reflector reads day N's record itself (build on night 1, update
 afterwards) -> marking reads each day's record (times of every candidate and action,
-asked only for what is not known yet, on every day so far) -> the 80%·p-value check
-over days 1..N -> the predictor FSM (passing candidates only). A day is one hour of
-record (2026-11-16), short enough to be read whole. Marked times must be times of
+asked only for what is not known yet, on every day so far) -> the 75%·p-value check
+over days 1..N -> the predictor FSM (passing candidates only). A day is short enough
+to be read whole (one hour of 2-second lines, or a few minutes of 1-second lines). The
+check window is 5 minutes unless --window-seconds says otherwise; it is written in each
+done.json, and a run never mixes windows. Marked times must be times of
 lines of that day's record. Everything is
 saved under run_dir/night-N/ and never overwritten. A finished night has done.json and
 is loaded instead of run again; an unfinished night reuses the step outputs it already
@@ -14,6 +16,7 @@ steps are passed in as `Steps`, so the same runner works with the model
 
 Usage (calls the model and costs money; run one night, look, then the next):
     python -m pam.daily_run --records <folder with day1.txt ...> --run-dir <folder> --night 1
+        [--tasks <tasks.json>] [--window-seconds 60]
 """
 
 from __future__ import annotations
@@ -28,8 +31,8 @@ from typing import Callable
 from .contracts import ContractError, validate_candidate_memory, validate_marks
 from .inference import infer_text_bundle
 from .messages import PROJECT_ROOT, read_json
-from .text_messages import build_marking_bundle, build_reflector_text_bundle
-from .trigger_check import check_candidate, predictor_fsm
+from .text_messages import build_marking_bundle, build_reflector_text_bundle, record_bounds
+from .trigger_check import FOLLOW_SECONDS, check_candidate, predictor_fsm
 
 _LINE = re.compile(r"^(\d\d):(\d\d):(\d\d) \| .+")
 
@@ -56,10 +59,9 @@ def read_record(path: Path) -> list[str]:
 
 
 def _span(lines: list[str]) -> tuple[int, int, int]:
-    """Start, end (exclusive) and line step of a day's record."""
-    first, last = _seconds(lines[0][:8]), _seconds(lines[-1][:8])
-    step = _seconds(lines[1][:8]) - first if len(lines) > 1 else 2
-    return first, last + step, step
+    """Start, end (exclusive) and line step of a day's record (lines or a chunk list)."""
+    first, last, step, _ = record_bounds(lines)
+    return _seconds(first), _seconds(last) + step, step
 
 
 def _read(path: Path):
@@ -108,7 +110,7 @@ def _known_marks(run_dir: Path, night: int) -> dict[int, dict]:
     return known
 
 
-def _run_one(night: int, records: dict[int, Path], run_dir: Path, steps: Steps) -> dict:
+def _run_one(night: int, records: dict[int, Path], run_dir: Path, steps: Steps, window: int) -> dict:
     folder = run_dir / f"night-{night}"
     work = folder / "work"
 
@@ -142,7 +144,7 @@ def _run_one(night: int, records: dict[int, Path], run_dir: Path, steps: Steps) 
         day_lines = lines if day == night else read_record(records[day])
         marks = steps.mark(day, day_lines, ask, ask_actions, states, _fresh(work / f"mark-day{day}"))
         validate_marks(marks, [(item["state"], item["candidate"]) for item in ask], ask_actions,
-                       within=(day_lines[0][:8], day_lines[-1][:8], _span(day_lines)[2]))
+                       within=record_bounds(day_lines)[:3])
         _write_new(folder / "marks" / f"day{day}.json", {"day": day, **marks})
         for item in marks["candidates"]:
             have["candidates"][(item["state"], item["candidate"])] = item["times"]
@@ -167,29 +169,37 @@ def _run_one(night: int, records: dict[int, Path], run_dir: Path, steps: Steps) 
                         "unseen": [(_seconds(u["start"]), _seconds(u["end"]) + step) for u in have["unseen"] or []],
                     })
                 results.append({"state": state["id"], "action": rule["action"], "candidate": candidate,
-                                **check_candidate(days)})
+                                **check_candidate(days, window)})
     _write_or_same(folder / "check_results.json", results)
 
     passed = {(r["state"], r["action"], r["candidate"]) for r in results if r["passed"]}
     _write_or_same(folder / "predictor_fsm.json", predictor_fsm(memory, passed))
-    summary = {"night": night, "states": len(memory["states"]), "candidates": len(results),
+    summary = {"night": night, "window_seconds": window, "states": len(memory["states"]), "candidates": len(results),
                "passed": [{"state": s, "action": a, "candidate": c} for s, a, c in sorted(passed)]}
     _write_new(folder / "done.json", summary)
     return summary
 
 
-def run_night(night: int, records: dict[int, Path], run_dir: Path, steps: Steps) -> dict:
+def run_night(night: int, records: dict[int, Path], run_dir: Path, steps: Steps,
+              window: int = FOLLOW_SECONDS) -> dict:
     """Make sure nights 1..night are done, running the missing ones in order; return night's summary."""
     if type(night) is not int or night < 1 or any(day not in records for day in range(1, night + 1)):
         raise ContractError("Give a night from 1 and a record for every day up to it.")
     summary = {}
     for current in range(1, night + 1):
         done = Path(run_dir) / f"night-{current}" / "done.json"
-        summary = _read(done) if done.exists() else _run_one(current, records, Path(run_dir), steps)
+        if done.exists():
+            summary = _read(done)
+            if summary.get("window_seconds", FOLLOW_SECONDS) != window:
+                raise ContractError(f"{done} was checked with a {summary.get('window_seconds', FOLLOW_SECONDS)}-second "
+                                    f"window, not {window}; use a new run folder.")
+        else:
+            summary = _run_one(current, records, Path(run_dir), steps, window)
     return summary
 
 
-def model_steps(tasks: list[str], config_path: Path, *, project_dir: Path = PROJECT_ROOT) -> Steps:
+def model_steps(tasks: list[str], config_path: Path, *, project_dir: Path = PROJECT_ROOT,
+                window: int = FOLLOW_SECONDS) -> Steps:
     """The two steps done by the model; each sends a whole day's record."""
     def call(bundle: dict, work: Path) -> dict:
         work.mkdir(parents=True, exist_ok=False)
@@ -203,7 +213,8 @@ def model_steps(tasks: list[str], config_path: Path, *, project_dir: Path = PROJ
     def reflect(night: int, lines: list[str], memory: dict | None, results: list[dict] | None,
                 work: Path) -> dict:
         bundle = build_reflector_text_bundle(lines, tasks, operation="build" if memory is None else "update",
-                                             memory=memory, results=results, project_dir=project_dir)
+                                             memory=memory, results=results, window_seconds=window,
+                                             project_dir=project_dir)
         return call(bundle, work)
 
     def mark(day: int, lines: list[str], candidates: list[dict], actions: list[str],
@@ -222,10 +233,15 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--night", type=int, required=True, help="이 밤까지 돌린다 (끝난 밤은 다시 돌리지 않는다)")
     parser.add_argument("--config", type=Path, default=PROJECT_ROOT / "config" / "openrouter_text.json")
     parser.add_argument("--tasks", type=Path, default=PROJECT_ROOT / "scenarios" / "routine" / "tasks.json")
+    parser.add_argument("--window-seconds", type=int, default=FOLLOW_SECONDS,
+                        help="검사 기준 시간(초). 신호 뒤 이 시간 안에 행동이 오면 따라온 것으로 센다")
     args = parser.parse_args(argv)
+    if not 1 <= args.window_seconds <= 3600:
+        parser.error("--window-seconds must be between 1 and 3600")
     records = {day: args.records / f"day{day}.txt" for day in range(1, args.night + 1)}
-    steps = model_steps(read_json(args.tasks), args.config)
-    print(json.dumps(run_night(args.night, records, args.run_dir, steps), ensure_ascii=False, indent=2))
+    steps = model_steps(read_json(args.tasks), args.config, window=args.window_seconds)
+    print(json.dumps(run_night(args.night, records, args.run_dir, steps, args.window_seconds),
+                     ensure_ascii=False, indent=2))
 
 
 if __name__ == "__main__":
