@@ -1,0 +1,83 @@
+{
+  "status": "확정. Claude가 1초 간격 사진(runs/영상N/frames_1s)을 보고 정하고, 사용자가 영상을 보고 맞다고 확인했다(2026-11-18).",
+  "rule": "채점에만 쓴다. 어떤 AI 입력에도 넣지 않는다.",
+  "seconds": "영상 시작부터 초. 기록 시각은 20:00:00 + 초 (예: 39초 = 20:00:39).",
+  "videos": {
+    "영상1": {
+      "file": "1.mp4",
+      "length_seconds": 95.5,
+      "sips": [
+        [
+          9,
+          10
+        ]
+      ],
+      "last_drink": [
+        39,
+        46
+      ],
+      "empty_glass_down": 48,
+      "pick_up": 79,
+      "leave_view": 85,
+      "back_without_glass": 89
+    },
+    "영상2": {
+      "file": "2.mp4",
+      "length_seconds": 77.1,
+      "sips": [
+        [
+          17,
+          18
+        ],
+        [
+          30,
+          31
+        ]
+      ],
+      "last_drink": [
+        45,
+        47
+      ],
+      "empty_glass_down": 49,
+      "pick_up": 69,
+      "leave_view": 71,
+      "back_without_glass": 74
+    },
+    "영상3": {
+      "file": "3.mp4",
+      "length_seconds": 92.8,
+      "sips": [
+        [
+          8,
+          9
+        ]
+      ],
+      "last_drink": [
+        23,
+        25
+      ],
+      "empty_glass_down": 26,
+      "pick_up": 78,
+      "leave_view": 80,
+      "back_without_glass": 84
+    },
+    "영상4": {
+      "file": "4.mp4",
+      "length_seconds": 52.6,
+      "sips": [
+        [
+          6,
+          6
+        ]
+      ],
+      "last_drink": [
+        15,
+        17
+      ],
+      "empty_glass_down": 18,
+      "pick_up": 39,
+      "leave_view": 41,
+      "back_without_glass": 44
+    }
+  }
+}

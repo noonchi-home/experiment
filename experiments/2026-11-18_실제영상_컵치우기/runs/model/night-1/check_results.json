@@ -1,0 +1,80 @@
+[
+  {
+    "state": "eating_at_desk",
+    "action": "Pick up the bowl and place it in the dishwasher.",
+    "candidate": "Person has finished eating and an empty bowl is on the table.",
+    "n": 1,
+    "k": 1,
+    "unknown": 0,
+    "rate": 1.0,
+    "base_rate": 0.0,
+    "p0": 0.01,
+    "p_value": 0.01,
+    "passed": false
+  },
+  {
+    "state": "eating_at_desk",
+    "action": "Pick up the bowl and place it in the dishwasher.",
+    "candidate": "Person is resting hands on the table with an empty bowl nearby.",
+    "n": 1,
+    "k": 1,
+    "unknown": 0,
+    "rate": 1.0,
+    "base_rate": 0.0,
+    "p0": 0.01,
+    "p_value": 0.01,
+    "passed": false
+  },
+  {
+    "state": "working_with_coffee",
+    "action": "Pick up the can and place it in the designated storage area.",
+    "candidate": "Person sets an empty can on the desk after drinking.",
+    "n": 1,
+    "k": 1,
+    "unknown": 0,
+    "rate": 1.0,
+    "base_rate": 0.0,
+    "p0": 0.01,
+    "p_value": 0.01,
+    "passed": false
+  },
+  {
+    "state": "working_with_coffee",
+    "action": "Pick up the can and place it in the designated storage area.",
+    "candidate": "Person is typing on a laptop with an empty can on the desk.",
+    "n": 1,
+    "k": 1,
+    "unknown": 0,
+    "rate": 1.0,
+    "base_rate": 0.0,
+    "p0": 0.01,
+    "p_value": 0.01,
+    "passed": false
+  },
+  {
+    "state": "working_with_water",
+    "action": "Pick up the cup and place it in the dishwasher.",
+    "candidate": "Person places an empty glass cup on the desk after drinking.",
+    "n": 1,
+    "k": 1,
+    "unknown": 0,
+    "rate": 1.0,
+    "base_rate": 0.0,
+    "p0": 0.01,
+    "p_value": 0.01,
+    "passed": false
+  },
+  {
+    "state": "working_with_water",
+    "action": "Pick up the cup and place it in the dishwasher.",
+    "candidate": "Person is typing on a laptop with an empty glass cup on the desk.",
+    "n": 1,
+    "k": 1,
+    "unknown": 0,
+    "rate": 1.0,
+    "base_rate": 0.0,
+    "p0": 0.01,
+    "p_value": 0.01,
+    "passed": false
+  }
+]

@@ -1,0 +1,34 @@
+{
+  "day": 2,
+  "candidates": [
+    {
+      "state": "coffee_break_work",
+      "candidate": "Person sets an empty can of coffee down on the desk.",
+      "times": [
+        "20:02:31"
+      ]
+    },
+    {
+      "state": "water_break_work",
+      "candidate": "Person returns to the desk empty-handed.",
+      "times": [
+        "20:03:09"
+      ]
+    }
+  ],
+  "actions": [],
+  "unseen": [
+    {
+      "start": "20:01:45",
+      "end": "20:01:51"
+    },
+    {
+      "start": "20:03:03",
+      "end": "20:03:08"
+    },
+    {
+      "start": "20:04:27",
+      "end": "20:04:27"
+    }
+  ]
+}

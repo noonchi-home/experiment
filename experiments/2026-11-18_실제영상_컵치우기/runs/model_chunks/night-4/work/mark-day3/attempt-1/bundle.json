@@ -1,0 +1,45 @@
+{
+  "role": "marking",
+  "model": "Qwen3.5-27B",
+  "prompt_source": {
+    "id": "marking",
+    "file": "prompts/text/marking.txt",
+    "sha256": "eab55a7227032b424d740a04bf46619183738bf200bb2e781811a80a6f7e21c7"
+  },
+  "line_seconds": 1,
+  "record_kind": "chunks",
+  "generation": {
+    "temperature": 0.0,
+    "enable_thinking": false
+  },
+  "messages": [
+    {
+      "role": "system",
+      "content": "You find when given events happened during a person's day, using the robot's record of that day.\n\n# Inputs\n- States: the phases of the person's routine, each as `id: description`.\n- Candidates to find: each line is `state | candidate`. The candidate is a short\nstatement of one moment. It counts only while the person is in that state.\n- Actions to find: robot tasks. Find when the person did the same thing themselves.\n- Record: the robot's observation of the person, one line per stretch of what the person does (`HH:MM:SS | (until HH:MM:SS) sentence`)\nin time order, made from the robot's second-by-second observation. A line lasts from its\ntime until the time in brackets; a short action has a line of its own.\n\n# Task\n- For each candidate, list the time of every moment in the record that means the same\nas the candidate, even if it is worded differently, and that happens while the person\nis in the candidate's state. Judge the state from the state descriptions and the lines\naround it.\n- A candidate about something beginning matches the first line of it. A candidate about\nsomething finishing or stopping matches the line where it finishes. Use that line's time.\n- A line may still mention what was done a moment ago (\"has emptied the cup and set it\ndown, and is now eating toast\"). That refers to the earlier moment: do not count it again.\n- If the same candidate matches again within 10 seconds, it is one occurrence. List it\nonce: the first time for something beginning, the last time for something finishing.\n- For each action, first find each moment the person themselves did the task, for\nexample the cup going into the dishwasher. Then go back from that moment, line by line,\nto the first line where they started walking toward the object or place, even if that\nline does not name the object (walking over to a plant comes before watering it). List\nthat line's time.\n- A task is written from the robot's side, so the record may describe the same\nthing in other words. Count a run in which the person themselves produced the result of\nthe task, even if:\n  - the place is named differently: \"next to the person\" means within the person's\n    reach where they are, whatever that place is called;\n  - the object or device has another or a more specific name, such as \"mug\" for \"cup\".\n    It must be the same object or device, not another one of the same kind.\n- List every interval in which the person is not visible, from the first line to the\nlast line where they are not visible. If it is still going at the end of the record,\nend it at the last line. If it was already going at the beginning, start it at the\nfirst line.\n- Use only times that appear in the record. If nothing matches, give an empty\nlist. Do not guess.\n- Answer every candidate and every action exactly once, in the order given, copying\nthe state, candidate, and action text exactly as given.\n\n# Output (JSON only, no markdown, no commentary)\n{\"candidates\": [{\"state\": \"<state id>\", \"candidate\": \"<as given>\", \"times\": [\"HH:MM:SS\", ...]}, ...],\n \"actions\": [{\"action\": \"<as given>\", \"times\": [\"HH:MM:SS\", ...]}, ...],\n \"unseen\": [{\"start\": \"HH:MM:SS\", \"end\": \"HH:MM:SS\"}, ...]}\n"
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "text",
+          "text": "States (id: description):\neating_at_desk: Person eats from a bowl at the desk.\ncoffee_break_work: Person drinks coffee and works on the laptop at the desk.\nwater_break_work: Person drinks water and works on the laptop at the desk.\nnote_taking: Person works at the desk, writing or typing.\n\nCandidates to find (state | candidate):\ncoffee_break_work | Person sets an empty can of coffee down on the desk.\nwater_break_work | Person returns to the desk empty-handed.\n\nActions to find:\n(none)\n\nRecord (HH:MM:SS | sentence):\n20:00:00 | (until 20:00:22) Eating from a bowl with a spoon at a desk, with a glass of water nearby.\n20:00:23 | (until 20:00:25) Drinking from a glass of water while sitting at the desk.\n20:00:26 | (until 20:00:58) Eating from a bowl while looking at a phone, with a glass of water and laptop nearby.\n20:00:59 | (until 20:01:01) Taking the last spoonful from the bowl and finishing eating.\n20:01:02 | (until 20:01:21) Using a smartphone at the desk, with an empty bowl and glass of water nearby.\n20:01:22 | (until 20:01:23) Picking up the empty bowl with the spoon in it.\n20:01:24 | (until 20:01:27) Standing up and leaving the desk area holding the empty bowl.\n20:01:28 | (until 20:01:31) Out of view, leaving a glass of water and an open laptop on the desk.\n20:01:32 | (until 20:01:32) The sound of the bowl being placed in the dishwasher comes from the kitchen.\n20:01:33 | (until 20:01:36) Out of view, leaving a glass of water and an open laptop on the desk.\n20:01:37 | (until 20:01:39) Returning to the desk with a can of coffee and sitting down.\n20:01:40 | (until 20:01:41) Opening a can of coffee while sitting at the desk.\n20:01:42 | (until 20:01:43) Drinking from a can while using a laptop.\n20:01:44 | (until 20:01:54) Typing on a laptop with a coffee can and glass of water on the table.\n20:01:55 | (until 20:01:58) Stretching arms upwards while sitting at the desk with a coffee can nearby.\n20:01:59 | (until 20:02:01) Drinking from a can while working on a laptop.\n20:02:02 | (until 20:02:13) Using a smartphone with a can of coffee and glass of water nearby.\n20:02:14 | (until 20:02:15) Drinking from a can of coffee.\n20:02:16 | (until 20:02:33) Typing on a laptop with a coffee can and glass of water on the desk.\n20:02:34 | (until 20:02:36) Drinking from a can of coffee while using a laptop.\n20:02:37 | (until 20:02:53) Typing on a laptop with an empty coffee can and glass of water on the desk.\n20:02:54 | (until 20:02:54) Picking up the empty can from the desk.\n20:02:55 | (until 20:02:58) Standing up and walking away from the desk holding the empty can.\n20:02:59 | (until 20:03:01) Out of view, leaving a glass mug of water and an open laptop on the desk.\n20:03:02 | (until 20:03:02) The sound of the empty can being put away in the storage area comes from the kitchen.\n20:03:03 | (until 20:03:05) Out of view, leaving a glass mug of water and an open laptop on the desk.\n20:03:06 | (until 20:03:07) Walking back towards the desk area empty-handed.\n20:03:08 | (until 20:03:14) Sitting at the desk and typing on a laptop with a glass of water nearby.\n20:03:15 | (until 20:03:16) Drinking from a glass cup while sitting at the desk.\n20:03:17 | (until 20:03:23) Typing on a laptop with a glass of water resting on the table.\n20:03:24 | (until 20:03:28) Stretching arm upwards while sitting at the desk with a laptop, notebook, and glass of water.\n20:03:29 | (until 20:03:29) Resuming typing on a laptop after stretching.\n20:03:30 | (until 20:03:32) Drinking from a glass cup while working on a laptop.\n20:03:33 | (until 20:03:35) Typing on a laptop with an empty glass cup resting nearby.\n20:03:36 | (until 20:04:07) Using a smartphone with both hands, with an empty glass mug and notebook on the table.\n20:04:08 | (until 20:04:08) Putting down the phone and starting to type on the laptop.\n20:04:09 | (until 20:04:10) Holding a pen and preparing to write in a notebook.\n20:04:11 | (until 20:04:24) Writing in a notebook with a pen, with an empty glass mug nearby.\n20:04:25 | (until 20:04:25) Finishing writing and holding a glass cup.\n20:04:26 | (until 20:04:28) Standing up and walking away carrying the empty glass cup.\n20:04:29 | (until 20:04:29) The sound of the empty glass being placed in the dishwasher comes from the kitchen.\n20:04:30 | (until 20:04:30) Out of view, leaving an open notebook and pen on the table.\n20:04:31 | (until 20:04:32) Returning to the desk and standing near the laptop and notebook.\n20:04:33 | (until 20:04:33) Leaning over the desk looking at the laptop screen.\n20:04:34 | (until 20:04:39) Sitting at the desk and typing on a laptop with a notebook and pen nearby.\n20:04:40 | (until 20:04:57) Writing in a notebook with a pen, with a laptop and phone nearby."
+        }
+      ]
+    }
+  ],
+  "status": "prepared",
+  "execution_mode": "offline_preparation",
+  "asked_candidates": [
+    [
+      "coffee_break_work",
+      "Person sets an empty can of coffee down on the desk."
+    ],
+    [
+      "water_break_work",
+      "Person returns to the desk empty-handed."
+    ]
+  ],
+  "asked_actions": [],
+  "first_time": "20:00:00",
+  "last_time": "20:04:57"
+}

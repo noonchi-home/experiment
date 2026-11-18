@@ -1,0 +1,81 @@
+{
+  "day": 2,
+  "candidates": [
+    {
+      "state": "eating_at_desk",
+      "candidate": "Person takes the last spoonful from the bowl.",
+      "times": [
+        "20:01:09"
+      ]
+    },
+    {
+      "state": "eating_at_desk",
+      "candidate": "Person sits at the desk with hands resting after finishing eating.",
+      "times": [
+        "20:01:11"
+      ]
+    },
+    {
+      "state": "coffee_break_work",
+      "candidate": "Person types on a laptop with an empty can nearby.",
+      "times": [
+        "20:02:32"
+      ]
+    },
+    {
+      "state": "coffee_break_work",
+      "candidate": "Person uses a smartphone at the desk with an empty can nearby.",
+      "times": []
+    },
+    {
+      "state": "water_break_work",
+      "candidate": "Person types on a laptop with an empty glass mug nearby.",
+      "times": [
+        "20:04:11"
+      ]
+    },
+    {
+      "state": "water_break_work",
+      "candidate": "Person uses a smartphone at the desk with an empty glass mug nearby.",
+      "times": []
+    }
+  ],
+  "actions": [
+    {
+      "action": "Pick up the bowl and place it in the dishwasher.",
+      "times": [
+        "20:01:39"
+      ]
+    },
+    {
+      "action": "Pick up the can and place it in the designated storage area.",
+      "times": [
+        "20:02:58"
+      ]
+    },
+    {
+      "action": "Pick up the can and place it next to the person.",
+      "times": []
+    },
+    {
+      "action": "Pick up the cup and place it in the dishwasher.",
+      "times": [
+        "20:04:22"
+      ]
+    }
+  ],
+  "unseen": [
+    {
+      "start": "20:01:45",
+      "end": "20:01:49"
+    },
+    {
+      "start": "20:03:03",
+      "end": "20:03:07"
+    },
+    {
+      "start": "20:04:27",
+      "end": "20:04:27"
+    }
+  ]
+}

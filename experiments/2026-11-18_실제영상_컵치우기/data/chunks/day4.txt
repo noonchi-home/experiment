@@ -1,0 +1,46 @@
+20:00:00 ~ 20:00:34 | Sitting at the desk eating from a bowl with a spoon, with a glass of water and various items like a notebook, phone, or laptop nearby.
+20:00:35 ~ 20:00:35 | Reaching out to grab a glass of water while sitting at the desk.
+20:00:36 ~ 20:00:38 | Holding a glass mug to their mouth and drinking from it while sitting at the desk.
+20:00:39 ~ 20:01:01 | Sitting at the desk eating from a bowl with a spoon, with a glass of water and other items nearby.
+20:01:02 ~ 20:01:03 | Taking the last spoonful from the bowl while sitting at the desk.
+20:01:04 ~ 20:01:16 | Sitting at the desk with hands resting on the table after finishing eating, with an empty bowl and a glass of water nearby.
+20:01:17 ~ 20:01:18 | Holding an empty bowl and preparing to clear the table.
+20:01:19 ~ 20:01:20 | Standing up from the desk holding an empty bowl.
+20:01:21 ~ 20:01:22 | Walking away from the desk towards the kitchen area carrying an empty bowl.
+20:01:23 ~ 20:01:27 | Out of view, leaving a glass of water and a laptop on the desk.
+20:01:28 ~ 20:01:28 | Out of view while the sound of a bowl being placed in the dishwasher is heard from the kitchen.
+20:01:29 ~ 20:01:32 | Out of view, leaving a glass of water and a laptop on the desk.
+20:01:33 ~ 20:01:34 | Walking back to the desk holding a can of coffee.
+20:01:35 ~ 20:01:35 | Sitting down at the desk and placing a can of coffee on the table.
+20:01:36 ~ 20:01:37 | Opening a can of coffee while sitting at the desk.
+20:01:38 ~ 20:01:40 | Using a laptop and drinking from a can of coffee while sitting at the desk.
+20:01:41 ~ 20:01:44 | Working on a laptop with a can of coffee and a glass of water on the table.
+20:01:45 ~ 20:01:59 | Typing on a laptop while sitting at the desk, with a can of coffee and a glass of water nearby.
+20:02:00 ~ 20:02:04 | Stretching arms while sitting at the desk with a can of coffee nearby.
+20:02:05 ~ 20:02:07 | Using a laptop and drinking from a can of coffee while sitting at the desk.
+20:02:08 ~ 20:02:20 | Working on a laptop with a can of coffee and a glass of water on the table.
+20:02:21 ~ 20:02:38 | Looking at a smartphone while sitting at the desk, with a can of coffee and a glass of water nearby.
+20:02:39 ~ 20:02:40 | Holding a can of coffee to their mouth and drinking from it.
+20:02:41 ~ 20:02:41 | Setting an empty can of coffee down on the desk.
+20:02:42 ~ 20:03:11 | Working on a laptop while sitting at the desk, with an empty coffee can and a glass of water nearby.
+20:03:12 ~ 20:03:12 | Picking up an empty can from the desk.
+20:03:13 ~ 20:03:14 | Standing up from the desk holding an empty can.
+20:03:15 ~ 20:03:16 | Walking away from the desk holding an empty can.
+20:03:17 ~ 20:03:19 | Out of view, leaving a glass of water and a laptop on the desk.
+20:03:20 ~ 20:03:20 | Out of view while the sound of an empty can being put away is heard from the kitchen.
+20:03:21 ~ 20:03:23 | Out of view, leaving a glass of water and a laptop on the desk.
+20:03:24 ~ 20:03:25 | Returning to the desk empty-handed.
+20:03:26 ~ 20:03:33 | Typing on a laptop while sitting at the desk, with a glass of water and a notebook nearby.
+20:03:34 ~ 20:03:35 | Holding a glass cup of water while working on a laptop.
+20:03:36 ~ 20:03:40 | Typing on a laptop with a glass of water sitting idle on the desk.
+20:03:41 ~ 20:03:43 | Holding a glass cup to their mouth and drinking water while sitting at the desk with a laptop.
+20:03:44 ~ 20:03:45 | Holding a glass cup after finishing drinking while sitting at the desk.
+20:03:46 ~ 20:03:50 | Placing a glass cup back on the desk and resuming typing on a laptop.
+20:03:51 ~ 20:03:57 | Writing in a notebook with a pen while looking at a laptop, with an empty glass nearby.
+20:03:58 ~ 20:04:04 | Typing on a laptop with an empty glass and a notebook nearby.
+20:04:05 ~ 20:04:05 | Picking up an empty glass cup from the desk.
+20:04:06 ~ 20:04:08 | Standing up and walking away from the desk carrying an empty glass cup.
+20:04:09 ~ 20:04:09 | Out of view while the sound of an empty glass being placed in the dishwasher is heard from the kitchen.
+20:04:10 ~ 20:04:10 | Walking back toward the desk without the glass.
+20:04:11 ~ 20:04:12 | Leaning over the laptop at the desk after returning.
+20:04:13 ~ 20:04:36 | Typing on a laptop while sitting at the desk, with a notebook and sometimes a phone nearby.

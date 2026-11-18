@@ -1,0 +1,13 @@
+{
+  "id": "desk_video_2026-11-18",
+  "description": "휴대폰 한 대로 책상을 고정해서 찍은 영상 4개(물 마시며 일하다 빈 컵을 치움). 영상을 글로 바꾸기만 한다.",
+  "tasks_file": "tasks.json",
+  "memory_files": {},
+  "prompt_replacements": [
+    {
+      "old": " frame. Each frame is the horizontal concatenation of two back-facing cameras (\nleft_back on the left, right_back on the right).",
+      "new": " frame. Each frame is a single camera view.",
+      "reason": "휴대폰 한 대로 책상을 고정해서 찍었다."
+    }
+  ]
+}

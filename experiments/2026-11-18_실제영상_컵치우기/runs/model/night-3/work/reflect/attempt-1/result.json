@@ -1,0 +1,124 @@
+{
+  "status": "valid",
+  "raw_response": "{\n  \"initial_state\": \"eating_at_desk\",\n  \"states\": [\n    {\n      \"id\": \"eating_at_desk\",\n      \"description\": \"Person is eating a meal at the desk.\",\n      \"rules\": [\n        {\n          \"triggers\": [\n            \"Person has finished eating and an empty bowl is on the table.\",\n            \"Person is resting hands on the table with an empty bowl nearby.\",\n            \"Person is sitting at the desk with an empty bowl in front of them.\"\n          ],\n          \"action\": \"Pick up the bowl and place it in the dishwasher.\"\n        }\n      ],\n      \"next\": [\n        {\n          \"to\": \"working_with_coffee\",\n          \"on\": \"Person returns to desk holding a can of coffee.\"\n        }\n      ]\n    },\n    {\n      \"id\": \"working_with_coffee\",\n      \"description\": \"Person is working at the desk while drinking coffee.\",\n      \"rules\": [\n        {\n          \"triggers\": [\n            \"Person sets an empty can on the desk after drinking.\",\n            \"Person is typing on a laptop with an empty can on the desk.\",\n            \"Person is focused on a laptop with an empty coffee can on the desk.\"\n          ],\n          \"action\": \"Pick up the can and place it in the designated storage area.\"\n        }\n      ],\n      \"next\": [\n        {\n          \"to\": \"working_with_water\",\n          \"on\": \"Person returns to desk empty-handed.\"\n        }\n      ]\n    },\n    {\n      \"id\": \"working_with_water\",\n      \"description\": \"Person is working at the desk while drinking water.\",\n      \"rules\": [\n        {\n          \"triggers\": [\n            \"Person places an empty glass cup on the desk after drinking.\",\n            \"Person is typing on a laptop with an empty glass cup on the desk.\",\n            \"Person is sitting at the desk with an empty glass mug nearby.\"\n          ],\n          \"action\": \"Pick up the cup and place it in the dishwasher.\"\n        }\n      ],\n      \"next\": [\n        {\n          \"to\": \"writing_at_desk\",\n          \"on\": \"Person sits down to write in a notebook.\"\n        }\n      ]\n    },\n    {\n      \"id\": \"writing_at_desk\",\n      \"description\": \"Person is writing in a notebook at the desk.\",\n      \"rules\": [\n        {\n          \"triggers\": [\n            \"Person places an empty glass cup on the desk after drinking.\",\n            \"Person is typing on a laptop with an empty glass cup on the desk.\",\n            \"Person is sitting at the desk with an empty glass mug nearby.\"\n          ],\n          \"action\": \"Pick up the cup and place it in the dishwasher.\"\n        }\n      ],\n      \"next\": [\n        {\n          \"to\": \"working_with_water\",\n          \"on\": \"Person resumes typing on a laptop.\"\n        }\n      ]\n    }\n  ]\n}",
+  "output": {
+    "initial_state": "eating_at_desk",
+    "states": [
+      {
+        "id": "eating_at_desk",
+        "description": "Person is eating a meal at the desk.",
+        "rules": [
+          {
+            "triggers": [
+              "Person has finished eating and an empty bowl is on the table.",
+              "Person is resting hands on the table with an empty bowl nearby.",
+              "Person is sitting at the desk with an empty bowl in front of them."
+            ],
+            "action": "Pick up the bowl and place it in the dishwasher."
+          }
+        ],
+        "next": [
+          {
+            "to": "working_with_coffee",
+            "on": "Person returns to desk holding a can of coffee."
+          }
+        ]
+      },
+      {
+        "id": "working_with_coffee",
+        "description": "Person is working at the desk while drinking coffee.",
+        "rules": [
+          {
+            "triggers": [
+              "Person sets an empty can on the desk after drinking.",
+              "Person is typing on a laptop with an empty can on the desk.",
+              "Person is focused on a laptop with an empty coffee can on the desk."
+            ],
+            "action": "Pick up the can and place it in the designated storage area."
+          }
+        ],
+        "next": [
+          {
+            "to": "working_with_water",
+            "on": "Person returns to desk empty-handed."
+          }
+        ]
+      },
+      {
+        "id": "working_with_water",
+        "description": "Person is working at the desk while drinking water.",
+        "rules": [
+          {
+            "triggers": [
+              "Person places an empty glass cup on the desk after drinking.",
+              "Person is typing on a laptop with an empty glass cup on the desk.",
+              "Person is sitting at the desk with an empty glass mug nearby."
+            ],
+            "action": "Pick up the cup and place it in the dishwasher."
+          }
+        ],
+        "next": [
+          {
+            "to": "writing_at_desk",
+            "on": "Person sits down to write in a notebook."
+          }
+        ]
+      },
+      {
+        "id": "writing_at_desk",
+        "description": "Person is writing in a notebook at the desk.",
+        "rules": [
+          {
+            "triggers": [
+              "Person places an empty glass cup on the desk after drinking.",
+              "Person is typing on a laptop with an empty glass cup on the desk.",
+              "Person is sitting at the desk with an empty glass mug nearby."
+            ],
+            "action": "Pick up the cup and place it in the dishwasher."
+          }
+        ],
+        "next": [
+          {
+            "to": "working_with_water",
+            "on": "Person resumes typing on a laptop."
+          }
+        ]
+      }
+    ]
+  },
+  "errors": [],
+  "checked_at": "2026-11-18T06:40:45.507934+00:00",
+  "role": "reflector_text",
+  "api_request_attempted": true,
+  "model_response_received": true,
+  "action_executed": false,
+  "requested_model": "qwen/qwen3.5-27b",
+  "response_model": "qwen/qwen3.5-27b",
+  "provider": "Alibaba",
+  "response_id": "gen-1794983800-zMaWKQfEqtOZWNzJ61LJ",
+  "finish_reason": "stop",
+  "elapsed_seconds": 245.82120829999985,
+  "usage": {
+    "prompt_tokens": 13696,
+    "completion_tokens": 6914,
+    "total_tokens": 20610,
+    "cost": 0.01345656,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01345656,
+      "upstream_inference_prompt_cost": 0.00267072,
+      "upstream_inference_completions_cost": 0.01078584
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6230,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

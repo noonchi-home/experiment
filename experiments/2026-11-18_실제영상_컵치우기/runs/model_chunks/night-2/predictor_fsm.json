@@ -1,0 +1,59 @@
+{
+  "initial_state": "eating_at_desk",
+  "states": [
+    {
+      "id": "eating_at_desk",
+      "description": "Person eats from a bowl at the desk.",
+      "rules": [
+        {
+          "trigger": "Person takes the last spoonful from the bowl. or Person sits at the desk with hands resting after finishing eating.",
+          "action": "Pick up the bowl and place it in the dishwasher."
+        }
+      ],
+      "next": [
+        {
+          "to": "coffee_break_work",
+          "on": "Person picks up the empty bowl."
+        }
+      ]
+    },
+    {
+      "id": "coffee_break_work",
+      "description": "Person drinks coffee and works on the laptop at the desk.",
+      "rules": [
+        {
+          "trigger": "Person types on a laptop with an empty can nearby.",
+          "action": "Pick up the can and place it in the designated storage area."
+        }
+      ],
+      "next": [
+        {
+          "to": "water_break_work",
+          "on": "Person picks up the empty can."
+        }
+      ]
+    },
+    {
+      "id": "water_break_work",
+      "description": "Person drinks water and works on the laptop at the desk.",
+      "rules": [
+        {
+          "trigger": "Person types on a laptop with an empty glass mug nearby.",
+          "action": "Pick up the cup and place it in the dishwasher."
+        }
+      ],
+      "next": [
+        {
+          "to": "note_taking",
+          "on": "Person lifts an empty glass mug from the desk."
+        }
+      ]
+    },
+    {
+      "id": "note_taking",
+      "description": "Person works at the desk, writing or typing.",
+      "rules": [],
+      "next": []
+    }
+  ]
+}

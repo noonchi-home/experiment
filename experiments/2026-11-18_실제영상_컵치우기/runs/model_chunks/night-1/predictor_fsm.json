@@ -1,0 +1,44 @@
+{
+  "initial_state": "eating_at_desk",
+  "states": [
+    {
+      "id": "eating_at_desk",
+      "description": "Person eats from a bowl at the desk.",
+      "rules": [],
+      "next": [
+        {
+          "to": "coffee_break_work",
+          "on": "Person picks up the empty bowl."
+        }
+      ]
+    },
+    {
+      "id": "coffee_break_work",
+      "description": "Person drinks coffee and works on the laptop at the desk.",
+      "rules": [],
+      "next": [
+        {
+          "to": "water_break_work",
+          "on": "Person picks up the empty can."
+        }
+      ]
+    },
+    {
+      "id": "water_break_work",
+      "description": "Person drinks water and works on the laptop at the desk.",
+      "rules": [],
+      "next": [
+        {
+          "to": "note_taking",
+          "on": "Person lifts an empty glass mug from the desk."
+        }
+      ]
+    },
+    {
+      "id": "note_taking",
+      "description": "Person writes in a notebook at the desk.",
+      "rules": [],
+      "next": []
+    }
+  ]
+}
