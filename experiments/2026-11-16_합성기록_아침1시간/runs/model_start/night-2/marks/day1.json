@@ -1,0 +1,50 @@
+{
+  "day": 1,
+  "candidates": [
+    {
+      "state": "getting_ready",
+      "candidate": "Person has walked up to the window",
+      "times": [
+        "07:02:52"
+      ]
+    },
+    {
+      "state": "having_breakfast",
+      "candidate": "Person is wiping their mouth with a napkin",
+      "times": [
+        "07:21:16",
+        "07:26:42",
+        "07:31:06"
+      ]
+    },
+    {
+      "state": "relaxing_on_sofa",
+      "candidate": "Person is standing up from the sofa",
+      "times": [
+        "07:52:06"
+      ]
+    },
+    {
+      "state": "leaving_house",
+      "candidate": "Person is heading toward the wall switch by the door",
+      "times": [
+        "07:57:28"
+      ]
+    }
+  ],
+  "actions": [],
+  "unseen": [
+    {
+      "start": "07:03:20",
+      "end": "07:12:54"
+    },
+    {
+      "start": "07:53:58",
+      "end": "07:56:44"
+    },
+    {
+      "start": "07:57:50",
+      "end": "07:59:58"
+    }
+  ]
+}

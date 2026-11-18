@@ -1,0 +1,149 @@
+{
+  "status": "valid",
+  "raw_response": "{\n  \"initial_state\": \"waking_up\",\n  \"states\": [\n    {\n      \"id\": \"waking_up\",\n      \"description\": \"The person wakes up, uses phone, and prepares to leave the bedroom.\",\n      \"rules\": [\n        {\n          \"triggers\": [\n            \"Person sits up in bed\",\n            \"Person turns on the room light\"\n          ],\n          \"action\": \"Open the curtains.\"\n        }\n      ],\n      \"next\": [\n        {\n          \"to\": \"getting_ready\",\n          \"on\": \"Person has come back into the room\"\n        }\n      ]\n    },\n    {\n      \"id\": \"getting_ready\",\n      \"description\": \"The person dries hair, dresses, and makes the bed.\",\n      \"rules\": [\n        {\n          \"triggers\": [\n            \"Person has walked up to the window\"\n          ],\n          \"action\": \"Open the curtains.\"\n        }\n      ],\n      \"next\": [\n        {\n          \"to\": \"having_breakfast\",\n          \"on\": \"Person is heading into the kitchen\"\n        }\n      ]\n    },\n    {\n      \"id\": \"having_breakfast\",\n      \"description\": \"The person eats breakfast and cleans up dishes.\",\n      \"rules\": [\n        {\n          \"triggers\": [\n            \"Person is wiping their mouth with a napkin\",\n            \"Person is seated at the dining table resting for a moment after eating\"\n          ],\n          \"action\": \"Pick up the bowl and place it in the dishwasher.\"\n        },\n        {\n          \"triggers\": [\n            \"Person sets the empty cup down on the table\",\n            \"Person is seated at the dining table resting for a moment after eating\",\n            \"Person is wiping their mouth with a napkin\"\n          ],\n          \"action\": \"Pick up the cup and place it in the dishwasher.\"\n        },\n        {\n          \"triggers\": [\n            \"Person places the cup in the dishwasher\"\n          ],\n          \"action\": \"Pick up the can and place it next to the person.\"\n        }\n      ],\n      \"next\": [\n        {\n          \"to\": \"relaxing_on_sofa\",\n          \"on\": \"Person is pulling a can of coffee from the refrigerator\"\n        }\n      ]\n    },\n    {\n      \"id\": \"relaxing_on_sofa\",\n      \"description\": \"The person watches TV and drinks coffee on the sofa.\",\n      \"rules\": [\n        {\n          \"triggers\": [\n            \"Person turns off the TV with the remote\",\n            \"Person has finished the coffee and set the empty can down\",\n            \"Person is standing up from the sofa\"\n          ],\n          \"action\": \"Pick up the can and place it in the designated storage area.\"\n        }\n      ],\n      \"next\": [\n        {\n          \"to\": \"leaving_house\",\n          \"on\": \"Person is turning off the TV with the remote\"\n        }\n      ]\n    },\n    {\n      \"id\": \"leaving_house\",\n      \"description\": \"The person packs bag, puts on jacket, and leaves the home.\",\n      \"rules\": [\n        {\n          \"triggers\": [\n            \"Person is slipping their arms into a jacket\",\n            \"Person has just shouldered their bag\",\n            \"Person is heading toward the wall switch by the door\"\n          ],\n          \"action\": \"Turn off the room light.\"\n        }\n      ],\n      \"next\": []\n    }\n  ]\n}",
+  "output": {
+    "initial_state": "waking_up",
+    "states": [
+      {
+        "id": "waking_up",
+        "description": "The person wakes up, uses phone, and prepares to leave the bedroom.",
+        "rules": [
+          {
+            "triggers": [
+              "Person sits up in bed",
+              "Person turns on the room light"
+            ],
+            "action": "Open the curtains."
+          }
+        ],
+        "next": [
+          {
+            "to": "getting_ready",
+            "on": "Person has come back into the room"
+          }
+        ]
+      },
+      {
+        "id": "getting_ready",
+        "description": "The person dries hair, dresses, and makes the bed.",
+        "rules": [
+          {
+            "triggers": [
+              "Person has walked up to the window"
+            ],
+            "action": "Open the curtains."
+          }
+        ],
+        "next": [
+          {
+            "to": "having_breakfast",
+            "on": "Person is heading into the kitchen"
+          }
+        ]
+      },
+      {
+        "id": "having_breakfast",
+        "description": "The person eats breakfast and cleans up dishes.",
+        "rules": [
+          {
+            "triggers": [
+              "Person is wiping their mouth with a napkin",
+              "Person is seated at the dining table resting for a moment after eating"
+            ],
+            "action": "Pick up the bowl and place it in the dishwasher."
+          },
+          {
+            "triggers": [
+              "Person sets the empty cup down on the table",
+              "Person is seated at the dining table resting for a moment after eating",
+              "Person is wiping their mouth with a napkin"
+            ],
+            "action": "Pick up the cup and place it in the dishwasher."
+          },
+          {
+            "triggers": [
+              "Person places the cup in the dishwasher"
+            ],
+            "action": "Pick up the can and place it next to the person."
+          }
+        ],
+        "next": [
+          {
+            "to": "relaxing_on_sofa",
+            "on": "Person is pulling a can of coffee from the refrigerator"
+          }
+        ]
+      },
+      {
+        "id": "relaxing_on_sofa",
+        "description": "The person watches TV and drinks coffee on the sofa.",
+        "rules": [
+          {
+            "triggers": [
+              "Person turns off the TV with the remote",
+              "Person has finished the coffee and set the empty can down",
+              "Person is standing up from the sofa"
+            ],
+            "action": "Pick up the can and place it in the designated storage area."
+          }
+        ],
+        "next": [
+          {
+            "to": "leaving_house",
+            "on": "Person is turning off the TV with the remote"
+          }
+        ]
+      },
+      {
+        "id": "leaving_house",
+        "description": "The person packs bag, puts on jacket, and leaves the home.",
+        "rules": [
+          {
+            "triggers": [
+              "Person is slipping their arms into a jacket",
+              "Person has just shouldered their bag",
+              "Person is heading toward the wall switch by the door"
+            ],
+            "action": "Turn off the room light."
+          }
+        ],
+        "next": []
+      }
+    ]
+  },
+  "errors": [],
+  "checked_at": "2026-11-18T00:53:36.813678+00:00",
+  "role": "reflector_text",
+  "api_request_attempted": true,
+  "model_response_received": true,
+  "action_executed": false,
+  "requested_model": "qwen/qwen3.5-27b",
+  "response_model": "qwen/qwen3.5-27b",
+  "provider": "Alibaba",
+  "response_id": "gen-1794962896-VIn8LQPBL2ZMnIaj6SLL",
+  "finish_reason": "stop",
+  "elapsed_seconds": 320.50563690000035,
+  "usage": {
+    "prompt_tokens": 54808,
+    "completion_tokens": 8585,
+    "total_tokens": 63393,
+    "cost": 0.02408016,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.02408016,
+      "upstream_inference_prompt_cost": 0.01068756,
+      "upstream_inference_completions_cost": 0.0133926
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 7765,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

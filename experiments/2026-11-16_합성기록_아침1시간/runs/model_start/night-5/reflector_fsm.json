@@ -1,0 +1,92 @@
+{
+  "initial_state": "waking_up",
+  "states": [
+    {
+      "id": "waking_up",
+      "description": "The person wakes up, uses phone, and prepares to leave the bedroom.",
+      "rules": [
+        {
+          "triggers": [
+            "Person is walking over to the window",
+            "Person is switching on the main room light"
+          ],
+          "action": "Open the curtains."
+        }
+      ],
+      "next": [
+        {
+          "to": "getting_ready",
+          "on": "Person has come back into the room"
+        }
+      ]
+    },
+    {
+      "id": "getting_ready",
+      "description": "The person dries hair, dresses, and makes the bed.",
+      "rules": [],
+      "next": [
+        {
+          "to": "having_breakfast",
+          "on": "Person is heading into the kitchen"
+        }
+      ]
+    },
+    {
+      "id": "having_breakfast",
+      "description": "The person eats breakfast and cleans up dishes.",
+      "rules": [
+        {
+          "triggers": [
+            "Person is seated at the dining table resting for a moment after eating"
+          ],
+          "action": "Pick up the bowl and place it in the dishwasher."
+        },
+        {
+          "triggers": [
+            "Person sets the empty cup down on the table",
+            "Person is seated at the dining table resting for a moment after eating"
+          ],
+          "action": "Pick up the cup and place it in the dishwasher."
+        },
+        {
+          "triggers": [
+            "Person is seated at the dining table resting for a moment after eating",
+            "Person is gathering the bowl and the cup from the table"
+          ],
+          "action": "Pick up the can and place it next to the person."
+        }
+      ],
+      "next": [
+        {
+          "to": "relaxing_on_sofa",
+          "on": "Person is pulling a can of coffee from the refrigerator"
+        }
+      ]
+    },
+    {
+      "id": "relaxing_on_sofa",
+      "description": "The person watches TV and drinks coffee on the sofa.",
+      "rules": [
+        {
+          "triggers": [
+            "Person turns off the TV with the remote",
+            "Person has finished the coffee and set the empty can down"
+          ],
+          "action": "Pick up the can and place it in the designated storage area."
+        }
+      ],
+      "next": [
+        {
+          "to": "leaving_house",
+          "on": "Person is turning off the TV with the remote"
+        }
+      ]
+    },
+    {
+      "id": "leaving_house",
+      "description": "The person packs bag, puts on jacket, and leaves the home.",
+      "rules": [],
+      "next": []
+    }
+  ]
+}

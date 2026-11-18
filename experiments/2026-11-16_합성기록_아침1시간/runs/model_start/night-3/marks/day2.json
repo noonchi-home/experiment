@@ -1,0 +1,27 @@
+{
+  "day": 2,
+  "candidates": [
+    {
+      "state": "having_breakfast",
+      "candidate": "Person is gathering the bowl and the cup from the table",
+      "times": [
+        "07:35:46"
+      ]
+    }
+  ],
+  "actions": [],
+  "unseen": [
+    {
+      "start": "07:09:42",
+      "end": "07:17:28"
+    },
+    {
+      "start": "07:52:52",
+      "end": "07:56:18"
+    },
+    {
+      "start": "07:57:20",
+      "end": "07:59:58"
+    }
+  ]
+}

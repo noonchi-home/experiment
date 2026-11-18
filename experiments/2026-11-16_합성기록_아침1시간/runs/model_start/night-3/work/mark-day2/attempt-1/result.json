@@ -1,0 +1,65 @@
+{
+  "status": "valid",
+  "raw_response": "{\"candidates\": [{\"state\": \"having_breakfast\", \"candidate\": \"Person is gathering the bowl and the cup from the table\", \"times\": [\"07:35:46\"]}], \"actions\": [], \"unseen\": [{\"start\": \"07:09:42\", \"end\": \"07:17:28\"}, {\"start\": \"07:52:52\", \"end\": \"07:56:18\"}, {\"start\": \"07:57:20\", \"end\": \"07:59:58\"}]}",
+  "output": {
+    "candidates": [
+      {
+        "state": "having_breakfast",
+        "candidate": "Person is gathering the bowl and the cup from the table",
+        "times": [
+          "07:35:46"
+        ]
+      }
+    ],
+    "actions": [],
+    "unseen": [
+      {
+        "start": "07:09:42",
+        "end": "07:17:28"
+      },
+      {
+        "start": "07:52:52",
+        "end": "07:56:18"
+      },
+      {
+        "start": "07:57:20",
+        "end": "07:59:58"
+      }
+    ]
+  },
+  "errors": [],
+  "checked_at": "2026-11-18T01:05:17.928704+00:00",
+  "role": "marking",
+  "api_request_attempted": true,
+  "model_response_received": true,
+  "action_executed": false,
+  "requested_model": "qwen/qwen3.5-27b",
+  "response_model": "qwen/qwen3.5-27b",
+  "provider": "Alibaba",
+  "response_id": "gen-1794963878-5XHhfPG25NJl2R47dUBq",
+  "finish_reason": "stop",
+  "elapsed_seconds": 39.6264941999998,
+  "usage": {
+    "prompt_tokens": 51680,
+    "completion_tokens": 129,
+    "total_tokens": 51809,
+    "cost": 0.01027884,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01027884,
+      "upstream_inference_prompt_cost": 0.0100776,
+      "upstream_inference_completions_cost": 0.00020124
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

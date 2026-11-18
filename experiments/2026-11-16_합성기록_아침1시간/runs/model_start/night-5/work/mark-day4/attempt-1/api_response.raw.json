@@ -1,0 +1,27 @@
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+{"id":"gen-1794965290-g98T7xCVFoc11QssI6LJ","object":"chat.completion","created":1794965290,"model":"qwen/qwen3.5-27b","provider":"Alibaba","system_fingerprint":null,"service_tier":null,"choices":[{"index":0,"logprobs":null,"finish_reason":"stop","native_finish_reason":"stop","message":{"role":"assistant","content":"{\n  \"candidates\": [\n    {\n      \"state\": \"waking_up\",\n      \"candidate\": \"Person is walking over to the window\",\n      \"times\": [\"07:02:18\"]\n    },\n    {\n      \"state\": \"waking_up\",\n      \"candidate\": \"Person is switching on the main room light\",\n      \"times\": [\"07:02:14\"]\n    },\n    {\n      \"state\": \"having_breakfast\",\n      \"candidate\": \"Person is gathering the bowl and the cup from the table\",\n      \"times\": [\"07:31:38\"]\n    }\n  ],\n  \"actions\": [],\n  \"unseen\": [\n    {\n      \"start\": \"07:02:54\",\n      \"end\": \"07:12:20\"\n    },\n    {\n      \"start\": \"07:52:38\",\n      \"end\": \"07:56:18\"\n    },\n    {\n      \"start\": \"07:57:06\",\n      \"end\": \"07:59:58\"\n    }\n  ]\n}","refusal":null,"reasoning":null}}],"usage":{"prompt_tokens":52708,"completion_tokens":277,"total_tokens":52985,"cost":0.01071018,"is_byok":false,"prompt_tokens_details":{"cached_tokens":0,"cache_write_tokens":0,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.01071018,"upstream_inference_prompt_cost":0.01027806,"upstream_inference_completions_cost":0.00043212},"completion_tokens_details":{"reasoning_tokens":0,"image_tokens":0,"audio_tokens":0}}}

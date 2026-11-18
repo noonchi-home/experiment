@@ -1,0 +1,55 @@
+{
+  "initial_state": "waking_up",
+  "states": [
+    {
+      "id": "waking_up",
+      "description": "The person wakes up, uses phone, and prepares to leave the bedroom.",
+      "rules": [],
+      "next": [
+        {
+          "to": "getting_ready",
+          "on": "Person has come back into the room"
+        }
+      ]
+    },
+    {
+      "id": "getting_ready",
+      "description": "The person dries hair, dresses, and makes the bed.",
+      "rules": [],
+      "next": [
+        {
+          "to": "having_breakfast",
+          "on": "Person is heading into the kitchen"
+        }
+      ]
+    },
+    {
+      "id": "having_breakfast",
+      "description": "The person eats breakfast and cleans up dishes.",
+      "rules": [],
+      "next": [
+        {
+          "to": "relaxing_on_sofa",
+          "on": "Person is pulling a can of coffee from the refrigerator"
+        }
+      ]
+    },
+    {
+      "id": "relaxing_on_sofa",
+      "description": "The person watches TV and drinks coffee on the sofa.",
+      "rules": [],
+      "next": [
+        {
+          "to": "leaving_house",
+          "on": "Person is turning off the TV with the remote"
+        }
+      ]
+    },
+    {
+      "id": "leaving_house",
+      "description": "The person packs bag, puts on jacket, and leaves the home.",
+      "rules": [],
+      "next": []
+    }
+  ]
+}

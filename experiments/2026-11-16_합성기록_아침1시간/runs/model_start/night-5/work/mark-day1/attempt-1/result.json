@@ -1,0 +1,72 @@
+{
+  "status": "valid",
+  "raw_response": "{\"candidates\": [{\"state\": \"waking_up\", \"candidate\": \"Person is walking over to the window\", \"times\": [\"07:02:52\"]}, {\"state\": \"waking_up\", \"candidate\": \"Person is switching on the main room light\", \"times\": [\"07:02:48\"]}], \"actions\": [], \"unseen\": [{\"start\": \"07:03:12\", \"end\": \"07:12:56\"}, {\"start\": \"07:53:50\", \"end\": \"07:56:46\"}, {\"start\": \"07:57:36\", \"end\": \"07:59:58\"}]}",
+  "output": {
+    "candidates": [
+      {
+        "state": "waking_up",
+        "candidate": "Person is walking over to the window",
+        "times": [
+          "07:02:52"
+        ]
+      },
+      {
+        "state": "waking_up",
+        "candidate": "Person is switching on the main room light",
+        "times": [
+          "07:02:48"
+        ]
+      }
+    ],
+    "actions": [],
+    "unseen": [
+      {
+        "start": "07:03:12",
+        "end": "07:12:56"
+      },
+      {
+        "start": "07:53:50",
+        "end": "07:56:46"
+      },
+      {
+        "start": "07:57:36",
+        "end": "07:59:58"
+      }
+    ]
+  },
+  "errors": [],
+  "checked_at": "2026-11-18T01:24:54.209093+00:00",
+  "role": "marking",
+  "api_request_attempted": true,
+  "model_response_received": true,
+  "action_executed": false,
+  "requested_model": "qwen/qwen3.5-27b",
+  "response_model": "qwen/qwen3.5-27b",
+  "provider": "Alibaba",
+  "response_id": "gen-1794965065-hO6mkQEVsokufr9abatq",
+  "finish_reason": "stop",
+  "elapsed_seconds": 28.940894299999854,
+  "usage": {
+    "prompt_tokens": 52836,
+    "completion_tokens": 160,
+    "total_tokens": 52996,
+    "cost": 0.01055262,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01055262,
+      "upstream_inference_prompt_cost": 0.01030302,
+      "upstream_inference_completions_cost": 0.0002496
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

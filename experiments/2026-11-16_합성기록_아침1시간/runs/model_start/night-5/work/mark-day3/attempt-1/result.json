@@ -1,0 +1,68 @@
+{
+  "status": "valid",
+  "raw_response": "{\n  \"candidates\": [\n    {\n      \"state\": \"waking_up\",\n      \"candidate\": \"Person is walking over to the window\",\n      \"times\": [\"07:03:04\"]\n    },\n    {\n      \"state\": \"waking_up\",\n      \"candidate\": \"Person is switching on the main room light\",\n      \"times\": [\"07:03:00\"]\n    }\n  ],\n  \"actions\": [],\n  \"unseen\": [\n    {\n      \"start\": \"07:03:40\",\n      \"end\": \"07:10:52\"\n    },\n    {\n      \"start\": \"07:52:30\",\n      \"end\": \"07:59:58\"\n    }\n  ]\n}",
+  "output": {
+    "candidates": [
+      {
+        "state": "waking_up",
+        "candidate": "Person is walking over to the window",
+        "times": [
+          "07:03:04"
+        ]
+      },
+      {
+        "state": "waking_up",
+        "candidate": "Person is switching on the main room light",
+        "times": [
+          "07:03:00"
+        ]
+      }
+    ],
+    "actions": [],
+    "unseen": [
+      {
+        "start": "07:03:40",
+        "end": "07:10:52"
+      },
+      {
+        "start": "07:52:30",
+        "end": "07:59:58"
+      }
+    ]
+  },
+  "errors": [],
+  "checked_at": "2026-11-18T01:27:24.921578+00:00",
+  "role": "marking",
+  "api_request_attempted": true,
+  "model_response_received": true,
+  "action_executed": false,
+  "requested_model": "qwen/qwen3.5-27b",
+  "response_model": "qwen/qwen3.5-27b",
+  "provider": "Alibaba",
+  "response_id": "gen-1794965215-V1RxWqqlO1jLJ9OeZh8D",
+  "finish_reason": "stop",
+  "elapsed_seconds": 29.671199700000216,
+  "usage": {
+    "prompt_tokens": 52762,
+    "completion_tokens": 192,
+    "total_tokens": 52954,
+    "cost": 0.01058811,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01058811,
+      "upstream_inference_prompt_cost": 0.01028859,
+      "upstream_inference_completions_cost": 0.00029952
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}
