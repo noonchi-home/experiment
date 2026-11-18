@@ -1,0 +1,47 @@
+{
+  "night": 5,
+  "states": 5,
+  "candidates": 9,
+  "passed": [
+    {
+      "state": "having_breakfast",
+      "action": "Pick up the bowl and place it in the dishwasher.",
+      "candidate": "Person is seated at the dining table resting for a moment after eating"
+    },
+    {
+      "state": "having_breakfast",
+      "action": "Pick up the can and place it next to the person.",
+      "candidate": "Person is gathering the bowl and the cup from the table"
+    },
+    {
+      "state": "having_breakfast",
+      "action": "Pick up the can and place it next to the person.",
+      "candidate": "Person is seated at the dining table resting for a moment after eating"
+    },
+    {
+      "state": "having_breakfast",
+      "action": "Pick up the cup and place it in the dishwasher.",
+      "candidate": "Person is seated at the dining table resting for a moment after eating"
+    },
+    {
+      "state": "having_breakfast",
+      "action": "Pick up the cup and place it in the dishwasher.",
+      "candidate": "Person sets the empty cup down on the table"
+    },
+    {
+      "state": "relaxing_on_sofa",
+      "action": "Pick up the can and place it in the designated storage area.",
+      "candidate": "Person has finished the coffee and set the empty can down"
+    },
+    {
+      "state": "relaxing_on_sofa",
+      "action": "Pick up the can and place it in the designated storage area.",
+      "candidate": "Person turns off the TV with the remote"
+    },
+    {
+      "state": "waking_up",
+      "action": "Open the curtains.",
+      "candidate": "Person is switching on the main room light"
+    }
+  ]
+}

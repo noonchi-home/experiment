@@ -1,0 +1,283 @@
+{
+  "status": "valid",
+  "raw_response": "{\"chunks\": [{\"start\": \"20:00:00\", \"end\": \"20:00:47\", \"text\": \"Eating from a bowl with a spoon at the desk, with a glass of water and various items like a laptop, notebook, or phone nearby.\"}, {\"start\": \"20:00:48\", \"end\": \"20:00:51\", \"text\": \"Drinking from a glass mug of water while sitting at the desk.\"}, {\"start\": \"20:00:52\", \"end\": \"20:01:08\", \"text\": \"Eating from a bowl with a spoon at the desk, with a glass of water and sometimes a notebook or phone nearby.\"}, {\"start\": \"20:01:09\", \"end\": \"20:01:10\", \"text\": \"Taking the last spoonful from the bowl at the desk.\"}, {\"start\": \"20:01:11\", \"end\": \"20:01:38\", \"text\": \"Sitting at the desk with hands resting on the table, looking ahead, with an empty bowl and a glass of water nearby.\"}, {\"start\": \"20:01:39\", \"end\": \"20:01:40\", \"text\": \"Picking up the empty bowl with the spoon in it at the desk.\"}, {\"start\": \"20:01:41\", \"end\": \"20:01:42\", \"text\": \"Standing at the desk holding the empty bowl.\"}, {\"start\": \"20:01:43\", \"end\": \"20:01:44\", \"text\": \"Walking away from the desk towards the kitchen area carrying the empty bowl.\"}, {\"start\": \"20:01:45\", \"end\": \"20:01:51\", \"text\": \"Out of view, leaving a glass of water and a laptop on the desk; sound of bowl being placed in dishwasher heard.\"}, {\"start\": \"20:01:52\", \"end\": \"20:01:53\", \"text\": \"Walking back to the desk with a can of coffee in hand.\"}, {\"start\": \"20:01:54\", \"end\": \"20:01:54\", \"text\": \"Sitting down at the desk and placing a can of coffee on the table.\"}, {\"start\": \"20:01:55\", \"end\": \"20:01:56\", \"text\": \"Opening a can of coffee while seated at the desk.\"}, {\"start\": \"20:01:57\", \"end\": \"20:02:00\", \"text\": \"Drinking from a can of coffee while using a laptop at the desk.\"}, {\"start\": \"20:02:01\", \"end\": \"20:02:08\", \"text\": \"Using a smartphone at the desk, with a can of coffee and a glass of water nearby.\"}, {\"start\": \"20:02:09\", \"end\": \"20:02:11\", \"text\": \"Drinking from a can of coffee while sitting at the desk.\"}, {\"start\": \"20:02:12\", \"end\": \"20:02:27\", \"text\": \"Using a smartphone at the desk, with a can of coffee and a glass of water nearby.\"}, {\"start\": \"20:02:28\", \"end\": \"20:02:30\", \"text\": \"Drinking from a can of coffee while working on a laptop at the desk.\"}, {\"start\": \"20:02:31\", \"end\": \"20:02:31\", \"text\": \"Setting an empty coffee can down on the desk after finishing drinking.\"}, {\"start\": \"20:02:32\", \"end\": \"20:02:57\", \"text\": \"Working on a laptop at the desk, with an empty coffee can and a glass of water nearby.\"}, {\"start\": \"20:02:58\", \"end\": \"20:02:58\", \"text\": \"Picking up the empty coffee can from the desk.\"}, {\"start\": \"20:02:59\", \"end\": \"20:03:00\", \"text\": \"Standing up from the desk holding the empty can.\"}, {\"start\": \"20:03:01\", \"end\": \"20:03:02\", \"text\": \"Walking away from the desk holding the empty can.\"}, {\"start\": \"20:03:03\", \"end\": \"20:03:08\", \"text\": \"Out of view, leaving a glass of water and a laptop on the desk; sound of can being put away heard.\"}, {\"start\": \"20:03:09\", \"end\": \"20:03:10\", \"text\": \"Returning to the desk area empty-handed.\"}, {\"start\": \"20:03:11\", \"end\": \"20:03:20\", \"text\": \"Typing on a laptop at the desk, with a glass of water and sometimes a notebook nearby.\"}, {\"start\": \"20:03:21\", \"end\": \"20:03:27\", \"text\": \"Writing in a notebook with a pen at the desk, with a glass of water and a computer mouse nearby.\"}, {\"start\": \"20:03:28\", \"end\": \"20:03:28\", \"text\": \"Finishing writing in a notebook and placing the pen on top of it.\"}, {\"start\": \"20:03:29\", \"end\": \"20:03:31\", \"text\": \"Drinking from a glass of water while sitting at the desk.\"}, {\"start\": \"20:03:32\", \"end\": \"20:03:32\", \"text\": \"Placing a glass of water back on the table after drinking.\"}, {\"start\": \"20:03:33\", \"end\": \"20:03:33\", \"text\": \"Writing in a notebook with a pen at the desk, with a glass of water nearby.\"}, {\"start\": \"20:03:34\", \"end\": \"20:03:34\", \"text\": \"Using a computer mouse at the desk.\"}, {\"start\": \"20:03:35\", \"end\": \"20:03:41\", \"text\": \"Writing in a notebook with a pen at the desk, with a glass of water nearby.\"}, {\"start\": \"20:03:42\", \"end\": \"20:03:44\", \"text\": \"Drinking from a glass of water while sitting at the desk.\"}, {\"start\": \"20:03:45\", \"end\": \"20:03:45\", \"text\": \"Placing a glass of water back on the table after drinking.\"}, {\"start\": \"20:03:46\", \"end\": \"20:03:55\", \"text\": \"Writing in a notebook with a pen at the desk, with a glass of water and sometimes a phone nearby.\"}, {\"start\": \"20:03:56\", \"end\": \"20:03:56\", \"text\": \"Holding a pen and looking up from a notebook at the desk.\"}, {\"start\": \"20:03:57\", \"end\": \"20:04:00\", \"text\": \"Drinking from a glass mug while sitting at the desk with a notebook.\"}, {\"start\": \"20:04:01\", \"end\": \"20:04:02\", \"text\": \"Placing a glass cup back on the desk after drinking.\"}, {\"start\": \"20:04:03\", \"end\": \"20:04:03\", \"text\": \"Writing in a notebook with a pen at the desk, with a glass mug nearby.\"}, {\"start\": \"20:04:04\", \"end\": \"20:04:08\", \"text\": \"Stretching their arm at the desk after drinking from a glass mug.\"}, {\"start\": \"20:04:09\", \"end\": \"20:04:10\", \"text\": \"Reaching for a notebook or mouse to resume work after stretching.\"}, {\"start\": \"20:04:11\", \"end\": \"20:04:21\", \"text\": \"Typing on a laptop at the desk, with an empty glass mug, notebook, and pen nearby.\"}, {\"start\": \"20:04:22\", \"end\": \"20:04:22\", \"text\": \"Picking up an empty glass mug from the desk.\"}, {\"start\": \"20:04:23\", \"end\": \"20:04:23\", \"text\": \"Standing and holding a glass mug.\"}, {\"start\": \"20:04:24\", \"end\": \"20:04:25\", \"text\": \"Walking away from the desk carrying an empty glass mug.\"}, {\"start\": \"20:04:26\", \"end\": \"20:04:27\", \"text\": \"Out of view carrying an empty glass mug; sound of glass being placed in dishwasher heard.\"}, {\"start\": \"20:04:28\", \"end\": \"20:04:29\", \"text\": \"Returning to the desk and leaning over the laptop with a notebook and pen nearby.\"}, {\"start\": \"20:04:30\", \"end\": \"20:04:47\", \"text\": \"Typing on a laptop at the desk, with an open notebook and sometimes a smartphone nearby.\"}]}",
+  "output": {
+    "chunks": [
+      {
+        "start": "20:00:00",
+        "end": "20:00:47",
+        "text": "Eating from a bowl with a spoon at the desk, with a glass of water and various items like a laptop, notebook, or phone nearby."
+      },
+      {
+        "start": "20:00:48",
+        "end": "20:00:51",
+        "text": "Drinking from a glass mug of water while sitting at the desk."
+      },
+      {
+        "start": "20:00:52",
+        "end": "20:01:08",
+        "text": "Eating from a bowl with a spoon at the desk, with a glass of water and sometimes a notebook or phone nearby."
+      },
+      {
+        "start": "20:01:09",
+        "end": "20:01:10",
+        "text": "Taking the last spoonful from the bowl at the desk."
+      },
+      {
+        "start": "20:01:11",
+        "end": "20:01:38",
+        "text": "Sitting at the desk with hands resting on the table, looking ahead, with an empty bowl and a glass of water nearby."
+      },
+      {
+        "start": "20:01:39",
+        "end": "20:01:40",
+        "text": "Picking up the empty bowl with the spoon in it at the desk."
+      },
+      {
+        "start": "20:01:41",
+        "end": "20:01:42",
+        "text": "Standing at the desk holding the empty bowl."
+      },
+      {
+        "start": "20:01:43",
+        "end": "20:01:44",
+        "text": "Walking away from the desk towards the kitchen area carrying the empty bowl."
+      },
+      {
+        "start": "20:01:45",
+        "end": "20:01:51",
+        "text": "Out of view, leaving a glass of water and a laptop on the desk; sound of bowl being placed in dishwasher heard."
+      },
+      {
+        "start": "20:01:52",
+        "end": "20:01:53",
+        "text": "Walking back to the desk with a can of coffee in hand."
+      },
+      {
+        "start": "20:01:54",
+        "end": "20:01:54",
+        "text": "Sitting down at the desk and placing a can of coffee on the table."
+      },
+      {
+        "start": "20:01:55",
+        "end": "20:01:56",
+        "text": "Opening a can of coffee while seated at the desk."
+      },
+      {
+        "start": "20:01:57",
+        "end": "20:02:00",
+        "text": "Drinking from a can of coffee while using a laptop at the desk."
+      },
+      {
+        "start": "20:02:01",
+        "end": "20:02:08",
+        "text": "Using a smartphone at the desk, with a can of coffee and a glass of water nearby."
+      },
+      {
+        "start": "20:02:09",
+        "end": "20:02:11",
+        "text": "Drinking from a can of coffee while sitting at the desk."
+      },
+      {
+        "start": "20:02:12",
+        "end": "20:02:27",
+        "text": "Using a smartphone at the desk, with a can of coffee and a glass of water nearby."
+      },
+      {
+        "start": "20:02:28",
+        "end": "20:02:30",
+        "text": "Drinking from a can of coffee while working on a laptop at the desk."
+      },
+      {
+        "start": "20:02:31",
+        "end": "20:02:31",
+        "text": "Setting an empty coffee can down on the desk after finishing drinking."
+      },
+      {
+        "start": "20:02:32",
+        "end": "20:02:57",
+        "text": "Working on a laptop at the desk, with an empty coffee can and a glass of water nearby."
+      },
+      {
+        "start": "20:02:58",
+        "end": "20:02:58",
+        "text": "Picking up the empty coffee can from the desk."
+      },
+      {
+        "start": "20:02:59",
+        "end": "20:03:00",
+        "text": "Standing up from the desk holding the empty can."
+      },
+      {
+        "start": "20:03:01",
+        "end": "20:03:02",
+        "text": "Walking away from the desk holding the empty can."
+      },
+      {
+        "start": "20:03:03",
+        "end": "20:03:08",
+        "text": "Out of view, leaving a glass of water and a laptop on the desk; sound of can being put away heard."
+      },
+      {
+        "start": "20:03:09",
+        "end": "20:03:10",
+        "text": "Returning to the desk area empty-handed."
+      },
+      {
+        "start": "20:03:11",
+        "end": "20:03:20",
+        "text": "Typing on a laptop at the desk, with a glass of water and sometimes a notebook nearby."
+      },
+      {
+        "start": "20:03:21",
+        "end": "20:03:27",
+        "text": "Writing in a notebook with a pen at the desk, with a glass of water and a computer mouse nearby."
+      },
+      {
+        "start": "20:03:28",
+        "end": "20:03:28",
+        "text": "Finishing writing in a notebook and placing the pen on top of it."
+      },
+      {
+        "start": "20:03:29",
+        "end": "20:03:31",
+        "text": "Drinking from a glass of water while sitting at the desk."
+      },
+      {
+        "start": "20:03:32",
+        "end": "20:03:32",
+        "text": "Placing a glass of water back on the table after drinking."
+      },
+      {
+        "start": "20:03:33",
+        "end": "20:03:33",
+        "text": "Writing in a notebook with a pen at the desk, with a glass of water nearby."
+      },
+      {
+        "start": "20:03:34",
+        "end": "20:03:34",
+        "text": "Using a computer mouse at the desk."
+      },
+      {
+        "start": "20:03:35",
+        "end": "20:03:41",
+        "text": "Writing in a notebook with a pen at the desk, with a glass of water nearby."
+      },
+      {
+        "start": "20:03:42",
+        "end": "20:03:44",
+        "text": "Drinking from a glass of water while sitting at the desk."
+      },
+      {
+        "start": "20:03:45",
+        "end": "20:03:45",
+        "text": "Placing a glass of water back on the table after drinking."
+      },
+      {
+        "start": "20:03:46",
+        "end": "20:03:55",
+        "text": "Writing in a notebook with a pen at the desk, with a glass of water and sometimes a phone nearby."
+      },
+      {
+        "start": "20:03:56",
+        "end": "20:03:56",
+        "text": "Holding a pen and looking up from a notebook at the desk."
+      },
+      {
+        "start": "20:03:57",
+        "end": "20:04:00",
+        "text": "Drinking from a glass mug while sitting at the desk with a notebook."
+      },
+      {
+        "start": "20:04:01",
+        "end": "20:04:02",
+        "text": "Placing a glass cup back on the desk after drinking."
+      },
+      {
+        "start": "20:04:03",
+        "end": "20:04:03",
+        "text": "Writing in a notebook with a pen at the desk, with a glass mug nearby."
+      },
+      {
+        "start": "20:04:04",
+        "end": "20:04:08",
+        "text": "Stretching their arm at the desk after drinking from a glass mug."
+      },
+      {
+        "start": "20:04:09",
+        "end": "20:04:10",
+        "text": "Reaching for a notebook or mouse to resume work after stretching."
+      },
+      {
+        "start": "20:04:11",
+        "end": "20:04:21",
+        "text": "Typing on a laptop at the desk, with an empty glass mug, notebook, and pen nearby."
+      },
+      {
+        "start": "20:04:22",
+        "end": "20:04:22",
+        "text": "Picking up an empty glass mug from the desk."
+      },
+      {
+        "start": "20:04:23",
+        "end": "20:04:23",
+        "text": "Standing and holding a glass mug."
+      },
+      {
+        "start": "20:04:24",
+        "end": "20:04:25",
+        "text": "Walking away from the desk carrying an empty glass mug."
+      },
+      {
+        "start": "20:04:26",
+        "end": "20:04:27",
+        "text": "Out of view carrying an empty glass mug; sound of glass being placed in dishwasher heard."
+      },
+      {
+        "start": "20:04:28",
+        "end": "20:04:29",
+        "text": "Returning to the desk and leaning over the laptop with a notebook and pen nearby."
+      },
+      {
+        "start": "20:04:30",
+        "end": "20:04:47",
+        "text": "Typing on a laptop at the desk, with an open notebook and sometimes a smartphone nearby."
+      }
+    ]
+  },
+  "errors": [],
+  "checked_at": "2026-11-18T07:50:52.686474+00:00",
+  "role": "chunking",
+  "api_request_attempted": true,
+  "model_response_received": true,
+  "action_executed": false,
+  "requested_model": "qwen/qwen3.5-27b",
+  "response_model": "qwen/qwen3.5-27b",
+  "provider": "Alibaba",
+  "response_id": "gen-1794988192-kjgQWA8ku2EfCDQGFkFP",
+  "finish_reason": "stop",
+  "elapsed_seconds": 61.16323520000151,
+  "usage": {
+    "prompt_tokens": 10295,
+    "completion_tokens": 2244,
+    "total_tokens": 12539,
+    "cost": 0.005508165,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.005508165,
+      "upstream_inference_prompt_cost": 0.002007525,
+      "upstream_inference_completions_cost": 0.00350064
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

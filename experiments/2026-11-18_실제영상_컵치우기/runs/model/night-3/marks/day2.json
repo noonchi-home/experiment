@@ -1,0 +1,43 @@
+{
+  "day": 2,
+  "candidates": [
+    {
+      "state": "writing_at_desk",
+      "candidate": "Person places an empty glass cup on the desk after drinking.",
+      "times": [
+        "20:03:32",
+        "20:03:45",
+        "20:04:02"
+      ]
+    },
+    {
+      "state": "writing_at_desk",
+      "candidate": "Person is typing on a laptop with an empty glass cup on the desk.",
+      "times": [
+        "20:04:12"
+      ]
+    },
+    {
+      "state": "writing_at_desk",
+      "candidate": "Person is sitting at the desk with an empty glass mug nearby.",
+      "times": [
+        "20:04:05"
+      ]
+    }
+  ],
+  "actions": [],
+  "unseen": [
+    {
+      "start": "20:01:46",
+      "end": "20:01:51"
+    },
+    {
+      "start": "20:03:03",
+      "end": "20:03:08"
+    },
+    {
+      "start": "20:04:26",
+      "end": "20:04:27"
+    }
+  ]
+}

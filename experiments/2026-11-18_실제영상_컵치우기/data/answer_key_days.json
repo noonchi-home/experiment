@@ -1,0 +1,164 @@
+{
+  "day1": {
+    "sip_water": [
+      "20:00:48"
+    ],
+    "last_bite": "20:01:09",
+    "finished_eating": "20:01:11",
+    "pick_up_bowl": "20:01:31",
+    "out_of_view_1": "20:01:37",
+    "sound_bowl_in_dishwasher": "20:01:40",
+    "can_next_to_person": "20:01:46",
+    "sip_coffee": [
+      "20:01:49",
+      "20:02:01"
+    ],
+    "last_coffee": "20:02:22",
+    "finished_coffee": "20:02:24",
+    "pick_up_can": "20:02:44",
+    "out_of_view_2": "20:02:49",
+    "sound_can_in_storage": "20:02:53",
+    "video": 1,
+    "video_starts_at": "20:03:12",
+    "video_events": {
+      "sips": [
+        [
+          "20:03:13",
+          "20:03:14"
+        ]
+      ],
+      "last_drink": [
+        "20:03:43",
+        "20:03:50"
+      ],
+      "empty_glass_down": "20:03:52",
+      "pick_up": "20:04:23",
+      "leave_view": "20:04:29",
+      "back_without_glass": "20:04:33",
+      "sound_glass_in_dishwasher": "20:04:31"
+    }
+  },
+  "day2": {
+    "sip_water": [
+      "20:00:48"
+    ],
+    "last_bite": "20:01:09",
+    "finished_eating": "20:01:11",
+    "pick_up_bowl": "20:01:39",
+    "out_of_view_1": "20:01:45",
+    "sound_bowl_in_dishwasher": "20:01:48",
+    "can_next_to_person": "20:01:54",
+    "sip_coffee": [
+      "20:01:57",
+      "20:02:09"
+    ],
+    "last_coffee": "20:02:28",
+    "finished_coffee": "20:02:31",
+    "pick_up_can": "20:02:58",
+    "out_of_view_2": "20:03:03",
+    "sound_can_in_storage": "20:03:06",
+    "video": 2,
+    "video_starts_at": "20:03:21",
+    "video_events": {
+      "sips": [
+        [
+          "20:03:30",
+          "20:03:31"
+        ],
+        [
+          "20:03:43",
+          "20:03:44"
+        ]
+      ],
+      "last_drink": [
+        "20:03:58",
+        "20:04:00"
+      ],
+      "empty_glass_down": "20:04:02",
+      "pick_up": "20:04:22",
+      "leave_view": "20:04:24",
+      "back_without_glass": "20:04:27",
+      "sound_glass_in_dishwasher": "20:04:26"
+    }
+  },
+  "day3": {
+    "sip_water": [
+      "20:00:23"
+    ],
+    "last_bite": "20:00:59",
+    "finished_eating": "20:01:01",
+    "pick_up_bowl": "20:01:22",
+    "out_of_view_1": "20:01:28",
+    "sound_bowl_in_dishwasher": "20:01:32",
+    "can_next_to_person": "20:01:39",
+    "sip_coffee": [
+      "20:01:42",
+      "20:01:59",
+      "20:02:14"
+    ],
+    "last_coffee": "20:02:34",
+    "finished_coffee": "20:02:37",
+    "pick_up_can": "20:02:54",
+    "out_of_view_2": "20:02:59",
+    "sound_can_in_storage": "20:03:02",
+    "video": 3,
+    "video_starts_at": "20:03:15",
+    "video_events": {
+      "sips": [
+        [
+          "20:03:15",
+          "20:03:16"
+        ]
+      ],
+      "last_drink": [
+        "20:03:30",
+        "20:03:32"
+      ],
+      "empty_glass_down": "20:03:33",
+      "pick_up": "20:04:25",
+      "leave_view": "20:04:27",
+      "back_without_glass": "20:04:31",
+      "sound_glass_in_dishwasher": "20:04:29"
+    }
+  },
+  "day4": {
+    "sip_water": [
+      "20:00:35"
+    ],
+    "last_bite": "20:01:02",
+    "finished_eating": "20:01:04",
+    "pick_up_bowl": "20:01:17",
+    "out_of_view_1": "20:01:23",
+    "sound_bowl_in_dishwasher": "20:01:28",
+    "can_next_to_person": "20:01:35",
+    "sip_coffee": [
+      "20:01:38",
+      "20:02:05",
+      "20:02:17"
+    ],
+    "last_coffee": "20:02:39",
+    "finished_coffee": "20:02:41",
+    "pick_up_can": "20:03:12",
+    "out_of_view_2": "20:03:17",
+    "sound_can_in_storage": "20:03:20",
+    "video": 4,
+    "video_starts_at": "20:03:34",
+    "video_events": {
+      "sips": [
+        [
+          "20:03:32",
+          "20:03:32"
+        ]
+      ],
+      "last_drink": [
+        "20:03:41",
+        "20:03:43"
+      ],
+      "empty_glass_down": "20:03:44",
+      "pick_up": "20:04:05",
+      "leave_view": "20:04:07",
+      "back_without_glass": "20:04:10",
+      "sound_glass_in_dishwasher": "20:04:09"
+    }
+  }
+}

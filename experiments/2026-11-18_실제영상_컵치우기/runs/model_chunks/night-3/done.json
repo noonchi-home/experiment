@@ -1,0 +1,28 @@
+{
+  "night": 3,
+  "window_seconds": 60,
+  "states": 4,
+  "candidates": 9,
+  "passed": [
+    {
+      "state": "coffee_break_work",
+      "action": "Pick up the can and place it in the designated storage area.",
+      "candidate": "Person types on a laptop with an empty can nearby."
+    },
+    {
+      "state": "eating_at_desk",
+      "action": "Pick up the bowl and place it in the dishwasher.",
+      "candidate": "Person sits at the desk with hands resting after finishing eating."
+    },
+    {
+      "state": "eating_at_desk",
+      "action": "Pick up the bowl and place it in the dishwasher.",
+      "candidate": "Person takes the last spoonful from the bowl."
+    },
+    {
+      "state": "water_break_work",
+      "action": "Pick up the cup and place it in the dishwasher.",
+      "candidate": "Person types on a laptop with an empty glass mug nearby."
+    }
+  ]
+}

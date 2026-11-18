@@ -1,0 +1,64 @@
+{
+  "initial_state": "eating_at_desk",
+  "states": [
+    {
+      "id": "eating_at_desk",
+      "description": "Person is eating a meal at the desk.",
+      "rules": [
+        {
+          "trigger": "Person has finished eating and an empty bowl is on the table. or Person is resting hands on the table with an empty bowl nearby. or Person is sitting at the desk with an empty bowl in front of them.",
+          "action": "Pick up the bowl and place it in the dishwasher."
+        }
+      ],
+      "next": [
+        {
+          "to": "working_with_coffee",
+          "on": "Person returns to desk holding a can of coffee."
+        }
+      ]
+    },
+    {
+      "id": "working_with_coffee",
+      "description": "Person is working at the desk while drinking coffee.",
+      "rules": [
+        {
+          "trigger": "Person sets an empty can on the desk after drinking. or Person is typing on a laptop with an empty can on the desk. or Person is focused on a laptop with an empty coffee can on the desk.",
+          "action": "Pick up the can and place it in the designated storage area."
+        }
+      ],
+      "next": [
+        {
+          "to": "working_with_water",
+          "on": "Person returns to desk empty-handed."
+        }
+      ]
+    },
+    {
+      "id": "working_with_water",
+      "description": "Person is working at the desk while drinking water.",
+      "rules": [
+        {
+          "trigger": "Person places an empty glass cup on the desk after drinking. or Person is typing on a laptop with an empty glass cup on the desk. or Person is sitting at the desk with an empty glass mug nearby.",
+          "action": "Pick up the cup and place it in the dishwasher."
+        }
+      ],
+      "next": [
+        {
+          "to": "writing_at_desk",
+          "on": "Person sits down to write in a notebook."
+        }
+      ]
+    },
+    {
+      "id": "writing_at_desk",
+      "description": "Person is writing in a notebook at the desk.",
+      "rules": [],
+      "next": [
+        {
+          "to": "working_with_water",
+          "on": "Person resumes typing on a laptop."
+        }
+      ]
+    }
+  ]
+}

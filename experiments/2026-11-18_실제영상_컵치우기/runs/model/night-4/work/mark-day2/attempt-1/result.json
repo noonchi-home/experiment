@@ -1,0 +1,86 @@
+{
+  "status": "valid",
+  "raw_response": "{\"candidates\": [{\"state\": \"working_with_coffee\", \"candidate\": \"Person is sitting at the desk with an empty can on the desk.\", \"times\": [\"20:02:31\"]}, {\"state\": \"working_with_coffee\", \"candidate\": \"Person is working on a laptop with an empty can on the desk.\", \"times\": [\"20:02:33\"]}, {\"state\": \"working_with_water\", \"candidate\": \"Person is sitting at the desk with an empty glass cup on the desk.\", \"times\": [\"20:04:05\"]}, {\"state\": \"working_with_water\", \"candidate\": \"Person is working at the desk with an empty glass cup on the table.\", \"times\": [\"20:04:12\"]}], \"actions\": [], \"unseen\": [{\"start\": \"20:01:46\", \"end\": \"20:01:51\"}, {\"start\": \"20:03:03\", \"end\": \"20:03:08\"}, {\"start\": \"20:04:26\", \"end\": \"20:04:27\"}]}",
+  "output": {
+    "candidates": [
+      {
+        "state": "working_with_coffee",
+        "candidate": "Person is sitting at the desk with an empty can on the desk.",
+        "times": [
+          "20:02:31"
+        ]
+      },
+      {
+        "state": "working_with_coffee",
+        "candidate": "Person is working on a laptop with an empty can on the desk.",
+        "times": [
+          "20:02:33"
+        ]
+      },
+      {
+        "state": "working_with_water",
+        "candidate": "Person is sitting at the desk with an empty glass cup on the desk.",
+        "times": [
+          "20:04:05"
+        ]
+      },
+      {
+        "state": "working_with_water",
+        "candidate": "Person is working at the desk with an empty glass cup on the table.",
+        "times": [
+          "20:04:12"
+        ]
+      }
+    ],
+    "actions": [],
+    "unseen": [
+      {
+        "start": "20:01:46",
+        "end": "20:01:51"
+      },
+      {
+        "start": "20:03:03",
+        "end": "20:03:08"
+      },
+      {
+        "start": "20:04:26",
+        "end": "20:04:27"
+      }
+    ]
+  },
+  "errors": [],
+  "checked_at": "2026-11-18T06:49:07.647799+00:00",
+  "role": "marking",
+  "api_request_attempted": true,
+  "model_response_received": true,
+  "action_executed": false,
+  "requested_model": "qwen/qwen3.5-27b",
+  "response_model": "qwen/qwen3.5-27b",
+  "provider": "Alibaba",
+  "response_id": "gen-1794984536-HMV5SmVETiCwSnzmnYmz",
+  "finish_reason": "stop",
+  "elapsed_seconds": 11.610102499998902,
+  "usage": {
+    "prompt_tokens": 10757,
+    "completion_tokens": 255,
+    "total_tokens": 11012,
+    "cost": 0.002495415,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.002495415,
+      "upstream_inference_prompt_cost": 0.002097615,
+      "upstream_inference_completions_cost": 0.0003978
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

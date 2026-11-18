@@ -1,0 +1,102 @@
+{
+  "day": 2,
+  "candidates": [
+    {
+      "state": "eating_at_desk",
+      "candidate": "Person has finished eating and an empty bowl is on the table.",
+      "times": [
+        "20:01:11"
+      ]
+    },
+    {
+      "state": "eating_at_desk",
+      "candidate": "Person is resting hands on the table with an empty bowl nearby.",
+      "times": [
+        "20:01:12"
+      ]
+    },
+    {
+      "state": "eating_at_desk",
+      "candidate": "Person is sitting at the desk with an empty bowl in front of them.",
+      "times": [
+        "20:01:11"
+      ]
+    },
+    {
+      "state": "working_with_coffee",
+      "candidate": "Person sets an empty can on the desk after drinking.",
+      "times": [
+        "20:02:31"
+      ]
+    },
+    {
+      "state": "working_with_coffee",
+      "candidate": "Person is typing on a laptop with an empty can on the desk.",
+      "times": [
+        "20:02:33"
+      ]
+    },
+    {
+      "state": "working_with_coffee",
+      "candidate": "Person is focused on a laptop with an empty coffee can on the desk.",
+      "times": [
+        "20:02:32"
+      ]
+    },
+    {
+      "state": "working_with_water",
+      "candidate": "Person places an empty glass cup on the desk after drinking.",
+      "times": [
+        "20:04:02"
+      ]
+    },
+    {
+      "state": "working_with_water",
+      "candidate": "Person is typing on a laptop with an empty glass cup on the desk.",
+      "times": [
+        "20:04:12"
+      ]
+    },
+    {
+      "state": "working_with_water",
+      "candidate": "Person is sitting at the desk with an empty glass mug nearby.",
+      "times": [
+        "20:04:05"
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "action": "Pick up the bowl and place it in the dishwasher.",
+      "times": [
+        "20:01:39"
+      ]
+    },
+    {
+      "action": "Pick up the can and place it in the designated storage area.",
+      "times": [
+        "20:02:58"
+      ]
+    },
+    {
+      "action": "Pick up the cup and place it in the dishwasher.",
+      "times": [
+        "20:04:22"
+      ]
+    }
+  ],
+  "unseen": [
+    {
+      "start": "20:01:46",
+      "end": "20:01:51"
+    },
+    {
+      "start": "20:03:03",
+      "end": "20:03:08"
+    },
+    {
+      "start": "20:04:26",
+      "end": "20:04:27"
+    }
+  ]
+}

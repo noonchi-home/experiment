@@ -1,0 +1,9 @@
+
+         
+
+         
+
+         
+
+         
+{"id":"gen-1794984495-thKhJH2XehZBbstyIEy5","object":"chat.completion","created":1794984495,"model":"qwen/qwen3.5-27b","provider":"Alibaba","system_fingerprint":null,"service_tier":null,"choices":[{"index":0,"logprobs":null,"finish_reason":"stop","native_finish_reason":"stop","message":{"role":"assistant","content":"{\"candidates\": [{\"state\": \"working_with_coffee\", \"candidate\": \"Person is sitting at the desk with an empty can on the desk.\", \"times\": [\"20:02:24\"]}, {\"state\": \"working_with_coffee\", \"candidate\": \"Person is working on a laptop with an empty can on the desk.\", \"times\": [\"20:02:25\"]}, {\"state\": \"working_with_water\", \"candidate\": \"Person is sitting at the desk with an empty glass cup on the desk.\", \"times\": [\"20:03:59\"]}, {\"state\": \"working_with_water\", \"candidate\": \"Person is working at the desk with an empty glass cup on the table.\", \"times\": [\"20:04:00\"]}], \"actions\": [], \"unseen\": [{\"start\": \"20:01:37\", \"end\": \"20:01:43\"}, {\"start\": \"20:02:49\", \"end\": \"20:02:57\"}]}","refusal":null,"reasoning":null}}],"usage":{"prompt_tokens":10524,"completion_tokens":229,"total_tokens":10753,"cost":0.00240942,"is_byok":false,"prompt_tokens_details":{"cached_tokens":0,"cache_write_tokens":0,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.00240942,"upstream_inference_prompt_cost":0.00205218,"upstream_inference_completions_cost":0.00035724},"completion_tokens_details":{"reasoning_tokens":0,"image_tokens":0,"audio_tokens":0}}}

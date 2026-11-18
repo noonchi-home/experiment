@@ -1,0 +1,30 @@
+{
+  "day": 3,
+  "candidates": [
+    {
+      "state": "waking_up",
+      "candidate": "Person is walking over to the window",
+      "times": [
+        "07:03:04"
+      ]
+    },
+    {
+      "state": "waking_up",
+      "candidate": "Person is switching on the main room light",
+      "times": [
+        "07:03:00"
+      ]
+    }
+  ],
+  "actions": [],
+  "unseen": [
+    {
+      "start": "07:03:40",
+      "end": "07:10:52"
+    },
+    {
+      "start": "07:52:30",
+      "end": "07:59:58"
+    }
+  ]
+}

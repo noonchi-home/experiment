@@ -1,0 +1,148 @@
+{
+  "day": 2,
+  "candidates": [
+    {
+      "state": "waking_up",
+      "candidate": "Person sits up in bed",
+      "times": [
+        "07:02:46"
+      ]
+    },
+    {
+      "state": "waking_up",
+      "candidate": "Person turns on the room light",
+      "times": [
+        "07:03:08"
+      ]
+    },
+    {
+      "state": "getting_ready",
+      "candidate": "Person has walked up to the window",
+      "times": [
+        "07:20:58"
+      ]
+    },
+    {
+      "state": "having_breakfast",
+      "candidate": "Person is wiping their mouth with a napkin",
+      "times": [
+        "07:30:36",
+        "07:32:08",
+        "07:34:24"
+      ]
+    },
+    {
+      "state": "having_breakfast",
+      "candidate": "Person is seated at the dining table resting for a moment after eating",
+      "times": [
+        "07:33:58"
+      ]
+    },
+    {
+      "state": "having_breakfast",
+      "candidate": "Person sets the empty cup down on the table",
+      "times": [
+        "07:33:06"
+      ]
+    },
+    {
+      "state": "having_breakfast",
+      "candidate": "Person places the cup in the dishwasher",
+      "times": [
+        "07:36:00"
+      ]
+    },
+    {
+      "state": "relaxing_on_sofa",
+      "candidate": "Person turns off the TV with the remote",
+      "times": [
+        "07:51:00"
+      ]
+    },
+    {
+      "state": "relaxing_on_sofa",
+      "candidate": "Person has finished the coffee and set the empty can down",
+      "times": [
+        "07:49:46"
+      ]
+    },
+    {
+      "state": "relaxing_on_sofa",
+      "candidate": "Person is standing up from the sofa",
+      "times": [
+        "07:51:06"
+      ]
+    },
+    {
+      "state": "leaving_house",
+      "candidate": "Person is slipping their arms into a jacket",
+      "times": [
+        "07:56:20"
+      ]
+    },
+    {
+      "state": "leaving_house",
+      "candidate": "Person has just shouldered their bag",
+      "times": [
+        "07:56:56"
+      ]
+    },
+    {
+      "state": "leaving_house",
+      "candidate": "Person is heading toward the wall switch by the door",
+      "times": [
+        "07:57:06"
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "action": "Open the curtains.",
+      "times": [
+        "07:20:58"
+      ]
+    },
+    {
+      "action": "Pick up the bowl and place it in the dishwasher.",
+      "times": [
+        "07:35:46"
+      ]
+    },
+    {
+      "action": "Pick up the can and place it in the designated storage area.",
+      "times": [
+        "07:51:04"
+      ]
+    },
+    {
+      "action": "Pick up the can and place it next to the person.",
+      "times": []
+    },
+    {
+      "action": "Pick up the cup and place it in the dishwasher.",
+      "times": [
+        "07:35:46"
+      ]
+    },
+    {
+      "action": "Turn off the room light.",
+      "times": [
+        "07:57:06"
+      ]
+    }
+  ],
+  "unseen": [
+    {
+      "start": "07:09:42",
+      "end": "07:17:28"
+    },
+    {
+      "start": "07:52:52",
+      "end": "07:56:18"
+    },
+    {
+      "start": "07:57:20",
+      "end": "07:59:58"
+    }
+  ]
+}

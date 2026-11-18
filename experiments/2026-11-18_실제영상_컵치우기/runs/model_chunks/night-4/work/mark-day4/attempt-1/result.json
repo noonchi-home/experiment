@@ -1,0 +1,134 @@
+{
+  "status": "valid",
+  "raw_response": "{\n  \"candidates\": [\n    {\n      \"state\": \"eating_at_desk\",\n      \"candidate\": \"Person takes the last spoonful from the bowl.\",\n      \"times\": [\"20:01:02\"]\n    },\n    {\n      \"state\": \"eating_at_desk\",\n      \"candidate\": \"Person sits at the desk with hands resting after finishing eating.\",\n      \"times\": [\"20:01:04\"]\n    },\n    {\n      \"state\": \"eating_at_desk\",\n      \"candidate\": \"Person uses a smartphone at the desk with an empty bowl nearby.\",\n      \"times\": []\n    },\n    {\n      \"state\": \"coffee_break_work\",\n      \"candidate\": \"Person types on a laptop with an empty can nearby.\",\n      \"times\": [\"20:03:26\"]\n    },\n    {\n      \"state\": \"coffee_break_work\",\n      \"candidate\": \"Person uses a smartphone at the desk with an empty can nearby.\",\n      \"times\": []\n    },\n    {\n      \"state\": \"coffee_break_work\",\n      \"candidate\": \"Person sets an empty can of coffee down on the desk.\",\n      \"times\": [\"20:02:41\"]\n    },\n    {\n      \"state\": \"water_break_work\",\n      \"candidate\": \"Person types on a laptop with an empty glass mug nearby.\",\n      \"times\": [\"20:03:58\"]\n    },\n    {\n      \"state\": \"water_break_work\",\n      \"candidate\": \"Person uses a smartphone at the desk with an empty glass mug nearby.\",\n      \"times\": []\n    },\n    {\n      \"state\": \"water_break_work\",\n      \"candidate\": \"Person returns to the desk empty-handed.\",\n      \"times\": [\"20:03:24\"]\n    }\n  ],\n  \"actions\": [\n    {\n      \"action\": \"Pick up the bowl and place it in the dishwasher.\",\n      \"times\": [\"20:01:17\"]\n    },\n    {\n      \"action\": \"Pick up the can and place it in the designated storage area.\",\n      \"times\": [\"20:03:12\"]\n    },\n    {\n      \"action\": \"Pick up the can and place it next to the person.\",\n      \"times\": []\n    },\n    {\n      \"action\": \"Pick up the cup and place it in the dishwasher.\",\n      \"times\": [\"20:04:05\"]\n    }\n  ],\n  \"unseen\": [\n    {\n      \"start\": \"20:01:23\",\n      \"end\": \"20:01:32\"\n    },\n    {\n      \"start\": \"20:03:17\",\n      \"end\": \"20:03:23\"\n    }\n  ]\n}",
+  "output": {
+    "candidates": [
+      {
+        "state": "eating_at_desk",
+        "candidate": "Person takes the last spoonful from the bowl.",
+        "times": [
+          "20:01:02"
+        ]
+      },
+      {
+        "state": "eating_at_desk",
+        "candidate": "Person sits at the desk with hands resting after finishing eating.",
+        "times": [
+          "20:01:04"
+        ]
+      },
+      {
+        "state": "eating_at_desk",
+        "candidate": "Person uses a smartphone at the desk with an empty bowl nearby.",
+        "times": []
+      },
+      {
+        "state": "coffee_break_work",
+        "candidate": "Person types on a laptop with an empty can nearby.",
+        "times": [
+          "20:03:26"
+        ]
+      },
+      {
+        "state": "coffee_break_work",
+        "candidate": "Person uses a smartphone at the desk with an empty can nearby.",
+        "times": []
+      },
+      {
+        "state": "coffee_break_work",
+        "candidate": "Person sets an empty can of coffee down on the desk.",
+        "times": [
+          "20:02:41"
+        ]
+      },
+      {
+        "state": "water_break_work",
+        "candidate": "Person types on a laptop with an empty glass mug nearby.",
+        "times": [
+          "20:03:58"
+        ]
+      },
+      {
+        "state": "water_break_work",
+        "candidate": "Person uses a smartphone at the desk with an empty glass mug nearby.",
+        "times": []
+      },
+      {
+        "state": "water_break_work",
+        "candidate": "Person returns to the desk empty-handed.",
+        "times": [
+          "20:03:24"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "action": "Pick up the bowl and place it in the dishwasher.",
+        "times": [
+          "20:01:17"
+        ]
+      },
+      {
+        "action": "Pick up the can and place it in the designated storage area.",
+        "times": [
+          "20:03:12"
+        ]
+      },
+      {
+        "action": "Pick up the can and place it next to the person.",
+        "times": []
+      },
+      {
+        "action": "Pick up the cup and place it in the dishwasher.",
+        "times": [
+          "20:04:05"
+        ]
+      }
+    ],
+    "unseen": [
+      {
+        "start": "20:01:23",
+        "end": "20:01:32"
+      },
+      {
+        "start": "20:03:17",
+        "end": "20:03:23"
+      }
+    ]
+  },
+  "errors": [],
+  "checked_at": "2026-11-18T12:20:45.992290+00:00",
+  "role": "marking",
+  "api_request_attempted": true,
+  "model_response_received": true,
+  "action_executed": false,
+  "requested_model": "qwen/qwen3.5-27b",
+  "response_model": "qwen/qwen3.5-27b",
+  "provider": "Alibaba",
+  "response_id": "gen-1795004425-kJio73QsBIPmngGqswAj",
+  "finish_reason": "stop",
+  "elapsed_seconds": 20.714785800002574,
+  "usage": {
+    "prompt_tokens": 2815,
+    "completion_tokens": 664,
+    "total_tokens": 3479,
+    "cost": 0.001584765,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.001584765,
+      "upstream_inference_prompt_cost": 0.000548925,
+      "upstream_inference_completions_cost": 0.00103584
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

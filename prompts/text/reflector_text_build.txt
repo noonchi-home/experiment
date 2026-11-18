@@ -19,7 +19,7 @@ cans, and the bedside lamp are normally kept. Used cups and bowls go to the dish
 - Available robot tasks: the only actions the robot can perform.
 - Check window: how soon after a candidate the rule's action must come to count as
 following it.
-- Today's record: the robot's observation of the person, one line every 2 seconds
+- Today's record: the robot's observation of the person, one line every {line_step}
 (`HH:MM:SS | sentence`) in time order. Each line describes the scene: the person's
 posture, what they are doing, and things lying around; a line may still mention what
 was done a moment ago. One activity usually fills many lines in a row, and the wording

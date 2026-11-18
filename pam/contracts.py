@@ -239,6 +239,37 @@ def validate_candidate_memory(value: Any) -> dict:
     return memory
 
 
+def validate_chunks(value: Any, within: tuple[str, str, int] | None = None) -> dict:
+    """Chunks of what the person does, in time order and not overlapping.
+
+    With `within` (first line, last line, seconds between lines) every start and end must be
+    the time of a line of the record that was read.
+    """
+    chunks = _object(value, {"chunks"}, "chunks")
+    items = _array(chunks["chunks"], "chunks.chunks")
+    if not items:
+        raise ContractError("chunks.chunks: at least one chunk is required")
+    previous_end = None
+    for index, item in enumerate(items):
+        path = f"chunks.chunks[{index}]"
+        _object(item, {"start", "end", "text"}, path)
+        times = []
+        for name in ("start", "end"):
+            moment = _clock(item[name], f"{path}.{name}")
+            if within is not None:
+                first, last, step = _clock(within[0], "within"), _clock(within[1], "within"), within[2]
+                if not first <= moment <= last or (moment - first) % step:
+                    raise ContractError(f"{path}.{name}: {item[name]} is not the time of a line of the record")
+            times.append(moment)
+        if times[1] < times[0]:
+            raise ContractError(f"{path}: end must not come before start")
+        if previous_end is not None and times[0] <= previous_end:
+            raise ContractError(f"{path}: chunks must follow in time order without overlapping")
+        _text(item["text"], f"{path}.text")
+        previous_end = times[1]
+    return chunks
+
+
 def validate_marks(value: Any, candidates: list[tuple[str, str]], actions: list[str],
                    within: tuple[str, str, int] | None = None) -> dict:
     """Times of every asked (state, candidate) and action exactly once, plus unseen intervals.

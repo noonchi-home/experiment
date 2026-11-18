@@ -1,0 +1,116 @@
+{
+  "status": "valid",
+  "raw_response": "{\n  \"initial_state\": \"eating_at_desk\",\n  \"states\": [\n    {\n      \"id\": \"eating_at_desk\",\n      \"description\": \"Person eats from a bowl at the desk.\",\n      \"rules\": [\n        {\n          \"triggers\": [\n            \"Person takes the last spoonful from the bowl.\",\n            \"Person sits at the desk with hands resting after finishing eating.\",\n            \"Person uses a smartphone at the desk with an empty bowl nearby.\"\n          ],\n          \"action\": \"Pick up the bowl and place it in the dishwasher.\"\n        },\n        {\n          \"triggers\": [\n            \"Person takes the last spoonful from the bowl.\"\n          ],\n          \"action\": \"Pick up the can and place it next to the person.\"\n        }\n      ],\n      \"next\": [\n        {\n          \"to\": \"coffee_break_work\",\n          \"on\": \"Person picks up the empty bowl.\"\n        }\n      ]\n    },\n    {\n      \"id\": \"coffee_break_work\",\n      \"description\": \"Person drinks coffee and works on the laptop at the desk.\",\n      \"rules\": [\n        {\n          \"triggers\": [\n            \"Person types on a laptop with an empty can nearby.\",\n            \"Person uses a smartphone at the desk with an empty can nearby.\",\n            \"Person sets an empty can of coffee down on the desk.\"\n          ],\n          \"action\": \"Pick up the can and place it in the designated storage area.\"\n        }\n      ],\n      \"next\": [\n        {\n          \"to\": \"water_break_work\",\n          \"on\": \"Person picks up the empty can.\"\n        }\n      ]\n    },\n    {\n      \"id\": \"water_break_work\",\n      \"description\": \"Person drinks water and works on the laptop at the desk.\",\n      \"rules\": [\n        {\n          \"triggers\": [\n            \"Person types on a laptop with an empty glass mug nearby.\",\n            \"Person uses a smartphone at the desk with an empty glass mug nearby.\",\n            \"Person returns to the desk empty-handed.\"\n          ],\n          \"action\": \"Pick up the cup and place it in the dishwasher.\"\n        }\n      ],\n      \"next\": [\n        {\n          \"to\": \"note_taking\",\n          \"on\": \"Person lifts an empty glass mug from the desk.\"\n        }\n      ]\n    },\n    {\n      \"id\": \"note_taking\",\n      \"description\": \"Person works at the desk, writing or typing.\",\n      \"rules\": [],\n      \"next\": []\n    }\n  ]\n}",
+  "output": {
+    "initial_state": "eating_at_desk",
+    "states": [
+      {
+        "id": "eating_at_desk",
+        "description": "Person eats from a bowl at the desk.",
+        "rules": [
+          {
+            "triggers": [
+              "Person takes the last spoonful from the bowl.",
+              "Person sits at the desk with hands resting after finishing eating.",
+              "Person uses a smartphone at the desk with an empty bowl nearby."
+            ],
+            "action": "Pick up the bowl and place it in the dishwasher."
+          },
+          {
+            "triggers": [
+              "Person takes the last spoonful from the bowl."
+            ],
+            "action": "Pick up the can and place it next to the person."
+          }
+        ],
+        "next": [
+          {
+            "to": "coffee_break_work",
+            "on": "Person picks up the empty bowl."
+          }
+        ]
+      },
+      {
+        "id": "coffee_break_work",
+        "description": "Person drinks coffee and works on the laptop at the desk.",
+        "rules": [
+          {
+            "triggers": [
+              "Person types on a laptop with an empty can nearby.",
+              "Person uses a smartphone at the desk with an empty can nearby.",
+              "Person sets an empty can of coffee down on the desk."
+            ],
+            "action": "Pick up the can and place it in the designated storage area."
+          }
+        ],
+        "next": [
+          {
+            "to": "water_break_work",
+            "on": "Person picks up the empty can."
+          }
+        ]
+      },
+      {
+        "id": "water_break_work",
+        "description": "Person drinks water and works on the laptop at the desk.",
+        "rules": [
+          {
+            "triggers": [
+              "Person types on a laptop with an empty glass mug nearby.",
+              "Person uses a smartphone at the desk with an empty glass mug nearby.",
+              "Person returns to the desk empty-handed."
+            ],
+            "action": "Pick up the cup and place it in the dishwasher."
+          }
+        ],
+        "next": [
+          {
+            "to": "note_taking",
+            "on": "Person lifts an empty glass mug from the desk."
+          }
+        ]
+      },
+      {
+        "id": "note_taking",
+        "description": "Person works at the desk, writing or typing.",
+        "rules": [],
+        "next": []
+      }
+    ]
+  },
+  "errors": [],
+  "checked_at": "2026-11-18T12:18:07.386367+00:00",
+  "role": "reflector_text",
+  "api_request_attempted": true,
+  "model_response_received": true,
+  "action_executed": false,
+  "requested_model": "qwen/qwen3.5-27b",
+  "response_model": "qwen/qwen3.5-27b",
+  "provider": "Alibaba",
+  "response_id": "gen-1795003949-RdneXUWglLyKxvkynJbL",
+  "finish_reason": "stop",
+  "elapsed_seconds": 338.5884303999992,
+  "usage": {
+    "prompt_tokens": 5482,
+    "completion_tokens": 9650,
+    "total_tokens": 15132,
+    "cost": 0.01612299,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01612299,
+      "upstream_inference_prompt_cost": 0.00106899,
+      "upstream_inference_completions_cost": 0.015054
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 9054,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

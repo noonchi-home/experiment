@@ -1,0 +1,40 @@
+{
+  "day": 3,
+  "candidates": [
+    {
+      "state": "waking_up",
+      "candidate": "Person is standing up from the bed",
+      "times": [
+        "07:02:56"
+      ]
+    },
+    {
+      "state": "waking_up",
+      "candidate": "Person is walking up to the window",
+      "times": [
+        "07:03:04"
+      ]
+    },
+    {
+      "state": "having_breakfast",
+      "candidate": "Person is finished eating",
+      "times": [
+        "07:27:38"
+      ]
+    },
+    {
+      "state": "having_breakfast",
+      "candidate": "Person is taking the dishes over to the kitchen",
+      "times": [
+        "07:29:06"
+      ]
+    }
+  ],
+  "actions": [],
+  "unseen": [
+    {
+      "start": "07:03:40",
+      "end": "07:10:54"
+    }
+  ]
+}

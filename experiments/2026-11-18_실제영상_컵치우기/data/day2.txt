@@ -1,0 +1,288 @@
+20:00:00 | The person is seated at the desk, actively eating from a bowl with a spoon, with a glass mug of water on the table.
+20:00:01 | The person is sitting at the desk, eating from a bowl with a spoon, with a glass mug of water in front of them.
+20:00:02 | The person is sitting at the desk, actively eating from a bowl of food, with a glass mug of water nearby.
+20:00:03 | A person is seated at the desk, actively eating from a bowl with a spoon, with a glass mug of water resting on the table nearby.
+20:00:04 | A person is seated at the desk, eating from a bowl with a spoon, with a glass mug of water in front of them.
+20:00:05 | The person is seated at the desk and actively eating from a bowl of food.
+20:00:06 | The person is seated at the desk actively eating from a bowl with a spoon, while a glass of water and an open notebook sit to their left.
+20:00:07 | The person is sitting at the desk actively eating from a bowl with a spoon, while a laptop sits on the table.
+20:00:08 | The person is sitting at the desk, actively eating from a bowl with a spoon, with a smartphone resting on the table nearby.
+20:00:09 | The person is sitting at the desk, actively eating from a bowl with a spoon, with an open laptop resting nearby.
+20:00:10 | A person is sitting at a desk actively eating from a bowl of food, while a glass of water sits on the desk.
+20:00:11 | The person is seated at the desk eating from a bowl with a spoon, while a glass of water and an open notebook sit on the desk.
+20:00:12 | The person is sitting at the desk, actively eating from a bowl of food, with an open notebook resting on the table nearby.
+20:00:13 | The person is sitting at a desk eating from a bowl with a spoon, while a glass of water sits to their left.
+20:00:14 | The person is sitting at the desk eating from a bowl with a spoon, while a glass of water and an open laptop sit to their left.
+20:00:15 | The person is sitting at the desk, actively eating from a bowl of food, with a glass of water on the table.
+20:00:16 | The person is sitting at a desk actively eating from a bowl of food, while a glass of water sits to their left.
+20:00:17 | The person is sitting at a desk, actively eating from a bowl of food, with a glass of water and an open notebook on the table.
+20:00:18 | The person is seated at the desk actively eating from a bowl of food, while a glass mug of water sits on the table.
+20:00:19 | The person is sitting at the desk, actively eating from a bowl with a spoon, with a phone resting nearby.
+20:00:20 | The person is seated at the desk actively eating from a bowl with a spoon, while a glass mug of water sits to their left.
+20:00:21 | The person is sitting at the desk, eating from a bowl with a spoon, with an open laptop resting on the table nearby.
+20:00:22 | A person is sitting at a desk, actively eating from a bowl of food, with a glass of water and an open notebook on the table.
+20:00:23 | The person is sitting at a desk, actively eating from a bowl with a spoon, with a glass of water and a smartphone resting nearby.
+20:00:24 | The person is sitting at the desk, actively eating from a bowl with a spoon, with a glass of water on the table.
+20:00:25 | The person is seated at the desk, actively eating from a bowl with a spoon, with an open laptop resting on the table nearby.
+20:00:26 | The person is sitting at a desk eating from a bowl with a spoon, while a glass of water and a smartphone sit on the desk.
+20:00:27 | The person is sitting at a desk, eating from a bowl with a spoon, with a glass of water in front of them.
+20:00:28 | The person is seated at the desk actively eating from a bowl of food, while a glass mug of water sits on the desk.
+20:00:29 | The person is sitting at a desk, eating from a bowl while holding a phone in their other hand, with a glass mug of water in front of them.
+20:00:30 | The person is sitting at the desk, eating from a bowl while holding a phone in their other hand, with a glass mug of water resting nearby.
+20:00:31 | The person is sitting at the desk, eating from a bowl while holding a phone in their other hand, with a glass of water resting nearby.
+20:00:32 | The person is seated at the desk, eating from a bowl while holding a phone in their other hand, with a glass of water resting on the table nearby.
+20:00:33 | The person is seated at the desk, eating from a bowl while holding a phone in their other hand, with a glass of water and an open laptop nearby.
+20:00:34 | A person is seated at the desk, eating from a bowl while holding a phone in their other hand, with a glass of water on the table.
+20:00:35 | The person is seated at the desk, eating from a bowl while looking at their phone, with a glass of water and a notebook nearby.
+20:00:36 | The person is sitting at a desk, eating from a bowl while looking at their phone, with an open laptop on the table.
+20:00:37 | The person is seated at the desk, eating from a bowl while holding a phone in their other hand, with a glass of water on the table.
+20:00:38 | The person is sitting at the desk, eating from a bowl while looking at their phone, with a glass of water and an open laptop resting nearby.
+20:00:39 | The person is seated at the desk actively eating from a bowl of food, while a glass of water and a phone sit to their left.
+20:00:40 | A person is sitting at the desk, actively eating from a bowl with a spoon, with a glass of water on the table.
+20:00:41 | The person is seated at the desk eating from a bowl with a spoon, while a glass of water sits on the table.
+20:00:42 | The person is sitting at the desk, actively eating from a bowl of food, with a glass mug of water resting on the table nearby.
+20:00:43 | The person is sitting at the desk, eating from a bowl with a spoon, with a glass of water in front of them.
+20:00:44 | The person is seated at the desk eating from a bowl with a spoon, while a glass mug of water sits nearby.
+20:00:45 | The person is sitting at the desk eating from a bowl with a spoon, while a glass mug of water sits on the table.
+20:00:46 | The person is sitting at the desk and actively eating from a bowl with a spoon.
+20:00:47 | A person is sitting at a desk actively eating from a bowl of food, while a glass of water sits nearby.
+20:00:48 | The person is sitting at a desk and has just reached out to grab the glass of water.
+20:00:49 | The person is holding a glass mug to their mouth and drinking from it.
+20:00:50 | The person is currently holding a glass cup and drinking from it while sitting at the desk.
+20:00:51 | The person is holding a glass mug to their mouth and drinking from it.
+20:00:52 | The person has just taken a drink from a glass of water, which is now resting on the table, and is now actively eating from a bowl of food.
+20:00:53 | The person has finished drinking from the glass, placed it back on the desk, and is now eating from a bowl with a spoon.
+20:00:54 | The person has finished drinking from the glass, placed it back on the desk, and is now actively eating from a bowl of food, with an open notebook nearby.
+20:00:55 | The person has just taken a drink from a glass of water, which is now resting on the table, and is now actively eating from a bowl with a spoon.
+20:00:56 | A person is sitting at the desk and actively eating from a bowl of food.
+20:00:57 | The person is seated at the desk, actively eating from a bowl with a spoon, with a glass mug of water in front of them.
+20:00:58 | The person is sitting at a desk, eating from a bowl with a spoon, with a glass of water and a phone resting nearby.
+20:00:59 | A person is seated at the desk, actively eating from a bowl of food, with a notebook nearby.
+20:01:00 | The person is sitting at a desk actively eating from a bowl of food, while a glass of water and a smartphone sit on the desk.
+20:01:01 | The person is sitting at the desk, actively eating from a bowl of food, with an open laptop resting on the table nearby.
+20:01:02 | The person is sitting at a desk, actively eating from a bowl with a spoon, with a glass of water and an open notebook on the table.
+20:01:03 | The person is seated at the desk, eating from a bowl with a spoon, with a smartphone resting on the table nearby.
+20:01:04 | The person is sitting at the desk actively eating from a bowl of food, while a glass of water and a notebook sit to their left.
+20:01:05 | The person is seated at the desk, eating from a bowl with a spoon, with a glass mug of water resting on the table nearby.
+20:01:06 | A person is seated at the desk, eating from a bowl with a spoon, with a glass of water in front of them.
+20:01:07 | The person is seated at the desk and eating from a bowl with a spoon.
+20:01:08 | A person is sitting at a desk, eating from a bowl with a spoon, with a glass of water in front of them.
+20:01:09 | The person is sitting at the desk and is taking the last spoonful from the bowl.
+20:01:10 | The person is seated at the desk and is taking the last spoonful from the bowl.
+20:01:11 | The person is sitting at the desk with an empty bowl in front of them, appearing to have finished eating.
+20:01:12 | The person has finished eating and set the spoon down in the bowl, and is now looking ahead with their hands resting on the table, with a glass of water nearby.
+20:01:13 | The person has finished eating and set the spoon down in the bowl, and is now looking ahead with their hands resting on the table.
+20:01:14 | The person has finished eating and set the spoon down in the bowl, and is now looking ahead with their hands resting on the table, with a glass of water nearby.
+20:01:15 | The person is sitting at the desk looking ahead with their hands resting on the table, while a used bowl and a glass of water sit on the table.
+20:01:16 | The person is seated at the desk and resting their hands on the table.
+20:01:17 | A person is sitting at the desk resting their hands on the table, while an empty bowl and a glass of water sit on the table.
+20:01:18 | The person is sitting at a desk resting their hands on the table, while a glass mug of water and an open laptop sit on the table.
+20:01:19 | A person is sitting at a desk looking ahead with their hands resting on the table, while a used bowl and a glass of water sit on the desk.
+20:01:20 | The person is sitting at a desk, looking ahead with their hands resting on the table, with an empty bowl and a glass of water in front of them.
+20:01:21 | The person is sitting at a desk looking ahead with their hands resting on the table, while a used bowl and a glass of water sit to their left.
+20:01:22 | The person is sitting at a desk, looking ahead with their hands resting on the table, with a used bowl nearby.
+20:01:23 | The person is sitting at a desk looking ahead with their hands resting on the table, while an empty bowl and a glass of water sit on the desk.
+20:01:24 | A person is sitting at a desk, looking ahead with their hands resting on the table, with a used bowl and a glass of water in front of them.
+20:01:25 | A person is sitting at the desk, resting their hands on the table, with a glass of water resting nearby.
+20:01:26 | The person is seated at the desk, looking ahead with their hands resting on the table, with a used bowl and a glass of water resting on the table nearby.
+20:01:27 | The person is sitting at a desk looking ahead with their hands resting on the table, while an empty bowl and a glass of water sit to their left.
+20:01:28 | The person is sitting at a desk, looking ahead with their hands resting on the table, with a used bowl and a glass mug of water nearby.
+20:01:29 | The person is sitting at a desk resting their hands on the table, while a used bowl and a glass of water sit on the desk.
+20:01:30 | A person is sitting at the desk and looking ahead with their hands resting on the table.
+20:01:31 | The person is seated at the desk, looking ahead with their hands resting on the table, with a used bowl and a glass of water resting on the table nearby.
+20:01:32 | A person is sitting at a desk, resting their hands on the table, with a glass of water resting on the table nearby.
+20:01:33 | The person is seated at the desk, resting their hands on the table, with an empty bowl and a glass mug of water on the table.
+20:01:34 | The person is seated at the desk, looking ahead with their hands resting on the table, with a glass mug of water on the table.
+20:01:35 | The person is sitting at a desk resting their hands on the table, while a used bowl and a glass of water sit on the desk.
+20:01:36 | The person is seated at the desk resting their hands on the table, while an empty bowl and a glass of water sit nearby.
+20:01:37 | A person is sitting at a desk, looking ahead with their hands resting on the table, with a used bowl and a glass of water nearby.
+20:01:38 | The person is sitting at the desk, resting their hands on the table, with a used bowl and a phone in front of them.
+20:01:39 | A person is sitting at a desk and is picking up the empty bowl with the spoon in it.
+20:01:40 | The person is sitting at the desk and is picking up the empty bowl with the spoon in it.
+20:01:41 | The person has stood up from the desk holding the empty bowl.
+20:01:42 | A person is standing at the desk holding the empty bowl.
+20:01:43 | A person has picked up the bowl and is walking away from the desk towards the kitchen area.
+20:01:44 | The person has picked up the bowl and is walking away from the desk towards the kitchen area.
+20:01:45 | The person has left the desk area, leaving a glass mug of water and a laptop on the table.
+20:01:46 | The person is out of view; a glass of water and an open laptop remain on the desk.
+20:01:47 | The person has left the desk area, leaving a glass mug of water and a laptop on the table.
+20:01:48 | The person is absent from the desk, leaving a glass mug of water and an open laptop on the table. The sound of the bowl being placed in the dishwasher comes from the kitchen.
+20:01:49 | The person is out of view; a glass of water and a laptop remain on the desk.
+20:01:50 | The person has left the desk area, leaving a glass of water and an open laptop on the table.
+20:01:51 | The person is absent from the desk, leaving a glass of water and a laptop on the table.
+20:01:52 | The person is walking back to the desk with a can of coffee in their hand.
+20:01:53 | A person is walking back to the desk with a can of coffee in their hand.
+20:01:54 | The person has just sat down at the desk with a can of coffee, placing it on the table next to them.
+20:01:55 | The person is sitting at a desk and is opening a can of coffee.
+20:01:56 | A person is seated at the desk and is opening a can of coffee.
+20:01:57 | A person is sitting at the desk using a laptop and currently drinking from a can.
+20:01:58 | A person is holding a can of coffee to their mouth and drinking from it.
+20:01:59 | The person is sitting at the desk using a laptop and currently drinking from a can.
+20:02:00 | The person is sitting at the desk working on a laptop and has just placed the can back on the desk after taking a sip.
+20:02:01 | A person has just placed the can back on the desk after taking a sip, and is now focused on their smartphone, with a glass of water nearby.
+20:02:02 | The person has just placed the can back on the desk after taking a sip, and is now actively using a smartphone, with a glass of water nearby.
+20:02:03 | The person has just placed the can back on the desk after taking a sip, and is now looking at their phone.
+20:02:04 | The person is sitting at the desk, holding and looking at a smartphone, with a glass of water and a notebook in front of them.
+20:02:05 | The person is seated at the desk, holding and looking at a smartphone, with an open notebook resting nearby.
+20:02:06 | The person is sitting at the desk, holding and looking at a smartphone, with a can of coffee and a glass of water resting on the table nearby.
+20:02:07 | A person is sitting at the desk using their smartphone, while a coffee can and a glass of water sit on the table.
+20:02:08 | A person is seated at the desk and focused on their smartphone.
+20:02:09 | The person is holding a can of coffee to their mouth and drinking from it.
+20:02:10 | The person is holding a can of coffee to their mouth and drinking from it.
+20:02:11 | A person is holding a can of coffee to their mouth and drinking from it.
+20:02:12 | A person is sitting at the desk working on a laptop and has just placed the can back on the desk after taking a sip.
+20:02:13 | The person is sitting at the desk, focused on their smartphone, with a can of coffee and a glass of water on the table.
+20:02:14 | The person is seated at the desk, actively using a smartphone, with a can of coffee and a glass of water in front of them.
+20:02:15 | The person is seated at the desk using their smartphone, while a can and a glass mug of water sit on the desk.
+20:02:16 | The person is sitting at a desk, actively using a smartphone, with a can of coffee and a glass mug of water resting nearby.
+20:02:17 | The person is sitting at a desk, holding and looking at a smartphone, with a glass mug of water and an open laptop in front of them.
+20:02:18 | The person is sitting at a desk and focused on their smartphone.
+20:02:19 | The person is sitting at the desk, using their smartphone, with a can of coffee and a glass of water nearby.
+20:02:20 | A person is sitting at the desk focused on their smartphone, while a can and a glass of water sit to their left.
+20:02:21 | A person is sitting at a desk, holding and looking at a smartphone, with a can of coffee and a glass of water on the table.
+20:02:22 | The person is sitting at the desk holding and looking at a smartphone, while a can of coffee sits on the desk.
+20:02:23 | The person is seated at the desk holding and looking at a smartphone, while a can of coffee and a glass of water sit nearby.
+20:02:24 | The person is sitting at a desk, focused on their smartphone, with a coffee can and a glass of water on the table.
+20:02:25 | The person is sitting at the desk, holding and looking at a smartphone, with a can resting on the table nearby.
+20:02:26 | A person is sitting at a desk, using their smartphone, with a can and a glass of water on the table.
+20:02:27 | The person is sitting at a desk actively using a smartphone, while a can of coffee and a glass of water sit on the table.
+20:02:28 | The person is sitting at a desk using a laptop and currently drinking from a can.
+20:02:29 | A person is holding a can of coffee to their mouth and drinking from it.
+20:02:30 | The person is holding a can of coffee to their mouth and drinking from it.
+20:02:31 | The person has finished the coffee and set the empty can down on the desk.
+20:02:32 | The person is sitting at a desk, focused on a laptop, with an empty coffee can and a glass of water on the table.
+20:02:33 | A person has finished drinking from the can, placed the empty can on the desk, and is now actively typing on a laptop, with a glass of water nearby.
+20:02:34 | The person is sitting at a desk typing on a laptop, while an empty coffee can and a glass of water sit nearby.
+20:02:35 | A person has finished drinking from the can, placed the empty can on the desk, and is now working on a laptop.
+20:02:36 | The person has finished drinking from the can, placed the empty can on the desk, and is now working on a laptop.
+20:02:37 | The person is sitting at a desk, working on a laptop, with an empty can on the table.
+20:02:38 | A person is seated at the desk, using a laptop, with a glass of water resting on the table nearby.
+20:02:39 | The person is seated at the desk, focused on a laptop, with an empty can resting on the table nearby.
+20:02:40 | The person is sitting at the desk using a laptop, while an empty coffee can and a glass mug of water sit on the desk.
+20:02:41 | The person is sitting at the desk, working on a laptop, with an empty coffee can and a glass of water nearby.
+20:02:42 | A person is seated at the desk, using a laptop, with an empty can and a glass of water in front of them.
+20:02:43 | The person is sitting at a desk and using a laptop.
+20:02:44 | The person is sitting at a desk, using a laptop, with an empty can and a glass of water resting nearby.
+20:02:45 | A person is seated at the desk, actively typing on a laptop, with an empty can and a glass mug of water in front of them.
+20:02:46 | The person is seated at the desk, using a laptop, with an empty coffee can and a glass of water resting on the table nearby.
+20:02:47 | The person is sitting at a desk typing on a laptop, while an empty can and a glass of water sit to their left.
+20:02:48 | The person is seated at the desk actively typing on a laptop, while an empty can and a glass of water sit nearby.
+20:02:49 | The person is sitting at a desk, typing on a laptop, with an empty can and a glass of water nearby.
+20:02:50 | The person is sitting at a desk, working on a laptop, with an empty coffee can and a glass of water resting nearby.
+20:02:51 | The person is seated at the desk working on a laptop, while a glass of water sits to their left.
+20:02:52 | A person is seated at the desk, typing on a laptop, with an empty can and a glass of water in front of them.
+20:02:53 | A person is seated at the desk and typing on a laptop.
+20:02:54 | A person is sitting at a desk, focused on a laptop, with an empty can and a glass of water on the table.
+20:02:55 | The person is seated at the desk, using a laptop, with an empty coffee can and a glass of water on the table.
+20:02:56 | The person is sitting at the desk working on a laptop, while an empty can and a glass of water sit on the desk.
+20:02:57 | A person is sitting at a desk typing on a laptop, while an empty can and a glass of water sit to their left.
+20:02:58 | The person is sitting at a desk and is picking up the empty can from the desk.
+20:02:59 | The person has stood up from the desk holding the empty can.
+20:03:00 | A person has stood up from the desk holding the empty can.
+20:03:01 | The person is holding the empty can and walking away from the desk.
+20:03:02 | The person is holding the empty can and walking away from the desk.
+20:03:03 | The person has left the desk area, leaving a glass of water and an open laptop on the table.
+20:03:04 | The person has left the desk area, leaving a glass mug of water and a laptop on the table.
+20:03:05 | The person has left the desk area, leaving a glass of water and an open laptop on the table.
+20:03:06 | The person is absent from the desk, leaving a glass of water and a laptop on the table. The sound of the empty can being put away in the storage area comes from the kitchen.
+20:03:07 | The person has left the desk area, leaving a glass of water and an open laptop on the table.
+20:03:08 | The person is out of view; a glass mug of water and a laptop remain on the desk.
+20:03:09 | The person has returned to the desk empty-handed.
+20:03:10 | The person is walking back towards the desk area empty-handed.
+20:03:11 | The person is sitting at the desk typing on a laptop, while a glass of water and a notebook sit on the table.
+20:03:12 | The person has returned to the desk and sat down, and is now actively typing on a laptop, with a glass mug of water nearby.
+20:03:13 | A person is sitting at a desk working on a laptop, while a glass of water sits nearby.
+20:03:14 | A person is sitting at a desk using a laptop, while a glass of water sits on the table.
+20:03:15 | The person is sitting at the desk, actively typing on a laptop, with a glass of water resting on the table nearby.
+20:03:16 | The person is seated at the desk, actively typing on a laptop, with a glass of water resting nearby.
+20:03:17 | The person is sitting at the desk, using a laptop, with a glass of water resting nearby.
+20:03:18 | A person is seated at the desk, focused on a laptop, with a glass of water in front of them.
+20:03:19 | The person is sitting at a desk and focused on a laptop.
+20:03:20 | A person is sitting at a desk, typing on a laptop, with a glass of water resting nearby.
+20:03:21 | The person is sitting at a desk, actively writing in a notebook with a pen, while a glass of water sits nearby.
+20:03:22 | A person is sitting at a desk, actively writing in a notebook with a pen in hand, while a glass of water sits nearby.
+20:03:23 | A person is sitting at a desk writing in a notebook, with a glass of water and a computer mouse on the table.
+20:03:24 | A person is sitting at a desk, actively writing in a notebook with a pen in hand, while a glass of water and a computer mouse sit nearby.
+20:03:25 | A person is sitting at a desk writing in a notebook, with a glass of water and a computer mouse nearby.
+20:03:26 | A person is sitting at a desk, actively writing in a notebook with a pen, while a glass of water sits nearby.
+20:03:27 | A person is sitting at a desk writing in a notebook with a pen, while a glass of water and a computer mouse are nearby.
+20:03:28 | The person is sitting at the desk, has just finished writing in a notebook, and placed the pen on top of it.
+20:03:29 | The person has stopped writing, placed the pen on the notebook, and is now reaching for or holding the glass of water.
+20:03:30 | The person is sitting at the desk, has just finished writing in a notebook, and is currently drinking from a glass cup.
+20:03:31 | The person is sitting at the desk, holding a glass of water and drinking from it.
+20:03:32 | The person is sitting at the desk, has just finished drinking from a glass of water, and placed it back on the table while resting their hand near a notebook.
+20:03:33 | The person is sitting at the desk, actively writing in a notebook with a pen and has a glass of water nearby.
+20:03:34 | The person is sitting at the desk, actively using a computer mouse with their right hand while looking at the screen.
+20:03:35 | The person is sitting at a desk, actively writing in a notebook with a pen, and has just finished drinking from a glass of water which is now resting on the table.
+20:03:36 | The person is sitting at the desk, actively writing in a notebook with a pen, while a glass of water sits nearby.
+20:03:37 | The person is sitting at the desk, actively writing in a notebook with a pen, while a glass of water sits nearby.
+20:03:38 | The person is sitting at the desk, actively writing in a notebook with a pen while a glass of water sits nearby.
+20:03:39 | The person is sitting at the desk, actively writing in a notebook with a pen, while a glass of water sits nearby.
+20:03:40 | The person is sitting at the desk, actively writing in a notebook with a pen while a glass of water sits nearby.
+20:03:41 | A person is sitting at a desk, actively writing in a notebook with a pen, while a glass of water sits nearby.
+20:03:42 | The person is sitting at the desk, has just finished writing in a notebook, and is reaching for a glass of water.
+20:03:43 | The person is holding a glass cup to their mouth and drinking from it, while a pen and notebook remain on the desk.
+20:03:44 | The person is currently holding a glass cup to their mouth and drinking from it.
+20:03:45 | The person is sitting at the desk, has just finished drinking from a glass of water, and placed it back down on the table while resting their hand on a notebook.
+20:03:46 | The person is sitting at the desk, actively writing in a notebook with a pen, and has just finished drinking from a glass of water which is now resting on the table.
+20:03:47 | The person is sitting at the desk writing in a notebook with a pen, while a glass of water sits nearby.
+20:03:48 | The person is sitting at the desk, actively writing in a notebook with a pen, and has just taken a drink from a glass of water which is now resting on the table.
+20:03:49 | The person is sitting at the desk, actively writing in a notebook with a pen, while a glass of water sits nearby.
+20:03:50 | The person is sitting at the desk, actively writing in a notebook with a pen, while a glass of water sits nearby.
+20:03:51 | The person is sitting at the desk, holding a pen and writing in a notebook, with a glass of water resting on the table nearby.
+20:03:52 | The person is sitting at the desk, actively writing in a notebook with a pen, while a glass of water sits nearby.
+20:03:53 | The person is sitting at the desk, holding a pen and looking at an open notebook, with a glass of water nearby.
+20:03:54 | The person is sitting at the desk, actively writing in a notebook with a pen and has a glass of water nearby.
+20:03:55 | The person is sitting at the desk writing in a notebook, with a glass of water and a phone nearby.
+20:03:56 | The person is sitting at the desk, holding a pen in their hand and looking up from their notebook.
+20:03:57 | The person has finished writing, put down the pen on the notebook, and is now reaching for the glass of water.
+20:03:58 | The person is currently holding a glass cup and drinking from it.
+20:03:59 | The person is currently holding a glass mug and drinking from it while sitting at the desk with a notebook.
+20:04:00 | The person is currently holding a glass cup and drinking from it while sitting at the desk.
+20:04:01 | The person is sitting at the desk, has just finished drinking from a glass mug, and is currently holding it.
+20:04:02 | The person has just finished drinking from a glass cup and placed it back on the desk.
+20:04:03 | The person is sitting at a desk, writing in a notebook with a pen, and has just finished drinking from a glass mug which is now resting on the table.
+20:04:04 | The person has just finished drinking from a glass cup, placed it on the desk, and is now stretching their arm.
+20:04:05 | The person is sitting at a desk with an empty glass mug, a notebook, and a pen, and they are currently stretching their arm.
+20:04:06 | The person has finished drinking from a glass mug, set it down on the desk, and is now stretching their arm.
+20:04:07 | The person has finished drinking from the glass, placed it on the desk, and is now stretching their arms.
+20:04:08 | The person has finished drinking from a glass mug, set it down on the desk, stretched their arm, and is now looking at a notebook.
+20:04:09 | The person is sitting at the desk, has just finished stretching, and is reaching for their notebook to resume writing.
+20:04:10 | The person is sitting at the desk, has just finished stretching, and is now reaching for the mouse to resume working.
+20:04:11 | The person is sitting at the desk, has just opened a laptop, and is beginning to type.
+20:04:12 | The person has finished stretching and is now actively typing on a laptop at the desk, with an empty glass mug sitting nearby.
+20:04:13 | The person is sitting at the desk and actively typing on a laptop, with an empty glass mug, notebook, and pen resting nearby.
+20:04:14 | The person is sitting at the desk and actively typing on a laptop, with an empty glass mug sitting nearby.
+20:04:15 | The person is sitting at the desk, actively typing on a laptop with an empty glass mug and notebook nearby.
+20:04:16 | The person is sitting at the desk and actively typing on a laptop, with an empty glass mug, notebook, and pen resting nearby.
+20:04:17 | The person is actively typing on a laptop at the desk, with a glass mug and notebook nearby.
+20:04:18 | A person is sitting at a desk actively typing on a laptop, with an empty glass mug and a notebook nearby.
+20:04:19 | A person is sitting at a desk actively typing on a laptop, with an empty glass mug and notebook resting nearby.
+20:04:20 | A person is actively typing on a laptop at a desk with an empty glass mug sitting nearby.
+20:04:21 | The person is sitting at the desk working on a laptop, with an empty glass mug and notebook nearby.
+20:04:22 | The person has stopped typing and is picking up the empty glass mug from the desk.
+20:04:23 | The person is currently standing and holding a glass mug in their hand.
+20:04:24 | The person has stood up and is walking away from the desk, carrying the empty glass mug.
+20:04:25 | The person has picked up the glass mug and walked away from the desk, leaving the laptop, notebook, and mouse behind.
+20:04:26 | The person has left the desk area carrying the empty glass mug and is out of view; no glass remains on the desk. The sound of the empty glass being placed in the dishwasher comes from the kitchen.
+20:04:27 | The person has stood up, taken the cup from the desk, and is now standing away from the laptop.
+20:04:28 | The person has returned to the desk and is leaning over the laptop, with a notebook and pen nearby; there is no glass on the desk.
+20:04:29 | The person is sitting at the desk, looking down at a notebook and laptop, having just returned after briefly standing up with a cup.
+20:04:30 | The person is sitting at the desk working on a laptop, while a notebook sits on the desk.
+20:04:31 | The person is seated at the desk, using a laptop, with an open notebook resting on the table nearby.
+20:04:32 | The person is sitting at a desk, using a laptop, with an open notebook resting nearby.
+20:04:33 | The person is seated at the desk, actively typing on a laptop, with a smartphone on the table.
+20:04:34 | The person is seated at the desk actively typing on a laptop, while a smartphone sits to their left.
+20:04:35 | The person is seated at the desk and using a laptop.
+20:04:36 | The person is sitting at a desk, typing on a laptop, with an open notebook in front of them.
+20:04:37 | The person is seated at the desk, actively typing on a laptop, with a notebook nearby.
+20:04:38 | The person is sitting at a desk and working on a laptop.
+20:04:39 | The person is seated at the desk actively typing on a laptop, while an open notebook sits on the table.
+20:04:40 | The person is sitting at a desk typing on a laptop, while an open notebook sits to their left.
+20:04:41 | The person is sitting at a desk typing on a laptop, while a notebook sits on the table.
+20:04:42 | A person is sitting at a desk focused on a laptop, while a notebook sits nearby.
+20:04:43 | The person is seated at the desk, focused on a laptop, with an open notebook resting on the table nearby.
+20:04:44 | The person is sitting at a desk typing on a laptop, while an open notebook sits on the table.
+20:04:45 | A person is seated at the desk, typing on a laptop, with a notebook resting on the table nearby.
+20:04:46 | The person is sitting at the desk, focused on a laptop, with an open notebook in front of them.
+20:04:47 | The person is sitting at a desk and typing on a laptop.

@@ -1,6 +1,6 @@
 """Trigger candidate checks with small hand-worked examples (손으로 답을 아는 작은 예시).
 
-Adopt(c -> a) iff k/n >= 0.8 and P(X >= k) < 0.001 with X ~ Binomial(n, p0),
+Adopt(c -> a) iff k/n >= 0.75 and P(X >= k) < 0.001 with X ~ Binomial(n, p0),
 p0 = max(other-time rate, 0.01). Times are seconds since midnight.
 """
 
@@ -79,13 +79,13 @@ class CheckCandidateTests(unittest.TestCase):
         result = check_candidate([day(["07:00:00"], ["07:03:00", "07:12:00"], [("07:30:00", "08:00:00")])])
         self.assertTrue(math.isclose(result["base_rate"], 0.25))
 
-    def test_eighty_percent_passes_and_seventy_five_does_not(self):
-        five = check_candidate([FOLLOWED] * 4 + [MISSED])
-        self.assertEqual(five["rate"], 0.8)
-        self.assertTrue(five["passed"])
+    def test_seventy_five_percent_passes_and_two_out_of_three_does_not(self):
         four = check_candidate([FOLLOWED] * 3 + [MISSED])
         self.assertEqual(four["rate"], 0.75)
-        self.assertFalse(four["passed"])
+        self.assertTrue(four["passed"])
+        three = check_candidate([FOLLOWED] * 2 + [MISSED])
+        self.assertTrue(math.isclose(three["rate"], 2 / 3))
+        self.assertFalse(three["passed"])
 
     def test_frequent_action_passes_only_on_night_seven(self):
         # Every day 2 of the 10 other slots hold the action (base 0.2); day 3 is not followed.
@@ -113,6 +113,19 @@ class CheckCandidateTests(unittest.TestCase):
         repeat = day(["12:30:00", "12:31:00"], [], [("12:31:10", "17:00:00")], start="12:00:00", end="17:00:00")
         result = check_candidate([repeat])
         self.assertEqual((result["n"], result["k"], result["unknown"]), (1, 0, 1))
+
+    def test_a_one_minute_window_counts_only_the_minute_after(self):
+        # Action 90 s after the candidate: followed with 5 minutes, not with 1 minute.
+        late = day(["07:10:00"], ["07:11:30"])
+        self.assertEqual(check_candidate([late])["k"], 1)
+        self.assertEqual(check_candidate([late], window=60)["k"], 0)
+        self.assertEqual(check_candidate([day(["07:10:00"], ["07:10:59"])], window=60)["k"], 1)
+
+    def test_a_one_minute_window_uses_one_minute_slots_for_the_base_rate(self):
+        # 07:00-07:10 has 10 one-minute slots; the candidate at 07:00 touches 07:00 and 07:01.
+        # Of the other 8, the slot 07:05 holds an action.
+        result = check_candidate([day(["07:00:00"], ["07:00:30", "07:05:10"], end="07:10:00")], window=60)
+        self.assertTrue(math.isclose(result["base_rate"], 1 / 8))
 
     def test_no_occurrence_never_passes(self):
         result = check_candidate([day([], ["07:13:00"])])

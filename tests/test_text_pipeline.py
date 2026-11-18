@@ -10,10 +10,11 @@ import tempfile
 import unittest
 from unittest.mock import Mock, patch
 
-from pam.contracts import ContractError, validate_candidate_memory, validate_marks
+from pam.contracts import ContractError, validate_candidate_memory, validate_chunks, validate_marks
 from pam.inference import infer_text_bundle, inspect_text_completion
 from pam.openrouter import MODEL, OpenRouterError, build_text_request, load_text_config, send_text_request
-from pam.text_messages import build_marking_bundle, build_reflector_text_bundle, load_text_prompt
+from pam.text_messages import (CHUNK_RECORD, build_chunking_bundle, build_marking_bundle,
+                               build_reflector_text_bundle, load_text_prompt, record_bounds)
 from pam.trigger_check import predictor_fsm
 
 PROJECT = Path(__file__).resolve().parent.parent
@@ -164,6 +165,23 @@ class TextBundleTests(unittest.TestCase):
             bundle = build_reflector_text_bundle(RECORD, TASKS, operation="build", project_dir=self.project)
         self.assertIn("within 2 minutes after the candidate", bundle["messages"][1]["content"][0]["text"])
 
+    def test_reflector_input_can_state_a_one_minute_window(self):
+        bundle = build_reflector_text_bundle(RECORD, TASKS, operation="build", window_seconds=60,
+                                             project_dir=self.project)
+        self.assertIn("within 1 minute after the candidate", bundle["messages"][1]["content"][0]["text"])
+        self.assertEqual(bundle["window_seconds"], 60)
+
+    def test_real_prompts_state_the_line_spacing_of_the_record(self):
+        every_second = [f"20:00:0{s} | The person is typing on a laptop." for s in range(5)]
+        for lines, words in ((RECORD, "one line every 2 seconds"), (every_second, "one line every second")):
+            reflect = build_reflector_text_bundle(lines, TASKS, operation="build", project_dir=PROJECT)
+            mark = build_marking_bundle(lines, candidates=[], actions=[TASKS[0]], states={"breakfast": "Eats."},
+                                        project_dir=PROJECT)
+            for bundle in (reflect, mark):
+                system = bundle["messages"][0]["content"]
+                self.assertIn(words, system)
+                self.assertNotIn("{line_step}", system)
+
     def test_real_text_prompts_are_all_present(self):
         for prompt_id in ("reflector_text_build", "reflector_text_update", "marking"):
             load_text_prompt(prompt_id)
@@ -251,6 +269,78 @@ class TextRequestTests(unittest.TestCase):
             with self.assertRaises(OpenRouterError):
                 send_text_request(payload, self.config, role="reflector_text", api_key=FAKE_KEY)
             opener.assert_not_called()
+
+
+CHUNKS = {"chunks": [{"start": "07:49:32", "end": "07:49:38", "text": "Drinking water from a cup."},
+                     {"start": "07:49:40", "end": "07:49:40", "text": "Finishing the water and putting the cup down."}]}
+
+
+class ChunkingTests(unittest.TestCase):
+    WITHIN = ("07:49:32", "07:49:40", 2)
+
+    def test_chunks_in_order_at_record_times_are_accepted(self):
+        self.assertEqual(validate_chunks(CHUNKS, self.WITHIN), CHUNKS)
+
+    def test_overlap_backwards_off_record_or_empty_chunks_are_refused(self):
+        overlap = {"chunks": [CHUNKS["chunks"][0], {**CHUNKS["chunks"][1], "start": "07:49:38"}]}
+        backwards = {"chunks": [{**CHUNKS["chunks"][0], "end": "07:49:30"}]}
+        off_record = {"chunks": [{**CHUNKS["chunks"][0], "end": "07:49:37"}]}
+        for value in (overlap, backwards, off_record, {"chunks": []}, {"chunks": [{"start": "07:49:32"}]}):
+            with self.assertRaises(ContractError, msg=value):
+                validate_chunks(value, self.WITHIN)
+
+    def test_chunking_bundle_sends_the_record_with_its_line_spacing(self):
+        bundle = build_chunking_bundle(RECORD, project_dir=PROJECT)
+        self.assertEqual(bundle["role"], "chunking")
+        self.assertEqual(bundle["generation"], {"temperature": 0.0, "enable_thinking": False})
+        self.assertEqual((bundle["first_time"], bundle["last_time"], bundle["line_seconds"]), ("07:49:32", "07:49:40", 2))
+        self.assertIn("one line every 2 seconds", bundle["messages"][0]["content"])
+        self.assertIn("\n".join(RECORD), bundle["messages"][1]["content"][0]["text"])
+
+    def test_chunking_answer_is_checked_against_the_record(self):
+        bundle = build_chunking_bundle(RECORD, project_dir=PROJECT)
+        self.assertEqual(inspect_text_completion(completion(json.dumps(CHUNKS)), bundle)["status"], "valid")
+        odd = {"chunks": [{**CHUNKS["chunks"][0], "end": "07:49:39"}]}
+        self.assertEqual(inspect_text_completion(completion(json.dumps(odd)), bundle)["status"], "invalid")
+
+    def test_chunking_request_has_no_thinking(self):
+        config = load_text_config(TEXT_CONFIG)
+        payload = build_text_request(build_chunking_bundle(RECORD, project_dir=PROJECT), config)
+        self.assertEqual(payload["reasoning"], {"enabled": False})
+        self.assertEqual(payload["max_tokens"], config["max_tokens"]["chunking"])
+
+
+CHUNK_RECORD_LINES = ["20:00:00 | (until 20:00:47) Eating from a bowl with a spoon at the desk.",
+                      "20:00:48 | (until 20:00:50) Drinking from a glass of water.",
+                      "20:00:51 | (until 20:01:10) Eating from a bowl while looking at a phone."]
+
+
+class ChunkRecordTests(unittest.TestCase):
+    def test_bounds_of_plain_lines_and_of_a_chunk_list(self):
+        self.assertEqual(record_bounds(RECORD), ("07:49:32", "07:49:40", 2, False))
+        self.assertEqual(record_bounds(CHUNK_RECORD_LINES), ("20:00:00", "20:01:10", 1, True))
+
+    def test_a_record_mixing_plain_lines_and_chunks_is_refused(self):
+        with self.assertRaises(ContractError):
+            record_bounds(CHUNK_RECORD_LINES + ["20:01:11 | Picking up the bowl."])
+
+    def test_real_prompts_describe_a_chunk_list_when_given_one(self):
+        reflect = build_reflector_text_bundle(CHUNK_RECORD_LINES, TASKS, operation="build", project_dir=PROJECT)
+        update = build_reflector_text_bundle(CHUNK_RECORD_LINES, TASKS, operation="update", memory=MEMORY,
+                                             results=[], project_dir=PROJECT)
+        mark = build_marking_bundle(CHUNK_RECORD_LINES, candidates=[], actions=[TASKS[0]],
+                                    states={"breakfast": "Eats."}, project_dir=PROJECT)
+        for bundle in (reflect, update, mark):
+            system = bundle["messages"][0]["content"]
+            self.assertIn(CHUNK_RECORD, system)
+            self.assertNotIn("one line every", system)
+            self.assertEqual(bundle["record_kind"], "chunks")
+        self.assertEqual((mark["first_time"], mark["last_time"], mark["line_seconds"]), ("20:00:00", "20:01:10", 1))
+
+    def test_plain_records_keep_the_prompts_as_they_are(self):
+        bundle = build_reflector_text_bundle(RECORD, TASKS, operation="build", project_dir=PROJECT)
+        self.assertNotIn(CHUNK_RECORD, bundle["messages"][0]["content"])
+        self.assertEqual(bundle["record_kind"], "lines")
 
 
 class TextInferenceTests(unittest.TestCase):

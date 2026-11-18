@@ -6,7 +6,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from pam.daily_run import Steps, model_steps, run_night
+from pam.daily_run import Steps, _span, model_steps, run_night
 
 CUP = "Pick up the cup and place it in the dishwasher."
 WATER = "Person finishes the water"
@@ -86,6 +86,20 @@ class RunNightTests(unittest.TestCase):
         self.assertEqual(stub.calls, before)
         self.assertEqual(summary["night"], 2)
         self.assertEqual((self.run_dir / "night-1" / "check_results.json").read_text(encoding="utf-8"), saved)
+
+    def test_the_window_is_saved_and_a_run_never_mixes_windows(self):
+        stub = StubSteps()
+        run_night(1, self.records, self.run_dir, stub.steps(), window=60)
+        self.assertEqual(self.read(1, "done.json")["window_seconds"], 60)
+        # Water at 07:10, cup at 07:13: three minutes later is outside a one-minute window.
+        self.assertEqual([(r["n"], r["k"]) for r in self.read(1, "check_results.json")], [(1, 0)])
+        with self.assertRaises(Exception):
+            run_night(2, self.records, self.run_dir, stub.steps())
+
+    def test_a_chunk_list_spans_until_the_end_of_its_last_chunk(self):
+        chunks = ["07:00:00 | (until 07:09:59) Eating breakfast.", "07:10:00 | (until 07:10:00) Finishing the water.",
+                  "07:10:01 | (until 07:59:59) Reading."]
+        self.assertEqual(_span(chunks), (7 * 3600, 8 * 3600, 1))
 
     def test_only_new_candidates_are_marked_on_past_days(self):
         stub = StubSteps(nights_with_spoon={2})
