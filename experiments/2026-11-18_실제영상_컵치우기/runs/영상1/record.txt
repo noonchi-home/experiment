@@ -1,0 +1,87 @@
+20:00:08 | The person is sitting at a desk using a laptop and has just reached out to grab the glass mug of water.
+20:00:09 | The person is actively typing on a laptop and has just lifted a glass mug to drink from it.
+20:00:10 | The person is currently holding a glass mug and drinking from it while working on their laptop.
+20:00:11 | The person is actively typing on a laptop and currently holding a glass mug of water.
+20:00:12 | The person is sitting at a desk, actively typing on a laptop with a glass mug of water placed nearby.
+20:00:13 | The person is actively typing on a laptop with a glass of water sitting on the desk nearby.
+20:00:14 | The person is sitting at the desk, actively typing on a laptop with a glass mug of water resting nearby.
+20:00:15 | The person is sitting at a desk using a laptop and has just picked up a smartphone, while a glass of water sits on the table.
+20:00:16 | The person is sitting at the desk using a smartphone, with a glass of water resting on the table in front of them.
+20:00:17 | The person is sitting at the desk, typing on a laptop and then picking up their phone to look at it, with a glass of water sitting on the table.
+20:00:18 | The person is sitting at a desk, actively using their smartphone with both hands while a glass mug sits on the table in front of them.
+20:00:19 | The person is sitting at a desk, actively using their smartphone with one hand while a glass of water sits on the table.
+20:00:20 | The person is sitting at the desk using a smartphone, with a glass mug of water and an open laptop on the table.
+20:00:21 | The person is sitting at the desk, actively using their smartphone while a glass mug of water sits untouched on the table in front of them.
+20:00:22 | The person is sitting at the desk, actively using their smartphone with a glass of water and an open laptop nearby.
+20:00:23 | A person is sitting at a desk using a smartphone with a laptop and a glass of water nearby.
+20:00:24 | A person is sitting at a desk using their smartphone, with a glass of water and an open laptop on the table in front of them.
+20:00:25 | A person is sitting at a desk looking at their phone, with a glass mug of water and a laptop on the table in front of them.
+20:00:26 | A person is sitting at a desk using their smartphone, with a glass of water and a laptop nearby.
+20:00:27 | The person is sitting at the desk looking at their phone, with a glass of water and a laptop on the table.
+20:00:28 | A person is sitting at a desk using a smartphone, with a glass of water and an open laptop on the table.
+20:00:29 | The person is sitting at the desk, actively using their smartphone with a glass of water and an open laptop nearby.
+20:00:30 | A person is sitting at a desk using their smartphone, with a glass of water and an open laptop nearby.
+20:00:31 | A person is sitting at a desk looking at their smartphone, with a glass of water and an open laptop on the table.
+20:00:32 | A person is sitting at a desk looking at their phone, with a glass of water and a laptop nearby.
+20:00:33 | A person is sitting at a desk looking at their phone, with a glass of water and a laptop nearby.
+20:00:34 | A person is sitting at a desk using a smartphone, with an open laptop and a glass of water on the table in front of them.
+20:00:35 | A person is sitting at a desk looking at their smartphone, with a glass of water and an open laptop nearby.
+20:00:36 | A person is sitting at a desk using a smartphone with a glass of water and an open laptop nearby.
+20:00:37 | The person has put down their phone and is now typing on the laptop, with a glass of water sitting idle on the desk in front of them.
+20:00:38 | The person is sitting at the desk with a laptop and has just reached out to grasp a glass mug of water.
+20:00:39 | The person is currently holding the glass mug and drinking from it while sitting at the desk with a laptop.
+20:00:40 | The person is currently holding a glass mug and drinking from it while sitting at the desk.
+20:00:41 | The person is currently holding a glass cup and drinking from it while sitting at the desk with a laptop.
+20:00:42 | The person is currently holding a glass mug and drinking from it while sitting at the desk with a laptop.
+20:00:43 | The person is currently holding a glass cup and drinking from it while sitting at the desk with a laptop.
+20:00:44 | The person is currently holding a glass cup and drinking from it while sitting at the desk with a laptop.
+20:00:45 | The person is currently holding a glass mug and drinking from it while sitting at the desk with a laptop.
+20:00:46 | The person is currently holding a glass cup and drinking from it while sitting at the desk.
+20:00:47 | The person has just finished drinking from a glass cup and is holding it over the desk.
+20:00:48 | The person has finished drinking and is in the process of setting the glass cup down on the desk.
+20:00:49 | The person has finished drinking from a glass mug, placed it on the desk, and is now using their laptop.
+20:00:50 | The person has just finished drinking from a glass cup, placed it on the desk, and resumed typing on their laptop.
+20:00:51 | The person has finished drinking from a glass mug, set it down on the desk, and is now typing on their laptop.
+20:00:52 | The person has finished drinking from a glass cup, set it down on the desk, and is now typing on their laptop.
+20:00:53 | The person has finished drinking from a glass mug, placed it on the desk, and is now actively typing on their laptop.
+20:00:54 | The person has finished drinking from a glass mug, placed it on the desk, and is now typing on their laptop.
+20:00:55 | The person is sitting at the desk actively typing on a laptop with an empty glass cup resting nearby.
+20:00:56 | A person is sitting at a desk working on a laptop, and an empty glass cup is resting on the table in front of them.
+20:00:57 | A person is sitting at a desk actively typing on a laptop, with an empty glass mug resting on the table in front of them.
+20:00:58 | A person is sitting at a desk actively typing on a laptop with an empty glass cup resting nearby.
+20:00:59 | A person is sitting at a desk typing on a laptop, with an empty glass cup resting on the table in front of them.
+20:01:00 | A person is sitting at a desk typing on a laptop with an empty glass mug placed in front of them.
+20:01:01 | A person is sitting at a desk actively typing on a laptop with an empty glass mug sitting idle on the table in front of them.
+20:01:02 | A person is sitting at a desk actively typing on a laptop with an empty glass mug resting on the table nearby.
+20:01:03 | A person is sitting at a desk actively typing on a laptop, with an empty glass mug resting on the table nearby.
+20:01:04 | A person is actively typing on a laptop at a desk with an empty glass mug sitting nearby.
+20:01:05 | A person is sitting at a desk actively typing on a laptop, with an empty glass mug resting on the table in front of them.
+20:01:06 | A person is sitting at a desk typing on a laptop with an empty glass mug resting nearby.
+20:01:07 | A person is sitting at a desk actively typing on a laptop, with an empty glass mug resting on the table nearby.
+20:01:08 | A person is sitting at a desk typing on a laptop, with an empty glass mug resting on the table in front of them.
+20:01:09 | A person is sitting at a desk working on a laptop with an empty glass mug resting on the table nearby.
+20:01:10 | A person is sitting at a desk typing on a laptop, with an empty glass mug resting on the table nearby.
+20:01:11 | A person is sitting at a desk actively typing on a laptop, with an empty glass cup resting nearby.
+20:01:12 | A person is sitting at a desk actively typing on a laptop, with an empty glass mug resting on the table nearby.
+20:01:13 | A person is sitting at a desk focused on a laptop, with an empty glass mug resting on the table in front of them.
+20:01:14 | A person is sitting at a desk focused on their laptop, with an empty glass mug resting on the table in front of them.
+20:01:15 | A person is sitting at a desk focused on a laptop, with an empty glass mug resting nearby.
+20:01:16 | A person is sitting at a desk working on a laptop with an empty glass mug resting on the table in front of them.
+20:01:17 | A person is sitting at a desk focused on a laptop, with an empty glass mug resting on the table in front of them.
+20:01:18 | The person is sitting at a desk using a laptop and has just reached out to grab the handle of an empty glass mug.
+20:01:19 | The person is currently holding a glass mug in their right hand while looking at a laptop.
+20:01:20 | The person is currently holding a glass cup and lifting it from the desk.
+20:01:21 | The person is standing at the desk and holding a glass mug with both hands.
+20:01:22 | The person is currently holding a glass cup while standing near the desk.
+20:01:23 | The person is standing at the desk holding an empty glass mug.
+20:01:24 | The person is standing at the desk holding a glass cup in their hand.
+20:01:25 | The person has stood up from the desk, holding a glass cup, and is walking away towards the left side of the room.
+20:01:26 | The person picked up a glass mug from the desk and is walking away with it towards the door.
+20:01:27 | The person has finished using the cup and walked away from the desk, leaving the laptop and mouse behind. The sound of the empty glass being placed in the dishwasher comes from the kitchen.
+20:01:28 | The person is holding a glass cup and walking away from the desk toward a door.
+20:01:29 | The person was holding a glass mug, turned away from the desk, and is now walking back towards the desk area empty-handed.
+20:01:30 | The person has returned to the desk area after briefly walking away with a cup, and is now standing idle near the laptop.
+20:01:31 | The person is currently leaning over the desk and looking at their laptop, having returned from briefly walking away.
+20:01:32 | The person is now seated at the desk, looking at the laptop screen with their hands resting near the keyboard.
+20:01:33 | The person has returned to the desk and is now actively typing on the laptop.
+20:01:34 | The person has sat down at the desk and is actively typing on a laptop.

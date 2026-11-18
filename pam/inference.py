@@ -10,7 +10,8 @@ import os
 from datetime import datetime, timezone
 from pathlib import Path
 
-from .contracts import ContractError, parse_prediction, validate_candidate_memory, validate_marks, validate_memory
+from .contracts import (ContractError, parse_prediction, validate_candidate_memory, validate_chunks, validate_marks,
+                        validate_memory)
 from .messages import predictor_image_count, read_json
 from .openrouter import (MODEL, OpenRouterError, build_request, build_text_request, load_openrouter_config,
                          load_text_config, send_request, send_text_request)
@@ -232,6 +233,8 @@ def inspect_text_completion(response: dict, bundle: dict) -> dict:
         elif role == "marking":
             validate_marks(value, [tuple(pair) for pair in bundle["asked_candidates"]], bundle["asked_actions"],
                            within=(bundle["first_time"], bundle["last_time"], bundle["line_seconds"]))
+        elif role == "chunking":
+            validate_chunks(value, within=(bundle["first_time"], bundle["last_time"], bundle["line_seconds"]))
         else:
             raise ContractError(f"Unknown text role: {role!r}")
     except (ValueError, TypeError, KeyError) as exc:

@@ -1,0 +1,125 @@
+{
+  "day": 3,
+  "candidates": [
+    {
+      "state": "waking_up",
+      "candidate": "Person sits up in bed",
+      "times": [
+        "07:02:20"
+      ]
+    },
+    {
+      "state": "waking_up",
+      "candidate": "Person turns on the room light",
+      "times": [
+        "07:03:00"
+      ]
+    },
+    {
+      "state": "having_breakfast",
+      "candidate": "Person is seated at the dining table resting for a moment after eating",
+      "times": [
+        "07:27:46"
+      ]
+    },
+    {
+      "state": "having_breakfast",
+      "candidate": "Person sets the empty cup down on the table",
+      "times": [
+        "07:26:40"
+      ]
+    },
+    {
+      "state": "having_breakfast",
+      "candidate": "Person places the cup in the dishwasher",
+      "times": [
+        "07:29:16"
+      ]
+    },
+    {
+      "state": "having_breakfast",
+      "candidate": "Person is gathering the bowl and the cup from the table",
+      "times": [
+        "07:29:02"
+      ]
+    },
+    {
+      "state": "relaxing_on_sofa",
+      "candidate": "Person turns off the TV with the remote",
+      "times": [
+        "07:50:48"
+      ]
+    },
+    {
+      "state": "relaxing_on_sofa",
+      "candidate": "Person has finished the coffee and set the empty can down",
+      "times": [
+        "07:50:06"
+      ]
+    },
+    {
+      "state": "leaving_house",
+      "candidate": "Person is slipping their arms into a jacket",
+      "times": [
+        "07:56:14"
+      ]
+    },
+    {
+      "state": "leaving_house",
+      "candidate": "Person has just shouldered their bag",
+      "times": [
+        "07:56:48"
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "action": "Open the curtains.",
+      "times": [
+        "07:03:04"
+      ]
+    },
+    {
+      "action": "Pick up the bowl and place it in the dishwasher.",
+      "times": [
+        "07:29:02"
+      ]
+    },
+    {
+      "action": "Pick up the can and place it in the designated storage area.",
+      "times": [
+        "07:50:52"
+      ]
+    },
+    {
+      "action": "Pick up the can and place it next to the person.",
+      "times": [
+        "07:29:30"
+      ]
+    },
+    {
+      "action": "Pick up the cup and place it in the dishwasher.",
+      "times": [
+        "07:29:02"
+      ]
+    },
+    {
+      "action": "Turn off the room light.",
+      "times": []
+    }
+  ],
+  "unseen": [
+    {
+      "start": "07:03:40",
+      "end": "07:10:54"
+    },
+    {
+      "start": "07:52:30",
+      "end": "07:56:08"
+    },
+    {
+      "start": "07:56:54",
+      "end": "07:59:58"
+    }
+  ]
+}

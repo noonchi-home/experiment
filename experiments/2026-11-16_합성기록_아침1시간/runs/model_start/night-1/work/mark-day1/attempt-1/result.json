@@ -1,0 +1,160 @@
+{
+  "status": "valid",
+  "raw_response": "{\n  \"candidates\": [\n    {\n      \"state\": \"waking_up\",\n      \"candidate\": \"Person sits up in bed\",\n      \"times\": [\"07:02:22\"]\n    },\n    {\n      \"state\": \"waking_up\",\n      \"candidate\": \"Person turns on the room light\",\n      \"times\": [\"07:02:48\"]\n    },\n    {\n      \"state\": \"having_breakfast\",\n      \"candidate\": \"Person rests the spoon on the edge of the bowl\",\n      \"times\": [\"07:22:10\", \"07:24:10\", \"07:29:46\", \"07:30:50\"]\n    },\n    {\n      \"state\": \"having_breakfast\",\n      \"candidate\": \"Person is seated at the dining table resting for a moment after eating\",\n      \"times\": [\"07:30:56\"]\n    },\n    {\n      \"state\": \"having_breakfast\",\n      \"candidate\": \"Person sets the empty cup down on the table\",\n      \"times\": [\"07:29:50\"]\n    },\n    {\n      \"state\": \"having_breakfast\",\n      \"candidate\": \"Person places the cup in the dishwasher\",\n      \"times\": [\"07:33:04\"]\n    },\n    {\n      \"state\": \"relaxing_on_sofa\",\n      \"candidate\": \"Person turns off the TV with the remote\",\n      \"times\": [\"07:52:00\"]\n    },\n    {\n      \"state\": \"relaxing_on_sofa\",\n      \"candidate\": \"Person has finished the coffee and set the empty can down\",\n      \"times\": [\"07:51:24\"]\n    },\n    {\n      \"state\": \"leaving_house\",\n      \"candidate\": \"Person is slipping their arms into a jacket\",\n      \"times\": [\"07:56:48\"]\n    },\n    {\n      \"state\": \"leaving_house\",\n      \"candidate\": \"Person has just shouldered their bag\",\n      \"times\": [\"07:57:20\"]\n    }\n  ],\n  \"actions\": [\n    {\n      \"action\": \"Open the curtains.\",\n      \"times\": [\"07:02:52\"]\n    },\n    {\n      \"action\": \"Pick up the bowl and place it in the dishwasher.\",\n      \"times\": [\"07:32:50\"]\n    },\n    {\n      \"action\": \"Pick up the can and place it in the designated storage area.\",\n      \"times\": [\"07:52:04\"]\n    },\n    {\n      \"action\": \"Pick up the can and place it next to the person.\",\n      \"times\": [\"07:33:16\"]\n    },\n    {\n      \"action\": \"Pick up the cup and place it in the dishwasher.\",\n      \"times\": [\"07:32:50\"]\n    },\n    {\n      \"action\": \"Turn off the room light.\",\n      \"times\": [\"07:57:28\"]\n    }\n  ],\n  \"unseen\": [\n    {\n      \"start\": \"07:03:20\",\n      \"end\": \"07:12:56\"\n    }\n  ]\n}",
+  "output": {
+    "candidates": [
+      {
+        "state": "waking_up",
+        "candidate": "Person sits up in bed",
+        "times": [
+          "07:02:22"
+        ]
+      },
+      {
+        "state": "waking_up",
+        "candidate": "Person turns on the room light",
+        "times": [
+          "07:02:48"
+        ]
+      },
+      {
+        "state": "having_breakfast",
+        "candidate": "Person rests the spoon on the edge of the bowl",
+        "times": [
+          "07:22:10",
+          "07:24:10",
+          "07:29:46",
+          "07:30:50"
+        ]
+      },
+      {
+        "state": "having_breakfast",
+        "candidate": "Person is seated at the dining table resting for a moment after eating",
+        "times": [
+          "07:30:56"
+        ]
+      },
+      {
+        "state": "having_breakfast",
+        "candidate": "Person sets the empty cup down on the table",
+        "times": [
+          "07:29:50"
+        ]
+      },
+      {
+        "state": "having_breakfast",
+        "candidate": "Person places the cup in the dishwasher",
+        "times": [
+          "07:33:04"
+        ]
+      },
+      {
+        "state": "relaxing_on_sofa",
+        "candidate": "Person turns off the TV with the remote",
+        "times": [
+          "07:52:00"
+        ]
+      },
+      {
+        "state": "relaxing_on_sofa",
+        "candidate": "Person has finished the coffee and set the empty can down",
+        "times": [
+          "07:51:24"
+        ]
+      },
+      {
+        "state": "leaving_house",
+        "candidate": "Person is slipping their arms into a jacket",
+        "times": [
+          "07:56:48"
+        ]
+      },
+      {
+        "state": "leaving_house",
+        "candidate": "Person has just shouldered their bag",
+        "times": [
+          "07:57:20"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "action": "Open the curtains.",
+        "times": [
+          "07:02:52"
+        ]
+      },
+      {
+        "action": "Pick up the bowl and place it in the dishwasher.",
+        "times": [
+          "07:32:50"
+        ]
+      },
+      {
+        "action": "Pick up the can and place it in the designated storage area.",
+        "times": [
+          "07:52:04"
+        ]
+      },
+      {
+        "action": "Pick up the can and place it next to the person.",
+        "times": [
+          "07:33:16"
+        ]
+      },
+      {
+        "action": "Pick up the cup and place it in the dishwasher.",
+        "times": [
+          "07:32:50"
+        ]
+      },
+      {
+        "action": "Turn off the room light.",
+        "times": [
+          "07:57:28"
+        ]
+      }
+    ],
+    "unseen": [
+      {
+        "start": "07:03:20",
+        "end": "07:12:56"
+      }
+    ]
+  },
+  "errors": [],
+  "checked_at": "2026-11-18T00:47:31.238836+00:00",
+  "role": "marking",
+  "api_request_attempted": true,
+  "model_response_received": true,
+  "action_executed": false,
+  "requested_model": "qwen/qwen3.5-27b",
+  "response_model": "qwen/qwen3.5-27b",
+  "provider": "Alibaba",
+  "response_id": "gen-1794962805-3u35WM6ufrmL8MxwPHmf",
+  "finish_reason": "stop",
+  "elapsed_seconds": 46.09225430000015,
+  "usage": {
+    "prompt_tokens": 53012,
+    "completion_tokens": 789,
+    "total_tokens": 53801,
+    "cost": 0.01156818,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01156818,
+      "upstream_inference_prompt_cost": 0.01033734,
+      "upstream_inference_completions_cost": 0.00123084
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "day": 2,
+  "candidates": [
+    {
+      "state": "eating_at_desk",
+      "candidate": "Person uses a smartphone at the desk with an empty bowl nearby.",
+      "times": []
+    },
+    {
+      "state": "water_break_work",
+      "candidate": "Person writes in a notebook with a pen, with an empty glass mug nearby.",
+      "times": [
+        "20:04:11"
+      ]
+    }
+  ],
+  "actions": [],
+  "unseen": [
+    {
+      "start": "20:01:45",
+      "end": "20:01:51"
+    },
+    {
+      "start": "20:03:03",
+      "end": "20:03:08"
+    },
+    {
+      "start": "20:04:27",
+      "end": "20:04:27"
+    }
+  ]
+}

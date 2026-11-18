@@ -1,16 +1,16 @@
-"""Check reflector trigger candidates with the 80% rule and a one-sided binomial test.
+"""Check reflector trigger candidates with the 75% rule and a one-sided binomial test.
 
-    Adopt(c -> a)  iff  k/n >= 0.8  and  sum_{i=k..n} C(n,i) p0^i (1-p0)^(n-i) < 0.001
+    Adopt(c -> a)  iff  k/n >= 0.75  and  sum_{i=k..n} C(n,i) p0^i (1-p0)^(n-i) < 0.001
                         p0 = max(other-time rate, 0.01)
 
 Input per day: the times when candidate c happened (already limited to the rule's
 state), the times when the person did action a, and the intervals when the person
 was not visible. Times are seconds since midnight. A candidate is followed when the
-action comes within 5 minutes after it and before the same candidate shows up again,
-so only the last candidate before an action is credited with it. A candidate whose
-window overlaps an unseen interval without an observed action is left out ("못 봄"). The other-time
-rate counts 5-minute slots that neither touch a candidate's 5 minutes nor overlap an
-unseen interval. Nothing here calls a model.
+action comes within the check window (5 minutes unless a run sets another) after it and
+before the same candidate shows up again, so only the last candidate before an action is
+credited with it. A candidate whose window overlaps an unseen interval without an observed
+action is left out ("못 봄"). The other-time rate counts window-long slots that neither touch
+a candidate's window nor overlap an unseen interval. Nothing here calls a model.
 """
 
 from __future__ import annotations
@@ -20,9 +20,8 @@ from math import comb
 
 from .contracts import validate_candidate_memory, validate_memory
 
-FOLLOW_SECONDS = 300
-SLOT_SECONDS = 300
-RATE_MIN = 0.8
+FOLLOW_SECONDS = 300        # default check window; the other-time slots are as long as the window
+RATE_MIN = 0.75             # 0.8 until 2026-11-18
 ALPHA = 0.001
 FLOOR = 0.01
 
@@ -32,17 +31,20 @@ def binomial_tail(k: int, n: int, p: float) -> float:
     return sum(comb(n, i) * p ** i * (1 - p) ** (n - i) for i in range(k, n + 1))
 
 
-def check_candidate(days: list[dict]) -> dict:
-    """Count n, k and the other-time rate over all days so far, then apply both tests."""
+def check_candidate(days: list[dict], window: int = FOLLOW_SECONDS) -> dict:
+    """Count n, k and the other-time rate over all days so far, then apply both tests.
+    `window` is the check window in seconds."""
+    if type(window) is not int or window < 1:
+        raise ValueError("The check window must be a positive whole number of seconds.")
     n = k = unknown = other_slots = slots_with_action = 0
     for day in days:
         candidates, actions, unseen = day["candidate"], day["action"], day["unseen"]
         ordered = sorted(candidates)
         for index, moment in enumerate(ordered):
-            # Half-open window [low, high): the five minutes after the candidate,
+            # Half-open window [low, high): the window after the candidate,
             # cut short where the same candidate shows up again. Only the last
             # candidate before an action is credited with it.
-            low, high = moment + 1, moment + FOLLOW_SECONDS + 1
+            low, high = moment + 1, moment + window + 1
             repeats = [later for later in ordered[index + 1:] if later > moment]
             if repeats and repeats[0] < high:
                 high = repeats[0]
@@ -52,9 +54,9 @@ def check_candidate(days: list[dict]) -> dict:
                 unknown += 1
             else:
                 n += 1
-        for slot in range(day["start"], day["end"], SLOT_SECONDS):
-            slot_end = slot + SLOT_SECONDS
-            if any(slot <= moment + FOLLOW_SECONDS and slot_end > moment for moment in candidates):
+        for slot in range(day["start"], day["end"], window):
+            slot_end = slot + window
+            if any(slot <= moment + window and slot_end > moment for moment in candidates):
                 continue
             if any(start < slot_end and end > slot for start, end in unseen):
                 continue

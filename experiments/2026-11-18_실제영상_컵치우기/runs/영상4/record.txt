@@ -1,0 +1,45 @@
+20:00:08 | The person is currently holding a glass cup of water while working on their laptop.
+20:00:09 | The person is sitting at the desk using a laptop and has just finished drinking from a glass, which they are currently holding.
+20:00:10 | The person is actively typing on a laptop with both hands, and a glass of water sits idle on the desk to their left.
+20:00:11 | The person is actively typing on a laptop at the desk, and a glass of water sits nearby.
+20:00:12 | The person is actively typing on a laptop with both hands, and a glass of water sits untouched on the desk.
+20:00:13 | The person is sitting at the desk working on a laptop with a glass of water nearby, and they are not currently holding any objects.
+20:00:14 | The person is sitting at a desk, typing on a laptop with a glass of water placed nearby.
+20:00:15 | The person is currently holding a glass cup to their mouth, drinking water while sitting at the desk with a laptop.
+20:00:16 | The person is currently holding a glass cup and drinking from it while sitting at the desk with a laptop.
+20:00:17 | The person is currently holding a glass cup and drinking from it while sitting at the desk.
+20:00:18 | The person is sitting at the desk working on a laptop and has just finished drinking from a glass, which they are currently holding in their hand.
+20:00:19 | The person is sitting at the desk, has just finished drinking from a glass cup, and is holding it in their hand.
+20:00:20 | The person has finished drinking from the glass, placed it back on the desk, and resumed typing on their laptop.
+20:00:21 | The person has just finished drinking from a glass cup, placed it back on the desk, and resumed typing on their laptop.
+20:00:22 | The person has finished drinking from the glass, placed it on the desk, and is now actively typing on their laptop.
+20:00:23 | The person has finished drinking from the glass, set it down on the desk, and is now actively typing on their laptop.
+20:00:24 | The person has finished drinking from the cup, placed it on the desk, and is now actively typing on a laptop.
+20:00:25 | The person is sitting at the desk, actively writing in a notebook with a pen while an empty glass cup sits on the table nearby.
+20:00:26 | The person is sitting at the desk, actively writing in a notebook with a pen while an empty glass cup sits nearby.
+20:00:27 | The person is sitting at a desk, actively writing in a notebook with a pen while an empty glass sits nearby.
+20:00:28 | The person is sitting at the desk actively writing in a notebook with a pen, while an empty glass mug sits nearby.
+20:00:29 | The person is sitting at the desk, actively writing in a notebook with a pen while looking at a laptop.
+20:00:30 | The person is sitting at the desk actively writing in a notebook with a pen, while an empty glass sits nearby.
+20:00:31 | The person is sitting at a desk, writing in a notebook with a pen while looking at a laptop screen.
+20:00:32 | The person is sitting at the desk, has finished writing in a notebook (pen is now resting on it), and is currently typing on a laptop.
+20:00:33 | The person is actively typing on a laptop with an empty glass cup sitting nearby on the desk.
+20:00:34 | The person is actively typing on a laptop with an empty glass and notebook nearby.
+20:00:35 | The person is actively typing on a laptop with an empty glass sitting nearby on the desk.
+20:00:36 | The person is sitting at a desk, typing on a laptop with an empty glass cup and a notebook nearby.
+20:00:37 | The person is actively typing on a laptop at the desk, with an empty glass cup sitting nearby.
+20:00:38 | The person is sitting at the desk, typing on a laptop with an empty glass cup nearby.
+20:00:39 | The person has stopped typing and is picking up the empty glass cup from the desk.
+20:00:40 | The person has stood up and is holding the empty glass cup, moving away from the desk.
+20:00:41 | The person has stood up and is walking away from the desk, carrying the empty glass cup.
+20:00:42 | The person has stood up and walked away from the desk while holding a glass cup.
+20:00:43 | The person has left the desk area carrying the empty glass and is out of view; no glass remains on the desk. The sound of the empty glass being placed in the dishwasher comes from the kitchen.
+20:00:44 | The person is walking back toward the desk without the glass.
+20:00:45 | The person has returned to the desk and is leaning over the laptop; there is no glass on the desk.
+20:00:46 | The person is seated at the desk with a laptop and notebook, having just returned after briefly standing up and holding a cup.
+20:00:47 | The person has returned to the desk and is now actively typing on the laptop, with a notebook and pen resting nearby.
+20:00:48 | The person has sat down at the desk and is actively typing on the laptop, with a notebook and pens resting nearby.
+20:00:49 | The person has sat down at the desk and is actively typing on the laptop, with a notebook and pen resting nearby.
+20:00:50 | A person is sitting at a desk and actively typing on a laptop, with a notebook and pens resting nearby.
+20:00:51 | A person is sitting at a desk, actively typing on a laptop with a notebook and pen resting nearby.
+20:00:52 | A person is sitting at a desk and actively typing on a laptop, with a notebook and pens resting nearby.
