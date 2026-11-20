@@ -1,0 +1,53 @@
+{
+  "initial_state": "morning",
+  "states": [
+    {
+      "id": "morning",
+      "description": "아침 준비",
+      "rules": [],
+      "next": []
+    },
+    {
+      "id": "breakfast",
+      "description": "아침 식사",
+      "rules": [],
+      "next": []
+    },
+    {
+      "id": "study",
+      "description": "공부",
+      "rules": [],
+      "next": []
+    },
+    {
+      "id": "going_out",
+      "description": "외출 준비",
+      "rules": [],
+      "next": []
+    },
+    {
+      "id": "away",
+      "description": "외출 (안 보임)",
+      "rules": [],
+      "next": []
+    },
+    {
+      "id": "evening_rest",
+      "description": "저녁 휴식",
+      "rules": [],
+      "next": []
+    },
+    {
+      "id": "dinner",
+      "description": "저녁 식사",
+      "rules": [],
+      "next": []
+    },
+    {
+      "id": "bedtime",
+      "description": "잠자리 준비",
+      "rules": [],
+      "next": []
+    }
+  ]
+}

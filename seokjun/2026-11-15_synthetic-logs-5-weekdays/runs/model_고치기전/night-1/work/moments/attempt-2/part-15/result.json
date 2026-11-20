@@ -1,0 +1,123 @@
+{
+  "status": "valid",
+  "raw_response": "{\n  \"moments\": [\n    {\n      \"time\": \"21:00:00\",\n      \"kind\": \"start\",\n      \"text\": \"Person watches television\"\n    },\n    {\n      \"time\": \"21:10:12\",\n      \"kind\": \"end\",\n      \"text\": \"Person watches television\"\n    },\n    {\n      \"time\": \"21:10:14\",\n      \"kind\": \"start\",\n      \"text\": \"Person is not visible\"\n    },\n    {\n      \"time\": \"21:34:06\",\n      \"kind\": \"end\",\n      \"text\": \"Person is not visible\"\n    },\n    {\n      \"time\": \"21:34:08\",\n      \"kind\": \"start\",\n      \"text\": \"Person watches television\"\n    },\n    {\n      \"time\": \"21:40:34\",\n      \"kind\": \"end\",\n      \"text\": \"Person watches television\"\n    },\n    {\n      \"time\": \"21:40:36\",\n      \"kind\": \"moment\",\n      \"text\": \"Person fills a cup at the water purifier\"\n    },\n    {\n      \"time\": \"21:40:46\",\n      \"kind\": \"moment\",\n      \"text\": \"Person puts down a cup\"\n    },\n    {\n      \"time\": \"21:40:50\",\n      \"kind\": \"moment\",\n      \"text\": \"Person drinks water from a cup\"\n    },\n    {\n      \"time\": \"21:40:54\",\n      \"kind\": \"start\",\n      \"text\": \"Person watches television\"\n    },\n    {\n      \"time\": \"21:51:14\",\n      \"kind\": \"end\",\n      \"text\": \"Person watches television\"\n    },\n    {\n      \"time\": \"21:51:16\",\n      \"kind\": \"moment\",\n      \"text\": \"Person drinks water from a cup\"\n    },\n    {\n      \"time\": \"21:51:24\",\n      \"kind\": \"start\",\n      \"text\": \"Person uses their smartphone\"\n    },\n    {\n      \"time\": \"21:57:18\",\n      \"kind\": \"end\",\n      \"text\": \"Person uses their smartphone\"\n    },\n    {\n      \"time\": \"21:57:20\",\n      \"kind\": \"start\",\n      \"text\": \"Person is not visible\"\n    },\n    {\n      \"time\": \"21:59:58\",\n      \"kind\": \"end\",\n      \"text\": \"Person is not visible\"\n    }\n  ]\n}",
+  "output": {
+    "moments": [
+      {
+        "time": "21:00:00",
+        "kind": "start",
+        "text": "Person watches television"
+      },
+      {
+        "time": "21:10:12",
+        "kind": "end",
+        "text": "Person watches television"
+      },
+      {
+        "time": "21:10:14",
+        "kind": "start",
+        "text": "Person is not visible"
+      },
+      {
+        "time": "21:34:06",
+        "kind": "end",
+        "text": "Person is not visible"
+      },
+      {
+        "time": "21:34:08",
+        "kind": "start",
+        "text": "Person watches television"
+      },
+      {
+        "time": "21:40:34",
+        "kind": "end",
+        "text": "Person watches television"
+      },
+      {
+        "time": "21:40:36",
+        "kind": "moment",
+        "text": "Person fills a cup at the water purifier"
+      },
+      {
+        "time": "21:40:46",
+        "kind": "moment",
+        "text": "Person puts down a cup"
+      },
+      {
+        "time": "21:40:50",
+        "kind": "moment",
+        "text": "Person drinks water from a cup"
+      },
+      {
+        "time": "21:40:54",
+        "kind": "start",
+        "text": "Person watches television"
+      },
+      {
+        "time": "21:51:14",
+        "kind": "end",
+        "text": "Person watches television"
+      },
+      {
+        "time": "21:51:16",
+        "kind": "moment",
+        "text": "Person drinks water from a cup"
+      },
+      {
+        "time": "21:51:24",
+        "kind": "start",
+        "text": "Person uses their smartphone"
+      },
+      {
+        "time": "21:57:18",
+        "kind": "end",
+        "text": "Person uses their smartphone"
+      },
+      {
+        "time": "21:57:20",
+        "kind": "start",
+        "text": "Person is not visible"
+      },
+      {
+        "time": "21:59:58",
+        "kind": "end",
+        "text": "Person is not visible"
+      }
+    ]
+  },
+  "errors": [],
+  "checked_at": "2026-11-15T15:10:33.901922+00:00",
+  "role": "moments",
+  "api_request_attempted": true,
+  "model_response_received": true,
+  "action_executed": false,
+  "requested_model": "qwen/qwen3.5-27b",
+  "response_model": "qwen/qwen3.5-27b",
+  "provider": "Alibaba",
+  "response_id": "gen-1794755407-ffIrE16Wos2d6RxljeI4",
+  "finish_reason": "stop",
+  "elapsed_seconds": 28.09924760001013,
+  "usage": {
+    "prompt_tokens": 33305,
+    "completion_tokens": 657,
+    "total_tokens": 33962,
+    "cost": 0.007519395,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.007519395,
+      "upstream_inference_prompt_cost": 0.006494475,
+      "upstream_inference_completions_cost": 0.00102492
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

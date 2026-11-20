@@ -1,0 +1,17 @@
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+{"id":"gen-1794753442-LxvUzFxxGrcgx4QBZakD","object":"chat.completion","created":1794753442,"model":"qwen/qwen3.5-27b","provider":"Alibaba","system_fingerprint":null,"service_tier":null,"choices":[{"index":0,"logprobs":null,"finish_reason":"stop","native_finish_reason":"stop","message":{"role":"assistant","content":"{\n  \"moments\": [\n    {\n      \"time\": \"22:00:56\",\n      \"kind\": \"moment\",\n      \"text\": \"Person turns on the bedside lamp\"\n    },\n    {\n      \"time\": \"22:01:00\",\n      \"kind\": \"start\",\n      \"text\": \"Person walks to the light switch by the door\"\n    },\n    {\n      \"time\": \"22:01:04\",\n      \"kind\": \"end\",\n      \"text\": \"Person walks to the light switch by the door\"\n    },\n    {\n      \"time\": \"22:01:04\",\n      \"kind\": \"moment\",\n      \"text\": \"Person turns off the ceiling light\"\n    },\n    {\n      \"time\": \"22:01:10\",\n      \"kind\": \"start\",\n      \"text\": \"Person climbs into bed\"\n    },\n    {\n      \"time\": \"22:01:16\",\n      \"kind\": \"end\",\n      \"text\": \"Person climbs into bed\"\n    },\n    {\n      \"time\": \"22:01:18\",\n      \"kind\": \"start\",\n      \"text\": \"Person reads a book in bed\"\n    },\n    {\n      \"time\": \"22:25:30\",\n      \"kind\": \"end\",\n      \"text\": \"Person reads a book in bed\"\n    },\n    {\n      \"time\": \"22:25:30\",\n      \"kind\": \"moment\",\n      \"text\": \"Person closes the book\"\n    },\n    {\n      \"time\": \"22:25:34\",\n      \"kind\": \"start\",\n      \"text\": \"Person lies back against the pillow\"\n    },\n    {\n      \"time\": \"22:26:14\",\n      \"kind\": \"end\",\n      \"text\": \"Person lies back against the pillow\"\n    },\n    {\n      \"time\": \"22:26:16\",\n      \"kind\": \"start\",\n      \"text\": \"Person reaches for the bedside lamp\"\n    },\n    {\n      \"time\": \"22:26:20\",\n      \"kind\": \"end\",\n      \"text\": \"Person reaches for the bedside lamp\"\n    },\n    {\n      \"time\": \"22:26:20\",\n      \"kind\": \"moment\",\n      \"text\": \"Person turns off the bedside lamp\"\n    },\n    {\n      \"time\": \"22:26:26\",\n      \"kind\": \"start\",\n      \"text\": \"Person rests in bed in the dark\"\n    }\n  ]\n}","refusal":null,"reasoning":null}}],"usage":{"prompt_tokens":35362,"completion_tokens":644,"total_tokens":36006,"cost":0.00790023,"is_byok":false,"prompt_tokens_details":{"cached_tokens":0,"cache_write_tokens":0,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.00790023,"upstream_inference_prompt_cost":0.00689559,"upstream_inference_completions_cost":0.00100464},"completion_tokens_details":{"reasoning_tokens":0,"image_tokens":0,"audio_tokens":0}}}

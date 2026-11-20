@@ -1,0 +1,183 @@
+{
+  "status": "valid",
+  "raw_response": "{\n  \"moments\": [\n    {\n      \"time\": \"22:00:00\",\n      \"kind\": \"start\",\n      \"text\": \"Person looks at their phone while sitting on the sofa\"\n    },\n    {\n      \"time\": \"22:01:16\",\n      \"kind\": \"end\",\n      \"text\": \"Person looks at their phone while sitting on the sofa\"\n    },\n    {\n      \"time\": \"22:01:18\",\n      \"kind\": \"start\",\n      \"text\": \"Person watches TV while sitting on the sofa\"\n    },\n    {\n      \"time\": \"22:01:58\",\n      \"kind\": \"end\",\n      \"text\": \"Person watches TV while sitting on the sofa\"\n    },\n    {\n      \"time\": \"22:02:00\",\n      \"kind\": \"moment\",\n      \"text\": \"Person stands up from the sofa\"\n    },\n    {\n      \"time\": \"22:02:02\",\n      \"kind\": \"start\",\n      \"text\": \"Person leaves the room\"\n    },\n    {\n      \"time\": \"22:07:00\",\n      \"kind\": \"end\",\n      \"text\": \"Person leaves the room\"\n    },\n    {\n      \"time\": \"22:07:02\",\n      \"kind\": \"moment\",\n      \"text\": \"Person returns to the room\"\n    },\n    {\n      \"time\": \"22:07:04\",\n      \"kind\": \"start\",\n      \"text\": \"Person switches on the bedside lamp\"\n    },\n    {\n      \"time\": \"22:07:06\",\n      \"kind\": \"end\",\n      \"text\": \"Person switches on the bedside lamp\"\n    },\n    {\n      \"time\": \"22:07:08\",\n      \"kind\": \"start\",\n      \"text\": \"Person walks toward the wall switch\"\n    },\n    {\n      \"time\": \"22:07:10\",\n      \"kind\": \"end\",\n      \"text\": \"Person walks toward the wall switch\"\n    },\n    {\n      \"time\": \"22:07:12\",\n      \"kind\": \"start\",\n      \"text\": \"Person turns off the main room light\"\n    },\n    {\n      \"time\": \"22:07:16\",\n      \"kind\": \"end\",\n      \"text\": \"Person turns off the main room light\"\n    },\n    {\n      \"time\": \"22:07:18\",\n      \"kind\": \"start\",\n      \"text\": \"Person gets into bed and pulls up the blanket\"\n    },\n    {\n      \"time\": \"22:07:28\",\n      \"kind\": \"end\",\n      \"text\": \"Person gets into bed and pulls up the blanket\"\n    },\n    {\n      \"time\": \"22:07:30\",\n      \"kind\": \"start\",\n      \"text\": \"Person reads a book in bed\"\n    },\n    {\n      \"time\": \"22:24:50\",\n      \"kind\": \"end\",\n      \"text\": \"Person reads a book in bed\"\n    },\n    {\n      \"time\": \"22:24:50\",\n      \"kind\": \"start\",\n      \"text\": \"Person closes the book\"\n    },\n    {\n      \"time\": \"22:24:52\",\n      \"kind\": \"end\",\n      \"text\": \"Person closes the book\"\n    },\n    {\n      \"time\": \"22:24:54\",\n      \"kind\": \"start\",\n      \"text\": \"Person leans back on the pillow with the book closed\"\n    },\n    {\n      \"time\": \"22:25:42\",\n      \"kind\": \"end\",\n      \"text\": \"Person leans back on the pillow with the book closed\"\n    },\n    {\n      \"time\": \"22:25:44\",\n      \"kind\": \"start\",\n      \"text\": \"Person reaches for the bedside lamp switch\"\n    },\n    {\n      \"time\": \"22:25:46\",\n      \"kind\": \"end\",\n      \"text\": \"Person reaches for the bedside lamp switch\"\n    },\n    {\n      \"time\": \"22:25:48\",\n      \"kind\": \"start\",\n      \"text\": \"Person switches off the bedside lamp\"\n    },\n    {\n      \"time\": \"22:25:50\",\n      \"kind\": \"end\",\n      \"text\": \"Person switches off the bedside lamp\"\n    },\n    {\n      \"time\": \"22:25:52\",\n      \"kind\": \"start\",\n      \"text\": \"Person lies under the covers in the dark room\"\n    },\n    {\n      \"time\": \"22:59:58\",\n      \"kind\": \"end\",\n      \"text\": \"Person lies under the covers in the dark room\"\n    }\n  ]\n}",
+  "output": {
+    "moments": [
+      {
+        "time": "22:00:00",
+        "kind": "start",
+        "text": "Person looks at their phone while sitting on the sofa"
+      },
+      {
+        "time": "22:01:16",
+        "kind": "end",
+        "text": "Person looks at their phone while sitting on the sofa"
+      },
+      {
+        "time": "22:01:18",
+        "kind": "start",
+        "text": "Person watches TV while sitting on the sofa"
+      },
+      {
+        "time": "22:01:58",
+        "kind": "end",
+        "text": "Person watches TV while sitting on the sofa"
+      },
+      {
+        "time": "22:02:00",
+        "kind": "moment",
+        "text": "Person stands up from the sofa"
+      },
+      {
+        "time": "22:02:02",
+        "kind": "start",
+        "text": "Person leaves the room"
+      },
+      {
+        "time": "22:07:00",
+        "kind": "end",
+        "text": "Person leaves the room"
+      },
+      {
+        "time": "22:07:02",
+        "kind": "moment",
+        "text": "Person returns to the room"
+      },
+      {
+        "time": "22:07:04",
+        "kind": "start",
+        "text": "Person switches on the bedside lamp"
+      },
+      {
+        "time": "22:07:06",
+        "kind": "end",
+        "text": "Person switches on the bedside lamp"
+      },
+      {
+        "time": "22:07:08",
+        "kind": "start",
+        "text": "Person walks toward the wall switch"
+      },
+      {
+        "time": "22:07:10",
+        "kind": "end",
+        "text": "Person walks toward the wall switch"
+      },
+      {
+        "time": "22:07:12",
+        "kind": "start",
+        "text": "Person turns off the main room light"
+      },
+      {
+        "time": "22:07:16",
+        "kind": "end",
+        "text": "Person turns off the main room light"
+      },
+      {
+        "time": "22:07:18",
+        "kind": "start",
+        "text": "Person gets into bed and pulls up the blanket"
+      },
+      {
+        "time": "22:07:28",
+        "kind": "end",
+        "text": "Person gets into bed and pulls up the blanket"
+      },
+      {
+        "time": "22:07:30",
+        "kind": "start",
+        "text": "Person reads a book in bed"
+      },
+      {
+        "time": "22:24:50",
+        "kind": "end",
+        "text": "Person reads a book in bed"
+      },
+      {
+        "time": "22:24:50",
+        "kind": "start",
+        "text": "Person closes the book"
+      },
+      {
+        "time": "22:24:52",
+        "kind": "end",
+        "text": "Person closes the book"
+      },
+      {
+        "time": "22:24:54",
+        "kind": "start",
+        "text": "Person leans back on the pillow with the book closed"
+      },
+      {
+        "time": "22:25:42",
+        "kind": "end",
+        "text": "Person leans back on the pillow with the book closed"
+      },
+      {
+        "time": "22:25:44",
+        "kind": "start",
+        "text": "Person reaches for the bedside lamp switch"
+      },
+      {
+        "time": "22:25:46",
+        "kind": "end",
+        "text": "Person reaches for the bedside lamp switch"
+      },
+      {
+        "time": "22:25:48",
+        "kind": "start",
+        "text": "Person switches off the bedside lamp"
+      },
+      {
+        "time": "22:25:50",
+        "kind": "end",
+        "text": "Person switches off the bedside lamp"
+      },
+      {
+        "time": "22:25:52",
+        "kind": "start",
+        "text": "Person lies under the covers in the dark room"
+      },
+      {
+        "time": "22:59:58",
+        "kind": "end",
+        "text": "Person lies under the covers in the dark room"
+      }
+    ]
+  },
+  "errors": [],
+  "checked_at": "2026-11-16T02:45:46.136886+00:00",
+  "role": "moments",
+  "api_request_attempted": true,
+  "model_response_received": true,
+  "action_executed": false,
+  "requested_model": "qwen/qwen3.5-27b",
+  "response_model": "qwen/qwen3.5-27b",
+  "provider": "Alibaba",
+  "response_id": "gen-1794797112-6R8yH3J1INYY1KidQIxj",
+  "finish_reason": "stop",
+  "elapsed_seconds": 35.789415099978214,
+  "usage": {
+    "prompt_tokens": 47804,
+    "completion_tokens": 1216,
+    "total_tokens": 49020,
+    "cost": 0.01121874,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01121874,
+      "upstream_inference_prompt_cost": 0.00932178,
+      "upstream_inference_completions_cost": 0.00189696
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

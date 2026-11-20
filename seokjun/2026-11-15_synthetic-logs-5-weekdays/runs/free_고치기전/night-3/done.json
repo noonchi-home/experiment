@@ -1,0 +1,27 @@
+{
+  "night": 3,
+  "states": 8,
+  "candidates": 12,
+  "passed": [
+    {
+      "state": "breakfast",
+      "action": "Pick up the cup and place it in the dishwasher.",
+      "candidate": "finish_drinking"
+    },
+    {
+      "state": "dinner",
+      "action": "Pick up the bowl and place it in the dishwasher.",
+      "candidate": "finish_meal"
+    },
+    {
+      "state": "dinner",
+      "action": "Pick up the bowl and place it in the dishwasher.",
+      "candidate": "wipe_mouth"
+    },
+    {
+      "state": "going_out",
+      "action": "Turn off the room light.",
+      "candidate": "put_on_bag"
+    }
+  ]
+}

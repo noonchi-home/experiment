@@ -1,0 +1,73 @@
+{
+  "initial_state": "morning",
+  "states": [
+    {
+      "id": "morning",
+      "description": "아침 준비",
+      "rules": [],
+      "next": []
+    },
+    {
+      "id": "breakfast",
+      "description": "아침 식사",
+      "rules": [
+        {
+          "trigger": "finish_drinking",
+          "action": "Pick up the cup and place it in the dishwasher."
+        }
+      ],
+      "next": []
+    },
+    {
+      "id": "study",
+      "description": "공부",
+      "rules": [],
+      "next": []
+    },
+    {
+      "id": "going_out",
+      "description": "외출 준비",
+      "rules": [
+        {
+          "trigger": "put_on_bag",
+          "action": "Turn off the room light."
+        }
+      ],
+      "next": []
+    },
+    {
+      "id": "away",
+      "description": "외출 (안 보임)",
+      "rules": [],
+      "next": []
+    },
+    {
+      "id": "evening_rest",
+      "description": "저녁 휴식",
+      "rules": [
+        {
+          "trigger": "phone_rings",
+          "action": "Pick up the can and place it next to the person."
+        }
+      ],
+      "next": []
+    },
+    {
+      "id": "dinner",
+      "description": "저녁 식사",
+      "rules": [
+        {
+          "trigger": "finish_meal or wipe_mouth",
+          "action": "Pick up the bowl and place it in the dishwasher."
+        }
+      ],
+      "next": []
+    },
+    {
+      "id": "bedtime",
+      "description": "잠자리 준비",
+      "rules": [],
+      "next": []
+    }
+  ]
+}

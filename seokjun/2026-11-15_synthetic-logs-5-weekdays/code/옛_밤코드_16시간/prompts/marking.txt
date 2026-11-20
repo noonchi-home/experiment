@@ -1,0 +1,42 @@
+You find when given events happened during a person's day, using a list of moments.
+
+# Inputs
+- States: the phases of the person's routine, each as `id: description`.
+- Candidates to find: each line is `state | candidate`. The candidate is a short
+statement of one moment. It counts only while the person is in that state.
+- Actions to find: robot tasks. Find when the person did the same thing themselves.
+- Moment list: `HH:MM:SS | text` in time order. "(start)" and "(end)" mark the first
+and last moment of an ongoing activity. Other lines are short actions.
+
+# Task
+- For each candidate, list the time of every moment that means the same as the
+candidate, even if it is worded differently, and that happens while the person is in
+the candidate's state. Judge the state from the state descriptions and the moments
+around it.
+- A candidate about something beginning matches a "(start)" moment or a short action.
+A candidate about something finishing or stopping matches an "(end)" moment or a short
+action. Use that moment's time.
+- If the same candidate matches again within 10 seconds, it is one occurrence. List it
+once: the first time for something beginning, the last time for something finishing.
+- For each action, list the time of every moment at which the person themselves
+completed that task, for example the moment the cup goes into the dishwasher. Going to
+do it, such as picking the object up or walking toward it, is not the task itself.
+- A task is written from the robot's side, so the moment list may describe the same
+thing in other words. Count a moment when the person themselves produced the result of
+the task, even if:
+  - the place is named differently: "next to the person" means within the person's
+    reach where they are, whatever that place is called;
+  - the object or device has another or a more specific name, such as "mug" for "cup".
+    It must be the same object or device, not another one of the same kind.
+- List every interval in which the person is not visible, from the start to the end of
+that activity. If it is still going at the end of the list, end it at the last time in
+the list. If it was already going at the beginning, start it at the first time.
+- Use only times that appear in the moment list. If nothing matches, give an empty
+list. Do not guess.
+- Answer every candidate and every action exactly once, in the order given, copying
+the state, candidate, and action text exactly as given.
+
+# Output (JSON only, no markdown, no commentary)
+{"candidates": [{"state": "<state id>", "candidate": "<as given>", "times": ["HH:MM:SS", ...]}, ...],
+ "actions": [{"action": "<as given>", "times": ["HH:MM:SS", ...]}, ...],
+ "unseen": [{"start": "HH:MM:SS", "end": "HH:MM:SS"}, ...]}

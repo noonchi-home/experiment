@@ -1,0 +1,69 @@
+{
+  "night": 1,
+  "matches": [
+    {
+      "candidate": "Person checks the phone screen",
+      "event": "look_at_phone"
+    },
+    {
+      "candidate": "Person stretches their arms",
+      "event": "stretch"
+    },
+    {
+      "candidate": "Person is done eating breakfast",
+      "event": "finish_breakfast"
+    },
+    {
+      "candidate": "Person leans back in the chair at the table",
+      "event": "sit_idle_at_table"
+    },
+    {
+      "candidate": "Person settles into the desk chair",
+      "event": "sit_at_desk"
+    },
+    {
+      "candidate": "Person opens the laptop",
+      "event": "open_laptop"
+    },
+    {
+      "candidate": "Person closes the laptop",
+      "event": "close_laptop"
+    },
+    {
+      "candidate": "Person stretches",
+      "event": "stretch"
+    },
+    {
+      "candidate": "Person zips the bag closed after packing",
+      "event": "pack_bag"
+    },
+    {
+      "candidate": "Person shoulders their bag",
+      "event": "put_on_bag"
+    },
+    {
+      "candidate": "Person watches TV from the sofa",
+      "event": "watch_tv"
+    },
+    {
+      "candidate": "Person relaxes on the sofa",
+      "event": "sit_on_sofa"
+    },
+    {
+      "candidate": "Person finishes the meal",
+      "event": "finish_meal"
+    },
+    {
+      "candidate": "Person puts down the chopsticks",
+      "event": "put_down_chopsticks"
+    },
+    {
+      "candidate": "Person lies back against the pillow",
+      "event": "lie_back"
+    },
+    {
+      "candidate": "Person finishes reading and closes the book",
+      "event": "close_book"
+    }
+  ]
+}

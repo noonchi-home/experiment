@@ -1,0 +1,99 @@
+{
+  "status": "valid",
+  "raw_response": "{\"matches\": [{\"index\": 1, \"event\": \"sit_idle_at_table\"}, {\"index\": 2, \"event\": null}, {\"index\": 3, \"event\": \"sit_at_desk\"}, {\"index\": 4, \"event\": \"return_to_desk\"}, {\"index\": 5, \"event\": \"close_laptop\"}, {\"index\": 6, \"event\": \"write_notes\"}, {\"index\": 7, \"event\": \"walk_to_kitchen\"}, {\"index\": 8, \"event\": \"stand_up\"}, {\"index\": 9, \"event\": \"sit_idle_at_table\"}, {\"index\": 10, \"event\": \"wipe_mouth\"}, {\"index\": 11, \"event\": \"turn_on_bedside_lamp\"}, {\"index\": 12, \"event\": \"get_into_bed\"}, {\"index\": 13, \"event\": \"close_book\"}, {\"index\": 14, \"event\": \"lie_back\"}]}",
+  "output": {
+    "matches": [
+      {
+        "index": 1,
+        "event": "sit_idle_at_table"
+      },
+      {
+        "index": 2,
+        "event": null
+      },
+      {
+        "index": 3,
+        "event": "sit_at_desk"
+      },
+      {
+        "index": 4,
+        "event": "return_to_desk"
+      },
+      {
+        "index": 5,
+        "event": "close_laptop"
+      },
+      {
+        "index": 6,
+        "event": "write_notes"
+      },
+      {
+        "index": 7,
+        "event": "walk_to_kitchen"
+      },
+      {
+        "index": 8,
+        "event": "stand_up"
+      },
+      {
+        "index": 9,
+        "event": "sit_idle_at_table"
+      },
+      {
+        "index": 10,
+        "event": "wipe_mouth"
+      },
+      {
+        "index": 11,
+        "event": "turn_on_bedside_lamp"
+      },
+      {
+        "index": 12,
+        "event": "get_into_bed"
+      },
+      {
+        "index": 13,
+        "event": "close_book"
+      },
+      {
+        "index": 14,
+        "event": "lie_back"
+      }
+    ]
+  },
+  "errors": [],
+  "checked_at": "2026-11-15T17:28:31.058460+00:00",
+  "role": "matching",
+  "api_request_attempted": true,
+  "model_response_received": true,
+  "action_executed": false,
+  "requested_model": "qwen/qwen3.5-27b",
+  "response_model": "qwen/qwen3.5-27b",
+  "provider": "Alibaba",
+  "response_id": "gen-1794763704-6bCAuSqDwTcVhlT2IRRX",
+  "finish_reason": "stop",
+  "elapsed_seconds": 8.138663000019733,
+  "usage": {
+    "prompt_tokens": 4794,
+    "completion_tokens": 207,
+    "total_tokens": 5001,
+    "cost": 0.00125775,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00125775,
+      "upstream_inference_prompt_cost": 0.00093483,
+      "upstream_inference_completions_cost": 0.00032292
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

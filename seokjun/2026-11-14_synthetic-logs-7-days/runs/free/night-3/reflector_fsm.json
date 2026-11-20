@@ -1,0 +1,116 @@
+{
+  "initial_state": "morning",
+  "states": [
+    {
+      "id": "morning",
+      "description": "아침 준비",
+      "rules": [],
+      "next": []
+    },
+    {
+      "id": "breakfast",
+      "description": "아침 식사",
+      "rules": [
+        {
+          "triggers": [
+            "finish_drinking",
+            "look_at_phone"
+          ],
+          "action": "Pick up the cup and place it in the dishwasher."
+        }
+      ],
+      "next": []
+    },
+    {
+      "id": "study",
+      "description": "공부",
+      "rules": [
+        {
+          "triggers": [
+            "close_laptop"
+          ],
+          "action": "Pick up the book and place it in the designated storage area."
+        },
+        {
+          "triggers": [
+            "sit_at_desk"
+          ],
+          "action": "Pick up the cup and place it next to the person."
+        }
+      ],
+      "next": []
+    },
+    {
+      "id": "going_out",
+      "description": "외출 준비",
+      "rules": [
+        {
+          "triggers": [
+            "put_on_bag"
+          ],
+          "action": "Turn off the room light."
+        }
+      ],
+      "next": []
+    },
+    {
+      "id": "away",
+      "description": "외출 (안 보임)",
+      "rules": [],
+      "next": []
+    },
+    {
+      "id": "evening_rest",
+      "description": "저녁 휴식",
+      "rules": [
+        {
+          "triggers": [
+            "phone_rings"
+          ],
+          "action": "Pick up the can and place it next to the person."
+        },
+        {
+          "triggers": [
+            "guest_finishes_can"
+          ],
+          "action": "Pick up the can and place it in the designated storage area."
+        },
+        {
+          "triggers": [
+            "finish_vacuuming"
+          ],
+          "action": "Pick up the bedside lamp and place it in the designated storage area."
+        }
+      ],
+      "next": []
+    },
+    {
+      "id": "dinner",
+      "description": "저녁 식사",
+      "rules": [
+        {
+          "triggers": [
+            "finish_meal",
+            "put_down_spoon",
+            "put_down_chopsticks"
+          ],
+          "action": "Pick up the bowl and place it in the dishwasher."
+        }
+      ],
+      "next": []
+    },
+    {
+      "id": "bedtime",
+      "description": "잠자리 준비",
+      "rules": [
+        {
+          "triggers": [
+            "close_book"
+          ],
+          "action": "Turn off the bedside lamp."
+        }
+      ],
+      "next": []
+    }
+  ]
+}

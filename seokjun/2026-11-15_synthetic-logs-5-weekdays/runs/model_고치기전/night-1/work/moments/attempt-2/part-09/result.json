@@ -1,0 +1,53 @@
+{
+  "status": "valid",
+  "raw_response": "{\"moments\": [{\"time\": \"15:00:00\", \"kind\": \"start\", \"text\": \"Person is not visible\"}, {\"time\": \"15:59:58\", \"kind\": \"end\", \"text\": \"Person is not visible\"}]}",
+  "output": {
+    "moments": [
+      {
+        "time": "15:00:00",
+        "kind": "start",
+        "text": "Person is not visible"
+      },
+      {
+        "time": "15:59:58",
+        "kind": "end",
+        "text": "Person is not visible"
+      }
+    ]
+  },
+  "errors": [],
+  "checked_at": "2026-11-15T15:06:22.346307+00:00",
+  "role": "moments",
+  "api_request_attempted": true,
+  "model_response_received": true,
+  "action_executed": false,
+  "requested_model": "qwen/qwen3.5-27b",
+  "response_model": "qwen/qwen3.5-27b",
+  "provider": "Alibaba",
+  "response_id": "gen-1794755165-egOL185wAVKOfDLkR2dd",
+  "finish_reason": "stop",
+  "elapsed_seconds": 17.798437700024806,
+  "usage": {
+    "prompt_tokens": 35193,
+    "completion_tokens": 61,
+    "total_tokens": 35254,
+    "cost": 0.006957795,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.006957795,
+      "upstream_inference_prompt_cost": 0.006862635,
+      "upstream_inference_completions_cost": 9.516e-05
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

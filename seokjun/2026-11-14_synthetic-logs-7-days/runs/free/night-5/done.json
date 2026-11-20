@@ -1,0 +1,37 @@
+{
+  "night": 5,
+  "states": 8,
+  "candidates": 12,
+  "passed": [
+    {
+      "state": "bedtime",
+      "action": "Turn off the bedside lamp.",
+      "candidate": "close_book"
+    },
+    {
+      "state": "breakfast",
+      "action": "Pick up the cup and place it in the dishwasher.",
+      "candidate": "finish_drinking"
+    },
+    {
+      "state": "dinner",
+      "action": "Pick up the bowl and place it in the dishwasher.",
+      "candidate": "finish_meal"
+    },
+    {
+      "state": "dinner",
+      "action": "Pick up the bowl and place it in the dishwasher.",
+      "candidate": "put_down_spoon"
+    },
+    {
+      "state": "evening_rest",
+      "action": "Pick up the can and place it in the designated storage area.",
+      "candidate": "guest_finishes_can"
+    },
+    {
+      "state": "going_out",
+      "action": "Turn off the room light.",
+      "candidate": "put_on_bag"
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "day": 4,
+  "candidates": [
+    {
+      "state": "breakfast",
+      "candidate": "finish_drinking",
+      "times": [
+        "07:50:00"
+      ]
+    },
+    {
+      "state": "breakfast",
+      "candidate": "look_at_phone",
+      "times": [
+        "07:35:58",
+        "07:42:58",
+        "07:49:28"
+      ]
+    },
+    {
+      "state": "study",
+      "candidate": "close_laptop",
+      "times": [
+        "12:00:00"
+      ]
+    },
+    {
+      "state": "study",
+      "candidate": "sit_at_desk",
+      "times": [
+        "08:00:00"
+      ]
+    },
+    {
+      "state": "going_out",
+      "candidate": "put_on_bag",
+      "times": [
+        "12:30:00"
+      ]
+    },
+    {
+      "state": "evening_rest",
+      "candidate": "phone_rings",
+      "times": [
+        "17:40:58"
+      ]
+    },
+    {
+      "state": "evening_rest",
+      "candidate": "guest_finishes_can",
+      "times": [
+        "17:20:00",
+        "17:50:00",
+        "18:15:00"
+      ]
+    },
+    {
+      "state": "evening_rest",
+      "candidate": "finish_vacuuming",
+      "times": []
+    },
+    {
+      "state": "dinner",
+      "candidate": "finish_meal",
+      "times": [
+        "18:58:00"
+      ]
+    },
+    {
+      "state": "dinner",
+      "candidate": "put_down_spoon",
+      "times": [
+        "18:59:00"
+      ]
+    },
+    {
+      "state": "dinner",
+      "candidate": "put_down_chopsticks",
+      "times": [
+        "18:56:00",
+        "18:57:00",
+        "18:57:40"
+      ]
+    },
+    {
+      "state": "bedtime",
+      "candidate": "close_book",
+      "times": [
+        "22:20:00"
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "action": "Pick up the bedside lamp and place it in the designated storage area.",
+      "times": []
+    },
+    {
+      "action": "Pick up the book and place it in the designated storage area.",
+      "times": []
+    },
+    {
+      "action": "Pick up the bowl and place it in the dishwasher.",
+      "times": [
+        "19:01:00"
+      ]
+    },
+    {
+      "action": "Pick up the can and place it in the designated storage area.",
+      "times": [
+        "17:22:00",
+        "17:52:00",
+        "18:17:00"
+      ]
+    },
+    {
+      "action": "Pick up the can and place it next to the person.",
+      "times": []
+    },
+    {
+      "action": "Pick up the cup and place it in the dishwasher.",
+      "times": [
+        "07:53:00"
+      ]
+    },
+    {
+      "action": "Pick up the cup and place it next to the person.",
+      "times": [
+        "07:12:52",
+        "07:24:46",
+        "07:29:04",
+        "07:39:18",
+        "07:40:48",
+        "08:03:00",
+        "08:53:46",
+        "09:42:22",
+        "09:45:48",
+        "10:00:32",
+        "11:20:26",
+        "11:52:22",
+        "11:57:34",
+        "12:01:14",
+        "12:22:38",
+        "17:12:34",
+        "18:18:30",
+        "18:41:46",
+        "19:15:42",
+        "19:26:38",
+        "19:51:54",
+        "20:32:06",
+        "20:47:14",
+        "20:57:52",
+        "21:04:36",
+        "21:15:58",
+        "21:23:58",
+        "21:26:12",
+        "21:52:30"
+      ]
+    },
+    {
+      "action": "Turn off the bedside lamp.",
+      "times": [
+        "22:22:00"
+      ]
+    },
+    {
+      "action": "Turn off the room light.",
+      "times": [
+        "12:32:00"
+      ]
+    }
+  ],
+  "unseen": [
+    {
+      "start": "12:32:06",
+      "end": "16:59:58"
+    }
+  ]
+}

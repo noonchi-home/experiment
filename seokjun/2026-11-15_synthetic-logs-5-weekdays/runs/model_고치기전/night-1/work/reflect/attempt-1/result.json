@@ -1,0 +1,212 @@
+{
+  "status": "valid",
+  "raw_response": "{\n  \"initial_state\": \"waking_up\",\n  \"states\": [\n    {\n      \"id\": \"waking_up\",\n      \"description\": \"Person wakes up, dresses, and stretches in the bedroom.\",\n      \"rules\": [],\n      \"next\": [\n        {\n          \"to\": \"having_breakfast\",\n          \"on\": \"Person sets a plate of toast on the dining table\"\n        }\n      ]\n    },\n    {\n      \"id\": \"having_breakfast\",\n      \"description\": \"Person eats breakfast and drinks water at the dining table.\",\n      \"rules\": [\n        {\n          \"triggers\": [\n            \"Person checks the phone screen\",\n            \"Person stretches their arms\"\n          ],\n          \"action\": \"Pick up the cup and place it next to the person.\"\n        }\n      ],\n      \"next\": [\n        {\n          \"to\": \"post_breakfast_cleanup\",\n          \"on\": \"Person is done eating breakfast\"\n        }\n      ]\n    },\n    {\n      \"id\": \"post_breakfast_cleanup\",\n      \"description\": \"Person cleans up dishes after breakfast.\",\n      \"rules\": [\n        {\n          \"triggers\": [\n            \"Person is done eating breakfast\",\n            \"Person leans back in the chair at the table\"\n          ],\n          \"action\": \"Pick up the cup and place it in the dishwasher.\"\n        }\n      ],\n      \"next\": [\n        {\n          \"to\": \"working_at_desk\",\n          \"on\": \"Person settles into the desk chair\"\n        }\n      ]\n    },\n    {\n      \"id\": \"working_at_desk\",\n      \"description\": \"Person works on laptop, writes notes, and reads books at the desk.\",\n      \"rules\": [\n        {\n          \"triggers\": [\n            \"Person settles into the desk chair\",\n            \"Person opens the laptop\"\n          ],\n          \"action\": \"Pick up the cup and place it next to the person.\"\n        },\n        {\n          \"triggers\": [\n            \"Person closes the laptop\",\n            \"Person stretches\"\n          ],\n          \"action\": \"Pick up the book and place it in the designated storage area.\"\n        }\n      ],\n      \"next\": [\n        {\n          \"to\": \"leaving_house\",\n          \"on\": \"Person packs a laptop and a notebook into the bag\"\n        }\n      ]\n    },\n    {\n      \"id\": \"leaving_house\",\n      \"description\": \"Person packs bag and prepares to leave the house.\",\n      \"rules\": [\n        {\n          \"triggers\": [\n            \"Person zips the bag closed after packing\",\n            \"Person shoulders their bag\"\n          ],\n          \"action\": \"Turn off the room light.\"\n        }\n      ],\n      \"next\": [\n        {\n          \"to\": \"relaxing_evening\",\n          \"on\": \"Person arrives home\"\n        }\n      ]\n    },\n    {\n      \"id\": \"relaxing_evening\",\n      \"description\": \"Person returns home, relaxes on the sofa, and watches TV.\",\n      \"rules\": [\n        {\n          \"triggers\": [\n            \"Person watches TV from the sofa\",\n            \"Person relaxes on the sofa\"\n          ],\n          \"action\": \"Pick up the can and place it next to the person.\"\n        }\n      ],\n      \"next\": [\n        {\n          \"to\": \"having_dinner\",\n          \"on\": \"Person stirs a pot on the stove\"\n        }\n      ]\n    },\n    {\n      \"id\": \"having_dinner\",\n      \"description\": \"Person cooks and eats dinner at the dining table.\",\n      \"rules\": [],\n      \"next\": [\n        {\n          \"to\": \"post_dinner_cleanup\",\n          \"on\": \"Person finishes the meal\"\n        }\n      ]\n    },\n    {\n      \"id\": \"post_dinner_cleanup\",\n      \"description\": \"Person cleans up dishes after dinner.\",\n      \"rules\": [\n        {\n          \"triggers\": [\n            \"Person finishes the meal\",\n            \"Person puts down the chopsticks\"\n          ],\n          \"action\": \"Pick up the bowl and place it in the dishwasher.\"\n        }\n      ],\n      \"next\": [\n        {\n          \"to\": \"nighttime_leisure\",\n          \"on\": \"Person relaxes on the sofa\"\n        }\n      ]\n    },\n    {\n      \"id\": \"nighttime_leisure\",\n      \"description\": \"Person relaxes on the sofa and watches television in the evening.\",\n      \"rules\": [],\n      \"next\": [\n        {\n          \"to\": \"going_to_sleep\",\n          \"on\": \"Person clicks the bedside lamp on\"\n        }\n      ]\n    },\n    {\n      \"id\": \"going_to_sleep\",\n      \"description\": \"Person goes to bed, reads, and prepares to sleep.\",\n      \"rules\": [\n        {\n          \"triggers\": [\n            \"Person lies back against the pillow\",\n            \"Person finishes reading and closes the book\"\n          ],\n          \"action\": \"Turn off the bedside lamp.\"\n        }\n      ],\n      \"next\": []\n    }\n  ]\n}",
+  "output": {
+    "initial_state": "waking_up",
+    "states": [
+      {
+        "id": "waking_up",
+        "description": "Person wakes up, dresses, and stretches in the bedroom.",
+        "rules": [],
+        "next": [
+          {
+            "to": "having_breakfast",
+            "on": "Person sets a plate of toast on the dining table"
+          }
+        ]
+      },
+      {
+        "id": "having_breakfast",
+        "description": "Person eats breakfast and drinks water at the dining table.",
+        "rules": [
+          {
+            "triggers": [
+              "Person checks the phone screen",
+              "Person stretches their arms"
+            ],
+            "action": "Pick up the cup and place it next to the person."
+          }
+        ],
+        "next": [
+          {
+            "to": "post_breakfast_cleanup",
+            "on": "Person is done eating breakfast"
+          }
+        ]
+      },
+      {
+        "id": "post_breakfast_cleanup",
+        "description": "Person cleans up dishes after breakfast.",
+        "rules": [
+          {
+            "triggers": [
+              "Person is done eating breakfast",
+              "Person leans back in the chair at the table"
+            ],
+            "action": "Pick up the cup and place it in the dishwasher."
+          }
+        ],
+        "next": [
+          {
+            "to": "working_at_desk",
+            "on": "Person settles into the desk chair"
+          }
+        ]
+      },
+      {
+        "id": "working_at_desk",
+        "description": "Person works on laptop, writes notes, and reads books at the desk.",
+        "rules": [
+          {
+            "triggers": [
+              "Person settles into the desk chair",
+              "Person opens the laptop"
+            ],
+            "action": "Pick up the cup and place it next to the person."
+          },
+          {
+            "triggers": [
+              "Person closes the laptop",
+              "Person stretches"
+            ],
+            "action": "Pick up the book and place it in the designated storage area."
+          }
+        ],
+        "next": [
+          {
+            "to": "leaving_house",
+            "on": "Person packs a laptop and a notebook into the bag"
+          }
+        ]
+      },
+      {
+        "id": "leaving_house",
+        "description": "Person packs bag and prepares to leave the house.",
+        "rules": [
+          {
+            "triggers": [
+              "Person zips the bag closed after packing",
+              "Person shoulders their bag"
+            ],
+            "action": "Turn off the room light."
+          }
+        ],
+        "next": [
+          {
+            "to": "relaxing_evening",
+            "on": "Person arrives home"
+          }
+        ]
+      },
+      {
+        "id": "relaxing_evening",
+        "description": "Person returns home, relaxes on the sofa, and watches TV.",
+        "rules": [
+          {
+            "triggers": [
+              "Person watches TV from the sofa",
+              "Person relaxes on the sofa"
+            ],
+            "action": "Pick up the can and place it next to the person."
+          }
+        ],
+        "next": [
+          {
+            "to": "having_dinner",
+            "on": "Person stirs a pot on the stove"
+          }
+        ]
+      },
+      {
+        "id": "having_dinner",
+        "description": "Person cooks and eats dinner at the dining table.",
+        "rules": [],
+        "next": [
+          {
+            "to": "post_dinner_cleanup",
+            "on": "Person finishes the meal"
+          }
+        ]
+      },
+      {
+        "id": "post_dinner_cleanup",
+        "description": "Person cleans up dishes after dinner.",
+        "rules": [
+          {
+            "triggers": [
+              "Person finishes the meal",
+              "Person puts down the chopsticks"
+            ],
+            "action": "Pick up the bowl and place it in the dishwasher."
+          }
+        ],
+        "next": [
+          {
+            "to": "nighttime_leisure",
+            "on": "Person relaxes on the sofa"
+          }
+        ]
+      },
+      {
+        "id": "nighttime_leisure",
+        "description": "Person relaxes on the sofa and watches television in the evening.",
+        "rules": [],
+        "next": [
+          {
+            "to": "going_to_sleep",
+            "on": "Person clicks the bedside lamp on"
+          }
+        ]
+      },
+      {
+        "id": "going_to_sleep",
+        "description": "Person goes to bed, reads, and prepares to sleep.",
+        "rules": [
+          {
+            "triggers": [
+              "Person lies back against the pillow",
+              "Person finishes reading and closes the book"
+            ],
+            "action": "Turn off the bedside lamp."
+          }
+        ],
+        "next": []
+      }
+    ]
+  },
+  "errors": [],
+  "checked_at": "2026-11-15T15:13:04.238353+00:00",
+  "role": "reflector_text",
+  "api_request_attempted": true,
+  "model_response_received": true,
+  "action_executed": false,
+  "requested_model": "qwen/qwen3.5-27b",
+  "response_model": "qwen/qwen3.5-27b",
+  "provider": "Alibaba",
+  "response_id": "gen-1794755459-qD5pFFJAEjLEappCv4m1",
+  "finish_reason": "stop",
+  "elapsed_seconds": 125.96176040000864,
+  "usage": {
+    "prompt_tokens": 17596,
+    "completion_tokens": 10112,
+    "total_tokens": 27708,
+    "cost": 0.01920594,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01920594,
+      "upstream_inference_prompt_cost": 0.00343122,
+      "upstream_inference_completions_cost": 0.01577472
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 8899,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

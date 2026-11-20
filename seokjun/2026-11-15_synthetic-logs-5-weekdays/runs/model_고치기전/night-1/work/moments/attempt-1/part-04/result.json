@@ -1,0 +1,123 @@
+{
+  "status": "valid",
+  "raw_response": "{\n  \"moments\": [\n    {\n      \"time\": \"10:17:16\",\n      \"kind\": \"start\",\n      \"text\": \"Person scrolls through their smartphone\"\n    },\n    {\n      \"time\": \"10:17:52\",\n      \"kind\": \"end\",\n      \"text\": \"Person scrolls through their smartphone\"\n    },\n    {\n      \"time\": \"10:18:38\",\n      \"kind\": \"moment\",\n      \"text\": \"Person finishes the water and sets the empty cup down\"\n    },\n    {\n      \"time\": \"10:27:54\",\n      \"kind\": \"start\",\n      \"text\": \"Person reads a book at the desk\"\n    },\n    {\n      \"time\": \"10:30:22\",\n      \"kind\": \"end\",\n      \"text\": \"Person reads a book at the desk\"\n    },\n    {\n      \"time\": \"10:30:22\",\n      \"kind\": \"start\",\n      \"text\": \"Person writes notes in a notebook\"\n    },\n    {\n      \"time\": \"10:32:58\",\n      \"kind\": \"end\",\n      \"text\": \"Person writes notes in a notebook\"\n    },\n    {\n      \"time\": \"10:32:58\",\n      \"kind\": \"start\",\n      \"text\": \"Person scrolls through their smartphone\"\n    },\n    {\n      \"time\": \"10:33:04\",\n      \"kind\": \"end\",\n      \"text\": \"Person scrolls through their smartphone\"\n    },\n    {\n      \"time\": \"10:37:22\",\n      \"kind\": \"start\",\n      \"text\": \"Person gets a cup of water from the purifier\"\n    },\n    {\n      \"time\": \"10:37:34\",\n      \"kind\": \"end\",\n      \"text\": \"Person gets a cup of water from the purifier\"\n    },\n    {\n      \"time\": \"10:41:12\",\n      \"kind\": \"start\",\n      \"text\": \"Person writes notes in a notebook\"\n    },\n    {\n      \"time\": \"10:43:36\",\n      \"kind\": \"end\",\n      \"text\": \"Person writes notes in a notebook\"\n    },\n    {\n      \"time\": \"10:43:36\",\n      \"kind\": \"start\",\n      \"text\": \"Person checks the phone screen\"\n    },\n    {\n      \"time\": \"10:43:44\",\n      \"kind\": \"end\",\n      \"text\": \"Person checks the phone screen\"\n    },\n    {\n      \"time\": \"10:58:28\",\n      \"kind\": \"start\",\n      \"text\": \"Person is not visible\"\n    }\n  ]\n}",
+  "output": {
+    "moments": [
+      {
+        "time": "10:17:16",
+        "kind": "start",
+        "text": "Person scrolls through their smartphone"
+      },
+      {
+        "time": "10:17:52",
+        "kind": "end",
+        "text": "Person scrolls through their smartphone"
+      },
+      {
+        "time": "10:18:38",
+        "kind": "moment",
+        "text": "Person finishes the water and sets the empty cup down"
+      },
+      {
+        "time": "10:27:54",
+        "kind": "start",
+        "text": "Person reads a book at the desk"
+      },
+      {
+        "time": "10:30:22",
+        "kind": "end",
+        "text": "Person reads a book at the desk"
+      },
+      {
+        "time": "10:30:22",
+        "kind": "start",
+        "text": "Person writes notes in a notebook"
+      },
+      {
+        "time": "10:32:58",
+        "kind": "end",
+        "text": "Person writes notes in a notebook"
+      },
+      {
+        "time": "10:32:58",
+        "kind": "start",
+        "text": "Person scrolls through their smartphone"
+      },
+      {
+        "time": "10:33:04",
+        "kind": "end",
+        "text": "Person scrolls through their smartphone"
+      },
+      {
+        "time": "10:37:22",
+        "kind": "start",
+        "text": "Person gets a cup of water from the purifier"
+      },
+      {
+        "time": "10:37:34",
+        "kind": "end",
+        "text": "Person gets a cup of water from the purifier"
+      },
+      {
+        "time": "10:41:12",
+        "kind": "start",
+        "text": "Person writes notes in a notebook"
+      },
+      {
+        "time": "10:43:36",
+        "kind": "end",
+        "text": "Person writes notes in a notebook"
+      },
+      {
+        "time": "10:43:36",
+        "kind": "start",
+        "text": "Person checks the phone screen"
+      },
+      {
+        "time": "10:43:44",
+        "kind": "end",
+        "text": "Person checks the phone screen"
+      },
+      {
+        "time": "10:58:28",
+        "kind": "start",
+        "text": "Person is not visible"
+      }
+    ]
+  },
+  "errors": [],
+  "checked_at": "2026-11-15T14:30:44.065174+00:00",
+  "role": "moments",
+  "api_request_attempted": true,
+  "model_response_received": true,
+  "action_executed": false,
+  "requested_model": "qwen/qwen3.5-27b",
+  "response_model": "qwen/qwen3.5-27b",
+  "provider": "Alibaba",
+  "response_id": "gen-1794753023-oDHQYOWhAGqfHzE7YyN9",
+  "finish_reason": "stop",
+  "elapsed_seconds": 22.342404199996963,
+  "usage": {
+    "prompt_tokens": 33393,
+    "completion_tokens": 691,
+    "total_tokens": 34084,
+    "cost": 0.007589595,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.007589595,
+      "upstream_inference_prompt_cost": 0.006511635,
+      "upstream_inference_completions_cost": 0.00107796
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

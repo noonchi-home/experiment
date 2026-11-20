@@ -1,0 +1,59 @@
+{
+  "initial_state": "morning_routine",
+  "states": [
+    {
+      "id": "morning_routine",
+      "description": "Waking up, dressing, and having breakfast.",
+      "rules": [],
+      "next": [
+        {
+          "to": "work_session",
+          "on": "Person sits down at the desk"
+        }
+      ]
+    },
+    {
+      "id": "work_session",
+      "description": "Working at the desk, reading, and studying.",
+      "rules": [],
+      "next": [
+        {
+          "to": "leisure_time",
+          "on": "Person enters the room and closes the door"
+        }
+      ]
+    },
+    {
+      "id": "leisure_time",
+      "description": "Relaxing on the sofa, watching TV, and using the phone.",
+      "rules": [],
+      "next": [
+        {
+          "to": "evening_dinner",
+          "on": "Person heads into the kitchen"
+        },
+        {
+          "to": "bedtime_routine",
+          "on": "Person leaves the room"
+        }
+      ]
+    },
+    {
+      "id": "evening_dinner",
+      "description": "Cooking and eating dinner at the dining table.",
+      "rules": [],
+      "next": [
+        {
+          "to": "leisure_time",
+          "on": "Person sits on the sofa"
+        }
+      ]
+    },
+    {
+      "id": "bedtime_routine",
+      "description": "Preparing for sleep, turning off lights, and getting into bed.",
+      "rules": [],
+      "next": []
+    }
+  ]
+}

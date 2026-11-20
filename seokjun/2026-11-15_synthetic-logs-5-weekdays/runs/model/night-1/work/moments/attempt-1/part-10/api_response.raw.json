@@ -1,0 +1,17 @@
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+{"id":"gen-1794796649-ydDLQJp40Wy7b3ZunRXA","object":"chat.completion","created":1794796649,"model":"qwen/qwen3.5-27b","provider":"Alibaba","system_fingerprint":null,"service_tier":null,"choices":[{"index":0,"logprobs":null,"finish_reason":"stop","native_finish_reason":"stop","message":{"role":"assistant","content":"{\n  \"moments\": [\n    {\n      \"time\": \"16:00:00\",\n      \"kind\": \"start\",\n      \"text\": \"Person is not visible\"\n    },\n    {\n      \"time\": \"16:49:42\",\n      \"kind\": \"end\",\n      \"text\": \"Person is not visible\"\n    },\n    {\n      \"time\": \"16:49:42\",\n      \"kind\": \"start\",\n      \"text\": \"Person enters the room and closes the door\"\n    },\n    {\n      \"time\": \"16:49:48\",\n      \"kind\": \"end\",\n      \"text\": \"Person enters the room and closes the door\"\n    },\n    {\n      \"time\": \"16:49:50\",\n      \"kind\": \"start\",\n      \"text\": \"Person puts down their bag by the door\"\n    },\n    {\n      \"time\": \"16:49:56\",\n      \"kind\": \"end\",\n      \"text\": \"Person puts down their bag by the door\"\n    },\n    {\n      \"time\": \"16:49:58\",\n      \"kind\": \"start\",\n      \"text\": \"Person turns on the room light\"\n    },\n    {\n      \"time\": \"16:50:02\",\n      \"kind\": \"end\",\n      \"text\": \"Person turns on the room light\"\n    },\n    {\n      \"time\": \"16:50:02\",\n      \"kind\": \"start\",\n      \"text\": \"Person leaves the room\"\n    },\n    {\n      \"time\": \"16:54:04\",\n      \"kind\": \"end\",\n      \"text\": \"Person leaves the room\"\n    },\n    {\n      \"time\": \"16:54:04\",\n      \"kind\": \"start\",\n      \"text\": \"Person walks into the room and sits on the sofa\"\n    },\n    {\n      \"time\": \"16:55:10\",\n      \"kind\": \"end\",\n      \"text\": \"Person walks into the room and sits on the sofa\"\n    },\n    {\n      \"time\": \"16:55:10\",\n      \"kind\": \"start\",\n      \"text\": \"Person adjusts their sitting position on the sofa\"\n    },\n    {\n      \"time\": \"16:55:16\",\n      \"kind\": \"end\",\n      \"text\": \"Person adjusts their sitting position on the sofa\"\n    },\n    {\n      \"time\": \"16:55:16\",\n      \"kind\": \"start\",\n      \"text\": \"Person covers a yawn with one hand\"\n    },\n    {\n      \"time\": \"16:55:20\",\n      \"kind\": \"end\",\n      \"text\": \"Person covers a yawn with one hand\"\n    },\n    {\n      \"time\": \"16:55:20\",\n      \"kind\": \"start\",\n      \"text\": \"Person watches TV while sitting on the sofa\"\n    },\n    {\n      \"time\": \"16:59:58\",\n      \"kind\": \"end\",\n      \"text\": \"Person watches TV while sitting on the sofa\"\n    }\n  ]\n}","refusal":null,"reasoning":null}}],"usage":{"prompt_tokens":35503,"completion_tokens":789,"total_tokens":36292,"cost":0.008153925,"is_byok":false,"prompt_tokens_details":{"cached_tokens":0,"cache_write_tokens":0,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.008153925,"upstream_inference_prompt_cost":0.006923085,"upstream_inference_completions_cost":0.00123084},"completion_tokens_details":{"reasoning_tokens":0,"image_tokens":0,"audio_tokens":0}}}

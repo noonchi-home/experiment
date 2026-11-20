@@ -1,0 +1,113 @@
+{
+  "initial_state": "morning_routine",
+  "states": [
+    {
+      "id": "morning_routine",
+      "description": "Waking up, dressing, and having breakfast.",
+      "rules": [
+        {
+          "triggers": [
+            "Person rests after eating",
+            "Person looks at their phone while sitting at the table"
+          ],
+          "action": "Pick up the cup and place it in the dishwasher."
+        }
+      ],
+      "next": [
+        {
+          "to": "work_session",
+          "on": "Person sits down at the desk"
+        }
+      ]
+    },
+    {
+      "id": "work_session",
+      "description": "Working at the desk, reading, and studying.",
+      "rules": [
+        {
+          "triggers": [
+            "Person sits down at the desk",
+            "Person settles at the desk"
+          ],
+          "action": "Pick up the cup and place it next to the person."
+        },
+        {
+          "triggers": [
+            "Person closes the laptop",
+            "Person writes notes in a notebook"
+          ],
+          "action": "Pick up the book and place it in the designated storage area."
+        }
+      ],
+      "next": [
+        {
+          "to": "leisure_time",
+          "on": "Person enters the room and closes the door"
+        }
+      ]
+    },
+    {
+      "id": "leisure_time",
+      "description": "Relaxing on the sofa, watching TV, and using the phone.",
+      "rules": [
+        {
+          "triggers": [
+            "Person heads into the kitchen",
+            "Person gets up from the sofa"
+          ],
+          "action": "Pick up the can and place it next to the person."
+        }
+      ],
+      "next": [
+        {
+          "to": "evening_dinner",
+          "on": "Person heads into the kitchen"
+        },
+        {
+          "to": "bedtime_routine",
+          "on": "Person leaves the room"
+        }
+      ]
+    },
+    {
+      "id": "evening_dinner",
+      "description": "Cooking and eating dinner at the dining table.",
+      "rules": [
+        {
+          "triggers": [
+            "Person sits at the table doing nothing in particular",
+            "Person wipes their mouth with a napkin"
+          ],
+          "action": "Pick up the bowl and place it in the dishwasher."
+        }
+      ],
+      "next": [
+        {
+          "to": "leisure_time",
+          "on": "Person sits on the sofa"
+        }
+      ]
+    },
+    {
+      "id": "bedtime_routine",
+      "description": "Preparing for sleep, turning off lights, and getting into bed.",
+      "rules": [
+        {
+          "triggers": [
+            "Person switches on the bedside lamp",
+            "Person gets into bed and pulls up the blanket"
+          ],
+          "action": "Turn off the room light."
+        },
+        {
+          "triggers": [
+            "Person closes the book",
+            "Person leans back on the pillow"
+          ],
+          "action": "Turn off the bedside lamp."
+        }
+      ],
+      "next": []
+    }
+  ]
+}

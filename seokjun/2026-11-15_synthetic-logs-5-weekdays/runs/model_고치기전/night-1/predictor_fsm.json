@@ -1,0 +1,110 @@
+{
+  "initial_state": "waking_up",
+  "states": [
+    {
+      "id": "waking_up",
+      "description": "Person wakes up, dresses, and stretches in the bedroom.",
+      "rules": [],
+      "next": [
+        {
+          "to": "having_breakfast",
+          "on": "Person sets a plate of toast on the dining table"
+        }
+      ]
+    },
+    {
+      "id": "having_breakfast",
+      "description": "Person eats breakfast and drinks water at the dining table.",
+      "rules": [],
+      "next": [
+        {
+          "to": "post_breakfast_cleanup",
+          "on": "Person is done eating breakfast"
+        }
+      ]
+    },
+    {
+      "id": "post_breakfast_cleanup",
+      "description": "Person cleans up dishes after breakfast.",
+      "rules": [],
+      "next": [
+        {
+          "to": "working_at_desk",
+          "on": "Person settles into the desk chair"
+        }
+      ]
+    },
+    {
+      "id": "working_at_desk",
+      "description": "Person works on laptop, writes notes, and reads books at the desk.",
+      "rules": [],
+      "next": [
+        {
+          "to": "leaving_house",
+          "on": "Person packs a laptop and a notebook into the bag"
+        }
+      ]
+    },
+    {
+      "id": "leaving_house",
+      "description": "Person packs bag and prepares to leave the house.",
+      "rules": [],
+      "next": [
+        {
+          "to": "relaxing_evening",
+          "on": "Person arrives home"
+        }
+      ]
+    },
+    {
+      "id": "relaxing_evening",
+      "description": "Person returns home, relaxes on the sofa, and watches TV.",
+      "rules": [],
+      "next": [
+        {
+          "to": "having_dinner",
+          "on": "Person stirs a pot on the stove"
+        }
+      ]
+    },
+    {
+      "id": "having_dinner",
+      "description": "Person cooks and eats dinner at the dining table.",
+      "rules": [],
+      "next": [
+        {
+          "to": "post_dinner_cleanup",
+          "on": "Person finishes the meal"
+        }
+      ]
+    },
+    {
+      "id": "post_dinner_cleanup",
+      "description": "Person cleans up dishes after dinner.",
+      "rules": [],
+      "next": [
+        {
+          "to": "nighttime_leisure",
+          "on": "Person relaxes on the sofa"
+        }
+      ]
+    },
+    {
+      "id": "nighttime_leisure",
+      "description": "Person relaxes on the sofa and watches television in the evening.",
+      "rules": [],
+      "next": [
+        {
+          "to": "going_to_sleep",
+          "on": "Person clicks the bedside lamp on"
+        }
+      ]
+    },
+    {
+      "id": "going_to_sleep",
+      "description": "Person goes to bed, reads, and prepares to sleep.",
+      "rules": [],
+      "next": []
+    }
+  ]
+}

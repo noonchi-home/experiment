@@ -1,0 +1,53 @@
+{
+  "night": 1,
+  "matches": [
+    {
+      "candidate": "finish_drinking",
+      "event": "finish_drinking"
+    },
+    {
+      "candidate": "look_at_phone",
+      "event": "look_at_phone"
+    },
+    {
+      "candidate": "close_laptop",
+      "event": "close_laptop"
+    },
+    {
+      "candidate": "sit_at_desk",
+      "event": "sit_at_desk"
+    },
+    {
+      "candidate": "put_on_bag",
+      "event": "put_on_bag"
+    },
+    {
+      "candidate": "phone_rings",
+      "event": "phone_rings"
+    },
+    {
+      "candidate": "guest_finishes_can",
+      "event": "guest_finishes_can"
+    },
+    {
+      "candidate": "finish_vacuuming",
+      "event": "finish_vacuuming"
+    },
+    {
+      "candidate": "finish_meal",
+      "event": "finish_meal"
+    },
+    {
+      "candidate": "wipe_mouth",
+      "event": "wipe_mouth"
+    },
+    {
+      "candidate": "put_down_spoon",
+      "event": "put_down_spoon"
+    },
+    {
+      "candidate": "close_book",
+      "event": "close_book"
+    }
+  ]
+}

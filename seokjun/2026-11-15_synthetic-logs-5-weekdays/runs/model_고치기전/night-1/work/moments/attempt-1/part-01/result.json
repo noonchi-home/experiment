@@ -1,0 +1,448 @@
+{
+  "status": "valid",
+  "raw_response": "{\n  \"moments\": [\n    {\n      \"time\": \"07:00:00\",\n      \"kind\": \"start\",\n      \"text\": \"Person wakes up and stretches in bed\"\n    },\n    {\n      \"time\": \"07:01:00\",\n      \"kind\": \"end\",\n      \"text\": \"Person wakes up and stretches in bed\"\n    },\n    {\n      \"time\": \"07:01:02\",\n      \"kind\": \"moment\",\n      \"text\": \"Person flips the wall switch and the room light comes on\"\n    },\n    {\n      \"time\": \"07:01:06\",\n      \"kind\": \"start\",\n      \"text\": \"Person is not visible\"\n    },\n    {\n      \"time\": \"07:11:08\",\n      \"kind\": \"end\",\n      \"text\": \"Person is not visible\"\n    },\n    {\n      \"time\": \"07:11:08\",\n      \"kind\": \"start\",\n      \"text\": \"Person gets dressed\"\n    },\n    {\n      \"time\": \"07:14:44\",\n      \"kind\": \"end\",\n      \"text\": \"Person gets dressed\"\n    },\n    {\n      \"time\": \"07:14:46\",\n      \"kind\": \"start\",\n      \"text\": \"Person makes the bed\"\n    },\n    {\n      \"time\": \"07:15:34\",\n      \"kind\": \"end\",\n      \"text\": \"Person makes the bed\"\n    },\n    {\n      \"time\": \"07:15:36\",\n      \"kind\": \"start\",\n      \"text\": \"Person looks at their phone\"\n    },\n    {\n      \"time\": \"07:19:08\",\n      \"kind\": \"end\",\n      \"text\": \"Person looks at their phone\"\n    },\n    {\n      \"time\": \"07:19:10\",\n      \"kind\": \"start\",\n      \"text\": \"Person leans back and stretches\"\n    },\n    {\n      \"time\": \"07:19:22\",\n      \"kind\": \"end\",\n      \"text\": \"Person leans back and stretches\"\n    },\n    {\n      \"time\": \"07:19:24\",\n      \"kind\": \"start\",\n      \"text\": \"Person looks at their phone\"\n    },\n    {\n      \"time\": \"07:22:28\",\n      \"kind\": \"end\",\n      \"text\": \"Person looks at their phone\"\n    },\n    {\n      \"time\": \"07:22:30\",\n      \"kind\": \"start\",\n      \"text\": \"Person rolls their shoulders\"\n    },\n    {\n      \"time\": \"07:22:36\",\n      \"kind\": \"end\",\n      \"text\": \"Person rolls their shoulders\"\n    },\n    {\n      \"time\": \"07:22:38\",\n      \"kind\": \"start\",\n      \"text\": \"Person looks at their phone\"\n    },\n    {\n      \"time\": \"07:23:20\",\n      \"kind\": \"end\",\n      \"text\": \"Person looks at their phone\"\n    },\n    {\n      \"time\": \"07:23:22\",\n      \"kind\": \"start\",\n      \"text\": \"Person rolls their shoulders\"\n    },\n    {\n      \"time\": \"07:23:36\",\n      \"kind\": \"end\",\n      \"text\": \"Person rolls their shoulders\"\n    },\n    {\n      \"time\": \"07:23:38\",\n      \"kind\": \"start\",\n      \"text\": \"Person looks at their phone\"\n    },\n    {\n      \"time\": \"07:25:32\",\n      \"kind\": \"end\",\n      \"text\": \"Person looks at their phone\"\n    },\n    {\n      \"time\": \"07:25:34\",\n      \"kind\": \"moment\",\n      \"text\": \"Person picks a cup up off the shelf\"\n    },\n    {\n      \"time\": \"07:25:38\",\n      \"kind\": \"moment\",\n      \"text\": \"Person puts a cup down next to where they sit\"\n    },\n    {\n      \"time\": \"07:25:42\",\n      \"kind\": \"moment\",\n      \"text\": \"Person carries the toast over to the table\"\n    },\n    {\n      \"time\": \"07:25:54\",\n      \"kind\": \"moment\",\n      \"text\": \"Person takes a seat at the dining table\"\n    },\n    {\n      \"time\": \"07:25:58\",\n      \"kind\": \"start\",\n      \"text\": \"Person eats toast at the dining table\"\n    },\n    {\n      \"time\": \"07:27:52\",\n      \"kind\": \"end\",\n      \"text\": \"Person eats toast at the dining table\"\n    },\n    {\n      \"time\": \"07:27:54\",\n      \"kind\": \"start\",\n      \"text\": \"Person looks at their phone\"\n    },\n    {\n      \"time\": \"07:28:22\",\n      \"kind\": \"end\",\n      \"text\": \"Person looks at their phone\"\n    },\n    {\n      \"time\": \"07:28:24\",\n      \"kind\": \"moment\",\n      \"text\": \"Person drinks water from a cup\"\n    },\n    {\n      \"time\": \"07:28:28\",\n      \"kind\": \"start\",\n      \"text\": \"Person eats toast at the dining table\"\n    },\n    {\n      \"time\": \"07:28:52\",\n      \"kind\": \"end\",\n      \"text\": \"Person eats toast at the dining table\"\n    },\n    {\n      \"time\": \"07:28:54\",\n      \"kind\": \"start\",\n      \"text\": \"Person looks at their phone\"\n    },\n    {\n      \"time\": \"07:29:18\",\n      \"kind\": \"end\",\n      \"text\": \"Person looks at their phone\"\n    },\n    {\n      \"time\": \"07:29:20\",\n      \"kind\": \"start\",\n      \"text\": \"Person eats toast at the dining table\"\n    },\n    {\n      \"time\": \"07:30:14\",\n      \"kind\": \"end\",\n      \"text\": \"Person eats toast at the dining table\"\n    },\n    {\n      \"time\": \"07:30:16\",\n      \"kind\": \"moment\",\n      \"text\": \"Person drinks water from a cup\"\n    },\n    {\n      \"time\": \"07:30:22\",\n      \"kind\": \"start\",\n      \"text\": \"Person eats toast at the dining table\"\n    },\n    {\n      \"time\": \"07:35:46\",\n      \"kind\": \"end\",\n      \"text\": \"Person eats toast at the dining table\"\n    },\n    {\n      \"time\": \"07:35:48\",\n      \"kind\": \"moment\",\n      \"text\": \"Person drinks water from a cup\"\n    },\n    {\n      \"time\": \"07:35:54\",\n      \"kind\": \"start\",\n      \"text\": \"Person eats toast at the dining table\"\n    },\n    {\n      \"time\": \"07:37:40\",\n      \"kind\": \"end\",\n      \"text\": \"Person eats toast at the dining table\"\n    },\n    {\n      \"time\": \"07:37:42\",\n      \"kind\": \"moment\",\n      \"text\": \"Person finishes the water and sets the empty cup down\"\n    },\n    {\n      \"time\": \"07:37:46\",\n      \"kind\": \"start\",\n      \"text\": \"Person eats toast at the dining table\"\n    },\n    {\n      \"time\": \"07:38:14\",\n      \"kind\": \"end\",\n      \"text\": \"Person eats toast at the dining table\"\n    },\n    {\n      \"time\": \"07:38:16\",\n      \"kind\": \"start\",\n      \"text\": \"Person rests at the dining table\"\n    },\n    {\n      \"time\": \"07:38:26\",\n      \"kind\": \"end\",\n      \"text\": \"Person rests at the dining table\"\n    },\n    {\n      \"time\": \"07:38:28\",\n      \"kind\": \"start\",\n      \"text\": \"Person looks at their phone\"\n    },\n    {\n      \"time\": \"07:38:32\",\n      \"kind\": \"end\",\n      \"text\": \"Person looks at their phone\"\n    },\n    {\n      \"time\": \"07:38:34\",\n      \"kind\": \"start\",\n      \"text\": \"Person rests at the dining table\"\n    },\n    {\n      \"time\": \"07:39:34\",\n      \"kind\": \"end\",\n      \"text\": \"Person rests at the dining table\"\n    },\n    {\n      \"time\": \"07:39:36\",\n      \"kind\": \"start\",\n      \"text\": \"Person stretches their arms\"\n    },\n    {\n      \"time\": \"07:39:40\",\n      \"kind\": \"end\",\n      \"text\": \"Person stretches their arms\"\n    },\n    {\n      \"time\": \"07:39:42\",\n      \"kind\": \"start\",\n      \"text\": \"Person rests at the dining table\"\n    },\n    {\n      \"time\": \"07:39:56\",\n      \"kind\": \"end\",\n      \"text\": \"Person rests at the dining table\"\n    },\n    {\n      \"time\": \"07:39:58\",\n      \"kind\": \"start\",\n      \"text\": \"Person stretches their arms\"\n    },\n    {\n      \"time\": \"07:40:08\",\n      \"kind\": \"end\",\n      \"text\": \"Person stretches their arms\"\n    },\n    {\n      \"time\": \"07:40:10\",\n      \"kind\": \"start\",\n      \"text\": \"Person rests at the dining table\"\n    },\n    {\n      \"time\": \"07:40:16\",\n      \"kind\": \"end\",\n      \"text\": \"Person rests at the dining table\"\n    },\n    {\n      \"time\": \"07:40:18\",\n      \"kind\": \"moment\",\n      \"text\": \"Person picks up the empty cup\"\n    },\n    {\n      \"time\": \"07:40:22\",\n      \"kind\": \"moment\",\n      \"text\": \"Person brings the cup over to the kitchen\"\n    },\n    {\n      \"time\": \"07:40:26\",\n      \"kind\": \"moment\",\n      \"text\": \"Person loads the cup into the dishwasher\"\n    },\n    {\n      \"time\": \"07:40:32\",\n      \"kind\": \"moment\",\n      \"text\": \"Person leaves the plate in the kitchen sink\"\n    },\n    {\n      \"time\": \"07:40:40\",\n      \"kind\": \"start\",\n      \"text\": \"Person is not visible\"\n    },\n    {\n      \"time\": \"07:47:22\",\n      \"kind\": \"end\",\n      \"text\": \"Person is not visible\"\n    },\n    {\n      \"time\": \"07:47:24\",\n      \"kind\": \"start\",\n      \"text\": \"Person looks at their phone\"\n    },\n    {\n      \"time\": \"07:51:00\",\n      \"kind\": \"end\",\n      \"text\": \"Person looks at their phone\"\n    },\n    {\n      \"time\": \"07:51:00\",\n      \"kind\": \"start\",\n      \"text\": \"Person rolls their shoulders\"\n    },\n    {\n      \"time\": \"07:51:10\",\n      \"kind\": \"end\",\n      \"text\": \"Person rolls their shoulders\"\n    },\n    {\n      \"time\": \"07:51:12\",\n      \"kind\": \"start\",\n      \"text\": \"Person looks at their phone\"\n    },\n    {\n      \"time\": \"07:53:02\",\n      \"kind\": \"end\",\n      \"text\": \"Person looks at their phone\"\n    },\n    {\n      \"time\": \"07:53:04\",\n      \"kind\": \"start\",\n      \"text\": \"Person leans back and stretches\"\n    },\n    {\n      \"time\": \"07:53:12\",\n      \"kind\": \"end\",\n      \"text\": \"Person leans back and stretches\"\n    },\n    {\n      \"time\": \"07:53:14\",\n      \"kind\": \"start\",\n      \"text\": \"Person looks at their phone\"\n    },\n    {\n      \"time\": \"07:53:42\",\n      \"kind\": \"end\",\n      \"text\": \"Person looks at their phone\"\n    },\n    {\n      \"time\": \"07:53:44\",\n      \"kind\": \"start\",\n      \"text\": \"Person leans back and stretches\"\n    },\n    {\n      \"time\": \"07:53:58\",\n      \"kind\": \"end\",\n      \"text\": \"Person leans back and stretches\"\n    },\n    {\n      \"time\": \"07:54:00\",\n      \"kind\": \"start\",\n      \"text\": \"Person looks at their phone\"\n    },\n    {\n      \"time\": \"07:59:58\",\n      \"kind\": \"end\",\n      \"text\": \"Person looks at their phone\"\n    }\n  ]\n}",
+  "output": {
+    "moments": [
+      {
+        "time": "07:00:00",
+        "kind": "start",
+        "text": "Person wakes up and stretches in bed"
+      },
+      {
+        "time": "07:01:00",
+        "kind": "end",
+        "text": "Person wakes up and stretches in bed"
+      },
+      {
+        "time": "07:01:02",
+        "kind": "moment",
+        "text": "Person flips the wall switch and the room light comes on"
+      },
+      {
+        "time": "07:01:06",
+        "kind": "start",
+        "text": "Person is not visible"
+      },
+      {
+        "time": "07:11:08",
+        "kind": "end",
+        "text": "Person is not visible"
+      },
+      {
+        "time": "07:11:08",
+        "kind": "start",
+        "text": "Person gets dressed"
+      },
+      {
+        "time": "07:14:44",
+        "kind": "end",
+        "text": "Person gets dressed"
+      },
+      {
+        "time": "07:14:46",
+        "kind": "start",
+        "text": "Person makes the bed"
+      },
+      {
+        "time": "07:15:34",
+        "kind": "end",
+        "text": "Person makes the bed"
+      },
+      {
+        "time": "07:15:36",
+        "kind": "start",
+        "text": "Person looks at their phone"
+      },
+      {
+        "time": "07:19:08",
+        "kind": "end",
+        "text": "Person looks at their phone"
+      },
+      {
+        "time": "07:19:10",
+        "kind": "start",
+        "text": "Person leans back and stretches"
+      },
+      {
+        "time": "07:19:22",
+        "kind": "end",
+        "text": "Person leans back and stretches"
+      },
+      {
+        "time": "07:19:24",
+        "kind": "start",
+        "text": "Person looks at their phone"
+      },
+      {
+        "time": "07:22:28",
+        "kind": "end",
+        "text": "Person looks at their phone"
+      },
+      {
+        "time": "07:22:30",
+        "kind": "start",
+        "text": "Person rolls their shoulders"
+      },
+      {
+        "time": "07:22:36",
+        "kind": "end",
+        "text": "Person rolls their shoulders"
+      },
+      {
+        "time": "07:22:38",
+        "kind": "start",
+        "text": "Person looks at their phone"
+      },
+      {
+        "time": "07:23:20",
+        "kind": "end",
+        "text": "Person looks at their phone"
+      },
+      {
+        "time": "07:23:22",
+        "kind": "start",
+        "text": "Person rolls their shoulders"
+      },
+      {
+        "time": "07:23:36",
+        "kind": "end",
+        "text": "Person rolls their shoulders"
+      },
+      {
+        "time": "07:23:38",
+        "kind": "start",
+        "text": "Person looks at their phone"
+      },
+      {
+        "time": "07:25:32",
+        "kind": "end",
+        "text": "Person looks at their phone"
+      },
+      {
+        "time": "07:25:34",
+        "kind": "moment",
+        "text": "Person picks a cup up off the shelf"
+      },
+      {
+        "time": "07:25:38",
+        "kind": "moment",
+        "text": "Person puts a cup down next to where they sit"
+      },
+      {
+        "time": "07:25:42",
+        "kind": "moment",
+        "text": "Person carries the toast over to the table"
+      },
+      {
+        "time": "07:25:54",
+        "kind": "moment",
+        "text": "Person takes a seat at the dining table"
+      },
+      {
+        "time": "07:25:58",
+        "kind": "start",
+        "text": "Person eats toast at the dining table"
+      },
+      {
+        "time": "07:27:52",
+        "kind": "end",
+        "text": "Person eats toast at the dining table"
+      },
+      {
+        "time": "07:27:54",
+        "kind": "start",
+        "text": "Person looks at their phone"
+      },
+      {
+        "time": "07:28:22",
+        "kind": "end",
+        "text": "Person looks at their phone"
+      },
+      {
+        "time": "07:28:24",
+        "kind": "moment",
+        "text": "Person drinks water from a cup"
+      },
+      {
+        "time": "07:28:28",
+        "kind": "start",
+        "text": "Person eats toast at the dining table"
+      },
+      {
+        "time": "07:28:52",
+        "kind": "end",
+        "text": "Person eats toast at the dining table"
+      },
+      {
+        "time": "07:28:54",
+        "kind": "start",
+        "text": "Person looks at their phone"
+      },
+      {
+        "time": "07:29:18",
+        "kind": "end",
+        "text": "Person looks at their phone"
+      },
+      {
+        "time": "07:29:20",
+        "kind": "start",
+        "text": "Person eats toast at the dining table"
+      },
+      {
+        "time": "07:30:14",
+        "kind": "end",
+        "text": "Person eats toast at the dining table"
+      },
+      {
+        "time": "07:30:16",
+        "kind": "moment",
+        "text": "Person drinks water from a cup"
+      },
+      {
+        "time": "07:30:22",
+        "kind": "start",
+        "text": "Person eats toast at the dining table"
+      },
+      {
+        "time": "07:35:46",
+        "kind": "end",
+        "text": "Person eats toast at the dining table"
+      },
+      {
+        "time": "07:35:48",
+        "kind": "moment",
+        "text": "Person drinks water from a cup"
+      },
+      {
+        "time": "07:35:54",
+        "kind": "start",
+        "text": "Person eats toast at the dining table"
+      },
+      {
+        "time": "07:37:40",
+        "kind": "end",
+        "text": "Person eats toast at the dining table"
+      },
+      {
+        "time": "07:37:42",
+        "kind": "moment",
+        "text": "Person finishes the water and sets the empty cup down"
+      },
+      {
+        "time": "07:37:46",
+        "kind": "start",
+        "text": "Person eats toast at the dining table"
+      },
+      {
+        "time": "07:38:14",
+        "kind": "end",
+        "text": "Person eats toast at the dining table"
+      },
+      {
+        "time": "07:38:16",
+        "kind": "start",
+        "text": "Person rests at the dining table"
+      },
+      {
+        "time": "07:38:26",
+        "kind": "end",
+        "text": "Person rests at the dining table"
+      },
+      {
+        "time": "07:38:28",
+        "kind": "start",
+        "text": "Person looks at their phone"
+      },
+      {
+        "time": "07:38:32",
+        "kind": "end",
+        "text": "Person looks at their phone"
+      },
+      {
+        "time": "07:38:34",
+        "kind": "start",
+        "text": "Person rests at the dining table"
+      },
+      {
+        "time": "07:39:34",
+        "kind": "end",
+        "text": "Person rests at the dining table"
+      },
+      {
+        "time": "07:39:36",
+        "kind": "start",
+        "text": "Person stretches their arms"
+      },
+      {
+        "time": "07:39:40",
+        "kind": "end",
+        "text": "Person stretches their arms"
+      },
+      {
+        "time": "07:39:42",
+        "kind": "start",
+        "text": "Person rests at the dining table"
+      },
+      {
+        "time": "07:39:56",
+        "kind": "end",
+        "text": "Person rests at the dining table"
+      },
+      {
+        "time": "07:39:58",
+        "kind": "start",
+        "text": "Person stretches their arms"
+      },
+      {
+        "time": "07:40:08",
+        "kind": "end",
+        "text": "Person stretches their arms"
+      },
+      {
+        "time": "07:40:10",
+        "kind": "start",
+        "text": "Person rests at the dining table"
+      },
+      {
+        "time": "07:40:16",
+        "kind": "end",
+        "text": "Person rests at the dining table"
+      },
+      {
+        "time": "07:40:18",
+        "kind": "moment",
+        "text": "Person picks up the empty cup"
+      },
+      {
+        "time": "07:40:22",
+        "kind": "moment",
+        "text": "Person brings the cup over to the kitchen"
+      },
+      {
+        "time": "07:40:26",
+        "kind": "moment",
+        "text": "Person loads the cup into the dishwasher"
+      },
+      {
+        "time": "07:40:32",
+        "kind": "moment",
+        "text": "Person leaves the plate in the kitchen sink"
+      },
+      {
+        "time": "07:40:40",
+        "kind": "start",
+        "text": "Person is not visible"
+      },
+      {
+        "time": "07:47:22",
+        "kind": "end",
+        "text": "Person is not visible"
+      },
+      {
+        "time": "07:47:24",
+        "kind": "start",
+        "text": "Person looks at their phone"
+      },
+      {
+        "time": "07:51:00",
+        "kind": "end",
+        "text": "Person looks at their phone"
+      },
+      {
+        "time": "07:51:00",
+        "kind": "start",
+        "text": "Person rolls their shoulders"
+      },
+      {
+        "time": "07:51:10",
+        "kind": "end",
+        "text": "Person rolls their shoulders"
+      },
+      {
+        "time": "07:51:12",
+        "kind": "start",
+        "text": "Person looks at their phone"
+      },
+      {
+        "time": "07:53:02",
+        "kind": "end",
+        "text": "Person looks at their phone"
+      },
+      {
+        "time": "07:53:04",
+        "kind": "start",
+        "text": "Person leans back and stretches"
+      },
+      {
+        "time": "07:53:12",
+        "kind": "end",
+        "text": "Person leans back and stretches"
+      },
+      {
+        "time": "07:53:14",
+        "kind": "start",
+        "text": "Person looks at their phone"
+      },
+      {
+        "time": "07:53:42",
+        "kind": "end",
+        "text": "Person looks at their phone"
+      },
+      {
+        "time": "07:53:44",
+        "kind": "start",
+        "text": "Person leans back and stretches"
+      },
+      {
+        "time": "07:53:58",
+        "kind": "end",
+        "text": "Person leans back and stretches"
+      },
+      {
+        "time": "07:54:00",
+        "kind": "start",
+        "text": "Person looks at their phone"
+      },
+      {
+        "time": "07:59:58",
+        "kind": "end",
+        "text": "Person looks at their phone"
+      }
+    ]
+  },
+  "errors": [],
+  "checked_at": "2026-11-15T14:29:25.825764+00:00",
+  "role": "moments",
+  "api_request_attempted": true,
+  "model_response_received": true,
+  "action_executed": false,
+  "requested_model": "qwen/qwen3.5-27b",
+  "response_model": "qwen/qwen3.5-27b",
+  "provider": "Alibaba",
+  "response_id": "gen-1794752917-hl0kM3IMS7vaAeorklum",
+  "finish_reason": "stop",
+  "elapsed_seconds": 50.074803299998166,
+  "usage": {
+    "prompt_tokens": 33193,
+    "completion_tokens": 3387,
+    "total_tokens": 36580,
+    "cost": 0.011756355,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.011756355,
+      "upstream_inference_prompt_cost": 0.006472635,
+      "upstream_inference_completions_cost": 0.00528372
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "night_fsm": 4,
+  "day": 5,
+  "asks": 565,
+  "broken_answers": 0,
+  "paper": {
+    "frames": 565,
+    "invalid_outputs": 0,
+    "accuracy": 1.0,
+    "per_class": {
+      "-1": {
+        "support": 541,
+        "predicted": 541,
+        "tp": 541,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "0": {
+        "support": 5,
+        "predicted": 5,
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "1": {
+        "support": 6,
+        "predicted": 6,
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "2": {
+        "support": 0,
+        "predicted": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "3": {
+        "support": 0,
+        "predicted": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "4": {
+        "support": 0,
+        "predicted": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "5": {
+        "support": 0,
+        "predicted": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "6": {
+        "support": 9,
+        "predicted": 9,
+        "tp": 9,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "7": {
+        "support": 1,
+        "predicted": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "8": {
+        "support": 3,
+        "predicted": 3,
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "9": {
+        "support": 0,
+        "predicted": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "task_macro": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "no_act": {
+      "support": 541,
+      "predicted": 541,
+      "tp": 541,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "distractor_predictions": {},
+    "mean_first_fire_delay_seconds": null,
+    "delivery_outcomes": {},
+    "segments": []
+  },
+  "habits": [
+    {
+      "task": 0,
+      "action": "Pick up the cup and place it next to the person.",
+      "should_help": 1,
+      "helped": 1,
+      "missed": 0,
+      "wrong_help": 0,
+      "missed_at": [],
+      "wrong_at": []
+    },
+    {
+      "task": 1,
+      "action": "Pick up the cup and place it in the dishwasher.",
+      "should_help": 1,
+      "helped": 1,
+      "missed": 0,
+      "wrong_help": 0,
+      "missed_at": [],
+      "wrong_at": []
+    },
+    {
+      "task": 6,
+      "action": "Pick up the bowl and place it in the dishwasher.",
+      "should_help": 1,
+      "helped": 1,
+      "missed": 0,
+      "wrong_help": 0,
+      "missed_at": [],
+      "wrong_at": []
+    },
+    {
+      "task": 7,
+      "action": "Turn off the room light.",
+      "should_help": 1,
+      "helped": 1,
+      "missed": 0,
+      "wrong_help": 0,
+      "missed_at": [],
+      "wrong_at": []
+    },
+    {
+      "task": 8,
+      "action": "Turn off the bedside lamp.",
+      "should_help": 1,
+      "helped": 1,
+      "missed": 0,
+      "wrong_help": 0,
+      "missed_at": [],
+      "wrong_at": []
+    }
+  ]
+}

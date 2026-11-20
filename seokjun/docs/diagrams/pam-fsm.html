@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PAM final memory: activity states and help rules</title>
+<style>
+:root { color-scheme:light; --paper:#fff; --ink:#111; --accent:#15117f; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--paper); color:var(--ink); font-family:"Segoe UI","Malgun Gothic",Arial,sans-serif; }
+main { max-width:2000px; min-width:0; margin:0 auto; }
+.diagram-container { width:100%; overflow-x:auto; }
+svg { display:block; width:100%; min-width:1600px; height:auto; }
+.state { fill:var(--paper); stroke:var(--ink); stroke-width:2.4; }
+.arrow { fill:none; stroke:var(--ink); stroke-width:2.3; stroke-linecap:round; marker-end:url(#pam-fsm-arrow); }
+.heading { font-family:"Segoe Print","Segoe UI",sans-serif; font-size:38px; font-weight:600; fill:var(--accent); }
+.node-name { font-size:28px; text-anchor:middle; }
+.node-note { font-size:17px; text-anchor:middle; }
+.condition { font-size:25px; text-anchor:middle; }
+.action { font-size:27px; font-weight:700; text-anchor:middle; }
+.detail { font-size:22px; text-anchor:middle; }
+.note { font-size:21px; text-anchor:middle; fill:#9a3412; }
+.lambda { font-family:Georgia,serif; font-size:29px; text-anchor:middle; }
+.small { font-size:21px; }
+.legend { font-size:23px; }
+.source { font-size:20px; fill:#444; }
+.mono { font-family:Consolas,"Malgun Gothic",monospace; }
+.gone { font-size:24px; text-anchor:middle; fill:#666; }
+.divider { stroke:var(--ink); stroke-width:2; }
+@media print { .diagram-container { overflow-x:visible; } svg { min-width:0; } }
+</style></head><body><main><div class="diagram-container">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 1960" role="img" aria-labelledby="pam-fsm-title pam-fsm-desc">
+<title id="pam-fsm-title">PAM final memory: five states, five transitions and six help rules</title>
+<desc id="pam-fsm-desc">Meal preparation has four loops: bring the cereal bag, bring the milk bottle, put the cereal bag away, and put the milk bottle away. Eating has a loop for putting the empty bowl away, and Cleaning break has a loop for throwing the used wet wipe in the trash can. Above each loop's line is the observed condition; below it is the robot's help. Starting to type moves the person to Working. Working and Leaving have no help rules.</desc>
+<defs><marker id="pam-fsm-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 Z" fill="#111"/></marker></defs>
+<rect x="0" y="0" width="2000" height="1960" fill="#fff"/>
+<text x="45" y="62" class="heading">PAM final memory (day 5, Figures 14 and 18)</text>
+<path d="M 45 78 Q 512 74 979 78" fill="none" stroke="#15117f" stroke-width="2.5"/>
+<text x="45" y="115" class="source">Circles: activity states  ·  text above the line: observed condition  /  below: robot help</text>
+<g class="transition-edge">
+<path class="arrow" d="M 640 520 C 830 490 1170 490 1360 520" data-kind="transition" data-from="meal_preparation" data-to="eating" data-condition="Person picks up a spoon"/>
+<text x="1030" y="410" class="condition">Person picks up a spoon</text>
+<line class="divider" x1="874" y1="428" x2="1186" y2="428"/>
+<text x="1030" y="468" class="lambda">Λ</text>
+</g>
+<g class="transition-edge">
+<path class="arrow" d="M 1516 581 C 1590 800 1590 1100 1516 1239" data-kind="transition" data-from="eating" data-to="working" data-condition="Person starts typing"/>
+<text x="1800" y="885" class="condition">Person starts typing</text>
+<line class="divider" x1="1670" y1="903" x2="1930" y2="903"/>
+<text x="1800" y="943" class="lambda">Λ</text>
+</g>
+<g class="transition-edge">
+<path class="arrow" d="M 1372 1255 C 1170 1160 810 1160 628 1255" data-kind="transition" data-from="working" data-to="cleaning_break" data-condition="Person reaches for wet wipes"/>
+<text x="1000" y="1100" class="condition">Person reaches for wet wipes</text>
+<line class="divider" x1="819" y1="1118" x2="1181" y2="1118"/>
+<text x="1000" y="1158" class="lambda">Λ</text>
+</g>
+<g class="transition-edge">
+<path class="arrow" d="M 628 1345 C 810 1440 1170 1440 1372 1345" data-kind="transition" data-from="cleaning_break" data-to="working" data-condition="Person types on the laptop"/>
+<text x="1000" y="1480" class="condition">Person types on the laptop</text>
+<line class="divider" x1="831" y1="1498" x2="1169" y2="1498"/>
+<text x="1000" y="1538" class="lambda">Λ</text>
+</g>
+<g class="transition-edge">
+<path class="arrow" d="M 1521 1355 C 1670 1380 1790 1420 1750 1494" data-kind="transition" data-from="working" data-to="leaving" data-condition="Person closes laptop"/>
+<text x="1810" y="1270" class="condition">Person closes laptop</text>
+<line class="divider" x1="1675" y1="1288" x2="1945" y2="1288"/>
+<text x="1810" y="1328" class="lambda">Λ</text>
+</g>
+<g class="assistance-edge" data-rule-state="meal_preparation" data-rule-trigger="Person places a bowl on the desk or Person sits down at the desk" data-rule-action="Pick up the cereal bag and place it next to the person.">
+<path class="arrow" d="M 478 466 C 280 440 380 250 511 439" data-kind="assistance-rule" data-state="meal_preparation" data-trigger="Person places a bowl on the desk or Person sits down at the desk" data-action="Pick up the cereal bag and place it next to the person."/>
+<text x="270" y="205" class="condition">Person places a bowl on the desk</text>
+<text x="270" y="240" class="condition">or Person sits down at the desk</text>
+<line class="divider" x1="65" y1="258" x2="475" y2="258"/>
+<text x="270" y="298" class="action">Pick up the cereal bag</text>
+<text x="270" y="329" class="detail">and place it next to the person.</text>
+</g>
+<g class="assistance-edge" data-rule-state="meal_preparation" data-rule-trigger="Person pours cereal into the bowl or Person places the cereal bag on the desk" data-rule-action="Pick up the milk bottle and place it next to the person.">
+<path class="arrow" d="M 589 439 C 720 250 820 440 622 466" data-kind="assistance-rule" data-state="meal_preparation" data-trigger="Person pours cereal into the bowl or Person places the cereal bag on the desk" data-action="Pick up the milk bottle and place it next to the person."/>
+<text x="880" y="205" class="condition">Person pours cereal into the bowl</text>
+<text x="880" y="240" class="condition">or Person places the cereal bag on the desk</text>
+<line class="divider" x1="618" y1="258" x2="1142" y2="258"/>
+<text x="880" y="298" class="action">Pick up the milk bottle</text>
+<text x="880" y="329" class="detail">and place it next to the person.</text>
+</g>
+<g class="assistance-edge" data-rule-state="meal_preparation" data-rule-trigger="Person reaches for the milk bottle or Person finishes pouring cereal or Person places the cereal bag on the desk" data-rule-action="Pick up the cereal bag and place it in the designated storage area.">
+<path class="arrow" d="M 478 574 C 280 600 380 790 511 601" data-kind="assistance-rule" data-state="meal_preparation" data-trigger="Person reaches for the milk bottle or Person finishes pouring cereal or Person places the cereal bag on the desk" data-action="Pick up the cereal bag and place it in the designated storage area."/>
+<text x="290" y="745" class="condition">Person reaches for the milk bottle</text>
+<text x="290" y="780" class="condition">or Person finishes pouring cereal</text>
+<text x="290" y="815" class="condition">or Person places the cereal bag on the desk</text>
+<line class="divider" x1="28" y1="833" x2="552" y2="833"/>
+<text x="290" y="873" class="action">Pick up the cereal bag</text>
+<text x="290" y="904" class="detail">and place it in the designated storage area.</text>
+</g>
+<g class="assistance-edge" data-rule-state="meal_preparation" data-rule-trigger="Person picks up a spoon or Person finishes pouring milk or Person places the milk bottle on the desk" data-rule-action="Pick up the milk bottle and place it in the designated storage area.">
+<path class="arrow" d="M 589 601 C 720 790 820 600 622 574" data-kind="assistance-rule" data-state="meal_preparation" data-trigger="Person picks up a spoon or Person finishes pouring milk or Person places the milk bottle on the desk" data-action="Pick up the milk bottle and place it in the designated storage area."/>
+<text x="900" y="745" class="condition">Person picks up a spoon</text>
+<text x="900" y="780" class="condition">or Person finishes pouring milk</text>
+<text x="900" y="815" class="condition">or Person places the milk bottle on the desk</text>
+<line class="divider" x1="637" y1="833" x2="1163" y2="833"/>
+<text x="900" y="873" class="action">Pick up the milk bottle</text>
+<text x="900" y="904" class="detail">and place it in the designated storage area.</text>
+</g>
+<g class="assistance-edge" data-rule-state="eating" data-rule-trigger="Person opens laptop or Person puts down the spoon or Person places the empty bowl on the desk" data-rule-action="Pick up the empty bowl and place it in the designated storage area.">
+<path class="arrow" d="M 1395 448 C 1240 325 1660 325 1505 448" data-kind="assistance-rule" data-state="eating" data-trigger="Person opens laptop or Person puts down the spoon or Person places the empty bowl on the desk" data-action="Pick up the empty bowl and place it in the designated storage area."/>
+<text x="1500" y="165" class="condition">Person opens laptop</text>
+<text x="1500" y="200" class="condition">or Person puts down the spoon</text>
+<text x="1500" y="235" class="condition">or Person places the empty bowl on the desk</text>
+<line class="divider" x1="1230" y1="253" x2="1770" y2="253"/>
+<text x="1500" y="293" class="action">Pick up the empty bowl</text>
+<text x="1500" y="324" class="detail">and place it in the designated storage area.</text>
+</g>
+<g class="assistance-edge" data-rule-state="cleaning_break" data-rule-trigger="Person starts typing or Person finishes wiping or Person places the used wet wipe on the desk" data-rule-action="Pick up the used wet wipe and place it in the trash can.">
+<path class="arrow" d="M 505 1378 C 350 1600 750 1600 595 1378" data-kind="assistance-rule" data-state="cleaning_break" data-trigger="Person starts typing or Person finishes wiping or Person places the used wet wipe on the desk" data-action="Pick up the used wet wipe and place it in the trash can."/>
+<text x="550" y="1595" class="condition">Person starts typing</text>
+<text x="550" y="1630" class="condition">or Person finishes wiping</text>
+<text x="550" y="1665" class="condition">or Person places the used wet wipe on the desk</text>
+<line class="divider" x1="267" y1="1683" x2="833" y2="1683"/>
+<text x="550" y="1723" class="action">Pick up the used wet wipe</text>
+<text x="550" y="1754" class="detail">and place it in the trash can.</text>
+</g>
+<path class="arrow" style="stroke-dasharray:8 7" d="M 550 325 L 550 430" data-kind="initial" data-to="meal_preparation"/>
+<text x="570" y="355" class="small">Start</text>
+<g data-state="meal_preparation"><circle class="state" cx="550" cy="520" r="90"/>
+<text x="550" y="515" class="node-name">Meal</text>
+<text x="550" y="547" class="node-name">preparation</text></g>
+<g data-state="eating"><circle class="state" cx="1450" cy="520" r="90"/>
+<text x="1450" y="530" class="node-name">Eating</text></g>
+<g data-state="working"><circle class="state" cx="1450" cy="1300" r="90"/>
+<text x="1450" y="1302" class="node-name">Working</text>
+<text x="1450" y="1332" class="node-note">No help rules</text></g>
+<g data-state="cleaning_break"><circle class="state" cx="550" cy="1300" r="90"/>
+<text x="550" y="1295" class="node-name">Cleaning</text>
+<text x="550" y="1327" class="node-name">break</text></g>
+<g data-state="leaving"><circle class="state" cx="1750" cy="1584" r="90"/>
+<text x="1750" y="1586" class="node-name">Leaving</text>
+<text x="1750" y="1616" class="node-note">No help rules</text></g>
+<path class="arrow" d="M 1750 1674 L 1750 1730" data-kind="final" data-from="leaving"/>
+<circle cx="1750" cy="1748" r="16" fill="#fff" stroke="#111" stroke-width="2"/><circle cx="1750" cy="1748" r="10" fill="#111"/>
+<text x="1778" y="1756" class="small">End</text>
+<line x1="45" y1="1810" x2="1955" y2="1810" stroke="#999" stroke-width="1"/>
+<text x="45" y="1850" class="legend">Arrows to another circle: state transitions  ·  loops back to the same circle: help rules in that state (6 in total)</text>
+<text x="45" y="1890" class="source">Λ: no robot action on that transition. Help rules are drawn as loops; a loop does not mean the action repeats automatically.</text>
+<text x="45" y="1925" class="source">Source: PAM paper, Figures 14 and 18 (pp. 25–28), and the authors&#x27; public memory files. Conditions and actions are the authors&#x27; original English.</text>
+</svg></div></main></body></html>

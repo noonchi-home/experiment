@@ -1,0 +1,118 @@
+{
+  "status": "valid",
+  "raw_response": "{\n  \"moments\": [\n    {\n      \"time\": \"22:00:56\",\n      \"kind\": \"moment\",\n      \"text\": \"Person turns on the bedside lamp\"\n    },\n    {\n      \"time\": \"22:01:00\",\n      \"kind\": \"start\",\n      \"text\": \"Person walks to the light switch by the door\"\n    },\n    {\n      \"time\": \"22:01:04\",\n      \"kind\": \"end\",\n      \"text\": \"Person walks to the light switch by the door\"\n    },\n    {\n      \"time\": \"22:01:04\",\n      \"kind\": \"moment\",\n      \"text\": \"Person turns off the ceiling light\"\n    },\n    {\n      \"time\": \"22:01:10\",\n      \"kind\": \"start\",\n      \"text\": \"Person climbs into bed\"\n    },\n    {\n      \"time\": \"22:01:16\",\n      \"kind\": \"end\",\n      \"text\": \"Person climbs into bed\"\n    },\n    {\n      \"time\": \"22:01:18\",\n      \"kind\": \"start\",\n      \"text\": \"Person reads a book in bed\"\n    },\n    {\n      \"time\": \"22:25:30\",\n      \"kind\": \"end\",\n      \"text\": \"Person reads a book in bed\"\n    },\n    {\n      \"time\": \"22:25:30\",\n      \"kind\": \"moment\",\n      \"text\": \"Person closes the book\"\n    },\n    {\n      \"time\": \"22:25:34\",\n      \"kind\": \"start\",\n      \"text\": \"Person lies back against the pillow\"\n    },\n    {\n      \"time\": \"22:26:14\",\n      \"kind\": \"end\",\n      \"text\": \"Person lies back against the pillow\"\n    },\n    {\n      \"time\": \"22:26:16\",\n      \"kind\": \"start\",\n      \"text\": \"Person reaches for the bedside lamp\"\n    },\n    {\n      \"time\": \"22:26:20\",\n      \"kind\": \"end\",\n      \"text\": \"Person reaches for the bedside lamp\"\n    },\n    {\n      \"time\": \"22:26:20\",\n      \"kind\": \"moment\",\n      \"text\": \"Person turns off the bedside lamp\"\n    },\n    {\n      \"time\": \"22:26:26\",\n      \"kind\": \"start\",\n      \"text\": \"Person rests in bed in the dark\"\n    }\n  ]\n}",
+  "output": {
+    "moments": [
+      {
+        "time": "22:00:56",
+        "kind": "moment",
+        "text": "Person turns on the bedside lamp"
+      },
+      {
+        "time": "22:01:00",
+        "kind": "start",
+        "text": "Person walks to the light switch by the door"
+      },
+      {
+        "time": "22:01:04",
+        "kind": "end",
+        "text": "Person walks to the light switch by the door"
+      },
+      {
+        "time": "22:01:04",
+        "kind": "moment",
+        "text": "Person turns off the ceiling light"
+      },
+      {
+        "time": "22:01:10",
+        "kind": "start",
+        "text": "Person climbs into bed"
+      },
+      {
+        "time": "22:01:16",
+        "kind": "end",
+        "text": "Person climbs into bed"
+      },
+      {
+        "time": "22:01:18",
+        "kind": "start",
+        "text": "Person reads a book in bed"
+      },
+      {
+        "time": "22:25:30",
+        "kind": "end",
+        "text": "Person reads a book in bed"
+      },
+      {
+        "time": "22:25:30",
+        "kind": "moment",
+        "text": "Person closes the book"
+      },
+      {
+        "time": "22:25:34",
+        "kind": "start",
+        "text": "Person lies back against the pillow"
+      },
+      {
+        "time": "22:26:14",
+        "kind": "end",
+        "text": "Person lies back against the pillow"
+      },
+      {
+        "time": "22:26:16",
+        "kind": "start",
+        "text": "Person reaches for the bedside lamp"
+      },
+      {
+        "time": "22:26:20",
+        "kind": "end",
+        "text": "Person reaches for the bedside lamp"
+      },
+      {
+        "time": "22:26:20",
+        "kind": "moment",
+        "text": "Person turns off the bedside lamp"
+      },
+      {
+        "time": "22:26:26",
+        "kind": "start",
+        "text": "Person rests in bed in the dark"
+      }
+    ]
+  },
+  "errors": [],
+  "checked_at": "2026-11-15T14:37:44.035043+00:00",
+  "role": "moments",
+  "api_request_attempted": true,
+  "model_response_received": true,
+  "action_executed": false,
+  "requested_model": "qwen/qwen3.5-27b",
+  "response_model": "qwen/qwen3.5-27b",
+  "provider": "Alibaba",
+  "response_id": "gen-1794753442-LxvUzFxxGrcgx4QBZakD",
+  "finish_reason": "stop",
+  "elapsed_seconds": 22.67695019999519,
+  "usage": {
+    "prompt_tokens": 35362,
+    "completion_tokens": 644,
+    "total_tokens": 36006,
+    "cost": 0.00790023,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00790023,
+      "upstream_inference_prompt_cost": 0.00689559,
+      "upstream_inference_completions_cost": 0.00100464
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}
