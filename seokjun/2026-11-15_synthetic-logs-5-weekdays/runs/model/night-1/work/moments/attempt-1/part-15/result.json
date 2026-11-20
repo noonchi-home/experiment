@@ -1,0 +1,183 @@
+{
+  "status": "valid",
+  "raw_response": "{\n  \"moments\": [\n    {\n      \"time\": \"21:00:00\",\n      \"kind\": \"start\",\n      \"text\": \"Person watches TV while sitting on the sofa\"\n    },\n    {\n      \"time\": \"21:07:04\",\n      \"kind\": \"end\",\n      \"text\": \"Person watches TV while sitting on the sofa\"\n    },\n    {\n      \"time\": \"21:07:06\",\n      \"kind\": \"moment\",\n      \"text\": \"Person stands up from the sofa and steps away\"\n    },\n    {\n      \"time\": \"21:07:08\",\n      \"kind\": \"moment\",\n      \"text\": \"Person heads out of the room through the door\"\n    },\n    {\n      \"time\": \"21:07:10\",\n      \"kind\": \"start\",\n      \"text\": \"Person is not visible\"\n    },\n    {\n      \"time\": \"21:26:30\",\n      \"kind\": \"end\",\n      \"text\": \"Person is not visible\"\n    },\n    {\n      \"time\": \"21:26:30\",\n      \"kind\": \"moment\",\n      \"text\": \"Person walks back into the room\"\n    },\n    {\n      \"time\": \"21:26:32\",\n      \"kind\": \"moment\",\n      \"text\": \"Person comes back into the room\"\n    },\n    {\n      \"time\": \"21:26:34\",\n      \"kind\": \"moment\",\n      \"text\": \"Person settles onto the sofa\"\n    },\n    {\n      \"time\": \"21:26:36\",\n      \"kind\": \"moment\",\n      \"text\": \"Person sits down on the sofa\"\n    },\n    {\n      \"time\": \"21:26:40\",\n      \"kind\": \"start\",\n      \"text\": \"Person uses a smartphone while sitting on the sofa\"\n    },\n    {\n      \"time\": \"21:27:00\",\n      \"kind\": \"end\",\n      \"text\": \"Person uses a smartphone while sitting on the sofa\"\n    },\n    {\n      \"time\": \"21:27:02\",\n      \"kind\": \"start\",\n      \"text\": \"Person watches TV while sitting on the sofa\"\n    },\n    {\n      \"time\": \"21:34:38\",\n      \"kind\": \"end\",\n      \"text\": \"Person watches TV while sitting on the sofa\"\n    },\n    {\n      \"time\": \"21:34:38\",\n      \"kind\": \"moment\",\n      \"text\": \"Person stands up from the sofa and steps away\"\n    },\n    {\n      \"time\": \"21:34:40\",\n      \"kind\": \"moment\",\n      \"text\": \"Person walks to the kitchen\"\n    },\n    {\n      \"time\": \"21:34:42\",\n      \"kind\": \"moment\",\n      \"text\": \"Person walks over to the kitchen\"\n    },\n    {\n      \"time\": \"21:34:46\",\n      \"kind\": \"start\",\n      \"text\": \"Person fills a cup with water at the water purifier\"\n    },\n    {\n      \"time\": \"21:34:54\",\n      \"kind\": \"end\",\n      \"text\": \"Person fills a cup with water at the water purifier\"\n    },\n    {\n      \"time\": \"21:34:56\",\n      \"kind\": \"moment\",\n      \"text\": \"Person returns to the sofa with a cup of water in hand\"\n    },\n    {\n      \"time\": \"21:35:02\",\n      \"kind\": \"moment\",\n      \"text\": \"Person puts a cup of water down on the side table\"\n    },\n    {\n      \"time\": \"21:35:06\",\n      \"kind\": \"start\",\n      \"text\": \"Person drinks water from a cup\"\n    },\n    {\n      \"time\": \"21:35:12\",\n      \"kind\": \"end\",\n      \"text\": \"Person drinks water from a cup\"\n    },\n    {\n      \"time\": \"21:35:12\",\n      \"kind\": \"moment\",\n      \"text\": \"Person puts the cup back down on the side table\"\n    },\n    {\n      \"time\": \"21:35:14\",\n      \"kind\": \"start\",\n      \"text\": \"Person watches TV while sitting on the sofa\"\n    },\n    {\n      \"time\": \"21:55:04\",\n      \"kind\": \"end\",\n      \"text\": \"Person watches TV while sitting on the sofa\"\n    },\n    {\n      \"time\": \"21:55:04\",\n      \"kind\": \"start\",\n      \"text\": \"Person looks at their phone while sitting on the sofa\"\n    },\n    {\n      \"time\": \"21:59:58\",\n      \"kind\": \"end\",\n      \"text\": \"Person looks at their phone while sitting on the sofa\"\n    }\n  ]\n}",
+  "output": {
+    "moments": [
+      {
+        "time": "21:00:00",
+        "kind": "start",
+        "text": "Person watches TV while sitting on the sofa"
+      },
+      {
+        "time": "21:07:04",
+        "kind": "end",
+        "text": "Person watches TV while sitting on the sofa"
+      },
+      {
+        "time": "21:07:06",
+        "kind": "moment",
+        "text": "Person stands up from the sofa and steps away"
+      },
+      {
+        "time": "21:07:08",
+        "kind": "moment",
+        "text": "Person heads out of the room through the door"
+      },
+      {
+        "time": "21:07:10",
+        "kind": "start",
+        "text": "Person is not visible"
+      },
+      {
+        "time": "21:26:30",
+        "kind": "end",
+        "text": "Person is not visible"
+      },
+      {
+        "time": "21:26:30",
+        "kind": "moment",
+        "text": "Person walks back into the room"
+      },
+      {
+        "time": "21:26:32",
+        "kind": "moment",
+        "text": "Person comes back into the room"
+      },
+      {
+        "time": "21:26:34",
+        "kind": "moment",
+        "text": "Person settles onto the sofa"
+      },
+      {
+        "time": "21:26:36",
+        "kind": "moment",
+        "text": "Person sits down on the sofa"
+      },
+      {
+        "time": "21:26:40",
+        "kind": "start",
+        "text": "Person uses a smartphone while sitting on the sofa"
+      },
+      {
+        "time": "21:27:00",
+        "kind": "end",
+        "text": "Person uses a smartphone while sitting on the sofa"
+      },
+      {
+        "time": "21:27:02",
+        "kind": "start",
+        "text": "Person watches TV while sitting on the sofa"
+      },
+      {
+        "time": "21:34:38",
+        "kind": "end",
+        "text": "Person watches TV while sitting on the sofa"
+      },
+      {
+        "time": "21:34:38",
+        "kind": "moment",
+        "text": "Person stands up from the sofa and steps away"
+      },
+      {
+        "time": "21:34:40",
+        "kind": "moment",
+        "text": "Person walks to the kitchen"
+      },
+      {
+        "time": "21:34:42",
+        "kind": "moment",
+        "text": "Person walks over to the kitchen"
+      },
+      {
+        "time": "21:34:46",
+        "kind": "start",
+        "text": "Person fills a cup with water at the water purifier"
+      },
+      {
+        "time": "21:34:54",
+        "kind": "end",
+        "text": "Person fills a cup with water at the water purifier"
+      },
+      {
+        "time": "21:34:56",
+        "kind": "moment",
+        "text": "Person returns to the sofa with a cup of water in hand"
+      },
+      {
+        "time": "21:35:02",
+        "kind": "moment",
+        "text": "Person puts a cup of water down on the side table"
+      },
+      {
+        "time": "21:35:06",
+        "kind": "start",
+        "text": "Person drinks water from a cup"
+      },
+      {
+        "time": "21:35:12",
+        "kind": "end",
+        "text": "Person drinks water from a cup"
+      },
+      {
+        "time": "21:35:12",
+        "kind": "moment",
+        "text": "Person puts the cup back down on the side table"
+      },
+      {
+        "time": "21:35:14",
+        "kind": "start",
+        "text": "Person watches TV while sitting on the sofa"
+      },
+      {
+        "time": "21:55:04",
+        "kind": "end",
+        "text": "Person watches TV while sitting on the sofa"
+      },
+      {
+        "time": "21:55:04",
+        "kind": "start",
+        "text": "Person looks at their phone while sitting on the sofa"
+      },
+      {
+        "time": "21:59:58",
+        "kind": "end",
+        "text": "Person looks at their phone while sitting on the sofa"
+      }
+    ]
+  },
+  "errors": [],
+  "checked_at": "2026-11-16T02:45:10.293567+00:00",
+  "role": "moments",
+  "api_request_attempted": true,
+  "model_response_received": true,
+  "action_executed": false,
+  "requested_model": "qwen/qwen3.5-27b",
+  "response_model": "qwen/qwen3.5-27b",
+  "provider": "Alibaba",
+  "response_id": "gen-1794797048-2H00TfmBwVs8CzOvKVdD",
+  "finish_reason": "stop",
+  "elapsed_seconds": 63.687338099989574,
+  "usage": {
+    "prompt_tokens": 54127,
+    "completion_tokens": 1244,
+    "total_tokens": 55371,
+    "cost": 0.012495405,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.012495405,
+      "upstream_inference_prompt_cost": 0.010554765,
+      "upstream_inference_completions_cost": 0.00194064
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

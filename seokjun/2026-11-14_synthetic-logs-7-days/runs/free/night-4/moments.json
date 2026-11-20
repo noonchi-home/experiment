@@ -1,0 +1,2132 @@
+[
+  {
+    "time": "07:00:00",
+    "kind": "start",
+    "text": "wash_face"
+  },
+  {
+    "time": "07:09:24",
+    "kind": "end",
+    "text": "wash_face"
+  },
+  {
+    "time": "07:09:26",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "07:12:46",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "07:12:48",
+    "kind": "moment",
+    "text": "get_cup"
+  },
+  {
+    "time": "07:12:52",
+    "kind": "moment",
+    "text": "put_cup_next_to_self"
+  },
+  {
+    "time": "07:12:56",
+    "kind": "start",
+    "text": "get_dressed"
+  },
+  {
+    "time": "07:22:18",
+    "kind": "end",
+    "text": "get_dressed"
+  },
+  {
+    "time": "07:22:20",
+    "kind": "start",
+    "text": "wake_up"
+  },
+  {
+    "time": "07:24:40",
+    "kind": "end",
+    "text": "wake_up"
+  },
+  {
+    "time": "07:24:42",
+    "kind": "moment",
+    "text": "get_cup"
+  },
+  {
+    "time": "07:24:46",
+    "kind": "moment",
+    "text": "put_cup_next_to_self"
+  },
+  {
+    "time": "07:24:50",
+    "kind": "start",
+    "text": "get_dressed"
+  },
+  {
+    "time": "07:28:58",
+    "kind": "end",
+    "text": "get_dressed"
+  },
+  {
+    "time": "07:29:00",
+    "kind": "moment",
+    "text": "get_cup"
+  },
+  {
+    "time": "07:29:04",
+    "kind": "moment",
+    "text": "put_cup_next_to_self"
+  },
+  {
+    "time": "07:29:08",
+    "kind": "start",
+    "text": "wash_face"
+  },
+  {
+    "time": "07:29:58",
+    "kind": "end",
+    "text": "wash_face"
+  },
+  {
+    "time": "07:30:00",
+    "kind": "start",
+    "text": "eat_breakfast"
+  },
+  {
+    "time": "07:34:58",
+    "kind": "end",
+    "text": "eat_breakfast"
+  },
+  {
+    "time": "07:35:00",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "07:35:58",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "07:36:00",
+    "kind": "start",
+    "text": "eat_breakfast"
+  },
+  {
+    "time": "07:39:12",
+    "kind": "end",
+    "text": "eat_breakfast"
+  },
+  {
+    "time": "07:39:14",
+    "kind": "moment",
+    "text": "get_cup"
+  },
+  {
+    "time": "07:39:18",
+    "kind": "moment",
+    "text": "put_cup_next_to_self"
+  },
+  {
+    "time": "07:39:22",
+    "kind": "start",
+    "text": "drink_water"
+  },
+  {
+    "time": "07:40:42",
+    "kind": "end",
+    "text": "drink_water"
+  },
+  {
+    "time": "07:40:44",
+    "kind": "moment",
+    "text": "get_cup"
+  },
+  {
+    "time": "07:40:48",
+    "kind": "moment",
+    "text": "put_cup_next_to_self"
+  },
+  {
+    "time": "07:40:52",
+    "kind": "start",
+    "text": "eat_breakfast"
+  },
+  {
+    "time": "07:41:58",
+    "kind": "end",
+    "text": "eat_breakfast"
+  },
+  {
+    "time": "07:42:00",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "07:42:58",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "07:43:00",
+    "kind": "start",
+    "text": "eat_breakfast"
+  },
+  {
+    "time": "07:48:28",
+    "kind": "end",
+    "text": "eat_breakfast"
+  },
+  {
+    "time": "07:48:30",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "07:49:28",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "07:49:30",
+    "kind": "start",
+    "text": "drink_water"
+  },
+  {
+    "time": "07:49:58",
+    "kind": "end",
+    "text": "drink_water"
+  },
+  {
+    "time": "07:50:00",
+    "kind": "moment",
+    "text": "finish_drinking"
+  },
+  {
+    "time": "07:50:04",
+    "kind": "start",
+    "text": "eat_breakfast"
+  },
+  {
+    "time": "07:50:42",
+    "kind": "end",
+    "text": "eat_breakfast"
+  },
+  {
+    "time": "07:50:44",
+    "kind": "start",
+    "text": "drink_water"
+  },
+  {
+    "time": "07:52:50",
+    "kind": "end",
+    "text": "drink_water"
+  },
+  {
+    "time": "07:52:52",
+    "kind": "moment",
+    "text": "pick_up_empty_cup"
+  },
+  {
+    "time": "07:52:56",
+    "kind": "moment",
+    "text": "carry_cup_to_kitchen"
+  },
+  {
+    "time": "07:53:00",
+    "kind": "start",
+    "text": "put_cup_in_dishwasher"
+  },
+  {
+    "time": "07:53:04",
+    "kind": "end",
+    "text": "put_cup_in_dishwasher"
+  },
+  {
+    "time": "07:53:06",
+    "kind": "start",
+    "text": "drink_water"
+  },
+  {
+    "time": "07:58:48",
+    "kind": "end",
+    "text": "drink_water"
+  },
+  {
+    "time": "07:58:50",
+    "kind": "start",
+    "text": "eat_breakfast"
+  },
+  {
+    "time": "07:59:58",
+    "kind": "end",
+    "text": "eat_breakfast"
+  },
+  {
+    "time": "08:00:00",
+    "kind": "moment",
+    "text": "sit_at_desk"
+  },
+  {
+    "time": "08:00:04",
+    "kind": "start",
+    "text": "write_notes"
+  },
+  {
+    "time": "08:02:54",
+    "kind": "end",
+    "text": "write_notes"
+  },
+  {
+    "time": "08:02:56",
+    "kind": "moment",
+    "text": "get_cup"
+  },
+  {
+    "time": "08:03:00",
+    "kind": "moment",
+    "text": "put_cup_next_to_self"
+  },
+  {
+    "time": "08:03:04",
+    "kind": "start",
+    "text": "type_on_laptop"
+  },
+  {
+    "time": "08:05:20",
+    "kind": "end",
+    "text": "type_on_laptop"
+  },
+  {
+    "time": "08:05:22",
+    "kind": "start",
+    "text": "read_book_at_desk"
+  },
+  {
+    "time": "08:10:46",
+    "kind": "end",
+    "text": "read_book_at_desk"
+  },
+  {
+    "time": "08:10:48",
+    "kind": "start",
+    "text": "write_notes"
+  },
+  {
+    "time": "08:14:48",
+    "kind": "end",
+    "text": "write_notes"
+  },
+  {
+    "time": "08:14:50",
+    "kind": "start",
+    "text": "drink_water"
+  },
+  {
+    "time": "08:20:28",
+    "kind": "end",
+    "text": "drink_water"
+  },
+  {
+    "time": "08:20:30",
+    "kind": "start",
+    "text": "type_on_laptop"
+  },
+  {
+    "time": "08:23:32",
+    "kind": "end",
+    "text": "type_on_laptop"
+  },
+  {
+    "time": "08:23:34",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "08:29:38",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "08:29:40",
+    "kind": "start",
+    "text": "type_on_laptop"
+  },
+  {
+    "time": "08:32:02",
+    "kind": "end",
+    "text": "type_on_laptop"
+  },
+  {
+    "time": "08:32:04",
+    "kind": "start",
+    "text": "write_notes"
+  },
+  {
+    "time": "08:39:38",
+    "kind": "end",
+    "text": "write_notes"
+  },
+  {
+    "time": "08:39:40",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "08:42:16",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "08:42:18",
+    "kind": "start",
+    "text": "type_on_laptop"
+  },
+  {
+    "time": "08:48:58",
+    "kind": "end",
+    "text": "type_on_laptop"
+  },
+  {
+    "time": "08:49:00",
+    "kind": "start",
+    "text": "read_book_at_desk"
+  },
+  {
+    "time": "08:53:40",
+    "kind": "end",
+    "text": "read_book_at_desk"
+  },
+  {
+    "time": "08:53:42",
+    "kind": "moment",
+    "text": "get_cup"
+  },
+  {
+    "time": "08:53:46",
+    "kind": "moment",
+    "text": "put_cup_next_to_self"
+  },
+  {
+    "time": "08:53:50",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "08:57:00",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "08:57:02",
+    "kind": "start",
+    "text": "drink_water"
+  },
+  {
+    "time": "08:58:50",
+    "kind": "end",
+    "text": "drink_water"
+  },
+  {
+    "time": "08:58:52",
+    "kind": "start",
+    "text": "write_notes"
+  },
+  {
+    "time": "09:01:22",
+    "kind": "end",
+    "text": "write_notes"
+  },
+  {
+    "time": "09:01:24",
+    "kind": "start",
+    "text": "type_on_laptop"
+  },
+  {
+    "time": "09:06:24",
+    "kind": "end",
+    "text": "type_on_laptop"
+  },
+  {
+    "time": "09:06:26",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "09:11:04",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "09:11:06",
+    "kind": "start",
+    "text": "read_book_at_desk"
+  },
+  {
+    "time": "09:15:06",
+    "kind": "end",
+    "text": "read_book_at_desk"
+  },
+  {
+    "time": "09:15:08",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "09:20:36",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "09:20:38",
+    "kind": "start",
+    "text": "drink_water"
+  },
+  {
+    "time": "09:27:16",
+    "kind": "end",
+    "text": "drink_water"
+  },
+  {
+    "time": "09:27:18",
+    "kind": "start",
+    "text": "write_notes"
+  },
+  {
+    "time": "09:29:04",
+    "kind": "end",
+    "text": "write_notes"
+  },
+  {
+    "time": "09:29:06",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "09:36:30",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "09:36:32",
+    "kind": "start",
+    "text": "write_notes"
+  },
+  {
+    "time": "09:41:12",
+    "kind": "end",
+    "text": "write_notes"
+  },
+  {
+    "time": "09:41:14",
+    "kind": "start",
+    "text": "read_book_at_desk"
+  },
+  {
+    "time": "09:42:16",
+    "kind": "end",
+    "text": "read_book_at_desk"
+  },
+  {
+    "time": "09:42:18",
+    "kind": "moment",
+    "text": "get_cup"
+  },
+  {
+    "time": "09:42:22",
+    "kind": "moment",
+    "text": "put_cup_next_to_self"
+  },
+  {
+    "time": "09:42:26",
+    "kind": "start",
+    "text": "type_on_laptop"
+  },
+  {
+    "time": "09:45:42",
+    "kind": "end",
+    "text": "type_on_laptop"
+  },
+  {
+    "time": "09:45:44",
+    "kind": "moment",
+    "text": "get_cup"
+  },
+  {
+    "time": "09:45:48",
+    "kind": "moment",
+    "text": "put_cup_next_to_self"
+  },
+  {
+    "time": "09:45:52",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "09:46:42",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "09:46:44",
+    "kind": "start",
+    "text": "read_book_at_desk"
+  },
+  {
+    "time": "09:49:54",
+    "kind": "end",
+    "text": "read_book_at_desk"
+  },
+  {
+    "time": "09:49:56",
+    "kind": "start",
+    "text": "drink_water"
+  },
+  {
+    "time": "09:50:26",
+    "kind": "end",
+    "text": "drink_water"
+  },
+  {
+    "time": "09:50:28",
+    "kind": "start",
+    "text": "read_book_at_desk"
+  },
+  {
+    "time": "09:52:48",
+    "kind": "end",
+    "text": "read_book_at_desk"
+  },
+  {
+    "time": "09:52:50",
+    "kind": "start",
+    "text": "write_notes"
+  },
+  {
+    "time": "10:00:26",
+    "kind": "end",
+    "text": "write_notes"
+  },
+  {
+    "time": "10:00:28",
+    "kind": "moment",
+    "text": "get_cup"
+  },
+  {
+    "time": "10:00:32",
+    "kind": "moment",
+    "text": "put_cup_next_to_self"
+  },
+  {
+    "time": "10:00:36",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "10:10:06",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "10:10:08",
+    "kind": "start",
+    "text": "drink_water"
+  },
+  {
+    "time": "10:13:32",
+    "kind": "end",
+    "text": "drink_water"
+  },
+  {
+    "time": "10:13:34",
+    "kind": "start",
+    "text": "write_notes"
+  },
+  {
+    "time": "10:14:28",
+    "kind": "end",
+    "text": "write_notes"
+  },
+  {
+    "time": "10:14:30",
+    "kind": "start",
+    "text": "drink_water"
+  },
+  {
+    "time": "10:14:58",
+    "kind": "end",
+    "text": "drink_water"
+  },
+  {
+    "time": "10:15:00",
+    "kind": "moment",
+    "text": "finish_drinking"
+  },
+  {
+    "time": "10:15:04",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "10:24:00",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "10:24:02",
+    "kind": "start",
+    "text": "type_on_laptop"
+  },
+  {
+    "time": "10:28:10",
+    "kind": "end",
+    "text": "type_on_laptop"
+  },
+  {
+    "time": "10:28:12",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "10:35:32",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "10:35:34",
+    "kind": "start",
+    "text": "type_on_laptop"
+  },
+  {
+    "time": "10:38:24",
+    "kind": "end",
+    "text": "type_on_laptop"
+  },
+  {
+    "time": "10:38:26",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "10:41:14",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "10:41:16",
+    "kind": "start",
+    "text": "write_notes"
+  },
+  {
+    "time": "10:49:38",
+    "kind": "end",
+    "text": "write_notes"
+  },
+  {
+    "time": "10:49:40",
+    "kind": "start",
+    "text": "read_book_at_desk"
+  },
+  {
+    "time": "10:57:32",
+    "kind": "end",
+    "text": "read_book_at_desk"
+  },
+  {
+    "time": "10:57:34",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "11:00:58",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "11:01:00",
+    "kind": "start",
+    "text": "write_notes"
+  },
+  {
+    "time": "11:03:16",
+    "kind": "end",
+    "text": "write_notes"
+  },
+  {
+    "time": "11:03:18",
+    "kind": "start",
+    "text": "drink_water"
+  },
+  {
+    "time": "11:12:38",
+    "kind": "end",
+    "text": "drink_water"
+  },
+  {
+    "time": "11:12:40",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "11:18:58",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "11:19:00",
+    "kind": "start",
+    "text": "write_notes"
+  },
+  {
+    "time": "11:20:20",
+    "kind": "end",
+    "text": "write_notes"
+  },
+  {
+    "time": "11:20:22",
+    "kind": "moment",
+    "text": "get_cup"
+  },
+  {
+    "time": "11:20:26",
+    "kind": "moment",
+    "text": "put_cup_next_to_self"
+  },
+  {
+    "time": "11:20:30",
+    "kind": "start",
+    "text": "write_notes"
+  },
+  {
+    "time": "11:24:26",
+    "kind": "end",
+    "text": "write_notes"
+  },
+  {
+    "time": "11:24:28",
+    "kind": "start",
+    "text": "read_book_at_desk"
+  },
+  {
+    "time": "11:33:50",
+    "kind": "end",
+    "text": "read_book_at_desk"
+  },
+  {
+    "time": "11:33:52",
+    "kind": "start",
+    "text": "write_notes"
+  },
+  {
+    "time": "11:41:34",
+    "kind": "end",
+    "text": "write_notes"
+  },
+  {
+    "time": "11:41:36",
+    "kind": "start",
+    "text": "type_on_laptop"
+  },
+  {
+    "time": "11:45:44",
+    "kind": "end",
+    "text": "type_on_laptop"
+  },
+  {
+    "time": "11:45:46",
+    "kind": "start",
+    "text": "write_notes"
+  },
+  {
+    "time": "11:52:16",
+    "kind": "end",
+    "text": "write_notes"
+  },
+  {
+    "time": "11:52:18",
+    "kind": "moment",
+    "text": "get_cup"
+  },
+  {
+    "time": "11:52:22",
+    "kind": "moment",
+    "text": "put_cup_next_to_self"
+  },
+  {
+    "time": "11:52:26",
+    "kind": "start",
+    "text": "type_on_laptop"
+  },
+  {
+    "time": "11:55:42",
+    "kind": "end",
+    "text": "type_on_laptop"
+  },
+  {
+    "time": "11:55:44",
+    "kind": "start",
+    "text": "write_notes"
+  },
+  {
+    "time": "11:56:48",
+    "kind": "end",
+    "text": "write_notes"
+  },
+  {
+    "time": "11:56:50",
+    "kind": "start",
+    "text": "read_book_at_desk"
+  },
+  {
+    "time": "11:57:28",
+    "kind": "end",
+    "text": "read_book_at_desk"
+  },
+  {
+    "time": "11:57:30",
+    "kind": "moment",
+    "text": "get_cup"
+  },
+  {
+    "time": "11:57:34",
+    "kind": "moment",
+    "text": "put_cup_next_to_self"
+  },
+  {
+    "time": "11:57:38",
+    "kind": "start",
+    "text": "write_notes"
+  },
+  {
+    "time": "11:59:58",
+    "kind": "end",
+    "text": "write_notes"
+  },
+  {
+    "time": "12:00:00",
+    "kind": "moment",
+    "text": "close_laptop"
+  },
+  {
+    "time": "12:00:04",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "12:01:08",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "12:01:10",
+    "kind": "moment",
+    "text": "get_cup"
+  },
+  {
+    "time": "12:01:14",
+    "kind": "moment",
+    "text": "put_cup_next_to_self"
+  },
+  {
+    "time": "12:01:18",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "12:03:26",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "12:03:28",
+    "kind": "start",
+    "text": "type_on_laptop"
+  },
+  {
+    "time": "12:12:36",
+    "kind": "end",
+    "text": "type_on_laptop"
+  },
+  {
+    "time": "12:12:38",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "12:16:14",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "12:16:16",
+    "kind": "start",
+    "text": "write_notes"
+  },
+  {
+    "time": "12:22:32",
+    "kind": "end",
+    "text": "write_notes"
+  },
+  {
+    "time": "12:22:34",
+    "kind": "moment",
+    "text": "get_cup"
+  },
+  {
+    "time": "12:22:38",
+    "kind": "moment",
+    "text": "put_cup_next_to_self"
+  },
+  {
+    "time": "12:22:42",
+    "kind": "start",
+    "text": "type_on_laptop"
+  },
+  {
+    "time": "12:27:40",
+    "kind": "end",
+    "text": "type_on_laptop"
+  },
+  {
+    "time": "12:27:42",
+    "kind": "start",
+    "text": "drink_water"
+  },
+  {
+    "time": "12:29:58",
+    "kind": "end",
+    "text": "drink_water"
+  },
+  {
+    "time": "12:30:00",
+    "kind": "moment",
+    "text": "put_on_bag"
+  },
+  {
+    "time": "12:30:04",
+    "kind": "start",
+    "text": "check_pockets"
+  },
+  {
+    "time": "12:31:54",
+    "kind": "end",
+    "text": "check_pockets"
+  },
+  {
+    "time": "12:31:56",
+    "kind": "moment",
+    "text": "walk_to_light_switch"
+  },
+  {
+    "time": "12:32:00",
+    "kind": "start",
+    "text": "turn_off_room_light"
+  },
+  {
+    "time": "12:32:04",
+    "kind": "end",
+    "text": "turn_off_room_light"
+  },
+  {
+    "time": "12:32:06",
+    "kind": "start",
+    "text": "unseen"
+  },
+  {
+    "time": "16:59:58",
+    "kind": "end",
+    "text": "unseen"
+  },
+  {
+    "time": "17:00:00",
+    "kind": "start",
+    "text": "chat_with_guest"
+  },
+  {
+    "time": "17:07:52",
+    "kind": "end",
+    "text": "chat_with_guest"
+  },
+  {
+    "time": "17:07:54",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "17:12:28",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "17:12:30",
+    "kind": "moment",
+    "text": "get_cup"
+  },
+  {
+    "time": "17:12:34",
+    "kind": "moment",
+    "text": "put_cup_next_to_self"
+  },
+  {
+    "time": "17:12:38",
+    "kind": "start",
+    "text": "chat_with_guest"
+  },
+  {
+    "time": "17:19:58",
+    "kind": "end",
+    "text": "chat_with_guest"
+  },
+  {
+    "time": "17:20:00",
+    "kind": "moment",
+    "text": "guest_finishes_can"
+  },
+  {
+    "time": "17:20:04",
+    "kind": "start",
+    "text": "chat_with_guest"
+  },
+  {
+    "time": "17:21:54",
+    "kind": "end",
+    "text": "chat_with_guest"
+  },
+  {
+    "time": "17:21:56",
+    "kind": "moment",
+    "text": "pick_up_empty_can"
+  },
+  {
+    "time": "17:22:00",
+    "kind": "start",
+    "text": "put_can_in_storage"
+  },
+  {
+    "time": "17:22:04",
+    "kind": "end",
+    "text": "put_can_in_storage"
+  },
+  {
+    "time": "17:22:06",
+    "kind": "start",
+    "text": "chat_with_guest"
+  },
+  {
+    "time": "17:30:02",
+    "kind": "end",
+    "text": "chat_with_guest"
+  },
+  {
+    "time": "17:30:04",
+    "kind": "start",
+    "text": "watch_tv"
+  },
+  {
+    "time": "17:38:16",
+    "kind": "end",
+    "text": "watch_tv"
+  },
+  {
+    "time": "17:38:18",
+    "kind": "start",
+    "text": "chat_with_guest"
+  },
+  {
+    "time": "17:39:58",
+    "kind": "end",
+    "text": "chat_with_guest"
+  },
+  {
+    "time": "17:40:00",
+    "kind": "start",
+    "text": "phone_rings"
+  },
+  {
+    "time": "17:40:58",
+    "kind": "end",
+    "text": "phone_rings"
+  },
+  {
+    "time": "17:41:00",
+    "kind": "start",
+    "text": "chat_with_guest"
+  },
+  {
+    "time": "17:42:58",
+    "kind": "end",
+    "text": "chat_with_guest"
+  },
+  {
+    "time": "17:43:00",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "17:49:58",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "17:50:00",
+    "kind": "moment",
+    "text": "guest_finishes_can"
+  },
+  {
+    "time": "17:50:04",
+    "kind": "start",
+    "text": "chat_with_guest"
+  },
+  {
+    "time": "17:50:42",
+    "kind": "end",
+    "text": "chat_with_guest"
+  },
+  {
+    "time": "17:50:44",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "17:51:54",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "17:51:56",
+    "kind": "moment",
+    "text": "pick_up_empty_can"
+  },
+  {
+    "time": "17:52:00",
+    "kind": "start",
+    "text": "put_can_in_storage"
+  },
+  {
+    "time": "17:52:04",
+    "kind": "end",
+    "text": "put_can_in_storage"
+  },
+  {
+    "time": "17:52:06",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "17:54:10",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "17:54:12",
+    "kind": "start",
+    "text": "chat_with_guest"
+  },
+  {
+    "time": "18:00:34",
+    "kind": "end",
+    "text": "chat_with_guest"
+  },
+  {
+    "time": "18:00:36",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "18:09:30",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "18:09:32",
+    "kind": "start",
+    "text": "watch_tv"
+  },
+  {
+    "time": "18:14:58",
+    "kind": "end",
+    "text": "watch_tv"
+  },
+  {
+    "time": "18:15:00",
+    "kind": "moment",
+    "text": "guest_finishes_can"
+  },
+  {
+    "time": "18:15:04",
+    "kind": "start",
+    "text": "chat_with_guest"
+  },
+  {
+    "time": "18:16:54",
+    "kind": "end",
+    "text": "chat_with_guest"
+  },
+  {
+    "time": "18:16:56",
+    "kind": "moment",
+    "text": "pick_up_empty_can"
+  },
+  {
+    "time": "18:17:00",
+    "kind": "start",
+    "text": "put_can_in_storage"
+  },
+  {
+    "time": "18:17:04",
+    "kind": "end",
+    "text": "put_can_in_storage"
+  },
+  {
+    "time": "18:17:06",
+    "kind": "start",
+    "text": "chat_with_guest"
+  },
+  {
+    "time": "18:18:24",
+    "kind": "end",
+    "text": "chat_with_guest"
+  },
+  {
+    "time": "18:18:26",
+    "kind": "moment",
+    "text": "get_cup"
+  },
+  {
+    "time": "18:18:30",
+    "kind": "moment",
+    "text": "put_cup_next_to_self"
+  },
+  {
+    "time": "18:18:34",
+    "kind": "start",
+    "text": "chat_with_guest"
+  },
+  {
+    "time": "18:19:56",
+    "kind": "end",
+    "text": "chat_with_guest"
+  },
+  {
+    "time": "18:19:58",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "18:27:10",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "18:27:12",
+    "kind": "start",
+    "text": "watch_tv"
+  },
+  {
+    "time": "18:28:14",
+    "kind": "end",
+    "text": "watch_tv"
+  },
+  {
+    "time": "18:28:16",
+    "kind": "start",
+    "text": "chat_with_guest"
+  },
+  {
+    "time": "18:29:10",
+    "kind": "end",
+    "text": "chat_with_guest"
+  },
+  {
+    "time": "18:29:12",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "18:29:58",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "18:30:00",
+    "kind": "start",
+    "text": "drink_water"
+  },
+  {
+    "time": "18:32:02",
+    "kind": "end",
+    "text": "drink_water"
+  },
+  {
+    "time": "18:32:04",
+    "kind": "start",
+    "text": "eat_dinner"
+  },
+  {
+    "time": "18:35:36",
+    "kind": "end",
+    "text": "eat_dinner"
+  },
+  {
+    "time": "18:35:38",
+    "kind": "start",
+    "text": "drink_water"
+  },
+  {
+    "time": "18:41:40",
+    "kind": "end",
+    "text": "drink_water"
+  },
+  {
+    "time": "18:41:42",
+    "kind": "moment",
+    "text": "get_cup"
+  },
+  {
+    "time": "18:41:46",
+    "kind": "moment",
+    "text": "put_cup_next_to_self"
+  },
+  {
+    "time": "18:41:50",
+    "kind": "start",
+    "text": "eat_dinner"
+  },
+  {
+    "time": "18:43:04",
+    "kind": "end",
+    "text": "eat_dinner"
+  },
+  {
+    "time": "18:43:06",
+    "kind": "start",
+    "text": "drink_water"
+  },
+  {
+    "time": "18:50:00",
+    "kind": "end",
+    "text": "drink_water"
+  },
+  {
+    "time": "18:50:02",
+    "kind": "start",
+    "text": "eat_dinner"
+  },
+  {
+    "time": "18:55:58",
+    "kind": "end",
+    "text": "eat_dinner"
+  },
+  {
+    "time": "18:56:00",
+    "kind": "moment",
+    "text": "put_down_chopsticks"
+  },
+  {
+    "time": "18:56:04",
+    "kind": "start",
+    "text": "drink_water"
+  },
+  {
+    "time": "18:56:48",
+    "kind": "end",
+    "text": "drink_water"
+  },
+  {
+    "time": "18:56:50",
+    "kind": "moment",
+    "text": "pick_up_chopsticks"
+  },
+  {
+    "time": "18:56:54",
+    "kind": "start",
+    "text": "eat_dinner"
+  },
+  {
+    "time": "18:56:58",
+    "kind": "end",
+    "text": "eat_dinner"
+  },
+  {
+    "time": "18:57:00",
+    "kind": "moment",
+    "text": "put_down_chopsticks"
+  },
+  {
+    "time": "18:57:04",
+    "kind": "start",
+    "text": "drink_water"
+  },
+  {
+    "time": "18:57:22",
+    "kind": "end",
+    "text": "drink_water"
+  },
+  {
+    "time": "18:57:24",
+    "kind": "moment",
+    "text": "pick_up_chopsticks"
+  },
+  {
+    "time": "18:57:28",
+    "kind": "start",
+    "text": "eat_dinner"
+  },
+  {
+    "time": "18:57:38",
+    "kind": "end",
+    "text": "eat_dinner"
+  },
+  {
+    "time": "18:57:40",
+    "kind": "moment",
+    "text": "put_down_chopsticks"
+  },
+  {
+    "time": "18:57:44",
+    "kind": "start",
+    "text": "eat_dinner"
+  },
+  {
+    "time": "18:57:58",
+    "kind": "end",
+    "text": "eat_dinner"
+  },
+  {
+    "time": "18:58:00",
+    "kind": "moment",
+    "text": "finish_meal"
+  },
+  {
+    "time": "18:58:04",
+    "kind": "start",
+    "text": "drink_water"
+  },
+  {
+    "time": "18:58:58",
+    "kind": "end",
+    "text": "drink_water"
+  },
+  {
+    "time": "18:59:00",
+    "kind": "moment",
+    "text": "put_down_spoon"
+  },
+  {
+    "time": "18:59:04",
+    "kind": "start",
+    "text": "drink_water"
+  },
+  {
+    "time": "19:00:54",
+    "kind": "end",
+    "text": "drink_water"
+  },
+  {
+    "time": "19:00:56",
+    "kind": "moment",
+    "text": "pick_up_bowl"
+  },
+  {
+    "time": "19:01:00",
+    "kind": "start",
+    "text": "put_bowl_in_dishwasher"
+  },
+  {
+    "time": "19:01:04",
+    "kind": "end",
+    "text": "put_bowl_in_dishwasher"
+  },
+  {
+    "time": "19:01:06",
+    "kind": "start",
+    "text": "eat_dinner"
+  },
+  {
+    "time": "19:02:22",
+    "kind": "end",
+    "text": "eat_dinner"
+  },
+  {
+    "time": "19:02:24",
+    "kind": "start",
+    "text": "drink_water"
+  },
+  {
+    "time": "19:11:16",
+    "kind": "end",
+    "text": "drink_water"
+  },
+  {
+    "time": "19:11:18",
+    "kind": "start",
+    "text": "eat_dinner"
+  },
+  {
+    "time": "19:12:32",
+    "kind": "end",
+    "text": "eat_dinner"
+  },
+  {
+    "time": "19:12:34",
+    "kind": "start",
+    "text": "drink_water"
+  },
+  {
+    "time": "19:15:36",
+    "kind": "end",
+    "text": "drink_water"
+  },
+  {
+    "time": "19:15:38",
+    "kind": "moment",
+    "text": "get_cup"
+  },
+  {
+    "time": "19:15:42",
+    "kind": "moment",
+    "text": "put_cup_next_to_self"
+  },
+  {
+    "time": "19:15:46",
+    "kind": "start",
+    "text": "eat_dinner"
+  },
+  {
+    "time": "19:21:20",
+    "kind": "end",
+    "text": "eat_dinner"
+  },
+  {
+    "time": "19:21:22",
+    "kind": "start",
+    "text": "drink_water"
+  },
+  {
+    "time": "19:26:32",
+    "kind": "end",
+    "text": "drink_water"
+  },
+  {
+    "time": "19:26:34",
+    "kind": "moment",
+    "text": "get_cup"
+  },
+  {
+    "time": "19:26:38",
+    "kind": "moment",
+    "text": "put_cup_next_to_self"
+  },
+  {
+    "time": "19:26:42",
+    "kind": "start",
+    "text": "eat_dinner"
+  },
+  {
+    "time": "19:27:48",
+    "kind": "end",
+    "text": "eat_dinner"
+  },
+  {
+    "time": "19:27:50",
+    "kind": "start",
+    "text": "drink_water"
+  },
+  {
+    "time": "19:29:58",
+    "kind": "end",
+    "text": "drink_water"
+  },
+  {
+    "time": "19:30:00",
+    "kind": "start",
+    "text": "sit_on_sofa"
+  },
+  {
+    "time": "19:32:28",
+    "kind": "end",
+    "text": "sit_on_sofa"
+  },
+  {
+    "time": "19:32:30",
+    "kind": "start",
+    "text": "watch_tv"
+  },
+  {
+    "time": "19:33:34",
+    "kind": "end",
+    "text": "watch_tv"
+  },
+  {
+    "time": "19:33:36",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "19:39:52",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "19:39:54",
+    "kind": "start",
+    "text": "watch_tv"
+  },
+  {
+    "time": "19:44:24",
+    "kind": "end",
+    "text": "watch_tv"
+  },
+  {
+    "time": "19:44:26",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "19:51:48",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "19:51:50",
+    "kind": "moment",
+    "text": "get_cup"
+  },
+  {
+    "time": "19:51:54",
+    "kind": "moment",
+    "text": "put_cup_next_to_self"
+  },
+  {
+    "time": "19:51:58",
+    "kind": "start",
+    "text": "sit_on_sofa"
+  },
+  {
+    "time": "19:53:12",
+    "kind": "end",
+    "text": "sit_on_sofa"
+  },
+  {
+    "time": "19:53:14",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "19:58:10",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "19:58:12",
+    "kind": "start",
+    "text": "watch_tv"
+  },
+  {
+    "time": "19:59:38",
+    "kind": "end",
+    "text": "watch_tv"
+  },
+  {
+    "time": "19:59:40",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "20:03:00",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "20:03:02",
+    "kind": "start",
+    "text": "sit_on_sofa"
+  },
+  {
+    "time": "20:06:10",
+    "kind": "end",
+    "text": "sit_on_sofa"
+  },
+  {
+    "time": "20:06:12",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "20:08:56",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "20:08:58",
+    "kind": "start",
+    "text": "sit_on_sofa"
+  },
+  {
+    "time": "20:10:22",
+    "kind": "end",
+    "text": "sit_on_sofa"
+  },
+  {
+    "time": "20:10:24",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "20:11:30",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "20:11:32",
+    "kind": "start",
+    "text": "sit_on_sofa"
+  },
+  {
+    "time": "20:20:34",
+    "kind": "end",
+    "text": "sit_on_sofa"
+  },
+  {
+    "time": "20:20:36",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "20:27:46",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "20:27:48",
+    "kind": "start",
+    "text": "watch_tv"
+  },
+  {
+    "time": "20:32:00",
+    "kind": "end",
+    "text": "watch_tv"
+  },
+  {
+    "time": "20:32:02",
+    "kind": "moment",
+    "text": "get_cup"
+  },
+  {
+    "time": "20:32:06",
+    "kind": "moment",
+    "text": "put_cup_next_to_self"
+  },
+  {
+    "time": "20:32:10",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "20:38:08",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "20:38:10",
+    "kind": "start",
+    "text": "watch_tv"
+  },
+  {
+    "time": "20:47:08",
+    "kind": "end",
+    "text": "watch_tv"
+  },
+  {
+    "time": "20:47:10",
+    "kind": "moment",
+    "text": "get_cup"
+  },
+  {
+    "time": "20:47:14",
+    "kind": "moment",
+    "text": "put_cup_next_to_self"
+  },
+  {
+    "time": "20:47:18",
+    "kind": "start",
+    "text": "watch_tv"
+  },
+  {
+    "time": "20:55:32",
+    "kind": "end",
+    "text": "watch_tv"
+  },
+  {
+    "time": "20:55:34",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "20:57:46",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "20:57:48",
+    "kind": "moment",
+    "text": "get_cup"
+  },
+  {
+    "time": "20:57:52",
+    "kind": "moment",
+    "text": "put_cup_next_to_self"
+  },
+  {
+    "time": "20:57:56",
+    "kind": "start",
+    "text": "watch_tv"
+  },
+  {
+    "time": "21:04:30",
+    "kind": "end",
+    "text": "watch_tv"
+  },
+  {
+    "time": "21:04:32",
+    "kind": "moment",
+    "text": "get_cup"
+  },
+  {
+    "time": "21:04:36",
+    "kind": "moment",
+    "text": "put_cup_next_to_self"
+  },
+  {
+    "time": "21:04:40",
+    "kind": "start",
+    "text": "sit_on_sofa"
+  },
+  {
+    "time": "21:13:44",
+    "kind": "end",
+    "text": "sit_on_sofa"
+  },
+  {
+    "time": "21:13:46",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "21:15:52",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "21:15:54",
+    "kind": "moment",
+    "text": "get_cup"
+  },
+  {
+    "time": "21:15:58",
+    "kind": "moment",
+    "text": "put_cup_next_to_self"
+  },
+  {
+    "time": "21:16:02",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "21:23:52",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "21:23:54",
+    "kind": "moment",
+    "text": "get_cup"
+  },
+  {
+    "time": "21:23:58",
+    "kind": "moment",
+    "text": "put_cup_next_to_self"
+  },
+  {
+    "time": "21:24:02",
+    "kind": "start",
+    "text": "sit_on_sofa"
+  },
+  {
+    "time": "21:26:06",
+    "kind": "end",
+    "text": "sit_on_sofa"
+  },
+  {
+    "time": "21:26:08",
+    "kind": "moment",
+    "text": "get_cup"
+  },
+  {
+    "time": "21:26:12",
+    "kind": "moment",
+    "text": "put_cup_next_to_self"
+  },
+  {
+    "time": "21:26:16",
+    "kind": "start",
+    "text": "sit_on_sofa"
+  },
+  {
+    "time": "21:28:46",
+    "kind": "end",
+    "text": "sit_on_sofa"
+  },
+  {
+    "time": "21:28:48",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "21:30:18",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "21:30:20",
+    "kind": "start",
+    "text": "watch_tv"
+  },
+  {
+    "time": "21:36:54",
+    "kind": "end",
+    "text": "watch_tv"
+  },
+  {
+    "time": "21:36:56",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "21:38:56",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "21:38:58",
+    "kind": "start",
+    "text": "watch_tv"
+  },
+  {
+    "time": "21:47:26",
+    "kind": "end",
+    "text": "watch_tv"
+  },
+  {
+    "time": "21:47:28",
+    "kind": "start",
+    "text": "sit_on_sofa"
+  },
+  {
+    "time": "21:51:04",
+    "kind": "end",
+    "text": "sit_on_sofa"
+  },
+  {
+    "time": "21:51:06",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "21:52:24",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "21:52:26",
+    "kind": "moment",
+    "text": "get_cup"
+  },
+  {
+    "time": "21:52:30",
+    "kind": "moment",
+    "text": "put_cup_next_to_self"
+  },
+  {
+    "time": "21:52:34",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "21:56:22",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "21:56:24",
+    "kind": "start",
+    "text": "sit_on_sofa"
+  },
+  {
+    "time": "21:58:56",
+    "kind": "end",
+    "text": "sit_on_sofa"
+  },
+  {
+    "time": "21:58:58",
+    "kind": "start",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "21:59:58",
+    "kind": "end",
+    "text": "look_at_phone"
+  },
+  {
+    "time": "22:00:00",
+    "kind": "start",
+    "text": "read_in_bed"
+  },
+  {
+    "time": "22:19:58",
+    "kind": "end",
+    "text": "read_in_bed"
+  },
+  {
+    "time": "22:20:00",
+    "kind": "moment",
+    "text": "close_book"
+  },
+  {
+    "time": "22:20:04",
+    "kind": "start",
+    "text": "lie_back"
+  },
+  {
+    "time": "22:21:54",
+    "kind": "end",
+    "text": "lie_back"
+  },
+  {
+    "time": "22:21:56",
+    "kind": "moment",
+    "text": "reach_for_lamp"
+  },
+  {
+    "time": "22:22:00",
+    "kind": "start",
+    "text": "turn_off_bedside_lamp"
+  },
+  {
+    "time": "22:22:04",
+    "kind": "end",
+    "text": "turn_off_bedside_lamp"
+  },
+  {
+    "time": "22:22:06",
+    "kind": "start",
+    "text": "lie_in_dark_bed"
+  },
+  {
+    "time": "22:59:58",
+    "kind": "end",
+    "text": "lie_in_dark_bed"
+  }
+]

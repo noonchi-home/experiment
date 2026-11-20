@@ -1,0 +1,17 @@
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+{"id":"gen-1794763223-44jGxAJzFxKAxXC83ipe","object":"chat.completion","created":1794763223,"model":"qwen/qwen3.5-27b","provider":"Alibaba","system_fingerprint":null,"service_tier":null,"choices":[{"index":0,"logprobs":null,"finish_reason":"stop","native_finish_reason":"stop","message":{"role":"assistant","content":"{\"moments\": [{\"time\": \"16:00:00\", \"kind\": \"start\", \"text\": \"Person is not visible\"}, {\"time\": \"16:49:42\", \"kind\": \"end\", \"text\": \"Person is not visible\"}, {\"time\": \"16:49:42\", \"kind\": \"start\", \"text\": \"Person enters the room and closes the door\"}, {\"time\": \"16:49:48\", \"kind\": \"end\", \"text\": \"Person enters the room and closes the door\"}, {\"time\": \"16:49:50\", \"kind\": \"start\", \"text\": \"Person puts down their bag by the door\"}, {\"time\": \"16:49:58\", \"kind\": \"end\", \"text\": \"Person puts down their bag by the door\"}, {\"time\": \"16:49:58\", \"kind\": \"start\", \"text\": \"Person turns on the light\"}, {\"time\": \"16:50:02\", \"kind\": \"end\", \"text\": \"Person turns on the light\"}, {\"time\": \"16:50:02\", \"kind\": \"start\", \"text\": \"Person leaves the room\"}, {\"time\": \"16:54:04\", \"kind\": \"end\", \"text\": \"Person leaves the room\"}, {\"time\": \"16:54:04\", \"kind\": \"start\", \"text\": \"Person walks into the room\"}, {\"time\": \"16:54:08\", \"kind\": \"end\", \"text\": \"Person walks into the room\"}, {\"time\": \"16:54:08\", \"kind\": \"start\", \"text\": \"Person sits on the sofa\"}, {\"time\": \"16:55:10\", \"kind\": \"end\", \"text\": \"Person sits on the sofa\"}, {\"time\": \"16:55:10\", \"kind\": \"start\", \"text\": \"Person adjusts their sitting position on the sofa\"}, {\"time\": \"16:55:16\", \"kind\": \"end\", \"text\": \"Person adjusts their sitting position on the sofa\"}, {\"time\": \"16:55:16\", \"kind\": \"start\", \"text\": \"Person covers a yawn with one hand\"}, {\"time\": \"16:55:20\", \"kind\": \"end\", \"text\": \"Person covers a yawn with one hand\"}, {\"time\": \"16:55:20\", \"kind\": \"start\", \"text\": \"Person watches TV while sitting on the sofa\"}, {\"time\": \"16:59:58\", \"kind\": \"end\", \"text\": \"Person watches TV while sitting on the sofa\"}]}","refusal":null,"reasoning":null}}],"usage":{"prompt_tokens":35502,"completion_tokens":611,"total_tokens":36113,"cost":0.00787605,"is_byok":false,"prompt_tokens_details":{"cached_tokens":0,"cache_write_tokens":0,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.00787605,"upstream_inference_prompt_cost":0.00692289,"upstream_inference_completions_cost":0.00095316},"completion_tokens_details":{"reasoning_tokens":0,"image_tokens":0,"audio_tokens":0}}}

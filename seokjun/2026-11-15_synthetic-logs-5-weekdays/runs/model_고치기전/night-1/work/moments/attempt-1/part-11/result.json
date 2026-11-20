@@ -1,0 +1,233 @@
+{
+  "status": "valid",
+  "raw_response": "{\n  \"moments\": [\n    {\n      \"time\": \"17:00:00\",\n      \"kind\": \"start\",\n      \"text\": \"Person is not visible\"\n    },\n    {\n      \"time\": \"17:10:06\",\n      \"kind\": \"end\",\n      \"text\": \"Person is not visible\"\n    },\n    {\n      \"time\": \"17:10:06\",\n      \"kind\": \"moment\",\n      \"text\": \"Person arrives home\"\n    },\n    {\n      \"time\": \"17:10:08\",\n      \"kind\": \"moment\",\n      \"text\": \"Person comes in through the front door\"\n    },\n    {\n      \"time\": \"17:10:12\",\n      \"kind\": \"moment\",\n      \"text\": \"Person takes off the bag\"\n    },\n    {\n      \"time\": \"17:10:16\",\n      \"kind\": \"moment\",\n      \"text\": \"Person flips the wall switch and the room light comes on\"\n    },\n    {\n      \"time\": \"17:10:20\",\n      \"kind\": \"start\",\n      \"text\": \"Person is not visible\"\n    },\n    {\n      \"time\": \"17:12:48\",\n      \"kind\": \"end\",\n      \"text\": \"Person is not visible\"\n    },\n    {\n      \"time\": \"17:12:48\",\n      \"kind\": \"start\",\n      \"text\": \"Person relaxes on the sofa\"\n    },\n    {\n      \"time\": \"17:13:12\",\n      \"kind\": \"end\",\n      \"text\": \"Person relaxes on the sofa\"\n    },\n    {\n      \"time\": \"17:13:12\",\n      \"kind\": \"start\",\n      \"text\": \"Person watches television\"\n    },\n    {\n      \"time\": \"17:20:06\",\n      \"kind\": \"end\",\n      \"text\": \"Person watches television\"\n    },\n    {\n      \"time\": \"17:20:06\",\n      \"kind\": \"moment\",\n      \"text\": \"Person gets a cup of water from the purifier\"\n    },\n    {\n      \"time\": \"17:20:14\",\n      \"kind\": \"moment\",\n      \"text\": \"Person puts a cup down next to where they sit\"\n    },\n    {\n      \"time\": \"17:20:18\",\n      \"kind\": \"start\",\n      \"text\": \"Person watches television\"\n    },\n    {\n      \"time\": \"17:42:56\",\n      \"kind\": \"end\",\n      \"text\": \"Person watches television\"\n    },\n    {\n      \"time\": \"17:42:56\",\n      \"kind\": \"moment\",\n      \"text\": \"Person answers their phone\"\n    },\n    {\n      \"time\": \"17:43:00\",\n      \"kind\": \"start\",\n      \"text\": \"Person talks on the phone\"\n    },\n    {\n      \"time\": \"17:44:12\",\n      \"kind\": \"end\",\n      \"text\": \"Person talks on the phone\"\n    },\n    {\n      \"time\": \"17:44:12\",\n      \"kind\": \"start\",\n      \"text\": \"Person watches television\"\n    },\n    {\n      \"time\": \"17:46:06\",\n      \"kind\": \"end\",\n      \"text\": \"Person watches television\"\n    },\n    {\n      \"time\": \"17:46:06\",\n      \"kind\": \"moment\",\n      \"text\": \"Person pulls a can out of the refrigerator\"\n    },\n    {\n      \"time\": \"17:46:10\",\n      \"kind\": \"moment\",\n      \"text\": \"Person puts a can on the side table by the sofa\"\n    },\n    {\n      \"time\": \"17:46:14\",\n      \"kind\": \"start\",\n      \"text\": \"Person scrolls through their smartphone\"\n    },\n    {\n      \"time\": \"17:46:44\",\n      \"kind\": \"end\",\n      \"text\": \"Person scrolls through their smartphone\"\n    },\n    {\n      \"time\": \"17:46:44\",\n      \"kind\": \"moment\",\n      \"text\": \"Person drinks water from a cup\"\n    },\n    {\n      \"time\": \"17:46:52\",\n      \"kind\": \"start\",\n      \"text\": \"Person scrolls through their smartphone\"\n    },\n    {\n      \"time\": \"17:47:28\",\n      \"kind\": \"end\",\n      \"text\": \"Person scrolls through their smartphone\"\n    },\n    {\n      \"time\": \"17:47:28\",\n      \"kind\": \"start\",\n      \"text\": \"Person watches television\"\n    },\n    {\n      \"time\": \"17:51:12\",\n      \"kind\": \"end\",\n      \"text\": \"Person watches television\"\n    },\n    {\n      \"time\": \"17:51:12\",\n      \"kind\": \"start\",\n      \"text\": \"Person scrolls through their smartphone\"\n    },\n    {\n      \"time\": \"17:51:38\",\n      \"kind\": \"end\",\n      \"text\": \"Person scrolls through their smartphone\"\n    },\n    {\n      \"time\": \"17:51:38\",\n      \"kind\": \"moment\",\n      \"text\": \"Person drinks from the can\"\n    },\n    {\n      \"time\": \"17:51:44\",\n      \"kind\": \"start\",\n      \"text\": \"Person scrolls through their smartphone\"\n    },\n    {\n      \"time\": \"17:52:10\",\n      \"kind\": \"end\",\n      \"text\": \"Person scrolls through their smartphone\"\n    },\n    {\n      \"time\": \"17:52:10\",\n      \"kind\": \"moment\",\n      \"text\": \"Person sips from a can\"\n    },\n    {\n      \"time\": \"17:52:14\",\n      \"kind\": \"moment\",\n      \"text\": \"Person drinks water from a cup\"\n    },\n    {\n      \"time\": \"17:52:28\",\n      \"kind\": \"start\",\n      \"text\": \"Person watches television\"\n    }\n  ]\n}",
+  "output": {
+    "moments": [
+      {
+        "time": "17:00:00",
+        "kind": "start",
+        "text": "Person is not visible"
+      },
+      {
+        "time": "17:10:06",
+        "kind": "end",
+        "text": "Person is not visible"
+      },
+      {
+        "time": "17:10:06",
+        "kind": "moment",
+        "text": "Person arrives home"
+      },
+      {
+        "time": "17:10:08",
+        "kind": "moment",
+        "text": "Person comes in through the front door"
+      },
+      {
+        "time": "17:10:12",
+        "kind": "moment",
+        "text": "Person takes off the bag"
+      },
+      {
+        "time": "17:10:16",
+        "kind": "moment",
+        "text": "Person flips the wall switch and the room light comes on"
+      },
+      {
+        "time": "17:10:20",
+        "kind": "start",
+        "text": "Person is not visible"
+      },
+      {
+        "time": "17:12:48",
+        "kind": "end",
+        "text": "Person is not visible"
+      },
+      {
+        "time": "17:12:48",
+        "kind": "start",
+        "text": "Person relaxes on the sofa"
+      },
+      {
+        "time": "17:13:12",
+        "kind": "end",
+        "text": "Person relaxes on the sofa"
+      },
+      {
+        "time": "17:13:12",
+        "kind": "start",
+        "text": "Person watches television"
+      },
+      {
+        "time": "17:20:06",
+        "kind": "end",
+        "text": "Person watches television"
+      },
+      {
+        "time": "17:20:06",
+        "kind": "moment",
+        "text": "Person gets a cup of water from the purifier"
+      },
+      {
+        "time": "17:20:14",
+        "kind": "moment",
+        "text": "Person puts a cup down next to where they sit"
+      },
+      {
+        "time": "17:20:18",
+        "kind": "start",
+        "text": "Person watches television"
+      },
+      {
+        "time": "17:42:56",
+        "kind": "end",
+        "text": "Person watches television"
+      },
+      {
+        "time": "17:42:56",
+        "kind": "moment",
+        "text": "Person answers their phone"
+      },
+      {
+        "time": "17:43:00",
+        "kind": "start",
+        "text": "Person talks on the phone"
+      },
+      {
+        "time": "17:44:12",
+        "kind": "end",
+        "text": "Person talks on the phone"
+      },
+      {
+        "time": "17:44:12",
+        "kind": "start",
+        "text": "Person watches television"
+      },
+      {
+        "time": "17:46:06",
+        "kind": "end",
+        "text": "Person watches television"
+      },
+      {
+        "time": "17:46:06",
+        "kind": "moment",
+        "text": "Person pulls a can out of the refrigerator"
+      },
+      {
+        "time": "17:46:10",
+        "kind": "moment",
+        "text": "Person puts a can on the side table by the sofa"
+      },
+      {
+        "time": "17:46:14",
+        "kind": "start",
+        "text": "Person scrolls through their smartphone"
+      },
+      {
+        "time": "17:46:44",
+        "kind": "end",
+        "text": "Person scrolls through their smartphone"
+      },
+      {
+        "time": "17:46:44",
+        "kind": "moment",
+        "text": "Person drinks water from a cup"
+      },
+      {
+        "time": "17:46:52",
+        "kind": "start",
+        "text": "Person scrolls through their smartphone"
+      },
+      {
+        "time": "17:47:28",
+        "kind": "end",
+        "text": "Person scrolls through their smartphone"
+      },
+      {
+        "time": "17:47:28",
+        "kind": "start",
+        "text": "Person watches television"
+      },
+      {
+        "time": "17:51:12",
+        "kind": "end",
+        "text": "Person watches television"
+      },
+      {
+        "time": "17:51:12",
+        "kind": "start",
+        "text": "Person scrolls through their smartphone"
+      },
+      {
+        "time": "17:51:38",
+        "kind": "end",
+        "text": "Person scrolls through their smartphone"
+      },
+      {
+        "time": "17:51:38",
+        "kind": "moment",
+        "text": "Person drinks from the can"
+      },
+      {
+        "time": "17:51:44",
+        "kind": "start",
+        "text": "Person scrolls through their smartphone"
+      },
+      {
+        "time": "17:52:10",
+        "kind": "end",
+        "text": "Person scrolls through their smartphone"
+      },
+      {
+        "time": "17:52:10",
+        "kind": "moment",
+        "text": "Person sips from a can"
+      },
+      {
+        "time": "17:52:14",
+        "kind": "moment",
+        "text": "Person drinks water from a cup"
+      },
+      {
+        "time": "17:52:28",
+        "kind": "start",
+        "text": "Person watches television"
+      }
+    ]
+  },
+  "errors": [],
+  "checked_at": "2026-11-15T14:34:42.369845+00:00",
+  "role": "moments",
+  "api_request_attempted": true,
+  "model_response_received": true,
+  "action_executed": false,
+  "requested_model": "qwen/qwen3.5-27b",
+  "response_model": "qwen/qwen3.5-27b",
+  "provider": "Alibaba",
+  "response_id": "gen-1794753252-42PZK7LvZCXltykIAc7f",
+  "finish_reason": "stop",
+  "elapsed_seconds": 31.1993713999982,
+  "usage": {
+    "prompt_tokens": 32613,
+    "completion_tokens": 1578,
+    "total_tokens": 34191,
+    "cost": 0.008821215,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.008821215,
+      "upstream_inference_prompt_cost": 0.006359535,
+      "upstream_inference_completions_cost": 0.00246168
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

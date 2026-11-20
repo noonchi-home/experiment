@@ -1,0 +1,30 @@
+{
+  "id": "gen-1794129985-X72YUdGzxr9ZftCBQ0Hz",
+  "model": "qwen/qwen3.5-27b",
+  "provider": "Alibaba",
+  "usage": {
+    "prompt_tokens": 601,
+    "completion_tokens": 6581,
+    "total_tokens": 7182,
+    "cost": 0.010383555,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010383555,
+      "upstream_inference_prompt_cost": 0.000117195,
+      "upstream_inference_completions_cost": 0.01026636
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6249,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "content": "{\n  \"initial_state\": \"state_0\",\n  \"states\": [\n    {\n      \"id\": \"state_0\",\n      \"description\": \"초기 상태: 냉장고 문이 닫혀 있고 사용자의 접근 전\",\n      \"rules\": [],\n      \"next\": [\n        {\n          \"to\": \"state_1\",\n          \"on\": \"사람이 냉장고에서 병을 꺼낸다\"\n        }\n      ]\n    },\n    {\n      \"id\": \"state_1\",\n      \"description\": \"냉장고 문 열림 및 사용자가 식재료를 꺼내는 중\",\n      \"rules\": [],\n      \"next\": [\n        {\n          \"to\": \"state_2\",\n          \"on\": \"문 열림 경고가 울리는 동안에도 안쪽 식재료를 꺼내고 있다\"\n        }\n      ]\n    },\n    {\n      \"id\": \"state_2\",\n      \"description\": \"문 열림 경고 발생 중이며 사용자가 여전히 작업을 계속하고 있음\",\n      \"rules\": [],\n      \"next\": [\n        {\n          \"to\": \"state_3\",\n          \"on\": \"마지막 식재료를 꺼내고 직접 문을 닫는다\"\n        }\n      ]\n    },\n    {\n      \"id\": \"state_3\",\n      \"description\": \"작업 완료 및 냉장고 문이 닫힘\",\n      \"rules\": [],\n      \"next\": []\n    }\n  ]\n}"
+}

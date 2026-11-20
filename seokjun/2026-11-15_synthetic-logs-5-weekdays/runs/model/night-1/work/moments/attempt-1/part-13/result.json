@@ -1,0 +1,248 @@
+{
+  "status": "valid",
+  "raw_response": "{\n  \"moments\": [\n    {\n      \"time\": \"19:00:00\",\n      \"kind\": \"start\",\n      \"text\": \"Person eats dinner\"\n    },\n    {\n      \"time\": \"19:00:12\",\n      \"kind\": \"moment\",\n      \"text\": \"Person puts down the spoon\"\n    },\n    {\n      \"time\": \"19:00:14\",\n      \"kind\": \"moment\",\n      \"text\": \"Person picks up the chopsticks\"\n    },\n    {\n      \"time\": \"19:00:54\",\n      \"kind\": \"moment\",\n      \"text\": \"Person puts down the chopsticks\"\n    },\n    {\n      \"time\": \"19:00:58\",\n      \"kind\": \"moment\",\n      \"text\": \"Person picks up the spoon\"\n    },\n    {\n      \"time\": \"19:01:16\",\n      \"kind\": \"moment\",\n      \"text\": \"Person puts down the spoon\"\n    },\n    {\n      \"time\": \"19:01:20\",\n      \"kind\": \"moment\",\n      \"text\": \"Person picks up the chopsticks\"\n    },\n    {\n      \"time\": \"19:02:22\",\n      \"kind\": \"moment\",\n      \"text\": \"Person drinks water from a cup\"\n    },\n    {\n      \"time\": \"19:02:30\",\n      \"kind\": \"moment\",\n      \"text\": \"Person puts down the chopsticks\"\n    },\n    {\n      \"time\": \"19:02:32\",\n      \"kind\": \"moment\",\n      \"text\": \"Person picks up the spoon\"\n    },\n    {\n      \"time\": \"19:03:28\",\n      \"kind\": \"moment\",\n      \"text\": \"Person puts down the spoon\"\n    },\n    {\n      \"time\": \"19:03:30\",\n      \"kind\": \"moment\",\n      \"text\": \"Person picks up the chopsticks\"\n    },\n    {\n      \"time\": \"19:03:58\",\n      \"kind\": \"moment\",\n      \"text\": \"Person puts down the chopsticks\"\n    },\n    {\n      \"time\": \"19:04:02\",\n      \"kind\": \"moment\",\n      \"text\": \"Person picks up the spoon\"\n    },\n    {\n      \"time\": \"19:04:20\",\n      \"kind\": \"moment\",\n      \"text\": \"Person puts down the spoon\"\n    },\n    {\n      \"time\": \"19:04:22\",\n      \"kind\": \"moment\",\n      \"text\": \"Person picks up the chopsticks\"\n    },\n    {\n      \"time\": \"19:04:54\",\n      \"kind\": \"moment\",\n      \"text\": \"Person drinks water from a cup\"\n    },\n    {\n      \"time\": \"19:05:22\",\n      \"kind\": \"moment\",\n      \"text\": \"Person drinks water from a cup\"\n    },\n    {\n      \"time\": \"19:05:58\",\n      \"kind\": \"moment\",\n      \"text\": \"Person drinks water from a cup\"\n    },\n    {\n      \"time\": \"19:06:08\",\n      \"kind\": \"moment\",\n      \"text\": \"Person puts down the chopsticks\"\n    },\n    {\n      \"time\": \"19:06:12\",\n      \"kind\": \"start\",\n      \"text\": \"Person sits at the table doing nothing in particular\"\n    },\n    {\n      \"time\": \"19:06:48\",\n      \"kind\": \"moment\",\n      \"text\": \"Person wipes their mouth with a napkin\"\n    },\n    {\n      \"time\": \"19:07:20\",\n      \"kind\": \"moment\",\n      \"text\": \"Person uses a smartphone\"\n    },\n    {\n      \"time\": \"19:07:40\",\n      \"kind\": \"moment\",\n      \"text\": \"Person drinks water from a cup\"\n    },\n    {\n      \"time\": \"19:09:02\",\n      \"kind\": \"moment\",\n      \"text\": \"Person picks up the empty bowl\"\n    },\n    {\n      \"time\": \"19:09:06\",\n      \"kind\": \"moment\",\n      \"text\": \"Person puts the bowl in the dishwasher\"\n    },\n    {\n      \"time\": \"19:09:12\",\n      \"kind\": \"moment\",\n      \"text\": \"Person wipes the table\"\n    },\n    {\n      \"time\": \"19:09:26\",\n      \"kind\": \"moment\",\n      \"text\": \"Person sits on the sofa\"\n    },\n    {\n      \"time\": \"19:09:32\",\n      \"kind\": \"start\",\n      \"text\": \"Person rests on the sofa\"\n    },\n    {\n      \"time\": \"19:09:50\",\n      \"kind\": \"start\",\n      \"text\": \"Person watches TV\"\n    },\n    {\n      \"time\": \"19:31:46\",\n      \"kind\": \"moment\",\n      \"text\": \"Person drinks water from a cup\"\n    },\n    {\n      \"time\": \"19:31:54\",\n      \"kind\": \"moment\",\n      \"text\": \"Person uses a smartphone\"\n    },\n    {\n      \"time\": \"19:36:04\",\n      \"kind\": \"start\",\n      \"text\": \"Person rests on the sofa\"\n    },\n    {\n      \"time\": \"19:39:46\",\n      \"kind\": \"moment\",\n      \"text\": \"Person drinks water from a cup\"\n    },\n    {\n      \"time\": \"19:39:56\",\n      \"kind\": \"moment\",\n      \"text\": \"Person uses a smartphone\"\n    },\n    {\n      \"time\": \"19:44:48\",\n      \"kind\": \"start\",\n      \"text\": \"Person rests on the sofa\"\n    },\n    {\n      \"time\": \"19:45:24\",\n      \"kind\": \"moment\",\n      \"text\": \"Person drinks water from a cup\"\n    },\n    {\n      \"time\": \"19:45:28\",\n      \"kind\": \"moment\",\n      \"text\": \"Person uses a smartphone\"\n    },\n    {\n      \"time\": \"19:45:34\",\n      \"kind\": \"moment\",\n      \"text\": \"Person drinks water from a cup\"\n    },\n    {\n      \"time\": \"19:45:40\",\n      \"kind\": \"start\",\n      \"text\": \"Person watches TV\"\n    },\n    {\n      \"time\": \"19:59:24\",\n      \"kind\": \"moment\",\n      \"text\": \"Person uses a smartphone\"\n    }\n  ]\n}",
+  "output": {
+    "moments": [
+      {
+        "time": "19:00:00",
+        "kind": "start",
+        "text": "Person eats dinner"
+      },
+      {
+        "time": "19:00:12",
+        "kind": "moment",
+        "text": "Person puts down the spoon"
+      },
+      {
+        "time": "19:00:14",
+        "kind": "moment",
+        "text": "Person picks up the chopsticks"
+      },
+      {
+        "time": "19:00:54",
+        "kind": "moment",
+        "text": "Person puts down the chopsticks"
+      },
+      {
+        "time": "19:00:58",
+        "kind": "moment",
+        "text": "Person picks up the spoon"
+      },
+      {
+        "time": "19:01:16",
+        "kind": "moment",
+        "text": "Person puts down the spoon"
+      },
+      {
+        "time": "19:01:20",
+        "kind": "moment",
+        "text": "Person picks up the chopsticks"
+      },
+      {
+        "time": "19:02:22",
+        "kind": "moment",
+        "text": "Person drinks water from a cup"
+      },
+      {
+        "time": "19:02:30",
+        "kind": "moment",
+        "text": "Person puts down the chopsticks"
+      },
+      {
+        "time": "19:02:32",
+        "kind": "moment",
+        "text": "Person picks up the spoon"
+      },
+      {
+        "time": "19:03:28",
+        "kind": "moment",
+        "text": "Person puts down the spoon"
+      },
+      {
+        "time": "19:03:30",
+        "kind": "moment",
+        "text": "Person picks up the chopsticks"
+      },
+      {
+        "time": "19:03:58",
+        "kind": "moment",
+        "text": "Person puts down the chopsticks"
+      },
+      {
+        "time": "19:04:02",
+        "kind": "moment",
+        "text": "Person picks up the spoon"
+      },
+      {
+        "time": "19:04:20",
+        "kind": "moment",
+        "text": "Person puts down the spoon"
+      },
+      {
+        "time": "19:04:22",
+        "kind": "moment",
+        "text": "Person picks up the chopsticks"
+      },
+      {
+        "time": "19:04:54",
+        "kind": "moment",
+        "text": "Person drinks water from a cup"
+      },
+      {
+        "time": "19:05:22",
+        "kind": "moment",
+        "text": "Person drinks water from a cup"
+      },
+      {
+        "time": "19:05:58",
+        "kind": "moment",
+        "text": "Person drinks water from a cup"
+      },
+      {
+        "time": "19:06:08",
+        "kind": "moment",
+        "text": "Person puts down the chopsticks"
+      },
+      {
+        "time": "19:06:12",
+        "kind": "start",
+        "text": "Person sits at the table doing nothing in particular"
+      },
+      {
+        "time": "19:06:48",
+        "kind": "moment",
+        "text": "Person wipes their mouth with a napkin"
+      },
+      {
+        "time": "19:07:20",
+        "kind": "moment",
+        "text": "Person uses a smartphone"
+      },
+      {
+        "time": "19:07:40",
+        "kind": "moment",
+        "text": "Person drinks water from a cup"
+      },
+      {
+        "time": "19:09:02",
+        "kind": "moment",
+        "text": "Person picks up the empty bowl"
+      },
+      {
+        "time": "19:09:06",
+        "kind": "moment",
+        "text": "Person puts the bowl in the dishwasher"
+      },
+      {
+        "time": "19:09:12",
+        "kind": "moment",
+        "text": "Person wipes the table"
+      },
+      {
+        "time": "19:09:26",
+        "kind": "moment",
+        "text": "Person sits on the sofa"
+      },
+      {
+        "time": "19:09:32",
+        "kind": "start",
+        "text": "Person rests on the sofa"
+      },
+      {
+        "time": "19:09:50",
+        "kind": "start",
+        "text": "Person watches TV"
+      },
+      {
+        "time": "19:31:46",
+        "kind": "moment",
+        "text": "Person drinks water from a cup"
+      },
+      {
+        "time": "19:31:54",
+        "kind": "moment",
+        "text": "Person uses a smartphone"
+      },
+      {
+        "time": "19:36:04",
+        "kind": "start",
+        "text": "Person rests on the sofa"
+      },
+      {
+        "time": "19:39:46",
+        "kind": "moment",
+        "text": "Person drinks water from a cup"
+      },
+      {
+        "time": "19:39:56",
+        "kind": "moment",
+        "text": "Person uses a smartphone"
+      },
+      {
+        "time": "19:44:48",
+        "kind": "start",
+        "text": "Person rests on the sofa"
+      },
+      {
+        "time": "19:45:24",
+        "kind": "moment",
+        "text": "Person drinks water from a cup"
+      },
+      {
+        "time": "19:45:28",
+        "kind": "moment",
+        "text": "Person uses a smartphone"
+      },
+      {
+        "time": "19:45:34",
+        "kind": "moment",
+        "text": "Person drinks water from a cup"
+      },
+      {
+        "time": "19:45:40",
+        "kind": "start",
+        "text": "Person watches TV"
+      },
+      {
+        "time": "19:59:24",
+        "kind": "moment",
+        "text": "Person uses a smartphone"
+      }
+    ]
+  },
+  "errors": [],
+  "checked_at": "2026-11-16T02:42:41.653580+00:00",
+  "role": "moments",
+  "api_request_attempted": true,
+  "model_response_received": true,
+  "action_executed": false,
+  "requested_model": "qwen/qwen3.5-27b",
+  "response_model": "qwen/qwen3.5-27b",
+  "provider": "Alibaba",
+  "response_id": "gen-1794796888-LUGTNQfyEIStZGJwNH2u",
+  "finish_reason": "stop",
+  "elapsed_seconds": 74.88090659998124,
+  "usage": {
+    "prompt_tokens": 56907,
+    "completion_tokens": 1710,
+    "total_tokens": 58617,
+    "cost": 0.013764465,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.013764465,
+      "upstream_inference_prompt_cost": 0.011096865,
+      "upstream_inference_completions_cost": 0.0026676
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

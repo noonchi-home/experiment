@@ -1,0 +1,188 @@
+{
+  "status": "valid",
+  "raw_response": "{\n  \"moments\": [\n    {\n      \"time\": \"10:00:00\",\n      \"kind\": \"start\",\n      \"text\": \"Person works on the laptop\"\n    },\n    {\n      \"time\": \"10:17:14\",\n      \"kind\": \"end\",\n      \"text\": \"Person works on the laptop\"\n    },\n    {\n      \"time\": \"10:17:16\",\n      \"kind\": \"start\",\n      \"text\": \"Person uses their smartphone\"\n    },\n    {\n      \"time\": \"10:17:50\",\n      \"kind\": \"end\",\n      \"text\": \"Person uses their smartphone\"\n    },\n    {\n      \"time\": \"10:17:52\",\n      \"kind\": \"start\",\n      \"text\": \"Person works on the laptop\"\n    },\n    {\n      \"time\": \"10:18:36\",\n      \"kind\": \"end\",\n      \"text\": \"Person works on the laptop\"\n    },\n    {\n      \"time\": \"10:18:38\",\n      \"kind\": \"moment\",\n      \"text\": \"Person puts down an empty cup\"\n    },\n    {\n      \"time\": \"10:18:42\",\n      \"kind\": \"start\",\n      \"text\": \"Person works on the laptop\"\n    },\n    {\n      \"time\": \"10:27:52\",\n      \"kind\": \"end\",\n      \"text\": \"Person works on the laptop\"\n    },\n    {\n      \"time\": \"10:27:54\",\n      \"kind\": \"start\",\n      \"text\": \"Person reads a book at the desk\"\n    },\n    {\n      \"time\": \"10:30:20\",\n      \"kind\": \"end\",\n      \"text\": \"Person reads a book at the desk\"\n    },\n    {\n      \"time\": \"10:30:22\",\n      \"kind\": \"start\",\n      \"text\": \"Person writes in a notebook\"\n    },\n    {\n      \"time\": \"10:32:56\",\n      \"kind\": \"end\",\n      \"text\": \"Person writes in a notebook\"\n    },\n    {\n      \"time\": \"10:32:58\",\n      \"kind\": \"start\",\n      \"text\": \"Person uses their smartphone\"\n    },\n    {\n      \"time\": \"10:33:02\",\n      \"kind\": \"end\",\n      \"text\": \"Person uses their smartphone\"\n    },\n    {\n      \"time\": \"10:33:04\",\n      \"kind\": \"start\",\n      \"text\": \"Person works on the laptop\"\n    },\n    {\n      \"time\": \"10:37:20\",\n      \"kind\": \"end\",\n      \"text\": \"Person works on the laptop\"\n    },\n    {\n      \"time\": \"10:37:22\",\n      \"kind\": \"start\",\n      \"text\": \"Person gets water from the purifier\"\n    },\n    {\n      \"time\": \"10:37:32\",\n      \"kind\": \"end\",\n      \"text\": \"Person gets water from the purifier\"\n    },\n    {\n      \"time\": \"10:37:34\",\n      \"kind\": \"start\",\n      \"text\": \"Person works on the laptop\"\n    },\n    {\n      \"time\": \"10:41:10\",\n      \"kind\": \"end\",\n      \"text\": \"Person works on the laptop\"\n    },\n    {\n      \"time\": \"10:41:12\",\n      \"kind\": \"start\",\n      \"text\": \"Person writes in a notebook\"\n    },\n    {\n      \"time\": \"10:43:34\",\n      \"kind\": \"end\",\n      \"text\": \"Person writes in a notebook\"\n    },\n    {\n      \"time\": \"10:43:36\",\n      \"kind\": \"start\",\n      \"text\": \"Person uses their smartphone\"\n    },\n    {\n      \"time\": \"10:43:42\",\n      \"kind\": \"end\",\n      \"text\": \"Person uses their smartphone\"\n    },\n    {\n      \"time\": \"10:43:44\",\n      \"kind\": \"start\",\n      \"text\": \"Person works on the laptop\"\n    },\n    {\n      \"time\": \"10:58:26\",\n      \"kind\": \"end\",\n      \"text\": \"Person works on the laptop\"\n    },\n    {\n      \"time\": \"10:58:28\",\n      \"kind\": \"start\",\n      \"text\": \"Person is not visible\"\n    },\n    {\n      \"time\": \"10:59:58\",\n      \"kind\": \"end\",\n      \"text\": \"Person is not visible\"\n    }\n  ]\n}",
+  "output": {
+    "moments": [
+      {
+        "time": "10:00:00",
+        "kind": "start",
+        "text": "Person works on the laptop"
+      },
+      {
+        "time": "10:17:14",
+        "kind": "end",
+        "text": "Person works on the laptop"
+      },
+      {
+        "time": "10:17:16",
+        "kind": "start",
+        "text": "Person uses their smartphone"
+      },
+      {
+        "time": "10:17:50",
+        "kind": "end",
+        "text": "Person uses their smartphone"
+      },
+      {
+        "time": "10:17:52",
+        "kind": "start",
+        "text": "Person works on the laptop"
+      },
+      {
+        "time": "10:18:36",
+        "kind": "end",
+        "text": "Person works on the laptop"
+      },
+      {
+        "time": "10:18:38",
+        "kind": "moment",
+        "text": "Person puts down an empty cup"
+      },
+      {
+        "time": "10:18:42",
+        "kind": "start",
+        "text": "Person works on the laptop"
+      },
+      {
+        "time": "10:27:52",
+        "kind": "end",
+        "text": "Person works on the laptop"
+      },
+      {
+        "time": "10:27:54",
+        "kind": "start",
+        "text": "Person reads a book at the desk"
+      },
+      {
+        "time": "10:30:20",
+        "kind": "end",
+        "text": "Person reads a book at the desk"
+      },
+      {
+        "time": "10:30:22",
+        "kind": "start",
+        "text": "Person writes in a notebook"
+      },
+      {
+        "time": "10:32:56",
+        "kind": "end",
+        "text": "Person writes in a notebook"
+      },
+      {
+        "time": "10:32:58",
+        "kind": "start",
+        "text": "Person uses their smartphone"
+      },
+      {
+        "time": "10:33:02",
+        "kind": "end",
+        "text": "Person uses their smartphone"
+      },
+      {
+        "time": "10:33:04",
+        "kind": "start",
+        "text": "Person works on the laptop"
+      },
+      {
+        "time": "10:37:20",
+        "kind": "end",
+        "text": "Person works on the laptop"
+      },
+      {
+        "time": "10:37:22",
+        "kind": "start",
+        "text": "Person gets water from the purifier"
+      },
+      {
+        "time": "10:37:32",
+        "kind": "end",
+        "text": "Person gets water from the purifier"
+      },
+      {
+        "time": "10:37:34",
+        "kind": "start",
+        "text": "Person works on the laptop"
+      },
+      {
+        "time": "10:41:10",
+        "kind": "end",
+        "text": "Person works on the laptop"
+      },
+      {
+        "time": "10:41:12",
+        "kind": "start",
+        "text": "Person writes in a notebook"
+      },
+      {
+        "time": "10:43:34",
+        "kind": "end",
+        "text": "Person writes in a notebook"
+      },
+      {
+        "time": "10:43:36",
+        "kind": "start",
+        "text": "Person uses their smartphone"
+      },
+      {
+        "time": "10:43:42",
+        "kind": "end",
+        "text": "Person uses their smartphone"
+      },
+      {
+        "time": "10:43:44",
+        "kind": "start",
+        "text": "Person works on the laptop"
+      },
+      {
+        "time": "10:58:26",
+        "kind": "end",
+        "text": "Person works on the laptop"
+      },
+      {
+        "time": "10:58:28",
+        "kind": "start",
+        "text": "Person is not visible"
+      },
+      {
+        "time": "10:59:58",
+        "kind": "end",
+        "text": "Person is not visible"
+      }
+    ]
+  },
+  "errors": [],
+  "checked_at": "2026-11-15T15:04:08.450871+00:00",
+  "role": "moments",
+  "api_request_attempted": true,
+  "model_response_received": true,
+  "action_executed": false,
+  "requested_model": "qwen/qwen3.5-27b",
+  "response_model": "qwen/qwen3.5-27b",
+  "provider": "Alibaba",
+  "response_id": "gen-1794755013-kyuMJKYHx3H6SdhShLs6",
+  "finish_reason": "stop",
+  "elapsed_seconds": 35.81448800000362,
+  "usage": {
+    "prompt_tokens": 33404,
+    "completion_tokens": 1203,
+    "total_tokens": 34607,
+    "cost": 0.00839046,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00839046,
+      "upstream_inference_prompt_cost": 0.00651378,
+      "upstream_inference_completions_cost": 0.00187668
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

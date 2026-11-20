@@ -1,0 +1,523 @@
+{
+  "status": "valid",
+  "raw_response": "{\"moments\": [{\"time\": \"18:00:00\", \"kind\": \"start\", \"text\": \"Person watches TV from the sofa\"}, {\"time\": \"18:06:44\", \"kind\": \"end\", \"text\": \"Person watches TV from the sofa\"}, {\"time\": \"18:06:44\", \"kind\": \"start\", \"text\": \"Person sits on the sofa resting\"}, {\"time\": \"18:07:28\", \"kind\": \"end\", \"text\": \"Person sits on the sofa resting\"}, {\"time\": \"18:07:28\", \"kind\": \"start\", \"text\": \"Person watches TV from the sofa\"}, {\"time\": \"18:12:08\", \"kind\": \"end\", \"text\": \"Person watches TV from the sofa\"}, {\"time\": \"18:12:08\", \"kind\": \"start\", \"text\": \"Person checks the phone screen\"}, {\"time\": \"18:12:32\", \"kind\": \"end\", \"text\": \"Person checks the phone screen\"}, {\"time\": \"18:12:32\", \"kind\": \"start\", \"text\": \"Person drinks water from a cup\"}, {\"time\": \"18:12:40\", \"kind\": \"end\", \"text\": \"Person drinks water from a cup\"}, {\"time\": \"18:12:40\", \"kind\": \"start\", \"text\": \"Person watches TV from the sofa\"}, {\"time\": \"18:20:36\", \"kind\": \"end\", \"text\": \"Person watches TV from the sofa\"}, {\"time\": \"18:20:36\", \"kind\": \"start\", \"text\": \"Person leans back on the sofa\"}, {\"time\": \"18:23:08\", \"kind\": \"end\", \"text\": \"Person leans back on the sofa\"}, {\"time\": \"18:23:08\", \"kind\": \"start\", \"text\": \"Person watches TV from the sofa\"}, {\"time\": \"18:38:50\", \"kind\": \"end\", \"text\": \"Person watches TV from the sofa\"}, {\"time\": \"18:38:50\", \"kind\": \"start\", \"text\": \"Person stirs a pot on the stove\"}, {\"time\": \"18:48:26\", \"kind\": \"end\", \"text\": \"Person stirs a pot on the stove\"}, {\"time\": \"18:48:26\", \"kind\": \"start\", \"text\": \"Person sets the rice bowl and side dishes on the table\"}, {\"time\": \"18:48:34\", \"kind\": \"end\", \"text\": \"Person sets the rice bowl and side dishes on the table\"}, {\"time\": \"18:48:34\", \"kind\": \"start\", \"text\": \"Person takes a cup from the shelf\"}, {\"time\": \"18:48:42\", \"kind\": \"end\", \"text\": \"Person takes a cup from the shelf\"}, {\"time\": \"18:48:42\", \"kind\": \"start\", \"text\": \"Person sits down at the dining table\"}, {\"time\": \"18:48:46\", \"kind\": \"end\", \"text\": \"Person sits down at the dining table\"}, {\"time\": \"18:48:46\", \"kind\": \"start\", \"text\": \"Person picks the spoon up again\"}, {\"time\": \"18:49:04\", \"kind\": \"end\", \"text\": \"Person picks the spoon up again\"}, {\"time\": \"18:49:04\", \"kind\": \"start\", \"text\": \"Person puts down the spoon\"}, {\"time\": \"18:49:08\", \"kind\": \"end\", \"text\": \"Person puts down the spoon\"}, {\"time\": \"18:49:08\", \"kind\": \"start\", \"text\": \"Person lifts the chopsticks to keep eating\"}, {\"time\": \"18:49:54\", \"kind\": \"end\", \"text\": \"Person lifts the chopsticks to keep eating\"}, {\"time\": \"18:49:54\", \"kind\": \"start\", \"text\": \"Person lays the chopsticks down beside the plate\"}, {\"time\": \"18:49:56\", \"kind\": \"end\", \"text\": \"Person lays the chopsticks down beside the plate\"}, {\"time\": \"18:49:56\", \"kind\": \"start\", \"text\": \"Person takes a drink from the cup\"}, {\"time\": \"18:50:04\", \"kind\": \"end\", \"text\": \"Person takes a drink from the cup\"}, {\"time\": \"18:50:04\", \"kind\": \"start\", \"text\": \"Person checks the phone screen\"}, {\"time\": \"18:50:10\", \"kind\": \"end\", \"text\": \"Person checks the phone screen\"}, {\"time\": \"18:50:10\", \"kind\": \"start\", \"text\": \"Person takes the spoon back in hand\"}, {\"time\": \"18:50:42\", \"kind\": \"end\", \"text\": \"Person takes the spoon back in hand\"}, {\"time\": \"18:50:42\", \"kind\": \"start\", \"text\": \"Person sets the spoon on the table\"}, {\"time\": \"18:50:44\", \"kind\": \"end\", \"text\": \"Person sets the spoon on the table\"}, {\"time\": \"18:50:44\", \"kind\": \"start\", \"text\": \"Person lifts the chopsticks to keep eating\"}, {\"time\": \"18:51:14\", \"kind\": \"end\", \"text\": \"Person lifts the chopsticks to keep eating\"}, {\"time\": \"18:51:14\", \"kind\": \"start\", \"text\": \"Person lays the chopsticks down beside the plate\"}, {\"time\": \"18:51:18\", \"kind\": \"end\", \"text\": \"Person lays the chopsticks down beside the plate\"}, {\"time\": \"18:51:18\", \"kind\": \"start\", \"text\": \"Person lifts the spoon to keep eating\"}, {\"time\": \"18:51:28\", \"kind\": \"end\", \"text\": \"Person lifts the spoon to keep eating\"}, {\"time\": \"18:51:28\", \"kind\": \"start\", \"text\": \"Person puts down the spoon\"}, {\"time\": \"18:51:32\", \"kind\": \"end\", \"text\": \"Person puts down the spoon\"}, {\"time\": \"18:51:32\", \"kind\": \"start\", \"text\": \"Person takes the chopsticks back in hand\"}, {\"time\": \"18:51:58\", \"kind\": \"end\", \"text\": \"Person takes the chopsticks back in hand\"}, {\"time\": \"18:51:58\", \"kind\": \"start\", \"text\": \"Person lays the chopsticks down beside the plate\"}, {\"time\": \"18:52:02\", \"kind\": \"end\", \"text\": \"Person lays the chopsticks down beside the plate\"}, {\"time\": \"18:52:02\", \"kind\": \"start\", \"text\": \"Person takes the spoon back in hand\"}, {\"time\": \"18:52:28\", \"kind\": \"end\", \"text\": \"Person takes the spoon back in hand\"}, {\"time\": \"18:52:28\", \"kind\": \"start\", \"text\": \"Person sets the spoon on the table\"}, {\"time\": \"18:52:32\", \"kind\": \"end\", \"text\": \"Person sets the spoon on the table\"}, {\"time\": \"18:52:32\", \"kind\": \"start\", \"text\": \"Person picks the chopsticks up again\"}, {\"time\": \"18:53:18\", \"kind\": \"end\", \"text\": \"Person picks the chopsticks up again\"}, {\"time\": \"18:53:18\", \"kind\": \"start\", \"text\": \"Person puts down the chopsticks\"}, {\"time\": \"18:53:22\", \"kind\": \"end\", \"text\": \"Person puts down the chopsticks\"}, {\"time\": \"18:53:22\", \"kind\": \"start\", \"text\": \"Person picks the spoon up again\"}, {\"time\": \"18:54:14\", \"kind\": \"end\", \"text\": \"Person picks the spoon up again\"}, {\"time\": \"18:54:14\", \"kind\": \"start\", \"text\": \"Person sets the spoon on the table\"}, {\"time\": \"18:54:18\", \"kind\": \"end\", \"text\": \"Person sets the spoon on the table\"}, {\"time\": \"18:54:18\", \"kind\": \"start\", \"text\": \"Person picks the chopsticks up again\"}, {\"time\": \"18:54:36\", \"kind\": \"end\", \"text\": \"Person picks the chopsticks up again\"}, {\"time\": \"18:54:36\", \"kind\": \"start\", \"text\": \"Person sets the chopsticks on the table\"}, {\"time\": \"18:54:38\", \"kind\": \"end\", \"text\": \"Person sets the chopsticks on the table\"}, {\"time\": \"18:54:38\", \"kind\": \"start\", \"text\": \"Person takes the spoon back in hand\"}, {\"time\": \"18:55:42\", \"kind\": \"end\", \"text\": \"Person takes the spoon back in hand\"}, {\"time\": \"18:55:42\", \"kind\": \"start\", \"text\": \"Person puts down the spoon\"}, {\"time\": \"18:55:46\", \"kind\": \"end\", \"text\": \"Person puts down the spoon\"}, {\"time\": \"18:55:46\", \"kind\": \"start\", \"text\": \"Person picks the chopsticks up again\"}, {\"time\": \"18:56:12\", \"kind\": \"end\", \"text\": \"Person picks the chopsticks up again\"}, {\"time\": \"18:56:12\", \"kind\": \"start\", \"text\": \"Person sets the chopsticks on the table\"}, {\"time\": \"18:56:16\", \"kind\": \"end\", \"text\": \"Person sets the chopsticks on the table\"}, {\"time\": \"18:56:16\", \"kind\": \"start\", \"text\": \"Person lifts the spoon to keep eating\"}, {\"time\": \"18:57:16\", \"kind\": \"end\", \"text\": \"Person lifts the spoon to keep eating\"}, {\"time\": \"18:57:16\", \"kind\": \"start\", \"text\": \"Person puts down the spoon\"}, {\"time\": \"18:57:20\", \"kind\": \"end\", \"text\": \"Person puts down the spoon\"}, {\"time\": \"18:57:20\", \"kind\": \"start\", \"text\": \"Person picks the chopsticks up again\"}, {\"time\": \"18:57:52\", \"kind\": \"end\", \"text\": \"Person picks the chopsticks up again\"}, {\"time\": \"18:57:52\", \"kind\": \"start\", \"text\": \"Person puts down the chopsticks\"}, {\"time\": \"18:57:54\", \"kind\": \"end\", \"text\": \"Person puts down the chopsticks\"}, {\"time\": \"18:57:54\", \"kind\": \"start\", \"text\": \"Person lifts the spoon to keep eating\"}, {\"time\": \"18:58:08\", \"kind\": \"end\", \"text\": \"Person lifts the spoon to keep eating\"}, {\"time\": \"18:58:08\", \"kind\": \"start\", \"text\": \"Person lays the spoon down beside the bowl\"}, {\"time\": \"18:58:10\", \"kind\": \"end\", \"text\": \"Person lays the spoon down beside the bowl\"}, {\"time\": \"18:58:10\", \"kind\": \"start\", \"text\": \"Person drinks water from a cup\"}, {\"time\": \"18:58:18\", \"kind\": \"end\", \"text\": \"Person drinks water from a cup\"}, {\"time\": \"18:58:18\", \"kind\": \"start\", \"text\": \"Person picks the chopsticks up again\"}, {\"time\": \"18:59:04\", \"kind\": \"end\", \"text\": \"Person picks the chopsticks up again\"}, {\"time\": \"18:59:04\", \"kind\": \"start\", \"text\": \"Person lays the chopsticks down beside the plate\"}, {\"time\": \"18:59:08\", \"kind\": \"end\", \"text\": \"Person lays the chopsticks down beside the plate\"}, {\"time\": \"18:59:08\", \"kind\": \"start\", \"text\": \"Person lifts the spoon to keep eating\"}, {\"time\": \"18:59:58\", \"kind\": \"end\", \"text\": \"Person lifts the spoon to keep eating\"}]}",
+  "output": {
+    "moments": [
+      {
+        "time": "18:00:00",
+        "kind": "start",
+        "text": "Person watches TV from the sofa"
+      },
+      {
+        "time": "18:06:44",
+        "kind": "end",
+        "text": "Person watches TV from the sofa"
+      },
+      {
+        "time": "18:06:44",
+        "kind": "start",
+        "text": "Person sits on the sofa resting"
+      },
+      {
+        "time": "18:07:28",
+        "kind": "end",
+        "text": "Person sits on the sofa resting"
+      },
+      {
+        "time": "18:07:28",
+        "kind": "start",
+        "text": "Person watches TV from the sofa"
+      },
+      {
+        "time": "18:12:08",
+        "kind": "end",
+        "text": "Person watches TV from the sofa"
+      },
+      {
+        "time": "18:12:08",
+        "kind": "start",
+        "text": "Person checks the phone screen"
+      },
+      {
+        "time": "18:12:32",
+        "kind": "end",
+        "text": "Person checks the phone screen"
+      },
+      {
+        "time": "18:12:32",
+        "kind": "start",
+        "text": "Person drinks water from a cup"
+      },
+      {
+        "time": "18:12:40",
+        "kind": "end",
+        "text": "Person drinks water from a cup"
+      },
+      {
+        "time": "18:12:40",
+        "kind": "start",
+        "text": "Person watches TV from the sofa"
+      },
+      {
+        "time": "18:20:36",
+        "kind": "end",
+        "text": "Person watches TV from the sofa"
+      },
+      {
+        "time": "18:20:36",
+        "kind": "start",
+        "text": "Person leans back on the sofa"
+      },
+      {
+        "time": "18:23:08",
+        "kind": "end",
+        "text": "Person leans back on the sofa"
+      },
+      {
+        "time": "18:23:08",
+        "kind": "start",
+        "text": "Person watches TV from the sofa"
+      },
+      {
+        "time": "18:38:50",
+        "kind": "end",
+        "text": "Person watches TV from the sofa"
+      },
+      {
+        "time": "18:38:50",
+        "kind": "start",
+        "text": "Person stirs a pot on the stove"
+      },
+      {
+        "time": "18:48:26",
+        "kind": "end",
+        "text": "Person stirs a pot on the stove"
+      },
+      {
+        "time": "18:48:26",
+        "kind": "start",
+        "text": "Person sets the rice bowl and side dishes on the table"
+      },
+      {
+        "time": "18:48:34",
+        "kind": "end",
+        "text": "Person sets the rice bowl and side dishes on the table"
+      },
+      {
+        "time": "18:48:34",
+        "kind": "start",
+        "text": "Person takes a cup from the shelf"
+      },
+      {
+        "time": "18:48:42",
+        "kind": "end",
+        "text": "Person takes a cup from the shelf"
+      },
+      {
+        "time": "18:48:42",
+        "kind": "start",
+        "text": "Person sits down at the dining table"
+      },
+      {
+        "time": "18:48:46",
+        "kind": "end",
+        "text": "Person sits down at the dining table"
+      },
+      {
+        "time": "18:48:46",
+        "kind": "start",
+        "text": "Person picks the spoon up again"
+      },
+      {
+        "time": "18:49:04",
+        "kind": "end",
+        "text": "Person picks the spoon up again"
+      },
+      {
+        "time": "18:49:04",
+        "kind": "start",
+        "text": "Person puts down the spoon"
+      },
+      {
+        "time": "18:49:08",
+        "kind": "end",
+        "text": "Person puts down the spoon"
+      },
+      {
+        "time": "18:49:08",
+        "kind": "start",
+        "text": "Person lifts the chopsticks to keep eating"
+      },
+      {
+        "time": "18:49:54",
+        "kind": "end",
+        "text": "Person lifts the chopsticks to keep eating"
+      },
+      {
+        "time": "18:49:54",
+        "kind": "start",
+        "text": "Person lays the chopsticks down beside the plate"
+      },
+      {
+        "time": "18:49:56",
+        "kind": "end",
+        "text": "Person lays the chopsticks down beside the plate"
+      },
+      {
+        "time": "18:49:56",
+        "kind": "start",
+        "text": "Person takes a drink from the cup"
+      },
+      {
+        "time": "18:50:04",
+        "kind": "end",
+        "text": "Person takes a drink from the cup"
+      },
+      {
+        "time": "18:50:04",
+        "kind": "start",
+        "text": "Person checks the phone screen"
+      },
+      {
+        "time": "18:50:10",
+        "kind": "end",
+        "text": "Person checks the phone screen"
+      },
+      {
+        "time": "18:50:10",
+        "kind": "start",
+        "text": "Person takes the spoon back in hand"
+      },
+      {
+        "time": "18:50:42",
+        "kind": "end",
+        "text": "Person takes the spoon back in hand"
+      },
+      {
+        "time": "18:50:42",
+        "kind": "start",
+        "text": "Person sets the spoon on the table"
+      },
+      {
+        "time": "18:50:44",
+        "kind": "end",
+        "text": "Person sets the spoon on the table"
+      },
+      {
+        "time": "18:50:44",
+        "kind": "start",
+        "text": "Person lifts the chopsticks to keep eating"
+      },
+      {
+        "time": "18:51:14",
+        "kind": "end",
+        "text": "Person lifts the chopsticks to keep eating"
+      },
+      {
+        "time": "18:51:14",
+        "kind": "start",
+        "text": "Person lays the chopsticks down beside the plate"
+      },
+      {
+        "time": "18:51:18",
+        "kind": "end",
+        "text": "Person lays the chopsticks down beside the plate"
+      },
+      {
+        "time": "18:51:18",
+        "kind": "start",
+        "text": "Person lifts the spoon to keep eating"
+      },
+      {
+        "time": "18:51:28",
+        "kind": "end",
+        "text": "Person lifts the spoon to keep eating"
+      },
+      {
+        "time": "18:51:28",
+        "kind": "start",
+        "text": "Person puts down the spoon"
+      },
+      {
+        "time": "18:51:32",
+        "kind": "end",
+        "text": "Person puts down the spoon"
+      },
+      {
+        "time": "18:51:32",
+        "kind": "start",
+        "text": "Person takes the chopsticks back in hand"
+      },
+      {
+        "time": "18:51:58",
+        "kind": "end",
+        "text": "Person takes the chopsticks back in hand"
+      },
+      {
+        "time": "18:51:58",
+        "kind": "start",
+        "text": "Person lays the chopsticks down beside the plate"
+      },
+      {
+        "time": "18:52:02",
+        "kind": "end",
+        "text": "Person lays the chopsticks down beside the plate"
+      },
+      {
+        "time": "18:52:02",
+        "kind": "start",
+        "text": "Person takes the spoon back in hand"
+      },
+      {
+        "time": "18:52:28",
+        "kind": "end",
+        "text": "Person takes the spoon back in hand"
+      },
+      {
+        "time": "18:52:28",
+        "kind": "start",
+        "text": "Person sets the spoon on the table"
+      },
+      {
+        "time": "18:52:32",
+        "kind": "end",
+        "text": "Person sets the spoon on the table"
+      },
+      {
+        "time": "18:52:32",
+        "kind": "start",
+        "text": "Person picks the chopsticks up again"
+      },
+      {
+        "time": "18:53:18",
+        "kind": "end",
+        "text": "Person picks the chopsticks up again"
+      },
+      {
+        "time": "18:53:18",
+        "kind": "start",
+        "text": "Person puts down the chopsticks"
+      },
+      {
+        "time": "18:53:22",
+        "kind": "end",
+        "text": "Person puts down the chopsticks"
+      },
+      {
+        "time": "18:53:22",
+        "kind": "start",
+        "text": "Person picks the spoon up again"
+      },
+      {
+        "time": "18:54:14",
+        "kind": "end",
+        "text": "Person picks the spoon up again"
+      },
+      {
+        "time": "18:54:14",
+        "kind": "start",
+        "text": "Person sets the spoon on the table"
+      },
+      {
+        "time": "18:54:18",
+        "kind": "end",
+        "text": "Person sets the spoon on the table"
+      },
+      {
+        "time": "18:54:18",
+        "kind": "start",
+        "text": "Person picks the chopsticks up again"
+      },
+      {
+        "time": "18:54:36",
+        "kind": "end",
+        "text": "Person picks the chopsticks up again"
+      },
+      {
+        "time": "18:54:36",
+        "kind": "start",
+        "text": "Person sets the chopsticks on the table"
+      },
+      {
+        "time": "18:54:38",
+        "kind": "end",
+        "text": "Person sets the chopsticks on the table"
+      },
+      {
+        "time": "18:54:38",
+        "kind": "start",
+        "text": "Person takes the spoon back in hand"
+      },
+      {
+        "time": "18:55:42",
+        "kind": "end",
+        "text": "Person takes the spoon back in hand"
+      },
+      {
+        "time": "18:55:42",
+        "kind": "start",
+        "text": "Person puts down the spoon"
+      },
+      {
+        "time": "18:55:46",
+        "kind": "end",
+        "text": "Person puts down the spoon"
+      },
+      {
+        "time": "18:55:46",
+        "kind": "start",
+        "text": "Person picks the chopsticks up again"
+      },
+      {
+        "time": "18:56:12",
+        "kind": "end",
+        "text": "Person picks the chopsticks up again"
+      },
+      {
+        "time": "18:56:12",
+        "kind": "start",
+        "text": "Person sets the chopsticks on the table"
+      },
+      {
+        "time": "18:56:16",
+        "kind": "end",
+        "text": "Person sets the chopsticks on the table"
+      },
+      {
+        "time": "18:56:16",
+        "kind": "start",
+        "text": "Person lifts the spoon to keep eating"
+      },
+      {
+        "time": "18:57:16",
+        "kind": "end",
+        "text": "Person lifts the spoon to keep eating"
+      },
+      {
+        "time": "18:57:16",
+        "kind": "start",
+        "text": "Person puts down the spoon"
+      },
+      {
+        "time": "18:57:20",
+        "kind": "end",
+        "text": "Person puts down the spoon"
+      },
+      {
+        "time": "18:57:20",
+        "kind": "start",
+        "text": "Person picks the chopsticks up again"
+      },
+      {
+        "time": "18:57:52",
+        "kind": "end",
+        "text": "Person picks the chopsticks up again"
+      },
+      {
+        "time": "18:57:52",
+        "kind": "start",
+        "text": "Person puts down the chopsticks"
+      },
+      {
+        "time": "18:57:54",
+        "kind": "end",
+        "text": "Person puts down the chopsticks"
+      },
+      {
+        "time": "18:57:54",
+        "kind": "start",
+        "text": "Person lifts the spoon to keep eating"
+      },
+      {
+        "time": "18:58:08",
+        "kind": "end",
+        "text": "Person lifts the spoon to keep eating"
+      },
+      {
+        "time": "18:58:08",
+        "kind": "start",
+        "text": "Person lays the spoon down beside the bowl"
+      },
+      {
+        "time": "18:58:10",
+        "kind": "end",
+        "text": "Person lays the spoon down beside the bowl"
+      },
+      {
+        "time": "18:58:10",
+        "kind": "start",
+        "text": "Person drinks water from a cup"
+      },
+      {
+        "time": "18:58:18",
+        "kind": "end",
+        "text": "Person drinks water from a cup"
+      },
+      {
+        "time": "18:58:18",
+        "kind": "start",
+        "text": "Person picks the chopsticks up again"
+      },
+      {
+        "time": "18:59:04",
+        "kind": "end",
+        "text": "Person picks the chopsticks up again"
+      },
+      {
+        "time": "18:59:04",
+        "kind": "start",
+        "text": "Person lays the chopsticks down beside the plate"
+      },
+      {
+        "time": "18:59:08",
+        "kind": "end",
+        "text": "Person lays the chopsticks down beside the plate"
+      },
+      {
+        "time": "18:59:08",
+        "kind": "start",
+        "text": "Person lifts the spoon to keep eating"
+      },
+      {
+        "time": "18:59:58",
+        "kind": "end",
+        "text": "Person lifts the spoon to keep eating"
+      }
+    ]
+  },
+  "errors": [],
+  "checked_at": "2026-11-15T15:07:57.943061+00:00",
+  "role": "moments",
+  "api_request_attempted": true,
+  "model_response_received": true,
+  "action_executed": false,
+  "requested_model": "qwen/qwen3.5-27b",
+  "response_model": "qwen/qwen3.5-27b",
+  "provider": "Alibaba",
+  "response_id": "gen-1794755235-aAZ8Et0hmTUT3Fp64voB",
+  "finish_reason": "stop",
+  "elapsed_seconds": 43.83947640002589,
+  "usage": {
+    "prompt_tokens": 32870,
+    "completion_tokens": 2971,
+    "total_tokens": 35841,
+    "cost": 0.01104441,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01104441,
+      "upstream_inference_prompt_cost": 0.00640965,
+      "upstream_inference_completions_cost": 0.00463476
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "initial_state": "monitoring",
+  "states": [
+    {
+      "id": "monitoring",
+      "description": "냉장고 문 개방 상태 및 시스템 경고음을 지속적으로 관찰하는 상태",
+      "rules": [
+        {
+          "trigger": "냉장고 문 열림 경고가 울린다",
+          "action": "냉장고 문을 닫는다"
+        }
+      ],
+      "next": [
+        {
+          "to": "monitoring",
+          "on": "냉장고 문이 닫힌 상태로 감지됨"
+        }
+      ]
+    }
+  ]
+}

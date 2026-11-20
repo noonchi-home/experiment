@@ -1,0 +1,82 @@
+{
+  "meeting": "~/ai-collab/meetings/20261023-212745-4f2393",
+  "requestedModel": "claude-opus-5-5",
+  "effortFlag": "max",
+  "auth": "Claude subscription; no API fallback",
+  "independentTurn": 1,
+  "firstAttachments": 0,
+  "firstCandidate": null,
+  "firstPromptSha256": "aa0269415cbc0a69e7698ae7fae47e6b7da4b89ed83ac5239d5fe212b796fe35",
+  "initialCodexSha256": "57362ecada2fcc984d5758a63484fcbfd6c184f6633e698f916214eaf2a8107d",
+  "codexDraftEmbedded": false,
+  "noProjectReadTools": true,
+  "safeMode": true,
+  "actualResponseReceived": true,
+  "actualModelUsage": {
+    "claude-opus-5-5": {
+      "inputTokens": 2,
+      "outputTokens": 44182,
+      "cacheReadInputTokens": 602,
+      "cacheCreationInputTokens": 6786,
+      "webSearchRequests": 0,
+      "costUSD": 0.9380564,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 39455,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "successfulIndependentTurn": 2,
+  "firstAttempt": "600-second timeout; no response",
+  "independentReplySha256": "b240f58f5e148b18fa64b7f95f618ccaf29e462693edae147bcc9d1c4e13bfb5",
+  "effortEvidence": "--effort max in actual command; CLI help supports max; response does not separately echo effective effort",
+  "calls": [
+    {
+      "number": 1,
+      "modelArgument": "claude-opus-5-5",
+      "effortArgument": "max",
+      "status": "timeout",
+      "returnedModels": [],
+      "durationMs": null,
+      "promptSha256": "aa0269415cbc0a69e7698ae7fae47e6b7da4b89ed83ac5239d5fe212b796fe35"
+    },
+    {
+      "number": 2,
+      "modelArgument": "claude-opus-5-5",
+      "effortArgument": "max",
+      "status": "completed",
+      "returnedModels": [
+        "claude-opus-5-5"
+      ],
+      "durationMs": 344414,
+      "promptSha256": "4b82cfa8a62bc692a3b09533075b97e4b27798b7b75e2bba3e27e5c4f3f907b4"
+    },
+    {
+      "number": 3,
+      "modelArgument": "claude-opus-5-5",
+      "effortArgument": "max",
+      "status": "completed",
+      "returnedModels": [
+        "claude-opus-5-5"
+      ],
+      "durationMs": 244179,
+      "promptSha256": "09921e0f89055e2c7eeed309e74eb211b7a7425a4ed5de8e891f7d5c3772c99a"
+    },
+    {
+      "number": 4,
+      "modelArgument": "claude-opus-5-5",
+      "effortArgument": "max",
+      "status": "completed",
+      "returnedModels": [
+        "claude-opus-5-5"
+      ],
+      "durationMs": 56286,
+      "promptSha256": "1e4545dd4f86ad829d11d07dc3b5611989138ded802ebc5d5854859a25baca78"
+    }
+  ],
+  "crossFeedbackReceived": true,
+  "peerResponseReceived": true,
+  "finalPeerSupplementSha256": "5358dac6286c6927ed43a50e96c86354528f5c4a4f9d70f23c407f5dc4d56b38"
+}

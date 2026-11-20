@@ -1,0 +1,29 @@
+{
+  "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+  "model": "qwen/qwen3.5-27b",
+  "api_key_env": "OPENROUTER_API_KEY",
+  "provider": {
+    "order": ["alibaba"],
+    "allow_fallbacks": false,
+    "require_parameters": true
+  },
+  "timeout_seconds": 600,
+  "max_tokens": {
+    "moments": 32768,
+    "reflector_text": 16384,
+    "marking": 8192,
+    "matching": 4096,
+    "predictor_text": 2048
+  },
+  "provenance": {
+    "plan": "../설계문서/2026-11-14_PAM_80퍼센트_p-value_구현계획서.md",
+    "notes": [
+      "Text version of the nightly steps. Same model, endpoint and pinned provider as config/openrouter.json; no images are sent.",
+      "Thinking is on only for reflector_text, as for the paper reflector. moments, marking and matching run without thinking.",
+      "matching is for scoring only (experiment ②): it matches trigger candidates to answer-key events and is never a model input.",
+      "predictor_text is for scoring only (experiment ②, day scoring): the paper predictor reading record lines. It keeps the paper predictor settings (temperature 0.3, no thinking) and the paper predictor output cap of config/openrouter.json (2048).",
+      "The 600-second timeout and the output-token caps are caller safeguards, not paper settings. A truncated answer is rejected, not repaired.",
+      "moments was 16384 until 2026-11-16. One hour of a busy record reached 10889 output tokens on day 1 and was cut off at 16384 on day 2 (the record itself was wrong then and was fixed); 32768 leaves room for a dense hour such as dinner. The pinned provider allows 65536."
+    ]
+  }
+}

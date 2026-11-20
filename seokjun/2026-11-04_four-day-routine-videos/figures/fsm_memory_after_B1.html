@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FSM memory after B1</title>
+<style>
+:root { color-scheme:light; --paper:#fff; --ink:#111; --accent:#15117f; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--paper); color:var(--ink); font-family:"Segoe UI","Malgun Gothic",Arial,sans-serif; }
+main { max-width:2000px; min-width:0; margin:0 auto; }
+.diagram-container { width:100%; overflow-x:auto; }
+svg { display:block; width:100%; min-width:1600px; height:auto; }
+.state { fill:var(--paper); stroke:var(--ink); stroke-width:2.4; }
+.arrow { fill:none; stroke:var(--ink); stroke-width:2.3; stroke-linecap:round; marker-end:url(#arrow); }
+.heading { font-family:"Segoe Print","Segoe UI",sans-serif; font-size:38px; font-weight:600; fill:var(--accent); }
+.node-name { font-size:28px; text-anchor:middle; }
+.node-note { font-size:17px; text-anchor:middle; }
+.condition { font-size:25px; text-anchor:middle; }
+.action { font-size:27px; font-weight:700; text-anchor:middle; }
+.detail { font-size:22px; text-anchor:middle; }
+.note { font-size:21px; text-anchor:middle; fill:#9a3412; }
+.lambda { font-family:Georgia,serif; font-size:29px; text-anchor:middle; }
+.small { font-size:21px; }
+.legend { font-size:23px; }
+.source { font-size:20px; fill:#444; }
+.mono { font-family:Consolas,"Malgun Gothic",monospace; }
+.gone { font-size:24px; text-anchor:middle; fill:#666; }
+.divider { stroke:var(--ink); stroke-width:2; }
+@media print { .diagram-container { overflow-x:visible; } svg { min-width:0; } }
+</style></head><body><main><div class="diagram-container">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 1960" role="img" aria-label="FSM memory after B1">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 Z" fill="#111"/></marker></defs>
+<rect x="0" y="0" width="2000" height="1960" fill="#fff"/>
+<text x="45" y="62" class="heading">FSM memory after B1: memory revised after the first day of routine B</text>
+<path d="M 45 78 Q 744 74 1442 78" fill="none" stroke="#15117f" stroke-width="2.5"/>
+<text x="45" y="115" class="source">Circles: activity states  ·  text above the line: observed condition  /  below: robot help</text>
+<path class="arrow" d="M 390 545 C 563 500 737 500 910 545"/>
+<text x="650" y="430" class="condition">Person places a bowl on the desk.</text>
+<line class="divider" x1="442" y1="448" x2="858" y2="448"/>
+<text x="650" y="488" class="lambda">Λ</text>
+<path class="arrow" d="M 1088 585 C 1450 640 1700 950 1700 1258"/>
+<text x="1790" y="790" class="condition">Person leaves the desk.</text>
+<line class="divider" x1="1642" y1="808" x2="1938" y2="808"/>
+<text x="1790" y="848" class="lambda">Λ</text>
+<path class="arrow" d="M 1610 1335 C 1437 1290 1263 1290 1090 1335"/>
+<text x="1350" y="1222" class="condition">Person walks to the bed.</text>
+<line class="divider" x1="1195" y1="1240" x2="1505" y2="1240"/>
+<text x="1350" y="1280" class="lambda">Λ</text>
+<path class="arrow" d="M 910 1335 C 737 1290 563 1290 390 1335"/>
+<text x="650" y="1222" class="condition">Person turns off the bedside lamp.</text>
+<line class="divider" x1="439" y1="1240" x2="861" y2="1240"/>
+<text x="650" y="1280" class="lambda">Λ</text>
+<path class="arrow" d="M 278 473 C 150 300 450 300 322 473"/>
+<text x="300" y="175" class="condition">Person sits at the desk.</text>
+<line class="divider" x1="130" y1="193" x2="470" y2="193"/>
+<text x="300" y="233" class="action">Pick up the cup</text>
+<text x="300" y="264" class="detail">and place it next to the person.</text>
+<path class="arrow" d="M 322 647 C 450 820 150 820 278 647"/>
+<text x="300" y="825" class="condition">Person sits at the desk.</text>
+<line class="divider" x1="130" y1="843" x2="470" y2="843"/>
+<text x="300" y="883" class="action">Pick up the bowl</text>
+<text x="300" y="914" class="detail">and place it next to the person.</text>
+<text x="300" y="945" class="note">not in the action list</text>
+<path class="arrow" d="M 978 473 C 850 300 1150 300 1022 473"/>
+<text x="1000" y="175" class="condition">Person finishes eating.</text>
+<line class="divider" x1="836" y1="193" x2="1164" y2="193"/>
+<text x="1000" y="233" class="action">Pick up the bowl</text>
+<text x="1000" y="264" class="detail">and place it in the dishwasher.</text>
+<path class="arrow" d="M 1022 647 C 1150 820 850 820 978 647"/>
+<text x="1000" y="825" class="condition">Person finishes eating.</text>
+<line class="divider" x1="836" y1="843" x2="1164" y2="843"/>
+<text x="1000" y="883" class="action">Pick up the cup</text>
+<text x="1000" y="914" class="detail">and place it in the dishwasher.</text>
+<path class="arrow" d="M 1722 1437 C 1850 1610 1550 1610 1678 1437"/>
+<text x="1700" y="1615" class="condition">Person walks to the light switch.</text>
+<line class="divider" x1="1504" y1="1633" x2="1896" y2="1633"/>
+<text x="1700" y="1673" class="action">Turn off the room light.</text>
+<path class="arrow" d="M 1022 1437 C 1150 1610 850 1610 978 1437"/>
+<text x="1000" y="1615" class="condition">Person puts the phone on the bed.</text>
+<line class="divider" x1="788" y1="1633" x2="1212" y2="1633"/>
+<text x="1000" y="1673" class="action">Turn off the bedside lamp.</text>
+<text x="1600" y="330" class="gone">The A2 memory&#x27;s “Desk reading” and “Desk working” states</text>
+<text x="1600" y="366" class="gone">and their 5 rules are absent from this memory.</text>
+<circle class="state" cx="300" cy="560" r="90"/>
+<text x="300" y="555" class="node-name">Desk</text>
+<text x="300" y="587" class="node-name">idle</text>
+<circle class="state" cx="1000" cy="560" r="90"/>
+<text x="1000" y="555" class="node-name">Desk</text>
+<text x="1000" y="587" class="node-name">eating</text>
+<circle class="state" cx="1700" cy="1350" r="90"/>
+<text x="1700" y="1345" class="node-name">Leaving</text>
+<text x="1700" y="1377" class="node-name">room</text>
+<circle class="state" cx="1000" cy="1350" r="90"/>
+<text x="1000" y="1345" class="node-name">Bed</text>
+<text x="1000" y="1377" class="node-name">relaxing</text>
+<circle class="state" cx="300" cy="1350" r="90"/>
+<text x="300" y="1336" class="node-name">Bed</text>
+<text x="300" y="1368" class="node-name">sleeping</text>
+<text x="300" y="1398" class="node-note">No help rules</text>
+<path class="arrow" style="stroke-dasharray:8 7" d="M 95 560 L 205 560"/>
+<text x="100" y="540" class="small">Start</text>
+<path class="arrow" d="M 300 1440 L 300 1496"/>
+<circle cx="300" cy="1514" r="16" fill="#fff" stroke="#111" stroke-width="2"/><circle cx="300" cy="1514" r="10" fill="#111"/>
+<text x="328" y="1522" class="small">End</text>
+<line x1="45" y1="1800" x2="1955" y2="1800" stroke="#999" stroke-width="1"/>
+<text x="45" y="1840" class="legend">Arrows to another circle: state transitions  ·  loops back to the same circle: help rules in that state (6 in total)</text>
+<text x="45" y="1880" class="source">Λ: no robot action on that transition  ·  orange text: action or place not in the robot&#x27;s action list (written by the model)</text>
+<text x="45" y="1915" class="source">Source: model memory file <tspan class="mono">기억/fsm_B1뒤.json</tspan> from the 4-day experiment (2026-11-04). Conditions and actions are the model's original English.</text>
+</svg></div></main></body></html>

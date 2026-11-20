@@ -1,0 +1,17 @@
+{
+  "meeting": "~/ai-collab/meetings/20261023-224612-146e57",
+  "kind": "review",
+  "requestedModel": "claude-opus-5-5",
+  "commandEffort": "xhigh",
+  "observedModel": [
+    "claude-opus-5-5"
+  ],
+  "resultSubtype": "success",
+  "verdict": "revise",
+  "candidateSha256": "609e5991f9d2e7e3fa3991a466b234de8d214dbad54fa591d3fc1e599fdb18cb",
+  "finalSha256": "cd23e43d951ae7eef6c66f07c2a2e1c2386e6f2651a2cbff5c70596c59ba5104",
+  "actualPrompt": "~/ai-collab/meetings/20261023-224612-146e57/attempts/001/prompt.md",
+  "actualReply": "~/ai-collab/meetings/20261023-224612-146e57/001-reply.md",
+  "finalIsRevisedAfterReview": true,
+  "deepseekExperimentRun": false
+}

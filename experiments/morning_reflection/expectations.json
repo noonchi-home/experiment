@@ -1,8 +1,0 @@
-{
-  "purpose": "Held-out evaluation only; never supplied to the predictor or reflector",
-  "cases": [
-    {"id": "wakeup", "label_ko": "기상했지만 식탁에 앉지 않은 장면", "expected_task_indices": [-1]},
-    {"id": "seated_without_milk", "label_ko": "아침 식탁에 앉았고 우유가 아직 없는 장면", "expected_task_indices": [0]},
-    {"id": "seated_with_milk", "label_ko": "아침 식탁에 앉았고 우유가 이미 있는 장면", "expected_task_indices": [-1]}
-  ]
-}

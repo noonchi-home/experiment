@@ -1,0 +1,18 @@
+{
+  "modelArgument": "claude-opus-5-5",
+  "effortArgument": "xhigh",
+  "actualModels": [
+    "claude-opus-5-5"
+  ],
+  "effectiveEffortEchoed": false,
+  "meeting": "~/ai-collab/meetings/20261023-222002-cdde33",
+  "reviewVerdict": "revise",
+  "verification": "Qwen quickstart and Hugging Face PEFT LoRA official docs read; actual local inference/training not run",
+  "accepted": [
+    "separate runtime memory from weight updates",
+    "hold-out evaluation and matched input/tools",
+    "learning to request observations is possible even though unavailable facts are not known"
+  ],
+  "qualifiedPeerClaim": "The peer statement that household facts do not enter weights is too absolute. Fine-tuning can memorize facts; final answer instead describes our intended external-memory design and absence of automatic updates during ordinary inference.",
+  "notClaimed": "Peer approved the exact final revised answer"
+}

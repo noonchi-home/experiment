@@ -1,0 +1,17 @@
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+{"id":"gen-1794755435-FvsaoKYaHF28kJtw041l","object":"chat.completion","created":1794755435,"model":"qwen/qwen3.5-27b","provider":"Alibaba","system_fingerprint":null,"service_tier":null,"choices":[{"index":0,"logprobs":null,"finish_reason":"stop","native_finish_reason":"stop","message":{"role":"assistant","content":"{\n  \"moments\": [\n    {\n      \"time\": \"22:00:00\",\n      \"kind\": \"start\",\n      \"text\": \"Person is not visible\"\n    },\n    {\n      \"time\": \"22:00:54\",\n      \"kind\": \"end\",\n      \"text\": \"Person is not visible\"\n    },\n    {\n      \"time\": \"22:00:56\",\n      \"kind\": \"moment\",\n      \"text\": \"Person clicks the bedside lamp on\"\n    },\n    {\n      \"time\": \"22:01:00\",\n      \"kind\": \"moment\",\n      \"text\": \"Person heads to the light switch by the door\"\n    },\n    {\n      \"time\": \"22:01:04\",\n      \"kind\": \"moment\",\n      \"text\": \"Person flips the wall switch and the room light goes off\"\n    },\n    {\n      \"time\": \"22:01:06\",\n      \"kind\": \"moment\",\n      \"text\": \"Person switches off the ceiling light\"\n    },\n    {\n      \"time\": \"22:01:10\",\n      \"kind\": \"moment\",\n      \"text\": \"Person climbs into bed\"\n    },\n    {\n      \"time\": \"22:01:18\",\n      \"kind\": \"start\",\n      \"text\": \"Person reads a book in bed\"\n    },\n    {\n      \"time\": \"22:25:28\",\n      \"kind\": \"end\",\n      \"text\": \"Person reads a book in bed\"\n    },\n    {\n      \"time\": \"22:25:30\",\n      \"kind\": \"moment\",\n      \"text\": \"Person finishes reading and closes the book\"\n    },\n    {\n      \"time\": \"22:25:32\",\n      \"kind\": \"moment\",\n      \"text\": \"Person shuts the book and sets it aside\"\n    },\n    {\n      \"time\": \"22:25:34\",\n      \"kind\": \"start\",\n      \"text\": \"Person lies back against the pillow\"\n    },\n    {\n      \"time\": \"22:26:14\",\n      \"kind\": \"end\",\n      \"text\": \"Person lies back against the pillow\"\n    },\n    {\n      \"time\": \"22:26:16\",\n      \"kind\": \"moment\",\n      \"text\": \"Person stretches a hand toward the bedside lamp\"\n    },\n    {\n      \"time\": \"22:26:18\",\n      \"kind\": \"moment\",\n      \"text\": \"Person extends an arm to the lamp switch\"\n    },\n    {\n      \"time\": \"22:26:20\",\n      \"kind\": \"moment\",\n      \"text\": \"Person turns off the bedside lamp\"\n    },\n    {\n      \"time\": \"22:26:26\",\n      \"kind\": \"start\",\n      \"text\": \"Person rests in bed in the dark\"\n    },\n    {\n      \"time\": \"22:59:58\",\n      \"kind\": \"end\",\n      \"text\": \"Person rests in bed in the dark\"\n    }\n  ]\n}","refusal":null,"reasoning":null}}],"usage":{"prompt_tokens":35355,"completion_tokens":780,"total_tokens":36135,"cost":0.008111025,"is_byok":false,"prompt_tokens_details":{"cached_tokens":0,"cache_write_tokens":0,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.008111025,"upstream_inference_prompt_cost":0.006894225,"upstream_inference_completions_cost":0.0012168},"completion_tokens_details":{"reasoning_tokens":0,"image_tokens":0,"audio_tokens":0}}}

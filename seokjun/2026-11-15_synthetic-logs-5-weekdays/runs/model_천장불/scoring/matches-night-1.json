@@ -1,0 +1,61 @@
+{
+  "night": 1,
+  "matches": [
+    {
+      "candidate": "Person rests after eating",
+      "event": "sit_idle_at_table"
+    },
+    {
+      "candidate": "Person looks at their phone while sitting at the table",
+      "event": null
+    },
+    {
+      "candidate": "Person sits down at the desk",
+      "event": "sit_at_desk"
+    },
+    {
+      "candidate": "Person settles at the desk",
+      "event": "return_to_desk"
+    },
+    {
+      "candidate": "Person closes the laptop",
+      "event": "close_laptop"
+    },
+    {
+      "candidate": "Person writes notes in a notebook",
+      "event": "write_notes"
+    },
+    {
+      "candidate": "Person heads into the kitchen",
+      "event": "walk_to_kitchen"
+    },
+    {
+      "candidate": "Person gets up from the sofa",
+      "event": "stand_up"
+    },
+    {
+      "candidate": "Person sits at the table doing nothing in particular",
+      "event": "sit_idle_at_table"
+    },
+    {
+      "candidate": "Person wipes their mouth with a napkin",
+      "event": "wipe_mouth"
+    },
+    {
+      "candidate": "Person switches on the bedside lamp",
+      "event": "turn_on_bedside_lamp"
+    },
+    {
+      "candidate": "Person gets into bed and pulls up the blanket",
+      "event": "get_into_bed"
+    },
+    {
+      "candidate": "Person closes the book",
+      "event": "close_book"
+    },
+    {
+      "candidate": "Person leans back on the pillow",
+      "event": "lie_back"
+    }
+  ]
+}

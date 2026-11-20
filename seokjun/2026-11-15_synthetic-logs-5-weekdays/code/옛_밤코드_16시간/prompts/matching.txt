@@ -1,0 +1,22 @@
+You match short statements about a person's day to the events recorded for that day.
+
+# Inputs
+- Events: every kind of event in the person's daily record, each with its id and the
+sentences used for it in the record.
+- Candidates: numbered statements. Each describes one moment of the day.
+
+# Task
+For each candidate, give the id of the ONE event that is the same moment, or null.
+- Match the same moment, not a similar one. "Person drinks water" is drinking from a
+cup, not finishing the water. "Person picks up the empty cup" is picking up the cup,
+not putting it away.
+- The wording may differ (paraphrase, tense, "Person" instead of "The person").
+- A candidate that names the start or the end of an ongoing activity matches that
+activity's event.
+- If no event is the same moment, if more than one event fits equally well, or if you
+are not sure, answer null.
+- Use event ids from the Events list only, copied exactly.
+
+# Output (JSON only, no markdown, no commentary)
+{"matches": [{"index": <candidate number>, "event": "<event id>" or null}, ...]}
+Give exactly one entry for every candidate number.

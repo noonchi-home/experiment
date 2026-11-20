@@ -1,0 +1,107 @@
+{
+  "status": "valid",
+  "raw_response": "{\"matches\": [{\"index\": 1, \"event\": \"look_at_phone\"}, {\"index\": 2, \"event\": \"stretch\"}, {\"index\": 3, \"event\": \"finish_breakfast\"}, {\"index\": 4, \"event\": \"sit_idle_at_table\"}, {\"index\": 5, \"event\": \"sit_at_desk\"}, {\"index\": 6, \"event\": \"open_laptop\"}, {\"index\": 7, \"event\": \"close_laptop\"}, {\"index\": 8, \"event\": \"stretch\"}, {\"index\": 9, \"event\": \"pack_bag\"}, {\"index\": 10, \"event\": \"put_on_bag\"}, {\"index\": 11, \"event\": \"watch_tv\"}, {\"index\": 12, \"event\": \"sit_on_sofa\"}, {\"index\": 13, \"event\": \"finish_meal\"}, {\"index\": 14, \"event\": \"put_down_chopsticks\"}, {\"index\": 15, \"event\": \"lie_back\"}, {\"index\": 16, \"event\": \"close_book\"}]}",
+  "output": {
+    "matches": [
+      {
+        "index": 1,
+        "event": "look_at_phone"
+      },
+      {
+        "index": 2,
+        "event": "stretch"
+      },
+      {
+        "index": 3,
+        "event": "finish_breakfast"
+      },
+      {
+        "index": 4,
+        "event": "sit_idle_at_table"
+      },
+      {
+        "index": 5,
+        "event": "sit_at_desk"
+      },
+      {
+        "index": 6,
+        "event": "open_laptop"
+      },
+      {
+        "index": 7,
+        "event": "close_laptop"
+      },
+      {
+        "index": 8,
+        "event": "stretch"
+      },
+      {
+        "index": 9,
+        "event": "pack_bag"
+      },
+      {
+        "index": 10,
+        "event": "put_on_bag"
+      },
+      {
+        "index": 11,
+        "event": "watch_tv"
+      },
+      {
+        "index": 12,
+        "event": "sit_on_sofa"
+      },
+      {
+        "index": 13,
+        "event": "finish_meal"
+      },
+      {
+        "index": 14,
+        "event": "put_down_chopsticks"
+      },
+      {
+        "index": 15,
+        "event": "lie_back"
+      },
+      {
+        "index": 16,
+        "event": "close_book"
+      }
+    ]
+  },
+  "errors": [],
+  "checked_at": "2026-11-15T15:18:55.973908+00:00",
+  "role": "matching",
+  "api_request_attempted": true,
+  "model_response_received": true,
+  "action_executed": false,
+  "requested_model": "qwen/qwen3.5-27b",
+  "response_model": "qwen/qwen3.5-27b",
+  "provider": "Alibaba",
+  "response_id": "gen-1794755933-W38uCt1cQj0Lt030s4Eb",
+  "finish_reason": "stop",
+  "elapsed_seconds": 4.08260190000874,
+  "usage": {
+    "prompt_tokens": 3052,
+    "completion_tokens": 233,
+    "total_tokens": 3285,
+    "cost": 0.00095862,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00095862,
+      "upstream_inference_prompt_cost": 0.00059514,
+      "upstream_inference_completions_cost": 0.00036348
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

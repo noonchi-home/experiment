@@ -1,0 +1,44 @@
+{
+  "initial_state": "state_0",
+  "states": [
+    {
+      "id": "state_0",
+      "description": "초기 상태: 냉장고 문이 닫혀 있고 사용자의 접근 전",
+      "rules": [],
+      "next": [
+        {
+          "to": "state_1",
+          "on": "사람이 냉장고에서 병을 꺼낸다"
+        }
+      ]
+    },
+    {
+      "id": "state_1",
+      "description": "냉장고 문 열림 및 사용자가 식재료를 꺼내는 중",
+      "rules": [],
+      "next": [
+        {
+          "to": "state_2",
+          "on": "문 열림 경고가 울리는 동안에도 안쪽 식재료를 꺼내고 있다"
+        }
+      ]
+    },
+    {
+      "id": "state_2",
+      "description": "문 열림 경고 발생 중이며 사용자가 여전히 작업을 계속하고 있음",
+      "rules": [],
+      "next": [
+        {
+          "to": "state_3",
+          "on": "마지막 식재료를 꺼내고 직접 문을 닫는다"
+        }
+      ]
+    },
+    {
+      "id": "state_3",
+      "description": "작업 완료 및 냉장고 문이 닫힘",
+      "rules": [],
+      "next": []
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+You are observing a person's daily activities to build a procedural memory of when
+and how a household robot should help them.
+
+# Environment
+- The setting is a home with a living room (front door, sofa, and a side table next to
+the sofa), a kitchen (refrigerator, dishwasher, kitchen counter), and a laundry area
+(washing machine, dryer).
+- The robot has a map of the home and can move between these places.
+- Every appliance listed below is connected to the robot: the robot receives its signals
+and state, and can operate it as listed under "Appliance Capabilities".
+
+# Proactive Assistance Goals
+- Appliance-related help only: operating an appliance, taking an object out of an
+appliance, or putting an object into an appliance, grounded in observed behavior.
+
+# Inputs
+- The day log: the person's routine for one day as time-ordered lines.
+  - `[SCENE]` lines describe what the camera saw (visible facts only).
+  - `[SIGNAL]` lines are appliance signals in the form
+    `<appliance> · <signal> · caused by: <device | user | robot | schedule>`.
+- This is the very first day –- there is no prior memory, no summary, and no human
+feedback yet.
+
+# Task
+- Given the day log, BUILD the FSM memory FROM SCRATCH.
+- The memory will be used by the robot to proactively assist the person in future
+days, so the goal is to produce a memory that helps the person as much as possible.
+
+# Memory Structure
+The memory is structured as a HYBRID FINITE-STATE MACHINE.
+- The person's activities are segmented into temporally ordered PHASES (FSM states).
+ Each state should correspond to a meaningfully different activity, not a fleeting
+micro-moment.
+- Each state holds a set of PRODUCTION RULES that fire while the FSM occupies that
+state. A rule = (NL trigger, NL action). A state may have zero rules if no helpful
+action applies during that phase (e.g., the human is actively eating), or multiple
+rules if several distinct visible cues each warrant a different proactive action –-
+the rule count per state is determined by the evidence, not capped at one.
+- A (trigger, action) pair MAY appear in multiple states if the same proactive step
+is appropriate in more than one phase. Do not artificially restrict each rule to a
+single state when the action is reasonable in several phases –- duplicate the rule
+across all states where it applies.
+- Between states, EVENT-DRIVEN TRANSITIONS define progression. Each `next` entry: (
+to: <state_id>, on: <NL event>). Transitions are not robot actions. Terminal states
+use next: [].
+- Exactly one state is the `initial_state`.
+
+# Reading Appliance Signals
+- A signal caused by the device itself (e.g., a cycle finished, a temperature reading,
+a door left open too long): look at what the person did within the 5 minutes AFTER the
+signal. That human action is a candidate for the robot to take over, and the signal can
+serve as the trigger.
+- A signal caused by the user operating an appliance (e.g., turned on, door opened,
+cycle started): that operation itself is a candidate for the robot to take over. Look at
+the 5 minutes BEFORE the signal to find the trigger.
+
+# Build Instructions
+- First, explicitly RE-STATE the appliance-related actions that the human performed in
+this day log. Then, for EACH of those human actions, think concretely about HOW the
+robot could have taken that action over on the person's behalf. Your rules should be
+built around these take-over opportunities –- do NOT invent rules for objects or
+actions the human did not interact with in this day log.
+- Each rule's action MUST mirror an action the human performed in this day log: the
+object, the appliance, and the operation must all correspond to something the human
+actually did. Do NOT invent hypothetical actions.
+- If part of what the human did cannot be done by the robot ({PARTIAL_HINT}), write
+only the part the robot can do. If no part can be done, do not write a rule for it.
+- If a trigger describes the person already in motion with an object (e.g., "reaches
+for X", "picks up X", "pours X"), the object the person is in motion with MUST be
+DIFFERENT from the object the rule's action manipulates. Same-object triggers are
+forbidden.
+- Deployment caveat: when this memory is deployed, the human will act expecting the
+robot to help. So any rule whose trigger is phrased as "person picks up X", "person
+fetches X", or "person moves X" risks never firing –- the robot would have picked X
+up first, leaving no human action to observe. Each rule's trigger must describe a cue
+that will appear REGARDLESS of robot assistance.
+- For the same reason, a signal caused by the user must NOT be the trigger of a rule
+whose action takes over that same operation (e.g., "refrigerator · door opened · caused
+by: user" must not trigger bringing a drink from the refrigerator). Signals caused by
+the device itself may be used as triggers.
+- A trigger may be an observable human cue, an appliance signal or state, or a
+combination of both.
+- Identify the natural temporal phases of the routine and order them as they appear.
+- Within each phase, identify EVERY moment where the robot could helpfully act and
+write one rule per such moment –- a single phase may hold multiple rules.
+- Define transitions on observable events or appliance signals that mark the end of
+one phase and the start of the next.
+- If the person is holding or touching an object, the robot cannot perform any
+action on that object until the person sets it down.
+- Pick exactly one phase as `initial_state` (the one that appears at the start of
+the day), and ensure every `next.to` references an existing state id (terminal
+phases use `next: []`).
+
+# Appliance Capabilities (what the robot can do to each appliance)
+- air conditioner: turn on, turn off, set temperature (via connection)
+- refrigerator: open door, close door (physical only; the door cannot be operated via
+connection)
+- washing machine: start, stop (via connection); open door, close door (physical)
+- dryer: start, stop (via connection); open door, close door (physical)
+- dishwasher: start (via connection); open door, close door (physical)
+- TV: turn on, turn off (via connection)
+
+# Names
+- Appliances: air conditioner, refrigerator, washing machine, dryer, dishwasher, TV
+- Objects: cola, milk, water, cup, bowl, laundry
+- Places: front door, sofa, side table, kitchen counter
+Use only these names in actions.
+{ATOMIC_SECTION}
+# Output explanations
+- trigger: a single short natural-language statement describing the visible event/
+moment or appliance signal that should cause this rule's action to fire. The trigger
+MUST be self-contained.
+{ACTION_SPEC}
+
+# Output (JSON only, no markdown, no commentary)
+{
+  "initial_state": "<state_id>",
+  "states": [
+    {
+      "id": "<snake_case>",
+      "description": "<one-sentence>",
+      "rules": [
+        {"trigger": "<NL statement>", "action": "<NL>"},
+        ...
+      ],
+      "next": [{"to": "<state_id>", "on": "<NL event>"}]
+    }
+  ]
+}

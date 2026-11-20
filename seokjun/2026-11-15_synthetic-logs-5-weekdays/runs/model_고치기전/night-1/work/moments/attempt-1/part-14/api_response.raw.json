@@ -1,0 +1,15 @@
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+{"id":"gen-1794753401-VpLkFkMMpNQ31F2N3p1b","object":"chat.completion","created":1794753401,"model":"qwen/qwen3.5-27b","provider":"Alibaba","system_fingerprint":null,"service_tier":null,"choices":[{"index":0,"logprobs":null,"finish_reason":"stop","native_finish_reason":"stop","message":{"role":"assistant","content":"{\n  \"moments\": [\n    {\n      \"time\": \"20:01:04\",\n      \"kind\": \"start\",\n      \"text\": \"Person checks the phone screen\"\n    },\n    {\n      \"time\": \"20:01:38\",\n      \"kind\": \"end\",\n      \"text\": \"Person checks the phone screen\"\n    },\n    {\n      \"time\": \"20:12:56\",\n      \"kind\": \"start\",\n      \"text\": \"Person checks the phone screen\"\n    },\n    {\n      \"time\": \"20:13:30\",\n      \"kind\": \"end\",\n      \"text\": \"Person checks the phone screen\"\n    },\n    {\n      \"time\": \"20:35:58\",\n      \"kind\": \"start\",\n      \"text\": \"Person pours water into a cup at the purifier\"\n    },\n    {\n      \"time\": \"20:36:06\",\n      \"kind\": \"end\",\n      \"text\": \"Person pours water into a cup at the purifier\"\n    },\n    {\n      \"time\": \"20:36:08\",\n      \"kind\": \"start\",\n      \"text\": \"Person puts a cup down next to where they sit\"\n    },\n    {\n      \"time\": \"20:36:10\",\n      \"kind\": \"end\",\n      \"text\": \"Person puts a cup down next to where they sit\"\n    },\n    {\n      \"time\": \"20:42:02\",\n      \"kind\": \"start\",\n      \"text\": \"Person leans back on the sofa\"\n    },\n    {\n      \"time\": \"20:43:06\",\n      \"kind\": \"end\",\n      \"text\": \"Person leans back on the sofa\"\n    },\n    {\n      \"time\": \"20:43:08\",\n      \"kind\": \"start\",\n      \"text\": \"Person checks the phone screen\"\n    },\n    {\n      \"time\": \"20:48:52\",\n      \"kind\": \"end\",\n      \"text\": \"Person checks the phone screen\"\n    },\n    {\n      \"time\": \"20:48:54\",\n      \"kind\": \"start\",\n      \"text\": \"Person takes a sip of the canned drink\"\n    },\n    {\n      \"time\": \"20:49:00\",\n      \"kind\": \"end\",\n      \"text\": \"Person takes a sip of the canned drink\"\n    }\n  ]\n}","refusal":null,"reasoning":null}}],"usage":{"prompt_tokens":31827,"completion_tokens":615,"total_tokens":32442,"cost":0.007165665,"is_byok":false,"prompt_tokens_details":{"cached_tokens":0,"cache_write_tokens":0,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.007165665,"upstream_inference_prompt_cost":0.006206265,"upstream_inference_completions_cost":0.0009594},"completion_tokens_details":{"reasoning_tokens":0,"image_tokens":0,"audio_tokens":0}}}

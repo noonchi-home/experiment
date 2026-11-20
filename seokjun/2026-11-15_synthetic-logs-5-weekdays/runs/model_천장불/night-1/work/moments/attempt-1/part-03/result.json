@@ -1,0 +1,198 @@
+{
+  "status": "valid",
+  "raw_response": "{\n  \"moments\": [\n    {\n      \"time\": \"09:00:00\",\n      \"kind\": \"start\",\n      \"text\": \"Person types on a laptop\"\n    },\n    {\n      \"time\": \"09:02:56\",\n      \"kind\": \"end\",\n      \"text\": \"Person types on a laptop\"\n    },\n    {\n      \"time\": \"09:02:56\",\n      \"kind\": \"moment\",\n      \"text\": \"Person rubs their face\"\n    },\n    {\n      \"time\": \"09:03:00\",\n      \"kind\": \"start\",\n      \"text\": \"Person types on a laptop\"\n    },\n    {\n      \"time\": \"09:10:42\",\n      \"kind\": \"end\",\n      \"text\": \"Person types on a laptop\"\n    },\n    {\n      \"time\": \"09:10:42\",\n      \"kind\": \"moment\",\n      \"text\": \"Person leans back in their chair\"\n    },\n    {\n      \"time\": \"09:10:52\",\n      \"kind\": \"start\",\n      \"text\": \"Person reads a book\"\n    },\n    {\n      \"time\": \"09:16:36\",\n      \"kind\": \"end\",\n      \"text\": \"Person reads a book\"\n    },\n    {\n      \"time\": \"09:16:36\",\n      \"kind\": \"start\",\n      \"text\": \"Person types on a laptop\"\n    },\n    {\n      \"time\": \"09:23:02\",\n      \"kind\": \"end\",\n      \"text\": \"Person types on a laptop\"\n    },\n    {\n      \"time\": \"09:23:02\",\n      \"kind\": \"moment\",\n      \"text\": \"Person looks at their phone\"\n    },\n    {\n      \"time\": \"09:23:08\",\n      \"kind\": \"start\",\n      \"text\": \"Person types on a laptop\"\n    },\n    {\n      \"time\": \"09:35:54\",\n      \"kind\": \"end\",\n      \"text\": \"Person types on a laptop\"\n    },\n    {\n      \"time\": \"09:35:54\",\n      \"kind\": \"start\",\n      \"text\": \"Person uses a smartphone\"\n    },\n    {\n      \"time\": \"09:40:16\",\n      \"kind\": \"end\",\n      \"text\": \"Person uses a smartphone\"\n    },\n    {\n      \"time\": \"09:40:16\",\n      \"kind\": \"start\",\n      \"text\": \"Person types on a laptop\"\n    },\n    {\n      \"time\": \"09:43:08\",\n      \"kind\": \"end\",\n      \"text\": \"Person types on a laptop\"\n    },\n    {\n      \"time\": \"09:43:08\",\n      \"kind\": \"moment\",\n      \"text\": \"Person stands up from the desk\"\n    },\n    {\n      \"time\": \"09:43:10\",\n      \"kind\": \"start\",\n      \"text\": \"Person is not visible\"\n    },\n    {\n      \"time\": \"09:46:38\",\n      \"kind\": \"end\",\n      \"text\": \"Person is not visible\"\n    },\n    {\n      \"time\": \"09:46:38\",\n      \"kind\": \"moment\",\n      \"text\": \"Person walks into the room\"\n    },\n    {\n      \"time\": \"09:46:40\",\n      \"kind\": \"moment\",\n      \"text\": \"Person sits down at the desk\"\n    },\n    {\n      \"time\": \"09:46:42\",\n      \"kind\": \"moment\",\n      \"text\": \"Person drinks water from a cup\"\n    },\n    {\n      \"time\": \"09:46:46\",\n      \"kind\": \"start\",\n      \"text\": \"Person types on a laptop\"\n    },\n    {\n      \"time\": \"09:54:32\",\n      \"kind\": \"end\",\n      \"text\": \"Person types on a laptop\"\n    },\n    {\n      \"time\": \"09:54:32\",\n      \"kind\": \"moment\",\n      \"text\": \"Person drinks water from a cup\"\n    },\n    {\n      \"time\": \"09:54:36\",\n      \"kind\": \"start\",\n      \"text\": \"Person types on a laptop\"\n    },\n    {\n      \"time\": \"09:57:52\",\n      \"kind\": \"end\",\n      \"text\": \"Person types on a laptop\"\n    },\n    {\n      \"time\": \"09:57:52\",\n      \"kind\": \"moment\",\n      \"text\": \"Person finishes drinking water and puts the cup down\"\n    },\n    {\n      \"time\": \"09:57:56\",\n      \"kind\": \"start\",\n      \"text\": \"Person types on a laptop\"\n    },\n    {\n      \"time\": \"09:59:58\",\n      \"kind\": \"end\",\n      \"text\": \"Person types on a laptop\"\n    }\n  ]\n}",
+  "output": {
+    "moments": [
+      {
+        "time": "09:00:00",
+        "kind": "start",
+        "text": "Person types on a laptop"
+      },
+      {
+        "time": "09:02:56",
+        "kind": "end",
+        "text": "Person types on a laptop"
+      },
+      {
+        "time": "09:02:56",
+        "kind": "moment",
+        "text": "Person rubs their face"
+      },
+      {
+        "time": "09:03:00",
+        "kind": "start",
+        "text": "Person types on a laptop"
+      },
+      {
+        "time": "09:10:42",
+        "kind": "end",
+        "text": "Person types on a laptop"
+      },
+      {
+        "time": "09:10:42",
+        "kind": "moment",
+        "text": "Person leans back in their chair"
+      },
+      {
+        "time": "09:10:52",
+        "kind": "start",
+        "text": "Person reads a book"
+      },
+      {
+        "time": "09:16:36",
+        "kind": "end",
+        "text": "Person reads a book"
+      },
+      {
+        "time": "09:16:36",
+        "kind": "start",
+        "text": "Person types on a laptop"
+      },
+      {
+        "time": "09:23:02",
+        "kind": "end",
+        "text": "Person types on a laptop"
+      },
+      {
+        "time": "09:23:02",
+        "kind": "moment",
+        "text": "Person looks at their phone"
+      },
+      {
+        "time": "09:23:08",
+        "kind": "start",
+        "text": "Person types on a laptop"
+      },
+      {
+        "time": "09:35:54",
+        "kind": "end",
+        "text": "Person types on a laptop"
+      },
+      {
+        "time": "09:35:54",
+        "kind": "start",
+        "text": "Person uses a smartphone"
+      },
+      {
+        "time": "09:40:16",
+        "kind": "end",
+        "text": "Person uses a smartphone"
+      },
+      {
+        "time": "09:40:16",
+        "kind": "start",
+        "text": "Person types on a laptop"
+      },
+      {
+        "time": "09:43:08",
+        "kind": "end",
+        "text": "Person types on a laptop"
+      },
+      {
+        "time": "09:43:08",
+        "kind": "moment",
+        "text": "Person stands up from the desk"
+      },
+      {
+        "time": "09:43:10",
+        "kind": "start",
+        "text": "Person is not visible"
+      },
+      {
+        "time": "09:46:38",
+        "kind": "end",
+        "text": "Person is not visible"
+      },
+      {
+        "time": "09:46:38",
+        "kind": "moment",
+        "text": "Person walks into the room"
+      },
+      {
+        "time": "09:46:40",
+        "kind": "moment",
+        "text": "Person sits down at the desk"
+      },
+      {
+        "time": "09:46:42",
+        "kind": "moment",
+        "text": "Person drinks water from a cup"
+      },
+      {
+        "time": "09:46:46",
+        "kind": "start",
+        "text": "Person types on a laptop"
+      },
+      {
+        "time": "09:54:32",
+        "kind": "end",
+        "text": "Person types on a laptop"
+      },
+      {
+        "time": "09:54:32",
+        "kind": "moment",
+        "text": "Person drinks water from a cup"
+      },
+      {
+        "time": "09:54:36",
+        "kind": "start",
+        "text": "Person types on a laptop"
+      },
+      {
+        "time": "09:57:52",
+        "kind": "end",
+        "text": "Person types on a laptop"
+      },
+      {
+        "time": "09:57:52",
+        "kind": "moment",
+        "text": "Person finishes drinking water and puts the cup down"
+      },
+      {
+        "time": "09:57:56",
+        "kind": "start",
+        "text": "Person types on a laptop"
+      },
+      {
+        "time": "09:59:58",
+        "kind": "end",
+        "text": "Person types on a laptop"
+      }
+    ]
+  },
+  "errors": [],
+  "checked_at": "2026-11-15T17:17:17.529933+00:00",
+  "role": "moments",
+  "api_request_attempted": true,
+  "model_response_received": true,
+  "action_executed": false,
+  "requested_model": "qwen/qwen3.5-27b",
+  "response_model": "qwen/qwen3.5-27b",
+  "provider": "Alibaba",
+  "response_id": "gen-1794762996-8I1ijvHVdIarAOBo8kHm",
+  "finish_reason": "stop",
+  "elapsed_seconds": 42.42440160000115,
+  "usage": {
+    "prompt_tokens": 58140,
+    "completion_tokens": 1287,
+    "total_tokens": 59427,
+    "cost": 0.01334502,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01334502,
+      "upstream_inference_prompt_cost": 0.0113373,
+      "upstream_inference_completions_cost": 0.00200772
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

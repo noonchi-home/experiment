@@ -1,0 +1,478 @@
+{
+  "night": 1,
+  "rows": [
+    {
+      "state": "breakfast",
+      "candidate": "Person sets the empty cup down",
+      "action": "Pick up the cup and place it in the dishwasher.",
+      "event": null,
+      "answer_state": "breakfast",
+      "n": 1,
+      "k": 1,
+      "passed": false,
+      "expected": null,
+      "times": null,
+      "kind": "짝 없음",
+      "verdict": null
+    },
+    {
+      "state": "breakfast",
+      "candidate": "Person rests after eating",
+      "action": "Pick up the cup and place it in the dishwasher.",
+      "event": "sit_idle_at_table",
+      "answer_state": "breakfast",
+      "n": 1,
+      "k": 1,
+      "passed": false,
+      "expected": null,
+      "times": {
+        "right": 1,
+        "missed": 1,
+        "wrong": 0
+      },
+      "kind": "심지 않음",
+      "verdict": null
+    },
+    {
+      "state": "breakfast",
+      "candidate": "Person sits at the table looking ahead idly",
+      "action": "Pick up the cup and place it in the dishwasher.",
+      "event": "sit_idle_at_table",
+      "answer_state": "breakfast",
+      "n": 1,
+      "k": 1,
+      "passed": false,
+      "expected": null,
+      "times": {
+        "right": 1,
+        "missed": 1,
+        "wrong": 0
+      },
+      "kind": "심지 않음",
+      "verdict": null
+    },
+    {
+      "state": "work_session",
+      "candidate": "Person sits down at the desk",
+      "action": "Pick up the cup and place it next to the person.",
+      "event": "sit_at_desk",
+      "answer_state": "study",
+      "n": 2,
+      "k": 0,
+      "passed": false,
+      "expected": false,
+      "times": {
+        "right": 1,
+        "missed": 0,
+        "wrong": 1
+      },
+      "kind": "심어 둔 후보",
+      "verdict": "같음"
+    },
+    {
+      "state": "work_session",
+      "candidate": "Person opens the laptop",
+      "action": "Pick up the cup and place it next to the person.",
+      "event": "open_laptop",
+      "answer_state": "study",
+      "n": 1,
+      "k": 0,
+      "passed": false,
+      "expected": null,
+      "times": {
+        "right": 1,
+        "missed": 0,
+        "wrong": 0
+      },
+      "kind": "심지 않음",
+      "verdict": null
+    },
+    {
+      "state": "work_session",
+      "candidate": "Person closes the laptop",
+      "action": "Pick up the book and place it in the designated storage area.",
+      "event": "close_laptop",
+      "answer_state": "study",
+      "n": 1,
+      "k": 1,
+      "passed": false,
+      "expected": false,
+      "times": {
+        "right": 1,
+        "missed": 0,
+        "wrong": 0
+      },
+      "kind": "심어 둔 후보",
+      "verdict": "같음"
+    },
+    {
+      "state": "work_session",
+      "candidate": "Person uses a smartphone",
+      "action": "Pick up the book and place it in the designated storage area.",
+      "event": "look_at_phone",
+      "answer_state": "study",
+      "n": 10,
+      "k": 1,
+      "passed": false,
+      "expected": null,
+      "times": {
+        "right": 11,
+        "missed": 1,
+        "wrong": 0
+      },
+      "kind": "심지 않음",
+      "verdict": null
+    },
+    {
+      "state": "work_session",
+      "candidate": "Person puts on a backpack",
+      "action": "Turn off the room light.",
+      "event": "put_on_bag",
+      "answer_state": "going_out",
+      "n": 1,
+      "k": 1,
+      "passed": false,
+      "expected": false,
+      "times": {
+        "right": 1,
+        "missed": 0,
+        "wrong": 0
+      },
+      "kind": "심어 둔 후보",
+      "verdict": "같음"
+    },
+    {
+      "state": "work_session",
+      "candidate": "Person pats their pockets",
+      "action": "Turn off the room light.",
+      "event": "check_pockets",
+      "answer_state": "going_out",
+      "n": 1,
+      "k": 1,
+      "passed": false,
+      "expected": null,
+      "times": {
+        "right": 1,
+        "missed": 0,
+        "wrong": 0
+      },
+      "kind": "심지 않음",
+      "verdict": null
+    },
+    {
+      "state": "evening_relaxation",
+      "candidate": "Person sits on the sofa",
+      "action": "Pick up the cup and place it next to the person.",
+      "event": "sit_on_sofa",
+      "answer_state": "evening_rest",
+      "n": 3,
+      "k": 0,
+      "passed": false,
+      "expected": null,
+      "times": {
+        "right": 2,
+        "missed": 7,
+        "wrong": 1
+      },
+      "kind": "심지 않음",
+      "verdict": null
+    },
+    {
+      "state": "evening_relaxation",
+      "candidate": "Person adjusts their sitting position on the sofa",
+      "action": "Pick up the cup and place it next to the person.",
+      "event": "shift_position",
+      "answer_state": "evening_rest",
+      "n": 3,
+      "k": 0,
+      "passed": false,
+      "expected": null,
+      "times": {
+        "right": 3,
+        "missed": 6,
+        "wrong": 0
+      },
+      "kind": "심지 않음",
+      "verdict": null
+    },
+    {
+      "state": "evening_relaxation",
+      "candidate": "Person stands up from the sofa",
+      "action": "Pick up the can and place it next to the person.",
+      "event": "stand_up",
+      "answer_state": [
+        "bedtime",
+        "dinner",
+        "evening_rest"
+      ],
+      "n": 6,
+      "k": 0,
+      "passed": false,
+      "expected": null,
+      "times": null,
+      "kind": "상태 섞임",
+      "verdict": null
+    },
+    {
+      "state": "evening_relaxation",
+      "candidate": "Person scrolls on their phone",
+      "action": "Pick up the can and place it next to the person.",
+      "event": "look_at_phone",
+      "answer_state": "evening_rest",
+      "n": 3,
+      "k": 0,
+      "passed": false,
+      "expected": null,
+      "times": {
+        "right": 3,
+        "missed": 15,
+        "wrong": 0
+      },
+      "kind": "심지 않음",
+      "verdict": null
+    },
+    {
+      "state": "dinner",
+      "candidate": "Person puts down the chopsticks",
+      "action": "Pick up the bowl and place it in the dishwasher.",
+      "event": "put_down_chopsticks",
+      "answer_state": "dinner",
+      "n": 15,
+      "k": 1,
+      "passed": false,
+      "expected": null,
+      "times": {
+        "right": 15,
+        "missed": 0,
+        "wrong": 0
+      },
+      "kind": "심지 않음",
+      "verdict": null
+    },
+    {
+      "state": "dinner",
+      "candidate": "Person wipes their mouth with a napkin",
+      "action": "Pick up the bowl and place it in the dishwasher.",
+      "event": "wipe_mouth",
+      "answer_state": "dinner",
+      "n": 1,
+      "k": 1,
+      "passed": false,
+      "expected": false,
+      "times": {
+        "right": 1,
+        "missed": 0,
+        "wrong": 0
+      },
+      "kind": "심어 둔 후보",
+      "verdict": "같음"
+    },
+    {
+      "state": "night_relaxation",
+      "candidate": "Person uses a smartphone while sitting on the sofa",
+      "action": "Pick up the cup and place it next to the person.",
+      "event": "look_at_phone",
+      "answer_state": "evening_rest",
+      "n": 9,
+      "k": 0,
+      "passed": false,
+      "expected": null,
+      "times": {
+        "right": 9,
+        "missed": 9,
+        "wrong": 0
+      },
+      "kind": "심지 않음",
+      "verdict": null
+    },
+    {
+      "state": "night_relaxation",
+      "candidate": "Person watches TV while sitting on the sofa",
+      "action": "Pick up the cup and place it next to the person.",
+      "event": "watch_tv",
+      "answer_state": "evening_rest",
+      "n": 10,
+      "k": 0,
+      "passed": false,
+      "expected": null,
+      "times": {
+        "right": 10,
+        "missed": 17,
+        "wrong": 0
+      },
+      "kind": "심지 않음",
+      "verdict": null
+    },
+    {
+      "state": "bedtime",
+      "candidate": "Person switches on the bedside lamp",
+      "action": "Turn off the room light.",
+      "event": "turn_on_bedside_lamp",
+      "answer_state": "bedtime",
+      "n": 1,
+      "k": 1,
+      "passed": false,
+      "expected": null,
+      "times": {
+        "right": 1,
+        "missed": 0,
+        "wrong": 0
+      },
+      "kind": "심지 않음",
+      "verdict": null
+    },
+    {
+      "state": "bedtime",
+      "candidate": "Person returns to the room",
+      "action": "Turn off the room light.",
+      "event": "enter_room",
+      "answer_state": "bedtime",
+      "n": 1,
+      "k": 1,
+      "passed": false,
+      "expected": null,
+      "times": {
+        "right": 1,
+        "missed": 0,
+        "wrong": 0
+      },
+      "kind": "심지 않음",
+      "verdict": null
+    },
+    {
+      "state": "bedtime",
+      "candidate": "Person closes the book",
+      "action": "Turn off the bedside lamp.",
+      "event": "close_book",
+      "answer_state": "bedtime",
+      "n": 1,
+      "k": 1,
+      "passed": false,
+      "expected": false,
+      "times": {
+        "right": 1,
+        "missed": 0,
+        "wrong": 0
+      },
+      "kind": "심어 둔 후보",
+      "verdict": "같음"
+    },
+    {
+      "state": "bedtime",
+      "candidate": "Person leans back on the pillow with the book closed",
+      "action": "Turn off the bedside lamp.",
+      "event": "lie_back",
+      "answer_state": "bedtime",
+      "n": 1,
+      "k": 1,
+      "passed": false,
+      "expected": null,
+      "times": {
+        "right": 1,
+        "missed": 0,
+        "wrong": 0
+      },
+      "kind": "심지 않음",
+      "verdict": null
+    },
+    {
+      "state": null,
+      "candidate": null,
+      "action": "Pick up the cup and place it in the dishwasher.",
+      "event": "finish_drinking",
+      "answer_state": "breakfast",
+      "n": null,
+      "k": null,
+      "passed": false,
+      "expected": false,
+      "times": null,
+      "kind": "후보로 안 나옴",
+      "verdict": "같음"
+    },
+    {
+      "state": null,
+      "candidate": null,
+      "action": "Pick up the cup and place it in the dishwasher.",
+      "event": "look_at_phone",
+      "answer_state": "breakfast",
+      "n": null,
+      "k": null,
+      "passed": false,
+      "expected": false,
+      "times": null,
+      "kind": "후보로 안 나옴",
+      "verdict": "같음"
+    },
+    {
+      "state": null,
+      "candidate": null,
+      "action": "Pick up the bowl and place it in the dishwasher.",
+      "event": "finish_meal",
+      "answer_state": "dinner",
+      "n": null,
+      "k": null,
+      "passed": false,
+      "expected": false,
+      "times": null,
+      "kind": "후보로 안 나옴",
+      "verdict": "같음"
+    },
+    {
+      "state": null,
+      "candidate": null,
+      "action": "Pick up the bowl and place it in the dishwasher.",
+      "event": "put_down_spoon",
+      "answer_state": "dinner",
+      "n": null,
+      "k": null,
+      "passed": false,
+      "expected": false,
+      "times": null,
+      "kind": "후보로 안 나옴",
+      "verdict": "같음"
+    },
+    {
+      "state": null,
+      "candidate": null,
+      "action": "Pick up the can and place it next to the person.",
+      "event": "phone_rings",
+      "answer_state": "evening_rest",
+      "n": null,
+      "k": null,
+      "passed": false,
+      "expected": false,
+      "times": null,
+      "kind": "후보로 안 나옴",
+      "verdict": "같음"
+    },
+    {
+      "state": null,
+      "candidate": null,
+      "action": "Pick up the can and place it in the designated storage area.",
+      "event": "guest_finishes_can",
+      "answer_state": "evening_rest",
+      "n": null,
+      "k": null,
+      "passed": false,
+      "expected": false,
+      "times": null,
+      "kind": "후보로 안 나옴",
+      "verdict": "같음"
+    },
+    {
+      "state": null,
+      "candidate": null,
+      "action": "Pick up the book and place it next to the person.",
+      "event": "finish_vacuuming",
+      "answer_state": "evening_rest",
+      "n": null,
+      "k": null,
+      "passed": false,
+      "expected": false,
+      "times": null,
+      "kind": "후보로 안 나옴",
+      "verdict": "같음"
+    }
+  ],
+  "changes": []
+}

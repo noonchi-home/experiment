@@ -1,0 +1,173 @@
+{
+  "status": "valid",
+  "raw_response": "{\n  \"moments\": [\n    {\n      \"time\": \"09:00:00\",\n      \"kind\": \"start\",\n      \"text\": \"Person reads a book at the desk\"\n    },\n    {\n      \"time\": \"09:02:42\",\n      \"kind\": \"end\",\n      \"text\": \"Person reads a book at the desk\"\n    },\n    {\n      \"time\": \"09:02:44\",\n      \"kind\": \"start\",\n      \"text\": \"Person works on the laptop\"\n    },\n    {\n      \"time\": \"09:09:08\",\n      \"kind\": \"end\",\n      \"text\": \"Person works on the laptop\"\n    },\n    {\n      \"time\": \"09:09:10\",\n      \"kind\": \"start\",\n      \"text\": \"Person checks their phone\"\n    },\n    {\n      \"time\": \"09:09:14\",\n      \"kind\": \"end\",\n      \"text\": \"Person checks their phone\"\n    },\n    {\n      \"time\": \"09:09:16\",\n      \"kind\": \"start\",\n      \"text\": \"Person works on the laptop\"\n    },\n    {\n      \"time\": \"09:22:00\",\n      \"kind\": \"end\",\n      \"text\": \"Person works on the laptop\"\n    },\n    {\n      \"time\": \"09:22:02\",\n      \"kind\": \"start\",\n      \"text\": \"Person checks their phone\"\n    },\n    {\n      \"time\": \"09:22:40\",\n      \"kind\": \"end\",\n      \"text\": \"Person checks their phone\"\n    },\n    {\n      \"time\": \"09:22:42\",\n      \"kind\": \"start\",\n      \"text\": \"Person works on the laptop\"\n    },\n    {\n      \"time\": \"09:44:00\",\n      \"kind\": \"end\",\n      \"text\": \"Person works on the laptop\"\n    },\n    {\n      \"time\": \"09:44:02\",\n      \"kind\": \"start\",\n      \"text\": \"Person stretches\"\n    },\n    {\n      \"time\": \"09:44:08\",\n      \"kind\": \"end\",\n      \"text\": \"Person stretches\"\n    },\n    {\n      \"time\": \"09:44:10\",\n      \"kind\": \"start\",\n      \"text\": \"Person writes in a notebook\"\n    },\n    {\n      \"time\": \"09:44:48\",\n      \"kind\": \"end\",\n      \"text\": \"Person writes in a notebook\"\n    },\n    {\n      \"time\": \"09:44:50\",\n      \"kind\": \"start\",\n      \"text\": \"Person works on the laptop\"\n    },\n    {\n      \"time\": \"09:51:10\",\n      \"kind\": \"end\",\n      \"text\": \"Person works on the laptop\"\n    },\n    {\n      \"time\": \"09:51:12\",\n      \"kind\": \"start\",\n      \"text\": \"Person checks their phone\"\n    },\n    {\n      \"time\": \"09:51:50\",\n      \"kind\": \"end\",\n      \"text\": \"Person checks their phone\"\n    },\n    {\n      \"time\": \"09:51:52\",\n      \"kind\": \"start\",\n      \"text\": \"Person stretches\"\n    },\n    {\n      \"time\": \"09:52:00\",\n      \"kind\": \"end\",\n      \"text\": \"Person stretches\"\n    },\n    {\n      \"time\": \"09:52:02\",\n      \"kind\": \"start\",\n      \"text\": \"Person drinks water from a cup\"\n    },\n    {\n      \"time\": \"09:52:04\",\n      \"kind\": \"end\",\n      \"text\": \"Person drinks water from a cup\"\n    },\n    {\n      \"time\": \"09:52:06\",\n      \"kind\": \"start\",\n      \"text\": \"Person works on the laptop\"\n    },\n    {\n      \"time\": \"09:59:58\",\n      \"kind\": \"end\",\n      \"text\": \"Person works on the laptop\"\n    }\n  ]\n}",
+  "output": {
+    "moments": [
+      {
+        "time": "09:00:00",
+        "kind": "start",
+        "text": "Person reads a book at the desk"
+      },
+      {
+        "time": "09:02:42",
+        "kind": "end",
+        "text": "Person reads a book at the desk"
+      },
+      {
+        "time": "09:02:44",
+        "kind": "start",
+        "text": "Person works on the laptop"
+      },
+      {
+        "time": "09:09:08",
+        "kind": "end",
+        "text": "Person works on the laptop"
+      },
+      {
+        "time": "09:09:10",
+        "kind": "start",
+        "text": "Person checks their phone"
+      },
+      {
+        "time": "09:09:14",
+        "kind": "end",
+        "text": "Person checks their phone"
+      },
+      {
+        "time": "09:09:16",
+        "kind": "start",
+        "text": "Person works on the laptop"
+      },
+      {
+        "time": "09:22:00",
+        "kind": "end",
+        "text": "Person works on the laptop"
+      },
+      {
+        "time": "09:22:02",
+        "kind": "start",
+        "text": "Person checks their phone"
+      },
+      {
+        "time": "09:22:40",
+        "kind": "end",
+        "text": "Person checks their phone"
+      },
+      {
+        "time": "09:22:42",
+        "kind": "start",
+        "text": "Person works on the laptop"
+      },
+      {
+        "time": "09:44:00",
+        "kind": "end",
+        "text": "Person works on the laptop"
+      },
+      {
+        "time": "09:44:02",
+        "kind": "start",
+        "text": "Person stretches"
+      },
+      {
+        "time": "09:44:08",
+        "kind": "end",
+        "text": "Person stretches"
+      },
+      {
+        "time": "09:44:10",
+        "kind": "start",
+        "text": "Person writes in a notebook"
+      },
+      {
+        "time": "09:44:48",
+        "kind": "end",
+        "text": "Person writes in a notebook"
+      },
+      {
+        "time": "09:44:50",
+        "kind": "start",
+        "text": "Person works on the laptop"
+      },
+      {
+        "time": "09:51:10",
+        "kind": "end",
+        "text": "Person works on the laptop"
+      },
+      {
+        "time": "09:51:12",
+        "kind": "start",
+        "text": "Person checks their phone"
+      },
+      {
+        "time": "09:51:50",
+        "kind": "end",
+        "text": "Person checks their phone"
+      },
+      {
+        "time": "09:51:52",
+        "kind": "start",
+        "text": "Person stretches"
+      },
+      {
+        "time": "09:52:00",
+        "kind": "end",
+        "text": "Person stretches"
+      },
+      {
+        "time": "09:52:02",
+        "kind": "start",
+        "text": "Person drinks water from a cup"
+      },
+      {
+        "time": "09:52:04",
+        "kind": "end",
+        "text": "Person drinks water from a cup"
+      },
+      {
+        "time": "09:52:06",
+        "kind": "start",
+        "text": "Person works on the laptop"
+      },
+      {
+        "time": "09:59:58",
+        "kind": "end",
+        "text": "Person works on the laptop"
+      }
+    ]
+  },
+  "errors": [],
+  "checked_at": "2026-11-15T15:03:32.595736+00:00",
+  "role": "moments",
+  "api_request_attempted": true,
+  "model_response_received": true,
+  "action_executed": false,
+  "requested_model": "qwen/qwen3.5-27b",
+  "response_model": "qwen/qwen3.5-27b",
+  "provider": "Alibaba",
+  "response_id": "gen-1794754970-acad2bPFNjZXiZPueQ4U",
+  "finish_reason": "stop",
+  "elapsed_seconds": 43.008489600004395,
+  "usage": {
+    "prompt_tokens": 33121,
+    "completion_tokens": 1068,
+    "total_tokens": 34189,
+    "cost": 0.008124675,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.008124675,
+      "upstream_inference_prompt_cost": 0.006458595,
+      "upstream_inference_completions_cost": 0.00166608
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

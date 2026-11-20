@@ -1,0 +1,88 @@
+{
+  "initial_state": "morning_routine",
+  "states": [
+    {
+      "id": "morning_routine",
+      "description": "Person wakes up, dresses, and relaxes briefly on the sofa before breakfast.",
+      "rules": [],
+      "next": [
+        {
+          "to": "breakfast",
+          "on": "Person heads into the kitchen"
+        }
+      ]
+    },
+    {
+      "id": "breakfast",
+      "description": "Person eats breakfast at the dining table and clears the dishes.",
+      "rules": [],
+      "next": [
+        {
+          "to": "work_session",
+          "on": "Person walks out of the room"
+        }
+      ]
+    },
+    {
+      "id": "work_session",
+      "description": "Person works at the desk using a laptop and notebook, eventually packing up to leave.",
+      "rules": [],
+      "next": [
+        {
+          "to": "afternoon_return",
+          "on": "Person enters the room and closes the door"
+        }
+      ]
+    },
+    {
+      "id": "afternoon_return",
+      "description": "Person returns home, puts down bag, and settles onto the sofa.",
+      "rules": [],
+      "next": [
+        {
+          "to": "evening_relaxation",
+          "on": "Person watches TV while sitting on the sofa"
+        }
+      ]
+    },
+    {
+      "id": "evening_relaxation",
+      "description": "Person relaxes on the sofa watching TV and drinking beverages.",
+      "rules": [],
+      "next": [
+        {
+          "to": "dinner",
+          "on": "Person heads into the kitchen"
+        }
+      ]
+    },
+    {
+      "id": "dinner",
+      "description": "Person cooks dinner, eats at the table, and cleans up.",
+      "rules": [],
+      "next": [
+        {
+          "to": "night_relaxation",
+          "on": "Person sits on the sofa"
+        }
+      ]
+    },
+    {
+      "id": "night_relaxation",
+      "description": "Person continues relaxing on the sofa watching TV and using phone.",
+      "rules": [],
+      "next": [
+        {
+          "to": "bedtime",
+          "on": "Person leaves the room"
+        }
+      ]
+    },
+    {
+      "id": "bedtime",
+      "description": "Person prepares for sleep, turns off lights, and reads in bed.",
+      "rules": [],
+      "next": []
+    }
+  ]
+}

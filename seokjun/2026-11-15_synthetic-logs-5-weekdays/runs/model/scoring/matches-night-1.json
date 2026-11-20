@@ -1,0 +1,89 @@
+{
+  "night": 1,
+  "matches": [
+    {
+      "candidate": "Person sets the empty cup down",
+      "event": null
+    },
+    {
+      "candidate": "Person rests after eating",
+      "event": "sit_idle_at_table"
+    },
+    {
+      "candidate": "Person sits at the table looking ahead idly",
+      "event": "sit_idle_at_table"
+    },
+    {
+      "candidate": "Person sits down at the desk",
+      "event": "sit_at_desk"
+    },
+    {
+      "candidate": "Person opens the laptop",
+      "event": "open_laptop"
+    },
+    {
+      "candidate": "Person closes the laptop",
+      "event": "close_laptop"
+    },
+    {
+      "candidate": "Person uses a smartphone",
+      "event": "look_at_phone"
+    },
+    {
+      "candidate": "Person puts on a backpack",
+      "event": "put_on_bag"
+    },
+    {
+      "candidate": "Person pats their pockets",
+      "event": "check_pockets"
+    },
+    {
+      "candidate": "Person sits on the sofa",
+      "event": "sit_on_sofa"
+    },
+    {
+      "candidate": "Person adjusts their sitting position on the sofa",
+      "event": "shift_position"
+    },
+    {
+      "candidate": "Person stands up from the sofa",
+      "event": "stand_up"
+    },
+    {
+      "candidate": "Person scrolls on their phone",
+      "event": "look_at_phone"
+    },
+    {
+      "candidate": "Person puts down the chopsticks",
+      "event": "put_down_chopsticks"
+    },
+    {
+      "candidate": "Person wipes their mouth with a napkin",
+      "event": "wipe_mouth"
+    },
+    {
+      "candidate": "Person uses a smartphone while sitting on the sofa",
+      "event": "look_at_phone"
+    },
+    {
+      "candidate": "Person watches TV while sitting on the sofa",
+      "event": "watch_tv"
+    },
+    {
+      "candidate": "Person switches on the bedside lamp",
+      "event": "turn_on_bedside_lamp"
+    },
+    {
+      "candidate": "Person returns to the room",
+      "event": "enter_room"
+    },
+    {
+      "candidate": "Person closes the book",
+      "event": "close_book"
+    },
+    {
+      "candidate": "Person leans back on the pillow with the book closed",
+      "event": "lie_back"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+Day 1 (weekday). Times are wall-clock times.
+18:58  [SIGNAL] air conditioner · off, indoor temperature 29°C · caused by: device
+19:00  [SCENE] The person enters through the front door, puts a bag down, and takes off their jacket.
+19:01  [SIGNAL] air conditioner · turned on, set to 26°C · caused by: user
+19:03  [SIGNAL] refrigerator · door opened · caused by: user
+19:03  [SCENE] The person takes a cola out of the refrigerator without closing the refrigerator door, places the cola on the side table next to the sofa, and sits on the sofa.
+19:04  [SIGNAL] refrigerator · door has been open for 1 minute · caused by: device
+19:05  [SCENE] The person gets up from the sofa, closes the refrigerator door, and returns to the sofa.
+19:05  [SIGNAL] refrigerator · door closed · caused by: user
+19:20  [SIGNAL] washing machine · cycle finished · caused by: device
+19:23  [SIGNAL] washing machine · door opened · caused by: user
+19:23  [SCENE] The person takes the laundry out of the washing machine, puts it into the dryer, closes the dryer door, and presses the dryer's start button.
+19:24  [SIGNAL] dryer · cycle started · caused by: user
+19:40  [SIGNAL] refrigerator · door opened · caused by: user
+19:40  [SCENE] The person takes the milk out of the refrigerator, pours it into a cup on the kitchen counter, and puts the milk back into the refrigerator.
+19:41  [SIGNAL] refrigerator · door closed · caused by: user
+19:44  [SCENE] The person finishes drinking and leaves the empty cup on the kitchen counter.
+19:45  [SIGNAL] dishwasher · door opened · caused by: user
+19:45  [SCENE] The person puts the empty cup from the kitchen counter into the dishwasher and closes the dishwasher door.
+19:45  [SIGNAL] dishwasher · door closed · caused by: user
