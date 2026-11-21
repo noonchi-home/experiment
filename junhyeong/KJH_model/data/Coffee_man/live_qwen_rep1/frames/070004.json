@@ -1,0 +1,46 @@
+{
+ "time": "2026-11-03T07:00:04",
+ "frame": "070004",
+ "summary": "A man stands in the kitchen holding a cup with both hands and drinking from it.",
+ "people": [
+  {
+   "location": "kitchen",
+   "activity": "drinking from a cup"
+  }
+ ],
+ "objects": [
+  {
+   "label": "box",
+   "name": "cardboard box",
+   "on": "counter",
+   "attributes": {},
+   "confidence": "high"
+  },
+  {
+   "label": "other",
+   "name": "candles",
+   "on": "counter",
+   "attributes": {},
+   "confidence": "high"
+  }
+ ],
+ "electronics": {
+  "observable": [
+   {
+    "device": "range hood",
+    "name": "stainless steel range hood",
+    "power": "off",
+    "door": "unknown",
+    "confidence": "high"
+   },
+   {
+    "device": "oven",
+    "name": "stainless steel oven",
+    "power": "off",
+    "door": "closed",
+    "confidence": "high"
+   }
+  ],
+  "unobservable": []
+ }
+}

@@ -1,0 +1,46 @@
+{
+ "time": "2026-11-03T07:00:02",
+ "frame": "070002",
+ "summary": "A man is standing in the kitchen. He picks up a cup from the counter and stirs its contents with a spoon.",
+ "people": [
+  {
+   "location": "kitchen",
+   "activity": "stirring a cup"
+  }
+ ],
+ "objects": [
+  {
+   "label": "box",
+   "name": "cardboard box",
+   "on": "counter",
+   "attributes": {},
+   "confidence": "high"
+  },
+  {
+   "label": "other",
+   "name": "spoon",
+   "on": "other",
+   "attributes": {},
+   "confidence": "high"
+  }
+ ],
+ "electronics": {
+  "observable": [
+   {
+    "device": "oven",
+    "name": "stainless steel oven",
+    "power": "off",
+    "door": "closed",
+    "confidence": "high"
+   },
+   {
+    "device": "range hood",
+    "name": "stainless steel range hood",
+    "power": "off",
+    "door": "unknown",
+    "confidence": "high"
+   }
+  ],
+  "unobservable": []
+ }
+}

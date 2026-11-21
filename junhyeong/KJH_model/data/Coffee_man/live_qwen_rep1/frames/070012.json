@@ -1,0 +1,46 @@
+{
+ "time": "2026-11-03T07:00:12",
+ "frame": "070012",
+ "summary": "A person is standing in the kitchen holding a cup.",
+ "people": [
+  {
+   "location": "kitchen",
+   "activity": "holding a cup"
+  }
+ ],
+ "objects": [
+  {
+   "label": "box",
+   "name": "cardboard box",
+   "on": "counter",
+   "attributes": {},
+   "confidence": "high"
+  },
+  {
+   "label": "other",
+   "name": "jar",
+   "on": "counter",
+   "attributes": {},
+   "confidence": "high"
+  }
+ ],
+ "electronics": {
+  "observable": [
+   {
+    "device": "range hood",
+    "name": "stainless steel range hood",
+    "power": "off",
+    "door": "unknown",
+    "confidence": "high"
+   },
+   {
+    "device": "oven",
+    "name": "stainless steel oven",
+    "power": "off",
+    "door": "closed",
+    "confidence": "high"
+   }
+  ],
+  "unobservable": []
+ }
+}

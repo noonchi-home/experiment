@@ -1,0 +1,46 @@
+{
+ "time": "2026-11-03T07:00:20",
+ "frame": "070020",
+ "summary": "A man stands in the kitchen holding a small object and looking up.",
+ "people": [
+  {
+   "location": "kitchen",
+   "activity": "holding a small object, looking up"
+  }
+ ],
+ "objects": [
+  {
+   "label": "box",
+   "name": "cardboard box",
+   "on": "counter",
+   "attributes": {},
+   "confidence": "high"
+  },
+  {
+   "label": "other",
+   "name": "small jars",
+   "on": "counter",
+   "attributes": {},
+   "confidence": "medium"
+  }
+ ],
+ "electronics": {
+  "observable": [
+   {
+    "device": "oven",
+    "name": "stainless steel oven",
+    "power": "off",
+    "door": "closed",
+    "confidence": "high"
+   },
+   {
+    "device": "range hood",
+    "name": "stainless steel range hood",
+    "power": "unknown",
+    "door": "unknown",
+    "confidence": "high"
+   }
+  ],
+  "unobservable": []
+ }
+}

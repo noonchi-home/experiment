@@ -1,0 +1,26 @@
+{
+  "hub": "virtual smart home hub",
+  "devices": {
+    "induction": {
+      "commands": ["status", "power_on", "power_off", "set_timer"],
+      "state": {"power": "off", "timer_min": 0}
+    },
+    "dishwasher": {
+      "commands": ["status", "remaining_time", "start", "power_off"],
+      "state": {"power": "on", "cycle": "running", "remaining_min": 25}
+    },
+    "refrigerator": {
+      "commands": ["status", "power_off", "set_temperature"],
+      "state": {"power": "on", "door": "closed", "temperature_c": 3}
+    }
+  },
+  "variants": {
+    "dishwasher_running": {},
+    "dishwasher_finished": {"dishwasher": {"power": "off", "cycle": "finished", "remaining_min": 0}}
+  },
+  "notes": [
+    "허브에 등록된 가전은 인덕션, 식기세척기, 냉장고 셋뿐이다. 실제 기기·네트워크는 없고 noonchi/smarthome.py가 상태를 흉내 낸다.",
+    "commands: 허브가 받는 명령. 등록되지 않은 기기나 명령은 거부한다. status는 상태 조회이며, 허브가 연결되어 있으므로 등록 기기의 상태는 정확히 안다고 본다.",
+    "variants: 영상 시작(07:00) 때 허브의 처음 상태. dishwasher_running은 식기세척기 가동 중(남은 시간 25분), dishwasher_finished는 가동 종료. run_coffee.py --hub로 고른다. 카메라에는 식기세척기가 보이지 않아 영상만으로는 구분할 수 없다."
+  ]
+}

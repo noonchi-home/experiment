@@ -1,0 +1,43 @@
+{
+  "purpose": "tasks.json의 task마다 누가(허브 / 로봇) 어떻게 실행하는지, FSM의 어느 상태를 돕는지(serves), 어느 행동 묶음인지(group)를 적은 것이다(noonchi/task_pomdp.py, noonchi/smarthome.py). 순서는 tasks.json과 같다.",
+  "tasks": [
+    {"task": 0, "group": "task", "via": "hub", "device": "induction", "command": "power_on", "serves": "cooking",
+     "requires": {"device": "induction", "power": "off"}},
+    {"task": 1, "group": "monitoring", "via": "robot", "photo_of": "refrigerator inside", "serves": "checking_fridge"},
+    {"task": 2, "group": "monitoring", "via": "hub", "device": "dishwasher", "command": "status", "serves": "washing_cup",
+     "then": {"state_key": "cycle", "cases": {
+       "running":  {"text": "Check the remaining time of the dishwasher through the smart home hub.", "via": "hub", "device": "dishwasher", "command": "remaining_time"},
+       "finished": {"text": "Ask the robot to take a photo of the inside of the dishwasher.", "via": "robot", "photo_of": "dishwasher inside"}}}},
+    {"task": 3, "group": "task", "via": "hub", "device": "induction", "command": "power_off", "serves": null,
+     "requires": {"device": "induction", "power": "on"}},
+    {"task": 4, "group": "task", "via": "hub", "device": "refrigerator", "command": "power_off", "serves": null,
+     "requires": {"device": "refrigerator", "power": "on"}},
+    {"task": 5, "group": "task", "via": "hub", "device": "dishwasher", "command": "power_off", "serves": null,
+     "requires": {"device": "dishwasher", "power": "on"}},
+    {"task": 6, "group": "task", "via": "hub", "device": "dishwasher", "command": "start", "serves": "washing_cup"},
+    {"task": 7, "group": "monitoring", "via": "robot", "photo_of": "dishwasher inside", "serves": "washing_cup"},
+    {"task": 8, "group": "task", "via": "robot", "serves": "checking_fridge",
+     "requires": {"device": "refrigerator", "door": "closed"}},
+    {"task": 9, "group": "task", "via": "robot", "serves": null,
+     "requires": {"device": "refrigerator", "door": "open"}},
+    {"task": 10, "group": "task", "via": "hub", "device": "refrigerator", "command": "set_temperature", "args": {"celsius": 1}, "serves": null},
+    {"task": 11, "group": "task", "via": "hub", "device": "induction", "command": "set_timer", "args": {"minutes": 10}, "serves": "cooking",
+     "requires": {"device": "induction", "power": "on"}},
+    {"task": 12, "group": "task", "via": "robot", "serves": "washing_cup"},
+    {"task": 13, "group": "task", "via": "robot", "serves": null},
+    {"task": 14, "group": "task", "via": "robot", "serves": "cooking"},
+    {"task": 15, "group": "task", "via": "robot", "serves": "cooking"},
+    {"task": 16, "group": "task", "via": "robot", "serves": null},
+    {"task": 17, "group": "task", "via": "robot", "serves": null},
+    {"task": 18, "group": "task", "via": "robot", "serves": null},
+    {"task": 19, "group": "task", "via": "robot", "serves": "washing_cup"}
+  ],
+  "notes": [
+    "via: hub는 스마트홈 허브(scenarios/Coffee_man/hub.json)에 명령, robot은 연결된 로봇에 요청. 로봇은 모든 행동이 가능하다고 가정한다.",
+    "serves: 이 task가 돕는 FSM 상태. 트리거 상태에서 그 상태까지 갈 확률(reach)이 FSM에 없는 task의 처음 믿음이 된다. null이면 FSM의 어느 단계와도 관계없다.",
+    "group: Kostavelis 외(2017)의 행동 묶음. task(A_T)는 환경을 바꾸는 행동(가전 켜기·끄기·설정, 물건 옮기기, 문 열기)이고, monitoring(A_M)은 환경을 바꾸지 않고 상태만 알아내는 행동(허브 상태 조회, 로봇 촬영)이다. 20개 중 거주자에게 묻는 communication(A_C)은 없다(질문은 FSM 수정 때 한다).",
+    "gain(원할 때 이득)과 cost(원하지 않을 때 방해 비용)는 group마다 config/lora.json의 경계 수준 보상에서 온다. task: 1.0 / 1.0(원하지 않으면 거주자가 되돌려야 함, L→H), monitoring: 1.0 / 0.25(로봇이 괜히 관여함, L→M). 예전 종류별 값(확인 0.3/0.05, 끄기 0.2/1.0 등 7가지)은 근거가 없어 이것으로 바꿨다.",
+    "requires: 허브가 알려 주는 기기 상태가 이 값일 때만 고를 수 있다(이미 켜진 인덕션을 다시 켜지 않음 등). 가전 상태는 카메라(VLM)로 보지 않고 허브로만 안다.",
+    "then: 허브 응답에 따라 다음 요청을 고른다. task 2는 식기세척기가 가동 중(cycle=running)이면 남은 시간을 조회하고, 가동 종료(cycle=finished)면 로봇에게 내부 사진을 요청한다. 논문처럼 POMDP는 무엇을 할지만 정하고, 그 아래 실행(허브 응답에 따른 다음 요청)은 noonchi/smarthome.py가 맡는다."
+  ]
+}

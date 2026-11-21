@@ -1,0 +1,62 @@
+{
+  "scenario_id": "Coffee_man",
+  "paper": {
+    "path": "papers/2610.21211v1.pdf",
+    "sha256": "1fe0e4954d4fefaffb1e9d1619a2e52e1918b2872ca789485ec437e95f82a364",
+    "prompt_source_map": "prompts/source_map.json",
+    "predictor_sections": [
+      "E.1",
+      "E.2",
+      "E.3"
+    ],
+    "reflector_sections": [
+      "F.1",
+      "F.2",
+      "F.3",
+      "F.4"
+    ]
+  },
+  "initial_memory": {
+    "origin": "manual_seed_from_user_assumed_habit",
+    "learned_from_recorded_days": false,
+    "model_generated": false,
+    "prior_day_count": null,
+    "notes": [
+      "사용자는 오전 6시~8시 사이 주방에서 커피를 마신 뒤 커피잔을 식기세척기로 세척하고, 냉장고를 열어 재료를 확인한 후 인덕션으로 요리한다고 저장되어 있다고 가정했다. 이 네 단계가 FSM 상태(morning_coffee -> washing_cup -> checking_fridge -> cooking)다.",
+      "시작 상태는 morning_coffee다. 영상이 커피를 마시는 장면에서 시작하므로 기상 상태와 조건은 포함하지 않는다.",
+      "morning_coffee의 규칙 3개(커피잔을 식기세척기에 넣기, 냉장고 문 열기, 인덕션 켜기)는 위 습관 문장을 글자 그대로 로봇 행동으로 옮긴 것이다. 정답 task(data/Coffee_man/answer.json)와 일부러 맞추지 않았으며, 비교 후 FSM 수정으로 고쳐지는지 보기 위한 출발점이다.",
+      "전이의 p(다음 단계로 갈 확률 0.9)는 PAM 형식에 없는 값으로, task_pomdp.py가 FSM에 없는 task의 처음 믿음을 정할 때만 쓴다. 사람이 정한 임시값이다."
+    ]
+  },
+  "task_mapping": {
+    "hub_devices": ["induction", "dishwasher", "refrigerator"],
+    "robot": "virtual robot that can do any task",
+    "task_count": 20,
+    "notes": [
+      "허브를 통하는 task는 등록된 세 가전의 명령으로, 나머지는 로봇 요청으로 실행한다(task_specs.json via).",
+      "식기세척기 상태 확인은 허브 응답에 따라 다음 요청이 갈린다. 가동 중이면 남은 시간 조회, 가동 종료면 로봇에게 내부 사진 요청.",
+      "task를 요청했다는 것은 가상 허브·로봇에 명령을 보냈다는 뜻이다. 실제 기기의 동작이나 사진은 없다."
+    ]
+  },
+  "preserved_mechanism": {
+    "paper_prompt_files_modified": false,
+    "strict_fsm_interpreter_added": false,
+    "handwritten_action_selector_added": false,
+    "memory_build_and_update_retained": true,
+    "notes": [
+      "VLM은 2초 창마다 관찰 기록만 낸다. 트리거·task·FSM 수정은 모두 결정론적 코드다(PAM처럼 VLM이 기억을 읽고 행동을 고르지 않는다).",
+      "FSM 규칙과 같은 문장으로 쓴 트리거 조건(triggers.json)은 FSM이 바뀔 때마다 다시 검증한다.",
+      "기억 갱신은 PAM 반성 단계 대신, 고른 task와 정답 task의 비교로 수정안을 내고 규칙마다의 믿음으로 반영·보류한다(noonchi/fsm_edit.py)."
+    ]
+  },
+  "remaining_reconstruction_notes_ko": [
+    "영상은 한 고정 카메라로 찍은 22초 분량이며, 냉장고와 식기세척기는 화면에 보이지 않는다. 두 가전의 상태는 허브로만 안다.",
+    "정답 task는 사용자가 정했다. 한 영상만 있으므로 같은 영상을 여러 날 반복해 FSM 수정을 확인한다."
+  ],
+  "revision": {
+    "date": "2026-11-04",
+    "historical_scenario": null,
+    "historical_source_modified": false,
+    "current_seed_requires_new_validation": true
+  }
+}

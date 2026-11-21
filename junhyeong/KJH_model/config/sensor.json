@@ -1,0 +1,23 @@
+{
+  "purpose": "트리거 단계 POMDP(noonchi/trigger_pomdp.py)에 쓰는 VLM 관찰 모델: 실제 장면이 주어졌을 때 각 VLM 보고가 나올 확률. 모든 값은 사람이 정했다.",
+  "accuracy_by_confidence": "config/model.json decision.accuracy",
+  "detect": 0.85,
+  "false_alarm": 0.05,
+  "place_alias": {
+    "kitchen": {"dining area": 0.1},
+    "dining area": {"kitchen": 0.15},
+    "living room": {"dining area": 0.1},
+    "counter": {"kitchen island": 0.15, "stove": 0.1},
+    "kitchen island": {"counter": 0.15},
+    "stove": {"counter": 0.1},
+    "sink": {"counter": 0.1, "kitchen island": 0.1}
+  },
+  "activity": {"accuracy": 0.8},
+  "stay": {"object": 0.9, "person": 0.6, "activity": 0.7},
+  "notes": [
+    "detect: 실제로 존재하는 물체(사람)를 VLM이 보고할 확률. false_alarm: 없는 물체(사람)를 존재한다고 보고할 확률.",
+    "place_alias[실제 위치][보고된 위치]: VLM은 이웃한 자리를 대신 말하는 경우가 많다. ('kitchen'에 서 있는 사람을 한 화면에 보이는 'dining area'에 위치한 것으로 보고하는등). 나머지 오류 확률은 다른 자리에 고르게 나눈다.",
+    "activity.accuracy: VLM의 활동 문장을 단어 묶음으로 분류한 종류(triggers.json activities)가 실제 활동과 같을 확률. 틀리는 경우는 다른 종류에 고르게 나눈다. 사람이 보이지 않는 창은 활동에 대한 정보가 없는 것으로 본다.",
+    "stay: 변수(schema에 따라 변동)가 창(2초)마다 값을 유지할 확률. 유지하지 않으면 다른 값으로 고르게 옮겨 간다."
+  ]
+}

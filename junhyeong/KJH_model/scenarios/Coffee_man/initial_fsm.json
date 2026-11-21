@@ -1,0 +1,60 @@
+{
+  "initial_state": "morning_coffee",
+  "states": [
+    {
+      "id": "morning_coffee",
+      "description": "The person is drinking coffee in the kitchen in the morning (06:00~08:00); the person habitually drinks coffee before preparing breakfast.",
+      "rules": [
+        {
+          "trigger": "The person is drinking coffee in the kitchen and it is observed in morning(06:00~08:00).",
+          "action": "Ask the robot to put the coffee cup into the dishwasher."
+        },
+        {
+          "trigger": "The person is drinking coffee in the kitchen and it is observed in morning(06:00~08:00).",
+          "action": "Ask the robot to open the refrigerator door."
+        },
+        {
+          "trigger": "The person is drinking coffee in the kitchen and it is observed in morning(06:00~08:00).",
+          "action": "Turn on the induction through the smart home hub."
+        }
+      ],
+      "next": [
+        {
+          "to": "washing_cup",
+          "on": "The person finishes the coffee and takes the coffee cup to the dishwasher.",
+          "p": 0.9
+        }
+      ]
+    },
+    {
+      "id": "washing_cup",
+      "description": "The person washes the coffee cup with the dishwasher.",
+      "rules": [],
+      "next": [
+        {
+          "to": "checking_fridge",
+          "on": "The person opens the refrigerator.",
+          "p": 0.9
+        }
+      ]
+    },
+    {
+      "id": "checking_fridge",
+      "description": "The person opens the refrigerator and checks the ingredients for breakfast.",
+      "rules": [],
+      "next": [
+        {
+          "to": "cooking",
+          "on": "The person takes ingredients out of the refrigerator and goes to the induction.",
+          "p": 0.9
+        }
+      ]
+    },
+    {
+      "id": "cooking",
+      "description": "The person cooks breakfast with the induction.",
+      "rules": [],
+      "next": []
+    }
+  ]
+}

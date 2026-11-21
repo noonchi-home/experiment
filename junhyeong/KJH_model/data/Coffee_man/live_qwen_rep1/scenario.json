@@ -1,0 +1,10 @@
+{
+ "name": "Live VLM observations: live_qwen_rep1",
+ "description": "qwen:qwen/qwen3.5-27b observations of Coffee_man.mp4, recorded 2026-11-04 07:10.",
+ "video": "data/Coffee_man/Coffee_man.mp4",
+ "start": "2026-11-03T07:00:00",
+ "fps": 12,
+ "window_seconds": 2,
+ "frame_width": 640,
+ "_note": "Real VLM output from record_video_vlm.py (not hand-written). One observation per 2-second window; time = video start + window start. PNG frames were not saved."
+}

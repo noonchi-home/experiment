@@ -1,0 +1,53 @@
+{
+ "time": "2026-11-03T07:00:16",
+ "frame": "070016",
+ "summary": "A person stands in the kitchen drinking from a cup. A box is on the counter.",
+ "people": [
+  {
+   "location": "kitchen",
+   "activity": "drinking from a cup"
+  }
+ ],
+ "objects": [
+  {
+   "label": "box",
+   "name": "cardboard box",
+   "on": "counter",
+   "attributes": {},
+   "confidence": "high"
+  },
+  {
+   "label": "other",
+   "name": "jars",
+   "on": "counter",
+   "attributes": {},
+   "confidence": "high"
+  }
+ ],
+ "electronics": {
+  "observable": [
+   {
+    "device": "range hood",
+    "name": "stainless steel range hood",
+    "power": "off",
+    "door": "unknown",
+    "confidence": "high"
+   },
+   {
+    "device": "oven",
+    "name": "stainless steel oven",
+    "power": "off",
+    "door": "closed",
+    "confidence": "high"
+   },
+   {
+    "device": "induction",
+    "name": "cooktop",
+    "power": "off",
+    "door": "unknown",
+    "confidence": "high"
+   }
+  ],
+  "unobservable": []
+ }
+}

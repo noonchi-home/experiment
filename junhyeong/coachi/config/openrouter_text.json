@@ -1,0 +1,28 @@
+{
+  "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+  "model": "qwen/qwen3.5-27b",
+  "api_key_env": "OPENROUTER_API_KEY",
+  "provider": {
+    "order": [
+      "alibaba"
+    ],
+    "allow_fallbacks": false,
+    "require_parameters": true
+  },
+  "timeout_seconds": 1800,
+  "max_tokens": {
+    "reflector_text": 16384,
+    "marking": 8192,
+    "chunking": 8192
+  },
+  "provenance": {
+    "plan": "../설계문서/2026-11-14_PAM_80퍼센트_p-value_구현계획서.md",
+    "notes": [
+      "Text version of the nightly steps. Same model, endpoint and pinned provider as config/openrouter.json; no images are sent.",
+      "Thinking is on only for reflector_text, as for the paper reflector. marking runs without thinking.",
+      "The 1800-second timeout and the output-token caps are caller safeguards, not paper settings. A truncated answer is rejected, not repaired.",
+      "timeout_seconds was 600 until 2026-11-16. The reflector reads a whole 1,800-line morning record (about 50k input tokens, thinking on); on night 1 no answer came within 600 seconds (about $0.028 billed, answer lost), so the limit was raised to 1800.",
+      "chunking (2026-11-18) turns a day's record into chunks of what the person does; no thinking and temperature 0, like marking. The 8192-token cap is a caller safeguard."
+    ]
+  }
+}

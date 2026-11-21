@@ -1,0 +1,46 @@
+{
+ "time": "2026-11-03T07:00:06",
+ "frame": "070006",
+ "summary": "A person stands in the kitchen, drinking from a cup held with both hands. After taking a sip, they lower the cup and look around.",
+ "people": [
+  {
+   "location": "kitchen",
+   "activity": "drinking from a cup"
+  }
+ ],
+ "objects": [
+  {
+   "label": "box",
+   "name": "cardboard box",
+   "on": "counter",
+   "attributes": {},
+   "confidence": "high"
+  },
+  {
+   "label": "other",
+   "name": "candles",
+   "on": "counter",
+   "attributes": {},
+   "confidence": "high"
+  }
+ ],
+ "electronics": {
+  "observable": [
+   {
+    "device": "oven",
+    "name": "stainless steel oven",
+    "power": "off",
+    "door": "closed",
+    "confidence": "high"
+   },
+   {
+    "device": "range hood",
+    "name": "stainless steel range hood",
+    "power": "unknown",
+    "door": "unknown",
+    "confidence": "high"
+   }
+  ],
+  "unobservable": []
+ }
+}

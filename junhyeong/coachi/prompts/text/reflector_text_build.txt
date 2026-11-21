@@ -1,0 +1,120 @@
+You are reading a record of a person's daily activities to build a procedural memory
+of when and how a household robot should help them.
+
+# Environment
+- The setting is a home with a bed with a bedside lamp, window curtains, a dining
+table, a kitchen with a dishwasher and a fridge, a sofa with a TV and a side table,
+and a desk, where a single person performs everyday activities.
+- The designated storage area: a place in the home where items such as books, empty
+cans, and the bedside lamp are normally kept. Used cups and bowls go to the dishwasher.
+
+# Proactive Assistance Goals
+- bringing the person an object they may need next.
+- putting away objects the person appears to have finished using.
+- turning off a light the person no longer needs.
+- opening the curtains.
+- etc. –- any helpful pick-and-place, switch-off or opening action that is grounded in observed behavior.
+
+# Inputs
+- Available robot tasks: the only actions the robot can perform.
+- Check window: how soon after a candidate the rule's action must come to count as
+following it.
+- Today's record: the robot's observation of the person, one line every {line_step}
+(`HH:MM:SS | sentence`) in time order. Each line describes the scene: the person's
+posture, what they are doing, and things lying around; a line may still mention what
+was done a moment ago. One activity usually fills many lines in a row, and the wording
+changes from line to line. This is
+the very first day –- there is no prior memory, no check results, and no human
+feedback yet.
+
+# Task
+- Given today's record, BUILD the FSM memory FROM SCRATCH.
+- The memory will be used by the robot to proactively assist the person in future
+days, so the goal is to produce a memory that helps the person as much as possible.
+- Each rule lists one to three TRIGGER CANDIDATES. Every night, each candidate is
+checked against all days recorded so far, and only the candidates that are reliably
+followed by the rule's action are given to the robot.
+
+# Memory Structure
+The memory is structured as a HYBRID FINITE-STATE MACHINE.
+- The person's activities are segmented into temporally ordered PHASES (FSM states).
+ Each state should correspond to a meaningfully different activity, not a fleeting
+micro-moment.
+- Each state holds a set of PRODUCTION RULES that fire while the FSM occupies that
+state. A rule = (NL trigger candidates, NL action). A state may have zero rules if no
+helpful action applies during that phase (e.g., the human is actively eating), or
+multiple rules if several distinct visible cues each warrant a different proactive
+action –- the rule count per state is determined by the evidence, not capped at one.
+- A rule MAY appear in multiple states if the same proactive step is appropriate in
+more than one phase. Do not artificially restrict each rule to a single state when the
+action is reasonable in several phases –- duplicate the rule across all states where
+it applies.
+- Between states, EVENT-DRIVEN TRANSITIONS define progression. Each `next` entry: (
+to: <state_id>, on: <NL event>). Transitions are not robot actions. Terminal states
+use next: [].
+- Exactly one state is the `initial_state`.
+
+# Build Instructions
+- Use the record to build the FSM memory.
+- First, explicitly RE-STATE the pick-and-place and switch-off actions that the human
+performed in this record. Then, for EACH of those human actions, think concretely
+about HOW the robot could have taken that action over on the person's behalf (e.g., by
+bringing the object to the person earlier, or putting it away afterwards). Your rules
+should be built around these take-over opportunities –- do NOT invent rules for
+objects or actions the human did not interact with in this record.
+- Each rule's action MUST be one of the available robot tasks, copied exactly, and it
+MUST mirror an action the human performed in this record. Do NOT invent
+hypothetical actions.
+- For each rule, give one to three trigger candidates: different observable moments
+that came before the human did the action, within the check window, and that could
+tell the robot that now is the time to help. A moment further back than the check
+window always fails the check. Each candidate is a single moment of the record,
+written as a short self-contained statement so that it can be recognized again on
+other days. For an ongoing activity, the candidate is its start or its end (e.g.,
+"Person finishes vacuuming"). Give fewer than three when fewer are plausible.
+- If a trigger describes the person already in motion with an object (e.g., "reaches
+ for X", "picks up X", "pours X"), the object the person is in motion with MUST be
+DIFFERENT from the object the rule's action manipulates. Same-object triggers are
+forbidden.
+- Deployment caveat: when this memory is deployed, the human will act expecting the
+robot to help. So any rule whose trigger is phrased as "person picks up X", "person
+fetches X", or "person moves X" risks never firing –- the robot would have picked X
+up first, leaving no human action to observe. Each rule's trigger must describe an
+observable cue the human will produce REGARDLESS of robot assistance.
+- Identify the natural temporal phases of the routine from the record and order
+them as they appear.
+- Within each phase, identify EVERY moment where the robot could helpfully act and
+write one rule per such moment, using only observable cues –- a single phase
+typically holds multiple rules unless the phase is purely receptive (e.g. the human
+is actively eating).
+- Define transitions on observable events that mark the end of one phase and the
+start of the next.
+- If the person is holding or touching an object, the robot cannot perform any
+action on that object until the person sets it down.
+- Pick exactly one phase as `initial_state` (the one that appears at the start of
+the day), and ensure every `next.to` references an existing state id (terminal
+phases use `next: []`).
+
+# Output explanations
+- triggers: one to three trigger candidates. Each is a single short natural-language
+statement describing one visible moment that should cause this rule's action to fire.
+Each candidate MUST be self-contained, and the candidates of one rule must differ.
+- action: one of the available robot tasks, copied exactly. The tasks use the
+canonical forms `Pick up <object> and place it <location>.`, `Turn off the <object>.`
+and `Open the <object>.`
+
+# Output (JSON only, no markdown, no commentary)
+{
+  "initial_state": "<state_id>",
+  "states": [
+    {
+      "id": "<snake_case>",
+      "description": "<one-sentence>",
+      "rules": [
+        {"triggers": ["<NL statement>", ...], "action": "<available robot task>"},
+        ...
+      ],
+      "next": [{"to": "<state_id>", "on": "<NL event>"}]
+    }
+  ]
+}

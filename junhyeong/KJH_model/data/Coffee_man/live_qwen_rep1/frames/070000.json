@@ -1,0 +1,55 @@
+{
+ "time": "2026-11-03T07:00:00",
+ "frame": "070000",
+ "summary": "A person is standing at the kitchen counter, interacting with a cardboard box. They appear to be unpacking or organizing items from the box.",
+ "people": [
+  {
+   "location": "kitchen",
+   "activity": "unpacking a box"
+  }
+ ],
+ "objects": [
+  {
+   "label": "box",
+   "name": "cardboard box",
+   "on": "counter",
+   "attributes": {
+    "contents": "unknown"
+   },
+   "confidence": "high"
+  },
+  {
+   "label": "cup",
+   "name": "white mug",
+   "on": "counter",
+   "attributes": {},
+   "confidence": "high"
+  },
+  {
+   "label": "other",
+   "name": "pepper grinder",
+   "on": "counter",
+   "attributes": {},
+   "confidence": "high"
+  }
+ ],
+ "electronics": {
+  "observable": [
+   {
+    "device": "oven",
+    "name": "stainless steel oven",
+    "power": "off",
+    "door": "closed",
+    "confidence": "high"
+   },
+   {
+    "device": "range hood",
+    "name": "stainless steel range hood",
+    "power": "off",
+    "door": "unknown",
+    "confidence": "high"
+   }
+  ],
+  "unobservable": []
+ }
+}

@@ -1,0 +1,27 @@
+{
+  "purpose": "POMDP 설계 틀(Kostavelis 외, A POMDP Design Framework for Decision Making in Assistive Robots, HCI International 2017): 상태를 로봇 경계 수준(LoRA: High / Medium / Low)으로 묶고, 로봇 행동을 Task / Communication / Monitoring 세 묶음으로 나누고, 보상을 경계 수준의 변화로 정한다. 트리거·task·FSM 수정의 이득과 비용은 모두 이 표 하나에서 나온다(noonchi/lora.py).",
+  "levels": {
+    "H": "거주자가 도움이 필요한 단계. Coffee_man: 아침 커피를 마시는 중이고 다음 단계(컵 세척·냉장고 확인·요리) 준비가 안 됨",
+    "M": "로봇이 이미 관여한 단계. 트리거가 서서 도울 준비를 하거나 거주자에게 묻는 중",
+    "L": "도움이 필요 없는 단계. 로봇은 지켜보기만 한다(하루는 L에서 시작해 L로 끝난다)"
+  },
+  "reward": {
+    "H": {"H": 0.0,  "M": 0.5,  "L": 1.0},
+    "M": {"H": -0.5, "M": 0.0,  "L": 0.5},
+    "L": {"H": -1.0, "M": -0.25, "L": 0.0}
+  },
+  "groups": {
+    "task":          {"to_if_needed": "L", "to_if_not": "H"},
+    "communication": {"to_if_needed": "M", "to_if_not": "M"},
+    "monitoring":    {"to_if_needed": "L", "to_if_not": "M"}
+  },
+  "trigger": {"to_if_needed": "M", "to_if_not": "M"},
+  "notes": [
+    "reward[a][b]: 경계 수준이 a에서 b로 바뀔 때의 보상. 논문의 규칙대로 낮아지면 양수(H→L이 가장 큼), 높아지면 음수(L→H가 가장 작음), M→M은 고르게(0) 두었다. H→H, L→L(바뀌지 않음)도 0이다. 크기는 논문에 없어 사람이 정했다.",
+    "groups: 논문의 행동 묶음. task(A_T): 환경을 바꾸는 행동(허브로 가전 켜기·끄기·설정, 로봇이 물건을 옮기거나 문을 엶). communication(A_C): 거주자에게 묻거나 알림(FSM 수정 전 질문). monitoring(A_M): 환경을 바꾸지 않고 상태만 알아냄(허브 상태 조회, 로봇 촬영). 어느 묶음인지는 task_specs.json의 group에 적는다.",
+    "to_if_needed: 거주자가 그 행동을 원할 때(상태 H) 행동 뒤의 경계 수준. to_if_not: 원하지 않을 때(상태 L) 행동 뒤의 경계 수준. 이득 gain = reward[H][to_if_needed], 비용 cost = -reward[L][to_if_not]. 그래서 task 0.5문턱(1.0 / 1.0), monitoring 0.2문턱(1.0 / 0.25)이 된다(EV = P·gain - (1-P)·cost > 0 ⇔ P > cost / (gain + cost)).",
+    "원하지 않는 task는 거주자가 되돌려야 하므로 L→H(-1.0), 원하지 않는 monitoring·communication은 로봇이 괜히 관여한 것이므로 L→M(-0.25)으로 두었다. 냉장고 끄기처럼 위험한 task도 같은 L→H다(따로 더 무겁게 두지 않는다).",
+    "trigger: 트리거가 서면 로봇이 지켜보기(L)에서 관여(M)로 넘어간다. 상황이 맞으면 H→M(+0.5), 틀리면 L→M(-0.25). 그래서 트리거 문턱은 0.25 / 0.75 = 0.33이다.",
+    "communication의 비용(L→M, 0.25)이 FSM 수정 전 질문 한 번의 비용(ask_cost)이다."
+  ]
+}

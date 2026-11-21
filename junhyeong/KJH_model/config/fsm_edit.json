@@ -1,0 +1,19 @@
+{
+  "purpose": "눈치껏 FSM 수정(noonchi/fsm_edit.py): 반성 단계가 FSM 수정안을 내고, 각 수정안은 거주자가 그 규칙을 원한다는 믿음으로 할 만할 때만 반영한다. 모든 값은 사람이 정했다.",
+  "prior": {"designed_rule": 0.8, "proposed_rule": 0.5, "unrelated_rule": 0.05},
+  "response": {"accept_if_wanted": 0.9, "accept_if_unwanted": 0.1},
+  "self_done": {"detect": 0.85, "false_alarm": 0.05, "min_situation": 0.5},
+  "answer_accuracy": 0.95,
+  "questions_per_day": 1,
+  "pending_days": 7, 
+  "notes": [
+    "prior.designed_rule: 사람이 쓴 초기 FSM에 있는 규칙을 거주자가 원할 확률. prior.proposed_rule: 반성 단계에서 처음 제안된 신규 FSM 규칙의 확률(사전 정보 없어 사용자가 원하는 규칙인지 여부 반반).",
+    "Coffee_man: FSM에 없는 task 중 FSM의 다음 상태를 돕는 task는 proposed_rule x 그 상태까지 갈 확률(전이 p의 곱)로, 어느 상태와도 관계없는 task는 prior.unrelated_rule로 시작한다(noonchi/task_pomdp.py task_prior). 같은 믿음으로 task를 고르고 FSM도 고친다.",
+    "response.accept_if_wanted: 사용자가 원하는 규칙에 상황이 실제로 부합할 확률, 원하는 규칙도 가끔 거절되므로(0.9로 설정했기에) 거절 한 번은 약한 증거다. response.accept_if_unwanted: 거주자가 원하지는 않지만 로봇의 행동을 받아들일 확률. ",
+    "self_done.detect: 상황이 맞다고 본 경우(P >= min_situation), VLM의 행동 보고가 거주자의 행동이 맞을 경우. self_done.false_alarm: VLM의 행동 보고가 거주자의 행동가 어긋날 경우. / self_done.detect와 false_alarm은 이 폴더 config/sensor.json과 같은 값이다.",
+    "answer_accuracy: 로봇의 행동에 앞선 질문에 거주자가 Y/N으로 한 답이 실제 원하는 것과 일치할 확률.",
+    "ask_cost는 시나리오 자체의 수치에서 온다.",
+    "ask_cost: 거주자에게 질문 한 번을 하는 비용. 중요도와 같은 척도이며, 하룻밤에 최대 questions_per_day 횟수만큼 묻는다. 이 파일에 두지 않고 config/lora.json에서 온다: 질문은 communication 행동(A_C)이고, 원하지 않는 질문은 경계 수준 L→M(-0.25)이므로 ask_cost = 0.25(예전 0.1).",
+    "pending_days: 아직 반영되지 않은 수정안을 이 일수 동안 매일 밤 다시 검토한 뒤 버린다(반성 단계가 다시 제안할 수 있다)."
+  ]
+}

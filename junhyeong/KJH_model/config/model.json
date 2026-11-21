@@ -1,0 +1,31 @@
+{
+  "model": "Qwen3.5-27B",
+  "observer": {
+    "role": "video window (consecutive frames) -> observation record only; every decision is deterministic code",
+    "provider_default": "qwen",
+    "providers": {"qwen": "openrouter.json"},
+    "structured_output": "strict json_schema (noonchi/vision.py SCHEMA)",
+    "images_per_call": "one 2-second window: its consecutive frames are sent together"
+  },
+  "video": {
+    "fps": 12,
+    "window_seconds": 2,
+    "frame_width": 640
+  },
+  "decision": {
+    "accuracy": {"high": 0.9, "medium": 0.75, "low": 0.6}
+  },
+  "provenance": {
+    "pomdp": "Kaelbling, Littman, Cassandra 1998 (one-step lookahead only)",
+    "value_of_information": "Howard 1966",
+    "notes": [
+      "structured_output: 정해진 schema에 따라 output. (noonchi/vision.py SCHEMA)",
+      "모든 판단 값은 학습한 것이 아니라 사람이 정했다.",
+      "video.fps: 영상을 초당 12프레임 PNG로 뽑아 VLM에 보낸다. PNG는 임시 폴더에만 두고 저장하지 않는다.",
+      "video.window_seconds: 2초 창(12 x 2 = 24프레임)을 한 번에 보내고, 창마다 관찰 기록 .json 하나를 저장한다.",
+      "video.frame_width: 보내기 전 가로 크기(px, 세로는 비율 유지). 24장을 한 요청에 담으므로 원본 1280px보다 줄여 요청 크기와 토큰을 낮춘다. null이면 원본 크기.",
+      "decision.accuracy: schema에서의 objects.confidence 에 입력되는 값에 따른 확률 환산값. (high라면 100% 만큼 확신함)",
+      "Camera는 고정된 것으로 가정한다."
+    ]
+  }
+}

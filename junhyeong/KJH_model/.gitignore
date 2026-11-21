@@ -1,0 +1,6 @@
+.env
+__pycache__/
+runs/
+
+# 얼굴이 보이는 원본 영상은 올리지 않는다 (experiment README 규칙)
+data/Coffee_man/*.mp4

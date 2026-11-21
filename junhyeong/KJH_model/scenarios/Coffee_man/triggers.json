@@ -1,0 +1,18 @@
+{
+  "purpose": "FSM 규칙의 자연어 트리거를 시간 정보와 장면 사실에 대한 조건으로 옮긴 것이다. 그래서 그 사실들에 대한 믿음으로 트리거를 세울 수 있다(noonchi/trigger_pomdp.py). 트리거가 섰을 때 어떤 task를 요청할지는 noonchi/task_pomdp.py가 FSM과 믿음으로 정한다.",
+  "activities": {
+    "drinking coffee": [["drink", "sip"], ["coffee", "mug", "cup"]]
+  },
+  "conditions": [
+    {"id": "morning_coffee", "state": "morning_coffee",
+     "rule": "The person is drinking coffee in the kitchen and it is observed in morning(06:00~08:00).",
+     "when": [{"time": ["06:00", "08:00"]}, {"person_at": ["kitchen"]}, {"activity": "drinking coffee"}]}
+  ],
+  "notes": [
+    "rule은 initial_fsm.json 규칙의 트리거 문장과 똑같아야 한다. FSM이 바뀔 때마다(규칙 추가·삭제, 문장 수정) compile_triggers가 다시 검증하고, 맞는 조건이 없는 규칙은 트리거로 세우지 않는다(문장이 바뀌면 사람이 조건을 다시 옮긴다).",
+    "time: 영상 시작 시각(scenario.json start) + 창 위치로 코드가 정한 시각이 06:00 이상 08:00 미만이면 참. 시간은 VLM에 묻지 않으므로 잡음이 없다(만족 1, 아니면 0).",
+    "activity: VLM의 people.activity 문장을 단어 묶음으로 분류한다. drinking coffee = [drink, sip] 중 하나 + [coffee, mug, cup] 중 하나. 'holding a mug', 'pouring coffee'처럼 마시는 동작이 없으면 other.",
+    "person_at: 주방. 이 영상은 주방과 식사 공간이 한 화면에 보여서 VLM이 둘을 바꿔 말할 수 있다(config/sensor.json place_alias).",
+    "P(트리거) * gain - (1 - P) * false_fire > 0이면 트리거를 세운다. gain·false_fire는 config/lora.json의 경계 수준 보상에서 온다: 상황이 맞으면 H→M(+0.5), 틀리면 L→M(-0.25). 그래서 문턱은 P > 0.33이다."
+  ]
+}
