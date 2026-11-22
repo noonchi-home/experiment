@@ -1,0 +1,43 @@
+# 화면·모델 출처와 라이선스
+
+이 저장소의 코드는 AGPL-3.0(뿌리 `LICENSE`)이다. 아래는 다른 라이선스를 따르는 자료다.
+
+## PAM 논문 프롬프트
+
+- `src/brain/pam/prompts/paper/`의 일곱 프롬프트는 Dohyun Lee, Minho Park 외, An Agentic Framework for Proactive Robots with Procedural Assistance Memory(arXiv:2610.21211) 부록 E·F 원문이다. 논문 라이선스 CC BY 4.0을 따른다. 자세한 출처는 `src/brain/pam/THIRD_PARTY.md`.
+
+## 글꼴
+
+- Noto Sans KR Variable: npm `@fontsource-variable/noto-sans-kr` 5.3.1, SIL Open Font License 1.1.
+  - 대시보드·설정·폰 화면은 `ui`가 꾸러미를 묶어 내준다. 폰 인코딩 워커는 `ui/src/phone/core/font-faces.js` 목록으로 같은 파일을 넣는다. 외부 CDN을 쓰지 않는다.
+  - 라이선스 글: `ui/public/fonts/OFL-noto-sans-kr.txt`.
+
+## 브랜드 그림
+
+- 마스코트 전신·얼굴: noonchi-home/wiki `site/public/brand/`의 팀 브랜드 그림. 만든 파일과 쓰는 법은 `ui/public/brand/README.md`.
+
+## 화면 부품
+
+- `ui/src/components/ui/`의 부품은 21st.dev에서 받은 코드다. 파일마다 맨 위 출처 줄에 21st.dev 이름·id·작성자/slug와 바꾼 것을 적는다.
+
+## 모델
+
+관찰 흐름의 감지·관절 모델이다. 서버 이미지에 그대로 들어간다(`deploy/Dockerfile`이 sha256을 확인한다).
+
+| 파일 | 원본 가중치 | 라이선스 | sha256 |
+|---|---|---|---|
+| `models/yolo26s-seg.onnx` | Ultralytics YOLO26s-seg `yolo26s-seg.pt` (`https://github.com/ultralytics/assets/releases/download/v8.4.0/yolo26s-seg.pt`, sha256 `3da1d83e31caec96f9300eb4064f4f62882c133c7c264d63dfe61a7c197837a4`) | AGPL-3.0 | `705f24bb2c5aa0a25921c82768054e5792a59264b3a6d5066c6fbad57afb7a32` |
+| `models/yolo26n-pose.onnx` | Ultralytics YOLO26n-pose `yolo26n-pose.pt` (`https://github.com/ultralytics/assets/releases/download/v8.4.0/yolo26n-pose.pt`, sha256 `eb3bb8268828aeaf515cec23a4bfafd793944a86fe9af94ba7823609c14522a9`) | AGPL-3.0 | `dd0e47a03ea0f2b9e766b038559de14fb1dd5e51d8dfb331051740998628d91e` |
+
+- YOLO26 두 파일은 AGPL-3.0이다(<https://ultralytics.com/license>). 이 저장소로 서버를 남에게 제공하면 AGPL-3.0의 소스 공개 조건이 따라온다.
+- 내보낸 환경: ultralytics 8.4.208, onnx 1.23.2, onnxslim 0.1.99, torch 2.14.1+cpu(감지 yolo26s-seg)·2.15.0+cpu(관절 yolo26n-pose). 설정: `format=onnx imgsz=640 opset=17 simplify=True dynamic=False batch=1`, `nms`는 주지 않음(바깥 NMS, ONNX 메타데이터 `end2end=False`). 그래서 출력이 NMS 전 `[1,116,8400]`(상자 4 + 클래스 80 + 마스크 계수 32)과 프로토 `[1,32,160,160]`, 관절 `[1,56,8400]`이고, 서버가 NMS를 한다(`src/observe/detector.ts`).
+- 다시 내보내기(PC에서, 저장소 밖 폴더):
+
+  ```bash
+  python -m venv .venv && .venv/Scripts/pip install ultralytics==8.4.208 onnx==1.23.2 onnxslim==0.1.99 onnxruntime
+  .venv/Scripts/yolo export model=yolo26s-seg.pt format=onnx imgsz=640 opset=17 simplify=True
+  .venv/Scripts/yolo export model=yolo26n-pose.pt format=onnx imgsz=640 opset=17 simplify=True
+  npx tsx scripts/brain-yolo-fetch.ts --from <그 폴더>   # 저장소에서: sha256이 표와 같을 때만 models/에 넣는다
+  ```
+
+  ONNX에는 내보낸 시각이 들어가서 다시 내보내면 sha256이 달라진다. 새 파일을 쓰려면 `src/observe/detector.ts` 표와 `deploy/Dockerfile` 확인 줄의 sha256을 새 값으로 바꾼 뒤 `--from`을 돌린다. `npx tsx scripts/brain-yolo-fetch.ts`는 지금 `models/` 파일이 표와 같은지 본다.

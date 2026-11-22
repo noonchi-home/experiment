@@ -1,0 +1,29 @@
+{
+  "habits": [
+    {
+      "id": "habit:taking_medicine",
+      "activity": "taking_medicine",
+      "action": "약과 물 가져다주기",
+      "label": "약 먹기",
+      "minute": 1370,
+      "windowMin": 30,
+      "days": 2,
+      "afterMeal": false,
+      "importance": "essential"
+    }
+  ],
+  "events": [
+    {
+      "day": "2026-11-20",
+      "minute": 1370,
+      "activity": "taking_medicine",
+      "afterMeal": false
+    },
+    {
+      "day": "2026-11-21",
+      "minute": 1370,
+      "activity": "taking_medicine",
+      "afterMeal": false
+    }
+  ]
+}

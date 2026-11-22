@@ -1,0 +1,51 @@
+{
+  "name": "twin-home",
+  "version": "0.1.0",
+  "private": true,
+  "license": "AGPL-3.0-only",
+  "description": "twin-studio 아파트 트윈의 가전을 가상 Matter 기기로 띄우고 에이전트로 제어한다",
+  "type": "module",
+  "engines": {
+    "node": ">=22.15 <23"
+  },
+  "scripts": {
+    "prestart": "npm run ui:build",
+    "start": "tsx src/server/main.ts",
+    "predev": "npm run ui:build",
+    "dev": "tsx watch src/server/main.ts",
+    "test": "vitest run && npm --prefix ui test",
+    "typecheck": "tsc --noEmit",
+    "lint": "tsx scripts/lint-ui-copy.ts && tsx scripts/lint-ui-color.ts && tsx scripts/lint-ui-parts.ts && tsx scripts/lint-ui-type.ts && tsx scripts/lint-domains.ts && tsx scripts/lint-text-cut.ts",
+    "tokens": "tsx scripts/design-tokens.ts",
+    "demo": "tsx scripts/demo.ts",
+    "mcp": "tsx src/agent/mcp/server.ts",
+    "ui:dev": "npm --prefix ui run dev",
+    "ui:build": "npm --prefix ui run build",
+    "ui:test": "npm --prefix ui test",
+    "heavy": "tsx scripts/twin3d/run-heavy.ts",
+    "dev3d": "tsx scripts/twin3d/dev.ts",
+    "capture": "tsx scripts/twin3d/capture.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.133.0",
+    "@matter/main": "^0.17.9",
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "dotenv": "^18.0.7",
+    "jpeg-js": "^0.4.4",
+    "onnxruntime-node": "^1.31.1",
+    "openai": "^7.32.0",
+    "redis": "6.3.1",
+    "sharp": "^0.35.5",
+    "tsx": "^4.23.15",
+    "ws": "^8.22.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/ws": "^8.18.2",
+    "rolldown": "^1.2.13",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3",
+    "yaml": "^2.9.1"
+  }
+}

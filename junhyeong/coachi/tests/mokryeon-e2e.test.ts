@@ -1,0 +1,217 @@
+// 한양목련 처음부터 끝까지(가짜 서버, 시험 모드): 기준점을 맞춘 폰 엔진 프레임 → YOLO(대본)·VLM(가짜 OpenAI 호환 서버, 컵 자리 대본)
+// → World State(컵은 거실·복도 식탁 위) → PAM(시험용 PAM 자리: 컵 치우기) → 에이전트 계획 모드(가짜 서버 도구 호출) → 처음 하는 일이라 실제 폰에 승인 질문 → 「승인」
+// → 실제 폰 단계 명령 다섯(「완료」 단추·VLM 컵 자리·말 「다 했어」로 한 단계씩) → 완료. 대시보드 말풍선 글·계획 단계·상자, 승인 기억 파일.
+// 맞춘 눈은 식탁·싱크대에서 멀리 두어 이동 단계는 「완료」나 말로 넘긴다.
+import { mkdtempSync, readFileSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
+import { afterEach, describe, expect, it } from "vitest";
+import type WebSocket from "ws";
+import { startFakeOpenAI, type FakeServer } from "../scripts/fake-openai.js";
+import { encodeFramePacket } from "../src/phone/packet.js";
+import { APPROVAL_TEXT, PEEK_TEXT } from "../src/act/labels.js";
+import { startServer, type RunningServer } from "../src/server/start.js";
+import { ScriptedDetector, det } from "./helpers/detectors.js";
+import type { Detection } from "../src/contract/observe.js";
+import { startFakePamLlm, type FakePamLlm, pamLlmEnv } from "./helpers/pam.js";
+import { CUP_SCRIPTS, plannerRespond } from "./helpers/planner.js";
+import { heardAtOf, openPhone, openWebSocket } from "./helpers/ws.js";
+import { alignOnServer } from "./helpers/align.js";
+import { useLearnedMemory } from "./helpers/memory.js";
+import { topLook } from "./helpers/top-look.js";
+
+type Msg = Record<string, any>;
+let srv: RunningServer | undefined;
+let fake: FakeServer | undefined;
+let pam: FakePamLlm | undefined;
+const sockets: WebSocket[] = [];
+afterEach(async () => {
+  for (const s of sockets.splice(0)) s.close();
+  await srv?.close();
+  srv = undefined;
+  await fake?.close();
+  fake = undefined;
+  await pam?.close();
+  pam = undefined;
+});
+
+const inbox = (list: Msg[]) => (ws: WebSocket) => ws.on("message", (d, bin) => { if (!bin) list.push(JSON.parse(String(d)) as Msg); });
+
+// 위치 맞춤: 눈 자리에 시작 위치를 저장하고 「여기서 시작」 + 그 자리의 벽·바닥 점(AR 점 = 평면 점, 회전 0, 이동 0, tests/helpers/align.ts)
+// 폰 눈: 식탁 가운데([9.9612, 3.9242], 윗면 0.75 m)에서 1.5 m 떨어진 거실에서 높이 1.5 m로 +x를 보고 식탁 윗면 가운데를 향해 숙인다.
+// 식탁·싱크대에서 1.2 m 밖이라 이동 단계는 눈 자리로 넘어가지 않는다. 90° 시야 투영(열 우선, tests/act-track.test.ts와 같다)
+const PROJECTION = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, -1.0002, -1, 0, 0, -0.020002, 0];
+const mul = (a: number[], b: number[]) => [a[3]! * b[0]! + a[0]! * b[3]! + a[1]! * b[2]! - a[2]! * b[1]!, a[3]! * b[1]! - a[0]! * b[2]! + a[1]! * b[3]! + a[2]! * b[0]!, a[3]! * b[2]! + a[0]! * b[1]! - a[1]! * b[0]! + a[2]! * b[3]!, a[3]! * b[3]! - a[0]! * b[0]! - a[1]! * b[1]! - a[2]! * b[2]!];
+const PITCH = Math.atan2(1.5 - 0.75, 1.5);
+const ORIENTATION = mul([0, Math.sin(-Math.PI / 4), 0, Math.cos(-Math.PI / 4)], [Math.sin(-PITCH / 2), 0, 0, Math.cos(-PITCH / 2)]) as [number, number, number, number];
+const EYE: [number, number, number] = [9.9612 - 1.5, 1.5, 3.9242];
+// 상자 아래 가운데가 480×360 화면 한가운데
+const CUP_BOX: [number, number, number, number] = [220, 160, 40, 20];
+const TABLE_ID = "dining_table_978b20c7";
+const PERSON = det("person", 0.9, [40, 40, 120, 280]);
+
+describe("한양목련 처음부터 끝까지", () => {
+  it("컵 치우기를 처음 하면 실제 폰에 승인·거절 두 단추로 묻고, 「승인」 뒤 다섯 단계를 돌며, 대시보드는 판단·명령 글만 받고, 다음에는 묻지 않는다", async () => {
+    let cupPlace = "on_table";
+    // 떠남 화살표(컵 치우기)는 직전 상태 drinking(먹거나 마시는 중)에서만 나간다: 사람이 먹다가 떠난다.
+    // 먹는 중은 컵을 쓰지 않아 미리 세운 목표가 서지 않는다(목표 실행은 승인을 묻지 않아 이 시험이 보는 승인 길을 지나지 않는다)
+    const personAct = "eating";
+    const people: Detection[] = [];
+    // 컵 안 보기: 컵 입구 위에서 내려다본 사진(진짜 JPEG)·잘라 키운 사진의 그릇·위에서 보기 답(비어 있음)
+    const top = topLook();
+    fake = await startFakeOpenAI({
+      reply: (body) => {
+        const seen = top.reply(body);
+        if (seen) return seen;
+        if (body?.response_format?.json_schema?.name !== "scene_observation") return null;
+        const parts = (body.messages as { role: string; content: unknown }[]).filter((m) => m.role === "user").flatMap((m) => (Array.isArray(m.content) ? m.content : [{ text: m.content }]));
+        const text = parts.map((p: { text?: unknown }) => (typeof p.text === "string" ? p.text : "")).join("\n");
+        const dets = JSON.parse(/Detections: (\[.*\])/.exec(text)?.[1] ?? "[]") as { id: string; class: string }[];
+        return JSON.stringify({ scene: "kitchen", observations: dets.map((d) => ({ object_id: d.id, state: d.class === "person" ? personAct : cupPlace })), summary: "컵" });
+      },
+      // 에이전트 계획 모드: 같은 가짜 서버가 컵 치우기 도구 호출(지금 서버와 같은 네 단계)을 낸다
+      respond: plannerRespond(CUP_SCRIPTS),
+    });
+    // PAM은 기본 주기(5초)로 불린다. 관찰 텍스트에 컵이 있으면 컵 치우기, 없으면 대기
+    pam = await startFakePamLlm({ predict: (b) => (/컵 cup_\d/.test(String(b.observation_text))
+      ? { observation: "빈 컵이 식탁에 남음", reasoning: "자리를 비워 컵을 치운다", task_index: 0 } : { observation: "컵 없음", reasoning: "할 일 없음", task_index: -1 }) });
+    const runtimeDir = mkdtempSync(join(tmpdir(), "rt-"));
+    // 치우기를 보는 시험은 배운 뒤 기억(합성 3일째부터의 로봇 FSM)으로 돈다. seed 기억이면 떠날 때 묻는다
+    useLearnedMemory(runtimeDir);
+    srv = await startServer({
+      env: { HUB: "memory", PORT: "0", HOME_ID: "mokryeon_180b", RUNTIME_DIR: runtimeDir, PHONE_PORT: "0", PHONE_HOST: "127.0.0.1",
+        BRAIN: "1", VLM_BASE_URL: `${fake.url}/v1`, ...pamLlmEnv(pam), OPENAI_API_KEY: "fake-key", OPENAI_BASE_URL: `${fake.url}/v1` },
+      brain: { detector: new ScriptedDetector(top.detect(() => [...people, det("cup", 0.9, CUP_BOX, 41)])) }, log: () => {},
+      // 처음 하는 일 승인 길을 끝까지 본다: 처음 하는 일 묻기를 켜 본다(기본 끔, 기본 흐름은 tests/noonchi-e2e.test.ts)
+      askFirst: true,
+    });
+    const dash: Msg[] = [];
+    sockets.push(await openWebSocket(`${srv.url.replace(/^http/, "ws")}/events`, { setup: inbox(dash) }));
+    const phoneUrl = new URL(srv.phoneUrls[0]!);
+    const phone: Msg[] = [];
+    const ws = await openPhone(`ws://${phoneUrl.host}/phone/events`, { options: { origin: phoneUrl.origin }, setup: inbox(phone) });
+    sockets.push(ws);
+    const until = async (ok: () => boolean, what: string) => {
+      for (const end = Date.now() + 5000; Date.now() < end; await new Promise((r) => setTimeout(r, 20))) if (ok()) return;
+      throw new Error(`5초 안에 오지 않음: ${what}`);
+    };
+    await alignOnServer(srv.url, (t) => ws.send(t), join(srv.twin.dir, "homes", "mokryeon_180b", "scene.json"), [EYE[0], EYE[2]]);
+    await until(() => phone.some((m) => m.type === "status" && m.aligned), "맞춤");
+    // 맞춘 눈 = 클로이드 자리(계획 경로의 출발점)
+    ws.send(JSON.stringify({ type: "pose", position: EYE, orientation: ORIENTATION, tracking: "ok" }));
+    await until(() => dash.some((m) => m.type === "eye"), "눈");
+    let n = 0;
+    /** 컵 안 보기 동안 폰을 든 컵 자리(트윈 = AR). 아니면 null(맞춘 눈에서 식탁을 본다). */
+    let above: [number, number, number] | null = null;
+    // 조건이 맞을 때까지 엔진 프레임을 150ms마다 보낸다(판단 뒤에도 대상을 다시 보도록, 최대 15초)
+    const pump = async (done: () => boolean) => {
+      for (const end = Date.now() + 15_000; Date.now() < end; ) {
+        if (done()) return;
+        if (above) {
+          ws.send(top.packet(above));
+          await new Promise((r) => setTimeout(r, 150));
+          continue;
+        }
+        ws.send(encodeFramePacket({ kind: "engine", width: 480, height: 360, position: EYE, orientation: ORIENTATION, tracking: "ok", projection: PROJECTION,
+          captured_at: Date.now(), time_err_ms: 0 }, Buffer.from([0xff, 0xd8, n++ % 256, n >> 8])));
+        await new Promise((r) => setTimeout(r, 150));
+      }
+      const ran = dash.filter((m) => m.type === "brain" && m.event.type === "execution").slice(-3).map((m) => m.event.text);
+      throw new Error(`조건이 15초 안에 맞지 않음 · 실제 폰 ${JSON.stringify(phone.filter((m) => m.type === "command").slice(-2))} · 실행 ${JSON.stringify(ran)}`);
+    };
+    const spoken = () => phone.filter((m) => m.type === "command" && m.speak);
+    const said = (text: string) => spoken().find((m) => m.text === text);
+    /** 사람이 보여 판단이 마시는 중 상태로 본 뒤 떠난다. */
+    const visitThenLeave = async () => {
+      const from = dash.length;
+      people.push(PERSON);
+      await pump(() => dash.slice(from).some((m) => m.type === "brain" && m.event.type === "decision" && m.event.fsm?.state === "drinking"));
+      people.splice(0);
+    };
+
+    // 1 판단 → 처음 하는 일이라 실제 폰에 승인 질문(답 둘). 계획은 아직 planned
+    const ask = APPROVAL_TEXT.ask("컵 치우기");
+    await visitThenLeave();
+    await pump(() => !!said(ask));
+    const asked = said(ask)!;
+    const planId = asked.id as string;
+    expect(asked).toEqual({
+      type: "command", id: expect.stringMatching(/^plan:pam-\d+$/), step: `${planId}:approve`, text: "컵 치우기를 할까요?", vision: null,
+      choices: [{ id: "approve", label: "승인" }, { id: "reject", label: "거절" }], target: null, speak: true, grade: "question",
+    });
+    const waiting = dash.filter((m) => m.type === "plan" && m.plan?.id === planId).at(-1)!.plan;
+    expect(waiting.status).toBe("planned");
+    expect(waiting.path.length).toBeGreaterThan(1);
+    const cup = dash.filter((m) => m.type === "world").at(-1)!.world.objects.find((o: Msg) => o.cls === "cup");
+    expect(cup).toMatchObject({ surface: TABLE_ID, surface_label: "거실·복도 식탁" });
+
+    // 2 「승인」 → 다섯 단계
+    ws.send(JSON.stringify({ type: "answer", id: planId, step: asked.step, choice: "approve" }));
+    await pump(() => !!said("식탁으로 가 주세요"));
+    const first = said("식탁으로 가 주세요")!;
+    expect(first).toMatchObject({ id: planId, step: `${planId}:1`, choices: [{ id: "done", label: "완료" }], target: { id: TABLE_ID } });
+    ws.send(JSON.stringify({ type: "answer", id: planId, step: first.step, choice: "done" }));
+    // 컵 안 보기(늘 한다): 단추 없이 위에서 본 사진으로 넘긴다. 폰을 컵 입구 위로 들어 내려다본다 → 위에서 보기가 비어 있음으로 보면 집기
+    await pump(() => !!said(PEEK_TEXT.above("컵")));
+    expect(said(PEEK_TEXT.above("컵"))).toMatchObject({ id: planId, step: `${planId}:2`, kind: "do", view: "above", choices: [] });
+    above = dash.filter((m) => m.type === "world").at(-1)!.world.objects.find((o: Msg) => o.cls === "cup").position;
+    await pump(() => !!said("컵을 들어 주세요"));
+    above = null;
+    expect(said("컵을 들어 주세요")).toMatchObject({ id: planId, step: `${planId}:3`, vision: "컵 · 식탁 위" });
+    // 메시지 상자: 안을 확인한 뒤 바로 집기 줄
+    await pump(() => dash.some((m) => m.type === "say" && m.text === "컵을 들게요."));
+    cupPlace = "in_hand";
+    await pump(() => !!said("싱크대로 가 주세요"));
+    expect(said("싱크대로 가 주세요")).toMatchObject({ id: planId, step: `${planId}:4`, target: { id: "sink_counter_kitchen" } });
+    ws.send(JSON.stringify({ type: "say", text: "다 했어", at: heardAtOf(phone) }));
+    await pump(() => !!said("컵을 싱크대에 넣어 주세요"));
+    expect(said("컵을 싱크대에 넣어 주세요")).toMatchObject({ id: planId, step: `${planId}:5` });
+    cupPlace = "in_sink";
+    await pump(() => phone.some((m) => m.type === "command_clear" && m.id === planId));
+    await pump(() => dash.some((m) => m.type === "plan" && m.plan?.id === planId && m.plan.status === "done") && dash.some((m) => m.type === "say" && m.text === "컵을 다 치웠어요."));
+    // 계획을 마치면 실제 폰 명령 줄에도 완료 문장(다음 타이머)
+    await pump(() => !!said("컵을 다 치웠어요."));
+    expect(said("컵을 다 치웠어요.")).toMatchObject({ id: `done:${planId}`, choices: [] });
+    expect(spoken().filter((m) => !String(m.id).startsWith("dock:")).map((m) => m.text)).toEqual(["컵 치우기를 할까요?", "식탁으로 가 주세요", PEEK_TEXT.above("컵"), "컵을 들어 주세요", "싱크대로 가 주세요", "컵을 싱크대에 넣어 주세요", "컵을 다 치웠어요."]);
+    // 계획이 끝나면 사용자 위치를 확인한 뒤 충전 자리(dock.json)로 돌아간다. 맞추기 전이라 폰 눈을 몰라 「완료」로 닿음을 알린다
+    await pump(() => spoken().some((m) => m.text === "충전 자리로 가 주세요"));
+    const dock = spoken().find((m) => m.text === "충전 자리로 가 주세요")!;
+    expect(dock).toMatchObject({ id: "dock:1", step: "dock:1:1", kind: "go", near_m: 1.2, choices: [{ id: "done", label: "완료" }], target: { id: "dock", label: "충전 자리" } });
+    ws.send(JSON.stringify({ type: "answer", id: dock.id, step: dock.step, choice: "done" }));
+    await pump(() => phone.some((m) => m.type === "command_clear" && m.id === "dock:1"));
+
+    // 3 대시보드: 판단·명령 글 차례, 계획 단계 1→5, 상자 있는 observe. 승인 질문은 어디에도 없다
+    const says = dash.filter((m) => m.type === "say").map((m) => m.text as string);
+    expect(says[0]).toBe("지켜보고 있어요.");
+    expect(says.every((t, i) => i === 0 || t !== says[i - 1])).toBe(true);
+    const decided = says.findIndex((t) => t.endsWith("컵을 치울게요."));
+    const cleared = says.indexOf("컵을 다 치웠어요.");
+    expect(decided).toBeGreaterThan(0);
+    for (const t of says.slice(0, decided)) expect(t).toMatch(/^(지켜보고 있어요\.|.+[을를] 보고 있어요\.)$/);
+    expect(says.slice(decided, cleared + 1)).toEqual([
+      "거실·복도 식탁 컵을 치울게요.", "식탁으로 갈게요.", "컵 안을 볼게요.", "컵을 들게요.", "싱크대로 갈게요.", "컵을 싱크대에 넣을게요.", "컵을 다 치웠어요.",
+    ]);
+    const progress = dash.filter((m) => m.type === "plan" && m.plan?.id === planId).map((m) => m.plan.steps.map((s: Msg) => s.status).join(","));
+    expect(progress).toEqual([
+      "pending,pending,pending,pending,pending", "active,pending,pending,pending,pending", "done,active,pending,pending,pending",
+      "done,done,active,pending,pending", "done,done,done,active,pending", "done,done,done,done,active", "done,done,done,done,done",
+    ]);
+    expect(dash.some((m) => m.type === "seen" && m.shapes.length > 0)).toBe(true);
+    expect(dash.some((m) => m.type === "brain" && m.event.type === "observe" && "boxes" in m.event)).toBe(false);
+    const shown = JSON.stringify(dash);
+    for (const word of [ask, "할까요", "승인", "거절", ":approve"]) expect(shown).not.toContain(word);
+    // 미니맵 자막(phone_command)은 단계 명령만 싣고 승인 질문은 싣지 않는다(대시보드에는 승인을 보이지 않는다)
+    expect(dash.filter((m) => m.type === "phone_command").map((m) => m.text)).toEqual(expect.arrayContaining(["식탁으로 가 주세요", PEEK_TEXT.above("컵"), "컵을 들어 주세요", "싱크대로 가 주세요", "컵을 싱크대에 넣어 주세요"]));
+
+    // 4 답은 기억 파일에 남고, 다음 판단은 묻지 않고 바로 첫 명령
+    const memory = JSON.parse(readFileSync(join(runtimeDir, "homes", "mokryeon_180b", "approvals.json"), "utf8")) as Record<string, unknown>;
+    expect(memory).toEqual({ always: { "task:컵 치우기": expect.any(String) } });
+    cupPlace = "on_table";
+    await visitThenLeave();
+    await pump(() => spoken().some((m) => m.id !== planId && m.text === "식탁으로 가 주세요"));
+    // 앞 계획의 완료 문장(done:)과 충전 자리 명령(dock:)은 다음 계획 명령이 아니다
+    const next = spoken().filter((m) => m.id !== planId && !String(m.id).startsWith("dock:") && !String(m.id).startsWith("done:"));
+    expect(next.map((m) => m.text)).toEqual(["식탁으로 가 주세요"]);
+    expect(phone.filter((m) => m.type === "command" && m.text === ask)).toHaveLength(1);
+  }, 90_000);
+});

@@ -1,0 +1,64 @@
+// 가까이 보기 시험 대역: 가짜 OpenAI(scripts/fake-openai.ts)의 VLM 답, 보기 담당 시험의 가까이 보기 자리(testCloser).
+import type { CloserResult } from "../../src/contract/events.js";
+import type { LookSpot } from "../../src/observe/crop.js";
+import { CLOSER_NOTE } from "../../src/observe/scene.js";
+
+const textOf = (content: unknown): string => typeof content === "string" ? content
+  : Array.isArray(content) ? content.map((p: { type?: string; text?: string }) => (p.type === "text" ? p.text ?? "" : "")).join("\n") : "";
+
+/** 가까이 본 사진의 요약. */
+export const CLOSER_SUMMARY = "가까이 본 장면";
+
+/** 가짜 OpenAI reply: CLOSER_NOTE가 든 장면 요청이면 감지마다 state를 답하고(요약 CLOSER_SUMMARY), 아니면 null(기본 답).
+ *  objects를 주면 그 VLM 물건을 함께 답하고 물건마다 같은 state를 단다. 주지 않으면 가짜 서버가 물건 감지마다 그 감지와 이은 물건을 더한다(scripts/fake-openai.ts). */
+export function closerVlmReply(state = "in_sink", objects?: { id: string; cls: string; box: { x: number; y: number; w: number; h: number }; det: string | null }[]): (body: any) => string | null {
+  return (body) => {
+    if (body?.response_format?.json_schema?.name !== "scene_observation") return null;
+    const text = (Array.isArray(body.messages) ? body.messages : []).map((m: { content: unknown }) => textOf(m.content)).join("\n");
+    if (!text.includes(CLOSER_NOTE)) return null;
+    const m = /Detections: (\[.*\])/.exec(text);
+    const dets: { id: string }[] = m ? JSON.parse(m[1]!) : [];
+    const said = [...dets.map((d) => d.id), ...(objects ?? []).map((o) => o.id)];
+    return JSON.stringify({ scene: "kitchen", observations: said.map((object_id) => ({ object_id, state })), ...(objects ? { objects } : {}), summary: CLOSER_SUMMARY });
+  };
+}
+
+/** 싱크대에서 컵 하나를 찾은 가까이 보기 결과(VLM 답 싱크대 안). */
+export const CLOSER_FOUND: CloserResult = {
+  ok: true, frame_id: "e3.c1", captured_at_ms: 6000, crop: [120, 90, 240, 180], frames: 3,
+  found: [{ id: "cup_1", cls: "cup", score: 0.72, facts: ["in_sink"] }], summary: CLOSER_SUMMARY, vlm: "ok",
+};
+
+export interface TestCloser {
+  /** 받은 자리와 신호(부른 순서). */
+  calls: { spot: LookSpot; signal: AbortSignal | undefined }[];
+  /** 다음 부름이 돌려줄 결과. */
+  result: CloserResult;
+  /** 다음 부름부터 release까지 답을 붙잡는다. */
+  hold(): void;
+  /** 붙잡은 부름에 r(없으면 result)로 답하고 붙잡기를 그만둔다. */
+  release(r?: CloserResult): void;
+  closer(spot: LookSpot, signal?: AbortSignal): Promise<CloserResult>;
+}
+
+/** 보기 담당(src/act/look.ts) 시험의 가까이 보기 자리: 받은 자리·신호를 남기고 정한 결과를 돌려준다. */
+export function testCloser(result: CloserResult = CLOSER_FOUND): TestCloser {
+  let holding = false;
+  let held: ((r?: CloserResult) => void) | null = null;
+  const t: TestCloser = {
+    calls: [], result,
+    hold: () => { holding = true; },
+    release: (r) => {
+      holding = false;
+      const h = held;
+      held = null;
+      h?.(r);
+    },
+    closer: (spot, signal) => {
+      t.calls.push({ spot, signal });
+      if (!holding) return Promise.resolve(t.result);
+      return new Promise((ok) => { held = (r) => ok(r ?? t.result); });
+    },
+  };
+  return t;
+}

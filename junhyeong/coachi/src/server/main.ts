@@ -1,0 +1,36 @@
+// npm start: twin-studio 데이터를 읽고 허브(기본 HUB=matter)·정책·에이전트·서버를 띄운다.
+// 설정(고른 집·가전 신호 출처·끝냄)은 RUNTIME_DIR(기본 runtime/)에 저장하고 다음 시작 때 읽는다. 저장이 없으면 HOME_ID 집.
+// Matter network 커미셔닝이 제한 시간(MATTER_COMMISSION_TIMEOUT_MS, 기본 30초) 안에 안 되면 local 전송으로 대신 뜬다.
+
+// 먼저: .env를 다른 모듈을 읽기 전에 넣는다(NOONCHI_PROFILE처럼 모듈을 읽을 때 정하는 값)
+import "./env-first.js";
+import { existsSync } from "node:fs";
+import { findServedPhoneUrls, runCommand } from "../phone/index.js";
+import { installShutdown } from "./shutdown.js";
+import { startServer } from "./start.js";
+
+async function main(): Promise<void> {
+  // tailscale serve로 폰 포트를 https로 열어 두었으면 그 주소를 폰 주소 앞에 둔다(없거나 실패하면 와이파이 주소만)
+  const srv = await startServer({ env: process.env, persistSetup: true, servedPhoneUrls: (port) => findServedPhoneUrls(port, runCommand) });
+  // 서버 줄을 찍자마자 온 SIGTERM도 받도록 줄을 찍기 전에 건다
+  installShutdown(process, () => srv.close(), { log: console.log });
+  const { url, hubKind, transport, agent } = srv;
+  const provider = agent.provider;
+
+  console.log(`twin-home 서버: ${url}  (허브 ${hubKind}${transport ? `/${transport}` : ""}, 에이전트 ${provider.name}${provider.model ? `/${provider.model}` : ""})`);
+  console.log(`  웹 화면   ${url}/  (설정을 안 끝냈으면 ${url}/setup/ 으로 가요)`);
+  console.log(`  WS 이벤트 ${url.replace(/^http/, "ws")}/events`);
+  console.log(`  3D 트윈   ${existsSync(srv.twinDir) ? `${url}/twin/` : `(아직 없음: ${srv.twinDir})`}`);
+  for (const phoneUrl of srv.phoneUrls) {
+    const secure = phoneUrl.startsWith("https://");
+    console.log(`  폰 AR     ${phoneUrl}${secure ? "" : `  (폰 크롬 chrome://flags 'Insecure origins treated as secure'에 ${new URL(phoneUrl).origin} 추가)`}`);
+  }
+  if (hubKind === "matter" && transport === "network") {
+    console.log(`  Matter    다른 컨트롤러(Home Assistant 등) 추가: curl -X POST ${url}/api/matter/commissioning-window 후 나온 페어링 코드 입력(README "Matter 페어링")`);
+  }
+}
+
+main().catch((e) => {
+  console.error(`twin-home 서버를 시작하지 못했습니다: ${(e as Error).message}`);
+  process.exit(1);
+});

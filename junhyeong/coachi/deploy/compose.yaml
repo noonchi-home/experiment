@@ -1,0 +1,193 @@
+# NOONCHI 한 서버: noonchi(CPU, 서버·YOLO26n 감지·관절·PAM 판단·반성)와 redis(노드 통로). --profile gpu면 vLLM 두 개(VLM, PAM LLM)를 더한다.
+# --profile check는 키 없는 확인용 가짜 OpenAI 호환 서버(fake-openai)를 더한다. 포트는 호스트 127.0.0.1에만 연다.
+# 저장소 뿌리에서 띄운다: docker compose --env-file .env -f deploy/compose.yaml up -d --build. 이 파일의 상대 경로는 deploy/ 기준이다.
+# 설정·키는 --env-file로 준 저장소 뿌리 .env(다른 파일도 --env-file)에서 오고, 서비스마다 environment에 적은 이름만 받는다.
+# 값 없이 이름만 적은 칸은 .env(또는 셸)에 있을 때만 넘긴다. 키는 그 키를 쓰는 서비스에만 적는다(scripts/compose-keys.ts, 시험이 본다).
+# 값을 적은 칸은 컨테이너 안에서 늘 같은 값이다.
+name: noonchi
+
+x-vllm: &vllm
+  image: ${VLLM_IMAGE:-vllm/vllm-openai:v0.17.0}
+  profiles: [gpu]
+  restart: unless-stopped
+  # vLLM 서버 키(요청에 이 키를 요구한다), 받기 제한이 있는 Hugging Face 모델의 토큰
+  environment: { VLLM_API_KEY: , HF_TOKEN: }
+  volumes: [model-cache:/root/.cache/huggingface]
+  ipc: host
+  deploy:
+    resources:
+      reservations:
+        devices: [{ driver: nvidia, count: all, capabilities: [gpu] }]
+  healthcheck:
+    test: ["CMD", "python3", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=3)"]
+    interval: 30s
+    timeout: 5s
+    retries: 20
+    start_period: 900s
+
+services:
+  noonchi:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    image: noonchi:local
+    init: true
+    restart: unless-stopped
+    environment:
+      HOST: 0.0.0.0
+      PHONE_HOST: 0.0.0.0
+      PORT: "8200"
+      PHONE_PORT: "8210"
+      RUNTIME_DIR: /data
+      MATTER_STORAGE_DIR: /data/matter
+      # 영상 모드 영상 폴더: 볼륨 안(기본 공용 폴더 /app/runtime/videos는 이미지 안이라 비어 있다)
+      PHONE_VIDEO_DIR: /data/videos
+      MATTER_TRANSPORT: local
+      # 컨테이너 안 네트워크 주소(Docker 브리지)는 밖에서 열 수 없다: 폰 주소는 PHONE_URL(과 tailscale serve 주소)만
+      PHONE_LAN_URLS: "0"
+      # 에이전트
+      AGENT_PROVIDER:
+      OPENAI_API_KEY:
+      OPENAI_MODEL:
+      OPENAI_BASE_URL:
+      ANTHROPIC_API_KEY:
+      ANTHROPIC_MODEL:
+      ANTHROPIC_EFFORT:
+      ANTHROPIC_FALLBACKS:
+      # 관찰 흐름·폰
+      BRAIN:
+      BRAIN_YOLO_THREADS:
+      BRAIN_YOLO_PROVIDER:
+      BRAIN_POSE_EVERY:
+      FALL_DROP_MS:
+      FALL_HOLD_MS:
+      FALL_GAP_MS:
+      FALL_TORSO_DEG:
+      FALL_THIGH_DEG:
+      FALL_VIEW_DEG:
+      ENGINE_FRAME_MS:
+      VLM_FRAME_MS:
+      VLM_WINDOW_FRAMES:
+      VLM_MAX_INFLIGHT:
+      DETECT_QUEUE_MAX:
+      PHONE_URL:
+      PHONE_EYE_HEIGHT_M:
+      FOCUS:
+      # 추론(VLM·PAM 호출)
+      INFERENCE_MODE:
+      VLM_BASE_URL:
+      VLM_MODEL:
+      VLM_CLOSER_MODEL:
+      VLM_API_KEY:
+      VLM_EXTRA_BODY:
+      VLM_TIMEOUT_MS:
+      VLLM_API_KEY:
+      PAM_LLM_BASE_URL:
+      PAM_LLM_MODEL:
+      PAM_LLM_API_KEY:
+      PAM_LLM_TIMEOUT_S:
+      PAM_MAX_MODEL_LEN:
+      PAM_TIMEOUT_MS:
+      PAM_TRIGGER:
+      PAM_MIN_GAP_MS:
+      PAM_PERIOD_MS:
+      PAM_LIVE_MS:
+      PAM_IDLE_STOP_MS:
+      PAM_MAX_INFLIGHT:
+      STALE_MS:
+      KEEP_HEARD_TEXT:
+      # 발달장애인 코치모드(src/shared/profile.ts, src/brain/care/)
+      NOONCHI_PROFILE:
+      CARE_USER_INFO:
+      CARE_LLM_URL:
+      CARE_LLM_MODEL:
+      CARE_LLM_API_KEY:
+      # 데이터·서버
+      HOME_ID:
+      HISTORY_TZ_MINUTES:
+      REFLECT_AT:
+      PHOTO_RETENTION_DAYS:
+      DATASET_COLLECT:
+      DATASET_RETENTION_DAYS:
+      ALLOWED_ORIGINS:
+      PLAN_TOKEN:
+      # 허브
+      HUB:
+      MATTER_COMMISSION_TIMEOUT_MS:
+      MATTER_PORT:
+      MATTER_PASSCODE:
+      MATTER_DISCRIMINATOR:
+      MATTER_DISCOVERY:
+      MATTER_LOG_LEVEL:
+      MATTER_STORAGE_DRIVER:
+      # 운영 모드(ThinQ)
+      THINQ_TOKEN:
+      THINQ_COUNTRY:
+      THINQ_REGION:
+      THINQ_POLL_MS:
+      THINQ_READBACK_MS:
+      THINQ_CLIENT_ID:
+      THINQ_API_KEY:
+      THINQ_BASE_URL:
+      THINQ_TIMEOUT_MS:
+      # 외부 연락(전화 에이전트)
+      CALL_SERVICE_URL:
+      # 노드 통로(같은 EC2 redis 컨테이너)
+      REDIS_URL: redis://redis:6379
+    depends_on:
+      redis: { condition: service_healthy }
+    ports:
+      - "127.0.0.1:${NOONCHI_PORT:-8200}:8200"
+      - "127.0.0.1:${NOONCHI_PHONE_PORT:-8210}:8210"
+    volumes: [noonchi-data:/data]
+    stop_grace_period: 20s
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:8200/api/health').then(r=>process.exit(r.ok?0:1),()=>process.exit(1))"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 60s
+
+  # 노드 통로(ROS 2 통로 역할). noonchi와 같은 EC2, 호스트에 열지 않는다. 디스크에 저장하지 않는다(noonchi가 켜질 때 확인한다).
+  # 넘치면 지우지 않고(noeviction) 발행 오류가 난다
+  redis:
+    image: redis:8.10.2-alpine@sha256:9f8d2d789b9a1d1e3f283f979aa9cbf393373806472e1ccd460e2f9c869b833b
+    init: true
+    restart: unless-stopped
+    command: ["redis-server", "--appendonly", "no", "--save", "", "--maxmemory", "512mb", "--maxmemory-policy", "noeviction"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+  fake-openai:
+    image: noonchi:local
+    pull_policy: never
+    profiles: [check]
+    init: true
+    command: ["node", "--import", "tsx", "scripts/fake-openai.ts", "--port", "8500", "--host", "0.0.0.0"]
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:8500/health').then(r=>process.exit(r.ok?0:1),()=>process.exit(1))"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  vllm-vlm:
+    <<: *vllm
+    command: ["--model", "${VLM_LIVE_MODEL:-Qwen/Qwen3-VL-4B-Instruct}", "--served-model-name", "vlm", "--gpu-memory-utilization", "${VLLM_VLM_GPU_SHARE:-0.30}",
+              "--max-model-len", "8192", "--limit-mm-per-prompt", "{\"image\":1}"]
+    ports: ["127.0.0.1:8410:8000"]
+
+  vllm-pam:
+    <<: *vllm
+    # 한 GPU에서 둘이 동시에 메모리를 잡지 않게 VLM이 뜬 뒤에 뜬다.
+    # PAM LLM은 Qwen3.5-27B 4비트. 반성(생각 켬)의 생각 글은 reasoning_content로 빼고 content에는 답만 남긴다.
+    depends_on: { vllm-vlm: { condition: service_healthy } }
+    command: ["--model", "${PAM_LIVE_MODEL:-Qwen/Qwen3.5-27B-GPTQ-Int4}", "--served-model-name", "pam", "--gpu-memory-utilization", "${VLLM_PAM_GPU_SHARE:-0.60}",
+              "--max-model-len", "${PAM_MAX_MODEL_LEN:-32768}", "--reasoning-parser", "qwen3"]
+    ports: ["127.0.0.1:8420:8000"]
+
+volumes:
+  noonchi-data:
+  model-cache:
