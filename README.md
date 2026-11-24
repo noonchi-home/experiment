@@ -11,7 +11,7 @@ This repository collects every experiment the four team members ran, whether or 
 |---|---|---|
 | [seokjun/](seokjun/) | Seokjun Park | PAM paper reproduction → learning habits (memory, nightly self-reflection, adoption test) |
 | junhyeong/ | Junhyeong Kim | (to be filled in by the owner) |
-| jihun/ | Jihun Shin | (to be filled in by the owner) |
+| [jihoon/](jihoon/) | Jihun Shin | Real LG TV control: Arduino infrared on/off, NetCast Wi-Fi power readback, how to merge into noonchi's IR path |
 | jeong-o/ | Jeong-O Heo | (to be filled in by the owner) |
 
 Each folder's README describes how that person's thinking developed and lists their experiments.
