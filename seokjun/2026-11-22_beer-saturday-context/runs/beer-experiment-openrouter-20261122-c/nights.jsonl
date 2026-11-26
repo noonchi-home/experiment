@@ -1,0 +1,2 @@
+{"day":"2026-10-12","ok":false,"error":"drinking: 상태가 '먹거나 마시는 중'으로 두 가지 활동을 포함하여 단일 활동 원칙을 위반합니다. / watching_tv.next[0]: 전환 조건이 TV를 끄는 로봇이나 사물 관련 행위를 포함하고 있습니다. / cooking.next[0]: 전환 조건이 요리를 마치는 사물 상태 변화를 포함하고 있습니다. / away.next[0]: 전환 조건이 '먹거나 마신다'로 두 가지 활동을 동시에 기술하고 있습니다.","usage":{"prompt":33495,"completion":14356,"cached":0},"night_usd":0.0289,"seconds":482}
+{"day":"2026-10-13","ok":false,"error":"PAM LLM 답에 글이 없음","usage":{"prompt":20689,"completion":8040,"cached":0},"night_usd":0.0166,"seconds":264}

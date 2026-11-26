@@ -132,6 +132,7 @@ While looking for research that answers the question of when a robot should help
 | 11-14 | Synthetic logs, 7 days | Text logs | All 84 cells from the calculation code matched the answer key | [2026-11-14_synthetic-logs-7-days](2026-11-14_synthetic-logs-7-days/) |
 | 11-15 | Synthetic logs, 5 weekdays | Text logs | All 60 cells matched the answer key | [2026-11-15_synthetic-logs-5-weekdays](2026-11-15_synthetic-logs-5-weekdays/) |
 | 11-16 | Synthetic logs, 1 morning hour | Text logs + real AI | Filtered out 10 weak signals; 3 of 6 → 4 of 6 + 1 half | [2026-11-16_synthetic-logs-morning-1-hour](2026-11-16_synthetic-logs-morning-1-hour/) |
+| 11-22–25 | Saturday evening, TV and beer (weekday/time context) | 3 weeks of synthetic evening logs + real AI (Qwen3.5-27B) | 2 of 12 runs learned both rules for Saturday 18–21h; chunking failed in every run | [2026-11-22_beer-saturday-context](2026-11-22_beer-saturday-context/) |
 | **Prepared but stopped** | | | | |
 | 11-02 | Drink-handoff reaction videos (for inverse planning) | 10 videos I designed and filmed | Stopped before the video experiment because inverse planning scored lowest in the text-scene comparison | Only the video list file is included (videos not uploaded) |
 | 11-10 | Appliance signals, 4 weeks | 28 days of logs and an answer key | Not yet run through the model | [2026-11-10_appliance-signals-4-weeks](2026-11-10_appliance-signals-4-weeks/) |

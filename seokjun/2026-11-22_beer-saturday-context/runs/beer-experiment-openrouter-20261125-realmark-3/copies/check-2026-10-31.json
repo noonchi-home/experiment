@@ -1,0 +1,83 @@
+{
+  "day": "2026-10-31",
+  "checks": [
+    {
+      "n": 23,
+      "k": 3,
+      "unknown": 0,
+      "rate": 0.13043478260869565,
+      "base_rate": 0,
+      "p0": 0.01,
+      "p_value": 0.0015245656963660673,
+      "passed": true,
+      "state": "watching_tv",
+      "action": "맥주 가져다주기",
+      "on": "사용자가 소파에 앉는다",
+      "when": null,
+      "ctx_rules": [
+        {
+          "ctx": {
+            "dow": 5,
+            "slot": 6
+          },
+          "n": 4,
+          "k": 3,
+          "rate": 0.75,
+          "base_rate": 0.13043478260869565,
+          "p_value": 0.008008118896087421
+        }
+      ]
+    },
+    {
+      "n": 22,
+      "k": 3,
+      "unknown": 0,
+      "rate": 0.13636363636363635,
+      "base_rate": 0,
+      "p0": 0.01,
+      "p_value": 0.0013356291937811067,
+      "passed": true,
+      "state": "watching_tv",
+      "action": "맥주 캔 치우기",
+      "on": "사용자가 TV 를 끈다",
+      "when": null,
+      "ctx_rules": [
+        {
+          "ctx": {
+            "dow": 5,
+            "slot": 6
+          },
+          "n": 3,
+          "k": 3,
+          "rate": 1,
+          "base_rate": 0.13636363636363635,
+          "p_value": 0.002535687453042824
+        }
+      ]
+    }
+  ],
+  "passed": [
+    {
+      "state": "watching_tv",
+      "action": "맥주 가져다주기",
+      "on": "사용자가 소파에 앉는다",
+      "ctx": [
+        {
+          "dow": 5,
+          "slot": 6
+        }
+      ]
+    },
+    {
+      "state": "watching_tv",
+      "action": "맥주 캔 치우기",
+      "on": "사용자가 TV 를 끈다",
+      "ctx": [
+        {
+          "dow": 5,
+          "slot": 6
+        }
+      ]
+    }
+  ]
+}

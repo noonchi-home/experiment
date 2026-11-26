@@ -1,0 +1,16 @@
+(node:62804) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+실제 AI 실험 시작: 모델 qwen/qwen3.5-27b (OpenRouter, 가격 순 제공자), 1밤(2026-10-31), 상한 1, 결과 폴더 output/beer-experiment-openrouter-20261124-g
+  [호출] 본문 30324자, 덩어리 생각 끔, HTTP 200, 머리 도착 13초
+  [호출] 본문 37311자, 반성 생각 켬, HTTP 200, 머리 도착 221초
+  [호출] 본문 3319자, 뜻 검사 생각 켬, HTTP 200, 머리 도착 214초
+  [호출] 본문 28027자, 시각 찾기 생각 켬, HTTP 200, 머리 도착 114초
+  [호출] 본문 28007자, 시각 찾기 생각 켬, HTTP 200, 머리 도착 217초
+  [호출] 본문 28017자, 시각 찾기 생각 켬, HTTP 200, 머리 도착 171초
+  [호출] 본문 28027자, 시각 찾기 생각 켬, HTTP 200, 머리 도착 177초
+  [호출] 본문 26738자, 덩어리 생각 끔, HTTP 200, 머리 도착 17초
+  [호출] 본문 28051자, 시각 찾기 생각 켬, HTTP 200, 머리 도착 229초
+  [호출 실패] 본문 39023자, 덩어리 생각 끔, 647초, Error: read ECONNRESET
+2026-10-31: 실패 PAM LLM 연결 실패: Error | 토큰 입력 83505 출력 43879 | 이 밤 $0.085 누적 $0.085 | 2021초
+끝. 이번 실행 비용 어림 0.085
+OpenRouter가 보고한 값: 호출 9번, 제공자별 [["Alibaba",9]], 보고 비용 합계 0.0847

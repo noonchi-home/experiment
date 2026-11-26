@@ -1,0 +1,10 @@
+(node:5528) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+실제 AI 실험 시작: 모델 qwen/qwen3.5-27b (OpenRouter, 가격 순 제공자), 5밤(2026-10-17, 2026-10-24, 2026-10-30, 2026-10-31, 2026-11-01), 상한 5, 결과 폴더 output/beer-experiment-openrouter-20261122-e
+  [호출] 본문 38155자, 그 밖 생각 끔, HTTP 200, 머리 도착 6초
+  [호출] 본문 45445자, 반성 생각 켬, HTTP 200, 머리 도착 7초
+  [호출] 본문 3314자, 뜻 검사 생각 켬, HTTP 200, 머리 도착 3초
+  [호출] 본문 45575자, 반성 생각 켬, HTTP 200, 머리 도착 7초
+  [호출] 본문 3330자, 뜻 검사 생각 켬, HTTP 200, 머리 도착 3초
+2026-10-17: 실패 cooking.next[0]: 조건에 식사가 포함되나 목표 상태는 마시는 중으로 불일치함 / away.next[0]: 조건에 식사가 포함되나 목표 상태는 마시는 중으로 불일치함 | 토큰 입력 45798 출력 31506 | 이 밤 $0.058 누적 $0.058 | 1033초
+  [호출] 본문 38163자, 그 밖 생각 끔, HTTP 200, 머리 도착 6초

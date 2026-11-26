@@ -1,0 +1,83 @@
+{
+  "day": "2026-10-31",
+  "checks": [
+    {
+      "n": 22,
+      "k": 3,
+      "unknown": 0,
+      "rate": 0.13636363636363635,
+      "base_rate": 0,
+      "p0": 0.01,
+      "p_value": 0.0013356291937811067,
+      "passed": true,
+      "state": "watching_tv",
+      "action": "맥주 가져다주기",
+      "on": "사람이 소파에 앉아 TV 를 켠다.",
+      "when": null,
+      "ctx_rules": [
+        {
+          "ctx": {
+            "dow": 5,
+            "slot": 6
+          },
+          "n": 3,
+          "k": 3,
+          "rate": 1,
+          "base_rate": 0.13636363636363635,
+          "p_value": 0.002535687453042824
+        }
+      ]
+    },
+    {
+      "n": 22,
+      "k": 3,
+      "unknown": 0,
+      "rate": 0.13636363636363635,
+      "base_rate": 0,
+      "p0": 0.01,
+      "p_value": 0.0013356291937811067,
+      "passed": true,
+      "state": "watching_tv",
+      "action": "맥주 캔 치우기",
+      "on": "사람이 TV 를 끄고 소파에서 일어난다.",
+      "when": null,
+      "ctx_rules": [
+        {
+          "ctx": {
+            "dow": 5,
+            "slot": 6
+          },
+          "n": 3,
+          "k": 3,
+          "rate": 1,
+          "base_rate": 0.13636363636363635,
+          "p_value": 0.002535687453042824
+        }
+      ]
+    }
+  ],
+  "passed": [
+    {
+      "state": "watching_tv",
+      "action": "맥주 가져다주기",
+      "on": "사람이 소파에 앉아 TV 를 켠다.",
+      "ctx": [
+        {
+          "dow": 5,
+          "slot": 6
+        }
+      ]
+    },
+    {
+      "state": "watching_tv",
+      "action": "맥주 캔 치우기",
+      "on": "사람이 TV 를 끄고 소파에서 일어난다.",
+      "ctx": [
+        {
+          "dow": 5,
+          "slot": 6
+        }
+      ]
+    }
+  ]
+}

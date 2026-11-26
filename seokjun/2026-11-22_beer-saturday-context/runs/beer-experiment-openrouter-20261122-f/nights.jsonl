@@ -1,0 +1,5 @@
+{"day":"2026-10-17","ok":false,"error":"PAM 반성 실패: memory.states[1].activity: activity of seed state 'watching_tv' must stay [\"'watching_tv'\"]","usage":{"prompt":44945,"completion":26078,"cached":0},"night_usd":0.0494,"seconds":863}
+{"day":"2026-10-24","ok":true,"new_edges":[{"from":"watching_tv","action":"맥주 캔 치우기","ctx":null}],"active":1,"checks":[{"state":"watching_tv","action":"맥주 가져다주기","on":"사용자가 소파에서 일어나 냉장고를 향해 간다.","when":null,"n":2,"k":0,"rate":0,"p_value":1,"passed":false,"ctx_rules":[]},{"state":"watching_tv","action":"맥주 캔 치우기","on":"사용자가 TV 를 끈다.","when":null,"n":2,"k":2,"rate":1,"p_value":0.0001,"passed":true,"ctx_rules":[]}],"usage":{"prompt":297865,"completion":113176,"cached":0},"night_usd":0.2346,"seconds":3509}
+{"day":"2026-10-30","ok":false,"error":"PAM LLM 연결 실패: TypeError","usage":{"prompt":20915,"completion":5872,"cached":0},"night_usd":0.0132,"seconds":1721}
+{"day":"2026-10-31","ok":false,"error":"PAM LLM 연결 실패: Error","usage":null,"night_usd":0,"seconds":0}
+{"day":"2026-11-01","ok":false,"error":"PAM LLM 연결 실패: Error","usage":null,"night_usd":0,"seconds":0}

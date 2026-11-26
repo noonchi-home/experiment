@@ -1,0 +1,14 @@
+(node:37540) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+실제 AI 실험 시작: 모델 qwen/qwen3.5-27b (OpenRouter, 가격 순 제공자), 21밤, 상한 5, 결과 폴더 output/beer-experiment-openrouter-20261122-c
+  [호출] 본문 26275자, 그 밖 생각 끔, HTTP 200, 머리 도착 3초
+  [호출] 본문 33644자, 반성 생각 켬, HTTP 200, 머리 도착 5초
+  [호출] 본문 3193자, 그 밖 생각 끔, HTTP 200, 머리 도착 3초
+  [호출] 본문 33749자, 반성 생각 켬, HTTP 200, 머리 도착 5초
+  [호출] 본문 2917자, 그 밖 생각 끔, HTTP 200, 머리 도착 3초
+2026-10-12: 실패 drinking: 상태가 '먹거나 마시는 중'으로 두 가지 활동을 포함하여 단일 활동 원칙을 위반합니다. / watching_tv.next[0]: 전환 조건이 TV를 끄는 로봇이나 사물 관련 행위를 포함하고 있습니다. / cooking.next[0]: 전환 조건이 요리를 마치는 사물 상태 변화를 포함하고 있습니다. / away.next[0]: 전환 조건이 '먹거나 마신다'로 두 가지 활동을 동시에 기술하고 있습니다. | 토큰 입력 33495 출력 14356 | 이 밤 $0.029 누적 $0.029 | 482초
+  [호출] 본문 26255자, 그 밖 생각 끔, HTTP 200, 머리 도착 3초
+  [호출] 본문 33624자, 반성 생각 켬, HTTP 200, 머리 도착 5초
+2026-10-13: 실패 PAM LLM 답에 글이 없음 | 토큰 입력 20689 출력 8040 | 이 밤 $0.017 누적 $0.046 | 264초
+  [호출] 본문 26265자, 그 밖 생각 끔, HTTP 200, 머리 도착 3초
+  [호출] 본문 33634자, 반성 생각 켬, HTTP 200, 머리 도착 5초

@@ -1,0 +1,40 @@
+{
+  "day": "2026-10-24",
+  "checks": [
+    {
+      "n": 2,
+      "k": 0,
+      "unknown": 0,
+      "rate": 0,
+      "base_rate": 0,
+      "p0": 0.01,
+      "p_value": 1,
+      "passed": false,
+      "state": "watching_tv",
+      "action": "맥주 가져다주기",
+      "on": "사용자가 소파에서 일어나 냉장고를 향해 간다.",
+      "when": null
+    },
+    {
+      "n": 2,
+      "k": 2,
+      "unknown": 13,
+      "rate": 1,
+      "base_rate": 0,
+      "p0": 0.01,
+      "p_value": 0.0001,
+      "passed": true,
+      "state": "watching_tv",
+      "action": "맥주 캔 치우기",
+      "on": "사용자가 TV 를 끈다.",
+      "when": null
+    }
+  ],
+  "passed": [
+    {
+      "state": "watching_tv",
+      "action": "맥주 캔 치우기",
+      "on": "사용자가 TV 를 끈다."
+    }
+  ]
+}

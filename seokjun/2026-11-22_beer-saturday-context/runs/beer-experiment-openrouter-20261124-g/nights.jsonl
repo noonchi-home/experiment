@@ -1,0 +1,7 @@
+{"day":"2026-10-31","ok":false,"error":"PAM LLM 연결 실패: TypeError","usage":{"prompt":22754,"completion":6938,"cached":0},"night_usd":0.0153,"seconds":422}
+{"day":"2026-10-31","ok":false,"error":"PAM LLM 답이 끝나지 않음: length","usage":{"prompt":122765,"completion":62125,"cached":0},"night_usd":0.1209,"seconds":1666}
+{"day":"2026-10-31","ok":false,"error":"PAM LLM 연결 실패: Error","usage":{"prompt":83505,"completion":43879,"cached":0},"night_usd":0.0847,"seconds":2021}
+{"day":"2026-10-31","ok":false,"error":"PAM LLM 답이 끝나지 않음: error","usage":{"prompt":20080,"completion":8248,"cached":0},"night_usd":0.0168,"seconds":289}
+{"day":"2026-10-31","ok":false,"error":"PAM LLM 연결 실패: Error","usage":{"prompt":338085,"completion":153409,"cached":0},"night_usd":0.3052,"seconds":4572}
+{"day":"2026-10-31","ok":false,"error":"PAM LLM 연결 실패: Error","usage":null,"night_usd":0,"seconds":0}
+{"day":"2026-10-31","ok":false,"error":"PAM LLM 답이 끝나지 않음: length","usage":{"prompt":35763,"completion":29367,"cached":0},"night_usd":0.0528,"seconds":689}
